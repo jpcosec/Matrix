@@ -1,0 +1,18 @@
+context: colores
+objects:
+  amarillo:
+    class: color
+  rojo:
+    class: color
+  verde:
+    class: color
+properties:
+  color:
+    applies_to: color
+truths:
+  amarillo:
+    color: true
+  rojo:
+    color: true
+  verde:
+    color: true

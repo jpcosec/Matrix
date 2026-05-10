@@ -1,0 +1,55 @@
+context: vegetales_mv
+objects:
+  coliflor:
+    class: vegetal
+  espinaca:
+    class: vegetal
+  lechuga:
+    class: vegetal
+  papa:
+    class: vegetal
+  zanahoria:
+    class: vegetal
+properties:
+  comestible:
+    applies_to: vegetal
+  flor:
+    applies_to: vegetal
+  hoja:
+    applies_to: vegetal
+  hoja.rugosa:
+    applies_if:
+      property: hoja
+      value: true
+  "ra\xEDz":
+    applies_to: vegetal
+truths:
+  coliflor:
+    comestible: 'true'
+    flor: 'true'
+    hoja: 'true'
+    hoja.rugosa: unknown
+    "ra\xEDz": 'true'
+  espinaca:
+    comestible: 'true'
+    flor: 'false'
+    hoja: 'true'
+    hoja.rugosa: 'true'
+    "ra\xEDz": 'false'
+  lechuga:
+    comestible: 'true'
+    flor: unknown
+    hoja: 'true'
+    hoja.rugosa: 'false'
+    "ra\xEDz": 'false'
+  papa:
+    comestible: 'true'
+    flor: 'false'
+    hoja: 'false'
+    "ra\xEDz": 'true'
+  zanahoria:
+    comestible: 'true'
+    flor: 'false'
+    hoja: 'false'
+    hoja.rugosa: na
+    "ra\xEDz": 'true'

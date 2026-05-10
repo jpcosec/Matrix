@@ -1,0 +1,60 @@
+context: vegetales
+objects:
+  apio:
+    class: vegetal
+  espinaca:
+    class: vegetal
+  lechuga:
+    class: vegetal
+  zanahoria:
+    class: vegetal
+properties:
+  hoja:
+    applies_to: vegetal
+  hoja.lisa:
+    applies_if:
+      property: hoja
+      value: true
+  hoja.rugosa:
+    applies_if:
+      property: hoja
+      value: true
+  "ra\xEDz":
+    applies_to: vegetal
+  tallo:
+    applies_to: vegetal
+subcontexts:
+  hoja:
+    name: hojas_subcontext
+    properties:
+    - rugosa
+    - lisa
+    - forma
+    truths:
+      espinaca:
+        forma: ondulada
+        lisa: false
+        rugosa: true
+      lechuga:
+        forma: redonda
+        lisa: true
+        rugosa: false
+truths:
+  apio:
+    hoja: false
+    "ra\xEDz": false
+    tallo: true
+  espinaca:
+    hoja: true
+    hoja.rugosa: true
+    "ra\xEDz": false
+    tallo: false
+  lechuga:
+    hoja: true
+    hoja.lisa: true
+    "ra\xEDz": false
+    tallo: false
+  zanahoria:
+    hoja: false
+    "ra\xEDz": true
+    tallo: false

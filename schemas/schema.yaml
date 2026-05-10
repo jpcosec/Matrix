@@ -1,0 +1,5 @@
+context: str
+objects: dict[str, dict]
+properties: dict[str, dict]
+rules: list[dict] | None
+truths: dict[str, dict]

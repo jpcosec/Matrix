@@ -1,0 +1,1451 @@
+Whitepaper
+
+Matrices de Sentido: una arquitectura lógica para proyectar lenguaje natural hacia espacios booleanos operables
+
+Autor: Submission preprint
+Estado: Borrador conceptual
+Tema: representación semántica, lógica contextual, Wittgenstein, semantic parsing, OWL, UNL, matrices booleanas, LLMs
+
+⸻
+
+Abstract
+
+Este whitepaper propone una arquitectura para representar proposiciones de lenguaje natural como estructuras lógicas operables mediante matrices booleanas. La tesis central es que el significado no debe entenderse como una propiedad interna de los signos lingüísticos, sino como el resultado de una proyección regulada entre signos, símbolos, contextos, hechos y relaciones. Inspirándose en la distinción tractariana entre hechos, cosas, sentido y sinsentido, se propone separar explícitamente dos dimensiones: una matriz de verdad M_i, que indica qué relaciones son verdaderas dentro de un contexto lógico W_i, y una matriz de sentido o aplicabilidad S_i, que indica qué relaciones pueden formularse legítimamente dentro de ese contexto.
+
+La propuesta se sitúa entre semantic parsing, representaciones interlingua como UNL, ontologías formales como OWL, construcción de grafos de conocimiento y razonamiento lógico asistido por LLMs. A diferencia de enfoques que traducen directamente lenguaje natural a lógica de primer orden o a grafos semánticos, este marco introduce una capa algebraica posterior: una estructura contextual donde las proposiciones pueden ser evaluadas no solo por su verdad, sino también por su aplicabilidad, ambigüedad, tautologicidad, contradicción operacional y composibilidad con otros espacios lógicos.
+
+⸻
+
+1. Motivación
+
+La mayoría de los sistemas actuales de lenguaje natural funcionan sobre representaciones continuas: embeddings, distribuciones vectoriales, atención contextual y espacios latentes de alta dimensionalidad. Estas representaciones son útiles para capturar regularidades estadísticas, pero no garantizan por sí mismas la preservación de estructura lógica, consistencia, aplicabilidad o condiciones de sentido.
+
+El problema puede formularse así:
+
+Un modelo puede producir una frase gramaticalmente válida, semánticamente plausible y estadísticamente frecuente, pero eso no implica que la frase tenga una posición bien definida dentro de un espacio lógico.
+
+Por ejemplo:
+
+La lechuga tiene hoja.
+La lechuga tiene puerta.
+La lechuga es un vegetal.
+La lechuga es hoja y no hoja.
+
+Todas estas frases pueden ser procesadas por un modelo lingüístico. Sin embargo, no todas cumplen el mismo rol lógico:
+
+* “La lechuga tiene hoja” puede ser una proposición verdadera dentro de un dominio botánico.
+* “La lechuga tiene puerta” no es simplemente falsa; puede ser inaplicable dentro del espacio lógico de vegetales.
+* “La lechuga es un vegetal” puede ser tautológica si el universo ya está restringido a vegetales.
+* “La lechuga es hoja y no hoja” es una contradicción formal si se interpreta sobre la misma propiedad, el mismo objeto y el mismo contexto.
+
+Esta diferencia entre verdad, falsedad, tautología, contradicción e inaplicabilidad no queda bien capturada si solo se representa el texto como una cadena o como un embedding continuo.
+
+La propuesta de este whitepaper es que necesitamos una capa explícita de gramática lógica operacional, capaz de proyectar lenguaje natural hacia estructuras formales donde estas distinciones sean calculables.
+
+⸻
+
+2. Antecedentes
+
+2.1 Semantic parsing y formalización lógica
+
+El área de semantic parsing estudia cómo traducir lenguaje natural a representaciones formales, tales como SQL, lógica de primer orden, grafos semánticos o lenguajes ejecutables. Trabajos recientes han abordado explícitamente la traducción de lenguaje natural a lógica de primer orden. Vossel, Mossakowski y Gehrke evalúan modelos fine-tuned para formalización a FOL y reportan que la disponibilidad de predicados mejora el rendimiento, mientras que la extracción correcta de predicados sigue siendo un cuello de botella importante.  ￼
+
+Code4Logic propone traducir lenguaje natural a lógica de primer orden usando generación de código como puente intermedio, transformando la tarea en una generación progresiva de estructuras formales.  ￼
+
+También hay trabajos que se enfocan no solo en generar fórmulas, sino en preservar relaciones inferenciales. Lee et al. proponen la tarea de Entailment-Preserving FOL representations, donde las formas lógicas generadas deben conservar el resultado de entailment del texto original según un prover automático.  ￼
+
+Estos trabajos son relevantes porque muestran que la traducción de lenguaje natural a lógica formal es una línea activa. Sin embargo, el marco propuesto aquí introduce una distinción adicional: no basta con traducir texto a lógica; también debemos determinar si una proposición tiene sentido dentro de un contexto lógico específico.
+
+2.2 LLMs y razonamiento lógico
+
+Los LLMs han mostrado capacidades fuertes en generación de lenguaje, pero siguen presentando problemas de consistencia lógica, razonamiento deductivo, razonamiento inductivo y contradicción entre respuestas. El survey de Cheng et al. revisa métodos para fortalecer el razonamiento lógico en LLMs, incluyendo uso de solvers externos, prompting, pretraining, fine-tuning y métricas de consistencia lógica.  ￼
+
+Esto refuerza una idea importante: los modelos de lenguaje no deberían ser los únicos responsables de mantener la estructura lógica. Una alternativa más robusta es que los LLMs propongan candidatos, pero que una capa simbólica posterior valide:
+
+¿La proposición está bien formada?
+¿Pertenece al contexto?
+¿Es aplicable?
+¿Es verdadera?
+¿Es tautológica?
+¿Es contradictoria?
+¿Es composible con otros contextos?
+
+2.3 OWL
+
+OWL, el Web Ontology Language, es un estándar del W3C diseñado para representar ontologías: vocabularios formales de términos, relaciones, clases, propiedades e individuos. OWL permite expresar significado de forma procesable por máquinas y está orientado a representar términos y sus interrelaciones en la Web Semántica.  ￼
+
+OWL 2 define ontologías que pueden verse tanto como estructuras abstractas como grafos RDF, y provee diferentes sintaxis y semánticas para intercambiar y razonar sobre conocimiento formalizado.  ￼
+
+En este whitepaper, OWL se interpreta como una capa ontológica posible entre lenguaje natural y matrices booleanas:
+
+lenguaje natural
+→ representación semántica
+→ ontología OWL
+→ espacio lógico matricial
+
+OWL aporta clases, propiedades, restricciones y axiomas. Sin embargo, no modela directamente una distinción tractariana entre sentido, sinsentido, tautología y absurdo como operaciones matriciales contextuales.
+
+2.4 UNL
+
+UNL, Universal Networking Language, es un formalismo diseñado para representar el significado de textos en lenguaje natural mediante redes semánticas. El sistema UNL busca capturar el significado de documentos escritos usando conceptos y relaciones.  ￼
+
+UNL representa expresiones como grafos o hipergrafos, donde las Universal Words funcionan como nodos y las relaciones semánticas como aristas. Algunos textos introductorios describen UNL como una estructura compuesta por Universal Words, relaciones, atributos y una base de conocimiento.  ￼
+
+Para este marco, UNL es relevante porque sirve como antecedente para la capa:
+
+signo lingüístico → grafo semántico normalizado
+
+Mientras OWL formaliza dominios ontológicos, UNL apunta a representar el significado de oraciones de manera relativamente independiente del idioma. La arquitectura propuesta puede usar ambos: UNL para extraer estructura semántica desde texto y OWL para validar compromisos ontológicos.
+
+⸻
+
+3. Tesis central
+
+La tesis del whitepaper es:
+
+Pasar de lenguaje natural a UNL, OWL y matrices booleanas no es una reducción directa del lenguaje a bits. Es una secuencia de proyecciones lógicas entre niveles de representación, gobernada por reglas que deben preservar referencia, relación, contexto, verdad y sentido.
+
+La matriz no reemplaza la semántica. La vuelve operable.
+
+El pipeline conceptual sería:
+
+Lenguaje natural
+  ↓
+Gramática lingüística
+  ↓
+Proposición candidata
+  ↓
+Grafo semántico / UNL / AMR
+  ↓
+Ontología / OWL / Description Logic
+  ↓
+Espacio lógico contextual W_i
+  ↓
+Matriz de verdad M_i
+  ↓
+Matriz de sentido S_i
+  ↓
+Operaciones booleanas de búsqueda, validación y composición
+
+La contribución no está en decir que una oración “es” una matriz. La contribución está en definir una cadena de traducciones reguladas:
+
+signo → símbolo → proposición → hecho → relación → coordenada lógica → operación
+
+⸻
+
+4. Fundamento tractariano
+
+El punto de partida filosófico es la idea tractariana de que el mundo no se compone de cosas aisladas, sino de hechos. Las cosas adquieren función lógica al configurarse en hechos. En este marco:
+
+* Una cosa es un índice posible de referencia.
+* Un hecho es una configuración de cosas en una relación.
+* Una proposición es una representación sensible de un posible hecho.
+* Un signo es el medio perceptible de expresión.
+* Un símbolo es el signo usado con función lógica dentro de un sistema.
+* Un contexto es una partición del mundo suficientemente determinada como para fijar usos, relaciones y criterios de aplicabilidad.
+
+La diferencia entre signo y símbolo es crucial. Un mismo hecho puede expresarse mediante múltiples signos:
+
+El perro es amigable.
+El canino es confiable.
+The dog is man's best friend.
+
+Y un mismo signo puede apuntar a símbolos distintos según el contexto:
+
+gift → regalo en inglés
+Gift → veneno en alemán
+
+Por lo tanto, el sistema no debe operar sobre texto superficial, sino sobre símbolos contextualizados.
+
+⸻
+
+5. Definiciones formales iniciales
+
+Sea W la totalidad de hechos representables por un sistema. Definimos una partición contextual:
+
+W_i \subset W
+
+donde W_i corresponde a un subconjunto del mundo bajo un contexto determinado. Por ejemplo:
+
+W_vegetales
+W_animales
+W_matemática
+W_música
+W_código
+W_eventos
+
+Cada contexto W_i tiene un espacio lógico asociado:
+
+L_i = (O_i, P_i, R_i, C_i)
+
+donde:
+
+* O_i: conjunto de objetos o entidades.
+* P_i: conjunto de propiedades.
+* R_i: conjunto de relaciones.
+* C_i: conjunto de restricciones contextuales o reglas de sentido.
+
+Para un caso simple objeto-propiedad, definimos una matriz:
+
+M_i \in \{0,1\}^{|O_i| \times |P_i|}
+
+donde:
+
+M_i[o,p] = 1
+
+si la propiedad p es verdadera del objeto o en el contexto W_i.
+
+Además definimos una matriz de sentido o aplicabilidad:
+
+S_i \in \{0,1\}^{|O_i| \times |P_i|}
+
+donde:
+
+S_i[o,p] = 1
+
+si la pregunta “¿aplica p a o?” está bien formada dentro del contexto W_i.
+
+Esto permite distinguir cuatro casos:
+
+S_i[o,p]	M_i[o,p]	Interpretación
+1	1	La propiedad aplica y es verdadera
+1	0	La propiedad aplica y es falsa
+0	0	La propiedad no aplica; no tiene sentido en el contexto
+0	1	Estado inconsistente del sistema
+
+El último caso debería ser imposible si el sistema está bien construido, porque no debería haber verdad donde no hay aplicabilidad.
+
+⸻
+
+6. Ejemplo mínimo: vegetales
+
+Tomemos un contexto:
+
+W_{\text{vegetales}}
+
+con objetos:
+
+lechuga, espinaca, zanahoria, apio
+
+y propiedades:
+
+vegetal, alimento, hoja, raíz, tallo
+
+La matriz inicial puede ser:
+
+           vegetal alimento hoja raíz tallo
+lechuga         1       1     1    0    0
+espinaca        1       1     1    0    0
+zanahoria       1       1     0    1    0
+apio            1       1     0    0    1
+
+Las propiedades vegetal y alimento son verdaderas para todos los objetos del contexto. Por lo tanto, dentro de este W_i, no discriminan nada. Son tautológicas respecto del dominio elegido.
+
+Si las eliminamos para análisis discriminativo:
+
+           hoja raíz tallo
+lechuga      1    0    0
+espinaca     1    0    0
+zanahoria    0    1    0
+apio         0    0    1
+
+Esta matriz funciona como espacio de indexación. Una consulta como:
+
+buscar objetos con tallo
+
+puede representarse como vector:
+
+hoja   0
+raíz   0
+tallo  1
+
+La multiplicación booleana permite recuperar los objetos que satisfacen la consulta.
+
+⸻
+
+7. Semianillo booleano
+
+Para operar sobre estas matrices, usamos el semianillo booleano:
+
+(\{0,1\}, \lor, \land)
+
+La multiplicación matricial booleana se define como:
+
+(A \otimes B)_{ij} = \bigvee_k (A_{ik} \land B_{kj})
+
+Esto permite usar matrices como estructuras de búsqueda, coocurrencia, ruteo y composición.
+
+Por ejemplo:
+
+W_i^T \otimes W_i
+
+produce una matriz propiedad-propiedad donde cada celda indica si dos propiedades coocurren en al menos un objeto.
+
+Análogamente:
+
+W_i \otimes W_i^T
+
+produce una matriz objeto-objeto donde cada celda indica si dos objetos comparten fundamentos de verdad.
+
+⸻
+
+8. Detección de ambigüedad
+
+Dos objetos son indistinguibles dentro de un contexto si comparten exactamente el mismo vector de propiedades.
+
+En el ejemplo:
+
+lechuga  = [1, 0, 0]
+espinaca = [1, 0, 0]
+
+Ambas son indistinguibles si solo usamos:
+
+hoja, raíz, tallo
+
+El sistema puede detectar esta ambigüedad al comparar vectores de objetos. Si:
+
+M_i[o_a, :] = M_i[o_b, :]
+
+entonces o_a y o_b no son desambiguables dentro de W_i.
+
+La solución es introducir nuevas propiedades discriminativas:
+
+           hoja raíz tallo hoja.rugosa hoja.lisa
+lechuga      1    0    0       0          1
+espinaca     1    0    0       1          0
+zanahoria    0    1    0       Ø          Ø
+apio         0    0    1       Ø          Ø
+
+Aquí aparece un punto clave: hoja.rugosa y hoja.lisa no son propiedades simplemente falsas para zanahoria y apio. Son propiedades no aplicables si el objeto no tiene hoja.
+
+Por eso necesitamos S_i.
+
+⸻
+
+9. Matriz de sentido
+
+Para el mismo ejemplo, la matriz de verdad podría ser:
+
+           hoja raíz tallo hoja.rugosa hoja.lisa
+lechuga      1    0    0       0          1
+espinaca     1    0    0       1          0
+zanahoria    0    1    0       0          0
+apio         0    0    1       0          0
+
+Pero la matriz de sentido sería:
+
+           hoja raíz tallo hoja.rugosa hoja.lisa
+lechuga      1    1    1       1          1
+espinaca     1    1    1       1          1
+zanahoria    1    1    1       0          0
+apio         1    1    1       0          0
+
+Así distinguimos:
+
+zanahoria tiene hoja.rugosa = falso
+
+de:
+
+preguntar por hoja.rugosa de zanahoria = no aplicable
+
+Esta es una diferencia fundamental.
+
+En términos tractarianos, M_i responde por verdad o falsedad dentro de un espacio de sentido; S_i responde por la posibilidad misma de formular la proposición dentro de ese espacio.
+
+⸻
+
+10. Sinnvoll, Sinnlos y Unsinnig como estados operacionales
+
+La arquitectura permite operacionalizar tres estados inspirados en el Tractatus.
+
+10.1 Sinnvoll
+
+Una proposición es sinnvoll cuando tiene sentido y puede ser evaluada respecto del mundo/contexto.
+
+Formalmente:
+
+S_i[o,p] = 1
+
+y luego:
+
+M_i[o,p] \in \{0,1\}
+
+Ejemplo:
+
+La lechuga tiene hoja.
+
+Resultado:
+
+S_i[lechuga, hoja] = 1
+M_i[lechuga, hoja] = 1
+
+10.2 Sinnlos
+
+Una proposición es sinnlos cuando pertenece al simbolismo lógico, pero no aporta información discriminativa sobre el mundo.
+
+Dos casos relevantes:
+
+Tautología contextual
+
+Una propiedad es tautológica si es verdadera para todos los objetos del contexto:
+
+\forall o \in O_i,\ M_i[o,p] = 1
+
+Ejemplo:
+
+Todo objeto en W_vegetales es vegetal.
+
+Si W_i ya fue definido como el contexto de vegetales, entonces vegetal no discrimina.
+
+Contradicción formal o imposibilidad contextual
+
+Una consulta puede ser contradictoria si exige simultáneamente propiedades incompatibles según las reglas del contexto.
+
+Por ejemplo:
+
+p ∧ ¬p
+
+es una contradicción formal.
+
+Pero hay que distinguir esto de una intersección vacía. Si en una matriz pequeña ningún vegetal tiene simultáneamente hoja y tallo, eso no implica necesariamente contradicción universal. Puede ser solo ausencia de instancias en el contexto actual.
+
+Por eso el sistema debe distinguir:
+
+contradicción lógica
+
+de:
+
+vacío empírico/contextual
+
+10.3 Unsinnig
+
+Una formulación es unsinnig cuando no tiene coordenada significativa en el espacio lógico.
+
+Ejemplo:
+
+La lechuga tiene puerta.
+
+Si puerta no pertenece al dominio de propiedades aplicables a vegetales, entonces:
+
+S_i[\text{lechuga}, \text{puerta}] = 0
+
+No es meramente falso. Es inaplicable dentro del contexto.
+
+⸻
+
+11. Composición contextual
+
+La arquitectura se vuelve más interesante cuando los contextos pueden componerse.
+
+Un contexto puede actuar como índice hacia otro contexto:
+
+W_vegetales
+  └── W_vegetales_con_hoja
+        ├── hoja.rugosa
+        └── hoja.lisa
+
+En lugar de representar todas las propiedades en una matriz plana, podemos crear subespacios:
+
+W_vegetales:
+           hoja raíz tallo
+lechuga      1    0    0
+espinaca     1    0    0
+zanahoria    0    1    0
+apio         0    0    1
+
+y luego:
+
+W_hojas:
+           rugosa lisa
+lechuga       0    1
+espinaca      1    0
+
+La propiedad hoja funciona como compuerta hacia un subespacio lógico. Esto permite evitar tener demasiadas coordenadas inaplicables en una matriz plana.
+
+La consulta:
+
+buscar vegetales con hoja rugosa
+
+puede descomponerse como:
+
+1. buscar objetos con hoja en W_vegetales
+2. restringir al subcontexto W_hojas
+3. buscar objetos con rugosa en W_hojas
+4. proyectar el resultado al contexto original
+
+En pseudonotación:
+
+q = W_{\text{vegetales}} \otimes R_{\text{hoja}} \otimes W_{\text{hojas}} \otimes v_{\text{rugosa}}
+
+Donde R_{\text{hoja}} es una relación de ruteo entre el contexto general y el subcontexto especializado.
+
+La idea clave:
+
+Un espacio lógico no solo almacena hechos; también puede rutear hacia otros espacios lógicos.
+
+⸻
+
+12. Composibilidad de lógicas según contexto
+
+Definimos la composibilidad contextual como la capacidad de unir, restringir, proyectar o cruzar dos espacios lógicos preservando sus condiciones de sentido.
+
+Sean dos contextos:
+
+W_i = (O_i, P_i, M_i, S_i)
+
+W_j = (O_j, P_j, M_j, S_j)
+
+Una composición:
+
+W_k = W_i \circ W_j
+
+es válida si existen reglas de alineamiento entre objetos, propiedades o relaciones:
+
+A_{ij}: O_i \cup P_i \rightarrow O_j \cup P_j
+
+y si la composición preserva aplicabilidad:
+
+S_k = f(S_i, S_j, A_{ij})
+
+Ejemplo:
+
+W_animales:
+perro → mamífero
+perro → cuadrúpedo
+W_colores:
+blanco → color
+negro → color
+W_animales_coloreados:
+perro → tiene_color → blanco
+
+Aquí se componen dos espacios:
+
+animalidad
+color
+
+mediante una relación puente:
+
+tiene_color(animal, color)
+
+La composición no es una simple unión de columnas. Requiere reglas que indiquen qué relaciones son aplicables.
+
+Por ejemplo:
+
+perro tiene color blanco
+
+tiene sentido.
+
+Pero:
+
+blanco ladra
+
+no tiene sentido salvo que exista un contexto metafórico, artístico o semiótico que lo habilite.
+
+⸻
+
+13. Del lenguaje natural a la matriz
+
+El proceso completo puede modelarse como una cadena de traducciones.
+
+13.1 Texto
+
+La lechuga tiene hojas lisas.
+
+13.2 Forma proposicional
+
+tiene_propiedad(lechuga, hoja)
+tiene_propiedad(hoja_de(lechuga), lisa)
+
+13.3 Grafo semántico tipo UNL/AMR
+
+event:
+  predicate: have
+  agent: lechuga
+  theme: hoja
+  modifier:
+    target: hoja
+    property: lisa
+
+13.4 Ontología tipo OWL
+
+Lechuga ⊑ Vegetal
+Lechuga hasPart some Hoja
+Hoja hasTexture some Lisa
+
+13.5 Proyección matricial
+
+M_vegetales[lechuga, hoja] = 1
+S_vegetales[lechuga, hoja] = 1
+M_hojas[lechuga, lisa] = 1
+S_hojas[lechuga, lisa] = 1
+
+Cada paso requiere reglas.
+
+⸻
+
+14. Reglas lógicas de transformación
+
+La propuesta depende de definir reglas entre capas. Algunas reglas básicas:
+
+Regla 1: normalización de signo
+
+"lechuga", "lettuce", "Lactuca sativa"
+→ símbolo: LECHUGA
+
+Regla 2: extracción de predicado
+
+"La lechuga tiene hoja"
+→ tiene_propiedad(LECHUGA, HOJA)
+
+Regla 3: grounding ontológico
+
+LECHUGA ∈ Vegetal
+HOJA ∈ ParteVegetal
+
+Regla 4: aplicabilidad
+
+tiene_textura(x, rugosa)
+solo aplica si x pertenece a una clase que puede tener textura
+
+o más específico:
+
+hoja.rugosa(x)
+solo aplica si hoja(x)
+
+Regla 5: verdad contextual
+
+M_i[o,p] = 1
+si el hecho está validado en el contexto W_i
+
+Regla 6: partición contextual
+
+Si una propiedad p introduce un subdominio especializado,
+crear o activar W_p.
+
+Ejemplo:
+
+hoja → W_hojas
+animal → W_animales
+evento → W_eventos
+función → W_código
+
+Regla 7: composición
+
+W_i y W_j pueden componerse si existe una relación puente tipada
+entre sus objetos, propiedades o eventos.
+
+⸻
+
+15. Relación con Knowledge Graphs
+
+Los knowledge graphs representan entidades y relaciones. Una tripleta clásica:
+
+(Beethoven, compuso, NovenaSinfonía)
+
+puede convertirse en una coordenada lógica:
+
+M_música[Beethoven, compuso_NovenaSinfonía] = 1
+
+o en una matriz relación-específica:
+
+M_compuso[Beethoven, NovenaSinfonía] = 1
+
+La diferencia con un knowledge graph tradicional es que aquí también mantenemos S_i:
+
+S_compuso[Beethoven, NovenaSinfonía] = 1
+S_compuso[lechuga, NovenaSinfonía] = 0
+
+Esto evita tratar todas las relaciones ausentes como meramente falsas.
+
+Una ausencia en un knowledge graph puede significar muchas cosas:
+
+falso
+desconocido
+no registrado
+no aplicable
+fuera de dominio
+
+La matriz de sentido permite separar al menos:
+
+falso pero aplicable
+
+de:
+
+no aplicable
+
+⸻
+
+16. Diferencia con semantic parsing tradicional
+
+Semantic parsing suele enfocarse en:
+
+texto → forma lógica
+
+La propuesta aquí es:
+
+texto → signo → símbolo → forma lógica → contexto → sentido → verdad → operación
+
+Esto introduce tres capas adicionales:
+
+1. Contextualización: la proposición se evalúa dentro de un W_i.
+2. Aplicabilidad: se verifica con S_i.
+3. Operabilidad: se transforma en coordenadas booleanas sobre las que se puede buscar, componer y desambiguar.
+
+Los trabajos NL→FOL actuales son relevantes, pero suelen tratar la lógica destino como un lenguaje formal fijo. Esta propuesta trata la lógica como una familia de espacios contextuales componibles.
+
+⸻
+
+17. Diferencia con OWL
+
+OWL puede decir:
+
+Lechuga hasPart some Hoja
+Hoja hasTexture some Lisa
+
+y un reasoner puede inferir pertenencias o inconsistencias.
+
+Pero OWL no está orientado principalmente a representar una matriz explícita de sentido:
+
+S_i[o,p] = aplicable / no aplicable
+
+ni a operar algebraicamente sobre búsquedas, colisiones, rutas y particiones.
+
+En este marco, OWL puede ser una capa intermedia:
+
+OWL define las restricciones.
+S_i materializa la aplicabilidad.
+M_i materializa la verdad contextual.
+
+⸻
+
+18. Diferencia con UNL
+
+UNL representa significado lingüístico en forma de grafo semántico. Eso ayuda a pasar de texto a estructura.
+
+Pero la matriz propuesta sirve para otra etapa:
+
+UNL: oración → grafo semántico
+M_i/S_i: grafo semántico → espacio lógico operable
+
+UNL puede decir algo como:
+
+agt(eat, dog)
+obj(eat, food)
+
+El sistema matricial puede luego preguntar:
+
+¿dog pertenece a una clase que puede ser agente de eat?
+¿food pertenece a una clase que puede ser objeto de eat?
+¿la relación es verdadera en este contexto?
+¿la relación tiene sentido?
+¿qué otros objetos comparten la misma estructura?
+
+⸻
+
+19. Arquitectura propuesta
+
+La arquitectura general puede organizarse así:
+
++------------------------------------------------------+
+| 1. Natural Language Layer                            |
+|    Texto, signos, gramática superficial              |
++----------------------------+-------------------------+
+                             |
+                             v
++------------------------------------------------------+
+| 2. Semantic Parsing Layer                            |
+|    Proposiciones, roles, eventos, entidades          |
++----------------------------+-------------------------+
+                             |
+                             v
++------------------------------------------------------+
+| 3. Symbol Grounding Layer                            |
+|    Normalización de signos a símbolos contextuales   |
++----------------------------+-------------------------+
+                             |
+                             v
++------------------------------------------------------+
+| 4. Ontological Layer                                 |
+|    OWL, clases, propiedades, restricciones           |
++----------------------------+-------------------------+
+                             |
+                             v
++------------------------------------------------------+
+| 5. Logical Context Layer                             |
+|    W_i, objetos, propiedades, relaciones, reglas     |
++----------------------------+-------------------------+
+                             |
+                             v
++------------------------------------------------------+
+| 6. Matrix Layer                                      |
+|    M_i = verdad                                      |
+|    S_i = sentido / aplicabilidad                     |
++----------------------------+-------------------------+
+                             |
+                             v
++------------------------------------------------------+
+| 7. Operational Layer                                 |
+|    búsqueda, inferencia, desambiguación, composición |
++------------------------------------------------------+
+
+⸻
+
+20. Ejemplo completo
+
+Texto:
+
+La espinaca es un vegetal de hoja rugosa.
+
+Paso 1: extracción lingüística
+
+subject: espinaca
+class: vegetal
+property:
+  base: hoja
+  modifier: rugosa
+
+Paso 2: forma lógica
+
+Vegetal(espinaca)
+Tiene(espinaca, hoja)
+Rugosa(hoja_de(espinaca))
+
+Paso 3: grounding
+
+espinaca → SPINACIA
+vegetal → VEGETAL
+hoja → HOJA
+rugosa → TEXTURA_RUGOSA
+
+Paso 4: OWL-like
+
+Spinacia rdf:type Vegetal
+Spinacia hasPart some Leaf
+LeafOfSpinacia hasTexture Rough
+
+Paso 5: matrices
+
+En W_{\text{vegetales}}:
+
+M[espinaca, hoja] = 1
+S[espinaca, hoja] = 1
+
+En W_{\text{hojas}}:
+
+M[espinaca, rugosa] = 1
+S[espinaca, rugosa] = 1
+
+Paso 6: estado lógico
+
+estado: sinnvoll
+razon: "La proposición es aplicable y verdadera dentro del contexto."
+
+Ahora comparemos con:
+
+La zanahoria tiene hoja rugosa.
+
+En W_{\text{vegetales}}:
+
+M[zanahoria, hoja] = 0
+S[zanahoria, hoja] = 1
+
+En W_{\text{hojas}}:
+
+S[zanahoria, rugosa] = 0
+
+Resultado:
+
+estado: unsinnig_contextual
+razon: "La propiedad rugosa aplicada a hoja presupone que el objeto tenga hoja."
+
+⸻
+
+21. Formalización de consultas
+
+Una consulta puede representarse como vector:
+
+v_q \in \{0,1\}^{|P_i|}
+
+Por ejemplo:
+
+buscar vegetales con tallo
+
+v_q = [0,0,1]
+
+La recuperación se calcula como:
+
+r = M_i \otimes v_q
+
+Si usamos búsqueda conjuntiva estricta, no basta el OR booleano. Necesitamos verificar que todas las propiedades requeridas estén presentes:
+
+r[o] = \bigwedge_{p \in Q} M_i[o,p]
+
+Para búsqueda con sentido:
+
+r_S[o] = \bigwedge_{p \in Q} S_i[o,p]
+
+La consulta es válida para un objeto solo si:
+
+r_S[o] = 1
+
+y satisfecha si además:
+
+r_M[o] = 1
+
+Esto separa:
+
+no encontrado
+
+de:
+
+no aplicable
+
+⸻
+
+22. Tipos de error
+
+La arquitectura permite clasificar errores semánticos.
+
+22.1 Error de signo
+
+El texto no puede normalizarse.
+
+"lechugax tiene hoja"
+
+No se reconoce lechugax.
+
+22.2 Error de símbolo
+
+El signo existe, pero el contexto no determina un símbolo único.
+
+"gift"
+
+Puede ser regalo o veneno según idioma.
+
+22.3 Error de predicado
+
+La relación no se puede mapear.
+
+"la lechuga transfiere justicia"
+
+22.4 Error de aplicabilidad
+
+El predicado existe, pero no aplica al objeto.
+
+"la lechuga tiene puerta"
+
+22.5 Error de verdad
+
+La proposición aplica, pero es falsa.
+
+"la lechuga tiene raíz principal comestible"
+
+según el contexto, puede ser falsa pero aplicable.
+
+22.6 Error de composición
+
+Dos contextos no pueden cruzarse sin una relación puente.
+
+W_música ∘ W_botánica
+
+requiere definir qué significa relacionar música y vegetales.
+
+⸻
+
+23. Uso con LLMs
+
+Los LLMs pueden usarse como generadores de candidatos, no como fuente final de verdad.
+
+Pipeline recomendado:
+
+LLM:
+  texto → proposiciones candidatas
+parser:
+  proposiciones → formas lógicas
+ontología:
+  formas lógicas → símbolos y restricciones
+validador:
+  símbolos → S_i
+base de hechos:
+  símbolos → M_i
+motor booleano:
+  M_i/S_i → búsqueda, inferencia, composición
+
+Así el LLM no decide directamente si algo es verdadero o con sentido. Propone una estructura; el sistema la valida.
+
+Esto se alinea con líneas recientes que combinan LLMs con solvers externos y mecanismos de razonamiento formal para mejorar consistencia lógica.  ￼
+
+⸻
+
+24. Evaluación
+
+El sistema podría evaluarse en varias dimensiones.
+
+24.1 Exactitud de traducción
+
+¿El texto se proyecta a la forma lógica correcta?
+
+Métricas posibles:
+
+exact match
+predicate alignment
+logical equivalence
+
+Estas métricas son usadas o discutidas en trabajos recientes de NL→FOL.  ￼
+
+24.2 Preservación inferencial
+
+¿Las inferencias obtenidas desde la representación formal coinciden con las inferencias esperadas desde el texto?
+
+Esto conecta con el problema de representaciones FOL que preservan entailment.  ￼
+
+24.3 Clasificación de sentido
+
+Dado un conjunto de proposiciones, el sistema debería clasificarlas como:
+
+sinnvoll
+sinnlos-tautológica
+sinnlos-contradictoria
+unsinnig
+fuera_de_contexto
+ambigua
+
+24.4 Recuperación
+
+Dada una consulta:
+
+buscar objetos con propiedad p
+
+el sistema debería recuperar objetos correctos y distinguir:
+
+no hay resultados porque es falso
+
+de:
+
+no hay resultados porque no aplica
+
+24.5 Composición contextual
+
+Dado dos espacios W_i y W_j, evaluar si el sistema puede:
+
+unir contextos
+proyectar subcontextos
+detectar incompatibilidades
+preservar sentido
+evitar combinaciones absurdas
+
+⸻
+
+25. Aplicaciones
+
+25.1 Recuperación semántica verificable
+
+Un buscador podría no solo buscar texto similar, sino convertir consultas a estructuras lógicas y validar aplicabilidad.
+
+Ejemplo:
+
+"vegetales con hojas rugosas"
+
+en vez de buscar documentos parecidos, el sistema recupera objetos que satisfacen una estructura lógica.
+
+25.2 RAG con validación lógica
+
+En RAG, los documentos recuperados podrían convertirse a hechos y matrices. La generación del LLM se validaría contra M_i y S_i.
+
+25.3 Sistemas tutor inteligentes
+
+Un tutor podría distinguir entre:
+
+respuesta falsa
+respuesta sin sentido
+respuesta tautológica
+respuesta incompleta
+respuesta ambigua
+
+Esto es especialmente relevante para feedback didáctico.
+
+25.4 Verificación de código
+
+Las relaciones no tienen que ser objeto-propiedad. También pueden ser:
+
+función llama función
+módulo depende de módulo
+expresión produce tipo
+estado antecede estado
+
+Esto permitiría representar código como espacio lógico operable.
+
+25.5 S-expressions y Lisp
+
+Las S-expressions pueden verse como una forma intermedia ideal porque ya son estructuras simbólicas composicionales.
+
+Ejemplo:
+
+(has-property lettuce leaf)
+
+puede mapearse directamente a una coordenada:
+
+M[lettuce, leaf] = 1
+
+o a una relación ternaria:
+
+R_has_property[lettuce, leaf] = 1
+
+Esto sugiere que Lisp o lenguajes AST-like pueden funcionar como capa de transición entre lenguaje natural y matrices.
+
+⸻
+
+26. Límites
+
+Este marco no resuelve automáticamente todos los problemas de semántica.
+
+Sus límites principales son:
+
+1. Dependencia de ontologías: sin una ontología o esquema contextual, S_i no puede calcularse.
+2. Grounding difícil: mapear signos a símbolos sigue siendo una tarea ambigua.
+3. Crecimiento dimensional: matrices planas pueden crecer rápidamente.
+4. Contextos dinámicos: los límites de W_i pueden cambiar.
+5. Metáfora y pragmática: muchas frases tienen sentido en contextos no literales.
+6. Incertidumbre: el sistema booleano básico no captura grados de creencia.
+7. Open world vs closed world: OWL suele trabajar con supuestos distintos a una matriz cerrada de verdad.
+
+Este último punto es importante. Una matriz booleana tiende naturalmente a funcionar bajo un supuesto cerrado:
+
+si no está en M_i, entonces es falso
+
+Pero muchas ontologías trabajan bajo un supuesto abierto:
+
+si no está, puede ser desconocido
+
+Una extensión del sistema debería distinguir:
+
+true
+false
+unknown
+not_applicable
+
+en vez de solo:
+
+0 / 1
+
+⸻
+
+27. Extensión: lógica multivaluada
+
+Una versión más robusta puede reemplazar M_i por una matriz multivaluada:
+
+M_i[o,p] \in \{T, F, U, N\}
+
+donde:
+
+T = verdadero
+F = falso
+U = desconocido
+N = no aplicable
+
+Pero la propuesta inicial mantiene M_i y S_i separados porque esa separación es conceptualmente limpia:
+
+S_i decide si la pregunta pertenece al espacio lógico.
+M_i decide si la proposición es verdadera dentro de ese espacio.
+
+⸻
+
+28. Contribución conceptual
+
+La contribución del marco puede resumirse así:
+
+1. Separar explícitamente verdad y sentido.
+2. Representar sentido como aplicabilidad computable mediante S_i.
+3. Representar verdad contextual mediante M_i.
+4. Usar matrices booleanas como sustrato operacional.
+5. Definir contextos W_i como espacios lógicos componibles.
+6. Proponer una cadena de proyección:
+
+lenguaje natural → signo → símbolo → ontología → matriz
+
+7. Reinterpretar semantic parsing no como destino final, sino como una etapa previa al cálculo lógico contextual.
+
+⸻
+
+29. Posicionamiento frente al estado del arte
+
+Los trabajos actuales sobre NL→FOL muestran que es posible traducir lenguaje natural a fórmulas formales, aunque la extracción de predicados y la preservación estructural siguen siendo problemas abiertos.  ￼
+
+Los trabajos sobre entailment-preserving representations muestran que no basta con generar cualquier fórmula FOL: la representación debe conservar las consecuencias inferenciales del texto original.  ￼
+
+Los surveys sobre razonamiento lógico en LLMs muestran que la consistencia lógica sigue siendo un desafío, y que una estrategia común es complementar LLMs con mecanismos externos como solvers o representaciones simbólicas.  ￼
+
+OWL provee una infraestructura formal para ontologías y razonamiento semántico en la Web, mientras que UNL provee un antecedente para representar significado lingüístico como grafo semántico.  ￼
+
+Este whitepaper propone una capa distinta: no solo traducir lenguaje a lógica o a grafos, sino proyectar proposiciones a espacios lógicos contextuales donde verdad, sentido, ambigüedad y composición puedan ser calculados algebraicamente.
+
+⸻
+
+30. Hipótesis de investigación
+
+La hipótesis principal es:
+
+Una representación matricial que separa verdad M_i y sentido S_i permite validar, buscar, desambiguar y componer proposiciones de manera más controlable que una representación puramente lingüística o puramente vectorial.
+
+Hipótesis secundarias:
+
+1. La separación M_i/S_i reduce errores de confundir falsedad con inaplicabilidad.
+2. La partición contextual reduce explosión dimensional.
+3. La composición de contextos permite construir lógicas locales reutilizables.
+4. Los LLMs son útiles como parsers candidatos, pero requieren validación simbólica posterior.
+5. OWL/UNL pueden servir como capas intermedias para hacer el sistema interoperable con estándares existentes.
+
+⸻
+
+31. Roadmap de implementación
+
+Fase 1: dominio mínimo
+
+Crear un dominio pequeño:
+
+vegetales
+animales
+figuras geométricas
+
+Definir:
+
+objects:
+  - lechuga
+  - espinaca
+  - zanahoria
+  - apio
+properties:
+  - hoja
+  - raíz
+  - tallo
+rules:
+  - hoja.rugosa applies only if hoja = true
+  - hoja.lisa applies only if hoja = true
+
+Fase 2: parser controlado
+
+Implementar un parser simple:
+
+"X tiene Y"
+"X es Y"
+"X tiene Y Z"
+
+hacia:
+
+subject: X
+relation: has_property
+object: Y
+modifier: Z
+
+Fase 3: matrices
+
+Generar automáticamente:
+
+M_i
+S_i
+
+desde un YAML de ontología.
+
+Fase 4: motor de consultas
+
+Soportar consultas:
+
+buscar X con propiedad Y
+buscar X con propiedad Y.Z
+detectar propiedades tautológicas
+detectar objetos ambiguos
+detectar consultas no aplicables
+
+Fase 5: composición
+
+Permitir:
+
+W_vegetales → W_hojas
+W_animales → W_colores
+W_eventos → W_tiempos
+
+Fase 6: integración LLM
+
+Usar un LLM solo para proponer:
+
+candidate_parse:
+  subject:
+  relation:
+  object:
+  context:
+
+Luego validar simbólicamente.
+
+⸻
+
+32. Ejemplo de esquema YAML
+
+context: vegetales
+objects:
+  lechuga:
+    class: vegetal
+  espinaca:
+    class: vegetal
+  zanahoria:
+    class: vegetal
+  apio:
+    class: vegetal
+properties:
+  hoja:
+    applies_to: vegetal
+  raíz:
+    applies_to: vegetal
+  tallo:
+    applies_to: vegetal
+  hoja.rugosa:
+    applies_if:
+      property: hoja
+      value: true
+  hoja.lisa:
+    applies_if:
+      property: hoja
+      value: true
+truths:
+  lechuga:
+    hoja: true
+    raíz: false
+    tallo: false
+    hoja.lisa: true
+    hoja.rugosa: false
+  espinaca:
+    hoja: true
+    raíz: false
+    tallo: false
+    hoja.lisa: false
+    hoja.rugosa: true
+  zanahoria:
+    hoja: false
+    raíz: true
+    tallo: false
+  apio:
+    hoja: false
+    raíz: false
+    tallo: true
+
+Este YAML puede compilarse a M_i y S_i.
+
+⸻
+
+33. Ejemplo de salida del validador
+
+Entrada:
+
+La zanahoria tiene hoja rugosa.
+
+Salida:
+
+sign: "La zanahoria tiene hoja rugosa."
+symbolic_parse:
+  subject: zanahoria
+  relation: has_property
+  property: hoja.rugosa
+context: vegetales
+sense:
+  applicable: false
+  reason: "hoja.rugosa requires hoja=true, but M[zanahoria, hoja]=false"
+truth:
+  evaluable: false
+  value: null
+status: unsinnig_contextual
+
+Entrada:
+
+La espinaca tiene hoja rugosa.
+
+Salida:
+
+sign: "La espinaca tiene hoja rugosa."
+symbolic_parse:
+  subject: espinaca
+  relation: has_property
+  property: hoja.rugosa
+context: vegetales
+sense:
+  applicable: true
+truth:
+  evaluable: true
+  value: true
+status: sinnvoll
+
+⸻
+
+34. Conclusión
+
+Este whitepaper propone una arquitectura para proyectar lenguaje natural hacia espacios lógicos booleanos, separando explícitamente verdad y sentido. La propuesta se inspira en la distinción tractariana entre hechos, cosas, proposiciones con sentido, tautologías, contradicciones y formulaciones absurdas, pero la traduce a una forma computacional:
+
+M_i = matriz de verdad
+S_i = matriz de sentido / aplicabilidad
+W_i = contexto lógico
+
+El punto central no es que el lenguaje natural pueda reducirse directamente a matrices, sino que puede proyectarse hacia ellas mediante una cadena de reglas lógicas:
+
+lenguaje natural
+→ signo
+→ símbolo
+→ proposición
+→ grafo semántico
+→ ontología
+→ matriz de sentido y verdad
+
+Este enfoque permite distinguir falsedad de inaplicabilidad, detectar tautologías contextuales, identificar ambigüedades, crear subcontextos, componer lógicas locales y usar LLMs como generadores de candidatos bajo validación simbólica.
+
+La matriz no reemplaza la semántica. La hace operable.
+
+⸻
+
+References
+
+@article{vossel2025advancing,
+  title        = {Advancing Natural Language Formalization to First Order Logic with Fine-tuned LLMs},
+  author       = {Vossel, Felix and Mossakowski, Till and Gehrke, Bj{\"o}rn},
+  journal      = {arXiv preprint arXiv:2509.22338},
+  year         = {2025},
+  doi          = {10.48550/arXiv.2509.22338},
+  url          = {https://arxiv.org/abs/2509.22338}
+}
+@inproceedings{liu2025code4logic,
+  title        = {Few-Shot Natural Language to First-Order Logic Translation via Code Generation},
+  author       = {Liu, Junnan},
+  booktitle    = {Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1: Long Papers},
+  year         = {2025},
+  publisher    = {Association for Computational Linguistics},
+  doi          = {10.18653/v1/2025.naacl-long.547},
+  url          = {https://aclanthology.org/2025.naacl-long.547/}
+}
+@inproceedings{lee2025entailment,
+  title        = {Entailment-Preserving First-order Logic Representations in Natural Language Entailment},
+  author       = {Lee, Jinu and Liu, Qi and Ma, Runzhi and Han, Vincent and Wang, Ziqi and Ji, Heng and Hockenmaier, Julia},
+  booktitle    = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics, Volume 1: Long Papers},
+  year         = {2025},
+  publisher    = {Association for Computational Linguistics},
+  doi          = {10.18653/v1/2025.acl-long.286},
+  url          = {https://aclanthology.org/2025.acl-long.286/}
+}
+@inproceedings{cheng2025empowering,
+  title        = {Empowering LLMs with Logical Reasoning: A Comprehensive Survey},
+  author       = {Cheng, Fengxiang and Li, Haoxuan and Liu, Fenrong and van Rooij, Robert and Zhang, Kun and Lin, Zhouchen},
+  booktitle    = {Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence},
+  year         = {2025},
+  publisher    = {International Joint Conferences on Artificial Intelligence Organization},
+  doi          = {10.24963/ijcai.2025/1155},
+  url          = {https://www.ijcai.org/proceedings/2025/1155}
+}
+@misc{w3cowl2overview,
+  title        = {OWL 2 Web Ontology Language Document Overview},
+  author       = {{W3C OWL Working Group}},
+  year         = {2012},
+  howpublished = {W3C Recommendation},
+  url          = {https://www.w3.org/TR/owl2-overview/}
+}
+@misc{w3cowlfeatures,
+  title        = {OWL Web Ontology Language Overview},
+  author       = {{W3C}},
+  year         = {2004},
+  howpublished = {W3C Recommendation},
+  url          = {https://www.w3.org/TR/owl-features/}
+}

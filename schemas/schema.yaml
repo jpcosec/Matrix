@@ -1,5 +1,17 @@
-context: str
-objects: dict[str, dict]
-properties: dict[str, dict]
-rules: list[dict] | None
-truths: dict[str, dict]
+# Schema definition for Matrix Engine YAML files
+# See examples/ for working instances.
+
+context: str                          # Logical context name (e.g. "vegetales")
+objects: dict[str, dict]              # Object name -> metadata (e.g. class)
+properties: dict[str, dict]           # Property name -> constraints
+  # Each property can have:
+  #   applies_to: str                 # Class restriction (e.g. "vegetal")
+  #   applies_if:                     # Applicability condition
+  #     property: str                 #   prerequisite property
+  #     value: bool                   #   required value
+
+rules: list[dict] | null              # Optional extra inference rules
+
+truths: dict[str, dict]               # Object name -> property -> bool
+  # Only explicit truths need be listed.
+  # Missing entries default to false.

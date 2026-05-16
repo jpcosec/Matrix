@@ -1150,7 +1150,44 @@ M_i decide si la proposición es verdadera dentro de ese espacio.
 
 ⸻
 
-28. Contribución conceptual
+28. Formalización TKM: La Máquina de Conocimiento Tractariana (TKM)
+
+Esta sección formaliza la evolución de las "Matrices de Sentido" hacia el motor **MEEL (Matrix Engine for Evolutionary Logic)** bajo la arquitectura TKM.
+
+28.1 Los 4 Átomos Estructurales (Máscaras)
+
+Para cada contexto $W_i$, el motor proyecta la realidad sobre cuatro dimensiones matriciales:
+
+*   **$V_i$ (Truth Mask)**: Representa el valor de verdad factual $\{0, 1\}$.
+*   **$S_i$ (Sense Mask)**: Determina la aplicabilidad lógica. $S_i[o,p]=0$ implica que la relación es *Unsinnig* (absurda).
+*   **$O_i$ (Observed Mask)**: Registra si el hecho ha sido observado explícitamente o inferido.
+*   **$D_i$ (Discriminative Mask)**: Identifica si la propiedad permite distinguir objetos. Si $D_i=0$, la proposición es *Sinnlos* (tautología/contradicción).
+
+28.2 Energía de Información $E(R)$
+
+La densidad de conocimiento de un contexto se mide mediante su Energía de Información:
+
+$E(R) = 0.25 \times (C(M) + L(T|S) + Q(M,G) + D(M))$
+
+Donde $C(M)$ es la conectividad, $L$ la verosimilitud, $Q$ la calidad del grounding y $D$ el poder discriminativo. Un $E(R) \to 1$ indica un contexto altamente informativo y determinado.
+
+28.3 Colapso Dimensional y Razonamiento DFA
+
+El motor utiliza **JAX** para realizar operaciones tensoriales sobre el espacio lógico:
+
+*   **Colapso Dimensional**: Proyecta la matriz rectangular Objeto-Propiedad $V_i$ en una matriz cuadrada de similitud $W = V \otimes V^T$.
+*   **Razonamiento Recursivo**: Mediante la potencia booleana $W^{k+1} = W^k \otimes W^k$, el sistema realiza un enrutamiento jerárquico (DFA multi-hop) para encontrar conexiones lógicas no evidentes a través de puentes y contextos.
+
+28.4 Orquestación LLM y Autoplasticidad (M vs G)
+
+La ingesta de conocimiento se divide en dos modos operativos:
+
+*   **Modo M (Episódico)**: Prioriza la fidelidad a la superficie del texto. Permite la expansión plástica de ejes (X, Y) sin restricciones de integridad.
+*   **Modo G (Canónico)**: Prioriza la integridad del grafo de conocimiento. Filtra nuevas entradas mediante validación de máscaras, rechazando hechos *Unsinnig* o *Sinnlos*.
+
+⸻
+
+29. Contribución conceptual
 
 La contribución del marco puede resumirse así:
 

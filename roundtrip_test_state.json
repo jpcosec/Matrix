@@ -1,0 +1,132 @@
+{
+  "contexts": {
+    "W_lexicon": {
+      "objects": {
+        "S1_SYM_APIO": { "class": "symbol" },
+        "S1_SYM_ES": { "class": "symbol" },
+        "S1_SYM_TALLO": { "class": "symbol" },
+        "S1_SYM_VERDE": { "class": "symbol" },
+        "S2_SYM_JUPITER": { "class": "symbol" },
+        "S2_SYM_ES": { "class": "symbol" },
+        "S2_SYM_GIGANTE": { "class": "symbol" },
+        "S2_SYM_GASEOSO": { "class": "symbol" }
+      },
+      "properties": {
+        "LIT_EL_APIO": { "type": "sign" },
+        "LIT_ES": { "type": "sign" },
+        "LIT_UN_TALLO": { "type": "sign" },
+        "LIT_VERDE": { "type": "sign" },
+        "LIT_JUPITER": { "type": "sign" },
+        "LIT_UN_GIGANTE": { "type": "sign" },
+        "LIT_GASEOSO": { "type": "sign" }
+      },
+      "truths": {
+        "S1_SYM_APIO": { "LIT_EL_APIO": true },
+        "S1_SYM_ES": { "LIT_ES": true },
+        "S1_SYM_TALLO": { "LIT_UN_TALLO": true },
+        "S1_SYM_VERDE": { "LIT_VERDE": true },
+        "S2_SYM_JUPITER": { "LIT_JUPITER": true },
+        "S2_SYM_ES": { "LIT_ES": true },
+        "S2_SYM_GIGANTE": { "LIT_UN_GIGANTE": true },
+        "S2_SYM_GASEOSO": { "LIT_GASEOSO": true }
+      }
+    },
+    "W_syntax": {
+      "objects": {
+        "S1_SYM_APIO": { "class": "symbol" },
+        "S1_SYM_ES": { "class": "symbol" },
+        "S1_SYM_TALLO": { "class": "symbol" },
+        "S1_SYM_VERDE": { "class": "symbol" },
+        "S2_SYM_JUPITER": { "class": "symbol" },
+        "S2_SYM_ES": { "class": "symbol" },
+        "S2_SYM_GIGANTE": { "class": "symbol" },
+        "S2_SYM_GASEOSO": { "class": "symbol" }
+      },
+      "properties": {
+        "POS_NOUN": { "type": "syntax_tag" },
+        "POS_VERB": { "type": "syntax_tag" },
+        "POS_ADJ": { "type": "syntax_tag" },
+        "GEN_MASC": { "type": "syntax_tag" },
+        "NUM_SING": { "type": "syntax_tag" }
+      },
+      "truths": {
+        "S1_SYM_APIO": { "POS_NOUN": true, "GEN_MASC": true, "NUM_SING": true },
+        "S1_SYM_ES": { "POS_VERB": true, "NUM_SING": true },
+        "S1_SYM_TALLO": { "POS_NOUN": true, "GEN_MASC": true, "NUM_SING": true },
+        "S1_SYM_VERDE": { "POS_ADJ": true, "GEN_MASC": true, "NUM_SING": true },
+        "S2_SYM_JUPITER": { "POS_NOUN": true, "GEN_MASC": true, "NUM_SING": true },
+        "S2_SYM_ES": { "POS_VERB": true, "NUM_SING": true },
+        "S2_SYM_GIGANTE": { "POS_NOUN": true, "GEN_MASC": true, "NUM_SING": true },
+        "S2_SYM_GASEOSO": { "POS_ADJ": true, "GEN_MASC": true, "NUM_SING": true }
+      }
+    },
+    "W_structure": {
+      "objects": {
+        "S1_ROLE_SUBJ": { "fact": "F1" },
+        "S1_ROLE_REL": { "fact": "F1" },
+        "S1_ROLE_PRED": { "fact": "F1" },
+        "S1_ROLE_MOD": { "fact": "F1" },
+        "S2_ROLE_SUBJ": { "fact": "F2" },
+        "S2_ROLE_REL": { "fact": "F2" },
+        "S2_ROLE_PRED": { "fact": "F2" },
+        "S2_ROLE_MOD": { "fact": "F2" }
+      },
+      "properties": {
+        "ROLE_S": { "type": "role" },
+        "ROLE_R": { "type": "role" },
+        "ROLE_P": { "type": "role" },
+        "ROLE_M": { "type": "role" },
+        "TEMPLATE_S_R_P": { "type": "template" }
+      },
+      "truths": {
+        "S1_ROLE_SUBJ": { "ROLE_S": true, "TEMPLATE_S_R_P": true },
+        "S1_ROLE_REL": { "ROLE_R": true, "TEMPLATE_S_R_P": true },
+        "S1_ROLE_PRED": { "ROLE_P": true, "TEMPLATE_S_R_P": true },
+        "S1_ROLE_MOD": { "ROLE_M": true, "TEMPLATE_S_R_P": true },
+        "S2_ROLE_SUBJ": { "ROLE_S": true, "TEMPLATE_S_R_P": true },
+        "S2_ROLE_REL": { "ROLE_R": true, "TEMPLATE_S_R_P": true },
+        "S2_ROLE_PRED": { "ROLE_P": true, "TEMPLATE_S_R_P": true },
+        "S2_ROLE_MOD": { "ROLE_M": true, "TEMPLATE_S_R_P": true }
+      }
+    },
+    "W_facts": {
+      "objects": {
+        "ID_APIO": { "class": "entity" },
+        "ID_JUPITER": { "class": "entity" }
+      },
+      "properties": {
+        "FEAT_TALLO": { "type": "property" },
+        "FEAT_VERDE": { "type": "property" },
+        "FEAT_GIGANTE": { "type": "property" },
+        "FEAT_GASEOSO": { "type": "property" }
+      },
+      "truths": {
+        "ID_APIO": { "FEAT_TALLO": true, "FEAT_VERDE": true },
+        "ID_JUPITER": { "FEAT_GIGANTE": true, "FEAT_GASEOSO": true }
+      }
+    }
+  },
+  "bridges": [
+    {
+      "name": "lex_to_syn",
+      "from": "W_lexicon",
+      "to": "W_syntax",
+      "from_objects": ["S1_SYM_APIO", "S1_SYM_ES", "S1_SYM_TALLO", "S1_SYM_VERDE", "S2_SYM_JUPITER", "S2_SYM_ES", "S2_SYM_GIGANTE", "S2_SYM_GASEOSO"],
+      "to_objects": ["S1_SYM_APIO", "S1_SYM_ES", "S1_SYM_TALLO", "S1_SYM_VERDE", "S2_SYM_JUPITER", "S2_SYM_ES", "S2_SYM_GIGANTE", "S2_SYM_GASEOSO"]
+    },
+    {
+      "name": "syn_to_str",
+      "from": "W_syntax",
+      "to": "W_structure",
+      "from_objects": ["S1_SYM_APIO", "S1_SYM_ES", "S1_SYM_TALLO", "S1_SYM_VERDE", "S2_SYM_JUPITER", "S2_SYM_ES", "S2_SYM_GIGANTE", "S2_SYM_GASEOSO"],
+      "to_objects": ["S1_ROLE_SUBJ", "S1_ROLE_REL", "S1_ROLE_PRED", "S1_ROLE_MOD", "S2_ROLE_SUBJ", "S2_ROLE_REL", "S2_ROLE_PRED", "S2_ROLE_MOD"]
+    },
+    {
+      "name": "str_to_facts",
+      "from": "W_structure",
+      "to": "W_facts",
+      "from_objects": ["S1_ROLE_SUBJ", "S2_ROLE_SUBJ"],
+      "to_objects": ["ID_APIO", "ID_JUPITER"]
+    }
+  ]
+}

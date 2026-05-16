@@ -23,6 +23,33 @@ class TruthValue(IntEnum):
         return {2: "TRUE", 0: "FALSE", 1: "UNKNOWN", -1: "NOT_APPLICABLE"}[self.value]
 
 
+class SymbolRegistry:
+    """
+    TKM Atom: Signo_vs_Simbolo.
+    Manages the mapping between internal Symbols (IDs) and external Signs (labels/synonyms).
+    """
+    def __init__(self):
+        self.symbol_to_signs: dict[str, set[str]] = {}
+        self.sign_to_symbol: dict[str, str] = {}
+
+    def register_symbol(self, symbol_id: str, initial_sign: str = None):
+        if symbol_id not in self.symbol_to_signs:
+            self.symbol_to_signs[symbol_id] = set()
+        if initial_sign:
+            self.add_sign(symbol_id, initial_sign)
+
+    def add_sign(self, symbol_id: str, sign: str):
+        if symbol_id not in self.symbol_to_signs:
+            self.register_symbol(symbol_id)
+        self.symbol_to_signs[symbol_id].add(sign)
+        self.sign_to_symbol[sign] = symbol_id
+
+    def get_symbol(self, sign: str) -> str | None:
+        return self.sign_to_symbol.get(sign)
+
+    def get_signs(self, symbol_id: str) -> list[str]:
+        return list(self.symbol_to_signs.get(symbol_id, []))
+
 @dataclass
 class Context:
     name: str
@@ -53,9 +80,10 @@ class UnifiedMatrixEngine:
     M_U = TruthValue.U
     M_N = TruthValue.N
 
-    def __init__(self, contexts: dict[str, Context] = None, bridges: list[Bridge] = None):
+    def __init__(self, contexts: dict[str, Context] = None, bridges: list[Bridge] = None, registry: SymbolRegistry = None):
         self.contexts = contexts or {}
         self.bridges = bridges or []
+        self.registry = registry or SymbolRegistry()
         
         # 4 Structural Masks per Context (TKM Atom: Mascaras_Estructurales)
         self.Vi: dict[str, jnp.ndarray] = {}  # Truth Matrix (Factual)
@@ -65,6 +93,79 @@ class UnifiedMatrixEngine:
         
         self._bridge_matrices: dict[str, jnp.ndarray] = {}
         self._build_all_matrices()
+
+    def get_context_mirror(self, context_name: str) -> str:
+        """
+        Generates a text description of the context for LLM grounding.
+        """
+        if context_name not in self.contexts:
+            return f"Context '{context_name}' does not exist."
+        
+        ctx = self.contexts[context_name]
+        mirror = [f"CONTEXT MIRROR: {context_name}"]
+        
+        mirror.append("\nOBJECTS (X-Axis):")
+        for obj_id in ctx.objects:
+            signs = self.registry.get_signs(obj_id)
+            meta = ctx.objects_meta.get(obj_id, {})
+            mirror.append(f" - Symbol: {obj_id} (Signs: {', '.join(signs)}) | Meta: {meta}")
+            
+        mirror.append("\nPROPERTIES/DIMENSIONS (Y-Axis):")
+        for prop_id in ctx.properties:
+            signs = self.registry.get_signs(prop_id)
+            meta = ctx.properties_meta.get(prop_id, {})
+            mirror.append(f" - Symbol: {prop_id} (Signs: {', '.join(signs)}) | Meta: {meta}")
+            
+        return "\n".join(mirror)
+
+    def add_dimension(self, context_name: str, symbol_id: str, sign: str = None, meta: dict = None):
+        """Adds a new Y-axis dimension to a context."""
+        if context_name not in self.contexts: return
+        ctx = self.contexts[context_name]
+        if symbol_id not in ctx.properties:
+            ctx.properties.append(symbol_id)
+            ctx.properties_meta[symbol_id] = meta or {}
+            if sign:
+                self.registry.add_sign(symbol_id, sign)
+            self._build_all_matrices()
+
+    def add_object(self, context_name: str, symbol_id: str, sign: str = None, meta: dict = None):
+        """Adds a new X-axis object to a context."""
+        if context_name not in self.contexts: return
+        ctx = self.contexts[context_name]
+        if symbol_id not in ctx.objects:
+            ctx.objects.append(symbol_id)
+            ctx.objects_meta[symbol_id] = meta or {}
+            if sign:
+                self.registry.add_sign(symbol_id, sign)
+            self._build_all_matrices()
+
+    def set_fact(self, context_name: str, subject_id: str, property_id: str, value: bool, mode: str = "M"):
+        """Sets a fact in the engine, with different logic for M and G."""
+        if context_name not in self.contexts: return
+        ctx = self.contexts[context_name]
+        
+        # G-Mode Logic: Integration Check
+        if mode == "G":
+            status_info = self.get_status(subject_id, property_id, context_name)
+            status = status_info["status"]
+            if status == "sinnlos":
+                print(f"[TKM-G] Warning: Fact ({subject_id}, {property_id}) is SINNLOS (Tautology/Contradiction). Integration skipped.")
+                return
+            if status == "unsinnig":
+                print(f"[TKM-G] Warning: Fact ({subject_id}, {property_id}) is UNSINNIG (Sense Violation). Integration rejected.")
+                return
+
+        # Update truth value
+        if subject_id not in ctx.truths:
+            ctx.truths[subject_id] = {}
+        ctx.truths[subject_id][property_id] = value
+        
+        # Rebuild matrices for the updated context
+        self.Vi[context_name] = self._build_Vi(ctx)
+        self.Si[context_name] = self._build_Si(ctx, self.Vi[context_name])
+        self.Oi[context_name] = self._build_Oi(ctx)
+        self.Di[context_name] = self._build_Di(ctx, self.Vi[context_name])
 
     def _build_all_matrices(self):
         for ctx_name, ctx in self.contexts.items():
@@ -250,9 +351,29 @@ class UnifiedMatrixEngine:
         return W
 
     def get_omnirepresentation(self) -> jnp.ndarray:
-        # TKM Omnirepresentación / Matriz por Bloques
-        all_objs = [f"{c}:{o}" for c in self.contexts for o in self.contexts[c].objects]
-        omni = jnp.zeros((len(all_objs), len(all_objs)), dtype=bool)
+        """
+        TKM Atom: Omnirepresentacion (Block Matrix).
+        Constructs the unified matrix W = (Colapso(Vi) | Bridges).
+        This matrix captures BOTH internal context similarities AND inter-context bridges.
+        """
+        all_objs = []
+        for ctx_name in self.contexts:
+            for obj in self.contexts[ctx_name].objects:
+                all_objs.append(f"{ctx_name}:{obj}")
+        
+        N = len(all_objs)
+        omni = jnp.zeros((N, N), dtype=bool)
+        
+        # 1. Internal Context Connections (Dimensional Collapse)
+        # This adds the W = V ⊗ V^T for each context into the block diagonal
+        current_idx = 0
+        for ctx_name in self.contexts:
+            W_local = self.dimensional_collapse(ctx_name)
+            size = W_local.shape[0]
+            omni = omni.at[current_idx:current_idx+size, current_idx:current_idx+size].set(W_local)
+            current_idx += size
+            
+        # 2. Inter-Context Connections (Bridges)
         for bridge in self.bridges:
             R = self._bridge_matrices.get(bridge.name)
             if R is not None:
@@ -260,8 +381,58 @@ class UnifiedMatrixEngine:
                 it_indices = [i for i, x in enumerate(all_objs) if x.startswith(f"{bridge.to_context}:")]
                 for ri in range(R.shape[0]):
                     for rj in range(R.shape[1]):
-                        if R[ri, rj]: omni = omni.at[if_indices[ri], it_indices[rj]].set(True)
+                        if R[ri, rj]:
+                            omni = omni.at[if_indices[ri], it_indices[rj]].set(True)
         return omni
+
+    def dimensional_collapse(self, context_name: str) -> jnp.ndarray:
+        """
+        TKM Atom: Colapso_Dimensional.
+        Collapses a rectangular Object-Property matrix Vi into a square Object-Object 
+        Similarity Matrix W = V ⊗ V^T.
+        This represents the internal connectivity of objects within a single context.
+        """
+        if context_name not in self.Vi:
+            return None
+        Vi = self.Vi[context_name]
+        # W[i, j] is true if object i and object j share at least one property
+        return self._bool_mult(Vi, Vi.T)
+
+    def recursive_bridge_routing(self, start_context: str, steps: int = 3) -> jnp.ndarray:
+        """
+        TKM Atom: Enrutamiento_Jerarquico (JAX Optimized).
+        Performs multi-hop reasoning across contexts by calculating the recursive 
+        boolean power of the Omnirepresentation matrix.
+        """
+        W = self.get_omnirepresentation()
+        
+        # Recursive power: W^(2^k) for exponential reach
+        # Here we do linear steps for clarity, but JAX makes it fast.
+        W_k = W
+        for _ in range(steps):
+            W_k = self._bool_mult(W_k, W_k)
+            # Add self-loops to maintain reachability
+            W_k = jnp.logical_or(W_k, jnp.eye(W_k.shape[0], dtype=bool))
+            
+        return W_k
+
+    def get_collapsed_inference_plane(self) -> dict:
+        """
+        Returns a high-level view of object reachability across the entire 
+        knowledge machine after dimensional collapse.
+        """
+        W_star = self.recursive_bridge_routing(start_context="", steps=2)
+        
+        # Map indices back to global (Context, Object) pairs
+        all_objects = []
+        for ctx_name, ctx in self.contexts.items():
+            for obj in ctx.objects:
+                all_objects.append(f"{ctx_name}.{obj}")
+        
+        return {
+            "matrix": W_star.tolist(),
+            "labels": all_objects
+        }
 
     @staticmethod
     def load(path: str) -> UnifiedMatrixEngine:
@@ -269,17 +440,30 @@ class UnifiedMatrixEngine:
 
     @staticmethod
     def load_from_dict(data: dict) -> UnifiedMatrixEngine:
-        contexts = {cn: Context(name=cn, objects=list(cd.get("objects", {}).keys()),
-                               properties=list(cd.get("properties", {}).keys()),
-                               objects_meta=cd.get("objects", {}),
-                               properties_meta=cd.get("properties", {}),
-                               truths=cd.get("truths", {}))
-                    for cn, cd in data.get("contexts", {}).items()}
+        registry = SymbolRegistry()
+        contexts = {}
+        for cn, cd in data.get("contexts", {}).items():
+            objs = list(cd.get("objects", {}).keys())
+            props = list(cd.get("properties", {}).keys())
+            
+            # Register initial signs as symbols
+            for obj_id in objs: registry.register_symbol(obj_id, obj_id)
+            for prop_id in props: registry.register_symbol(prop_id, prop_id)
+            
+            contexts[cn] = Context(
+                name=cn, 
+                objects=objs,
+                properties=props,
+                objects_meta=cd.get("objects", {}),
+                properties_meta=cd.get("properties", {}),
+                truths=cd.get("truths", {})
+            )
+            
         bridges = [Bridge(name=bd.get("name", "bridge"), from_context=bd.get("from", ""),
                           to_context=bd.get("to", ""), from_objects=bd.get("from_objects", []),
                           to_objects=bd.get("to_objects", []), relation=bd.get("relation", "has_relation"))
                    for bd in data.get("bridges", [])]
-        return UnifiedMatrixEngine(contexts, bridges)
+        return UnifiedMatrixEngine(contexts, bridges, registry)
 
 class TKMVisualizer:
     """

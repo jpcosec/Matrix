@@ -1,10 +1,12 @@
 from __future__ import annotations
 import jax.numpy as jnp
+import jax
+from jax import jit
 import yaml
 import re
 from dataclasses import dataclass, field
 from enum import IntEnum
-from typing import Optional
+from typing import Optional, Union
 
 
 class TruthValue(IntEnum):
@@ -29,7 +31,6 @@ class Context:
     objects_meta: dict
     properties_meta: dict
     truths: dict
-    subcontexts: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -42,37 +43,40 @@ class Bridge:
     relation: str = "has_relation"
 
 
-@dataclass
-class SubContext:
-    name: str
-    parent_property: str
-    objects: list[str]
-    properties: list[str]
-    truths: dict
-
-
 class UnifiedMatrixEngine:
+    """
+    TKM MEEL (Máquina de Estados de Evaluación Lógica).
+    A high-integrity engine for curated knowledge graphs using truth/sense segregation.
+    """
     M_T = TruthValue.T
     M_F = TruthValue.F
     M_U = TruthValue.U
     M_N = TruthValue.N
 
-    def __init__(self, contexts: dict[str, Context] = None, bridges: list[Bridge] = None, subcontexts: dict[str, SubContext] = None):
+    def __init__(self, contexts: dict[str, Context] = None, bridges: list[Bridge] = None):
         self.contexts = contexts or {}
         self.bridges = bridges or []
-        self.subcontexts = subcontexts or {}
-        self.M: dict[str, jnp.ndarray] = {}
-        self.S: dict[str, jnp.ndarray] = {}
+        
+        # 4 Structural Masks per Context (TKM Atom: Mascaras_Estructurales)
+        self.Vi: dict[str, jnp.ndarray] = {}  # Truth Matrix (Factual)
+        self.Si: dict[str, jnp.ndarray] = {}  # Sense Mask (Applicability)
+        self.Oi: dict[str, jnp.ndarray] = {}  # Observed Mask (Explicitly seen)
+        self.Di: dict[str, jnp.ndarray] = {}  # Discriminative Mask (Reducción Descriptiva)
+        
         self._bridge_matrices: dict[str, jnp.ndarray] = {}
         self._build_all_matrices()
 
     def _build_all_matrices(self):
         for ctx_name, ctx in self.contexts.items():
-            self.M[ctx_name] = self._build_M(ctx)
-            self.S[ctx_name] = self._build_S(ctx, self.M[ctx_name])
+            self.Vi[ctx_name] = self._build_Vi(ctx)
+            # Build Si depends on Vi for conditional applicability
+            self.Si[ctx_name] = self._build_Si(ctx, self.Vi[ctx_name])
+            self.Oi[ctx_name] = self._build_Oi(ctx)
+            self.Di[ctx_name] = self._build_Di(ctx, self.Vi[ctx_name])
+            
         self._build_bridge_matrices()
 
-    def _build_M(self, ctx: Context) -> jnp.ndarray:
+    def _build_Vi(self, ctx: Context) -> jnp.ndarray:
         n, m = len(ctx.objects), len(ctx.properties)
         data = jnp.full((n, m), self.M_U.value, dtype=jnp.int8)
         for i, obj_name in enumerate(ctx.objects):
@@ -86,7 +90,7 @@ class UnifiedMatrixEngine:
                         data = data.at[i, j].set(tv.value)
         return data
 
-    def _build_S(self, ctx: Context, M: jnp.ndarray) -> jnp.ndarray:
+    def _build_Si(self, ctx: Context, Vi: jnp.ndarray) -> jnp.ndarray:
         n, m = len(ctx.objects), len(ctx.properties)
         S = jnp.ones((n, m), dtype=bool)
         for i, obj_name in enumerate(ctx.objects):
@@ -94,18 +98,51 @@ class UnifiedMatrixEngine:
             obj_class = obj_meta.get("class")
             for j, prop_name in enumerate(ctx.properties):
                 prop_meta = ctx.properties_meta.get(prop_name, {})
+                
+                # Class restriction
                 applies_to = prop_meta.get("applies_to")
                 if applies_to and obj_class != applies_to:
                     S = S.at[i, j].set(False)
+                    continue
+
+                # Applicability dependency
                 requires = prop_meta.get("applies_if", {})
                 if requires:
                     req_prop = requires.get("property")
                     req_value = requires.get("value")
-                    if req_prop in ctx.properties:
+                    req_context = requires.get("context")
+
+                    if req_context and req_context in self.contexts:
+                        # Cross-context check
+                        other_status = self.get_status(obj_name, req_prop, context=req_context)
+                        if other_status.get("truth_label") != ("TRUE" if req_value else "FALSE"):
+                            S = S.at[i, j].set(False)
+                    elif req_prop in ctx.properties:
+                        # Local check
                         req_j = ctx.properties.index(req_prop)
-                        if M[i, req_j] != (self.M_T.value if req_value else self.M_F.value):
+                        if Vi[i, req_j] != (self.M_T.value if req_value else self.M_F.value):
                             S = S.at[i, j].set(False)
         return S
+
+    def _build_Oi(self, ctx: Context) -> jnp.ndarray:
+        n, m = len(ctx.objects), len(ctx.properties)
+        O = jnp.zeros((n, m), dtype=bool)
+        for i, obj_name in enumerate(ctx.objects):
+            for j, prop_name in enumerate(ctx.properties):
+                if prop_name in ctx.truths.get(obj_name, {}):
+                    O = O.at[i, j].set(True)
+        return O
+
+    def _build_Di(self, ctx: Context, Vi: jnp.ndarray) -> jnp.ndarray:
+        # Reducción Descriptiva: detect tautologies/contradictions
+        n, m = len(ctx.objects), len(ctx.properties)
+        D = jnp.ones((n, m), dtype=bool)
+        for j in range(m):
+            col = Vi[:, j]
+            # If property is true for ALL or false for ALL, it doesn't discriminate
+            if jnp.all(col == self.M_T.value) or jnp.all(col == self.M_F.value):
+                D = D.at[:, j].set(False)
+        return D
 
     def _build_bridge_matrices(self):
         for bridge in self.bridges:
@@ -116,13 +153,12 @@ class UnifiedMatrixEngine:
                 for fo in bridge.from_objects:
                     if fo in from_ctx.objects:
                         i = from_ctx.objects.index(fo)
-                        if fo in bridge.from_objects:
-                            idx = bridge.from_objects.index(fo)
-                            if idx < len(bridge.to_objects):
-                                to_obj = bridge.to_objects[idx]
-                                if to_obj in to_ctx.objects:
-                                    j = to_ctx.objects.index(to_obj)
-                                    R = R.at[i, j].set(True)
+                        idx = bridge.from_objects.index(fo)
+                        if idx < len(bridge.to_objects):
+                            to_obj = bridge.to_objects[idx]
+                            if to_obj in to_ctx.objects:
+                                j = to_ctx.objects.index(to_obj)
+                                R = R.at[i, j].set(True)
                 self._bridge_matrices[bridge.name] = R
 
     def _bool_mult(self, A: jnp.ndarray, B: jnp.ndarray) -> jnp.ndarray:
@@ -132,288 +168,194 @@ class UnifiedMatrixEngine:
         )
 
     def get_status(self, obj: str, prop: str, context: str = None) -> dict:
-        ctx_name = context or "vegetales"
-        ctx = self.contexts.get(ctx_name)
-        if not ctx:
-            for ctx_name, ctx in self.contexts.items():
+        ctx_name = context
+        if not ctx_name:
+            for name, ctx in self.contexts.items():
                 if obj in ctx.objects and prop in ctx.properties:
+                    ctx_name = name
                     break
             else:
-                return {"error": "Object or property not found"}
+                return {
+                    "status": "unsinnig", 
+                    "reason": f"Coordinate ({obj}, {prop}) not found",
+                    "truth": str(self.M_N), "truth_label": self.M_N.label, "applicable": False
+                }
 
+        ctx = self.contexts[ctx_name]
         if obj not in ctx.objects or prop not in ctx.properties:
-            return {"error": f"Object or property not found"}
+            return {
+                "status": "unsinnig", 
+                "reason": f"Coordinate ({obj}, {prop}) missing in {ctx_name}",
+                "truth": str(self.M_N), "truth_label": self.M_N.label, "applicable": False
+            }
 
-        i = ctx.objects.index(obj)
-        j = ctx.properties.index(prop)
-        applicable = bool(self.S[ctx_name][i, j])
-        truth = TruthValue(int(self.M[ctx_name][i, j]))
+        i, j = ctx.objects.index(obj), ctx.properties.index(prop)
+        applicable = bool(self.Si[ctx_name][i, j])
+        truth = TruthValue(int(self.Vi[ctx_name][i, j]))
+        observed = bool(self.Oi[ctx_name][i, j])
+        discriminative = bool(self.Di[ctx_name][i, j])
 
         if not applicable:
-            return {"status": "unsinnig", "truth": str(truth), "truth_label": "NOT_APPLICABLE", "applicable": False}
+            return {
+                "status": "unsinnig", "truth": str(truth), "truth_label": "NOT_APPLICABLE", 
+                "applicable": False, "reason": "Sense violation (Si=0)"
+            }
 
+        status = "sinnvoll" if discriminative else "sinnlos"
         return {
-            "status": "sinnvoll",
-            "truth": str(truth),
-            "truth_label": truth.label,
-            "applicable": True
+            "status": status, "truth": str(truth), "truth_label": truth.label,
+            "applicable": True, "observed": observed, "discriminative": discriminative
         }
 
-    def query(self, properties: list[str], context: str = None) -> list[str]:
-        ctx_name = context
-        ctx = self.contexts.get(ctx_name) if ctx_name else None
-        if not ctx:
-            for ctx_name, ctx in self.contexts.items():
-                all_props_exist = all(p in ctx.properties for p in properties)
-                if all_props_exist:
-                    break
-            else:
-                return []
+    def get_status_hierarchical(self, obj: str, relation: str, property: str) -> dict:
+        # TKM Enrutamiento Jerárquico
+        current_ctx = list(self.contexts.keys())[0]
+        path = [current_ctx]
+        while True:
+            found = False
+            for bridge in self.bridges:
+                if bridge.from_context == current_ctx:
+                    if obj in self.contexts[bridge.to_context].objects:
+                        current_ctx = bridge.to_context
+                        path.append(current_ctx)
+                        found = True
+                        break
+            if not found: break
+        
+        target = f"{relation}.{property}"
+        if target not in self.contexts[current_ctx].properties:
+            target = property
+            
+        res = self.get_status(obj, target, context=current_ctx)
+        res["path"] = path
+        return res
 
-        results = []
-        for i, obj in enumerate(ctx.objects):
-            if all(self.M[ctx_name][i, ctx.properties.index(p)] == self.M_T.value for p in properties if p in ctx.properties):
-                results.append(obj)
-        return results
+    def get_information_energy(self, context: str) -> float:
+        # TKM Energía de Información E(R)
+        Vi, Si, Oi, Di = self.Vi[context], self.Si[context], self.Oi[context], self.Di[context]
+        c = jnp.sum(Si).astype(float) / Si.size
+        i = jnp.sum(jnp.logical_and(Vi == self.M_T.value, Si)).astype(float) / Vi.size
+        o = jnp.sum(Oi).astype(float) / Oi.size
+        d = jnp.sum(Di).astype(float) / Di.size
+        return 0.25*(c + i + o + d)
 
-    def compose(self, ctx1: str, ctx2: str, via_bridge: str = None) -> jnp.ndarray:
-        if via_bridge and via_bridge in self._bridge_matrices:
-            return self._bridge_matrices[via_bridge]
-        M1 = self.M.get(ctx1)
-        M2 = self.M.get(ctx2)
-        if M1 is not None and M2 is not None:
-            return self._bool_mult(M1, M2.T)
-        return jnp.array([])
+    def run_dfa_reasoning(self, context: str, steps: int = 3) -> jnp.ndarray:
+        # TKM Maquina de Estados DFA: operate on the square Similarity Matrix (Object-Object)
+        V = (self.Vi[context] == self.M_T.value).astype(bool)
+        # First, generate the square similarity matrix W = V @ V.T
+        W = self._bool_mult(V, V.T)
+        # Then, apply recursive power for multi-hop
+        for _ in range(steps): 
+            W = self._bool_mult(W, W)
+        return W
 
-    def route_to_subcontext(self, obj: str, prop: str) -> dict:
-        sub = self.subcontexts.get(prop)
-        if sub:
-            i = sub.objects.index(obj) if obj in sub.objects else -1
-            if i >= 0:
-                sub_M = self._build_M(sub)
-                return {
-                    "object": obj,
-                    "subcontext": sub.name,
-                    "properties": {sub.properties[j]: bool(sub_M[i, j]) for j in range(len(sub.properties))}
-                }
-        return {"error": f"No subcontext for {prop}"}
-
-    def classify_all(self, context: str = None) -> dict:
-        ctx_name = context or list(self.contexts.keys())[0]
-        ctx = self.contexts.get(ctx_name)
-        if not ctx:
-            return {}
-
-        result = {"sinnvoll_true": [], "sinnvoll_false": [], "sinnlos_unknown": [], "unsinnig": []}
-        for i, obj in enumerate(ctx.objects):
-            for j, prop in enumerate(ctx.properties):
-                applicable = bool(self.S[ctx_name][i, j])
-                truth = TruthValue(int(self.M[ctx_name][i, j]))
-                pair = (obj, prop)
-
-                if not applicable:
-                    result["unsinnig"].append(pair)
-                elif truth == TruthValue.T:
-                    result["sinnvoll_true"].append(pair)
-                elif truth == TruthValue.F:
-                    result["sinnvoll_false"].append(pair)
-                else:
-                    result["sinnlos_unknown"].append(pair)
-        return result
+    def get_omnirepresentation(self) -> jnp.ndarray:
+        # TKM Omnirepresentación / Matriz por Bloques
+        all_objs = [f"{c}:{o}" for c in self.contexts for o in self.contexts[c].objects]
+        omni = jnp.zeros((len(all_objs), len(all_objs)), dtype=bool)
+        for bridge in self.bridges:
+            R = self._bridge_matrices.get(bridge.name)
+            if R is not None:
+                if_indices = [i for i, x in enumerate(all_objs) if x.startswith(f"{bridge.from_context}:")]
+                it_indices = [i for i, x in enumerate(all_objs) if x.startswith(f"{bridge.to_context}:")]
+                for ri in range(R.shape[0]):
+                    for rj in range(R.shape[1]):
+                        if R[ri, rj]: omni = omni.at[if_indices[ri], it_indices[rj]].set(True)
+        return omni
 
     @staticmethod
     def load(path: str) -> UnifiedMatrixEngine:
-        with open(path) as f:
-            data = yaml.safe_load(f)
+        with open(path) as f: return UnifiedMatrixEngine.load_from_dict(yaml.safe_load(f))
 
-        contexts = {}
-        for ctx_name, ctx_data in data.get("contexts", {}).items():
-            contexts[ctx_name] = Context(
-                name=ctx_name,
-                objects=list(ctx_data.get("objects", {}).keys()),
-                properties=list(ctx_data.get("properties", {}).keys()),
-                objects_meta=ctx_data.get("objects", {}),
-                properties_meta=ctx_data.get("properties", {}),
-                truths=ctx_data.get("truths", {})
-            )
+    @staticmethod
+    def load_from_dict(data: dict) -> UnifiedMatrixEngine:
+        contexts = {cn: Context(name=cn, objects=list(cd.get("objects", {}).keys()),
+                               properties=list(cd.get("properties", {}).keys()),
+                               objects_meta=cd.get("objects", {}),
+                               properties_meta=cd.get("properties", {}),
+                               truths=cd.get("truths", {}))
+                    for cn, cd in data.get("contexts", {}).items()}
+        bridges = [Bridge(name=bd.get("name", "bridge"), from_context=bd.get("from", ""),
+                          to_context=bd.get("to", ""), from_objects=bd.get("from_objects", []),
+                          to_objects=bd.get("to_objects", []), relation=bd.get("relation", "has_relation"))
+                   for bd in data.get("bridges", [])]
+        return UnifiedMatrixEngine(contexts, bridges)
 
-        bridges = []
-        for bridge_data in data.get("bridges", []):
-            bridges.append(Bridge(
-                name=bridge_data.get("name", "bridge"),
-                from_context=bridge_data.get("from", ""),
-                to_context=bridge_data.get("to", ""),
-                from_objects=bridge_data.get("from_objects", []),
-                to_objects=bridge_data.get("to_objects", []),
-                relation=bridge_data.get("relation", "has_relation")
-            ))
+class TKMVisualizer:
+    """
+    TKM Atom: Grafo_Indice_G.
+    Generates specyaml files from the engine state for visualization.
+    """
+    def __init__(self, engine: UnifiedMatrixEngine):
+        self.engine = engine
 
-        subcontexts = {}
-        for prop_name, sub_data in data.get("subcontexts", {}).items():
-            subcontexts[prop_name] = SubContext(
-                name=sub_data.get("name", f"{prop_name}_sub"),
-                parent_property=prop_name,
-                objects=sub_data.get("objects", []),
-                properties=sub_data.get("properties", []),
-                truths=sub_data.get("truths", {})
-            )
-
-        return UnifiedMatrixEngine(contexts, bridges, subcontexts)
-
-
-class NLParser:
-    PROPERTY_MAP = {
-        "hoja": "hoja", "hojas": "hoja",
-        "raíz": "raíz", "raices": "raíz",
-        "tallo": "tallo", "tallos": "tallo",
-        "flor": "flor", "comestible": "comestible",
-        "rugosa": "hoja.rugosa", "rugoso": "hoja.rugosa",
-        "lisa": "hoja.lisa", "liso": "hoja.lisa",
-        "verde": "verde", "rojo": "rojo",
-    }
-
-    def parse(self, text: str) -> dict:
-        text = text.strip().replace("¿", "").replace("?", "").replace("¡", "").replace("!", "").strip().lower()
-
-        subject_match = re.match(r"(?:la |el |los |las )?(\w+)", text)
-        subject = subject_match.group(1) if subject_match else "unknown"
-
-        for pattern, replacement in self.PROPERTY_MAP.items():
-            if pattern in text.lower():
-                return {
-                    "subject": subject,
-                    "property": replacement,
-                    "raw": text,
-                    "relation": "has_property"
-                }
-
-        return {"subject": subject, "property": "unknown", "raw": text, "relation": "unknown"}
-
-
-def demo():
-    print("=" * 70)
-    print("UNIFIED MATRIX ENGINE DEMO")
-    print("=" * 70)
-
-    with open("examples/unified.yaml", "w") as f:
-        yaml.dump({
-            "contexts": {
-                "vegetales": {
-                    "objects": {
-                        "lechuga": {"class": "vegetal"},
-                        "espinaca": {"class": "vegetal"},
-                        "zanahoria": {"class": "vegetal"},
-                        "apio": {"class": "vegetal"}
-                    },
-                    "properties": {
-                        "hoja": {"applies_to": "vegetal"},
-                        "raíz": {"applies_to": "vegetal"},
-                        "tallo": {"applies_to": "vegetal"},
-                        "comestible": {"applies_to": "vegetal"},
-                        "hoja.rugosa": {"applies_if": {"property": "hoja", "value": True}},
-                        "hoja.lisa": {"applies_if": {"property": "hoja", "value": True}}
-                    },
-                    "truths": {
-                        "lechuga": {"hoja": True, "raíz": False, "tallo": False, "comestible": True, "hoja.rugosa": False, "hoja.lisa": True},
-                        "espinaca": {"hoja": True, "raíz": False, "tallo": False, "comestible": True, "hoja.rugosa": True, "hoja.lisa": False},
-                        "zanahoria": {"hoja": False, "raíz": True, "tallo": False, "comestible": True},
-                        "apio": {"hoja": False, "raíz": False, "tallo": True, "comestible": True}
+    def export_knowledge_tree(self, file_path: str):
+        """Generates a component diagram of contexts and bridges."""
+        spec = {
+            "id": "knowledge_tree",
+            "title": "TKM Knowledge Tree (Hierarchy of Contexts)",
+            "version": "1.0.0",
+            "type": "component",
+            "data": {
+                "nodes": {
+                    ctx_name: {
+                        "label": f"Context: {ctx_name} (E={self.engine.get_information_energy(ctx_name):.2f})",
+                        "kind": "storage"
                     }
+                    for ctx_name in self.engine.contexts
                 },
-                "colores": {
-                    "objects": {
-                        "verde": {"class": "color"},
-                        "rojo": {"class": "color"}
-                    },
-                    "properties": {
-                        "color": {"applies_to": "color"}
-                    },
-                    "truths": {
-                        "verde": {"color": True},
-                        "rojo": {"color": True}
+                "edges": [
+                    {
+                        "from": bridge.from_context,
+                        "to": bridge.to_context,
+                        "relation": "bridge",
+                        "label": bridge.name
                     }
-                }
-            },
-            "bridges": [
-                {
-                    "name": "vegetal_color",
-                    "from": "vegetales",
-                    "to": "colores",
-                    "from_objects": ["lechuga", "espinaca", "zanahoria", "apio"],
-                    "to_objects": ["verde", "verde", "rojo", "verde"]
-                }
-            ],
-            "subcontexts": {
-                "hoja": {
-                    "name": "hojas_sub",
-                    "objects": ["lechuga", "espinaca", "zanahoria", "apio"],
-                    "properties": ["rugosa", "lisa", "forma"],
-                    "truths": {
-                        "lechuga": {"rugosa": False, "lisa": True, "forma": "redonda"},
-                        "espinaca": {"rugosa": True, "lisa": False, "forma": "ondulada"}
-                    }
-                }
+                    for bridge in self.engine.bridges
+                ]
             }
-        }, f, allow_unicode=True)
+        }
+        with open(file_path, "w") as f:
+            yaml.dump(spec, f)
 
-    engine = UnifiedMatrixEngine.load("examples/unified.yaml")
-
-    print(f"\n📦 Contexts: {list(engine.contexts.keys())}")
-    print(f"🌉 Bridges: {[b.name for b in engine.bridges]}")
-    print(f"🔀 Subcontexts: {list(engine.subcontexts.keys())}")
-
-    print("\n" + "=" * 70)
-    print("QUERY EXAMPLES")
-    print("=" * 70)
-
-    print(f"\n🔍 Query [hoja, hoja.lisa]: {engine.query(['hoja', 'hoja.lisa'])}")
-    print(f"🔍 Query [tallo]: {engine.query(['tallo'])}")
-    print(f"🔍 Query [comestible]: {engine.query(['comestible'])}")
-
-    print("\n" + "=" * 70)
-    print("STATUS CHECKS")
-    print("=" * 70)
-
-    tests = [
-        ("lechuga", "hoja"),
-        ("lechuga", "hoja.rugosa"),
-        ("zanahoria", "hoja.rugosa"),
-        ("espinaca", "comestible"),
-    ]
-    for obj, prop in tests:
-        status = engine.get_status(obj, prop)
-        print(f"  {obj} + {prop}: {status}")
-
-    print("\n" + "=" * 70)
-    print("CONTEXT COMPOSITION")
-    print("=" * 70)
-
-    C = engine.compose("vegetales", "colores", "vegetal_color")
-    print(f"\nBridge matrix shape: {C.shape}")
-    print("vegetal → color:")
-    ctx = engine.contexts["vegetales"]
-    for i, obj in enumerate(ctx.objects):
-        print(f"  {obj}: {C[i].astype(int)}")
-
-    print("\n" + "=" * 70)
-    print("SUBCONTEXT ROUTING")
-    print("=" * 70)
-
-    for obj in ["lechuga", "espinaca"]:
-        result = engine.route_to_subcontext(obj, "hoja")
-        print(f"\n  {obj} + hoja:")
-        print(f"    {result}")
-
-    print("\n" + "=" * 70)
-    print("CLASSIFICATION")
-    print("=" * 70)
-
-    classified = engine.classify_all()
-    for category, items in classified.items():
-        print(f"\n  {category}: {len(items)} entries")
-        for item in items[:3]:
-            print(f"    {item}")
-
-
-if __name__ == "__main__":
-    demo()
+    def export_context_matrix(self, context_name: str, file_path: str):
+        """Generates a matrix diagram for a specific context Wi."""
+        if context_name not in self.engine.contexts: return
+        
+        ctx = self.engine.contexts[context_name]
+        Vi = self.engine.Vi[context_name]
+        Si = self.engine.Si[context_name]
+        
+        spec = {
+            "id": f"matrix_{context_name}",
+            "title": f"Operational Matrix: {context_name} (W*)",
+            "version": "1.0.0",
+            "type": "component_view_matrix",
+            "data": {
+                "views": [
+                    {
+                        "id": "full_matrix",
+                        "label": "Matrix View",
+                        "stages": [
+                            {"id": prop, "label": prop} for prop in ctx.properties
+                        ]
+                    }
+                ],
+                "components": [
+                    {
+                        "name": obj,
+                        "label": obj,
+                        "kind": "core",
+                        "stages": {
+                            "full_matrix": [
+                                prop for j, prop in enumerate(ctx.properties) 
+                                if bool(Si[i, j]) and bool(Vi[i, j] == self.engine.M_T.value)
+                            ]
+                        }
+                    }
+                    for i, obj in enumerate(ctx.objects)
+                ]
+            }
+        }
+        with open(file_path, "w") as f:
+            yaml.dump(spec, f)

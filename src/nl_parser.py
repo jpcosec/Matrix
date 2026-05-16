@@ -16,6 +16,7 @@ class ParsedPropositions:
 
 class NaturalLanguageParser:
     PATTERNS = [
+        (r"\((.+?)\s+(.+?)\s+(.+?)\)", "s_expression"),
         (r"(.+?) tiene (.+?) (.+)", "has_property_with_modifier"),
         (r"(.+?) tiene (.+)", "has_property"),
         (r"(.+?) es un? (.+)", "is_type"),
@@ -24,6 +25,7 @@ class NaturalLanguageParser:
         (r"buscar (.+)", "query"),
         (r"¿?(?:la |el |los |las )?(.+?) (?:tiene|tienen) (.+?)\??", "question_has"),
         (r"¿?(?:la |el |los |las )?(.+?) es (?:un|una) (.+?)\??", "question_is_type"),
+        (r"(.+?)\s+(.+?)\s+(.+)", "triple"),
     ]
 
     PROPERTY_NORMALIZATION = {
@@ -42,6 +44,8 @@ class NaturalLanguageParser:
         "lisa": "hoja.lisa",
         "rugoso": "hoja.rugosa",
         "liso": "hoja.lisa",
+        "caca": "caca",
+        "comida": "comida",
     }
 
     MODIFIER_MAP = {
@@ -68,7 +72,33 @@ class NaturalLanguageParser:
         groups = match.groups()
         raw_cleaned = raw.replace("¿", "").replace("?", "").replace("¡", "").replace("!", "").strip()
 
-        if pattern_name == "has_property":
+        if pattern_name == "s_expression":
+            subj = self._normalize_subject(groups[0])
+            rel = self._normalize_property(groups[1])
+            obj = self._normalize_property(groups[2])
+            return ParsedPropositions(
+                subject=subj,
+                relation=rel,
+                property=obj,
+                modifier=None,
+                raw=raw_cleaned,
+                confidence=0.95
+            )
+
+        elif pattern_name == "triple":
+            subj = self._normalize_subject(groups[0])
+            rel = self._normalize_property(groups[1])
+            obj = self._normalize_property(groups[2])
+            return ParsedPropositions(
+                subject=subj,
+                relation=rel,
+                property=obj,
+                modifier=None,
+                raw=raw_cleaned,
+                confidence=0.8
+            )
+
+        elif pattern_name == "has_property":
             subject = self._normalize_subject(groups[0])
             prop = self._normalize_property(groups[1])
             return ParsedPropositions(
@@ -160,6 +190,8 @@ class NaturalLanguageParser:
             "¿el apio": "apio",
             "¿la espinaca": "espinaca",
             "¿la zanahoria": "zanahoria",
+            "juanico": "juanico",
+            "juan": "juanico",
         }
         return normalizations.get(text, text)
 

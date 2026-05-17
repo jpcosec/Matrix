@@ -47,7 +47,7 @@ def test_commutative_relation_behavior() -> None:
     
     # Verify (linked b a) is also TRUE due to commutativity
     status_b_a = wigame.get_status("b", "a")
-    assert status_b_a["truth_label"] == "TRUE"
+    assert status_b_a.truth == TruthValue.TRUE.value
 
 def test_transitive_relation_behavior() -> None:
     system = LogicalSystem()
@@ -80,4 +80,4 @@ def test_transitive_relation_behavior() -> None:
     
     # Verify (over a c) is TRUE due to transitivity
     status_a_c = wigame.get_status("a", "c")
-    assert status_a_c["truth_label"] == "TRUE"
+    assert status_a_c.truth == TruthValue.TRUE.value

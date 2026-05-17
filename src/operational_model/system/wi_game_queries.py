@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from ..core.sense_value import SenseValue
 from ..core.truth_value import TruthValue
 from ..routing.search_vector import SearchVector
+from .operation_results import StatusResult
 
 if TYPE_CHECKING:
     from .wigame import WiGame
@@ -37,84 +38,42 @@ def is_pure(wigame: "WiGame") -> bool:
     return wigame.Si.is_pure()
 
 
+def get_status(wigame: "WiGame", subject: str, term: str) -> StatusResult:
+    """Returns the semantic and truth status of a proposition slot."""
+    if subject not in wigame.Vi.row_axis or term not in wigame.Vi.column_axis:
+        return StatusResult("unsinnig", None, False, reason="Out of bounds")
+    sense = wigame.Si.get(subject, term)
+    truth = wigame.Vi.get(subject, term)
+    if sense == SenseValue.UNSINNIG.value:
+        return StatusResult("unsinnig", truth, False, reason="Sense violation")
+    taut = term in wigame.Vi.tautological_columns()
+    return StatusResult(
+        status="sinnlos" if taut else "sinnvoll",
+        truth=truth,
+        applicable=True,
+        discriminative=not taut,
+    )
+
+
+def information_energy(wigame: "WiGame") -> float:
+    """Returns the information energy of this WiGame."""
+    Vi, Si = wigame.Vi, wigame.Si
+    total = len(Vi.row_axis) * len(Vi.column_axis)
+    if total == 0:
+        return 0.0
+    c = _count_sinnvoll(Si) / total
+    i = _count_true_facts(Vi, Si) / total
+    o = len(wigame.facts) / total
+    m = len(Vi.column_axis)
+    d = (m - len(Vi.tautological_columns())) / m if m > 0 else 0.0
+    return 0.25 * (c + i + o + d)
+
+
 def _validate_search_vector(wigame: "WiGame", search_vector: SearchVector) -> None:
     """Ensures the query vector belongs to the requested WiGame."""
 
     if search_vector.wigame_id != wigame.wigame_id:
         raise ValueError("search vector belongs to a different WiGame")
-
-
-def get_status(wigame: "WiGame", subject: str, term: str) -> dict:
-    if subject not in wigame.Vi.row_axis or term not in wigame.Vi.column_axis:
-        return {
-            "status": "unsinnig",
-            "truth": None,
-            "truth_label": "NOT_APPLICABLE",
-            "applicable": False,
-            "reason": f"Coordinate ({subject}, {term}) not in WiGame",
-        }
-    sense = wigame.Si.get(subject, term)
-    truth = wigame.Vi.get(subject, term)
-
-    if sense == SenseValue.UNSINNIG.value:
-        return {
-            "status": "unsinnig",
-            "truth": truth,
-            "truth_label": "NOT_APPLICABLE",
-            "applicable": False,
-            "reason": "Sense violation (Si=unsinnig)",
-        }
-
-    taut = term in wigame.Vi.tautological_columns()
-    status = "sinnlos" if taut else "sinnvoll"
-    return {
-        "status": status,
-        "truth": truth,
-        "truth_label": "TRUE"
-        if truth == TruthValue.TRUE.value
-        else "FALSE"
-        if truth == TruthValue.FALSE.value
-        else "UNKNOWN",
-        "applicable": True,
-        "discriminative": not taut,
-    }
-
-
-def information_energy(wigame: "WiGame") -> float:
-    Vi, Si = wigame.Vi, wigame.Si
-    n, m = len(Vi.row_axis), len(Vi.column_axis)
-    total = n * m
-    if total == 0:
-        return 0.0
-
-    sinnvoll_values = {SenseValue.SINNVOLL.value, SenseValue.SINNLOS.value}
-    c = (
-        sum(
-            1
-            for row_key in Si.row_axis
-            for val in Si.row(row_key).values()
-            if val in sinnvoll_values
-        )
-        / total
-    )
-
-    i = (
-        sum(
-            1
-            for row_key in Vi.row_axis
-            for col_key in Vi.column_axis
-            if Vi.get(row_key, col_key) == TruthValue.TRUE.value
-            and Si.get(row_key, col_key) != SenseValue.UNSINNIG.value
-        )
-        / total
-    )
-
-    o = len(wigame.facts) / total
-
-    taut = len(wigame.Vi.tautological_columns())
-    d = (m - taut) / m if m > 0 else 0.0
-
-    return 0.25 * (c + i + o + d)
 
 
 def _terms_are_meaningful(
@@ -127,4 +86,26 @@ def _terms_are_meaningful(
     return all(
         wigame.Si.get(subject_symbol_id, term) != SenseValue.UNSINNIG.value
         for term in requested_terms
+    )
+
+
+def _count_sinnvoll(Si: Any) -> int:
+    """Counts meaningful cells in the sense matrix."""
+    sinnvoll_values = {SenseValue.SINNVOLL.value, SenseValue.SINNLOS.value}
+    return sum(
+        1
+        for r in Si.row_axis
+        for val in Si.row(r).values()
+        if val in sinnvoll_values
+    )
+
+
+def _count_true_facts(Vi: Any, Si: Any) -> int:
+    """Counts true and meaningful cells."""
+    return sum(
+        1
+        for r in Vi.row_axis
+        for c in Vi.column_axis
+        if Vi.get(r, c) == TruthValue.TRUE.value
+        and Si.get(r, c) != SenseValue.UNSINNIG.value
     )

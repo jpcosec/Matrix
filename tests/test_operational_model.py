@@ -1,3 +1,4 @@
+import pytest
 from src.operational_model import (
     Context,
     Fact,
@@ -136,10 +137,10 @@ def test_routing_projection_crosses_between_wigames() -> None:
         target_terms=["domestic"],
     )
 
-    assert result["source_hits"] == ["dog", "wolf"]
-    assert result["projected_hits"] == ["dog", "wolf"]
-    assert result["target_hits"] == ["dog"]
-    assert result["cross_hits"] == ["dog"]
+    assert result.source_hits == ["dog", "wolf"]
+    assert result.projected_hits == ["dog", "wolf"]
+    assert result.target_hits == ["dog"]
+    assert result.cross_hits == ["dog"]
 
 
 def test_context_can_route_to_contexts_and_wigames() -> None:
@@ -160,3 +161,16 @@ def test_symbol_support_is_differential_and_accumulative() -> None:
     assert len(system.symbols["dog"].supporting_fact_ids) == 3
     assert "wigame:animales" in system.symbols["dog"].supporting_wigame_ids
     assert "wigame:caninos" in system.symbols["dog"].supporting_wigame_ids
+
+
+def test_search_with_unknown_terms_raises_keyerror() -> None:
+    system = build_system()
+    with pytest.raises(KeyError):
+        system.search("wigame:animales", ["non-existent-term"])
+
+
+def test_route_search_with_empty_path_returns_local_hits() -> None:
+    system = build_system()
+    result = system.route_search("wigame:animales", ["canine_kind"], [])
+    assert result.source_hits == ["dog", "wolf"]
+    assert result.projected_hits == ["dog", "wolf"]

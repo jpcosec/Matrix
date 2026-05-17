@@ -151,7 +151,7 @@ def test_system_level_multi_hop_search():
             path=[rab.matrix_id, rbc.matrix_id],
             target_terms=["p1"]
         )
-        assert result["cross_hits"] == ["c1"]
+        assert result.cross_hits == ["c1"]
 
 
 def test_system_level_empty_projection():
@@ -170,5 +170,5 @@ def test_system_level_empty_projection():
     system.register_projection(rab)
     
     result = system.route_search("wa", ["p1"], [rab.matrix_id])
-    assert result["source_hits"] == ["a1"]
-    assert result["projected_hits"] == []
+    assert result.source_hits == ["a1"]
+    assert result.projected_hits == []

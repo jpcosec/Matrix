@@ -23,9 +23,9 @@ def test_status_sinnvoll():
     fact = Fact(proposition=prop, truth=TruthValue.TRUE)
     wg.add_fact(fact, sense=SenseValue.SINNVOLL)
     status = wg.get_status("a1", "p1")
-    assert status["status"] == "sinnvoll"
-    assert status["truth_label"] == "TRUE"
-    assert status["applicable"] is True
+    assert status.status == "sinnvoll"
+    assert status.truth == TruthValue.TRUE.value
+    assert status.applicable is True
 
 
 def test_status_sinnlos_tautology():
@@ -43,20 +43,20 @@ def test_status_sinnlos_tautology():
         Fact(proposition=prop2, truth=TruthValue.TRUE), sense=SenseValue.SINNVOLL
     )
     status = wg.get_status("a1", "p1")
-    assert status["status"] == "sinnlos"
-    assert status["discriminative"] is False
+    assert status.status == "sinnlos"
+    assert status.discriminative is False
 
 
 def test_status_unsinnig():
     wg = _make_wigame(["a1"], ["p1"])
     wg.set_sense("a1", "p1", SenseValue.UNSINNIG)
     status = wg.get_status("a1", "p1")
-    assert status["status"] == "unsinnig"
-    assert status["applicable"] is False
+    assert status.status == "unsinnig"
+    assert status.applicable is False
 
 
 def test_status_missing_coordinate():
     wg = _make_wigame(["a1"], ["p1"])
     status = wg.get_status("a1", "nonexistent")
-    assert status["status"] == "unsinnig"
-    assert status["applicable"] is False
+    assert status.status == "unsinnig"
+    assert status.applicable is False

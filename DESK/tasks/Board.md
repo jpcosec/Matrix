@@ -2,13 +2,19 @@
 
 ## Active Tasks
 
-No active tasks.
+| Task | Domain | Objective | Priority | Documentation |
+|------|--------|-----------|----------|---------------|
+| task-db-01 | algebra | Formalize relation algebra and expected Wi-level properties | p0 | `docs/proposition_first_architecture.md`, `docs/data_models.md` |
+| task-db-02 | routing | Formalize and test multi-Wi routing semantics | p0 | `docs/architecture.md`, `docs/operations.md` |
+| task-db-03 | operations | Formalize and test the contract of query and projection operations | p0 | `docs/operations.md`, `docs/data_models.md` |
+| task-db-04 | serialization | Harden YAML persistence through round-trip tests and schema checks | p1 | `docs/canonical_forms_and_ingestion.md`, `docs/data_models.md` |
 
 ## Deferred / Future
 
 - **Si redesign** — see `docs/proposition_first_architecture.md`
 - **Oi handling** — see `docs/proposition_first_architecture.md`
 - **New ingestion CLI** — see `docs/canonical_forms_and_ingestion.md`
+- **Postgres compatibility path** — stay full YAML for the prototype, but keep future storage work compatible with Postgres and graph-oriented extensions
 
 ## Execution Rule
 

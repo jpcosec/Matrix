@@ -1,92 +1,86 @@
 # Operations
 
-This document describes the main ways the TKM/MEEL stack is meant to be used in practice.
+This document describes the main workflows of the active proposition-first model.
 
-## 1. Ingestion and schema growth
+## 1. Ingestion
 
-`TKMOrchestrator` provides an LLM-oriented workflow for mapping natural language into the current logical space.
+Ingestion should map external material toward explicit proposition structure.
 
-The intended decision flow is:
+The intended flow is:
 
-1. map directly to an existing subject/property
-2. map semantically to an existing symbol
-3. expand the schema with a new object, property, or context-facing element
+1. resolve or create the relevant names and symbols
+2. identify the relation and the two participating things
+3. create a proposition in canonical form `(R a b)`
+4. attach a truth assignment to produce a fact
+5. place that fact in the appropriate `WiGame`
 
-Once the decision is made, the orchestrator updates the symbol registry, extends the context when needed, and writes the fact into the engine.
+If the relevant local game or routing path does not exist yet, the system may need to extend its structural space before the fact can be grounded cleanly.
 
-- Code reference: `src/tkm_orchestrator.py`
+## 2. Local evaluation
 
-## 2. Status evaluation
+Local evaluation happens inside a `WiGame`.
 
-`get_status` is the central logical query.
+At that layer, the system combines:
 
-It combines:
+- `Vi` for truth
+- `Si` for semantic status
 
-- the factual layer (`V_i`)
-- the applicability layer (`S_i`)
-- the explicit truth value labels
+This allows the system to explain whether a proposition is meaningful, tautological, contradictory, malformed, or simply unevaluated.
 
-The result explains whether a proposition is `sinnvoll`, `sinnlos`, or `unsinnig`, rather than only returning a raw boolean.
+## 3. Querying
 
-- Code reference: `src/unified_engine.py`
-
-## 3. Querying and discrimination
-
-The engine can filter objects by property conjunctions and identify dimensions that fail to distinguish between candidates.
-
-In the proposition-first operational model, local search is expressed through `p_i` (`SearchVector`):
+Local search is expressed through `p_i` (`SearchVector`):
 
 - `p_i` lives on the `ejeB` axis of a `WiGame`
-- it marks the terms requested inside that game
-- it is evaluated against `Vi`, while `Si` filters malformed positions
+- it marks which terms are being requested inside that game
+- it is evaluated against `Vi`, while `Si` filters malformed or semantically invalid positions
 
-Typical uses:
+Typical uses include:
 
-- search for objects that satisfy a set of properties
-- detect tautological dimensions
-- detect ambiguous objects that remain under-specified
+- searching for subjects that satisfy a set of requested terms
+- detecting dimensions that do not discriminate locally
+- narrowing candidate facts before cross-context routing
 
-Code reference: `src/operational_model/`
+## 4. Routing and projection
 
-## 4. Bridge routing and composition
+When knowledge spans multiple local games, routing proceeds through `Context` and `RoutingProjection`.
 
-When knowledge is split across contexts, bridges provide the explicit routing structure.
+- `Context` determines where navigation can go next
+- `r_i` determines how subjects in one game project into another
 
-In the new operational model, crossings are expressed through `r_i` (`RoutingProjection`):
+This supports workflows such as:
 
-- rows are subjects in the source `WiGame`
-- columns are subjects in the target `WiGame`
-- `True` marks a valid projection from one game into another
+- search locally in one game
+- project the matching subjects into a second game
+- intersect the projected results with a second local query
+- continue routing if a higher-level context requires another hop
 
-This supports compositions such as:
-
-- `W_animales_es_propiedades x r_proyeccion_animales_caninos x W_caninos_es_propiedades`
-
-Important operations include:
-
-- composing information across linked contexts
-- projecting source hits into a target game
-- intersecting projected hits with a target-side `p_i`
-- collapsing dimensions into square routed views
-- recursively propagating connectivity through bridge paths
-
-Code references: `src/operational_model/`, `src/unified_engine.py`
-
-## 5. Descriptive inversion
+## 5. Reconstruction
 
 Reconstruction works by moving from fact-bearing structures back toward language-facing ones.
 
 Typical sequence:
 
-1. locate the relevant fact in a factual context
-2. traverse the bridges or structural contexts that explain it
-3. recover symbols, templates, and constraints
-4. emit a reconstructable textual form
+1. locate the relevant fact
+2. recover the local proposition structure
+3. route to any supporting spaces if the explanation depends on them
+4. recover names, symbols, and relations
+5. emit a reconstructable textual representation
 
-The round-trip scenario in `tests/test_tkm_roundtrip_suite.py` is the best executable reference for this workflow.
+The round-trip scenario in `tests/test_tkm_roundtrip_suite.py` remains the best executable reference for this workflow.
 
-## 6. Visualization and export
+## 6. Export direction
 
-`TKMVisualizer` supports exporting matrix and tree-oriented views that can be consumed by external tooling such as YAML or PlantUML-based pipelines.
+Export should preserve the proposition-first structure instead of serializing through legacy matrix-specific assumptions.
 
-- Code reference: `src/unified_engine.py`
+Preferred external artifacts include:
+
+- canonical proposition text
+- `WiGame` serialization
+- routing-aware structures that can be inspected or transformed by downstream tools
+
+## Code references
+
+- `src/operational_model/system/`
+- `src/operational_model/routing/`
+- `src/operational_model/matrices/`

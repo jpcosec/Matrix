@@ -1,75 +1,77 @@
 # Architecture
 
-The TKM-oriented architecture separates logical responsibilities into specialized contexts (`W_i`). The goal is not only to store facts, but also to preserve enough structure to reason about applicability, discriminate useful dimensions, and support descriptive inversion back toward language-oriented representations.
+Matrix is organized around a proposition-first operational model rooted in `src/operational_model/`.
+
+For the stable architectural stance, start with `docs/proposition_first_architecture.md`. This document gives the structural view of how the active code is organized.
 
 ## High-level flow
 
 ```text
-Natural language input
+Names and symbols
         |
         v
-TKM orchestrator / parser
+Thing / Relation / Proposition / Fact
         |
-        +--> symbol grounding and registry updates
-        +--> context expansion when new objects or dimensions appear
         v
-Unified matrix engine
+WiGame (local evaluation)
         |
-        +--> V_i  truth values
-        +--> S_i  applicability / sense mask
-        +--> O_i  observed facts mask
-        +--> D_i  discriminative mask
+        +--> Vi truth matrix
+        +--> Si sense matrix
+        +--> p_i local search vector
         v
-Queries, validation, composition, and routing
+Context graph
+        |
+        +--> ContextRoute edges
+        +--> r_i routing projections
+        v
+Search, routing, reconstruction, and serialization
 ```
 
 ## Main architectural pieces
 
-1. `SymbolRegistry`
-   Maps external signs to internal symbols and keeps the reverse lookup needed for reconstruction and synonym handling.
-   - Code reference: `src/unified_engine.py`
+1. `core/`
+   Defines the primitive entities used throughout the system.
+   - Code reference: `src/operational_model/core/`
 
-2. `Context`
-   Defines a logical world: objects, properties, metadata, and the current set of facts.
-   - Code reference: `src/unified_engine.py`
+2. `matrices/`
+   Defines shared matrix structures such as truth and sense matrices.
+   - Code reference: `src/operational_model/matrices/`
 
-3. `Bridge`
-   Connects objects across contexts so the engine can compose or route information between logical spaces.
-   - Code reference: `src/unified_engine.py`
+3. `system/`
+   Defines local language-game behavior and aggregate orchestration.
+   - Code reference: `src/operational_model/system/`
 
-4. `UnifiedMatrixEngine`
-   Builds and operates over the four structural masks per context and exposes higher-level operations such as status evaluation, bridge routing, and information energy.
-   - Code reference: `src/unified_engine.py`
+4. `routing/`
+   Defines cross-space navigation through `Context`, `ContextRoute`, `SearchVector`, and `RoutingProjection`.
+   - Code reference: `src/operational_model/routing/`
 
-5. `TKMOrchestrator`
-   Produces LLM-facing prompts and applies the resulting mapping decisions back into the engine.
-   - Code reference: `src/tkm_orchestrator.py`
+## Responsibility split
 
-## Interpreting the four matrix layers
+- `Thing`, `Relation`, `Proposition`, and `Fact` define the logical substrate.
+- `WiGame` is the local evaluative space where propositions can be queried and facts can be assessed.
+- `Context` is the routing layer that organizes how one local space can lead to another.
+- `SearchVector (p_i)` expresses what is being requested inside a `WiGame`.
+- `RoutingProjection (r_i)` expresses how subjects in one game project into another.
 
-- `V_i` stores factual truth values, including explicit unknown and not-applicable states.
-- `S_i` decides whether a proposition is meaningful for an object in a given context.
-- `O_i` marks facts that were explicitly grounded or observed.
-- `D_i` suppresses dimensions that fail to discriminate between objects.
+## Evaluation model
 
-## Context design pattern
+The active model preserves a clean distinction between truth and sense:
 
-In practice, the repository uses the idea of several cooperating context types:
+- `Vi` stores factual truth values.
+- `Si` stores whether a position is meaningful, tautological, contradictory, or malformed.
 
-- lexical contexts for sign-to-symbol handling
-- structural or syntactic contexts for templates and constraints
-- factual contexts for the truth-bearing layer
-- bridge contexts for cross-context routing
+Observation and provenance do not require a dedicated legacy matrix layer. When needed, they belong on `Fact` metadata.
 
-These are modeling roles rather than rigid classes. The actual implementation centers on `Context`, `Bridge`, and `UnifiedMatrixEngine`.
+## Routing and reconstruction
 
-## Routing and inversion
+Reconstruction moves from a fact-bearing local space toward the structures that can explain or restate it:
 
-Descriptive inversion works by moving from a fact-bearing context toward the structures that can explain or reconstruct it:
+1. Identify the relevant fact or proposition.
+2. Search locally within the relevant `WiGame`.
+3. Route across `Context` boundaries when the answer depends on another space.
+4. Project subjects through `r_i` when crossing games.
+5. Reconstruct a language-facing representation from the linked facts and symbols.
 
-1. Identify the target fact or proposition.
-2. Follow bridge relations across contexts when needed.
-3. Recover the relevant symbols, templates, or structural constraints.
-4. Reconstruct a language-facing representation from those linked pieces.
+## Legacy status
 
-The routing primitives live in `src/unified_engine.py`, especially the bridge and dimensional-collapse logic.
+The old unified-engine stack is no longer the architectural source of truth. If historical files remain in the repository, they should be treated as migration surfaces rather than design references.

@@ -80,10 +80,13 @@ Some tests exercise the unified engine and therefore require the optional JAX de
 ## Documentation map
 
 - `docs/README.md` - docs index
-- `docs/architecture.md` - context layers, bridges, and routing
-- `docs/concepts.md` - philosophical and mathematical foundations
+- `docs/proposition_first_architecture.md` - stable architectural direction
+- `docs/canonical_forms_and_ingestion.md` - canonical proposition format and ingestion rules
+- `docs/rebuild_and_migration_policy.md` - migration and task policy
+- `docs/architecture.md` - package layout and responsibility split
+- `docs/concepts.md` - philosophical and proposition-first foundations
 - `docs/data_models.md` - primary data structures
-- `docs/operations.md` - ingestion, status evaluation, and reconstruction flows
+- `docs/operations.md` - ingestion, evaluation, routing, and reconstruction flows
 
 ## License
 

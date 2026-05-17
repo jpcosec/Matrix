@@ -1,54 +1,59 @@
 # Concepts
 
-Matrix combines a philosophical vocabulary about meaning with a computational model built from explicit logical contexts and matrix operations.
+Matrix combines a philosophical vocabulary about meaning with an operational model built from explicit propositions, local language games, and routing structures.
+
+## Proposition-first stance
+
+The project starts from propositions, not from object-property pairs.
+
+- a proposition has the form `(R a b)`
+- `R` is a relation
+- `a` and `b` are things
+- a fact is a proposition with a truth assignment
+
+This keeps the logical form explicit and prevents object/property shortcuts from becoming the hidden architecture.
 
 ## Philosophical vocabulary
 
 The project borrows from the *Tractatus Logico-Philosophicus* the idea that logical evaluation should happen over facts and their form, not only over isolated words.
 
-- `sinnvoll`: a proposition is meaningful in context and can be evaluated as true, false, or unknown.
-- `sinnlos`: a proposition collapses into tautological or contradictory structure and carries no discriminative information.
-- `unsinnig`: a proposition is not applicable in the current context, so evaluation itself is ill-formed.
+- `sinnvoll`: a proposition is meaningful and can be evaluated truthfully inside the relevant game.
+- `sinnlos`: a proposition is structurally empty in the relevant way, such as a tautological or contradictory case.
+- `unsinnig`: a proposition is malformed or outside the relevant logical space, so evaluation is ill-formed.
 
-In the codebase, these labels are used to explain why a proposition succeeds or fails logical validation, not just whether it is true.
+These labels explain why a proposition succeeds or fails logical validation, not just whether it is true.
 
-## MEEL and the structural masks
+## Truth and sense
 
-The MEEL layer organizes reasoning through four related masks:
+The active model keeps truth and sense separate:
 
-- `V_i` - truth values
-- `S_i` - sense or applicability
-- `O_i` - observed or explicitly grounded facts
-- `D_i` - discriminative capacity
+- `Vi` stores factual truth values.
+- `Si` stores semantic status.
 
-This separation matters because a proposition can be false yet meaningful, or impossible to evaluate because it never applies to the target object in the first place.
+This matters because a proposition can be false yet meaningful, or impossible to evaluate because it never forms a valid move in the current game.
 
-## Truth values
+## Local and routed spaces
 
-The unified engine uses a four-valued representation through `TruthValue`:
+- `WiGame` is the local language game where propositions and facts are evaluated.
+- `Context` is the routing structure that can point to `WiGame` instances or other `Context` instances.
+- `SearchVector (p_i)` expresses a local query inside one game.
+- `RoutingProjection (r_i)` expresses how subjects project from one game into another.
 
-- `TRUE`
-- `FALSE`
-- `UNKNOWN`
-- `NOT_APPLICABLE`
+This split keeps local semantics and cross-space navigation decoupled.
 
-That allows the engine to distinguish missing knowledge from structural invalidity.
+## Provenance
 
-## Information energy
+Observation is treated as fact-level provenance, not as a first-class matrix layer.
 
-`get_information_energy` measures how informative a context is based on its matrix structure.
+When provenance matters, it should live on `Fact` metadata through fields such as source, confidence, or derivation lineage.
 
-- Code reference: `src/unified_engine.py`
+## Semantic refinement
 
-Use it when comparing contexts or when deciding whether a routed view remains discriminative enough to justify further reasoning.
+The sense vocabulary is expected to become more explicit over time. In particular, the current flat `Si` statuses may be replaced by finer-grained dataclass-level semantic states once the structural refactor settles.
 
-## Dimensional collapse and routing
+## Code references
 
-The unified engine uses JAX-backed matrix operations to derive square similarity-style representations from rectangular knowledge matrices.
-
-- `dimensional_collapse` builds local collapsed views.
-- `recursive_bridge_routing` propagates information across contexts.
-
-These operations support multi-hop reasoning, bridge traversal, and higher-level composition workflows.
-
-- Code reference: `src/unified_engine.py`
+- `src/operational_model/core/`
+- `src/operational_model/matrices/`
+- `src/operational_model/routing/`
+- `src/operational_model/system/`

@@ -9,7 +9,7 @@ Every non-trivial task should contain:
 1. `Goal`
 2. `Objective`
 3. `Non-Goals`
-4. `Pills Required`
+4. `Documentation References`
 5. `References`
 6. `Exact Files To Change`
 7. `Files To Avoid Unless Necessary`
@@ -34,9 +34,9 @@ What must become true.
 
 What this task must not absorb.
 
-### Pills Required
+### Documentation References
 
-Only the pills needed to eliminate ambiguity for this task.
+Only the stable documentation needed to eliminate ambiguity for this task.
 
 ### Delete / Migrate Decision
 
@@ -54,6 +54,6 @@ Concrete commands, checks, or artifacts that prove success.
 
 - task says only "clean legacy"
 - task does not list files
-- task does not list pills
+- task does not list documentation references
 - task does not distinguish migrate vs delete
 - task repairs old tests without improving the new architecture

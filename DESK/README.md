@@ -1,45 +1,27 @@
 # DESK
 
-Temporary execution workspace for rebuilding Matrix on the new proposition-first operational model.
+Temporary execution workspace for active Matrix implementation work.
 
 ## Purpose
 
-This desk tracks only active implementation scaffolding for Matrix.
+DESK exists to coordinate live work without turning temporary scaffolding into permanent architecture.
 
 - Code is truth.
 - Tests prove behavior.
 - Specs explain architecture.
-- DESK files are temporary working surfaces.
-- Resolved tasks must be deleted; history belongs in git.
+- DESK files support execution, not long-term architectural storage.
+- Resolved task files must be deleted; history belongs in git.
 
-## Current Direction
+## Scope
 
-Matrix is being rebuilt around:
+Use DESK for:
 
-- `Thing`
-- `Relation`
-- `Proposition`
-- `Fact`
-- `LiSpace`
-- `WiGame`
-- `Context`
-- `SearchVector (p_i)`
-- `RoutingProjection (r_i)`
+- working procedure
+- task authoring rules
+- active task tracking in `DESK/tasks/Board.md`
+- task files that are still open
 
-The old `UnifiedMatrixEngine` stack is now treated as legacy. Any useful logic should be migrated into the new codebase; everything else should be deleted and preserved only in git history.
-
-## Active Index
-
-- `DESK/PROCEDURE.md`
-- `DESK/RITUALS.md`
-- `DESK/CONTEXT-PILLS.md`
-- `DESK/TASK-SPEC.md`
-- `DESK/pills/README.md`
-- `DESK/tasks/Board.md`
-- `DESK/tasks/task-00-legacy-inventory.md`
-- `DESK/tasks/task-01-delete-legacy-tests.md`
-- `DESK/tasks/task-02-migrate-useful-legacy-capabilities.md`
-- `DESK/tasks/task-03-delete-legacy-runtime.md`
+Do not use DESK as the permanent home for architectural decisions. Once a decision stabilizes, it belongs in `docs/`.
 
 ## Authoring Rule
 
@@ -47,7 +29,7 @@ Each task must be executable by an agent that reads only:
 
 1. the task file
 2. the task board
-3. the listed pills
-4. the listed references
+3. the listed documentation references
+4. the listed code references
 
 If that is not possible, the task is underspecified and must be hardened before implementation.

@@ -11,7 +11,7 @@ Li:
   li_id: li:colores
   metadata: {}
 Vi:
-  matrix_id: vi:ff00ecfc247d
+  matrix_id: vi:88c0376f2ec4
   rows:
   - amarillo
   - rojo
@@ -24,7 +24,7 @@ Vi:
   - - 'true'
   metadata: {}
 Si:
-  matrix_id: si:572efff190cc
+  matrix_id: si:51d3ee498a67
   rows:
   - amarillo
   - rojo
@@ -37,28 +37,28 @@ Si:
   - - sinnvoll
   metadata: {}
 facts:
-- fact_id: fact:9bbbb88af5e8
+- fact_id: fact:d20a5f007ad5
   truth: 'true'
   proposition:
-    proposition_id: prop:3a7b0db3d216
+    proposition_id: prop:9d6ad407ada8
     relation_id: has_property
     subject_symbol_id: amarillo
     object_symbol_id: color
     wigame_id: colores
   evidence: {}
-- fact_id: fact:7b798cd417b6
+- fact_id: fact:4f5279557773
   truth: 'true'
   proposition:
-    proposition_id: prop:97d6d20879f8
+    proposition_id: prop:5a9d53c8a122
     relation_id: has_property
     subject_symbol_id: rojo
     object_symbol_id: color
     wigame_id: colores
   evidence: {}
-- fact_id: fact:b597de1a17bb
+- fact_id: fact:4c7738831022
   truth: 'true'
   proposition:
-    proposition_id: prop:abf8969dcfc0
+    proposition_id: prop:5f4186d57bfb
     relation_id: has_property
     subject_symbol_id: verde
     object_symbol_id: color

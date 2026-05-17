@@ -1,0 +1,103 @@
+wigame_id: hojas_sub
+ejeA:
+- lechuga
+- espinaca
+ejeB:
+- rugosa
+- lisa
+- forma
+relacion: has_property
+contexto: vegetales
+Li:
+  li_id: li:hojas_sub
+  metadata: {}
+Vi:
+  matrix_id: vi:81170712477e
+  rows:
+  - lechuga
+  - espinaca
+  columns:
+  - rugosa
+  - lisa
+  - forma
+  values:
+  - - 'false'
+    - 'true'
+    - 'true'
+  - - 'true'
+    - 'false'
+    - 'true'
+  metadata: {}
+Si:
+  matrix_id: si:c71f166cae48
+  rows:
+  - lechuga
+  - espinaca
+  columns:
+  - rugosa
+  - lisa
+  - forma
+  values:
+  - - sinnvoll
+    - sinnvoll
+    - sinnvoll
+  - - sinnvoll
+    - sinnvoll
+    - sinnvoll
+  metadata: {}
+facts:
+- fact_id: fact:080c06865f97
+  truth: 'true'
+  proposition:
+    proposition_id: prop:a2e908381447
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: lisa
+    wigame_id: hojas_sub
+  evidence: {}
+- fact_id: fact:9e309b8f624f
+  truth: 'false'
+  proposition:
+    proposition_id: prop:c66a958c374b
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: rugosa
+    wigame_id: hojas_sub
+  evidence: {}
+- fact_id: fact:e7748f0d30ea
+  truth: 'true'
+  proposition:
+    proposition_id: prop:74dd30021d02
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: forma
+    wigame_id: hojas_sub
+  evidence: {}
+- fact_id: fact:7d85e86a6c14
+  truth: 'false'
+  proposition:
+    proposition_id: prop:7904579febec
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: lisa
+    wigame_id: hojas_sub
+  evidence: {}
+- fact_id: fact:0300c85b52fd
+  truth: 'true'
+  proposition:
+    proposition_id: prop:76081149773c
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: rugosa
+    wigame_id: hojas_sub
+  evidence: {}
+- fact_id: fact:3e988b098f32
+  truth: 'true'
+  proposition:
+    proposition_id: prop:517db8839319
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: forma
+    wigame_id: hojas_sub
+  evidence: {}
+metadata: {}

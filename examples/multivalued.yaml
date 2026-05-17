@@ -1,55 +1,318 @@
-context: vegetales_mv
-objects:
-  coliflor:
-    class: vegetal
-  espinaca:
-    class: vegetal
-  lechuga:
-    class: vegetal
-  papa:
-    class: vegetal
-  zanahoria:
-    class: vegetal
-properties:
-  comestible:
-    applies_to: vegetal
-  flor:
-    applies_to: vegetal
-  hoja:
-    applies_to: vegetal
-  hoja.rugosa:
-    applies_if:
-      property: hoja
-      value: true
-  "ra\xEDz":
-    applies_to: vegetal
-truths:
-  coliflor:
-    comestible: 'true'
-    flor: 'true'
-    hoja: 'true'
-    hoja.rugosa: unknown
-    "ra\xEDz": 'true'
-  espinaca:
-    comestible: 'true'
-    flor: 'false'
-    hoja: 'true'
-    hoja.rugosa: 'true'
-    "ra\xEDz": 'false'
-  lechuga:
-    comestible: 'true'
-    flor: unknown
-    hoja: 'true'
-    hoja.rugosa: 'false'
-    "ra\xEDz": 'false'
-  papa:
-    comestible: 'true'
-    flor: 'false'
-    hoja: 'false'
-    "ra\xEDz": 'true'
-  zanahoria:
-    comestible: 'true'
-    flor: 'false'
-    hoja: 'false'
-    hoja.rugosa: na
-    "ra\xEDz": 'true'
+wigame_id: multivalued
+ejeA:
+- coliflor
+- espinaca
+- lechuga
+- papa
+- zanahoria
+ejeB:
+- comestible
+- flor
+- hoja
+- hoja.rugosa
+- raiz
+relacion: has_property
+contexto: null
+Li:
+  li_id: li:multivalued
+  metadata: {}
+Vi:
+  matrix_id: vi:7d0cda23df61
+  rows:
+  - coliflor
+  - espinaca
+  - lechuga
+  - papa
+  - zanahoria
+  columns:
+  - comestible
+  - flor
+  - hoja
+  - hoja.rugosa
+  - raiz
+  values:
+  - - 'true'
+    - 'true'
+    - 'true'
+    - unknown
+    - 'true'
+  - - 'true'
+    - 'false'
+    - 'true'
+    - 'true'
+    - 'false'
+  - - 'true'
+    - unknown
+    - 'true'
+    - 'false'
+    - 'false'
+  - - 'true'
+    - 'false'
+    - 'false'
+    - unknown
+    - 'true'
+  - - 'true'
+    - 'false'
+    - 'false'
+    - unknown
+    - 'true'
+  metadata: {}
+Si:
+  matrix_id: si:b11f98277d2a
+  rows:
+  - coliflor
+  - espinaca
+  - lechuga
+  - papa
+  - zanahoria
+  columns:
+  - comestible
+  - flor
+  - hoja
+  - hoja.rugosa
+  - raiz
+  values:
+  - - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - sinnvoll
+  - - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - sinnvoll
+  - - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - sinnvoll
+  - - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - sinnlos
+    - sinnvoll
+  - - sinnvoll
+    - sinnvoll
+    - sinnvoll
+    - unsinnig
+    - sinnvoll
+  metadata: {}
+facts:
+- fact_id: fact:9aadef03ac51
+  truth: 'true'
+  proposition:
+    proposition_id: prop:16378a853d65
+    relation_id: has_property
+    subject_symbol_id: coliflor
+    object_symbol_id: comestible
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:f1ffd55ab54d
+  truth: 'true'
+  proposition:
+    proposition_id: prop:563945410eb7
+    relation_id: has_property
+    subject_symbol_id: coliflor
+    object_symbol_id: flor
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:b47ec125f75d
+  truth: 'true'
+  proposition:
+    proposition_id: prop:4d969ee51b12
+    relation_id: has_property
+    subject_symbol_id: coliflor
+    object_symbol_id: hoja
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:4403cef4624c
+  truth: unknown
+  proposition:
+    proposition_id: prop:4d7f198d2b77
+    relation_id: has_property
+    subject_symbol_id: coliflor
+    object_symbol_id: hoja.rugosa
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:c7a9711cebd6
+  truth: 'true'
+  proposition:
+    proposition_id: prop:a3d7ad291675
+    relation_id: has_property
+    subject_symbol_id: coliflor
+    object_symbol_id: raiz
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:b6d01984b427
+  truth: 'true'
+  proposition:
+    proposition_id: prop:fc1cbd9b701e
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: comestible
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:586f24451532
+  truth: 'false'
+  proposition:
+    proposition_id: prop:b129f08ff048
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: flor
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:fa59433e664d
+  truth: 'true'
+  proposition:
+    proposition_id: prop:4b095d144ce4
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: hoja
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:0f9a594d07f7
+  truth: 'true'
+  proposition:
+    proposition_id: prop:48a2dc0b7b41
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: hoja.rugosa
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:d3407585837f
+  truth: 'false'
+  proposition:
+    proposition_id: prop:56be3d7837ea
+    relation_id: has_property
+    subject_symbol_id: espinaca
+    object_symbol_id: raiz
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:9889f49c63ca
+  truth: 'true'
+  proposition:
+    proposition_id: prop:6e3f677163e4
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: comestible
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:53a2f72f56be
+  truth: unknown
+  proposition:
+    proposition_id: prop:d7d3a5aeda68
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: flor
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:f41e32cdf72e
+  truth: 'true'
+  proposition:
+    proposition_id: prop:792e068ea55e
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: hoja
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:de5bea34413c
+  truth: 'false'
+  proposition:
+    proposition_id: prop:82d2bb101ee2
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: hoja.rugosa
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:9b41b8ee403a
+  truth: 'false'
+  proposition:
+    proposition_id: prop:f1939ac6f289
+    relation_id: has_property
+    subject_symbol_id: lechuga
+    object_symbol_id: raiz
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:2d850da0df80
+  truth: 'true'
+  proposition:
+    proposition_id: prop:e0d4d2508657
+    relation_id: has_property
+    subject_symbol_id: papa
+    object_symbol_id: comestible
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:815d6a4be186
+  truth: 'false'
+  proposition:
+    proposition_id: prop:3a44a0c2564f
+    relation_id: has_property
+    subject_symbol_id: papa
+    object_symbol_id: flor
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:53d8c776eb46
+  truth: 'false'
+  proposition:
+    proposition_id: prop:f05807abbb41
+    relation_id: has_property
+    subject_symbol_id: papa
+    object_symbol_id: hoja
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:e9e4882efad6
+  truth: 'true'
+  proposition:
+    proposition_id: prop:99a9befd1843
+    relation_id: has_property
+    subject_symbol_id: papa
+    object_symbol_id: raiz
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:0b735d5288b4
+  truth: 'true'
+  proposition:
+    proposition_id: prop:27c3c04559b9
+    relation_id: has_property
+    subject_symbol_id: zanahoria
+    object_symbol_id: comestible
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:f572b8878262
+  truth: 'false'
+  proposition:
+    proposition_id: prop:2712f8011b5a
+    relation_id: has_property
+    subject_symbol_id: zanahoria
+    object_symbol_id: flor
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:40adbb89e359
+  truth: 'false'
+  proposition:
+    proposition_id: prop:a0baa4e103dc
+    relation_id: has_property
+    subject_symbol_id: zanahoria
+    object_symbol_id: hoja
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:4bb88a9187e6
+  truth: unknown
+  proposition:
+    proposition_id: prop:26108ae14818
+    relation_id: has_property
+    subject_symbol_id: zanahoria
+    object_symbol_id: hoja.rugosa
+    wigame_id: multivalued
+  evidence: {}
+- fact_id: fact:7d0ce2785e29
+  truth: 'true'
+  proposition:
+    proposition_id: prop:4c8ec4611624
+    relation_id: has_property
+    subject_symbol_id: zanahoria
+    object_symbol_id: raiz
+    wigame_id: multivalued
+  evidence: {}
+metadata: {}

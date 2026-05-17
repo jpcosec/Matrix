@@ -1,17 +1,39 @@
-# Schema definition for Matrix Engine YAML files
-# See examples/ for working instances.
-
-context: str                          # Logical context name (e.g. "vegetales")
-objects: dict[str, dict]              # Object name -> metadata (e.g. class)
-properties: dict[str, dict]           # Property name -> constraints
-  # Each property can have:
-  #   applies_to: str                 # Class restriction (e.g. "vegetal")
-  #   applies_if:                     # Applicability condition
-  #     property: str                 #   prerequisite property
-  #     value: bool                   #   required value
-
-rules: list[dict] | null              # Optional extra inference rules
-
-truths: dict[str, dict]               # Object name -> property -> bool
-  # Only explicit truths need be listed.
-  # Missing entries default to false.
+wigame_id: str
+ejeA:
+- list of subject symbol IDs
+ejeB:
+- list of term symbol IDs
+relacion: str (single relation admitted by the Li space)
+contexto: str | null (parent context ID)
+Li:
+  li_id: str
+  metadata: {}
+Vi:
+  matrix_id: str
+  rows:
+  - subject IDs matching ejeA
+  columns:
+  - term IDs matching ejeB
+  values:
+  - - 'true' | 'false' | unknown (one per column)
+  metadata: {}
+Si:
+  matrix_id: str
+  rows:
+  - subject IDs matching ejeA
+  columns:
+  - term IDs matching ejeB
+  values:
+  - - sinnvoll | sinnlos | unsinnig (one per column)
+  metadata: {}
+facts:
+- fact_id: str
+  truth: 'true' | 'false' | unknown
+  proposition:
+    proposition_id: str
+    relation_id: str
+    subject_symbol_id: str
+    object_symbol_id: str
+    wigame_id: str
+  evidence: {}
+metadata: {}

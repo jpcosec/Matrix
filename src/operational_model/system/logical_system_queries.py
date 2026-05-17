@@ -68,3 +68,34 @@ def _target_search_payload(
             symbol_id for symbol_id in projected_hits if symbol_id in target_hits
         ],
     }
+
+
+def route_search(
+    system: "LogicalSystem",
+    source_wigame_id: str,
+    source_terms: list[str],
+    path: list[str],
+    target_terms: list[str] | None = None,
+) -> dict[str, list[str]]:
+    """Runs a multi-hop search across a path of projections."""
+
+    hits = search(system, source_wigame_id, source_terms)
+    projected = _follow_path(system, hits, path)
+    res = {"source_hits": hits, "projected_hits": projected}
+    if target_terms is not None and path:
+        target_id = system.projections[path[-1]].target_wigame_id
+        res.update(_target_search_payload(system, target_id, projected, target_terms))
+    return res
+
+
+def _follow_path(
+    system: "LogicalSystem",
+    subjects: list[str],
+    path: list[str],
+) -> list[str]:
+    """Projects subjects through a sequence of routing matrices."""
+
+    res = subjects
+    for p_id in path:
+        res = system.project_subjects(p_id, res)
+    return res

@@ -103,3 +103,72 @@ def test_routing_composition_via_bool_mult():
     Rac = Rab.bool_mult(Rbc)
     assert Rac.get("a1", "c1") is True
     assert Rac.get("a2", "c1") is False
+
+
+def test_system_level_multi_hop_search():
+    from src.operational_model import (
+        LogicalSystem, Thing, Symbol, Name, Relation, WiGame, LiSpace,
+        Fact, Proposition, TruthValue, RoutingProjection
+    )
+    system = LogicalSystem()
+    
+    # Register things
+    for s in ["a1", "b1", "c1", "p1"]:
+        system.register_thing(Thing(Symbol(s), Name(s)))
+    
+    system.register_relation(Relation("has", "has"))
+    
+    # WiGame A: a1 has p1
+    wa = WiGame("wa", LiSpace("la", ["a1"], ["p1"], "has"))
+    system.register_wigame(wa)
+    system.add_fact(Fact(Proposition("has", "a1", "p1", "wa"), TruthValue.TRUE))
+    
+    # WiGame C: c1 has p1
+    wc = WiGame("wc", LiSpace("lc", ["c1"], ["p1"], "has"))
+    system.register_wigame(wc)
+    system.add_fact(Fact(Proposition("has", "c1", "p1", "wc"), TruthValue.TRUE))
+    
+    # Projections: A -> B -> C
+    rab = RoutingProjection.empty("wa", ["a1"], "wb", ["b1"])
+    rab.link("a1", "b1")
+    system.register_projection(rab)
+    
+    rbc = RoutingProjection.empty("wb", ["b1"], "wc", ["c1"])
+    rbc.link("b1", "c1")
+    system.register_projection(rbc)
+    
+    # Multi-hop search: Start at wa with "p1", route through rab then rbc, 
+    # and intersect with "p1" in wc.
+    # Expected result: "c1" (because a1 has p1, a1->b1, b1->c1, and c1 has p1)
+    
+    # We need a new method system.route_search(...)
+    # For now, let's just assert we want this behavior.
+    
+    if hasattr(system, "route_search"):
+        result = system.route_search(
+            source_wigame_id="wa",
+            source_terms=["p1"],
+            path=[rab.matrix_id, rbc.matrix_id],
+            target_terms=["p1"]
+        )
+        assert result["cross_hits"] == ["c1"]
+
+
+def test_system_level_empty_projection():
+    from src.operational_model import (
+        LogicalSystem, Thing, Symbol, Name, Relation, WiGame, LiSpace,
+        Fact, Proposition, TruthValue, RoutingProjection
+    )
+    system = LogicalSystem()
+    system.register_thing(Thing(Symbol("a1"), Name("a1")))
+    wa = WiGame("wa", LiSpace("la", ["a1"], ["p1"], "has"))
+    system.register_wigame(wa)
+    system.add_fact(Fact(Proposition("has", "a1", "p1", "wa"), TruthValue.TRUE))
+    
+    # Empty projection
+    rab = RoutingProjection.empty("wa", ["a1"], "wb", ["b1"])
+    system.register_projection(rab)
+    
+    result = system.route_search("wa", ["p1"], [rab.matrix_id])
+    assert result["source_hits"] == ["a1"]
+    assert result["projected_hits"] == []

@@ -107,3 +107,16 @@ class LogicalSystem:
             projection_id,
             target_terms,
         )
+
+    def route_search(
+        self,
+        source_wigame_id: str,
+        source_terms: list[str],
+        path: list[str],
+        target_terms: list[str] | None = None,
+    ) -> dict[str, list[str]]:
+        """Runs a multi-hop search across a path of projections."""
+
+        return logical_system_queries.route_search(
+            self, source_wigame_id, source_terms, path, target_terms
+        )

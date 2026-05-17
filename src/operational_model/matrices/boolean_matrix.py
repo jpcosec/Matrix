@@ -20,9 +20,11 @@ class BooleanMatrix:
 
     def __post_init__(self) -> None:
         """Validates matrix dimensions against both axes."""
-
-        self._validate_height()
-        self._validate_width()
+        if len(self.values) != len(self.row_axis):
+            raise ValueError("row axis length and values height mismatch")
+        for row in self.values:
+            if len(row) != len(self.column_axis):
+                raise ValueError("column axis length and row width mismatch")
 
     @classmethod
     def filled(
@@ -34,56 +36,43 @@ class BooleanMatrix:
         metadata: dict[str, Any] | None = None,
     ) -> "BooleanMatrix":
         """Builds a matrix filled with a single repeated value."""
-
+        vals = [[fill for _ in column_axis] for _ in row_axis]
         return cls(
             row_axis=list(row_axis),
             column_axis=list(column_axis),
-            values=[[fill for _ in column_axis] for _ in row_axis],
+            values=vals,
             matrix_id=matrix_id or new_id("matrix"),
             metadata=metadata or {},
         )
 
     def row_index(self, row_key: str) -> int:
         """Returns the numeric index for a row key."""
-
         return self.row_axis.index(row_key)
 
     def column_index(self, column_key: str) -> int:
         """Returns the numeric index for a column key."""
-
         return self.column_axis.index(column_key)
 
     def get(self, row_key: str, column_key: str) -> Any:
         """Reads a matrix cell by logical coordinates."""
-
         return self.values[self.row_index(row_key)][self.column_index(column_key)]
 
     def set(self, row_key: str, column_key: str, value: Any) -> None:
         """Writes a matrix cell by logical coordinates."""
-
         self.values[self.row_index(row_key)][self.column_index(column_key)] = value
 
     def row(self, row_key: str) -> dict[str, Any]:
         """Returns a row as a keyed dictionary."""
-
-        row_idx = self.row_index(row_key)
-        return {
-            column_key: self.values[row_idx][column_idx]
-            for column_idx, column_key in enumerate(self.column_axis)
-        }
+        r_idx = self.row_index(row_key)
+        return {k: self.values[r_idx][i] for i, k in enumerate(self.column_axis)}
 
     def column(self, column_key: str) -> dict[str, Any]:
         """Returns a column as a keyed dictionary."""
-
-        column_idx = self.column_index(column_key)
-        return {
-            row_key: self.values[row_idx][column_idx]
-            for row_idx, row_key in enumerate(self.row_axis)
-        }
+        c_idx = self.column_index(column_key)
+        return {k: self.values[i][c_idx] for i, k in enumerate(self.row_axis)}
 
     def to_dict(self) -> dict[str, Any]:
         """Serializes the matrix to a plain dictionary."""
-
         return {
             "matrix_id": self.matrix_id,
             "rows": list(self.row_axis),
@@ -93,54 +82,25 @@ class BooleanMatrix:
         }
 
     def bool_mult(self, other: "BooleanMatrix") -> "BooleanMatrix":
+        """Returns the boolean matrix product."""
         if self.column_axis != other.row_axis:
-            raise ValueError(
-                f"inner axes mismatch: {self.column_axis} vs {other.row_axis}"
-            )
-        result = []
-        for i in range(len(self.row_axis)):
-            row = []
-            for k in range(len(other.column_axis)):
-                acc = False
-                for j in range(len(self.column_axis)):
-                    if self.values[i][j] and other.values[j][k]:
-                        acc = True
-                        break
-                row.append(acc)
-            result.append(row)
-        return BooleanMatrix(
-            row_axis=list(self.row_axis),
-            column_axis=list(other.column_axis),
-            values=result,
-            matrix_id=new_id("matrix"),
-        )
+            raise ValueError("inner axes mismatch")
+        cols = list(zip(*other.values))
+        vals = [[any(a and b for a, b in zip(r, c)) for c in cols] for r in self.values]
+        return BooleanMatrix(list(self.row_axis), list(other.column_axis), vals)
 
     def transpose(self) -> "BooleanMatrix":
-        return BooleanMatrix(
-            row_axis=list(self.column_axis),
-            column_axis=list(self.row_axis),
-            values=[list(col) for col in zip(*self.values)],
-            matrix_id=new_id("matrix"),
-        )
+        """Returns the transpose of the matrix."""
+        vals = [list(col) for col in zip(*self.values)]
+        return BooleanMatrix(list(self.column_axis), list(self.row_axis), vals)
 
     def collapse_similarity(self) -> "BooleanMatrix":
+        """Computes self * self.transpose()."""
         return self.bool_mult(self.transpose())
 
     def recursive_power(self, steps: int = 3) -> "BooleanMatrix":
-        result = self
+        """Computes the matrix power recursively."""
+        res = self
         for _ in range(steps):
-            result = result.bool_mult(result)
-        return result
-
-    def _validate_height(self) -> None:
-        """Ensures matrix height matches the row axis length."""
-
-        if len(self.values) != len(self.row_axis):
-            raise ValueError("row axis length and values height must match")
-
-    def _validate_width(self) -> None:
-        """Ensures every row matches the column axis length."""
-
-        for row in self.values:
-            if len(row) != len(self.column_axis):
-                raise ValueError("column axis length and row width must match")
+            res = res.bool_mult(res)
+        return res

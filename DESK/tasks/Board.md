@@ -4,7 +4,6 @@
 
 | Task | Domain | Objective | Priority | Documentation |
 |------|--------|-----------|----------|---------------|
-| task-db-02 | routing | Formalize and test multi-Wi routing semantics | p0 | `docs/architecture.md`, `docs/operations.md` |
 | task-db-03 | operations | Formalize and test the contract of query and projection operations | p0 | `docs/operations.md`, `docs/data_models.md` |
 | task-db-04 | serialization | Harden YAML persistence through round-trip tests and schema checks | p1 | `docs/canonical_forms_and_ingestion.md`, `docs/data_models.md` |
 

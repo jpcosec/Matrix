@@ -88,6 +88,18 @@ class RoutingProjection(BooleanMatrix):
         )
         return payload
 
+    def bool_mult(self, other: "RoutingProjection") -> "RoutingProjection":
+        """Composes two projections into a single cross-space projection."""
+        base = super().bool_mult(other)
+        return RoutingProjection(
+            row_axis=base.row_axis,
+            column_axis=base.column_axis,
+            values=base.values,
+            source_wigame_id=self.source_wigame_id,
+            target_wigame_id=other.target_wigame_id,
+            relation_id=self.relation_id,
+        )
+
     def _append_projected_targets(
         self, projected: list[str], source_subject: str
     ) -> None:

@@ -50,7 +50,7 @@ Typical uses include:
 - detecting dimensions that do not discriminate locally
 - narrowing candidate facts before cross-context routing
 
-## 4. Routing and projection
+## 5. Routing and projection
 
 When knowledge spans multiple local games, routing proceeds through `Context` and `RoutingProjection`.
 
@@ -64,7 +64,9 @@ This supports workflows such as:
 - intersect the projected results with a second local query
 - continue routing if a higher-level context requires another hop
 
-## 5. Reconstruction
+The `route_search` operation formalizes multi-hop traversal by following a sequence of projections and optionally intersecting the final result with a target query. This ensures that semantic connectivity is preserved across complex language-game boundaries.
+
+## 6. Reconstruction
 
 Reconstruction works by moving from fact-bearing structures back toward language-facing ones.
 

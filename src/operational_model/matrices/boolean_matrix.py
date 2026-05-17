@@ -123,6 +123,9 @@ class BooleanMatrix:
             matrix_id=new_id("matrix"),
         )
 
+    def collapse_similarity(self) -> "BooleanMatrix":
+        return self.bool_mult(self.transpose())
+
     def _validate_height(self) -> None:
         """Ensures matrix height matches the row axis length."""
 

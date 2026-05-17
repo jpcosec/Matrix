@@ -1,6 +1,6 @@
 # Data Models
 
-This repository now distinguishes between local language games and higher-order routing structures. The operational base lives in `src/operational_model.py`.
+This repository now distinguishes between local language games and higher-order routing structures. The operational base lives in `src/operational_model/`.
 
 ## First principles
 

@@ -1,3 +1,5 @@
+"""Top-level package exports for the Matrix operational model."""
+
 from .operational_model import (
     BooleanMatrix,
     Context,

@@ -1,0 +1,26 @@
+data:
+  components:
+  - kind: core
+    label: tierra
+    name: tierra
+    stages:
+      full_matrix:
+      - tiene.agua_liquida
+      - tiene.vida
+  - kind: core
+    label: jupiter
+    name: jupiter
+    stages:
+      full_matrix: []
+  views:
+  - id: full_matrix
+    label: Matrix View
+    stages:
+    - id: tiene.agua_liquida
+      label: tiene.agua_liquida
+    - id: tiene.vida
+      label: tiene.vida
+id: matrix_habitability
+title: 'Operational Matrix: habitability (W*)'
+type: component_view_matrix
+version: 1.0.0

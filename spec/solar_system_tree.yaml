@@ -1,0 +1,24 @@
+data:
+  edges:
+  - from: cosmology
+    label: cosmo_to_types
+    relation: bridge
+    to: planetary_types
+  - from: planetary_types
+    label: types_to_hab
+    relation: bridge
+    to: habitability
+  nodes:
+    cosmology:
+      kind: storage
+      label: 'Context: cosmology (E=0.50)'
+    habitability:
+      kind: storage
+      label: 'Context: habitability (E=0.69)'
+    planetary_types:
+      kind: storage
+      label: 'Context: planetary_types (E=0.88)'
+id: knowledge_tree
+title: TKM Knowledge Tree (Hierarchy of Contexts)
+type: component
+version: 1.0.0

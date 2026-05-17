@@ -10,9 +10,9 @@ The project centers on **sense/meaning matrices**: a separation between truth (`
 
 - `cli.py` exposes the basic single-context engine from the command line.
 - `src/matrix_engine.py` contains the original dictionary-based implementation.
-- `src/operational_model.py` contains the new proposition-first operational model with `WiGame`, `Context`, `Vi`, `Si`, `p_i`, and `r_i`.
+- `src/operational_model/` contains the new proposition-first operational model with `WiGame`, `Context`, `Vi`, `Si`, `p_i`, and `r_i`.
 - `src/unified_engine.py` contains the multi-context engine with bridges, routing, and TKM-oriented utilities.
-- `src/tkm_orchestrator.py` and `src/nl_parser.py` cover ingestion and parsing helpers.
+- `src/tkm_orchestrator.py` covers orchestration helpers around the current engines.
 - `examples/` and `tests/` provide working schemas and executable reference scenarios.
 - `docs/README.md` is the entry point for the focused architecture and concepts docs.
 

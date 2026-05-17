@@ -5,9 +5,12 @@ This directory documents the TKM/MEEL-oriented parts of the repository: the mult
 ## Core documents
 
 - [Architecture](./architecture.md) - context layers, bridge routing, and the role of each engine component
+- [Coding Standards](./coding_standards.md) - structural heuristics for files, classes, functions, and documentation
 - [Concepts](./concepts.md) - philosophical vocabulary and matrix-level concepts used throughout the project
 - [Data Models](./data_models.md) - the primary structures exposed by the unified engine
 - [Operations](./operations.md) - ingestion, status evaluation, routing, and reconstruction workflows
+- [Refactor Rules Matrix](./refactor_rules_matrix.md) - file-by-file audit against the structural standard
+- [Refactor Task Index](./refactor_task_index.md) - prioritized refactor plan and execution order
 
 ## Related repository resources
 

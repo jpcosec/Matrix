@@ -46,7 +46,7 @@ Typical uses:
 - detect tautological dimensions
 - detect ambiguous objects that remain under-specified
 
-Code reference: `src/operational_model.py`
+Code reference: `src/operational_model/`
 
 ## 4. Bridge routing and composition
 
@@ -70,7 +70,7 @@ Important operations include:
 - collapsing dimensions into square routed views
 - recursively propagating connectivity through bridge paths
 
-Code references: `src/operational_model.py`, `src/unified_engine.py`
+Code references: `src/operational_model/`, `src/unified_engine.py`
 
 ## 5. Descriptive inversion
 

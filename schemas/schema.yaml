@@ -15,7 +15,7 @@ Vi:
   columns:
   - term IDs matching ejeB
   values:
-  - - 'true' | 'false' | unknown (one per column)
+  - - 'true' | 'false' | ∅ (one per column)
   metadata: {}
 Si:
   matrix_id: str
@@ -28,7 +28,7 @@ Si:
   metadata: {}
 facts:
 - fact_id: str
-  truth: 'true' | 'false' | unknown
+  truth: 'true' | 'false' | ∅
   proposition:
     proposition_id: str
     relation_id: str

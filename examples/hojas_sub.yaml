@@ -12,7 +12,7 @@ Li:
   li_id: li:hojas_sub
   metadata: {}
 Vi:
-  matrix_id: vi:81170712477e
+  matrix_id: vi:1228f1f551ea
   rows:
   - lechuga
   - espinaca
@@ -29,7 +29,7 @@ Vi:
     - 'true'
   metadata: {}
 Si:
-  matrix_id: si:c71f166cae48
+  matrix_id: si:59eccdd22e01
   rows:
   - lechuga
   - espinaca
@@ -46,55 +46,55 @@ Si:
     - sinnvoll
   metadata: {}
 facts:
-- fact_id: fact:080c06865f97
+- fact_id: fact:f8fcbcc9abba
   truth: 'true'
   proposition:
-    proposition_id: prop:a2e908381447
+    proposition_id: prop:058014b5c9b8
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: lisa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:9e309b8f624f
+- fact_id: fact:3b88950126d1
   truth: 'false'
   proposition:
-    proposition_id: prop:c66a958c374b
+    proposition_id: prop:591d957eae16
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: rugosa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:e7748f0d30ea
+- fact_id: fact:11e765571f07
   truth: 'true'
   proposition:
-    proposition_id: prop:74dd30021d02
+    proposition_id: prop:0d92185d1152
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: forma
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:7d85e86a6c14
+- fact_id: fact:de71f814d85b
   truth: 'false'
   proposition:
-    proposition_id: prop:7904579febec
+    proposition_id: prop:80b6adc6c062
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: lisa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:0300c85b52fd
+- fact_id: fact:ba143fa4fe3a
   truth: 'true'
   proposition:
-    proposition_id: prop:76081149773c
+    proposition_id: prop:b7ce2dba241d
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: rugosa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:3e988b098f32
+- fact_id: fact:7a909bdd6463
   truth: 'true'
   proposition:
-    proposition_id: prop:517db8839319
+    proposition_id: prop:2c76703a2d3b
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: forma

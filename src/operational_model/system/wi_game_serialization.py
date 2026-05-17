@@ -59,7 +59,7 @@ def from_dict(payload: dict[str, Any]) -> "WiGame":
 def to_yaml(wigame: "WiGame") -> str:
     """Serializes the WiGame to YAML."""
 
-    return yaml.safe_dump(to_dict(wigame), sort_keys=False)
+    return yaml.safe_dump(to_dict(wigame), sort_keys=False, allow_unicode=True)
 
 
 def from_yaml(payload: str) -> "WiGame":

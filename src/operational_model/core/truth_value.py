@@ -10,4 +10,4 @@ class TruthValue(str, Enum):
 
     TRUE = "true"
     FALSE = "false"
-    UNKNOWN = "unknown"
+    UNKNOWN = "\u2205"

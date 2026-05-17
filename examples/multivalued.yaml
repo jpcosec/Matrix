@@ -17,7 +17,7 @@ Li:
   li_id: li:multivalued
   metadata: {}
 Vi:
-  matrix_id: vi:7d0cda23df61
+  matrix_id: vi:cd2c610b4d6e
   rows:
   - coliflor
   - espinaca
@@ -34,7 +34,7 @@ Vi:
   - - 'true'
     - 'true'
     - 'true'
-    - unknown
+    - ∅
     - 'true'
   - - 'true'
     - 'false'
@@ -42,23 +42,23 @@ Vi:
     - 'true'
     - 'false'
   - - 'true'
-    - unknown
+    - ∅
     - 'true'
     - 'false'
     - 'false'
   - - 'true'
     - 'false'
     - 'false'
-    - unknown
+    - ∅
     - 'true'
   - - 'true'
     - 'false'
     - 'false'
-    - unknown
+    - ∅
     - 'true'
   metadata: {}
 Si:
-  matrix_id: si:b11f98277d2a
+  matrix_id: si:2f07fabebd6d
   rows:
   - coliflor
   - espinaca
@@ -99,217 +99,217 @@ Si:
     - sinnvoll
   metadata: {}
 facts:
-- fact_id: fact:9aadef03ac51
+- fact_id: fact:d2f1a5fed758
   truth: 'true'
   proposition:
-    proposition_id: prop:16378a853d65
+    proposition_id: prop:0d32e66fd81d
     relation_id: has_property
     subject_symbol_id: coliflor
     object_symbol_id: comestible
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:f1ffd55ab54d
+- fact_id: fact:69717dde4c1c
   truth: 'true'
   proposition:
-    proposition_id: prop:563945410eb7
+    proposition_id: prop:25ed79924649
     relation_id: has_property
     subject_symbol_id: coliflor
     object_symbol_id: flor
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:b47ec125f75d
+- fact_id: fact:70f195bc5037
   truth: 'true'
   proposition:
-    proposition_id: prop:4d969ee51b12
+    proposition_id: prop:649571610669
     relation_id: has_property
     subject_symbol_id: coliflor
     object_symbol_id: hoja
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:4403cef4624c
-  truth: unknown
+- fact_id: fact:422c955f9927
+  truth: ∅
   proposition:
-    proposition_id: prop:4d7f198d2b77
+    proposition_id: prop:a0dceaeb3a0e
     relation_id: has_property
     subject_symbol_id: coliflor
     object_symbol_id: hoja.rugosa
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:c7a9711cebd6
+- fact_id: fact:c05725ec6c3e
   truth: 'true'
   proposition:
-    proposition_id: prop:a3d7ad291675
+    proposition_id: prop:84f40bda30af
     relation_id: has_property
     subject_symbol_id: coliflor
     object_symbol_id: raiz
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:b6d01984b427
+- fact_id: fact:e13785e4c7a1
   truth: 'true'
   proposition:
-    proposition_id: prop:fc1cbd9b701e
+    proposition_id: prop:f53ed95d6733
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: comestible
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:586f24451532
+- fact_id: fact:4bfcd200500e
   truth: 'false'
   proposition:
-    proposition_id: prop:b129f08ff048
+    proposition_id: prop:ad01eec7e7f9
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: flor
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:fa59433e664d
+- fact_id: fact:a218183c2d56
   truth: 'true'
   proposition:
-    proposition_id: prop:4b095d144ce4
+    proposition_id: prop:0ae0e6b67335
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: hoja
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:0f9a594d07f7
+- fact_id: fact:2b1f5e691f2e
   truth: 'true'
   proposition:
-    proposition_id: prop:48a2dc0b7b41
+    proposition_id: prop:4f9728eedfc2
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: hoja.rugosa
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:d3407585837f
+- fact_id: fact:ef982fd54433
   truth: 'false'
   proposition:
-    proposition_id: prop:56be3d7837ea
+    proposition_id: prop:7447260efc1d
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: raiz
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:9889f49c63ca
+- fact_id: fact:847e0b55d481
   truth: 'true'
   proposition:
-    proposition_id: prop:6e3f677163e4
+    proposition_id: prop:1679bf89cfff
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: comestible
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:53a2f72f56be
-  truth: unknown
+- fact_id: fact:0d0adae9bdc6
+  truth: ∅
   proposition:
-    proposition_id: prop:d7d3a5aeda68
+    proposition_id: prop:66597148ddf1
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: flor
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:f41e32cdf72e
+- fact_id: fact:9f351a2880d3
   truth: 'true'
   proposition:
-    proposition_id: prop:792e068ea55e
+    proposition_id: prop:ff88069b9e11
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: hoja
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:de5bea34413c
+- fact_id: fact:c650affab109
   truth: 'false'
   proposition:
-    proposition_id: prop:82d2bb101ee2
+    proposition_id: prop:8b5f875a27d8
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: hoja.rugosa
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:9b41b8ee403a
+- fact_id: fact:4f71a8f6a9ba
   truth: 'false'
   proposition:
-    proposition_id: prop:f1939ac6f289
+    proposition_id: prop:05f212bad6a8
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: raiz
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:2d850da0df80
+- fact_id: fact:190c7d2a6326
   truth: 'true'
   proposition:
-    proposition_id: prop:e0d4d2508657
+    proposition_id: prop:1662d31f7cb1
     relation_id: has_property
     subject_symbol_id: papa
     object_symbol_id: comestible
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:815d6a4be186
+- fact_id: fact:6bb5a6cf2c12
   truth: 'false'
   proposition:
-    proposition_id: prop:3a44a0c2564f
+    proposition_id: prop:bf651e2ec7a8
     relation_id: has_property
     subject_symbol_id: papa
     object_symbol_id: flor
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:53d8c776eb46
+- fact_id: fact:70917d3be027
   truth: 'false'
   proposition:
-    proposition_id: prop:f05807abbb41
+    proposition_id: prop:de4ee9609524
     relation_id: has_property
     subject_symbol_id: papa
     object_symbol_id: hoja
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:e9e4882efad6
+- fact_id: fact:9903dc8ccf5c
   truth: 'true'
   proposition:
-    proposition_id: prop:99a9befd1843
+    proposition_id: prop:290ba019b753
     relation_id: has_property
     subject_symbol_id: papa
     object_symbol_id: raiz
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:0b735d5288b4
+- fact_id: fact:0c796c09bb20
   truth: 'true'
   proposition:
-    proposition_id: prop:27c3c04559b9
+    proposition_id: prop:b054c15ece6f
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: comestible
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:f572b8878262
+- fact_id: fact:64483277501c
   truth: 'false'
   proposition:
-    proposition_id: prop:2712f8011b5a
+    proposition_id: prop:50bf66c24c90
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: flor
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:40adbb89e359
+- fact_id: fact:cd05c3701b82
   truth: 'false'
   proposition:
-    proposition_id: prop:a0baa4e103dc
+    proposition_id: prop:bc965eb45980
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: hoja
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:4bb88a9187e6
-  truth: unknown
+- fact_id: fact:fcc487f946c2
+  truth: ∅
   proposition:
-    proposition_id: prop:26108ae14818
+    proposition_id: prop:babd4798b0b3
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: hoja.rugosa
     wigame_id: multivalued
   evidence: {}
-- fact_id: fact:7d0ce2785e29
+- fact_id: fact:f72762ea3ad6
   truth: 'true'
   proposition:
-    proposition_id: prop:4c8ec4611624
+    proposition_id: prop:311a58f691d9
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: raiz

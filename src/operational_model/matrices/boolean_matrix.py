@@ -126,6 +126,12 @@ class BooleanMatrix:
     def collapse_similarity(self) -> "BooleanMatrix":
         return self.bool_mult(self.transpose())
 
+    def recursive_power(self, steps: int = 3) -> "BooleanMatrix":
+        result = self
+        for _ in range(steps):
+            result = result.bool_mult(result)
+        return result
+
     def _validate_height(self) -> None:
         """Ensures matrix height matches the row axis length."""
 

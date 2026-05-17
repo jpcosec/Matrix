@@ -12,7 +12,7 @@ Only active tasks belong here.
 | task-01 | tests/cleanup | Delete legacy test files that only preserve old runtime behavior | p0 | task-00 | pill-04, pill-07 | COMPLETE |
 | task-02a | runtime/migration | Extract boolean matrix multiplication from legacy runtime into the new model | p0 | task-00 | pill-04, pill-07 | COMPLETE |
 | task-02b | runtime/migration | Rebuild dimensional collapse on the new model | p0 | task-00, task-02a | pill-01, pill-04, pill-07 | COMPLETE |
-| task-02c | runtime/migration | Rebuild recursive routing on top of `Context` and `RoutingProjection` | p0 | task-00, task-02a | pill-03, pill-04, pill-07 | TODO |
+| task-02c | runtime/migration | Rebuild recursive routing on top of `Context` and `RoutingProjection` | p0 | task-00, task-02a | pill-03, pill-04, pill-07 | COMPLETE |
 | task-02d | runtime/migration | Rebuild information energy on top of the new model | p0 | task-00 | pill-04, pill-07 | TODO |
 | task-02e | runtime/migration | Redesign status evaluation around the new `Si` model | p0 | task-00 | pill-04, pill-06, pill-07 | TODO |
 | task-02f | runtime/migration | Decide whether visualization export survives and migrate it only if still needed | p1 | task-00 | pill-04, pill-07 | TODO |

@@ -100,7 +100,7 @@ def test_wigame_serializes_direct_matrices() -> None:
     assert payload["ejeA"] == ["dog", "wolf"]
     assert payload["ejeB"] == ["fur", "canine_kind"]
     assert payload["relacion"] == "es"
-    assert payload["Vi"]["values"] == [["true", "true"], ["true", "true"]]
+    assert payload["Vi"]["values"] == ["11", "11"]
     assert restored.Vi.get("dog", "fur") == "true"
     assert restored.Si.get("wolf", "canine_kind") == "sinnvoll"
 

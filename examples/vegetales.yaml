@@ -16,7 +16,7 @@ Li:
   li_id: li:vegetales
   metadata: {}
 Vi:
-  matrix_id: vi:f649209711b7
+  matrix_id: vi:eaa6503bcbad
   rows:
   - lechuga
   - espinaca
@@ -29,29 +29,13 @@ Vi:
   - hoja.lisa
   - hoja.rugosa
   values:
-  - - 'true'
-    - 'false'
-    - 'false'
-    - 'true'
-    - 'false'
-  - - 'true'
-    - 'false'
-    - 'false'
-    - 'false'
-    - 'true'
-  - - 'false'
-    - 'true'
-    - 'false'
-    - ∅
-    - ∅
-  - - 'false'
-    - 'false'
-    - 'true'
-    - ∅
-    - ∅
+  - '10010'
+  - '10001'
+  - 010∅∅
+  - 001∅∅
   metadata: {}
 Si:
-  matrix_id: si:71bd4db0db5b
+  matrix_id: si:dc5e5bff5f3e
   rows:
   - lechuga
   - espinaca
@@ -64,167 +48,151 @@ Si:
   - hoja.lisa
   - hoja.rugosa
   values:
-  - - sinnvoll
-    - sinnvoll
-    - sinnvoll
-    - sinnvoll
-    - sinnvoll
-  - - sinnvoll
-    - sinnvoll
-    - sinnvoll
-    - sinnvoll
-    - sinnvoll
-  - - sinnvoll
-    - sinnvoll
-    - sinnvoll
-    - sinnlos
-    - sinnlos
-  - - sinnvoll
-    - sinnvoll
-    - sinnvoll
-    - sinnlos
-    - sinnlos
+  - VVVVV
+  - VVVVV
+  - VVVLL
+  - VVVLL
   metadata: {}
 facts:
-- fact_id: fact:101d9d1368fa
+- fact_id: fact:432f4704581f
   truth: 'true'
   proposition:
-    proposition_id: prop:ff40c3d9271e
+    proposition_id: prop:31d0154050bb
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: hoja
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:cb68ae259b72
+- fact_id: fact:2f24be8482a0
   truth: 'false'
   proposition:
-    proposition_id: prop:a3fe1507497c
+    proposition_id: prop:53bf8f0464cd
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: raiz
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:0fca4d564909
+- fact_id: fact:07d543d9ba0e
   truth: 'false'
   proposition:
-    proposition_id: prop:8b8230438ca8
+    proposition_id: prop:34dfc680364a
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: tallo
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:b9c2fd29a036
+- fact_id: fact:3638cf47d2d2
   truth: 'true'
   proposition:
-    proposition_id: prop:a52cecdc04de
+    proposition_id: prop:e25ce726449e
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: hoja.lisa
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:171d9c3f2ade
+- fact_id: fact:e2a8446e162f
   truth: 'false'
   proposition:
-    proposition_id: prop:f1d6a7ead4e9
+    proposition_id: prop:aec5bb685f5a
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: hoja.rugosa
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:e0007e1d50bd
+- fact_id: fact:3f27e672c55f
   truth: 'true'
   proposition:
-    proposition_id: prop:293cc44d144c
+    proposition_id: prop:84f2a75ff4db
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: hoja
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:bc645c81c57d
+- fact_id: fact:d004b8d6bc1d
   truth: 'false'
   proposition:
-    proposition_id: prop:f628a797cb60
+    proposition_id: prop:4038d07d384a
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: raiz
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:8b74f7f6de09
+- fact_id: fact:7f7b4982d45d
   truth: 'false'
   proposition:
-    proposition_id: prop:265d9ff24551
+    proposition_id: prop:7d4473332cff
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: tallo
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:f7638cdab414
+- fact_id: fact:1e9f645e304e
   truth: 'false'
   proposition:
-    proposition_id: prop:5f061fcb5f1a
+    proposition_id: prop:ae5d587df6cb
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: hoja.lisa
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:32d8f234ded2
+- fact_id: fact:98147c04bf46
   truth: 'true'
   proposition:
-    proposition_id: prop:7368fb87e0e6
+    proposition_id: prop:b7b1e8aa02fe
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: hoja.rugosa
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:29bfc98998b2
+- fact_id: fact:7b1ee88d3230
   truth: 'false'
   proposition:
-    proposition_id: prop:b02cdb7e953c
+    proposition_id: prop:b86a73727265
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: hoja
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:1781f1a2a9dc
+- fact_id: fact:79f37fa6cfab
   truth: 'true'
   proposition:
-    proposition_id: prop:51212b9393be
+    proposition_id: prop:2e18b398f607
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: raiz
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:ba8a153daab2
+- fact_id: fact:2ac08b50dcdb
   truth: 'false'
   proposition:
-    proposition_id: prop:c10c81e69fd5
+    proposition_id: prop:24d76a4a6443
     relation_id: has_property
     subject_symbol_id: zanahoria
     object_symbol_id: tallo
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:c0f1ab9ab59b
+- fact_id: fact:b09d607dba32
   truth: 'false'
   proposition:
-    proposition_id: prop:df8202b35042
+    proposition_id: prop:0f6526cb0d92
     relation_id: has_property
     subject_symbol_id: apio
     object_symbol_id: hoja
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:5340c7717d86
+- fact_id: fact:a72a33741eff
   truth: 'false'
   proposition:
-    proposition_id: prop:95061cae79ac
+    proposition_id: prop:95ef998dc049
     relation_id: has_property
     subject_symbol_id: apio
     object_symbol_id: raiz
     wigame_id: vegetales
   evidence: {}
-- fact_id: fact:2b1ffdeb432d
+- fact_id: fact:6432c7ab45be
   truth: 'true'
   proposition:
-    proposition_id: prop:2b216f96811b
+    proposition_id: prop:2847f7c75ad0
     relation_id: has_property
     subject_symbol_id: apio
     object_symbol_id: tallo

@@ -25,14 +25,33 @@ class ViMatrix(BooleanMatrix):
             matrix_id=new_id("vi"),
         )
 
+    def to_dict(self) -> dict[str, Any]:
+        payload = super().to_dict()
+        payload["values"] = [
+            "".join(
+                "1"
+                if v == TruthValue.TRUE.value
+                else "0"
+                if v == TruthValue.FALSE.value
+                else v
+                for v in row
+            )
+            for row in self.values
+        ]
+        return payload
+
     @classmethod
     def from_dict(cls, payload: dict[str, Any]) -> "ViMatrix":
-        """Hydrates a truth matrix from serialized data."""
-
+        raw = payload["values"]
+        if raw and isinstance(raw[0], str):
+            _map = {"1": TruthValue.TRUE.value, "0": TruthValue.FALSE.value}
+            values = [[_map.get(ch, ch) for ch in row] for row in raw]
+        else:
+            values = raw
         return cls(
             row_axis=payload["rows"],
             column_axis=payload["columns"],
-            values=payload["values"],
+            values=values,
             matrix_id=payload.get("matrix_id", new_id("vi")),
             metadata=payload.get("metadata", {}),
         )

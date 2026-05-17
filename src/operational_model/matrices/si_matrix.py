@@ -25,14 +25,37 @@ class SiMatrix(BooleanMatrix):
             matrix_id=new_id("si"),
         )
 
+    def to_dict(self) -> dict[str, Any]:
+        payload = super().to_dict()
+        payload["values"] = [
+            "".join(
+                "V"
+                if v == SenseValue.SINNVOLL.value
+                else "L"
+                if v == SenseValue.SINNLOS.value
+                else "U"
+                for v in row
+            )
+            for row in self.values
+        ]
+        return payload
+
     @classmethod
     def from_dict(cls, payload: dict[str, Any]) -> "SiMatrix":
-        """Hydrates a sense matrix from serialized data."""
-
+        raw = payload["values"]
+        if raw and isinstance(raw[0], str):
+            _map = {
+                "V": SenseValue.SINNVOLL.value,
+                "L": SenseValue.SINNLOS.value,
+                "U": SenseValue.UNSINNIG.value,
+            }
+            values = [[_map[ch] for ch in row] for row in raw]
+        else:
+            values = raw
         return cls(
             row_axis=payload["rows"],
             column_axis=payload["columns"],
-            values=payload["values"],
+            values=values,
             matrix_id=payload.get("matrix_id", new_id("si")),
             metadata=payload.get("metadata", {}),
         )

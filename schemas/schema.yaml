@@ -15,7 +15,7 @@ Vi:
   columns:
   - term IDs matching ejeB
   values:
-  - - 'true' | 'false' | ∅ (one per column)
+  - - "0101∅" (compact string, one char per cell: 1=true, 0=false, ∅=void)
   metadata: {}
 Si:
   matrix_id: str
@@ -24,7 +24,7 @@ Si:
   columns:
   - term IDs matching ejeB
   values:
-  - - sinnvoll | sinnlos | unsinnig (one per column)
+  - - "VVLUU" (compact string: V=sinnvoll, L=sinnlos, U=unsinnig)
   metadata: {}
 facts:
 - fact_id: str

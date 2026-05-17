@@ -12,7 +12,7 @@ Li:
   li_id: li:hojas_sub
   metadata: {}
 Vi:
-  matrix_id: vi:1228f1f551ea
+  matrix_id: vi:4655f531c8e4
   rows:
   - lechuga
   - espinaca
@@ -21,15 +21,11 @@ Vi:
   - lisa
   - forma
   values:
-  - - 'false'
-    - 'true'
-    - 'true'
-  - - 'true'
-    - 'false'
-    - 'true'
+  - '011'
+  - '101'
   metadata: {}
 Si:
-  matrix_id: si:59eccdd22e01
+  matrix_id: si:359c60a27334
   rows:
   - lechuga
   - espinaca
@@ -38,63 +34,59 @@ Si:
   - lisa
   - forma
   values:
-  - - sinnvoll
-    - sinnvoll
-    - sinnvoll
-  - - sinnvoll
-    - sinnvoll
-    - sinnvoll
+  - VVV
+  - VVV
   metadata: {}
 facts:
-- fact_id: fact:f8fcbcc9abba
+- fact_id: fact:1472013191f4
   truth: 'true'
   proposition:
-    proposition_id: prop:058014b5c9b8
+    proposition_id: prop:f28c1847623f
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: lisa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:3b88950126d1
+- fact_id: fact:069c6c526a5a
   truth: 'false'
   proposition:
-    proposition_id: prop:591d957eae16
+    proposition_id: prop:56a0dac5aee9
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: rugosa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:11e765571f07
+- fact_id: fact:c9c36d810eb1
   truth: 'true'
   proposition:
-    proposition_id: prop:0d92185d1152
+    proposition_id: prop:73f94a1c9fd3
     relation_id: has_property
     subject_symbol_id: lechuga
     object_symbol_id: forma
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:de71f814d85b
+- fact_id: fact:291d3a86a792
   truth: 'false'
   proposition:
-    proposition_id: prop:80b6adc6c062
+    proposition_id: prop:63c4ed36a696
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: lisa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:ba143fa4fe3a
+- fact_id: fact:47b57b705e3e
   truth: 'true'
   proposition:
-    proposition_id: prop:b7ce2dba241d
+    proposition_id: prop:8344849bdaff
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: rugosa
     wigame_id: hojas_sub
   evidence: {}
-- fact_id: fact:7a909bdd6463
+- fact_id: fact:e253575129c2
   truth: 'true'
   proposition:
-    proposition_id: prop:2c76703a2d3b
+    proposition_id: prop:6f9c7b19785f
     relation_id: has_property
     subject_symbol_id: espinaca
     object_symbol_id: forma

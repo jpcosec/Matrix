@@ -1,25 +1,54 @@
-# Concepts: Philosophical & Mathematical Foundations
+# Concepts
 
-El proyecto Matrix TKM fusiona la filosofía analítica de Ludwig Wittgenstein con la computación tensorial moderna.
+Matrix combines a philosophical vocabulary about meaning with a computational model built from explicit logical contexts and matrix operations.
 
-## 1. Fundamento Tractariano
-Basado en el *Tractatus Logico-Philosophicus*, el motor opera bajo la premisa de que "el mundo es la totalidad de los hechos, no de las cosas".
-- **Sinnvoll**: Hechos con sentido y verdad evaluable.
-- **Sinnlos**: Tautologías o contradicciones operacionales.
-- **Unsinnig**: Violaciones de sentido o aplicabilidad (Absurdo).
+## Philosophical vocabulary
 
-## 2. MEEL (Matrix Engine for Evolutionary Logic)
-El motor MEEL implementa el razonamiento evolutivo mediante máscaras estructurales:
-- **Vi (Verdad)**: Factualidad.
-- **Si (Sentido)**: Aplicabilidad.
-- **Oi (Observado)**: Grounding explícito.
-- **Di (Discriminativo)**: Reducción descriptiva.
+The project borrows from the *Tractatus Logico-Philosophicus* the idea that logical evaluation should happen over facts and their form, not only over isolated words.
 
-## 3. Energía de Información $E(R)$
-Cuantifica la calidad de un contexto lógico.
-- Ref: [`get_information_energy` en src/unified_engine.py](../src/unified_engine.py)
+- `sinnvoll`: a proposition is meaningful in context and can be evaluated as true, false, or unknown.
+- `sinnlos`: a proposition collapses into tautological or contradictory structure and carries no discriminative information.
+- `unsinnig`: a proposition is not applicable in the current context, so evaluation itself is ill-formed.
 
-## 4. Colapso Dimensional & JAX
-Utilizamos **JAX** para transformar matrices rectangulares de conocimiento en matrices cuadradas de similitud, permitiendo razonamiento multi-hop mediante potencias booleanas.
-- Ref: [`dimensional_collapse` en src/unified_engine.py](../src/unified_engine.py)
-- Ref: [`recursive_bridge_routing` en src/unified_engine.py](../src/unified_engine.py)
+In the codebase, these labels are used to explain why a proposition succeeds or fails logical validation, not just whether it is true.
+
+## MEEL and the structural masks
+
+The MEEL layer organizes reasoning through four related masks:
+
+- `V_i` - truth values
+- `S_i` - sense or applicability
+- `O_i` - observed or explicitly grounded facts
+- `D_i` - discriminative capacity
+
+This separation matters because a proposition can be false yet meaningful, or impossible to evaluate because it never applies to the target object in the first place.
+
+## Truth values
+
+The unified engine uses a four-valued representation through `TruthValue`:
+
+- `TRUE`
+- `FALSE`
+- `UNKNOWN`
+- `NOT_APPLICABLE`
+
+That allows the engine to distinguish missing knowledge from structural invalidity.
+
+## Information energy
+
+`get_information_energy` measures how informative a context is based on its matrix structure.
+
+- Code reference: `src/unified_engine.py`
+
+Use it when comparing contexts or when deciding whether a routed view remains discriminative enough to justify further reasoning.
+
+## Dimensional collapse and routing
+
+The unified engine uses JAX-backed matrix operations to derive square similarity-style representations from rectangular knowledge matrices.
+
+- `dimensional_collapse` builds local collapsed views.
+- `recursive_bridge_routing` propagates information across contexts.
+
+These operations support multi-hop reasoning, bridge traversal, and higher-level composition workflows.
+
+- Code reference: `src/unified_engine.py`

@@ -70,6 +70,9 @@ def register_projection(system: "LogicalSystem", projection: RoutingProjection) 
     system.projections[projection.matrix_id] = projection
 
 
+from . import logical_system_algebra
+
+
 def add_fact(
     system: "LogicalSystem",
     fact: Fact,
@@ -81,6 +84,7 @@ def add_fact(
     wigame.add_fact(fact, sense=sense)
     _support_symbol(system, fact.proposition.subject_symbol_id, fact, wigame)
     _support_symbol(system, fact.proposition.object_symbol_id, fact, wigame)
+    logical_system_algebra.apply_algebra(system, fact)
 
 
 def _support_symbol(

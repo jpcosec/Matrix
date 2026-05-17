@@ -27,7 +27,16 @@ At that layer, the system combines:
 
 This allows the system to explain whether a proposition is meaningful, tautological, contradictory, malformed, or simply unevaluated.
 
-## 3. Querying
+## 3. Algebraic inference
+
+When a fact is added to the system, the operational model applies algebraic properties declared in the `Relation` to infer additional facts.
+
+- **Commutative**: If `(R a b)` is true, the system infers `(R b a)`.
+- **Transitive**: If `(R a b)` and `(R b c)` are true, the system infers `(R a c)`.
+
+These inferences happen automatically during fact registration in the `LogicalSystem` and are propagated into the relevant `WiGame` matrices.
+
+## 4. Querying
 
 Local search is expressed through `p_i` (`SearchVector`):
 

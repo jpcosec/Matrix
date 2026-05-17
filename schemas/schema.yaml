@@ -1,28 +1,28 @@
 wigame_id: str
-ejeA:
+axis_a:
 - list of subject symbol IDs
-ejeB:
+axis_b:
 - list of term symbol IDs
-relacion: str (single relation admitted by the Li space)
-contexto: str | null (parent context ID)
+relation: str (single relation admitted by the Li space)
+context: str | null (parent context ID)
 Li:
   li_id: str
   metadata: {}
 Vi:
   matrix_id: str
   rows:
-  - subject IDs matching ejeA
+  - subject IDs matching axis_a
   columns:
-  - term IDs matching ejeB
+  - term IDs matching axis_b
   values:
-  - - "0101∅" (compact string, one char per cell: 1=true, 0=false, ∅=void)
+  - - "0101∅" (compact string: 1=true, 0=false, ∅=void)
   metadata: {}
 Si:
   matrix_id: str
   rows:
-  - subject IDs matching ejeA
+  - subject IDs matching axis_a
   columns:
-  - term IDs matching ejeB
+  - term IDs matching axis_b
   values:
   - - "VVLUU" (compact string: V=sinnvoll, L=sinnlos, U=unsinnig)
   metadata: {}

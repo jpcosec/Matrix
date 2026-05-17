@@ -24,10 +24,10 @@ def to_dict(wigame: "WiGame") -> dict[str, Any]:
 
     return {
         "wigame_id": wigame.wigame_id,
-        "ejeA": list(wigame.axis_a),
-        "ejeB": list(wigame.axis_b),
-        "relacion": wigame.relation_id,
-        "contexto": wigame.context_id,
+        "axis_a": list(wigame.axis_a),
+        "axis_b": list(wigame.axis_b),
+        "relation": wigame.relation_id,
+        "context": wigame.context_id,
         "Li": _li_payload(wigame),
         "Vi": wigame.Vi.to_dict(),
         "Si": wigame.Si.to_dict(),
@@ -46,7 +46,7 @@ def from_dict(payload: dict[str, Any]) -> "WiGame":
     wigame = WiGame(
         wigame_id=payload["wigame_id"],
         li=_li_from_payload(payload),
-        context_id=payload.get("contexto"),
+        context_id=payload.get("context") or payload.get("contexto"),
         Vi=ViMatrix.from_dict(payload["Vi"]),
         Si=SiMatrix.from_dict(payload["Si"]),
         metadata=payload.get("metadata", {}),
@@ -74,6 +74,10 @@ def _li_payload(wigame: "WiGame") -> dict[str, Any]:
     return {"li_id": wigame.li.li_id, "metadata": dict(wigame.li.metadata)}
 
 
+def _key(payload: dict, primary: str, fallback: str) -> Any:
+    return payload.get(primary) if primary in payload else payload[fallback]
+
+
 def _serialize_fact(fact_id: str, fact: Fact) -> dict[str, Any]:
     """Serializes one fact entry."""
 
@@ -96,9 +100,9 @@ def _li_from_payload(payload: dict[str, Any]) -> LiSpace:
 
     return LiSpace(
         li_id=payload.get("Li", {}).get("li_id", new_id("li")),
-        axis_a=payload["ejeA"],
-        axis_b=payload["ejeB"],
-        relation_id=payload["relacion"],
+        axis_a=_key(payload, "axis_a", "ejeA"),
+        axis_b=_key(payload, "axis_b", "ejeB"),
+        relation_id=_key(payload, "relation", "relacion"),
         metadata=payload.get("Li", {}).get("metadata", {}),
     )
 

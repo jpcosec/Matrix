@@ -1,17 +1,17 @@
 wigame_id: colores
-ejeA:
+axis_a:
 - amarillo
 - rojo
 - verde
-ejeB:
+axis_b:
 - color
-relacion: has_property
-contexto: null
+relation: has_property
+context: null
 Li:
   li_id: li:colores
   metadata: {}
 Vi:
-  matrix_id: vi:b882dda50a29
+  matrix_id: vi:01421eacd8a0
   rows:
   - amarillo
   - rojo
@@ -24,7 +24,7 @@ Vi:
   - '1'
   metadata: {}
 Si:
-  matrix_id: si:cd80cdb1cfd6
+  matrix_id: si:f51841b3a940
   rows:
   - amarillo
   - rojo
@@ -37,28 +37,28 @@ Si:
   - V
   metadata: {}
 facts:
-- fact_id: fact:f9797a47ee63
+- fact_id: fact:9f8472c4e8aa
   truth: 'true'
   proposition:
-    proposition_id: prop:98dd1a1bd7de
+    proposition_id: prop:8541950528e0
     relation_id: has_property
     subject_symbol_id: amarillo
     object_symbol_id: color
     wigame_id: colores
   evidence: {}
-- fact_id: fact:251fd47d8eb3
+- fact_id: fact:c14993fe9795
   truth: 'true'
   proposition:
-    proposition_id: prop:509e1dfb89b8
+    proposition_id: prop:6e77f6e5acce
     relation_id: has_property
     subject_symbol_id: rojo
     object_symbol_id: color
     wigame_id: colores
   evidence: {}
-- fact_id: fact:a56882ada336
+- fact_id: fact:73e2e3bf174f
   truth: 'true'
   proposition:
-    proposition_id: prop:7210e7ee474e
+    proposition_id: prop:a85a6a02ca73
     relation_id: has_property
     subject_symbol_id: verde
     object_symbol_id: color

@@ -2,9 +2,7 @@
 
 ## Active Tasks
 
-| Task | Domain | Objective | Priority | Documentation |
-|------|--------|-----------|----------|---------------|
-| task-db-04 | serialization | Harden YAML persistence through round-trip tests and schema checks | p1 | `docs/canonical_forms_and_ingestion.md`, `docs/data_models.md` |
+(None)
 
 ## Deferred / Future
 

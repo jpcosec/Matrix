@@ -44,6 +44,42 @@ def _validate_search_vector(wigame: "WiGame", search_vector: SearchVector) -> No
         raise ValueError("search vector belongs to a different WiGame")
 
 
+def get_status(wigame: "WiGame", subject: str, term: str) -> dict:
+    if subject not in wigame.Vi.row_axis or term not in wigame.Vi.column_axis:
+        return {
+            "status": "unsinnig",
+            "truth": None,
+            "truth_label": "NOT_APPLICABLE",
+            "applicable": False,
+            "reason": f"Coordinate ({subject}, {term}) not in WiGame",
+        }
+    sense = wigame.Si.get(subject, term)
+    truth = wigame.Vi.get(subject, term)
+
+    if sense == SenseValue.UNSINNIG.value:
+        return {
+            "status": "unsinnig",
+            "truth": truth,
+            "truth_label": "NOT_APPLICABLE",
+            "applicable": False,
+            "reason": "Sense violation (Si=unsinnig)",
+        }
+
+    taut = term in wigame.Vi.tautological_columns()
+    status = "sinnlos" if taut else "sinnvoll"
+    return {
+        "status": status,
+        "truth": truth,
+        "truth_label": "TRUE"
+        if truth == TruthValue.TRUE.value
+        else "FALSE"
+        if truth == TruthValue.FALSE.value
+        else "UNKNOWN",
+        "applicable": True,
+        "discriminative": not taut,
+    }
+
+
 def information_energy(wigame: "WiGame") -> float:
     Vi, Si = wigame.Vi, wigame.Si
     n, m = len(Vi.row_axis), len(Vi.column_axis)

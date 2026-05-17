@@ -2,7 +2,13 @@
 
 from .logical_system import LogicalSystem
 from .wigame import WiGame
-from .wi_game_queries import information_energy, is_pure, search, tautological_columns
+from .wi_game_queries import (
+    get_status,
+    information_energy,
+    is_pure,
+    search,
+    tautological_columns,
+)
 from .wi_game_registry import (
     accepts_proposition,
     add_fact,

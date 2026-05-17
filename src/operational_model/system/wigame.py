@@ -101,6 +101,11 @@ class WiGame:
 
         return wi_game_queries.information_energy(self)
 
+    def get_status(self, subject: str, term: str) -> dict:
+        """Returns the status of a subject-term pair in this WiGame."""
+
+        return wi_game_queries.get_status(self, subject, term)
+
     def to_dict(self) -> dict[str, Any]:
         """Serializes the WiGame into its direct operational shape."""
 

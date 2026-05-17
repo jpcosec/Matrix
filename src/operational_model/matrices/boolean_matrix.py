@@ -92,6 +92,37 @@ class BooleanMatrix:
             "metadata": dict(self.metadata),
         }
 
+    def bool_mult(self, other: "BooleanMatrix") -> "BooleanMatrix":
+        if self.column_axis != other.row_axis:
+            raise ValueError(
+                f"inner axes mismatch: {self.column_axis} vs {other.row_axis}"
+            )
+        result = []
+        for i in range(len(self.row_axis)):
+            row = []
+            for k in range(len(other.column_axis)):
+                acc = False
+                for j in range(len(self.column_axis)):
+                    if self.values[i][j] and other.values[j][k]:
+                        acc = True
+                        break
+                row.append(acc)
+            result.append(row)
+        return BooleanMatrix(
+            row_axis=list(self.row_axis),
+            column_axis=list(other.column_axis),
+            values=result,
+            matrix_id=new_id("matrix"),
+        )
+
+    def transpose(self) -> "BooleanMatrix":
+        return BooleanMatrix(
+            row_axis=list(self.column_axis),
+            column_axis=list(self.row_axis),
+            values=[list(col) for col in zip(*self.values)],
+            matrix_id=new_id("matrix"),
+        )
+
     def _validate_height(self) -> None:
         """Ensures matrix height matches the row axis length."""
 

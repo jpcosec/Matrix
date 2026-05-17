@@ -10,7 +10,7 @@ Only active tasks belong here.
 |------|--------|-----------|----------|------------|-------|-----------------|
 | task-00 | audit/architecture | Inventory every legacy runtime and test surface as migrate/delete/defer | p0 | none | pill-04, pill-07 | COMPLETE |
 | task-01 | tests/cleanup | Delete legacy test files that only preserve old runtime behavior | p0 | task-00 | pill-04, pill-07 | COMPLETE |
-| task-02a | runtime/migration | Extract boolean matrix multiplication from legacy runtime into the new model | p0 | task-00 | pill-04, pill-07 | TODO |
+| task-02a | runtime/migration | Extract boolean matrix multiplication from legacy runtime into the new model | p0 | task-00 | pill-04, pill-07 | COMPLETE |
 | task-02b | runtime/migration | Rebuild dimensional collapse on the new model | p0 | task-00, task-02a | pill-01, pill-04, pill-07 | TODO |
 | task-02c | runtime/migration | Rebuild recursive routing on top of `Context` and `RoutingProjection` | p0 | task-00, task-02a | pill-03, pill-04, pill-07 | TODO |
 | task-02d | runtime/migration | Rebuild information energy on top of the new model | p0 | task-00 | pill-04, pill-07 | TODO |

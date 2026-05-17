@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from ..core.sense_value import SenseValue
+from ..core.truth_value import TruthValue
 from ..routing.search_vector import SearchVector
 
 if TYPE_CHECKING:
@@ -41,6 +42,43 @@ def _validate_search_vector(wigame: "WiGame", search_vector: SearchVector) -> No
 
     if search_vector.wigame_id != wigame.wigame_id:
         raise ValueError("search vector belongs to a different WiGame")
+
+
+def information_energy(wigame: "WiGame") -> float:
+    Vi, Si = wigame.Vi, wigame.Si
+    n, m = len(Vi.row_axis), len(Vi.column_axis)
+    total = n * m
+    if total == 0:
+        return 0.0
+
+    sinnvoll_values = {SenseValue.SINNVOLL.value, SenseValue.SINNLOS.value}
+    c = (
+        sum(
+            1
+            for row_key in Si.row_axis
+            for val in Si.row(row_key).values()
+            if val in sinnvoll_values
+        )
+        / total
+    )
+
+    i = (
+        sum(
+            1
+            for row_key in Vi.row_axis
+            for col_key in Vi.column_axis
+            if Vi.get(row_key, col_key) == TruthValue.TRUE.value
+            and Si.get(row_key, col_key) != SenseValue.UNSINNIG.value
+        )
+        / total
+    )
+
+    o = len(wigame.facts) / total
+
+    taut = len(wigame.Vi.tautological_columns())
+    d = (m - taut) / m if m > 0 else 0.0
+
+    return 0.25 * (c + i + o + d)
 
 
 def _terms_are_meaningful(

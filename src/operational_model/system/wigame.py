@@ -96,6 +96,11 @@ class WiGame:
 
         return wi_game_queries.is_pure(self)
 
+    def information_energy(self) -> float:
+        """Returns the information energy of this WiGame."""
+
+        return wi_game_queries.information_energy(self)
+
     def to_dict(self) -> dict[str, Any]:
         """Serializes the WiGame into its direct operational shape."""
 

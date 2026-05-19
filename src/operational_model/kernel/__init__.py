@@ -19,6 +19,9 @@ from .formula_evaluation import (
     evaluate_formula,
     iter_valuations,
 )
+from .formula_inference import conjunction_elimination, disjunctive_syllogism, hypothetical_syllogism, modus_ponens
+from .formula_normal_forms import to_cnf, to_dnf, to_nnf
+from .formula_rewrites import desugar_if, simplify_formula, sort_formula_operands
 from .symbol_policy import (
     KERNEL_CONNECTIVES,
     KERNEL_META_RELATIONS,
@@ -43,11 +46,21 @@ __all__ = [
     "WI_RELATION_FAMILIES",
     "classify_formula",
     "collect_atoms",
+    "conjunction_elimination",
+    "desugar_if",
+    "disjunctive_syllogism",
     "evaluate_formula",
     "formula_precedence",
+    "hypothetical_syllogism",
     "iter_valuations",
+    "modus_ponens",
     "parse_formula",
+    "simplify_formula",
+    "sort_formula_operands",
     "SymbolPolicy",
+    "to_cnf",
+    "to_dnf",
+    "to_nnf",
     "classify_symbol",
     "is_kernel_symbol",
 ]

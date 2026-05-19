@@ -13,6 +13,7 @@ This directory documents the stable architecture and engineering rules of Matrix
 - [Data Models](./data_models.md) - the primary structures exposed by the operational model
 - [Kernel Symbol Policy](./kernel_symbol_policy.md) - first stable distinction between kernel symbols and Wi-level relations
 - [Operations](./operations.md) - ingestion, local evaluation, routing, and reconstruction workflows
+- [Storage Boundary](./storage_boundary.md) - persistence invariants between the YAML prototype and future DB-backed symbol spaces
 
 ## Related repository resources
 
@@ -38,8 +39,8 @@ Run the test suite from the repository root:
 pytest
 ```
 
-If you only want the round-trip scenario, run:
+If you only want to exercise the separate SHRDLU prototype, run:
 
 ```bash
-python tests/test_tkm_roundtrip_suite.py
+python prototypes/shrdlu/proto.py --once "Put the red block on the blue cube."
 ```

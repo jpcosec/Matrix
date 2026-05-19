@@ -173,3 +173,20 @@ This keeps the bridge explicit between:
 
 - the relational world stored in `Wi`
 - the internal symbols used by the kernel for composition, normalization, and execution
+
+## Symbol Spaces
+
+`instance` and `equivalent` now point toward an explicit kernel notion of **symbol space**.
+
+A symbol space is not just storage. It is the normalization domain where the kernel can:
+
+- assert class membership with `instance`
+- unify aliases and canonical names with `equivalent`
+- recover canonical representatives before later DB, query, or Wi operations
+
+This matters because a future database backend should preserve the same semantic operations even if the storage layer changes.
+
+Current code surface:
+
+- `src/operational_model/kernel/symbol_spaces.py`
+- `src/operational_model/kernel/typed_assertions.py`

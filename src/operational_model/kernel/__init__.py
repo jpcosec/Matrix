@@ -40,6 +40,7 @@ from .formula_evaluation import (
 from .formula_inference import conjunction_elimination, disjunctive_syllogism, hypothetical_syllogism, modus_ponens
 from .formula_normal_forms import to_cnf, to_dnf, to_nnf
 from .formula_rewrites import desugar_if, simplify_formula, sort_formula_operands
+from .symbol_spaces import SymbolSpace
 from .symbol_policy import (
     KERNEL_CONNECTIVES,
     KERNEL_META_RELATIONS,
@@ -48,6 +49,7 @@ from .symbol_policy import (
     classify_symbol,
     is_kernel_symbol,
 )
+from .typed_assertions import TypedAssertionResult, lower_typed_assertion
 
 __all__ = [
     "AndFormula",
@@ -94,9 +96,12 @@ __all__ = [
     "simplify_formula",
     "sort_formula_operands",
     "SymbolPolicy",
+    "SymbolSpace",
+    "TypedAssertionResult",
     "to_cnf",
     "to_dnf",
     "to_nnf",
     "classify_symbol",
     "is_kernel_symbol",
+    "lower_typed_assertion",
 ]

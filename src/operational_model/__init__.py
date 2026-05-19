@@ -58,11 +58,14 @@ from .kernel import (
     simplify_formula,
     sort_formula_operands,
     SymbolPolicy,
+    SymbolSpace,
+    TypedAssertionResult,
     to_cnf,
     to_dnf,
     to_nnf,
     classify_symbol,
     is_kernel_symbol,
+    lower_typed_assertion,
 )
 from .language import parse_s_expression
 from .matrices import BooleanMatrix, SiMatrix, ViMatrix
@@ -107,6 +110,8 @@ __all__ = [
     "SenseValue",
     "SiMatrix",
     "SymbolPolicy",
+    "SymbolSpace",
+    "TypedAssertionResult",
     "Symbol",
     "Thing",
     "TruthValue",
@@ -133,6 +138,7 @@ __all__ = [
     "normalize_mask_family",
     "classify_symbol",
     "is_kernel_symbol",
+    "lower_typed_assertion",
     "parse_formula",
     "parse_s_expression",
     "reduce_cnf_subsumption",

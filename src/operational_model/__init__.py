@@ -12,6 +12,14 @@ from .core import (
     Thing,
     TruthValue,
 )
+from .kernel import (
+    KERNEL_CONNECTIVES,
+    KERNEL_META_RELATIONS,
+    WI_RELATION_FAMILIES,
+    SymbolPolicy,
+    classify_symbol,
+    is_kernel_symbol,
+)
 from .language import parse_s_expression
 from .matrices import BooleanMatrix, SiMatrix, ViMatrix
 from .routing import Context, ContextRoute, RoutingProjection, SearchVector
@@ -22,6 +30,8 @@ __all__ = [
     "Context",
     "ContextRoute",
     "Fact",
+    "KERNEL_CONNECTIVES",
+    "KERNEL_META_RELATIONS",
     "LiSpace",
     "LogicalSystem",
     "Name",
@@ -34,10 +44,14 @@ __all__ = [
     "SearchVector",
     "SenseValue",
     "SiMatrix",
+    "SymbolPolicy",
     "Symbol",
     "Thing",
     "TruthValue",
     "ViMatrix",
+    "WI_RELATION_FAMILIES",
     "WiGame",
+    "classify_symbol",
+    "is_kernel_symbol",
     "parse_s_expression",
 ]

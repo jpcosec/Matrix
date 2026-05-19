@@ -13,6 +13,8 @@
 - **S-expression runtime step 2: registry authoring** — add canonical forms for creating symbols and relations directly from the runtime surface
 - **S-expression runtime step 3: Wi authoring** — add canonical forms for creating `LiSpace` and `WiGame` structures without falling back to YAML editing
 - **S-expression runtime step 4: inference surface** — add canonical `infer` forms over resolved facts and local games
+- **Kernel step 2: typed assertion lowering** — teach the runtime how `instance` and `equivalent` operationalize symbol spaces and DB-backed normalization
+- **Kernel step 3: connective execution** — add execution semantics for `and`, `or`, `not`, and `if` over canonical forms
 - **Proto-SHRDLU step 2: frame lowering** — lower `prototypes/shrdlu/` semantic frames into canonical runtime operations
 - **Proto-SHRDLU step 3: discourse and ambiguity** — add explicit unresolved-reference handling for `it`, `them`, and competing noun-phrase matches inside the separate prototype package
 - **Proto-SHRDLU step 4: planner/world harness** — add a tiny test world only to validate command execution over parsed frames in the prototype package

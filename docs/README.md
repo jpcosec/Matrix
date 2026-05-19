@@ -11,6 +11,7 @@ This directory documents the stable architecture and engineering rules of Matrix
 - [Coding Standards](./coding_standards.md) - structural heuristics for files, classes, functions, and documentation
 - [Concepts](./concepts.md) - philosophical vocabulary and proposition-first terminology
 - [Data Models](./data_models.md) - the primary structures exposed by the operational model
+- [Kernel Symbol Policy](./kernel_symbol_policy.md) - first stable distinction between kernel symbols and Wi-level relations
 - [Operations](./operations.md) - ingestion, local evaluation, routing, and reconstruction workflows
 
 ## Related repository resources

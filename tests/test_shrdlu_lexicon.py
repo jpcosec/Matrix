@@ -1,4 +1,4 @@
-from src.operational_model import build_shrdlu_lexicon
+from prototypes.shrdlu import build_shrdlu_lexicon
 
 
 def test_multiword_combination_collapses_to_one_token() -> None:

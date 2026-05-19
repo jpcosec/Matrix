@@ -1,4 +1,4 @@
-from src.operational_model import ParseError, build_shrdlu_lexicon, parse_controlled_english
+from prototypes.shrdlu import ParseError, build_shrdlu_lexicon, parse_controlled_english
 
 
 def test_parse_imperative_put_sentence() -> None:

@@ -69,17 +69,6 @@ The initial executable forms are intentionally small:
 
 When `(R a b)` fits more than one `WiGame`, the runtime should return an explicit ambiguous result instead of selecting one implicitly.
 
-## Controlled English direction
-
-English ingestion should remain a lowering layer, not a competing external truth format.
-
-That means:
-
-- lexical and grammar work may accept controlled English surface forms
-- the parser should lower those forms into stable semantic frames
-- those frames should remain compatible with canonical s-expressions instead of inventing a second logical core
-- lexical knowledge may borrow heavily from historical SHRDLU dictionaries as long as the operational core stays proposition-first
-
 ## Failure modes
 
 Common ingestion and serialization failures include:

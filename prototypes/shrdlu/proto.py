@@ -1,16 +1,24 @@
-"""Minimal proto-SHRDLU harness over the Matrix language layer."""
+"""Minimal proto-SHRDLU harness over the separate prototype package."""
 
 from __future__ import annotations
 
 import argparse
+import sys
+from pathlib import Path
 
-from src.operational_model import ParseError, parse_controlled_english
+
+if __package__ in {None, ""}:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from prototypes.shrdlu import ParseError, parse_controlled_english
 
 
 def main() -> int:
     """Runs one-shot or interactive controlled-English parsing."""
 
-    parser = argparse.ArgumentParser(description="Parse controlled English into Matrix semantic frames.")
+    parser = argparse.ArgumentParser(
+        description="Parse controlled English into SHRDLU prototype semantic frames."
+    )
     parser.add_argument("--once", help="Parse one sentence and exit.")
     args = parser.parse_args()
 
@@ -20,8 +28,6 @@ def main() -> int:
 
 
 def _run_once(sentence: str) -> int:
-    """Parses one sentence and prints the semantic frame."""
-
     try:
         print(parse_controlled_english(sentence).to_sexpr())
         return 0
@@ -31,8 +37,6 @@ def _run_once(sentence: str) -> int:
 
 
 def _run_repl() -> int:
-    """Runs a tiny interactive loop for proto-SHRDLU testing."""
-
     print("Proto-SHRDLU for Matrix. Type 'exit' to quit.")
     while True:
         try:

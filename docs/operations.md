@@ -25,13 +25,6 @@ The first direct executable slice should expose this flow through canonical s-ex
 
 If multiple local games accept the same proposition shape, the operation must return an explicit ambiguous result instead of choosing one implicitly.
 
-A controlled-English layer may sit above this runtime, but only as a lowering step:
-
-1. tokenize through a structured lexicon
-2. parse into a stable semantic frame
-3. lower the frame into canonical system operations
-4. execute only after the semantic frame is explicit enough to validate
-
 ## 2. Local evaluation
 
 Local evaluation happens inside a `WiGame`.

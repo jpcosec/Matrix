@@ -1,4 +1,4 @@
-"""SHRDLU-inspired controlled lexicon for Matrix."""
+"""SHRDLU-inspired controlled lexicon for the prototype package."""
 
 from __future__ import annotations
 
@@ -11,8 +11,6 @@ WORD_RE = re.compile(r"[A-Za-z-]+|[?.!]")
 
 @dataclass(frozen=True)
 class LexiconEntry:
-    """Stable lexical entry derived from a surface form."""
-
     surface: str
     root: str
     categories: tuple[str, ...]
@@ -22,8 +20,6 @@ class LexiconEntry:
 
 @dataclass(frozen=True)
 class LexiconToken:
-    """Normalized token produced by lexicon-aware tokenization."""
-
     surface: str
     root: str
     categories: tuple[str, ...]
@@ -31,14 +27,10 @@ class LexiconToken:
     semantic_value: str | None = None
 
     def has(self, category: str) -> bool:
-        """Reports whether this token belongs to one category."""
-
         return category in self.categories
 
 
 class ShrdluLexicon:
-    """Structured lexicon with longest-match tokenization."""
-
     def __init__(self, entries: list[LexiconEntry]) -> None:
         self.entries = {entry.surface: entry for entry in entries}
         self.multiword_surfaces = sorted(
@@ -48,8 +40,6 @@ class ShrdluLexicon:
         )
 
     def tokenize(self, text: str) -> list[LexiconToken]:
-        """Tokenizes one sentence, collapsing known multiword combinations."""
-
         raw_words = [word.lower() for word in WORD_RE.findall(text)]
         tokens: list[LexiconToken] = []
         index = 0
@@ -80,8 +70,6 @@ class ShrdluLexicon:
         return tokens
 
     def _match_multiword(self, raw_words: list[str], index: int) -> str | None:
-        """Finds the longest matching multiword surface at one position."""
-
         for surface in self.multiword_surfaces:
             words = surface.split()
             if raw_words[index : index + len(words)] == words:
@@ -89,8 +77,6 @@ class ShrdluLexicon:
         return None
 
     def _entry_to_token(self, entry: LexiconEntry) -> LexiconToken:
-        """Converts one entry to a runtime token."""
-
         return LexiconToken(
             surface=entry.surface,
             root=entry.root,
@@ -101,14 +87,10 @@ class ShrdluLexicon:
 
 
 def build_shrdlu_lexicon() -> ShrdluLexicon:
-    """Builds the controlled lexicon inspired by `dictio.lisp`."""
-
     return ShrdluLexicon(_entries())
 
 
 def _entries() -> list[LexiconEntry]:
-    """Returns the curated SHRDLU-inspired lexicon slice."""
-
     entries = [
         _entry("a", "a", ("determiner",), "determiner", "indef"),
         _entry("an", "a", ("determiner",), "determiner", "indef"),
@@ -210,19 +192,5 @@ def _entries() -> list[LexiconEntry]:
     return entries
 
 
-def _entry(
-    surface: str,
-    root: str,
-    categories: tuple[str, ...],
-    semantic_kind: str | None = None,
-    semantic_value: str | None = None,
-) -> LexiconEntry:
-    """Creates one lexical entry."""
-
-    return LexiconEntry(
-        surface=surface,
-        root=root,
-        categories=categories,
-        semantic_kind=semantic_kind,
-        semantic_value=semantic_value,
-    )
+def _entry(surface: str, root: str, categories: tuple[str, ...], semantic_kind: str | None = None, semantic_value: str | None = None) -> LexiconEntry:
+    return LexiconEntry(surface, root, categories, semantic_kind, semantic_value)

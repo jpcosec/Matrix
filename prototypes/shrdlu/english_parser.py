@@ -14,8 +14,6 @@ class ParseError(ValueError):
 
 @dataclass
 class TokenStream:
-    """Small token reader for controlled-English parsing."""
-
     tokens: list[LexiconToken]
     index: int = 0
 
@@ -33,12 +31,7 @@ class TokenStream:
         return self.index >= len(self.tokens)
 
 
-def parse_controlled_english(
-    sentence: str,
-    lexicon: ShrdluLexicon | None = None,
-) -> SemanticFrame:
-    """Parses one controlled-English sentence into a semantic frame."""
-
+def parse_controlled_english(sentence: str, lexicon: ShrdluLexicon | None = None) -> SemanticFrame:
     lexicon = lexicon or build_shrdlu_lexicon()
     stream = TokenStream(lexicon.tokenize(sentence))
     first = stream.peek()
@@ -67,8 +60,7 @@ def _parse_imperative(stream: TokenStream) -> ImperativeFrame:
 
 
 def _parse_yes_no_question(stream: TokenStream) -> QueryFrame:
-    copula = stream.take()
-    _ = copula
+    stream.take()
     subject = _parse_entity(stream)
     if stream.done():
         return QueryFrame(query_kind="describe", subject=subject)
@@ -76,12 +68,7 @@ def _parse_yes_no_question(stream: TokenStream) -> QueryFrame:
     obj = _parse_entity(stream)
     if not stream.done():
         raise ParseError("unexpected trailing tokens in yes/no question")
-    return QueryFrame(
-        query_kind="truth",
-        subject=subject,
-        relation=prep.semantic_value or prep.root,
-        object=obj,
-    )
+    return QueryFrame(query_kind="truth", subject=subject, relation=prep.semantic_value or prep.root, object=obj)
 
 
 def _parse_wh_question(stream: TokenStream) -> QueryFrame:
@@ -103,12 +90,7 @@ def _parse_what_question(stream: TokenStream, wh_value: str) -> QueryFrame:
         obj = _parse_entity(stream)
         if not stream.done():
             raise ParseError("unexpected trailing tokens in what-question")
-        return QueryFrame(
-            query_kind="which-entity",
-            wh=wh_value,
-            relation=prep.semantic_value or prep.root,
-            object=obj,
-        )
+        return QueryFrame(query_kind="which-entity", wh=wh_value, relation=prep.semantic_value or prep.root, object=obj)
     subject = _parse_entity(stream)
     if not stream.done():
         raise ParseError("unexpected trailing tokens in what-question")
@@ -122,13 +104,7 @@ def _parse_which_question(stream: TokenStream, wh_value: str) -> QueryFrame:
     obj = _parse_entity(stream)
     if not stream.done():
         raise ParseError("unexpected trailing tokens in which-question")
-    return QueryFrame(
-        query_kind="which-entity",
-        wh=wh_value,
-        subject=subject,
-        relation=prep.semantic_value or prep.root,
-        object=obj,
-    )
+    return QueryFrame(query_kind="which-entity", wh=wh_value, subject=subject, relation=prep.semantic_value or prep.root, object=obj)
 
 
 def _parse_where_question(stream: TokenStream, wh_value: str) -> QueryFrame:
@@ -169,17 +145,10 @@ def _parse_entity(stream: TokenStream, allow_missing_determiner: bool = False) -
     else:
         raise ParseError(f"expected noun phrase, got {token.surface}")
 
-    return EntityDescriptor(
-        determiner=determiner,
-        adjectives=tuple(adjectives),
-        noun=noun,
-        referent=referent,
-    )
+    return EntityDescriptor(determiner=determiner, adjectives=tuple(adjectives), noun=noun, referent=referent)
 
 
 def _expect_category(token: LexiconToken, category: str) -> LexiconToken:
-    """Checks one required category."""
-
     if not token.has(category):
         raise ParseError(f"expected {category}, got {token.surface}")
     return token

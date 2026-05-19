@@ -23,6 +23,7 @@ class Context:
         self,
         target_context_id: str,
         relation_id: str = "routes_to",
+        semantics: tuple[str, ...] = (),
     ) -> ContextRoute:
         """Adds a route from this context to another context."""
 
@@ -31,6 +32,7 @@ class Context:
             target_kind=RouteTargetKind.CONTEXT,
             target_id=target_context_id,
             relation_id=relation_id,
+            metadata={"semantics": list(semantics)} if semantics else {},
         )
         self.routes.append(route)
         return route
@@ -39,6 +41,7 @@ class Context:
         self,
         target_wigame_id: str,
         relation_id: str = "routes_to",
+        semantics: tuple[str, ...] = (),
     ) -> ContextRoute:
         """Adds a route from this context to a WiGame leaf."""
 
@@ -47,6 +50,7 @@ class Context:
             target_kind=RouteTargetKind.WIGAME,
             target_id=target_wigame_id,
             relation_id=relation_id,
+            metadata={"semantics": list(semantics)} if semantics else {},
         )
         self.routes.append(route)
         return route

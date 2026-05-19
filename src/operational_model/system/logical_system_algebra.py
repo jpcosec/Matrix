@@ -17,9 +17,10 @@ def apply_algebra(system: "LogicalSystem", fact: "Fact") -> None:
     relation = system.relations.get(fact.proposition.relation_id)
     if not relation:
         return
-    if relation.commutative:
+    semantics = relation.semantics
+    if semantics.supports_commutative_equivalence():
         _apply_commutative(system, fact)
-    if relation.transitive:
+    if semantics.supports_transitive_closure():
         _apply_transitive(system, fact)
 
 

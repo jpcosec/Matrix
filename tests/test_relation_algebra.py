@@ -5,6 +5,7 @@ from src.operational_model import (
     LogicalSystem,
     Proposition,
     Relation,
+    RelationAlgebra,
     TruthValue,
     WiGame,
     Symbol,
@@ -81,3 +82,34 @@ def test_transitive_relation_behavior() -> None:
     # Verify (over a c) is TRUE due to transitivity
     status_a_c = wigame.get_status("a", "c")
     assert status_a_c.truth == TruthValue.TRUE.value
+
+
+def test_relation_can_use_explicit_algebra_profile() -> None:
+    system = LogicalSystem()
+    for thing in (
+        Thing(Symbol("a"), Name("A")),
+        Thing(Symbol("b"), Name("B")),
+    ):
+        system.register_thing(thing)
+
+    rel = Relation(
+        "peer",
+        "is peer of",
+        algebra=RelationAlgebra(commutative=True),
+    )
+    system.register_relation(rel)
+
+    wigame = WiGame(
+        wigame_id="wigame:peer",
+        li=LiSpace(
+            li_id="li:peer",
+            axis_a=["a", "b"],
+            axis_b=["a", "b"],
+            relation_id="peer",
+        ),
+    )
+    system.register_wigame(wigame)
+    system.add_fact(Fact(Proposition("peer", "a", "b", "wigame:peer"), TruthValue.TRUE))
+
+    assert rel.semantics.commutative is True
+    assert wigame.get_status("b", "a").truth == TruthValue.TRUE.value

@@ -3,7 +3,6 @@
 ## Active Tasks
 
 - **task-core-01-doc-and-legacy-sync** - clean remaining architectural drift around `Si`, `Oi`, and the stale runtime surfaces; see `DESK/tasks/task-core-01-doc-and-legacy-sync.md`
-- **task-proto-shrdlu-02-lowering-and-dialog** - turn the separate SHRDLU prototype into a real client of the kernel with lowering, ambiguity, and a tiny execution harness; see `DESK/tasks/task-proto-shrdlu-02-lowering-and-dialog.md`
 - **task-storage-01-postgres-compatibility** - define the persistence boundary so the current prototype stays YAML-first while remaining compatible with future Postgres-backed symbol spaces; see `DESK/tasks/task-storage-01-postgres-compatibility.md`
 
 ## Deferred / Future

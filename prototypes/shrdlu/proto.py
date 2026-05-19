@@ -10,7 +10,8 @@ from pathlib import Path
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from prototypes.shrdlu import ParseError, parse_controlled_english
+from prototypes.shrdlu import ParseError
+from prototypes.shrdlu.lowering import PrototypeHarness
 
 
 def main() -> int:
@@ -28,8 +29,9 @@ def main() -> int:
 
 
 def _run_once(sentence: str) -> int:
+    harness = PrototypeHarness()
     try:
-        print(parse_controlled_english(sentence).to_sexpr())
+        print(harness.execute(sentence))
         return 0
     except ParseError as exc:
         print(f"error: {exc}")
@@ -38,6 +40,7 @@ def _run_once(sentence: str) -> int:
 
 def _run_repl() -> int:
     print("Proto-SHRDLU for Matrix. Type 'exit' to quit.")
+    harness = PrototypeHarness()
     while True:
         try:
             sentence = input("> ").strip()
@@ -48,7 +51,10 @@ def _run_repl() -> int:
             return 0
         if not sentence:
             continue
-        _run_once(sentence)
+        try:
+            print(harness.execute(sentence))
+        except ParseError as exc:
+            print(f"error: {exc}")
 
 
 if __name__ == "__main__":

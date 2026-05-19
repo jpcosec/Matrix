@@ -113,3 +113,63 @@ The current code-level policy lives in:
 - `src/operational_model/kernel/symbol_policy.py`
 
 That module is the first operational anchor for future lowering, database integration, and kernel execution work.
+
+## Execution Layers
+
+The current design direction is best described as nested operational layers.
+
+```mermaid
+flowchart TD
+    subgraph L6[Proto Layer]
+        SHRDLU["SHRDLU prototype\ncontrolled English client"]
+    end
+
+    subgraph L5[Surface Layer]
+        SEXPR["canonical s-expressions\ninput and transport form"]
+    end
+
+    subgraph L4[Kernel Layer]
+        PK["propositional kernel\nFBF formulas, connectives, rewrites, inference"]
+        KSYM["kernel atoms\n`kern:{symbol}`"]
+    end
+
+    subgraph L3[Wi Layer]
+        WI["Wi / Tractatus layer\nlocal facts, admissibility, Si/Vi coordination"]
+        RATOM["symbol-to-symbol atoms\n`(R a b)`"]
+    end
+
+    subgraph L2[Execution Layer]
+        SIXVI["SixVi evaluator\ntruth, sense, reduction targets"]
+    end
+
+    subgraph L1[Matrix Layer]
+        MATOPS["matrix_bitwise_ops\nbitwise and matrix primitives"]
+    end
+
+    SHRDLU --> SEXPR
+    SEXPR --> PK
+    PK --> SIXVI
+    WI --> SIXVI
+    SIXVI --> MATOPS
+
+    PK -->|contains| KSYM
+    WI -->|contains| RATOM
+    KSYM -->|relates to| RATOM
+```
+
+## Atom Policy
+
+To keep the kernel clean:
+
+- anything fundamentally **symbol-to-symbol** should remain a relational atom in canonical form: `(R a b)`
+- anything **internal to the kernel** and not naturally expressed as a symbol-to-symbol relation should use the explicit namespace `kern:{symbol}`
+
+Examples:
+
+- relational atom: `(instance perro mamifero)` or `(causes fuego humo)` when treated as Wi-level facts
+- kernel atom: `kern:ready`, `kern:contradiction-flag`, `kern:false`
+
+This keeps the bridge explicit between:
+
+- the relational world stored in `Wi`
+- the internal symbols used by the kernel for composition, normalization, and execution

@@ -6,7 +6,12 @@ from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
 from ..core.fact import Fact
+from ..core.li_space import LiSpace
+from ..core.name import Name
 from ..core.proposition import Proposition
+from ..core.relation import Relation
+from ..core.symbol import Symbol
+from ..core.thing import Thing
 from ..core.truth_value import TruthValue
 from ..language.s_expressions import SExpression, parse_s_expression
 from .operation_results import OperationResult
@@ -41,9 +46,47 @@ class SExpressionRuntime:
             return self._eval_check(expr[1:])
         if head == "assert":
             return self._eval_assert(expr[1:])
+        if head == "create":
+            return self._eval_create(expr[1:])
+        if head == "ingest":
+            return self._eval_ingest(expr[1:])
         if head == "return":
             return self._eval_return(expr[1:])
         raise ValueError(f"unsupported operation: {head}")
+
+    def _eval_create(self, args: list[SExpression]) -> OperationResult:
+        if not args:
+            raise ValueError("create requires a target kind")
+        kind = self._require_atom(args[0], "create target")
+        if kind == "symbol":
+            return self._create_symbol(args[1:])
+        if kind == "relation":
+            return self._create_relation(args[1:])
+        if kind == "li":
+            return self._create_li(args[1:])
+        if kind == "wigame":
+            return self._create_wigame(args[1:])
+        raise ValueError(f"unsupported create target: {kind}")
+
+    def _eval_ingest(self, args: list[SExpression]) -> OperationResult:
+        if len(args) != 2:
+            raise ValueError("ingest expects `wigame:<id>` and canonical `(R a b)`")
+        selector = self._parse_selector(args[0])
+        if selector.kind != "wigame":
+            raise ValueError("ingest requires a wigame selector")
+        wigame_id = self._normalize_selector_value(selector)
+        proposition = self._parse_proposition(args[1], wigame_id=wigame_id)
+        wigame = self.system.wigames.get(wigame_id)
+        if wigame is None:
+            return OperationResult(status="reject", sinn="unsinnig", reason="target WiGame does not exist")
+        if not wigame.accepts(proposition):
+            return OperationResult(status="reject", sinn="unsinnig", reason="target WiGame does not accept this proposition")
+        wigame.register_proposition(proposition)
+        return OperationResult(
+            status="accept",
+            sinn=wigame.Si.get(proposition.subject_symbol_id, proposition.object_symbol_id),
+            payload={"wigame_id": wigame_id, "proposition": proposition.sexpr(), "action": "registered"},
+        )
 
     def _eval_check(self, args: list[SExpression]) -> OperationResult:
         wigame_id, proposition = self._resolve_targeted_proposition(args)
@@ -145,6 +188,70 @@ class SExpressionRuntime:
         selectors = [self._parse_selector(arg) for arg in args[1:]]
         groups = [group for group in self._fact_groups(selectors) if group["facts"]]
         return OperationResult(status="accept", payload={"groups": groups})
+
+    def _create_symbol(self, args: list[SExpression]) -> OperationResult:
+        if len(args) != 2:
+            raise ValueError("create symbol expects `<symbol-id> <sign>`")
+        symbol_id = self._require_atom(args[0], "symbol id")
+        sign = self._require_atom(args[1], "sign")
+        if symbol_id in self.system.symbols:
+            return OperationResult(status="accept", payload={"symbol_id": symbol_id, "action": "noop"})
+        thing = Thing(Symbol(symbol_id), Name(sign))
+        self.system.register_thing(thing)
+        return OperationResult(status="accept", payload={"symbol_id": symbol_id, "sign": sign, "action": "created"})
+
+    def _create_relation(self, args: list[SExpression]) -> OperationResult:
+        if len(args) < 2:
+            raise ValueError("create relation expects `<relation-id> <name>` plus optional flags")
+        relation_id = self._require_atom(args[0], "relation id")
+        name = self._require_atom(args[1], "relation name")
+        if relation_id in self.system.relations:
+            return OperationResult(status="accept", payload={"relation_id": relation_id, "action": "noop"})
+        flags = {selector.kind: selector.value for selector in (self._parse_selector(arg) for arg in args[2:])}
+        relation = Relation(
+            relation_id,
+            name,
+            commutative=flags.get("commutative") == "true",
+            transitive=flags.get("transitive") == "true",
+            associative=flags.get("associative") == "true",
+            distributive=flags.get("distributive") == "true",
+        )
+        self.system.register_relation(relation)
+        return OperationResult(status="accept", payload={"relation_id": relation_id, "action": "created"})
+
+    def _create_li(self, args: list[SExpression]) -> OperationResult:
+        if len(args) != 4:
+            raise ValueError("create li expects `<li-id> <relation-id> (axis-a ...) (axis-b ...)`")
+        li_id = self._require_atom(args[0], "li id")
+        relation_id = self._require_atom(args[1], "relation id")
+        axis_a = self._parse_axis(args[2], "axis-a")
+        axis_b = self._parse_axis(args[3], "axis-b")
+        if li_id in self.system.li_spaces:
+            return OperationResult(status="accept", payload={"li_id": li_id, "action": "noop"})
+        li_space = LiSpace(li_id=li_id, axis_a=axis_a, axis_b=axis_b, relation_id=relation_id)
+        self.system.register_li(li_space)
+        return OperationResult(status="accept", payload={"li_id": li_id, "action": "created"})
+
+    def _create_wigame(self, args: list[SExpression]) -> OperationResult:
+        if len(args) not in {2, 3}:
+            raise ValueError("create wigame expects `<wigame-id> <li-id>` with optional `context:<id>`")
+        wigame_id = self._require_atom(args[0], "wigame id")
+        li_id = self._require_atom(args[1], "li id")
+        context_id = None
+        if len(args) == 3:
+            selector = self._parse_selector(args[2])
+            if selector.kind != "context":
+                raise ValueError("optional wigame third argument must be `context:<id>`")
+            context_id = selector.value
+        if wigame_id in self.system.wigames:
+            return OperationResult(status="accept", payload={"wigame_id": wigame_id, "action": "noop"})
+        li_space = self.system.li_spaces.get(li_id)
+        if li_space is None:
+            return OperationResult(status="reject", sinn="unsinnig", reason="referenced LiSpace does not exist")
+        from .wigame import WiGame
+
+        self.system.register_wigame(WiGame(wigame_id=wigame_id, li=li_space, context_id=context_id))
+        return OperationResult(status="accept", payload={"wigame_id": wigame_id, "li_id": li_id, "action": "created"})
 
     def _resolve_targeted_proposition(
         self,
@@ -269,6 +376,14 @@ class SExpressionRuntime:
             if prefixed in self.system.wigames:
                 return prefixed
         return value
+
+    def _parse_axis(self, expr: SExpression, expected_name: str) -> list[str]:
+        if not isinstance(expr, list) or len(expr) < 2:
+            raise ValueError(f"{expected_name} must use `({expected_name} item...)` form")
+        axis_name = self._require_atom(expr[0], expected_name)
+        if axis_name != expected_name:
+            raise ValueError(f"expected `{expected_name}` axis declaration")
+        return [self._require_atom(item, expected_name) for item in expr[1:]]
 
     def _require_atom(self, expr: SExpression, label: str) -> str:
         """Ensures a node is a single atom."""

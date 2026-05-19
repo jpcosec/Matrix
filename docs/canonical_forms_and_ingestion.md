@@ -66,6 +66,11 @@ The initial executable forms are intentionally small:
 - `(assert (R a b))`
 - `(assert wigame:<id> (R a b))`
 - `(return facts symbol:<id-or-sign>)`
+- `(create symbol <symbol-id> <sign>)`
+- `(create relation <relation-id> <name> [flags...])`
+- `(create li <li-id> <relation-id> (axis-a ...) (axis-b ...))`
+- `(create wigame <wigame-id> <li-id> [context:<id>])`
+- `(ingest wigame:<id> (R a b))`
 
 When `(R a b)` fits more than one `WiGame`, the runtime should return an explicit ambiguous result instead of selecting one implicitly.
 

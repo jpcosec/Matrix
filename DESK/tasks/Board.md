@@ -3,7 +3,6 @@
 ## Active Tasks
 
 - **task-core-01-doc-and-legacy-sync** - clean remaining architectural drift around `Si`, `Oi`, and the stale runtime surfaces; see `DESK/tasks/task-core-01-doc-and-legacy-sync.md`
-- **task-runtime-02-s-expression-authoring-surface** - extend the canonical runtime from fact checking to symbol, relation, LiSpace, and WiGame authoring; see `DESK/tasks/task-runtime-02-s-expression-authoring-surface.md`
 - **task-kernel-02-lowering-and-db-spaces** - operationalize `instance` and `equivalent` as kernel lowering primitives over DB-backed symbol spaces; see `DESK/tasks/task-kernel-02-lowering-and-db-spaces.md`
 - **task-rel-02-validation-routing-and-identity** - use relation semantics for sense validation, routing hooks, reduction hooks, and equivalence-aware fact identity; see `DESK/tasks/task-rel-02-validation-routing-and-identity.md`
 - **task-proto-shrdlu-02-lowering-and-dialog** - turn the separate SHRDLU prototype into a real client of the kernel with lowering, ambiguity, and a tiny execution harness; see `DESK/tasks/task-proto-shrdlu-02-lowering-and-dialog.md`

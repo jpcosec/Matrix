@@ -22,6 +22,8 @@ The first direct executable slice should expose this flow through canonical s-ex
 2. `(assert (R a b))` adds the fact only when the target resolves unambiguously
 3. `(assert wigame:<id> (R a b))` bypasses ambiguity by targeting one local game explicitly
 4. `(return facts symbol:<id-or-sign>)` reconstructs matching facts grouped by `WiGame`
+5. `(create symbol ...)`, `(create relation ...)`, `(create li ...)`, and `(create wigame ...)` author the operational surface directly
+6. `(ingest wigame:<id> (R a b))` registers a proposition without forcing a truth assignment yet
 
 If multiple local games accept the same proposition shape, the operation must return an explicit ambiguous result instead of choosing one implicitly.
 

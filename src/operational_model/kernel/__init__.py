@@ -1,5 +1,12 @@
 """Kernel symbol policy for Matrix."""
 
+from .boolean_functions import (
+    FUNCTIONS_BY_ID,
+    FUNCTIONS_BY_NAME,
+    ROW_ORDER,
+    BinaryBooleanFunction,
+    get_boolean_function,
+)
 from .formulas import (
     AndFormula,
     ConstantFormula,
@@ -33,7 +40,10 @@ from .symbol_policy import (
 
 __all__ = [
     "AndFormula",
+    "BinaryBooleanFunction",
     "ConstantFormula",
+    "FUNCTIONS_BY_ID",
+    "FUNCTIONS_BY_NAME",
     "Formula",
     "FormulaClassification",
     "IfFormula",
@@ -43,6 +53,7 @@ __all__ = [
     "NotFormula",
     "OrFormula",
     "RelationAtom",
+    "ROW_ORDER",
     "WI_RELATION_FAMILIES",
     "classify_formula",
     "collect_atoms",
@@ -54,6 +65,7 @@ __all__ = [
     "hypothetical_syllogism",
     "iter_valuations",
     "modus_ponens",
+    "get_boolean_function",
     "parse_formula",
     "simplify_formula",
     "sort_formula_operands",

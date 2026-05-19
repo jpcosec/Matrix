@@ -4,7 +4,6 @@
 
 - **task-core-01-doc-and-legacy-sync** - clean remaining architectural drift around `Si`, `Oi`, and the stale runtime surfaces; see `DESK/tasks/task-core-01-doc-and-legacy-sync.md`
 - **task-bool-01-boolean-algebra-kernel** - add the Boolean-algebra layer for simplification, subsumption, duality, and matrix-friendly reduction over kernel formulas; see `DESK/tasks/task-bool-01-boolean-algebra-kernel.md`
-- **task-bool-02-truth-tables-and-bit-basis** - model the 16 binary Boolean functions explicitly so the kernel has a stable table/bit basis for connective execution and derived inference; see `DESK/tasks/task-bool-02-truth-tables-and-bit-basis.md`
 - **task-bool-03-bitwise-matrix-execution** - lower kernel connectives and reductions to bitwise or matrix-friendly execution primitives for SixVi; see `DESK/tasks/task-bool-03-bitwise-matrix-execution.md`
 - **task-runtime-02-s-expression-authoring-surface** - extend the canonical runtime from fact checking to symbol, relation, LiSpace, and WiGame authoring; see `DESK/tasks/task-runtime-02-s-expression-authoring-surface.md`
 - **task-kernel-02-lowering-and-db-spaces** - operationalize `instance` and `equivalent` as kernel lowering primitives over DB-backed symbol spaces; see `DESK/tasks/task-kernel-02-lowering-and-db-spaces.md`

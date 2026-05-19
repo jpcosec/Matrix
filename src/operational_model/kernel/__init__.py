@@ -17,6 +17,7 @@ from .bitwise_execution import (
     mask_reduce_or,
     normalize_mask_family,
 )
+from .boolean_algebra import canonicalize_formula, clause_subsumes, dual_formula, reduce_cnf_subsumption, reduce_dnf_subsumption
 from .formulas import (
     AndFormula,
     ConstantFormula,
@@ -53,6 +54,8 @@ __all__ = [
     "BinaryBooleanFunction",
     "bit_not",
     "build_truth_table_masks",
+    "canonicalize_formula",
+    "clause_subsumes",
     "ConstantFormula",
     "FUNCTIONS_BY_ID",
     "FUNCTIONS_BY_NAME",
@@ -73,6 +76,7 @@ __all__ = [
     "constant_mask",
     "desugar_if",
     "disjunctive_syllogism",
+    "dual_formula",
     "evaluate_formula",
     "evaluate_formula_mask",
     "formula_precedence",
@@ -85,6 +89,8 @@ __all__ = [
     "get_boolean_function",
     "normalize_mask_family",
     "parse_formula",
+    "reduce_cnf_subsumption",
+    "reduce_dnf_subsumption",
     "simplify_formula",
     "sort_formula_operands",
     "SymbolPolicy",

@@ -16,6 +16,15 @@ The intended flow is:
 
 If the relevant local game or routing path does not exist yet, the system may need to extend its structural space before the fact can be grounded cleanly.
 
+The first direct executable slice should expose this flow through canonical s-expressions only:
+
+1. `(check (R a b))` resolves candidate `WiGame`s without mutating state
+2. `(assert (R a b))` adds the fact only when the target resolves unambiguously
+3. `(assert wigame:<id> (R a b))` bypasses ambiguity by targeting one local game explicitly
+4. `(return facts symbol:<id-or-sign>)` reconstructs matching facts grouped by `WiGame`
+
+If multiple local games accept the same proposition shape, the operation must return an explicit ambiguous result instead of choosing one implicitly.
+
 ## 2. Local evaluation
 
 Local evaluation happens inside a `WiGame`.
@@ -38,9 +47,9 @@ These inferences happen automatically during fact registration in the `LogicalSy
 
 ## 4. Querying
 
-Local search is expressed through `p_i` (`SearchVector`):
+Local search is expressed through `SearchVector`:
 
-- `p_i` lives on the `ejeB` axis of a `WiGame`
+- it lives on the `axis_b` side of a `WiGame`
 - it marks which terms are being requested inside that game
 - it is evaluated against `Vi`, while `Si` filters malformed or semantically invalid positions
 
@@ -55,7 +64,7 @@ Typical uses include:
 When knowledge spans multiple local games, routing proceeds through `Context` and `RoutingProjection`.
 
 - `Context` determines where navigation can go next
-- `r_i` determines how subjects in one game project into another
+- `RoutingProjection` determines how subjects in one game project into another
 
 This supports workflows such as:
 

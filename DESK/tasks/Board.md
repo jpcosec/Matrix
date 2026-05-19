@@ -7,8 +7,13 @@
 ## Deferred / Future
 
 - **Si redesign** — see `docs/proposition_first_architecture.md`
-- **Oi handling** — see `docs/proposition_first_architecture.md`
+- **Remove residual `Oi` references** — `Oi` should not survive as a structural matrix; clean remaining docs and terminology drift, see `docs/proposition_first_architecture.md`
 - **New ingestion CLI** — see `docs/canonical_forms_and_ingestion.md`
+- **Direct s-expression ingestor** — parse canonical proposition text `(R a b)` into proposition-first runtime objects, see `docs/canonical_forms_and_ingestion.md` and `docs/operations.md`
+- **S-expression runtime step 2: registry authoring** — add canonical forms for creating symbols and relations directly from the runtime surface
+- **S-expression runtime step 3: Wi authoring** — add canonical forms for creating `LiSpace` and `WiGame` structures without falling back to YAML editing
+- **S-expression runtime step 4: inference surface** — add canonical `infer` forms over resolved facts and local games
+- **README and runtime surface sync** — fix stale references such as the missing `cli.py` entrypoint and legacy `Oi` wording in `README.md`
 - **Postgres compatibility path** — stay full YAML for the prototype, but keep future storage work compatible with Postgres and graph-oriented extensions
 
 ## Execution Rule

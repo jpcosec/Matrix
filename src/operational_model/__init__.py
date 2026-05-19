@@ -12,9 +12,10 @@ from .core import (
     Thing,
     TruthValue,
 )
+from .language import parse_s_expression
 from .matrices import BooleanMatrix, SiMatrix, ViMatrix
 from .routing import Context, ContextRoute, RoutingProjection, SearchVector
-from .system import LogicalSystem, WiGame
+from .system import LogicalSystem, OperationResult, SExpressionRuntime, WiGame
 
 __all__ = [
     "BooleanMatrix",
@@ -24,10 +25,12 @@ __all__ = [
     "LiSpace",
     "LogicalSystem",
     "Name",
+    "OperationResult",
     "Proposition",
     "Relation",
     "RouteTargetKind",
     "RoutingProjection",
+    "SExpressionRuntime",
     "SearchVector",
     "SenseValue",
     "SiMatrix",
@@ -36,4 +39,5 @@ __all__ = [
     "TruthValue",
     "ViMatrix",
     "WiGame",
+    "parse_s_expression",
 ]

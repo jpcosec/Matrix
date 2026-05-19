@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from typing import Any
 
 
 @dataclass(frozen=True)
@@ -24,3 +25,13 @@ class StatusResult:
     applicable: bool
     reason: str | None = None
     discriminative: bool = True
+
+
+@dataclass(frozen=True)
+class OperationResult:
+    """Stable return shape for canonical s-expression evaluation."""
+
+    status: str
+    sinn: str | None = None
+    payload: Any = None
+    reason: str | None = None

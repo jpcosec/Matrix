@@ -8,10 +8,12 @@ from .operational_model import (
     LiSpace,
     LogicalSystem,
     Name,
+    OperationResult,
     Proposition,
     Relation,
     RouteTargetKind,
     RoutingProjection,
+    SExpressionRuntime,
     SearchVector,
     SenseValue,
     SiMatrix,
@@ -20,6 +22,7 @@ from .operational_model import (
     TruthValue,
     ViMatrix,
     WiGame,
+    parse_s_expression,
 )
 
 __all__ = [
@@ -30,10 +33,12 @@ __all__ = [
     "LiSpace",
     "LogicalSystem",
     "Name",
+    "OperationResult",
     "Proposition",
     "Relation",
     "RouteTargetKind",
     "RoutingProjection",
+    "SExpressionRuntime",
     "SearchVector",
     "SenseValue",
     "SiMatrix",
@@ -42,4 +47,5 @@ __all__ = [
     "TruthValue",
     "ViMatrix",
     "WiGame",
+    "parse_s_expression",
 ]

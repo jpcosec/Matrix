@@ -1,6 +1,8 @@
 """System-level orchestration for the operational model."""
 
 from .logical_system import LogicalSystem
+from .operation_results import OperationResult
+from .s_expression_runtime import SExpressionRuntime
 from .wigame import WiGame
 from .wi_game_queries import (
     get_status,
@@ -19,6 +21,8 @@ from .wi_game_serialization import from_dict, from_yaml, to_dict, to_yaml
 
 __all__ = [
     "LogicalSystem",
+    "OperationResult",
+    "SExpressionRuntime",
     "WiGame",
     "accepts_proposition",
     "add_fact",

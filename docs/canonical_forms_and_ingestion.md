@@ -55,6 +55,20 @@ That means:
 
 The ingestion interface can evolve, but the canonical external proposition form should stay stable.
 
+## First executable language slice
+
+The first direct runtime surface over the active model should use s-expressions only.
+
+The initial executable forms are intentionally small:
+
+- `(check (R a b))`
+- `(check wigame:<id> (R a b))`
+- `(assert (R a b))`
+- `(assert wigame:<id> (R a b))`
+- `(return facts symbol:<id-or-sign>)`
+
+When `(R a b)` fits more than one `WiGame`, the runtime should return an explicit ambiguous result instead of selecting one implicitly.
+
 ## Failure modes
 
 Common ingestion and serialization failures include:

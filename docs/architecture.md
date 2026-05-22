@@ -17,12 +17,12 @@ WiGame (local evaluation)
         |
         +--> Vi truth matrix
         +--> Si sense matrix
-        +--> p_i local search vector
+        +--> SearchVector local query vector
         v
 Context graph
         |
         +--> ContextRoute edges
-        +--> r_i routing projections
+        +--> RoutingProjection edges
         v
 Search, routing, reconstruction, and serialization
 ```
@@ -50,8 +50,8 @@ Search, routing, reconstruction, and serialization
 - `Thing`, `Relation`, `Proposition`, and `Fact` define the logical substrate.
 - `WiGame` is the local evaluative space where propositions can be queried and facts can be assessed.
 - `Context` is the routing layer that organizes how one local space can lead to another.
-- `SearchVector (p_i)` expresses what is being requested inside a `WiGame`.
-- `RoutingProjection (r_i)` expresses how subjects in one game project into another.
+- `SearchVector` expresses what is being requested inside a `WiGame`.
+- `RoutingProjection` expresses how subjects in one game project into another.
 
 ## Evaluation model
 
@@ -69,7 +69,7 @@ Reconstruction moves from a fact-bearing local space toward the structures that 
 1. Identify the relevant fact or proposition.
 2. Search locally within the relevant `WiGame`.
 3. Route across `Context` boundaries when the answer depends on another space.
-4. Project subjects through `r_i` when crossing games.
+4. Project subjects through `RoutingProjection` when crossing games.
 5. Reconstruct a language-facing representation from the linked facts and symbols.
 
 ## Legacy status

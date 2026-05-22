@@ -8,7 +8,7 @@ The project starts from propositions, not from object-property pairs.
 
 - a proposition has the form `(R a b)`
 - `R` is a relation
-- `a` and `b` are things
+- `a` and `b` are contextually admissible terms occupying the two positions of the relation
 - a fact is a proposition with a truth assignment
 
 This keeps the logical form explicit and prevents object/property shortcuts from becoming the hidden architecture.
@@ -36,8 +36,8 @@ This matters because a proposition can be false yet meaningful, or impossible to
 
 - `WiGame` is the local language game where propositions and facts are evaluated.
 - `Context` is the routing structure that can point to `WiGame` instances or other `Context` instances.
-- `SearchVector (p_i)` expresses a local query inside one game.
-- `RoutingProjection (r_i)` expresses how subjects project from one game into another.
+- `SearchVector` expresses a local query inside one game.
+- `RoutingProjection` expresses how subjects project from one game into another.
 
 This split keeps local semantics and cross-space navigation decoupled.
 

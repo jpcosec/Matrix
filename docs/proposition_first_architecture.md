@@ -27,8 +27,8 @@ The active operational model is built around these concepts:
 - `LiSpace`
 - `WiGame`
 - `Context`
-- `SearchVector (p_i)`
-- `RoutingProjection (r_i)`
+- `SearchVector`
+- `RoutingProjection`
 
 These concepts define the base architecture for new work. Legacy abstractions should not be reintroduced unless they are explicitly redesigned in terms of this model.
 

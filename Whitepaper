@@ -10,7 +10,7 @@ Tema: representación semántica, lógica contextual, Wittgenstein, semantic par
 
 Abstract
 
-Este whitepaper propone una arquitectura para representar proposiciones de lenguaje natural como estructuras lógicas operables mediante matrices booleanas. La tesis central es que el significado no debe entenderse como una propiedad interna de los signos lingüísticos, sino como el resultado de una proyección regulada entre signos, símbolos, contextos, hechos y relaciones. Inspirándose en la distinción tractariana entre hechos, cosas, sentido y sinsentido, se propone separar explícitamente dos dimensiones: una matriz de verdad M_i, que indica qué relaciones son verdaderas dentro de un contexto lógico W_i, y una matriz de sentido o aplicabilidad S_i, que indica qué relaciones pueden formularse legítimamente dentro de ese contexto.
+Este whitepaper propone una arquitectura para representar proposiciones de lenguaje natural como estructuras lógicas operables mediante matrices booleanas. La tesis central es que el significado no debe entenderse como una propiedad interna de los signos lingüísticos, sino como el resultado de una proyección regulada entre signos, símbolos, contextos, hechos y relaciones. Inspirándose en la distinción tractariana entre hechos, cosas, sentido y sinsentido, se propone separar explícitamente dos dimensiones: una matriz de verdad V_i, que indica qué proposiciones relacionales son verdaderas dentro de un contexto lógico W_i, y una matriz de sentido o aplicabilidad S_i, que indica qué proposiciones pueden formularse legítimamente dentro de ese contexto.
 
 La propuesta se sitúa entre semantic parsing, representaciones interlingua como UNL, ontologías formales como OWL, construcción de grafos de conocimiento y razonamiento lógico asistido por LLMs. A diferencia de enfoques que traducen directamente lenguaje natural a lógica de primer orden o a grafos semánticos, este marco introduce una capa algebraica posterior: una estructura contextual donde las proposiciones pueden ser evaluadas no solo por su verdad, sino también por su aplicabilidad, ambigüedad, tautologicidad, contradicción operacional y composibilidad con otros espacios lógicos.
 
@@ -176,41 +176,43 @@ W_eventos
 
 Cada contexto W_i tiene un espacio lógico asociado:
 
-L_i = (O_i, P_i, R_i, C_i)
+L_i = (A_i, B_i, R_i, C_i)
 
 donde:
 
-* O_i: conjunto de objetos o entidades.
-* P_i: conjunto de propiedades.
-* R_i: conjunto de relaciones.
+* A_i: dimensión contextual de términos admisibles en la posición a.
+* B_i: dimensión contextual de términos admisibles en la posición b.
+* R_i: conjunto de relaciones admitidas por el contexto.
 * C_i: conjunto de restricciones contextuales o reglas de sentido.
 
-Para un caso simple objeto-propiedad, definimos una matriz:
+La forma relacional general es aRb, o de manera canónica serializable, (R a b).
 
-M_i \in \{0,1\}^{|O_i| \times |P_i|}
+Para una relación binaria dada R y un contexto W_i, definimos una matriz de verdad:
+
+V_i \in \{0,1\}^{|A_i| \times |B_i|}
 
 donde:
 
-M_i[o,p] = 1
+V_i[a,b] = 1
 
-si la propiedad p es verdadera del objeto o en el contexto W_i.
+si la proposición aRb es verdadera dentro del contexto W_i.
 
 Además definimos una matriz de sentido o aplicabilidad:
 
-S_i \in \{0,1\}^{|O_i| \times |P_i|}
+S_i \in \{0,1\}^{|A_i| \times |B_i|}
 
 donde:
 
-S_i[o,p] = 1
+S_i[a,b] = 1
 
-si la pregunta “¿aplica p a o?” está bien formada dentro del contexto W_i.
+si la proposición aRb está bien formada y tiene sentido dentro del contexto W_i.
 
 Esto permite distinguir cuatro casos:
 
-S_i[o,p]	M_i[o,p]	Interpretación
-1	1	La propiedad aplica y es verdadera
-1	0	La propiedad aplica y es falsa
-0	0	La propiedad no aplica; no tiene sentido en el contexto
+S_i[a,b]	V_i[a,b]	Interpretación
+1	1	La proposición tiene sentido y es verdadera
+1	0	La proposición tiene sentido y es falsa
+0	0	La proposición no aplica; no tiene sentido en el contexto
 0	1	Estado inconsistente del sistema
 
 El último caso debería ser imposible si el sistema está bien construido, porque no debería haber verdad donde no hay aplicabilidad.
@@ -223,11 +225,11 @@ Tomemos un contexto:
 
 W_{\text{vegetales}}
 
-con objetos:
+con términos en el eje a:
 
 lechuga, espinaca, zanahoria, apio
 
-y propiedades:
+y términos en el eje b:
 
 vegetal, alimento, hoja, raíz, tallo
 
@@ -249,11 +251,11 @@ espinaca     1    0    0
 zanahoria    0    1    0
 apio         0    0    1
 
-Esta matriz funciona como espacio de indexación. Una consulta como:
+Esta matriz funciona como espacio de indexación para la relación contextual elegida. Una consulta como:
 
 buscar objetos con tallo
 
-puede representarse como vector:
+puede representarse como una selección sobre el eje b:
 
 hoja   0
 raíz   0
@@ -279,19 +281,19 @@ Por ejemplo:
 
 W_i^T \otimes W_i
 
-produce una matriz propiedad-propiedad donde cada celda indica si dos propiedades coocurren en al menos un objeto.
+produce una matriz eje-b por eje-b donde cada celda indica si dos términos de b coocurren en al menos un término de a.
 
 Análogamente:
 
 W_i \otimes W_i^T
 
-produce una matriz objeto-objeto donde cada celda indica si dos objetos comparten fundamentos de verdad.
+produce una matriz eje-a por eje-a donde cada celda indica si dos términos de a comparten fundamentos de verdad.
 
 ⸻
 
 8. Detección de ambigüedad
 
-Dos objetos son indistinguibles dentro de un contexto si comparten exactamente el mismo vector de propiedades.
+Dos términos del eje a son indistinguibles dentro de un contexto si comparten exactamente la misma proyección sobre el eje b.
 
 En el ejemplo:
 
@@ -302,11 +304,11 @@ Ambas son indistinguibles si solo usamos:
 
 hoja, raíz, tallo
 
-El sistema puede detectar esta ambigüedad al comparar vectores de objetos. Si:
+El sistema puede detectar esta ambigüedad al comparar proyecciones de a sobre b. Si:
 
-M_i[o_a, :] = M_i[o_b, :]
+V_i[a_1, :] = V_i[a_2, :]
 
-entonces o_a y o_b no son desambiguables dentro de W_i.
+entonces a_1 y a_2 no son desambiguables dentro de W_i.
 
 La solución es introducir nuevas propiedades discriminativas:
 
@@ -364,11 +366,11 @@ Una proposición es sinnvoll cuando tiene sentido y puede ser evaluada respecto 
 
 Formalmente:
 
-S_i[o,p] = 1
+S_i[a,b] = 1
 
 y luego:
 
-M_i[o,p] \in \{0,1\}
+V_i[a,b] \in \{0,1\}
 
 Ejemplo:
 
@@ -377,7 +379,7 @@ La lechuga tiene hoja.
 Resultado:
 
 S_i[lechuga, hoja] = 1
-M_i[lechuga, hoja] = 1
+V_i[lechuga, hoja] = 1
 
 10.2 Sinnlos
 
@@ -387,9 +389,9 @@ Dos casos relevantes:
 
 Tautología contextual
 
-Una propiedad es tautológica si es verdadera para todos los objetos del contexto:
+Una coordenada del eje b es tautológica si es verdadera para todos los términos pertinentes del eje a:
 
-\forall o \in O_i,\ M_i[o,p] = 1
+\forall a \in A_i,\ V_i[a,b] = 1
 
 Ejemplo:
 
@@ -491,17 +493,17 @@ Definimos la composibilidad contextual como la capacidad de unir, restringir, pr
 
 Sean dos contextos:
 
-W_i = (O_i, P_i, M_i, S_i)
+W_i = (A_i, B_i, V_i, S_i)
 
-W_j = (O_j, P_j, M_j, S_j)
+W_j = (A_j, B_j, V_j, S_j)
 
 Una composición:
 
 W_k = W_i \circ W_j
 
-es válida si existen reglas de alineamiento entre objetos, propiedades o relaciones:
+es válida si existen reglas de alineamiento entre términos, ejes o relaciones:
 
-A_{ij}: O_i \cup P_i \rightarrow O_j \cup P_j
+A_{ij}: A_i \cup B_i \rightarrow A_j \cup B_j
 
 y si la composición preserva aplicabilidad:
 
@@ -574,9 +576,9 @@ Hoja hasTexture some Lisa
 
 13.5 Proyección matricial
 
-M_vegetales[lechuga, hoja] = 1
+V_vegetales[lechuga, hoja] = 1
 S_vegetales[lechuga, hoja] = 1
-M_hojas[lechuga, lisa] = 1
+V_hojas[lechuga, lisa] = 1
 S_hojas[lechuga, lisa] = 1
 
 Cada paso requiere reglas.
@@ -614,13 +616,13 @@ solo aplica si hoja(x)
 
 Regla 5: verdad contextual
 
-M_i[o,p] = 1
-si el hecho está validado en el contexto W_i
+V_i[a,b] = 1
+si el hecho relacional aRb está validado en el contexto W_i
 
 Regla 6: partición contextual
 
-Si una propiedad p introduce un subdominio especializado,
-crear o activar W_p.
+Si un término o relación introduce un subdominio especializado,
+crear o activar un subcontexto W_k pertinente.
 
 Ejemplo:
 
@@ -632,7 +634,7 @@ función → W_código
 Regla 7: composición
 
 W_i y W_j pueden componerse si existe una relación puente tipada
-entre sus objetos, propiedades o eventos.
+entre sus términos, ejes o eventos.
 
 ⸻
 
@@ -862,9 +864,9 @@ razon: "La propiedad rugosa aplicada a hoja presupone que el objeto tenga hoja."
 
 21. Formalización de consultas
 
-Una consulta puede representarse como vector:
+Una consulta puede representarse como un vector de búsqueda sobre el eje b:
 
-v_q \in \{0,1\}^{|P_i|}
+v_q \in \{0,1\}^{|B_i|}
 
 Por ejemplo:
 
@@ -874,23 +876,23 @@ v_q = [0,0,1]
 
 La recuperación se calcula como:
 
-r = M_i \otimes v_q
+r = V_i \otimes v_q
 
-Si usamos búsqueda conjuntiva estricta, no basta el OR booleano. Necesitamos verificar que todas las propiedades requeridas estén presentes:
+Si usamos búsqueda conjuntiva estricta, no basta el OR booleano. Necesitamos verificar que todos los términos requeridos sobre el eje b estén presentes:
 
-r[o] = \bigwedge_{p \in Q} M_i[o,p]
+r[a] = \bigwedge_{b \in Q} V_i[a,b]
 
 Para búsqueda con sentido:
 
-r_S[o] = \bigwedge_{p \in Q} S_i[o,p]
+r_S[a] = \bigwedge_{b \in Q} S_i[a,b]
 
-La consulta es válida para un objeto solo si:
+La consulta es válida para un término del eje a solo si:
 
-r_S[o] = 1
+r_S[a] = 1
 
 y satisfecha si además:
 
-r_M[o] = 1
+r[a] = 1
 
 Esto separa:
 
@@ -1066,7 +1068,7 @@ Esto es especialmente relevante para feedback didáctico.
 
 25.4 Verificación de código
 
-Las relaciones no tienen que ser objeto-propiedad. También pueden ser:
+Las relaciones no tienen que reducirse al caso monádico modelado como eje-a por eje-b. También pueden ser:
 
 función llama función
 módulo depende de módulo
@@ -1085,11 +1087,11 @@ Ejemplo:
 
 puede mapearse directamente a una coordenada:
 
-M[lettuce, leaf] = 1
+V_{\text{has-property}}[lettuce, leaf] = 1
 
-o a una relación ternaria:
+o, en notación proposicional más directa:
 
-R_has_property[lettuce, leaf] = 1
+lettuce\;has\_property\;leaf
 
 Esto sugiere que Lisp o lenguajes AST-like pueden funcionar como capa de transición entre lenguaje natural y matrices.
 
@@ -1132,9 +1134,9 @@ en vez de solo:
 
 27. Extensión: lógica multivaluada
 
-Una versión más robusta puede reemplazar M_i por una matriz multivaluada:
+Una versión más robusta puede reemplazar V_i por una matriz multivaluada:
 
-M_i[o,p] \in \{T, F, U, N\}
+V_i[a,b] \in \{T, F, U, N\}
 
 donde:
 
@@ -1143,10 +1145,10 @@ F = falso
 U = desconocido
 N = no aplicable
 
-Pero la propuesta inicial mantiene M_i y S_i separados porque esa separación es conceptualmente limpia:
+Pero la propuesta inicial mantiene V_i y S_i separados porque esa separación es conceptualmente limpia:
 
 S_i decide si la pregunta pertenece al espacio lógico.
-M_i decide si la proposición es verdadera dentro de ese espacio.
+V_i decide si la proposición es verdadera dentro de ese espacio.
 
 ⸻
 
@@ -1154,14 +1156,14 @@ M_i decide si la proposición es verdadera dentro de ese espacio.
 
 Esta sección formaliza la evolución de las "Matrices de Sentido" hacia el motor **MEEL (Matrix Engine for Evolutionary Logic)** bajo la arquitectura TKM.
 
-28.1 Los 4 Átomos Estructurales (Máscaras)
+28.1 Átomos estructurales y proveniencia
 
-Para cada contexto $W_i$, el motor proyecta la realidad sobre cuatro dimensiones matriciales:
+Para cada contexto $W_i$, el motor proyecta la realidad sobre tres dimensiones matriciales y una capa de proveniencia asociada al hecho:
 
-*   **$V_i$ (Truth Mask)**: Representa el valor de verdad factual $\{0, 1\}$.
-*   **$S_i$ (Sense Mask)**: Determina la aplicabilidad lógica. $S_i[o,p]=0$ implica que la relación es *Unsinnig* (absurda).
-*   **$O_i$ (Observed Mask)**: Registra si el hecho ha sido observado explícitamente o inferido.
-*   **$D_i$ (Discriminative Mask)**: Identifica si la propiedad permite distinguir objetos. Si $D_i=0$, la proposición es *Sinnlos* (tautología/contradicción).
+*   **$V_i$ (Truth Mask)**: Representa el valor de verdad factual $\{0, 1\}$ sobre coordenadas relacionales admisibles.
+*   **$S_i$ (Sense Mask)**: Determina la aplicabilidad lógica. $S_i[a,b]=0$ implica que la proposición relacional no pertenece al espacio de sentido del contexto.
+*   **$D_i$ (Discriminative Mask)**: Identifica si una coordenada o patrón relacional permite distinguir términos. Si $D_i=0$, la proposición es *Sinnlos* en el sentido operativo.
+*   **Proveniencia del hecho**: La observación, fuente, derivación o confianza no vive en una máscara separada, sino como metadata del hecho evaluable.
 
 28.2 Energía de Información $E(R)$
 
@@ -1175,7 +1177,7 @@ Donde $C(M)$ es la conectividad, $L$ la verosimilitud, $Q$ la calidad del ground
 
 El motor utiliza **JAX** para realizar operaciones tensoriales sobre el espacio lógico:
 
-*   **Colapso Dimensional**: Proyecta la matriz rectangular Objeto-Propiedad $V_i$ en una matriz cuadrada de similitud $W = V \otimes V^T$.
+*   **Colapso Dimensional**: Proyecta una matriz rectangular eje-a por eje-b $V_i$ en una matriz cuadrada de similitud $W = V \otimes V^T$.
 *   **Razonamiento Recursivo**: Mediante la potencia booleana $W^{k+1} = W^k \otimes W^k$, el sistema realiza un enrutamiento jerárquico (DFA multi-hop) para encontrar conexiones lógicas no evidentes a través de puentes y contextos.
 
 28.4 Orquestación LLM y Autoplasticidad (M vs G)

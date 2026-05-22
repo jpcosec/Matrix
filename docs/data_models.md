@@ -9,7 +9,7 @@ This repository now distinguishes between local language games and higher-order 
 - A fact is a proposition with a truth assignment.
 - A `WiGame` is a local language game where propositions are evaluated.
 - A `Context` is a routing node that can point to `WiGame` instances or to other `Context` instances.
-- Each `WiGame` serializes directly as `ejeA`, `ejeB`, `relacion`, `contexto`, `Vi`, and `Si`.
+- Each `WiGame` currently serializes with YAML keys such as `ejeA`, `ejeB`, `relacion`, `contexto`, `Vi`, and `Si`, but the active conceptual model is `axis_a`, `axis_b`, and relation-oriented propositions.
 
 ## `Name`
 
@@ -53,9 +53,23 @@ Fields:
 
 - `relation_id`
 - `name`
-- logical properties such as `transitive`, `associative`, `distributive`, `commutative`
+- `algebra` - explicit algebraic semantics for the relation
+- compatibility flags such as `transitive`, `associative`, `distributive`, `commutative`
 
 Relations are not uniform labels; each one can declare its own semantics.
+
+## `RelationAlgebra`
+
+`RelationAlgebra` is the explicit operational profile attached to a `Relation`.
+
+Fields:
+
+- `transitive`
+- `associative`
+- `distributive`
+- `commutative`
+
+The current algebra engine reads from this profile directly when deciding whether a relation supports symmetric or transitive inference.
 
 ## `Proposition`
 
@@ -111,18 +125,18 @@ It provides indexed access, row/column extraction, and direct serialization.
 
 `ViMatrix` inherits from `BooleanMatrix` and stores truth values for a `WiGame`.
 
-- rows correspond to `ejeA`
-- columns correspond to `ejeB`
+- rows correspond to `axis_a`
+- columns correspond to `axis_b`
 - cells store `true`, `false`, or `unknown`
 
-`ViMatrix` also exposes tautology detection and subject matching against `p_i`.
+`ViMatrix` also exposes tautology detection and subject matching against `SearchVector` queries.
 
 ## `SiMatrix`
 
 `SiMatrix` inherits from `BooleanMatrix` and stores sense values for a `WiGame`.
 
-- rows correspond to `ejeA`
-- columns correspond to `ejeB`
+- rows correspond to `axis_a`
+- columns correspond to `axis_b`
 - cells store `sinnvoll`, `sinnlos`, or `unsinnig`
 
 `SiMatrix` is the operational source for checking whether a game remains pure.
@@ -142,7 +156,7 @@ Fields:
 
 It exposes:
 
-- `search(p_i)` -> local search over `Vi` constrained by `Si`
+- `search(query)` -> local search over `Vi` constrained by `Si`
 - `is_pure()` -> whether the game avoids `unsinnig`
 - `tautological_columns()` -> dimensions that do not discriminate locally
 - `to_dict()` / `to_yaml()` -> direct serialization of the game and its matrices
@@ -153,15 +167,15 @@ By default:
 - declared but unevaluated positions remain `sinnlos`
 - malformed propositions are `unsinnig`
 
-## `SearchVector (p_i)`
+## `SearchVector`
 
 `SearchVector` is the query vector inside a `WiGame`.
 
-- it lives on the `ejeB` axis of a game
+- it lives on the `axis_b` side of a game
 - it marks which terms are being requested
 - it is evaluated against `Vi`, while `Si` prevents malformed matches
 
-Operationally, `p_i` answers: what am I looking for inside this game?
+Operationally, `SearchVector` answers: what am I looking for inside this game?
 
 ## `ContextRoute`
 
@@ -189,7 +203,7 @@ This makes the hierarchy recursive:
 
 `Context` is responsible for semantic navigation and hierarchical descent toward more specific language games.
 
-## `RoutingProjection (r_i)`
+## `RoutingProjection`
 
 `RoutingProjection` inherits from `BooleanMatrix` and represents a projection between two `WiGame` spaces.
 
@@ -201,7 +215,7 @@ This is the concrete operator used for crossings such as:
 
 - `W_animales_es_propiedades x r_proyeccion_animales_caninos x W_caninos_es_propiedades`
 
-Operationally, `r_i` answers: how do the subjects of one game project into another?
+Operationally, `RoutingProjection` answers: how do the subjects of one game project into another?
 
 ## `LogicalSystem`
 
@@ -219,11 +233,11 @@ It registers and links:
 - `RoutingProjection`
 
 When a fact is added through the system, symbol support is updated automatically so that symbols remain grounded in the evolving set of facts.
-The system also exposes local search and cross-search using `p_i` and `r_i`.
+The system also exposes local search and cross-search using `SearchVector` and `RoutingProjection`.
 
 ## Design consequence
 
-With this model, the system no longer starts from `object -> property`. It starts from:
+With this model, the system no longer starts from `object -> property`. It starts from relational propositions over contextual axes:
 
 - `Thing`
 - `Relation`

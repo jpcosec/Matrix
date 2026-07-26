@@ -13,6 +13,9 @@ This directory documents the stable architecture and engineering rules of Matrix
 - [Data Models](./data_models.md) - the primary structures exposed by the operational model
 - [Kernel Symbol Policy](./kernel_symbol_policy.md) - first stable distinction between kernel symbols and Wi-level relations
 - [Operations](./operations.md) - ingestion, local evaluation, routing, and reconstruction workflows
+- [Language to Matrix Ingestion Pipeline](./language_to_matrix_pipeline.md) - end-to-end 5-stage transformation from natural language text to Boolean matrix coordinates
+- [Pure Boolean Matrix Architecture](./pure_boolean_matrix_architecture.md) - specification for matrix-first inference and bitwise execution
+- [SHRDLU Prototype Architecture](./shrdlu_prototype.md) - controlled English parser, semantic frames, and lowering to Matrix S-Expressions
 - [Storage Boundary](./storage_boundary.md) - persistence invariants between the YAML prototype and future DB-backed symbol spaces
 
 ## Related repository resources

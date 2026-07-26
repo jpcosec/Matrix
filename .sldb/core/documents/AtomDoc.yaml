@@ -1,0 +1,722 @@
+documents:
+- name: MEEL
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/MEEL.md
+  hash_c: e050cbe3f8df075b1b0f471bdfd56029a7ea09fb644c12fb52723ca956e7fb0c
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Clausura_Transitiva_Matricial
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Clausura_Transitiva_Matricial.md
+  hash_c: ebfccf6176045775508cce1afbfc6cecd53567187c7d0d22f538bba90524ba1d
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Operaciones_MEEL
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Operaciones_MEEL.md
+  hash_c: 640ea611871758850494fdee2097e2907bc0caab25e85dc3dc3f6a5f75042f23
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Inferencia_Deductiva_Matricial
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Inferencia_Deductiva_Matricial.md
+  hash_c: fefb796e18b8e9070bb2ae41455b371970589e29ba7a076e6b80c3e5f54bb187
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Eje_E_Implementacion_MEEL_y_Compilador_Matricial
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Eje_E_Implementacion_MEEL_y_Compilador_Matricial.md
+  hash_c: c49eccd0d162c44c0946065c8a4210a721820df6dc2cf54575973edd88b7ad1c
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Compilador_Matricial_Reglas
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Compilador_Matricial_Reglas.md
+  hash_c: 95089f380b720b1b2515c50ba39914011bd5aa20bddd847c283bd92d495d2470
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Politica_Simbolos_Kernel
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Politica_Simbolos_Kernel.md
+  hash_c: 1c89c0bce29992414370efae9e75f59cd1f0d22976ce8d5c59d1ff6fcb5c36af
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Mascaras_Estructurales
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Mascaras_Estructurales.md
+  hash_c: d97804dfcbec491b64217a384add632c726cd5b5e0b8b86d535eaf931789c445
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: W_Operativo
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/W_Operativo.md
+  hash_c: a25515422636cdf043ac0c6a9055a88ad46bebf7756aa2081342eb58ad2a49ef
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Capa_Verdad_Vi
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Capa_Verdad_Vi.md
+  hash_c: 9f3502996cd2c0285cbee5b6e024b8bc6579622e4dc4f3722fe58a94279f0cdb
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Evolucion_y_Versionado_Contextos
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Evolucion_y_Versionado_Contextos.md
+  hash_c: abaf984bc375c684f004bfe556d2d82fb5d7d8e44f3fc703a701d92d65b909b0
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Capa_Sentido_Si
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Capa_Sentido_Si.md
+  hash_c: c73470c9e401e09755c1ae295b57a17ffc88f62ab8583b2876e6200963c0ce9b
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Grafo_Indice_G
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Grafo_Indice_G.md
+  hash_c: d8827667c0467a5c547a6f66145de1168097f01dd68c2f804f82d559c2b04c34
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Matrices_Puras
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Matrices_Puras.md
+  hash_c: 95380b3cb57a1f0806de03daf3682357bee2ede9aea4667380a35b007f6cbad2
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Enrutamiento_Jerarquico
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Enrutamiento_Jerarquico.md
+  hash_c: 051cc3e5e4a34c51ce7d350148f163cdd5b93e2a5bdb912d7d2217a90cbc2139
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Construccion_Tensor_Jerarquico
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Construccion_Tensor_Jerarquico.md
+  hash_c: 7e627d91d05cee2170cddb91fe03f2a3c30a29ca121817078bf620a4316b83bb
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Tensor_Jerarquico_NxNxC
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Tensor_Jerarquico_NxNxC.md
+  hash_c: c53d8750386305f99ce5da7ed26282224c0b4bba1aa1c1d515913806d3267c3a
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Procedencia_y_Evidencia
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Procedencia_y_Evidencia.md
+  hash_c: 01bebeae07a51e8b58fde538c9b9ed1cc3ff4f82f31c2fcce76470a33277c1fc
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Representacion_AST_y_Algebra_Booleana
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Representacion_AST_y_Algebra_Booleana.md
+  hash_c: 56fb88a6501c3dffa9b27bffbc7810ad0a27f4ed39c80a903b011374088d2b5c
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Algoritmo_Minimizacion_ER
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Algoritmo_Minimizacion_ER.md
+  hash_c: eaca11638e5440de04ce93f66eb542cba1c511edf690170a6aea205834f7d28e
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Roadmap_Evolutivo_Fases
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Roadmap_Evolutivo_Fases.md
+  hash_c: 76a93e1aab5e8ccf21c89372becbdea5a4dd3fd5d384a796eeca5ddcebd8f865
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Reduccion_Descriptiva
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Reduccion_Descriptiva.md
+  hash_c: 4c48d4f2319337bf00915f32acc45408f199b6b49ffe1eeb5235d65303383401
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Acoplamiento_Neuro_Estocastico_Simbolico
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Acoplamiento_Neuro_Estocastico_Simbolico.md
+  hash_c: 36fbb4f5f42ac451746f6c8ef2e1ce16cfeb0c9ef5b10dcb6c3304af086913b4
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Seguridad_Pseudo_Proposicional
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Seguridad_Pseudo_Proposicional.md
+  hash_c: fe91852d666d79b5b49da7e84e327af154de8dbe8b80bb99f2fbe412be00d8a3
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Omnirepresentacion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Omnirepresentacion.md
+  hash_c: 4fca3ae8857cabf741281c90652ec757b8b0166d46e9830d625b4ad0178699bf
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Energia_Informacion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Energia_Informacion.md
+  hash_c: b45448032a9f793b922c418acb2f31b8ed919c4e8d2648367ea189ddeaab394f
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Gramatica_Universal_UNL
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Gramatica_Universal_UNL.md
+  hash_c: 54d47573ff84077a409131631e8d1f7255cf350d2a7ffb72f87efb5078e57bfb
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Eje_B_Escalabilidad_Minimizacion_ER_y_Tensor_Jerarquico
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Eje_B_Escalabilidad_Minimizacion_ER_y_Tensor_Jerarquico.md
+  hash_c: bcca394978027e7127d0b34475c900a7dc465910b7cfdeb22760520152ec03a9
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Mascara_Sentido_en_Mecanismos_Atencion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Mascara_Sentido_en_Mecanismos_Atencion.md
+  hash_c: df5f8ac656085b3b88c635aee0928d9e4f5bc63902ecae4a40e1cab24a850b0b
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Sistema_Tipos_Ti
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Sistema_Tipos_Ti.md
+  hash_c: d7dbb401b294b17a9ce7e907018527abac17f3c9f2a0b4b0e9dd11420ebcc76e
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Manejo_de_Contradicciones
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Manejo_de_Contradicciones.md
+  hash_c: e7e7cd2b9bad64fa107e4b2aaa3a40e6564bd4655bbe189c5faccf1f7ad5dd10
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: S_Expressions
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/S_Expressions.md
+  hash_c: 34b144b45a88ffacc93a129476aa361eac8fa1c690ab1548fd364e06fda4e904
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Prototipo_SHRDLU
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Prototipo_SHRDLU.md
+  hash_c: c07eefe3ff40a090be52332308c7e4914cca545b53b160814cfe5545c817e36c
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Pipeline_Ingesta_Lenguaje_Matrix
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Pipeline_Ingesta_Lenguaje_Matrix.md
+  hash_c: 99328be968528678e08de7040e39f37aa665bc775366defd285eb674ce99ee80
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Anclaje_Simbolos_Grounding
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Anclaje_Simbolos_Grounding.md
+  hash_c: f2957b2f570788ce0c4c67cc9c2118e02b566dcf0c4216d8dad809705be08548
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Prototipo_Graphlang
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Prototipo_Graphlang.md
+  hash_c: ffb5bef95678aa448a9f4236d8c7672d0433d16e1b34e679c5e110d48865cbf5
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Eje_C_Mecanismo_Conexion_LLM_y_SHRDLU
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Eje_C_Mecanismo_Conexion_LLM_y_SHRDLU.md
+  hash_c: 10119ad1c0b00f3ffa6b73160778408c902a8dda2773004b9845f51c364ce866
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Parser_OWL2Matrix
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Parser_OWL2Matrix.md
+  hash_c: 7dd17ecab92e3b5562d6ee2ef4e5638a538b79e8d8bfc18c98b7b97e9787def7
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Vectorizacion_Bitwise_Densa
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Vectorizacion_Bitwise_Densa.md
+  hash_c: 676e5839e16ffe27aa2466c5e03ddaec4db98c4179926493a74de6332406a8aa
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Diccionario_Bits_y_Codificacion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Diccionario_Bits_y_Codificacion.md
+  hash_c: a9e82a55d61795c99f28b008de69cfe769486f8c024f98f1015e3dbf0c10a7b8
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Tipado_Typestate
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Tipado_Typestate.md
+  hash_c: 32484ff88c4e9fd5987c1c76a8fae5692c78059e5c73b396ab701258f31a67e4
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Eje_D_Diferenciacion_OWL_KGs_y_Vectorizacion_Bitwise
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Eje_D_Diferenciacion_OWL_KGs_y_Vectorizacion_Bitwise.md
+  hash_c: bd602026fffc8d0cc5309eb9b829f712356a175ac1006af14a40d7b7f258739b
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Estados_Verdad_Epistemicos_Semanticos
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Estados_Verdad_Epistemicos_Semanticos.md
+  hash_c: 03a5484663c503214ae5061c0769801fe1b82029ba9a15e2a6c32a6f3d903060
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Modelos_Mundo_Continuo_Lyre
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Modelos_Mundo_Continuo_Lyre.md
+  hash_c: 4c3eb1901bdbbb9f2d35805eeaa49689bad65e0cf59c7ac9bec1a37468dfdda9
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Triparticion_Contextual
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Triparticion_Contextual.md
+  hash_c: e64b9bd29d28b3ba314b02f08dd3dbbc5f5328c1b387aa92f0ca1e1258f88134
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Contexto_Logico
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Contexto_Logico.md
+  hash_c: ff627825290fd0e9693f4af37502a0bfc9f5ed32d984548f5c4d44e3213e8bbd
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Refactorizacion_SOTA_Paper_NeurIPS
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Refactorizacion_SOTA_Paper_NeurIPS.md
+  hash_c: 890d7639fc28ae9c0312994c8b9c6195ece397afb307732f378d29c38f1ad669
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Prueba_Necesidad_Representacion_Simbolica_Discreta
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Prueba_Necesidad_Representacion_Simbolica_Discreta.md
+  hash_c: 286a445ec4840cbcb0b4331dd8bded1afdfdcd18d5ba00fdf011851eb0d7bb18
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Arquitectura_Neuro_Estocastica
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Arquitectura_Neuro_Estocastica.md
+  hash_c: b935062a2446e22d2dab26a3f9b78f24cc87368921fd8e50b6c90f5bc0a44060
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Discretizacion_Logica_vs_Continuo
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Discretizacion_Logica_vs_Continuo.md
+  hash_c: 7562e00e0ed1799e59fe1ad1a639d27b902ae55b6fa9e309acc30a527f9bd316
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Taxonomia_SOTA_Alucinaciones
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Taxonomia_SOTA_Alucinaciones.md
+  hash_c: 2245dae045bc2861ef0c026547bfac973b23e0f88d09d29de237b4884b90b5a3
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Eje_A_Justificacion_Matematica_Limites_Continuos
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Eje_A_Justificacion_Matematica_Limites_Continuos.md
+  hash_c: 2661749d57adc02be47dd42187a44500c83b0c873436348a3b8231cfeb700ed5
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Signo_vs_Simbolo
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Signo_vs_Simbolo.md
+  hash_c: 9395abb055b072115acd3c959019e07e9cba48ade460b487b45c761a7a9643fb
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Principio_de_Minimalidad
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Principio_de_Minimalidad.md
+  hash_c: c0f9b24bcb7847cd800647f1c4c3f50beb8d96e9ac44ad9d0c654ee75b04689c
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Categorias_Sentido
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Categorias_Sentido.md
+  hash_c: 01d4a6411ad58f78e248630d5171506ede9635d9dd136e294bedb2e7bfbfe4bf
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Eje_F_Auditoria_Terminologica_Unsinnig
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Eje_F_Auditoria_Terminologica_Unsinnig.md
+  hash_c: 00db0306f04af5d0f9eebf37a93c2f215e4daf372ce7743cc9f699f740af45ce
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Triparticion_Wittgensteiniana_Sinnvoll_Sinnlos_Unsinnig
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Triparticion_Wittgensteiniana_Sinnvoll_Sinnlos_Unsinnig.md
+  hash_c: 03060b822b7623035f0dd74151c95651960c30d7ae2e9f9b4a0b4cf49447f822
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Origen_Nombre_Matrix
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Origen_Nombre_Matrix.md
+  hash_c: 306e2925b904bb09a3a4409d1a5fb4a2bb00e1f9badfa39c5e24355aaff1f923
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Representacion_Flotante
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Representacion_Flotante.md
+  hash_c: f45e5b3b138ba934925a9c8bcd24e0f26ea4de0bf734e8a6325e86381ea3ba4f
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Tractatus
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Tractatus.md
+  hash_c: 4f345e618996723ad28260eabf180d1298969e36676c864104f8fa7c760da8a5
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Modelo_SMG
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Modelo_SMG.md
+  hash_c: 63e3332ec2dcc75042ff211c6f7df12259ab3479f218aabb261c3cde4222e95e
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Infidelidad_del_Razonamiento_en_Prosa_y_la_Ilusion_de_Pensar
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Infidelidad_del_Razonamiento_en_Prosa_y_la_Ilusion_de_Pensar.md
+  hash_c: bdebf674487c70c437c3f2b7be0630598e8eb35cf61e77422268547bc1cec34f
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Probing_Latente_y_Decodificacion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Probing_Latente_y_Decodificacion.md
+  hash_c: fb2e44653ba56ded39c410e81065824373739f44acb86d8b0f844f339d8f852e
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Incongruencia_Decodificacion_Estocastica_vs_Conocimiento_Latente
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Incongruencia_Decodificacion_Estocastica_vs_Conocimiento_Latente.md
+  hash_c: dda663f6aa021889c052f38664560d32e05863dc3eb54725de06a047e599eafd
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Ausencia_de_Senal_de_Fallo_Determinista
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Ausencia_de_Senal_de_Fallo_Determinista.md
+  hash_c: ea56421cf26ca1da6950e5e51e8260576e06125706bc0d20e91d181ad972cb19
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Comparacion_Arquitecturas_JEPA
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Comparacion_Arquitecturas_JEPA.md
+  hash_c: c0a54d3fdb1f409014ac6fdb08d21fca33e4e669cf272eb00d4f74330b2a595a
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Semantica_Formal_Neuro_Simbolica_vs_Opacidad_Neuronal
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Semantica_Formal_Neuro_Simbolica_vs_Opacidad_Neuronal.md
+  hash_c: 86bb1faabfad3f7fee5539aa44b1fba2f4412c439acdf18d14f75cf068d930e4
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Falla_de_Representabilidad
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Falla_de_Representabilidad.md
+  hash_c: 8c04541795cbcb355a5d678ec2cc1dbb3790dd90fde14fa80ee9bcf7ea7c89ea
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Dicotomia_HK_Minus_vs_HK_Plus
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Dicotomia_HK_Minus_vs_HK_Plus.md
+  hash_c: 195c1e18daf3e43e535f326f50730b4a7870f0240b3e75d7e22667fbbc184c00
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Alucinaciones_Multi_Agente_y_Context_Drift
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Alucinaciones_Multi_Agente_y_Context_Drift.md
+  hash_c: f542ddd75502dace896a54506e00c41a7780892096e8fb98388e7ab479b9143c
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Evaluacion_Epistemica_FActScore_HaluEval
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Evaluacion_Epistemica_FActScore_HaluEval.md
+  hash_c: 9e4e6b3b84c974a8576ad0c207f1d3376c4142f4b68f7e0db050b5a76c7a4e36
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Ilusion_de_la_Autocorreccion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Ilusion_de_la_Autocorreccion.md
+  hash_c: 07827feffba7d4925e787c114ffa19273f0bf9de8fd11c10bbc11c4a8ffc474b
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Ley_del_Ocultamiento_del_Conocimiento_Knowledge_Overshadowing
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Ley_del_Ocultamiento_del_Conocimiento_Knowledge_Overshadowing.md
+  hash_c: e1065d6df0e4ba7be2ed925a0a6afdf6b452eb686bf5ea65a5b37d65aac5c7ff
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Causas_Estructurales_y_de_Entrenamiento
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Causas_Estructurales_y_de_Entrenamiento.md
+  hash_c: d6db0a93ee4603c27416b74c249c13e8f825fe12f6ba72c15501fd52f2cbfc2a
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Sicofancia_y_Problemas_del_RLHF
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Sicofancia_y_Problemas_del_RLHF.md
+  hash_c: 925f94036ab9775df5b3e7a4b4721b6a55a395563c383c29ccd0058619a0a7e0
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Alucinaciones_Inducidas_por_RAG_y_Conflicto_de_Conocimiento
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Alucinaciones_Inducidas_por_RAG_y_Conflicto_de_Conocimiento.md
+  hash_c: c76c1321eb81d2fc6f339a62cd536baedef0123d182c2ae8594b9c54a4c81a85
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Origen_Geometrico_y_Espacio_Vectorial
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Origen_Geometrico_y_Espacio_Vectorial.md
+  hash_c: 292b040ddc340c3860d6edfe5e6380950fe9288623e56261522fe5f39497f432
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Entropia_Semantica
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Entropia_Semantica.md
+  hash_c: cc15c0fc60ab6170c232805af5d4ad372280831af118832ade46428f8605c943
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Diferenciacion_Factualidad_Conocimiento_Alucinacion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Diferenciacion_Factualidad_Conocimiento_Alucinacion.md
+  hash_c: b64ce8493a765fe5d4a95e8b0600441768bb37a988ebc3d7f6d48ef96ebbb8cb
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Demostracion_Dominio_Culinario_Ragout
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Dominio_Culinario/Demostracion_Dominio_Culinario_Ragout.md
+  hash_c: bfb71f92134477064f5fc56d1242bc48b3ad6fe58101a05bd4d77cc85b94b47c
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Regla_Dont_Care
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Regla_Dont_Care.md
+  hash_c: 5e5a555a49eef0db9a0b551fb278257ef0d212535a962c670317ef8721bec54b
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Algebra_Booleana
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Algebra_Booleana.md
+  hash_c: fa75133cbe5781c2ce2c19b384eb3a948c337449af2edab1bf502251a1f1000e
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Multiplicacion_Matricial_Booleana_y_Clausura_Transitiva
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Multiplicacion_Matricial_Booleana_y_Clausura_Transitiva.md
+  hash_c: 54f23042fd342c2c059df8383c0b1e89106337b4b52793209c2e3128281a42a1
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Contrastes_XOR_Booleanos
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Contrastes_XOR_Booleanos.md
+  hash_c: 964f30234c72c8ae3f0e3620c8dd197a9721b1d1677ae0cced5a8b7394db9b00
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Mapas_Karnaugh
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Mapas_Karnaugh.md
+  hash_c: 72887b5a3b45977a0a99e520fe623eb7c70f2f4a53f7ed626aa08169aab8b26b
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Maquina_Estados_DFA
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Maquina_Estados_DFA.md
+  hash_c: 1680d9c06e2b5a57351922a60f86f836e317c7e7c8ef3d00742b7301a685d462
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Medida_y_Semianillos_Booleanos_vs_Probabilistas
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Medida_y_Semianillos_Booleanos_vs_Probabilistas.md
+  hash_c: ac121238604d7f36cfc3b8a64fcdb9cb4bc8620bcebcf8b3e548b488a7eacd51
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Colapso_Dimensional
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Colapso_Dimensional.md
+  hash_c: 44998ffdb95022dbadd96b323b1eebab08239f45f7ac14a3d438daa637a0e4fd
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Fenomeno_de_Gibbs_en_Funciones_Indicadoras
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Fenomeno_de_Gibbs_en_Funciones_Indicadoras.md
+  hash_c: fc2687302175b9af6b49c0f6cc15f2d142f06fcd7c7b595d060335b7005e248f
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Geometria_de_Politopos_y_Ancho_Acotado_Hanin
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Geometria_de_Politopos_y_Ancho_Acotado_Hanin.md
+  hash_c: 964cfc2dd288b7d6e42eaf087733aeac370775e280af8105de8218c36e034d69
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Expansion_Submatricial_Recursiva
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Expansion_Submatricial_Recursiva.md
+  hash_c: 3077a05d7b21e0a79949943ee996cf0b1749b2a81ff87f9dad4ce302ea88e132
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Funcion_Objetivo_Seleccion_Dimensiones
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Funcion_Objetivo_Seleccion_Dimensiones.md
+  hash_c: 657f94cbf0109a75ef580b6e1982ef13159384d629cd27b0093c07784c8ad218
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Juego_de_Desambiguacion
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Juego_de_Desambiguacion.md
+  hash_c: f718ed2042fe36aa7286d27c4c6b00565946cd210dfabd2313c055ed4f06bd26
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Matriz_por_Bloques
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Matriz_por_Bloques.md
+  hash_c: fa0f9b24de0a4c956d5a53b8a1eb12405eceb3169e209710f59139d50125b24e
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Representacion_Plana_vs_Tensorial
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Representacion_Plana_vs_Tensorial.md
+  hash_c: 2b1655f7344de17bb7c97cd59f56b09ebabcb32e05703f58c2ea98083c95a975
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Teorema_Suboptimizabilidad_Diagonal
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Teorema_Suboptimizabilidad_Diagonal.md
+  hash_c: 3de5e3be74d7c02dc567b8964f619943f47d18094aa03b42916811f5919a47ad
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Hecho_Atomico_CDV
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Hecho_Atomico_CDV.md
+  hash_c: 2e94b8630f0d4ccd08e38a958d77c10edf0a51dbf1ea235e424547d0ba952590
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Geometria_de_Embeddings_y_Canales_Semanticos
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Geometria_de_Embeddings_y_Canales_Semanticos.md
+  hash_c: 9d0d25b87db489dff8d444a06e692a70ca1569ab03820172391b29302370c6b2
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Matrices_y_Tensores
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Matrices_y_Tensores.md
+  hash_c: 27b598522c254106f9e6cdf4e01b89c75a617502371df96f673e3ebfddbd367b
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Demostracion_Ontologias_OWL_Semantic_Web
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Ontologias_OWL_Semantic_Web.md
+  hash_c: bd408b0e44cd75ed0f1e26f8509c530053e905b269b408e1e53483f26408a785
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Demostracion_Mundo_Bloques_SHRDLU
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Mundo_Bloques_SHRDLU.md
+  hash_c: 0cb98daad36d0f7fac19f855088a9c1d4773d18f8f668690f5b8bb6a8224d8ac
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Demostracion_Juego_Desambiguacion_WiGame
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Juego_Desambiguacion_WiGame.md
+  hash_c: d8454d517956e4f85ead9c6f8b5a4979e1c98c36e64ef66477912f06aa93bb18
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms
+- name: Demostracion_Compilacion_Reglas_y_Modus_Ponens
+  path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Compilacion_Reglas_y_Modus_Ponens.md
+  hash_c: 9a4046910e5b941754167c3117ac59c43042e8a105ac1b7a5d173397cdf38925
+  hash_d: ''
+  semantic_tags:
+  - type.knowledge.atom
+  - workspace.desk.atoms

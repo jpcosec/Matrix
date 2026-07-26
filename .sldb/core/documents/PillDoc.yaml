@@ -1,0 +1,9 @@
+documents:
+- name: pills
+  path: desk/contexts/pills.md
+  hash_c: 2c2cc2b3ff982d03a0953157d1a98694d512e1f15a10a14ef214332bc518631e
+  hash_d: 692fd656e0bb31b87f69b2974da9231ec2446aa4f08c82cc22ac0c596e76f354
+  semantic_tags:
+  - type.workflow.pill
+  - workspace.desk
+  - workspace:desk

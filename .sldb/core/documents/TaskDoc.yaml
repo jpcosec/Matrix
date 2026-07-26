@@ -1,0 +1,46 @@
+documents:
+- name: task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  path: desk/tasks/task-omnirepresentacion-por-bloques-e-integracion-en-wigame.md
+  hash_c: 805953df9fc790aa463bf6d890943ff1b2dd7c7ca7a28208e57a3d426dea4946
+  hash_d: 897f5589c48cb93800c253ff5f2cae41676fa85ed70838ef58f37341b0e45490
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-inferencia-relacional-por-clausura-transitiva-matricial
+  path: desk/tasks/task-inferencia-relacional-por-clausura-transitiva-matricial.md
+  hash_c: 796de0487ca8b2dfb3a4ae32d04e9a7628ed6721408a34b4ce470f1b65b763b6
+  hash_d: d02c07963754c486fefb2fa97846fabff59c03abb27cd4bcc109db6d0cccb330
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-inferencia-deductiva-proposicional-matricial
+  path: desk/tasks/task-inferencia-deductiva-proposicional-matricial.md
+  hash_c: 92c31bc27b7f447161b22654c3a23f926ab994a1285c4984c9fef4abde3bda0f
+  hash_d: 069459ed0fc1fb01b5ecf04048dbfbab275784f5a94100e5d0838590289f0208
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-vectorizacion-bitwise-denso-de-booleanmatrix
+  path: desk/tasks/task-vectorizacion-bitwise-denso-de-booleanmatrix.md
+  hash_c: 7ec57a5e5f6eeabaf774fb28efc7137696eff3fdc77a4ea8acde82ed1f3e3150
+  hash_d: 7379ea65bdd3c12c741e3e660e00adb2969c8cfe6fe74dd4e118f4f17f9119b9
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  path: desk/tasks/task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas.md
+  hash_c: d5fcadf72dfcac5afa2aae935b64ab9d03db9e3877621dcadd2d2a42c2299a88
+  hash_d: d1ea4a1a0f9e37f532a0ddc5e0260247f0ecea1b08bcff10006d445b4a81bea0
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk

@@ -1,0 +1,1842 @@
+tags:
+  artifact:task:
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  primitive:checklist:
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-ready
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-execution-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-ready
+  primitive:condition:
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-closeout-evidence
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-implementation-path
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-closeout
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-closeout-evidence
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-validation
+  - condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-closeout-evidence
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-validation
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-closeout
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-closeout-evidence
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-validation
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-closeout
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-validation
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-closeout
+  primitive:edge:
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate-to-testing
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close-to-complete
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-to-close
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-to-activate
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-to-closeout
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-to-ready
+  - edge-task-inferencia-deductiva-proposicional-matricial-activate-to-testing
+  - edge-task-inferencia-deductiva-proposicional-matricial-close-to-complete
+  - edge-task-inferencia-deductiva-proposicional-matricial-closeout-to-close
+  - edge-task-inferencia-deductiva-proposicional-matricial-execution-to-activate
+  - edge-task-inferencia-deductiva-proposicional-matricial-ready-to-closeout
+  - edge-task-inferencia-deductiva-proposicional-matricial-testing-to-ready
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-activate-to-testing
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-close-to-complete
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-to-close
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-to-activate
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-to-closeout
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-to-ready
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate-to-testing
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close-to-complete
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-to-close
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-to-activate
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-to-closeout
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-to-ready
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate-to-testing
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-close-to-complete
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-to-close
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-to-activate
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-to-closeout
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-to-ready
+  primitive:operator:
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-testing
+  - operator-task-inferencia-deductiva-proposicional-matricial-activate
+  - operator-task-inferencia-deductiva-proposicional-matricial-close
+  - operator-task-inferencia-deductiva-proposicional-matricial-ready-for-testing
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-activate
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-close
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-testing
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-testing
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-close
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-testing
+  primitive:routine:
+  - routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - routine-task-inferencia-deductiva-proposicional-matricial
+  - routine-task-inferencia-relacional-por-clausura-transitiva-matricial
+  - routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - routine-task-vectorizacion-bitwise-denso-de-booleanmatrix
+  type.desk.inbox-note:
+  - 20260725-212407-suggestion-error-logging-protocol
+  type.knowledge.atom:
+  - Acoplamiento_Neuro_Estocastico_Simbolico
+  - Algebra_Booleana
+  - Algoritmo_Minimizacion_ER
+  - Alucinaciones_Inducidas_por_RAG_y_Conflicto_de_Conocimiento
+  - Alucinaciones_Multi_Agente_y_Context_Drift
+  - Anclaje_Simbolos_Grounding
+  - Arquitectura_Neuro_Estocastica
+  - Ausencia_de_Senal_de_Fallo_Determinista
+  - Capa_Sentido_Si
+  - Capa_Verdad_Vi
+  - Categorias_Sentido
+  - Causas_Estructurales_y_de_Entrenamiento
+  - Clausura_Transitiva_Matricial
+  - Colapso_Dimensional
+  - Comparacion_Arquitecturas_JEPA
+  - Compilador_Matricial_Reglas
+  - Construccion_Tensor_Jerarquico
+  - Contexto_Logico
+  - Contrastes_XOR_Booleanos
+  - Demostracion_Compilacion_Reglas_y_Modus_Ponens
+  - Demostracion_Dominio_Culinario_Ragout
+  - Demostracion_Juego_Desambiguacion_WiGame
+  - Demostracion_Mundo_Bloques_SHRDLU
+  - Demostracion_Ontologias_OWL_Semantic_Web
+  - Diccionario_Bits_y_Codificacion
+  - Dicotomia_HK_Minus_vs_HK_Plus
+  - Diferenciacion_Factualidad_Conocimiento_Alucinacion
+  - Discretizacion_Logica_vs_Continuo
+  - Eje_A_Justificacion_Matematica_Limites_Continuos
+  - Eje_B_Escalabilidad_Minimizacion_ER_y_Tensor_Jerarquico
+  - Eje_C_Mecanismo_Conexion_LLM_y_SHRDLU
+  - Eje_D_Diferenciacion_OWL_KGs_y_Vectorizacion_Bitwise
+  - Eje_E_Implementacion_MEEL_y_Compilador_Matricial
+  - Eje_F_Auditoria_Terminologica_Unsinnig
+  - Energia_Informacion
+  - Enrutamiento_Jerarquico
+  - Entropia_Semantica
+  - Estados_Verdad_Epistemicos_Semanticos
+  - Evaluacion_Epistemica_FActScore_HaluEval
+  - Evolucion_y_Versionado_Contextos
+  - Expansion_Submatricial_Recursiva
+  - Falla_de_Representabilidad
+  - Fenomeno_de_Gibbs_en_Funciones_Indicadoras
+  - Funcion_Objetivo_Seleccion_Dimensiones
+  - Geometria_de_Embeddings_y_Canales_Semanticos
+  - Geometria_de_Politopos_y_Ancho_Acotado_Hanin
+  - Grafo_Indice_G
+  - Gramatica_Universal_UNL
+  - Hecho_Atomico_CDV
+  - Ilusion_de_la_Autocorreccion
+  - Incongruencia_Decodificacion_Estocastica_vs_Conocimiento_Latente
+  - Inferencia_Deductiva_Matricial
+  - Infidelidad_del_Razonamiento_en_Prosa_y_la_Ilusion_de_Pensar
+  - Juego_de_Desambiguacion
+  - Ley_del_Ocultamiento_del_Conocimiento_Knowledge_Overshadowing
+  - MEEL
+  - Manejo_de_Contradicciones
+  - Mapas_Karnaugh
+  - Maquina_Estados_DFA
+  - Mascara_Sentido_en_Mecanismos_Atencion
+  - Mascaras_Estructurales
+  - Matrices_Puras
+  - Matrices_y_Tensores
+  - Matriz_por_Bloques
+  - Medida_y_Semianillos_Booleanos_vs_Probabilistas
+  - Modelo_SMG
+  - Modelos_Mundo_Continuo_Lyre
+  - Multiplicacion_Matricial_Booleana_y_Clausura_Transitiva
+  - Omnirepresentacion
+  - Operaciones_MEEL
+  - Origen_Geometrico_y_Espacio_Vectorial
+  - Origen_Nombre_Matrix
+  - Parser_OWL2Matrix
+  - Pipeline_Ingesta_Lenguaje_Matrix
+  - Politica_Simbolos_Kernel
+  - Principio_de_Minimalidad
+  - Probing_Latente_y_Decodificacion
+  - Procedencia_y_Evidencia
+  - Prototipo_Graphlang
+  - Prototipo_SHRDLU
+  - Prueba_Necesidad_Representacion_Simbolica_Discreta
+  - Reduccion_Descriptiva
+  - Refactorizacion_SOTA_Paper_NeurIPS
+  - Regla_Dont_Care
+  - Representacion_AST_y_Algebra_Booleana
+  - Representacion_Flotante
+  - Representacion_Plana_vs_Tensorial
+  - Roadmap_Evolutivo_Fases
+  - S_Expressions
+  - Seguridad_Pseudo_Proposicional
+  - Semantica_Formal_Neuro_Simbolica_vs_Opacidad_Neuronal
+  - Sicofancia_y_Problemas_del_RLHF
+  - Signo_vs_Simbolo
+  - Sistema_Tipos_Ti
+  - Taxonomia_SOTA_Alucinaciones
+  - Tensor_Jerarquico_NxNxC
+  - Teorema_Suboptimizabilidad_Diagonal
+  - Tipado_Typestate
+  - Tractatus
+  - Triparticion_Contextual
+  - Triparticion_Wittgensteiniana_Sinnvoll_Sinnlos_Unsinnig
+  - Vectorizacion_Bitwise_Densa
+  - W_Operativo
+  type.workflow.pill:
+  - pills
+  type.workflow.step:
+  - Board
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-ready
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-execution-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-ready
+  - closeout
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-closeout-evidence
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-implementation-path
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-closeout
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-closeout-evidence
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-validation
+  - condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-closeout-evidence
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-validation
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-closeout
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-closeout-evidence
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-validation
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-closeout
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-validation
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-closeout
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate-to-testing
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close-to-complete
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-to-close
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-to-activate
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-to-closeout
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-to-ready
+  - edge-task-inferencia-deductiva-proposicional-matricial-activate-to-testing
+  - edge-task-inferencia-deductiva-proposicional-matricial-close-to-complete
+  - edge-task-inferencia-deductiva-proposicional-matricial-closeout-to-close
+  - edge-task-inferencia-deductiva-proposicional-matricial-execution-to-activate
+  - edge-task-inferencia-deductiva-proposicional-matricial-ready-to-closeout
+  - edge-task-inferencia-deductiva-proposicional-matricial-testing-to-ready
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-activate-to-testing
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-close-to-complete
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-to-close
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-to-activate
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-to-closeout
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-to-ready
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate-to-testing
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close-to-complete
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-to-close
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-to-activate
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-to-closeout
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-to-ready
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate-to-testing
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-close-to-complete
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-to-close
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-to-activate
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-to-closeout
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-to-ready
+  - execution
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-testing
+  - operator-task-inferencia-deductiva-proposicional-matricial-activate
+  - operator-task-inferencia-deductiva-proposicional-matricial-close
+  - operator-task-inferencia-deductiva-proposicional-matricial-ready-for-testing
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-activate
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-close
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-testing
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-testing
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-close
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-testing
+  - pills
+  - routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - routine-task-inferencia-deductiva-proposicional-matricial
+  - routine-task-inferencia-relacional-por-clausura-transitiva-matricial
+  - routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - routine-task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - testing
+  type.workflow.task:
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  workspace.desk:
+  - Board
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-ready
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready
+  - checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-execution-ready
+  - checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-ready
+  - checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready
+  - checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready
+  - checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-ready
+  - closeout
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-closeout-evidence
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-implementation-path
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation
+  - condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-closeout
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-closeout-evidence
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path
+  - condition-task-inferencia-deductiva-proposicional-matricial-has-validation
+  - condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-closeout-evidence
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-validation
+  - condition-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-closeout
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-closeout-evidence
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-validation
+  - condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-closeout
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-validation
+  - condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-closeout
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate-to-testing
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close-to-complete
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-to-close
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-to-activate
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-to-closeout
+  - edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-to-ready
+  - edge-task-inferencia-deductiva-proposicional-matricial-activate-to-testing
+  - edge-task-inferencia-deductiva-proposicional-matricial-close-to-complete
+  - edge-task-inferencia-deductiva-proposicional-matricial-closeout-to-close
+  - edge-task-inferencia-deductiva-proposicional-matricial-execution-to-activate
+  - edge-task-inferencia-deductiva-proposicional-matricial-ready-to-closeout
+  - edge-task-inferencia-deductiva-proposicional-matricial-testing-to-ready
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-activate-to-testing
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-close-to-complete
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-to-close
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-to-activate
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-to-closeout
+  - edge-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-to-ready
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate-to-testing
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close-to-complete
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-to-close
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-to-activate
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-to-closeout
+  - edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-to-ready
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate-to-testing
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-close-to-complete
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-to-close
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-to-activate
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-to-closeout
+  - edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-to-ready
+  - execution
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close
+  - operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-testing
+  - operator-task-inferencia-deductiva-proposicional-matricial-activate
+  - operator-task-inferencia-deductiva-proposicional-matricial-close
+  - operator-task-inferencia-deductiva-proposicional-matricial-ready-for-testing
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-activate
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-close
+  - operator-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-testing
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close
+  - operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-testing
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-close
+  - operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-testing
+  - pills
+  - pills
+  - routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - routine-task-inferencia-deductiva-proposicional-matricial
+  - routine-task-inferencia-relacional-por-clausura-transitiva-matricial
+  - routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - routine-task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - testing
+  workspace.desk.atoms:
+  - Acoplamiento_Neuro_Estocastico_Simbolico
+  - Algebra_Booleana
+  - Algoritmo_Minimizacion_ER
+  - Alucinaciones_Inducidas_por_RAG_y_Conflicto_de_Conocimiento
+  - Alucinaciones_Multi_Agente_y_Context_Drift
+  - Anclaje_Simbolos_Grounding
+  - Arquitectura_Neuro_Estocastica
+  - Ausencia_de_Senal_de_Fallo_Determinista
+  - Capa_Sentido_Si
+  - Capa_Verdad_Vi
+  - Categorias_Sentido
+  - Causas_Estructurales_y_de_Entrenamiento
+  - Clausura_Transitiva_Matricial
+  - Colapso_Dimensional
+  - Comparacion_Arquitecturas_JEPA
+  - Compilador_Matricial_Reglas
+  - Construccion_Tensor_Jerarquico
+  - Contexto_Logico
+  - Contrastes_XOR_Booleanos
+  - Demostracion_Compilacion_Reglas_y_Modus_Ponens
+  - Demostracion_Dominio_Culinario_Ragout
+  - Demostracion_Juego_Desambiguacion_WiGame
+  - Demostracion_Mundo_Bloques_SHRDLU
+  - Demostracion_Ontologias_OWL_Semantic_Web
+  - Diccionario_Bits_y_Codificacion
+  - Dicotomia_HK_Minus_vs_HK_Plus
+  - Diferenciacion_Factualidad_Conocimiento_Alucinacion
+  - Discretizacion_Logica_vs_Continuo
+  - Eje_A_Justificacion_Matematica_Limites_Continuos
+  - Eje_B_Escalabilidad_Minimizacion_ER_y_Tensor_Jerarquico
+  - Eje_C_Mecanismo_Conexion_LLM_y_SHRDLU
+  - Eje_D_Diferenciacion_OWL_KGs_y_Vectorizacion_Bitwise
+  - Eje_E_Implementacion_MEEL_y_Compilador_Matricial
+  - Eje_F_Auditoria_Terminologica_Unsinnig
+  - Energia_Informacion
+  - Enrutamiento_Jerarquico
+  - Entropia_Semantica
+  - Estados_Verdad_Epistemicos_Semanticos
+  - Evaluacion_Epistemica_FActScore_HaluEval
+  - Evolucion_y_Versionado_Contextos
+  - Expansion_Submatricial_Recursiva
+  - Falla_de_Representabilidad
+  - Fenomeno_de_Gibbs_en_Funciones_Indicadoras
+  - Funcion_Objetivo_Seleccion_Dimensiones
+  - Geometria_de_Embeddings_y_Canales_Semanticos
+  - Geometria_de_Politopos_y_Ancho_Acotado_Hanin
+  - Grafo_Indice_G
+  - Gramatica_Universal_UNL
+  - Hecho_Atomico_CDV
+  - Ilusion_de_la_Autocorreccion
+  - Incongruencia_Decodificacion_Estocastica_vs_Conocimiento_Latente
+  - Inferencia_Deductiva_Matricial
+  - Infidelidad_del_Razonamiento_en_Prosa_y_la_Ilusion_de_Pensar
+  - Juego_de_Desambiguacion
+  - Ley_del_Ocultamiento_del_Conocimiento_Knowledge_Overshadowing
+  - MEEL
+  - Manejo_de_Contradicciones
+  - Mapas_Karnaugh
+  - Maquina_Estados_DFA
+  - Mascara_Sentido_en_Mecanismos_Atencion
+  - Mascaras_Estructurales
+  - Matrices_Puras
+  - Matrices_y_Tensores
+  - Matriz_por_Bloques
+  - Medida_y_Semianillos_Booleanos_vs_Probabilistas
+  - Modelo_SMG
+  - Modelos_Mundo_Continuo_Lyre
+  - Multiplicacion_Matricial_Booleana_y_Clausura_Transitiva
+  - Omnirepresentacion
+  - Operaciones_MEEL
+  - Origen_Geometrico_y_Espacio_Vectorial
+  - Origen_Nombre_Matrix
+  - Parser_OWL2Matrix
+  - Pipeline_Ingesta_Lenguaje_Matrix
+  - Politica_Simbolos_Kernel
+  - Principio_de_Minimalidad
+  - Probing_Latente_y_Decodificacion
+  - Procedencia_y_Evidencia
+  - Prototipo_Graphlang
+  - Prototipo_SHRDLU
+  - Prueba_Necesidad_Representacion_Simbolica_Discreta
+  - Reduccion_Descriptiva
+  - Refactorizacion_SOTA_Paper_NeurIPS
+  - Regla_Dont_Care
+  - Representacion_AST_y_Algebra_Booleana
+  - Representacion_Flotante
+  - Representacion_Plana_vs_Tensorial
+  - Roadmap_Evolutivo_Fases
+  - S_Expressions
+  - Seguridad_Pseudo_Proposicional
+  - Semantica_Formal_Neuro_Simbolica_vs_Opacidad_Neuronal
+  - Sicofancia_y_Problemas_del_RLHF
+  - Signo_vs_Simbolo
+  - Sistema_Tipos_Ti
+  - Taxonomia_SOTA_Alucinaciones
+  - Tensor_Jerarquico_NxNxC
+  - Teorema_Suboptimizabilidad_Diagonal
+  - Tipado_Typestate
+  - Tractatus
+  - Triparticion_Contextual
+  - Triparticion_Wittgensteiniana_Sinnvoll_Sinnlos_Unsinnig
+  - Vectorizacion_Bitwise_Densa
+  - W_Operativo
+  workspace.desk.inbox:
+  - 20260725-212407-suggestion-error-logging-protocol
+  workspace:desk:
+  - Board
+  - closeout
+  - execution
+  - pills
+  - pills
+  - routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - routine-task-inferencia-deductiva-proposicional-matricial
+  - routine-task-inferencia-relacional-por-clausura-transitiva-matricial
+  - routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - routine-task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-deductiva-proposicional-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-inferencia-relacional-por-clausura-transitiva-matricial
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - task-vectorizacion-bitwise-denso-de-booleanmatrix
+  - testing
+documents:
+  task-omnirepresentacion-por-bloques-e-integracion-en-wigame:
+    model: StepDoc
+    path: desk/tasks/task-omnirepresentacion-por-bloques-e-integracion-en-wigame.md
+    tags:
+    - artifact:task
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  task-inferencia-relacional-por-clausura-transitiva-matricial:
+    model: StepDoc
+    path: desk/tasks/task-inferencia-relacional-por-clausura-transitiva-matricial.md
+    tags:
+    - artifact:task
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  task-inferencia-deductiva-proposicional-matricial:
+    model: StepDoc
+    path: desk/tasks/task-inferencia-deductiva-proposicional-matricial.md
+    tags:
+    - artifact:task
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  task-vectorizacion-bitwise-denso-de-booleanmatrix:
+    model: StepDoc
+    path: desk/tasks/task-vectorizacion-bitwise-denso-de-booleanmatrix.md
+    tags:
+    - artifact:task
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas:
+    model: StepDoc
+    path: desk/tasks/task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas.md
+    tags:
+    - artifact:task
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  pills:
+    model: StepDoc
+    path: desk/contexts/pills.md
+    tags:
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  20260725-212407-suggestion-error-logging-protocol:
+    model: InboxNoteDoc
+    path: desk/inbox/20260725-212407-suggestion-error-logging-protocol.md
+    tags:
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+  condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-closeout:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-closeout:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-validation:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-deductiva-proposicional-matricial-has-closeout-evidence:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-closeout-evidence:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-implementation-path:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-deductiva-proposicional-matricial-has-validation:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-closeout:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-validation:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-validation:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-closeout-evidence:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-closeout:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-closeout-evidence:
+    model: StepDoc
+    path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.step
+    - workspace.desk
+  edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-to-activate:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-to-closeout:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-to-activate:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close-to-complete:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-to-ready:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-to-close:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate-to-testing:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-to-activate:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-to-closeout:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-deductiva-proposicional-matricial-activate-to-testing:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-deductiva-proposicional-matricial-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate-to-testing:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-deductiva-proposicional-matricial-ready-to-closeout:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-deductiva-proposicional-matricial-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-to-ready:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-to-close:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-to-ready:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-to-close:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-to-closeout:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-to-close:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-relacional-por-clausura-transitiva-matricial-close-to-complete:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-relacional-por-clausura-transitiva-matricial-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-deductiva-proposicional-matricial-closeout-to-close:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-deductiva-proposicional-matricial-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-to-closeout:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-to-activate:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close-to-complete:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-to-ready:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-deductiva-proposicional-matricial-testing-to-ready:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-deductiva-proposicional-matricial-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-relacional-por-clausura-transitiva-matricial-activate-to-testing:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-relacional-por-clausura-transitiva-matricial-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate-to-testing:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-deductiva-proposicional-matricial-close-to-complete:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-deductiva-proposicional-matricial-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-inferencia-deductiva-proposicional-matricial-execution-to-activate:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-inferencia-deductiva-proposicional-matricial-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-close-to-complete:
+    model: StepDoc
+    path: desk/primitives/edges/edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-inferencia-deductiva-proposicional-matricial-execution-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-inferencia-deductiva-proposicional-matricial-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-ready:
+    model: StepDoc
+    path: desk/primitives/checklists/checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.step
+    - workspace.desk
+  operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-testing:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-inferencia-deductiva-proposicional-matricial-close:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-inferencia-deductiva-proposicional-matricial-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-testing:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-close:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-inferencia-relacional-por-clausura-transitiva-matricial-activate:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-inferencia-relacional-por-clausura-transitiva-matricial-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-inferencia-relacional-por-clausura-transitiva-matricial-close:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-inferencia-relacional-por-clausura-transitiva-matricial-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-inferencia-deductiva-proposicional-matricial-ready-for-testing:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-inferencia-deductiva-proposicional-matricial-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-testing:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-testing:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  operator-task-inferencia-deductiva-proposicional-matricial-activate:
+    model: StepDoc
+    path: desk/primitives/operators/operator-task-inferencia-deductiva-proposicional-matricial-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.step
+    - workspace.desk
+  closeout:
+    model: StepDoc
+    path: desk/rituals/closeout.md
+    tags:
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  execution:
+    model: StepDoc
+    path: desk/rituals/execution.md
+    tags:
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  testing:
+    model: StepDoc
+    path: desk/rituals/testing.md
+    tags:
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  routine-task-inferencia-relacional-por-clausura-transitiva-matricial:
+    model: StepDoc
+    path: desk/routines/routine-task-inferencia-relacional-por-clausura-transitiva-matricial.md
+    tags:
+    - primitive:routine
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  routine-task-inferencia-deductiva-proposicional-matricial:
+    model: StepDoc
+    path: desk/routines/routine-task-inferencia-deductiva-proposicional-matricial.md
+    tags:
+    - primitive:routine
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas:
+    model: StepDoc
+    path: desk/routines/routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas.md
+    tags:
+    - primitive:routine
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame:
+    model: StepDoc
+    path: desk/routines/routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame.md
+    tags:
+    - primitive:routine
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  routine-task-vectorizacion-bitwise-denso-de-booleanmatrix:
+    model: StepDoc
+    path: desk/routines/routine-task-vectorizacion-bitwise-denso-de-booleanmatrix.md
+    tags:
+    - primitive:routine
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  Board:
+    model: StepDoc
+    path: desk/tasks/Board.md
+    tags:
+    - type.workflow.step
+    - workspace.desk
+    - workspace:desk
+  MEEL:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/MEEL.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Clausura_Transitiva_Matricial:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Clausura_Transitiva_Matricial.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Operaciones_MEEL:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Operaciones_MEEL.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Inferencia_Deductiva_Matricial:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Inferencia_Deductiva_Matricial.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Eje_E_Implementacion_MEEL_y_Compilador_Matricial:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Eje_E_Implementacion_MEEL_y_Compilador_Matricial.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Compilador_Matricial_Reglas:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Compilador_Matricial_Reglas.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Politica_Simbolos_Kernel:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Kernel_MEEL/Politica_Simbolos_Kernel.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Mascaras_Estructurales:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Mascaras_Estructurales.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  W_Operativo:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/W_Operativo.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Capa_Verdad_Vi:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Capa_Verdad_Vi.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Evolucion_y_Versionado_Contextos:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Evolucion_y_Versionado_Contextos.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Capa_Sentido_Si:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Capa_Sentido_Si.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Grafo_Indice_G:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Grafo_Indice_G.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Matrices_Puras:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Matrices_Puras.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Enrutamiento_Jerarquico:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Enrutamiento_Jerarquico.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Construccion_Tensor_Jerarquico:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Construccion_Tensor_Jerarquico.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Tensor_Jerarquico_NxNxC:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Tensor_Jerarquico_NxNxC.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Procedencia_y_Evidencia:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Estructuras_Matriciales/Procedencia_y_Evidencia.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Representacion_AST_y_Algebra_Booleana:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Representacion_AST_y_Algebra_Booleana.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Algoritmo_Minimizacion_ER:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Algoritmo_Minimizacion_ER.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Roadmap_Evolutivo_Fases:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Roadmap_Evolutivo_Fases.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Reduccion_Descriptiva:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Reduccion_Descriptiva.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Acoplamiento_Neuro_Estocastico_Simbolico:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Acoplamiento_Neuro_Estocastico_Simbolico.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Seguridad_Pseudo_Proposicional:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Seguridad_Pseudo_Proposicional.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Omnirepresentacion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Omnirepresentacion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Energia_Informacion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Energia_Informacion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Gramatica_Universal_UNL:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Gramatica_Universal_UNL.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Eje_B_Escalabilidad_Minimizacion_ER_y_Tensor_Jerarquico:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Eje_B_Escalabilidad_Minimizacion_ER_y_Tensor_Jerarquico.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Mascara_Sentido_en_Mecanismos_Atencion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Mascara_Sentido_en_Mecanismos_Atencion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Sistema_Tipos_Ti:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Sistema_Tipos_Ti.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Manejo_de_Contradicciones:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Optimizacion_y_Seguridad/Manejo_de_Contradicciones.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  S_Expressions:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/S_Expressions.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Prototipo_SHRDLU:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Prototipo_SHRDLU.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Pipeline_Ingesta_Lenguaje_Matrix:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Pipeline_Ingesta_Lenguaje_Matrix.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Anclaje_Simbolos_Grounding:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Anclaje_Simbolos_Grounding.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Prototipo_Graphlang:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Prototipo_Graphlang.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Eje_C_Mecanismo_Conexion_LLM_y_SHRDLU:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Eje_C_Mecanismo_Conexion_LLM_y_SHRDLU.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Parser_OWL2Matrix:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Parsers_y_Runtimes/Parser_OWL2Matrix.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Vectorizacion_Bitwise_Densa:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Vectorizacion_Bitwise_Densa.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Diccionario_Bits_y_Codificacion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Diccionario_Bits_y_Codificacion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Tipado_Typestate:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Tipado_Typestate.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Eje_D_Diferenciacion_OWL_KGs_y_Vectorizacion_Bitwise:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Computacion/Bitwise_Hardware/Eje_D_Diferenciacion_OWL_KGs_y_Vectorizacion_Bitwise.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Estados_Verdad_Epistemicos_Semanticos:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Estados_Verdad_Epistemicos_Semanticos.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Modelos_Mundo_Continuo_Lyre:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Modelos_Mundo_Continuo_Lyre.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Triparticion_Contextual:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Triparticion_Contextual.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Contexto_Logico:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Contexto_Logico.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Refactorizacion_SOTA_Paper_NeurIPS:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Refactorizacion_SOTA_Paper_NeurIPS.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Prueba_Necesidad_Representacion_Simbolica_Discreta:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Prueba_Necesidad_Representacion_Simbolica_Discreta.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Arquitectura_Neuro_Estocastica:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Arquitectura_Neuro_Estocastica.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Discretizacion_Logica_vs_Continuo:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Discretizacion_Logica_vs_Continuo.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Taxonomia_SOTA_Alucinaciones:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Taxonomia_SOTA_Alucinaciones.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Eje_A_Justificacion_Matematica_Limites_Continuos:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Epistemologia_y_Contextos/Eje_A_Justificacion_Matematica_Limites_Continuos.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Signo_vs_Simbolo:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Signo_vs_Simbolo.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Principio_de_Minimalidad:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Principio_de_Minimalidad.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Categorias_Sentido:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Categorias_Sentido.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Eje_F_Auditoria_Terminologica_Unsinnig:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Eje_F_Auditoria_Terminologica_Unsinnig.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Triparticion_Wittgensteiniana_Sinnvoll_Sinnlos_Unsinnig:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Triparticion_Wittgensteiniana_Sinnvoll_Sinnlos_Unsinnig.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Origen_Nombre_Matrix:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Origen_Nombre_Matrix.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Representacion_Flotante:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Representacion_Flotante.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Tractatus:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Tractatus.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Modelo_SMG:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Filosofia/Tractatus_y_Ontologia/Modelo_SMG.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Infidelidad_del_Razonamiento_en_Prosa_y_la_Ilusion_de_Pensar:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Infidelidad_del_Razonamiento_en_Prosa_y_la_Ilusion_de_Pensar.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Probing_Latente_y_Decodificacion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Probing_Latente_y_Decodificacion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Incongruencia_Decodificacion_Estocastica_vs_Conocimiento_Latente:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Incongruencia_Decodificacion_Estocastica_vs_Conocimiento_Latente.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Ausencia_de_Senal_de_Fallo_Determinista:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Ausencia_de_Senal_de_Fallo_Determinista.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Comparacion_Arquitecturas_JEPA:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Comparacion_Arquitecturas_JEPA.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Semantica_Formal_Neuro_Simbolica_vs_Opacidad_Neuronal:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Limites_Espacio_Continuo/Semantica_Formal_Neuro_Simbolica_vs_Opacidad_Neuronal.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Falla_de_Representabilidad:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Falla_de_Representabilidad.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Dicotomia_HK_Minus_vs_HK_Plus:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Dicotomia_HK_Minus_vs_HK_Plus.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Alucinaciones_Multi_Agente_y_Context_Drift:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Alucinaciones_Multi_Agente_y_Context_Drift.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Evaluacion_Epistemica_FActScore_HaluEval:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Evaluacion_Epistemica_FActScore_HaluEval.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Ilusion_de_la_Autocorreccion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Ilusion_de_la_Autocorreccion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Ley_del_Ocultamiento_del_Conocimiento_Knowledge_Overshadowing:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Ley_del_Ocultamiento_del_Conocimiento_Knowledge_Overshadowing.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Causas_Estructurales_y_de_Entrenamiento:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Causas_Estructurales_y_de_Entrenamiento.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Sicofancia_y_Problemas_del_RLHF:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Sicofancia_y_Problemas_del_RLHF.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Alucinaciones_Inducidas_por_RAG_y_Conflicto_de_Conocimiento:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Alucinaciones_Inducidas_por_RAG_y_Conflicto_de_Conocimiento.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Origen_Geometrico_y_Espacio_Vectorial:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Origen_Geometrico_y_Espacio_Vectorial.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Entropia_Semantica:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Entropia_Semantica.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Diferenciacion_Factualidad_Conocimiento_Alucinacion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Antecedentes/Alucinaciones/Diferenciacion_Factualidad_Conocimiento_Alucinacion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Demostracion_Dominio_Culinario_Ragout:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Dominio_Culinario/Demostracion_Dominio_Culinario_Ragout.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Regla_Dont_Care:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Regla_Dont_Care.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Algebra_Booleana:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Algebra_Booleana.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Multiplicacion_Matricial_Booleana_y_Clausura_Transitiva:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Multiplicacion_Matricial_Booleana_y_Clausura_Transitiva.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Contrastes_XOR_Booleanos:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Contrastes_XOR_Booleanos.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Mapas_Karnaugh:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Mapas_Karnaugh.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Maquina_Estados_DFA:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Maquina_Estados_DFA.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Medida_y_Semianillos_Booleanos_vs_Probabilistas:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Algebra_Booleana_y_Silicio/Medida_y_Semianillos_Booleanos_vs_Probabilistas.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Colapso_Dimensional:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Colapso_Dimensional.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Fenomeno_de_Gibbs_en_Funciones_Indicadoras:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Fenomeno_de_Gibbs_en_Funciones_Indicadoras.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Geometria_de_Politopos_y_Ancho_Acotado_Hanin:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Geometria_de_Politopos_y_Ancho_Acotado_Hanin.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Expansion_Submatricial_Recursiva:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Expansion_Submatricial_Recursiva.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Funcion_Objetivo_Seleccion_Dimensiones:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Funcion_Objetivo_Seleccion_Dimensiones.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Juego_de_Desambiguacion:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Optimizacion_y_Desambiguacion/Juego_de_Desambiguacion.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Matriz_por_Bloques:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Matriz_por_Bloques.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Representacion_Plana_vs_Tensorial:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Representacion_Plana_vs_Tensorial.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Teorema_Suboptimizabilidad_Diagonal:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Teorema_Suboptimizabilidad_Diagonal.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Hecho_Atomico_CDV:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Hecho_Atomico_CDV.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Geometria_de_Embeddings_y_Canales_Semanticos:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Geometria_de_Embeddings_y_Canales_Semanticos.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Matrices_y_Tensores:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Matematica/Tensores_y_Matriz_Bloques/Matrices_y_Tensores.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Demostracion_Ontologias_OWL_Semantic_Web:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Ontologias_OWL_Semantic_Web.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Demostracion_Mundo_Bloques_SHRDLU:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Mundo_Bloques_SHRDLU.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Demostracion_Juego_Desambiguacion_WiGame:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Juego_Desambiguacion_WiGame.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms
+  Demostracion_Compilacion_Reglas_y_Modus_Ponens:
+    model: AtomDoc
+    path: /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms/Aplicaciones/Demostracion_Compilacion_Reglas_y_Modus_Ponens.md
+    tags:
+    - type.knowledge.atom
+    - workspace.desk.atoms

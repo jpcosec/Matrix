@@ -1,0 +1,13 @@
+name: PillDoc
+model_ref: deskops.models:PillDoc
+path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/pill.py
+documents_index: .sldb/core/documents/PillDoc.yaml
+sections_index: ''
+hash_b: 203fda08bd5a0bd877d889635365e1c3a0cd454944fc95f83235f7280b8d7719
+version: 1
+canonical: false
+family: null
+semantics:
+- type.workflow.pill
+- workspace.desk
+base_models: []

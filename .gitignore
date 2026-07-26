@@ -1,8 +1,4 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-desk/
-DESK/
-.sldb/
-.deskops.log
 roundtrip_test_state.json

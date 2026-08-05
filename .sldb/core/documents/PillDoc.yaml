@@ -1,9 +1,10 @@
 documents:
-- name: pills
-  path: desk/contexts/pills.md
-  hash_c: 2c2cc2b3ff982d03a0953157d1a98694d512e1f15a10a14ef214332bc518631e
-  hash_d: 692fd656e0bb31b87f69b2974da9231ec2446aa4f08c82cc22ac0c596e76f354
+- name: pill-migracion-a-jax
+  path: desk/pills/pill-migracion-a-jax.md
+  hash_c: 061fd545c34d796d8196974b76d1f8262576a1f11508eb56bf83dc51ed63f113
+  hash_d: cb3570a7533ab8c70cbe5fb23ded5b667529aa5c06cf37f9f411ce75a49e72f6
   semantic_tags:
+  - concept:architecture
+  - context:migration
   - type.workflow.pill
   - workspace.desk
-  - workspace:desk

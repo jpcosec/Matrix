@@ -72,4 +72,66 @@ models:
   canonical: false
   family: null
   semantics: []
-hash_a: 328c855f2fbd50007d288c8d3efeba1ed1377198552e8b85779560279a27646e
+- name: ChecklistDoc
+  model_ref: deskops.models:ChecklistDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/checklist.py
+  models_index: .sldb/core/models/ChecklistDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+- name: ConditionDoc
+  model_ref: deskops.models:ConditionDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/condition.py
+  models_index: .sldb/core/models/ConditionDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+- name: EdgeDoc
+  model_ref: deskops.models:EdgeDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/edge.py
+  models_index: .sldb/core/models/EdgeDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+- name: OperatorDoc
+  model_ref: deskops.models:OperatorDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/operator.py
+  models_index: .sldb/core/models/OperatorDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+- name: RoutineDoc
+  model_ref: deskops.models:RoutineDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/routine.py
+  models_index: .sldb/core/models/RoutineDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+predicates:
+- name: is_solved_by
+  axis: HOW
+  description: Identifies how the source is solved.
+- name: implements
+  axis: HOW
+  description: Identifies what the source implements.
+- name: mathematically_proves
+  axis: WHY
+  description: Provides a mathematical proof.
+- name: explains_failure_of
+  axis: WHY
+  description: Explains why the target fails.
+- name: grounded_by
+  axis: PROVENANCE
+  description: Identifies supporting provenance.
+- name: restricts
+  axis: WHEN_WHERE
+  description: Restricts the target context.
+- name: defines
+  axis: WHAT
+  description: Defines the target concept.
+hash_a: 4f506e13c17dec770b9be75a928244303de9fc935e170523ec7b58a8adf70330

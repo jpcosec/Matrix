@@ -1,0 +1,313 @@
+documents:
+- name: checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-ready
+  path: desk/primitives/checklists/checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-closeout-ready.md
+  hash_c: c506ee5fad10ce7b772bbb0b6e515cba0a9fb7d9623d8acb6b5f4ae92876537a
+  hash_d: 62c20246a5dea2b003039a39b4e416407c71fa478d90d5bb8a49a406cec43f70
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready
+  path: desk/primitives/checklists/checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready.md
+  hash_c: 05b8ae0d48b4e889f1c117ac447dafbc32b70c7a7f26632a8c0815d8e07c1172
+  hash_d: 6d5e729c85a78ca316e4724715e2682335759557d8184437eed0a803cb572c43
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-ready
+  path: desk/primitives/checklists/checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-testing-ready.md
+  hash_c: 50ee4148651cc9748e5ea61e57fd32cd2933476a78e94beebedb3ddd8eab0cff
+  hash_d: 8a1c189c515dbf43586869fe5bc5422dbbc9814a7196ee36a3ce05e01bba53d7
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready
+  path: desk/primitives/checklists/checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready.md
+  hash_c: 9337ccf331faef9c68b060f75297bc25a7cf0cff565ec221853efc0eeeee7793
+  hash_d: 43fe094094d3f3882fdb9fdc5c779fd3a316f91d780ac50476a3dd0736cc32e6
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-inferencia-deductiva-proposicional-matricial-execution-ready
+  path: desk/primitives/checklists/checklist-task-inferencia-deductiva-proposicional-matricial-execution-ready.md
+  hash_c: 5abdc12042ea6afa20c1c54cea2de62cc380585b7de876ced6d88af16e8ef6a6
+  hash_d: 9a4f50a093c4850f9add57882bee1c88cea71563e7cb94ae94df5726a1c8b794
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready
+  path: desk/primitives/checklists/checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready.md
+  hash_c: b62d08a97031c3fa381e967179170ac410e311b23a68f843b0a4814d1a81252b
+  hash_d: fda27fca87958e49e2c91f6682c867e27b000f0716c1cf63ac9bfddca999f81f
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-ready
+  path: desk/primitives/checklists/checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-closeout-ready.md
+  hash_c: 9411acf0aa9a5f2faf6f072e305f1ce27bf27bca16e42e271adaaf2a16602a67
+  hash_d: 915f6612bdeab6cb2d5893f1689a9c6bab6cc6be9c75e566656d15e2bab7c13c
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-ready
+  path: desk/primitives/checklists/checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-execution-ready.md
+  hash_c: a8e4b40ce2ce6b69834db193c569652aed4fd42e8613168bf49dafeea48cebca
+  hash_d: 5b1a44aa1660c186a3820262eb3689fafeb722249805d668299ae39beadd32c9
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready
+  path: desk/primitives/checklists/checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready.md
+  hash_c: ae0379af9e35dcb2ae99878edef7632fc05563dec57273a7d3bab35f1add7924
+  hash_d: a9c2b8d4ac73fd0c7a677e92fe1c37dd2cb4fe38a567b13a499a56cee0f047be
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-ready
+  path: desk/primitives/checklists/checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-closeout-ready.md
+  hash_c: 559db882d9c8194cc2f798ad8fce0a1cba5802a5a85a1a4dab311cfee92f6afd
+  hash_d: b8b28d71b94e69b47e49d11d3be4475ee7433ac6ff1c3696d4b97f2d8e7fb0fb
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready
+  path: desk/primitives/checklists/checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready.md
+  hash_c: b47117991f6e58a0cfa8432ad4b1b77c0d91135a471e2d4300a05d384b0a54da
+  hash_d: f138643524b2668dc5c70e585b3dee936bd8492da14c9c3413da1fe0d18029ef
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-ready
+  path: desk/primitives/checklists/checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-testing-ready.md
+  hash_c: 2aa5f8d3c2aaa735b7f1b974d51c89055ba226fd9a32f22af777f32511408f2b
+  hash_d: a123bd145711aa00a4441fef8ef12147205329ec843a2edf9480f51f1884f8e0
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-ready
+  path: desk/primitives/checklists/checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-closeout-ready.md
+  hash_c: b5ae8ab31c8fa179dabd2e2ab7de6ce10f3d7ab6820da6eefa4e88f9e2ea1bfa
+  hash_d: 7fdf32be1822ccb6058110f2e28c40f5d0915b933c96eabf98368268fdf70164
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready
+  path: desk/primitives/checklists/checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready.md
+  hash_c: c42ccadfd0ea122b04120f05a283c4fc767adab1dde825ed68ff35f4a0d84fa3
+  hash_d: a8b7f3c5a36c65333e8cf7bb034a8900a84972db7868949b18e2ae6366b1e117
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-ready
+  path: desk/primitives/checklists/checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-testing-ready.md
+  hash_c: 1743471baedbd7cedbbbcdb28e7a742dbf2d79feda08db3fb00513c633e37fc7
+  hash_d: 8d85cc63746bd8633f96111e0273e2fe4c2d12874e80d99a822dacf45cd28285
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready
+  path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready.md
+  hash_c: bf033881a0cae4516b911e9fc28108c8fb637232871da7f398e2472051df9bd8
+  hash_d: bd64d0f670e8523fdb1b8940d45a248753748ad9f8a0c55cec683ec585e9d84a
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready
+  path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready.md
+  hash_c: 982be4c94ce4c73afc4325ef21ac251d748c7e490c6ea0fd950bc2fba406cba5
+  hash_d: 770fcba014e6612ce5d094d278fe33ecc464c1d565c13eaf512bfa8b7536366c
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready
+  path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready.md
+  hash_c: 663e683cfe80d9ad1a18b3a63f9af112b8e406429ecd142a0680f267c36fbbf3
+  hash_d: 120035e484328a14cc1f58b42b1970ab5f02c6de7bcf1376de20765fedc40ea3
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready
+  path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready.md
+  hash_c: a14d80566715e110332c2675ffbc20a3929df570706493ef6b9ede2cbff5c332
+  hash_d: e6aa83fde739713fe9d8a8ee5f7c35c30c651467dcc1afd30bf6bd97b4d61c29
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready
+  path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready.md
+  hash_c: 8168607bdb1a1f0b0387da26556f59181116ac57785039747853d8e3cfb2ae5b
+  hash_d: 691ad521568685e1a96dd1be4453f3155e79aae8c0f812fb09ad876b07a45444
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready
+  path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready.md
+  hash_c: db087d53c9a2fe135f3cf7a16e23cc39738753930b186c5f7c3e0968160dcb09
+  hash_d: a60dca2d1b535f3e45e071a00fcca02182008abb551cfa049b8f392be2766698
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-implementar-atomfeeder-closeout-ready
+  path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-closeout-ready.md
+  hash_c: 0d9e383115eb9f81a9cf83eedeb1ea46f8f5c90262272325606dd6e7d2827f37
+  hash_d: 3f8c100a14c98d34453110b4181d3f9327ba6859d6dd39b82f5d3365aab4b54d
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-implementar-atomfeeder-execution-ready
+  path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-execution-ready.md
+  hash_c: 4ce27c152a1a7394e5fef5fe6c3ab4a46b7a4ac4f64d7e2a68f15f515d65ecdf
+  hash_d: d32c62c8593044408ec7bff996f57a677ed7d1a91e9ed9ec70563c044fdf4813
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-implementar-atomfeeder-testing-ready
+  path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-testing-ready.md
+  hash_c: 2a682723f09ad41c4ccb6f721985efbf24126711ee48a36cbc1ee5f7379840ff
+  hash_d: 3422c227289433671a4c4fad1cd234ffb00b2c6cebb2cd4d448c3119ad8871a1
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready
+  path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready.md
+  hash_c: 9931327c45c858fcc272df67af73ccede583261eaf750098e76de29ece9c025b
+  hash_d: 23e8e612a37ff9edec7c7ace555b217a7ab972575847daf34e934e5038fa00cf
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-implementar-logicalspace-registry-bi-direccional-execution-ready
+  path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-execution-ready.md
+  hash_c: 60080b1be3ff970784d00669e34fe4bd0a17a33661f9ba08e3267df18b182f19
+  hash_d: 2f6a1577c6f7d7212e19c1cb5e75456234edd3ed7b50815742763e9a96dd488d
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready
+  path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready.md
+  hash_c: bf0860db7ca49696b6867d6dcc9c6ca0c01af6fc0d718b38200ee3d1a8090b7d
+  hash_d: da755389f2c235fc2fa33261a2f9e9ccd7d4a3944cfca93aa1e9646954c4963d
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-meelengine-core-api-facade-closeout-ready
+  path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-closeout-ready.md
+  hash_c: 4cfbe97edd7b5ea7737e6b75a4657973d01a169d30bad759f787a8bcc5301913
+  hash_d: 527996c2a410ac2a576206742206ca5e97df397cc3a753e6e6c7d6bb47cfa12d
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-meelengine-core-api-facade-execution-ready
+  path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-execution-ready.md
+  hash_c: d6f5ff1adb3e846e5598488248439ad53e786c118ec97669476bc197d059a33f
+  hash_d: 58329b52fa3347e08365296497f8437e5802f722642dab80bddcabe681103586
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-meelengine-core-api-facade-testing-ready
+  path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-testing-ready.md
+  hash_c: 20d36ed4de797f4cfe7b91256f8f31b5378c1a555529f000be8e2ca523ba433b
+  hash_d: 896dadc7f10aafc88f4bc3d3152733ad2f49dd06784e0a21a8b64a4dbe7113b9
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready
+  path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready.md
+  hash_c: 6b71410a83009f47b04b6c3bae8f939c9d46b467d5693c9516bb99190285a16f
+  hash_d: 21a9ba74e403eb0551cf0da8d2c9c5efe05ee77f99251b8458761023f30a1c6b
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready
+  path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready.md
+  hash_c: c05f7fc316c5baecc4cceaa849b8b04f349e37dc34ffdcc8c31d646d83532081
+  hash_d: 18c5a55dee6268a8b789cf13f9984b3e17906ce9b4373bb78c0b7e9c281acf88
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready
+  path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready.md
+  hash_c: 39b239a33f717d8d340eba991902d36ecd025210172d6997c3f5b25fca1bd47b
+  hash_d: d0024fe50581d4b7e0222ba8a31f8ea99eecba5a671e786e6344bc64ff58c247
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready
+  path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready.md
+  hash_c: 6b32b6022f5d00add56377fd76024fd027b218c4c36966b67bc60a366d0ecc27
+  hash_d: 941bf7b7facbe412b37f562991f80dbe5736d59ba787cbb3b6e0298c7b0c70e5
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready
+  path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready.md
+  hash_c: 829f3efeff3a92074bed0343162a947a9cc7d052dc6bc4168e6163283d36edf9
+  hash_d: 88e3bb2d2df21c268e18b1b712b03211ce0ecaa3f20974840811e8531997e549
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready
+  path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready.md
+  hash_c: 3bde9a87f83592f223f0cd4307361b2d24a35a401688d18cf6ea996a3d785985
+  hash_d: 6d47e9caa578d7129c86937cf352f1297b78e3b22c681b34bdb4a556073f56d4
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-rulematrixcompiler-sop-reduction-closeout-ready
+  path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-closeout-ready.md
+  hash_c: 703e7f85b4c443faecd8f2c176e789bab87d8cf50ca01eacd885cf62d34efc66
+  hash_d: 59d6bc5141af720cdeab3d462530f9c54e37dfb8959a5fb50fcd41c7e9d95ea1
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-execution-ready.md
+  hash_c: 7028c906340f6127fe9589ee225b76131cc8fbc419dfe4694bd6179b3dbbc800
+  hash_d: 0c2d6ed4d7e799e2384a898d2507d0f16754a038091a7987e63f03e2995d1737
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives
+- name: checklist-task-rulematrixcompiler-sop-reduction-testing-ready
+  path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-testing-ready.md
+  hash_c: 3f4a7cde027ec597c1431504c345fa25d726cb99ca1eabc57325cfa1ce7854ea
+  hash_d: 879384ae89d3b6ba5c227980d752e490d4ff537bcdf5b8aaec49ba01cc0dbb30
+  semantic_tags:
+  - primitive:checklist
+  - type.workflow.checklist
+  - workspace.desk.primitives

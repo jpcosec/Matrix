@@ -1,0 +1,13 @@
+name: OperatorDoc
+model_ref: deskops.models:OperatorDoc
+path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/operator.py
+documents_index: .sldb/core/documents/OperatorDoc.yaml
+sections_index: .sldb/runtime/sections/OperatorDoc.yaml
+hash_b: 8c63b74043861c9647f607a723389b83e5934173ce575d3650d7872628b01b15
+version: 1
+canonical: false
+family: null
+semantics:
+- type.workflow.operator
+- workspace.desk.primitives
+base_models: []

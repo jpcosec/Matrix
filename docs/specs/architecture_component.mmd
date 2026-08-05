@@ -1,0 +1,10 @@
+graph TD
+    CanonicalHypertensor["CanonicalHypertensor (JAX VRAM)"]
+    MEELEngine["MEELEngine (API Facade)"]
+    RuleMatrixCompiler["RuleMatrixCompiler"]
+    Feeders["Ingestion Feeders (OWL/Atom)"]
+    LogicalSpace["LogicalSpace (Registry)"]
+    Feeders -->|Raw Rules & Facts| RuleMatrixCompiler
+    RuleMatrixCompiler -->|SOP to Si Mask| CanonicalHypertensor
+    MEELEngine -->|Tensor Projection| CanonicalHypertensor
+    MEELEngine -->|Symbol lookup| LogicalSpace

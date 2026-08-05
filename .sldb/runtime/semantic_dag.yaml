@@ -7,19 +7,25 @@ nodes:
 - id: type.desk.inbox-note
   parents:
   - type.desk
-- id: type.knowledge
-  parents:
-  - type
-- id: type.knowledge.atom
-  parents:
-  - type.knowledge
 - id: type.workflow
   parents:
   - type
+- id: type.workflow.checklist
+  parents:
+  - type.workflow
+- id: type.workflow.condition
+  parents:
+  - type.workflow
+- id: type.workflow.edge
+  parents:
+  - type.workflow
+- id: type.workflow.operator
+  parents:
+  - type.workflow
 - id: type.workflow.pill
   parents:
   - type.workflow
-- id: type.workflow.step
+- id: type.workflow.routine
   parents:
   - type.workflow
 - id: type.workflow.task
@@ -30,10 +36,13 @@ nodes:
 - id: workspace.desk
   parents:
   - workspace
-- id: workspace.desk.atoms
+- id: workspace.desk.inbox
   parents:
   - workspace.desk
-- id: workspace.desk.inbox
+- id: workspace.desk.primitives
+  parents:
+  - workspace.desk
+- id: workspace.desk.routines
   parents:
   - workspace.desk
 equivalences: {}

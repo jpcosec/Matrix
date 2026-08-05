@@ -1,0 +1,29 @@
+id: matrix-rule-state
+title: "Rule Compilation State Machine"
+type: state
+version: "1.0"
+data:
+  entity: "Rule"
+  initial: "raw"
+  states:
+    - id: "raw"
+      label: "Raw String/AST"
+    - id: "parsed"
+      label: "Parsed SOP (Sum of Products)"
+    - id: "indexed"
+      label: "Symbolic Index mapped"
+    - id: "compiled"
+      label: "JAX Matrix Mask (Si)"
+  transitions:
+    - from: "raw"
+      to: "parsed"
+      "on": "parse()"
+      action: "Extract SOP form"
+    - from: "parsed"
+      to: "indexed"
+      "on": "map_symbols()"
+      action: "Lookup indices in LogicalSpace"
+    - from: "indexed"
+      to: "compiled"
+      "on": "compile()"
+      action: "Encode as bits in Si"

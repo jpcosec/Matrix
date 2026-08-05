@@ -1,0 +1,13 @@
+name: ChecklistDoc
+model_ref: deskops.models:ChecklistDoc
+path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/checklist.py
+documents_index: .sldb/core/documents/ChecklistDoc.yaml
+sections_index: .sldb/runtime/sections/ChecklistDoc.yaml
+hash_b: af19b110bfb910ab2a5737aa732e7fd80a304b3d93a64384f63e379fa0624342
+version: 1
+canonical: false
+family: null
+semantics:
+- type.workflow.checklist
+- workspace.desk.primitives
+base_models: []

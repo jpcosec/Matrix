@@ -1,0 +1,117 @@
+"""Corpus construction: sparse individuals x concepts matrix with provenance."""
+
+from __future__ import annotations
+
+from collections import Counter
+from dataclasses import dataclass
+
+import numpy as np
+from scipy import sparse
+
+from .extract import Document, Sentence, split_sentences
+from .phrases import count_ngrams, longest_match, select_phrases
+from .tokenize import STOPWORDS_EN, STOPWORDS_ES, auto_stopwords, normalize, tokenize
+
+
+@dataclass(frozen=True)
+class Individual:
+    """One row of the matrix: a sentence with its document coordinates."""
+
+    document_id: str
+    sentence_index: int
+    char_span: tuple[int, int]
+
+
+@dataclass(frozen=True)
+class Occurrence:
+    """One concept appearance mapped to matrix coordinates and text span."""
+
+    row: int
+    col: int
+    char_span: tuple[int, int]
+
+
+@dataclass(frozen=True)
+class Corpus:
+    """Sparse binary matrix plus concepts, individuals and provenance."""
+
+    X: sparse.csr_matrix
+    concepts: list[str]
+    individuals: list[Individual]
+    occurrences: list[Occurrence]
+    vocab_source: dict[str, list[str]]
+
+
+def build_corpus(
+    documents: list[Document],
+    unit: str = "sentence",
+    max_n: int = 3,
+    min_count: int = 3,
+    min_support: int = 5,
+    pmi_min: float | None = None,
+    extra_stopwords: tuple[str, ...] = (),
+) -> Corpus:
+    """Builds the individuals x concepts Corpus from loaded documents."""
+
+    if unit != "sentence":
+        raise ValueError(f"unsupported unit: {unit}")
+    sentences = [sentence for document in documents for sentence in split_sentences(document)]
+    tokens = [tokenize(sentence) for sentence in sentences]
+    sentence_norms = [[token.norm for token in token] for token in tokens]
+    stopwords = (
+        {normalize(word) for word in STOPWORDS_ES}
+        | {normalize(word) for word in STOPWORDS_EN}
+        | {normalize(word) for word in extra_stopwords}
+        | auto_stopwords(sentence_norms)
+    )
+    phrases = select_phrases(count_ngrams(sentence_norms, max_n), min_count, pmi_min)
+
+    matched: list[tuple[int, str, tuple[int, int]]] = []
+    for row, (sentence, sentence_tokens) in enumerate(zip(sentences, tokens)):
+        offset = sentence.char_span[0]
+        for occurrence in longest_match(sentence_tokens, phrases, stopwords):
+            start, end = occurrence.char_span
+            matched.append((row, occurrence.concept, (offset + start, offset + end)))
+
+    support: Counter[str] = Counter()
+    seen: set[tuple[int, str]] = set()
+    for row, concept, _ in matched:
+        if (row, concept) not in seen:
+            seen.add((row, concept))
+            support[concept] += 1
+    concepts = sorted(concept for concept, count in support.items() if count >= min_support)
+    column = {concept: index for index, concept in enumerate(concepts)}
+
+    rows: list[int] = []
+    cols: list[int] = []
+    for row, concept, _ in matched:
+        if concept in column:
+            rows.append(row)
+            cols.append(column[concept])
+    values = np.ones(len(rows), dtype=np.int8)
+    shape = (len(sentences), len(concepts))
+    matrix = sparse.csr_matrix((values, (rows, cols)), shape=shape, dtype=np.int8)
+    matrix.data[:] = 1
+
+    by_id = {document.document_id: document for document in documents}
+    vocab_source: dict[str, list[str]] = {concept: [] for concept in concepts}
+    occurrences: list[Occurrence] = []
+    for row, concept, span in matched:
+        if concept not in column:
+            continue
+        occurrences.append(Occurrence(row, column[concept], span))
+        surface = by_id[sentences[row].document_id].text[span[0] : span[1]]
+        if surface not in vocab_source[concept]:
+            vocab_source[concept].append(surface)
+
+    individuals = [
+        Individual(sentence.document_id, sentence.index, sentence.char_span)
+        for sentence in sentences
+    ]
+    return Corpus(
+        X=matrix,
+        concepts=concepts,
+        individuals=individuals,
+        occurrences=occurrences,
+        vocab_source=vocab_source,
+    )

@@ -42,6 +42,12 @@ class Corpus:
     vocab_source: dict[str, list[str]]
 
 
+def _is_valid_concept(concept: str) -> bool:
+    """Rejects punctuation-only tokens that normalize to an empty concept."""
+
+    return bool(concept.strip(" _-"))
+
+
 def build_corpus(
     documents: list[Document],
     unit: str = "sentence",
@@ -50,17 +56,30 @@ def build_corpus(
     min_support: int = 5,
     pmi_min: float | None = None,
     extra_stopwords: tuple[str, ...] = (),
+    max_concepts: int | None = None,
+    lang: str | None = None,
 ) -> Corpus:
-    """Builds the individuals x concepts Corpus from loaded documents."""
+    """Builds the individuals x concepts Corpus from loaded documents.
+
+    ``lang`` selects the stopword list (``"es"``, ``"en"``); ``None`` keeps both.
+    ``max_concepts`` keeps the highest document-frequency concepts.
+    """
 
     if unit != "sentence":
         raise ValueError(f"unsupported unit: {unit}")
+    if lang not in {None, "es", "en"}:
+        raise ValueError(f"unsupported lang: {lang}")
     sentences = [sentence for document in documents for sentence in split_sentences(document)]
     tokens = [tokenize(sentence) for sentence in sentences]
     sentence_norms = [[token.norm for token in token] for token in tokens]
+    base_stopwords = {
+        "es": {normalize(word) for word in STOPWORDS_ES},
+        "en": {normalize(word) for word in STOPWORDS_EN},
+        None: {normalize(word) for word in STOPWORDS_ES}
+        | {normalize(word) for word in STOPWORDS_EN},
+    }[lang]
     stopwords = (
-        {normalize(word) for word in STOPWORDS_ES}
-        | {normalize(word) for word in STOPWORDS_EN}
+        base_stopwords
         | {normalize(word) for word in extra_stopwords}
         | auto_stopwords(sentence_norms)
     )
@@ -76,10 +95,15 @@ def build_corpus(
     support: Counter[str] = Counter()
     seen: set[tuple[int, str]] = set()
     for row, concept, _ in matched:
+        if not _is_valid_concept(concept):
+            continue
         if (row, concept) not in seen:
             seen.add((row, concept))
             support[concept] += 1
     concepts = sorted(concept for concept, count in support.items() if count >= min_support)
+    if max_concepts is not None:
+        ranked = [concept for concept, _ in support.most_common() if support[concept] >= min_support]
+        concepts = sorted(ranked[:max_concepts])
     column = {concept: index for index, concept in enumerate(concepts)}
 
     rows: list[int] = []

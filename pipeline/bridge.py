@@ -4,7 +4,11 @@ from __future__ import annotations
 
 from collections import Counter
 import json
+import re
+import unicodedata
 from typing import Any, TYPE_CHECKING
+
+import numpy as np
 
 from populator import Corpus
 from populator.extract import Document
@@ -45,6 +49,10 @@ def corpus_to_sexprs(
     auto_confirm_phi: float = 0.99,
     extractor: str = "populator@0.1",
     documents: list[Document] | None = None,
+    max_fact_candidates: int | None = None,
+    max_nonsense: int | None = None,
+    max_class_candidates: int | None = None,
+    hierarchy_max_concepts: int | None = 120,
 ) -> list[str]:
     """Builds the create plus candidate S-expressions for one corpus.
 
@@ -71,7 +79,10 @@ def corpus_to_sexprs(
 
     index = {concept: position for position, concept in enumerate(concepts)}
     cooccurring = _concept_rows(corpus)
-    for record in rules(concepts, c, alpha=alpha, threshold=phi_min):
+    records = rules(concepts, c, alpha=alpha, threshold=phi_min)
+    if max_fact_candidates is not None:
+        records = records[:max_fact_candidates]
+    for record in records:
         a, b = record["a"], record["b"]
         evidence: dict[str, Any] = {
             "tier": "statistical",
@@ -101,35 +112,40 @@ def corpus_to_sexprs(
             f"(candidate fact wigame:{wigame_id} ({relation_id} {a} {b}) evidence:{_compact(evidence)})"
         )
 
-    levels = build_hierarchy(cohesion)
-    for level_index in significant_levels(levels, cohesion):
-        level = levels[level_index]
-        if len(level.cls) < 2:
-            continue
-        names = [concepts[position] for position in level.cls]
-        class_id = "_".join(names)
+    class_entries = _class_entries(corpus, concepts, cohesion, c, alpha, hierarchy_max_concepts)
+    if max_class_candidates is not None:
+        class_entries = class_entries[:max_class_candidates]
+    if max_class_candidates is not None:
+        class_entries = class_entries[:max_class_candidates]
+    for cohesion_value, class_id, names in class_entries:
         evidence = {
             "tier": "statistical",
             "curation": "proposed",
-            "stats": {"cohesion": float(level.cohesion)},
+            "stats": {"cohesion": cohesion_value},
         }
         sexprs.append(
             f"(candidate class wigame:{wigame_id} ({class_id} {' '.join(names)}) evidence:{_compact(evidence)})"
         )
 
+    nonsense_pairs: list[tuple[float, int, int]] = []
     for a in range(len(concepts)):
         for b in range(len(concepts)):
             if a == b or c.n_a[a] < n_min or c.n_a[b] < n_min or c.n_ab[a, b] != 0:
                 continue
-            evidence = {
-                "tier": "statistical",
-                "curation": "proposed",
-                "stats": {"n": c.n, "n_a": int(c.n_a[a]), "n_b": int(c.n_a[b]), "n_anb": 0},
-            }
-            sexprs.append(
-                f"(candidate nonsense wigame:{wigame_id} ({relation_id} {concepts[a]} {concepts[b]}) "
-                f"evidence:{_compact(evidence)})"
-            )
+            nonsense_pairs.append((float(c.n_a[a] * c.n_a[b]), a, b))
+    nonsense_pairs.sort(key=lambda entry: (-entry[0], entry[1], entry[2]))
+    if max_nonsense is not None:
+        nonsense_pairs = nonsense_pairs[:max_nonsense]
+    for _, a, b in nonsense_pairs:
+        evidence = {
+            "tier": "statistical",
+            "curation": "proposed",
+            "stats": {"n": c.n, "n_a": int(c.n_a[a]), "n_b": int(c.n_a[b]), "n_anb": 0},
+        }
+        sexprs.append(
+            f"(candidate nonsense wigame:{wigame_id} ({relation_id} {concepts[a]} {concepts[b]}) "
+            f"evidence:{_compact(evidence)})"
+        )
     return sexprs
 
 
@@ -172,11 +188,49 @@ def _provenance(
     return provenance
 
 
+def _class_entries(
+    corpus: Corpus,
+    concepts: list[str],
+    cohesion: Any,
+    counts: Any,
+    alpha: float,
+    hierarchy_max_concepts: int | None,
+) -> list[tuple[float, str, list[str]]]:
+    """Computes significant class candidates, subsampling the hierarchy if needed."""
+
+    if hierarchy_max_concepts is not None and len(concepts) > hierarchy_max_concepts:
+        columns = list(np.argsort(-counts.n_a)[:hierarchy_max_concepts])
+        sub_corpus = corpus.X[:, columns]
+        sub_concepts = [concepts[position] for position in columns]
+        sub_counts = contingency(sub_corpus)
+        sub_cohesion = cohesion_pair(phi_entropic(sub_counts, alpha))
+        levels = build_hierarchy(sub_cohesion)
+        significant = significant_levels(levels, sub_cohesion)
+    else:
+        sub_concepts = concepts
+        levels = build_hierarchy(cohesion)
+        significant = significant_levels(levels, cohesion)
+    entries: list[tuple[float, str, list[str]]] = []
+    for index in significant:
+        if len(levels[index].cls) < 2:
+            continue
+        names = [sub_concepts[position] for position in levels[index].cls]
+        entries.append((float(levels[index].cohesion), "_".join(names), names))
+    return entries
+
+
 def _compact(payload: dict[str, Any]) -> str:
     return json.dumps(payload, separators=(",", ":"), ensure_ascii=False)
 
 
 def _atom(surface: str) -> str:
-    """Collapses a surface form into a single s-expression atom."""
+    """Collapses a surface form into one safe accent-folded s-expression atom."""
 
-    return "_".join(surface.split()) or surface
+    collapsed = "_".join(surface.split())
+    folded = "".join(
+        char for char in unicodedata.normalize("NFKD", collapsed) if not unicodedata.combining(char)
+    )
+    return _ATOM_RE.sub("_", folded).strip("_") or "concept"
+
+
+_ATOM_RE = re.compile(r"[^0-9A-Za-z_-]+")

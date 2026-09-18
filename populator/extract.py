@@ -28,14 +28,19 @@ class Sentence:
     text: str
 
 
-def read_documents(paths: str | Path | list[str | Path]) -> list[Document]:
+def read_documents(
+    paths: str | Path | list[str | Path],
+    recursive: bool = False,
+) -> list[Document]:
     """Reads ``.md``/``.txt`` files (or a directory of them) into Documents."""
 
     if isinstance(paths, (str, Path)):
         base = Path(paths)
-        candidates = sorted(
-            child for child in base.iterdir() if child.suffix in _DOCUMENT_SUFFIXES
-        ) if base.is_dir() else [base]
+        if base.is_dir():
+            children = base.rglob("*") if recursive else base.iterdir()
+            candidates = sorted(child for child in children if child.suffix in _DOCUMENT_SUFFIXES)
+        else:
+            candidates = [base]
     else:
         candidates = [Path(path) for path in paths]
     return [

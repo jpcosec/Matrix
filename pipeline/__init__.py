@@ -12,12 +12,12 @@ if str(_MATRIX_ROOT) not in sys.path:
 from .bridge import auto_confirm_candidates, corpus_to_sexprs
 
 
-def build_system(corpus_dir, wigame_id: str = "vegetales"):
+def build_system(corpus_dir, wigame_id: str = "vegetales", **kwargs):
     """Builds the logical system, runtime and results for a corpus."""
 
     from .run import build_system as _build_system
 
-    return _build_system(corpus_dir, wigame_id)
+    return _build_system(corpus_dir, wigame_id, **kwargs)
 
 
 def main(argv: list[str] | None = None) -> int:

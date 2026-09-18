@@ -1,6 +1,23 @@
-# Fuentes y Referencias Base
+# Fuentes
 
-- **Matrix Engine**: `/home/jp/proyectos/Matrix/Matrix/` - Repositorio local. Introduce el concepto de motor lógico basado en separación de matrices de sentido ($S_i$) y verdad ($V_i$), encapsulados en juegos de lenguaje locales ($W_i$) e interfaces de relación indexables ($L_i$).
-- **Korel (Knowledge Organization Engine)**: [github.com/cognicore-io/korel](https://github.com/cognicore-io/korel) - Sistema de "Knowledge Retrieval" de texto que fusiona NLP estadístico noventero (PMI, n-gramas) con inferencia simbólica en Go puro, usado como referencia para la capa de chunking y extracción inicial de co-ocurrencias.
-- **CHIC / SIA**: PDF en `/home/jp/proyectos/pron/source/3729238.pdf` y [Springer Link](https://link.springer.com/chapter/10.1007/978-3-540-78983-3_2). *Cohesive Hierarchical Implicative Classification*. Algoritmo que extrae jerarquías orientadas y grafos asimétricos de implicación ($A \implies B$) directamente desde los datos. Provee la topología matemática para los $W_i$ y los $L_i$.
-- **SHRDLU Original**: `/home/jp/proyectos/pron/source/shrdlu/` - Código original en LISP del SHRDLU. Define la semántica procedimental (Micro Planner) donde los comandos en lenguaje natural se traducen a programas de deducción lógica recursiva, cuya mecánica moderna se vectoriza usando álgebra lineal.
+Los PDF no se versionan (`.gitignore`); se citan por ruta local y página impresa.
+
+## Algoritmo (CHIC / SIA)
+- **Gras, Suzuki, Guillet, Spagnolo (eds.).** *Statistical Implicative Analysis: Theory and Applications.* Studies in Computational Intelligence 127, Springer, 2008. e-ISBN 978-3-540-78983-3. Local: `978-3-540-78983-3.pdf` (raíz; página PDF = impresa + 13).
+  - Cap. 1, Gras & Kuntz, *An overview of the SIA development*, pp. 11-40: índice `q`, intensidad `ϕ`, versión entrópica, R-reglas, cohesión, jerarquía implicativa, niveles significativos, tipicidad/contribución.
+  - Cap. 2, Couturier, *CHIC: Cohesive Hierarchical Implicative Classification*, pp. 41-53: tipos de variable, árbol de similitud, jerarquía, grafo implicativo con cuatro umbrales.
+  - Cap. 11, David, Guillet, Briand, Gras, *On the use of Implication Intensity for matching ontologies and textual taxonomies*, pp. 227-245: método AROMA (futuro: proyecciones entre mundos).
+- **Pazmiño, Bonilla, Baquero, Miguez.** *Software Estadístico CHIC: descubriendo sus potencialidades…* Ciencia Digital 2(4.1), 2018, pp. 122-139. Local: `194-Article Text-588-2-10-20181226.pdf`. Referencia de uso e interpretación de R-CHIC, no de algoritmo.
+
+## Motor
+- **Matrix** — `github.com/jpcosec/Matrix`, subtree en `matrix/` (commit `38dcfbd`). Separación sentido/verdad (`S_i`/`V_i`) en juegos de lenguaje (`WiGame`), kernel booleano, runtime S-expr. Ver [matrix.md](matrix.md).
+
+## Chunking
+- **Korel** — `github.com/cognicore-io/korel` (Go). Pipeline de 8 fases; se copian las fases 1-3 (extract, tokenize+stopwords, multi-token longest-match). Ver [populator.md](populator.md).
+
+## Interacción
+- **Winograd, T.** *Understanding Natural Language* (1972). Fuente MACLISP del SHRDLU de consola: `sources/shrdlu/consoleshrdlu/` (módulos `NEWANS`, `SYSCOM`, `DICTIO`, `PLNR`, `SMUTIL`, `SMSPEC`, `HELP`). Ver [shrdlu.md](shrdlu.md).
+
+## Contexto
+- **Ji et al.** *Probing the Symbolic Logical Reasoning Ability of Large Language Models* (L3M), Rutgers. Local: `sources/3729238.pdf`. Referencia sobre límites de razonamiento lógico en LLMs; **no** es una fuente de CHIC (una versión anterior de este doc lo citaba así por error).
+- **Wittgenstein, L.** *Tractatus Logico-Philosophicus* (1922): origen de `sinnvoll / sinnlos / unsinnig`.

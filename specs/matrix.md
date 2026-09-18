@@ -1,15 +1,40 @@
-# El Motor Matrix ($W_i$, $S_i$, $V_i$)
+# Matrix — el motor booleano
 
-La capa base de almacenamiento e inferencia no es un grafo de nodos y punteros, sino un **Hipertensor disperso (Sparse Hypertensor)**.
+`matrix/` es un subtree de `github.com/jpcosec/Matrix` (commit `38dcfbd`), traído con historial y arreglado para que su suite pase (119 tests). Se modifica libremente; su antiguo SSOT de átomos no es vinculante. Esta página dice qué se usa, qué se cambia y qué se ignora.
 
-## El Campo Semántico ($A$)
-Un sujeto $a$ no es un simple string. Se define como la probabilidad del signo lingüístico dado un contexto: $A = P(\text{contexto}, \text{signo})$. El mismo texto ("perro") representa vectores distintos si se evalúa en $W_{mascotas}$ vs $W_{calle}$.
+## 1. Lo que se usa tal cual
 
-## Matrices de Estado
-Para cada contexto lógico ($W_i$, o "Juego de Lenguaje"), las relaciones ($aRb$) se representan en matrices/tensores:
-1. **Matriz de Sentido ($S_i$)**: Define la topología del mundo. Marca si la relación $aRb$ es `sinnvoll` (tiene sentido), `sinnlos` (tautología) o `unsinnig` (absurdo).
-2. **Matriz de Verdad ($V_i$)**: Almacena los hechos comprobados como valores booleanos (densos o dispersos).
+| Pieza | Archivo | Qué hace |
+|---|---|---|
+| `Fact`, `Proposition`, `TruthValue`, `SenseValue` | `src/operational_model/core/{fact,proposition,truth_value,sense_value}.py` | Unidad lógica `(R a b)` con verdad `TRUE/FALSE/UNKNOWN`, sentido `sinnvoll/sinnlos/unsinnig` y `evidence: dict`. |
+| `Symbol`, `Name`, `Thing`, `Relation`, `LiSpace` | `core/{symbol,name,thing,relation,li_space}.py` | Catálogo de símbolos con signos, relaciones con álgebra (`commutative/transitive/…`), ejes admisibles `axis_a × axis_b`. |
+| `WiGame` | `system/wigame.py:19` | Mundo local con su `Vi`, `Si`, hechos y proposiciones; `accepts/add_fact/search/is_pure/…`. |
+| `BooleanMatrix`, `ViMatrix`, `SiMatrix` | `matrices/` | Matrices con ejes nombrados; `bool_mult` por bitmasks; `transitive_closure` reflexivo-transitiva por *squaring* (`boolean_matrix.py:178`). |
+| `RuleMatrixCompiler`, `modus_ponens`, `hypothetical_syllogism` | `kernel/rule_matrix.py:25`, `kernel/formula_inference.py` | `(if a b)` → Implication Matrix `I`; deducción `v ⊗ I*`. |
+| `RoutingProjection`, `Context`, `SearchVector` | `routing/` | Proyección `entidad × entidad` entre dos `WiGame`; `project_subjects`, `bool_mult`. |
+| `SExpressionRuntime` | `system/s_expression_runtime.py:32` | Verbos `check / assert / ingest / create / return` → `OperationResult(status, sinn, payload, reason)`. |
+| Serialización YAML de mundos | `system/wi_game_serialization.py`, `examples/*.yaml` | Formato `wigame_id, axis_a, axis_b, relation, Vi{1/0/∅}, Si{V/L/U}, facts[]`. |
+| Prototipo SHRDLU | `prototypes/shrdlu/` | Léxico, parser de inglés controlado → frames, `DialogState`, lowering a S-expr. |
 
-## Jerarquía de Relaciones ($L_i$)
-Las relaciones no son planas. Existen interfaces lógicas ($L_i$) jerárquicas. Por ejemplo, $L_{propiedad\_verdura}$ es un subconjunto de $L_{propiedades}$.
-Consultar una regla abstracta equivale a hacer un "slice" o un barrido jerárquico en el eje de relaciones del hipertensor, calculado eficientemente con operaciones vectorizadas (JAX/NumPy).
+## 2. Lo que se cambia
+
+| Cambio | Motivo | Doc |
+|---|---|---|
+| Esquema de `Fact.evidence` (`prov`, `tier`, `curation`, `stats`, `derived_from`, `history`) y validación en `add_fact` | hoy es un dict libre que nadie lee | [provenance.md](provenance.md) |
+| `assert` acepta `evidence`; `UNKNOWN` no alimenta `v` en `modus_ponens` | separar propuesto de confirmado | [provenance.md](provenance.md) |
+| Verbos nuevos `retract`, `promote`, `reject`, `why`, `define`, `return candidates` | curado y loop de interacción | [runtime_api.md](runtime_api.md) |
+| `DialogState` real (pila de referentes, foco, aclaración) | hoy solo resuelve `it/them/they` al último referente | [shrdlu.md](shrdlu.md) |
+| Ingesta masiva desde `sia/report` (símbolos, `li`, mundos, filas de `I`) | no existe ruta a nivel corpus; solo `ingest` uno a uno | [chic.md](chic.md) §5 |
+| Partición en `WiGame` hijos por clase de CHIC + `RoutingProjection` al padre | jerarquía → sub-mundos | [chic.md](chic.md) §5 |
+
+## 3. Lo que se ignora
+
+- `desk/`, `Whitepaper/`, `docs/*.md` "atomizados" (`proposition_first_architecture.md`, `data_models.md`): vistas de un SSOT que ya no gobierna. Se podan cuando estorben.
+- Hipertensor canónico global y migración a JAX (`desk/pills/pill-migracion-a-jax.md`, tareas `[draft]`): no se hacen. El estado vive en cada `WiGame`.
+- `language/owl2matrix.py`: se mantiene por si sirve de importador, sin desarrollo.
+
+## 4. Convenciones heredadas
+
+- Forma canónica externa `(R a b)`; interna en campos separados (`relation_id, subject_symbol_id, object_symbol_id`).
+- Tests: `pytest` desde `matrix/`, imports `from src.operational_model...`, builders (`build_system()`) en vez de fixtures, un archivo por módulo.
+- Cuando `(R a b)` cabe en más de un `WiGame`, el runtime devuelve `status="ambiguous"` con `payload.candidates`; nunca elige en silencio.

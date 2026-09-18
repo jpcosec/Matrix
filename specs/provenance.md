@@ -1,14 +1,51 @@
-# Procedencia y Resolución de Conflictos (Provenance)
+# Procedencia y resolución de conflictos
 
-En un sistema que mezcla texto estadístico, deducción matricial y comprobación causal, una celda en la Matriz de Verdad ($V_i$) no puede ser solo un `1` o un `0`. Necesita trazabilidad absoluta para resolver conflictos cuando las reglas chocan.
+## 1. Dónde vive
 
-## La Capa de Procedencia
-Cada hecho o relación almacenada en el motor debe tener metadatos de linaje (Provenance). Los orígenes posibles determinan el "peso" epistémico de la afirmación:
+En `Fact.evidence` (`matrix/src/operational_model/core/fact.py:20`, `dict[str, Any]`). Hoy no tiene esquema, solo lo escribe un test y lo serializa `system/wi_game_serialization.py:85,125`; `assert` crea `Fact` con `evidence={}`. Esta spec le da esquema. No se crean matrices de procedencia.
 
-1. **Observed (Empírico)**: Un hecho insertado directamente por telemetría o ingesta humana dura. Es la verdad absoluta.
-2. **Causal (Validado)**: Reglas derivadas del cálculo `do(X)` en la base de datos transaccional ($C_i$). Tiene precedencia sobre la estadística.
-3. **Inferred (Modus Ponens)**: Hecho deducido matemáticamente cruzando tensores (ej. $V_A \cdot I_{A \implies B}$).
-4. **Statistical (CHIC/Korel)**: Relación extraída por minería de texto (Alta co-ocurrencia / Implicancia $I_i$). Es el nivel más débil, útil como heurística cuando no hay datos empíricos.
+```json
+{
+  "prov": [
+    {"document_id": "recetas/ragout.md", "span": [412, 468], "extractor": "populator@0.1", "confidence": 0.97}
+  ],
+  "tier": "statistical",
+  "curation": "proposed",
+  "stats": {"phi": 0.9999, "phi_entropic": 0.777, "n": 4000, "n_a": 600, "n_b": 1400, "n_anb": 200},
+  "derived_from": ["fact:…", "fact:…"],
+  "history": [{"at": "2026-09-18T03:10:00Z", "by": "jp", "action": "confirm", "note": "…"}]
+}
+```
 
-## Mecanismo de Resolución
-Si el LLM pregunta algo y hay un conflicto entre matrices (ej. el texto estadístico asume que X implica Y, pero la matriz causal demuestra que no), el motor Matrix utiliza la etiqueta de Procedencia como mecanismo de desempate determinista (Fallback). El grafo causal sobreescribe la co-ocurrencia estadística.
+- `prov`: lista de `Prov(f) = (document_id, span, extractor, confidence)` (átomo `Procedencia_y_Evidencia` de Matrix). Un hecho puede tener varias citas.
+- `tier`: nivel epistémico (§2). `curation`: `proposed | confirmed | rejected`.
+- `stats`: los números de `sia/` que justificaron la propuesta.
+- `derived_from`: para hechos inferidos, las premisas (`fact_id`) usadas por `v ⊗ I*`.
+- `history`: cada cambio de estado, con autor y motivo.
+
+## 2. Niveles
+
+| `tier` | Quién lo pone | `truth` típica | Precedencia |
+|---|---|---|---|
+| `observed` | humano o telemetría, directamente (`assert`) | `TRUE`/`FALSE` | 1 (máxima) |
+| `confirmed` | propuesto por `sia/`+LLM, confirmado por humano (`promote`) | `TRUE` | 2 |
+| `inferred` | modus ponens sobre `I*` | `TRUE` | 3 |
+| `statistical` | `sia/report` sin curar | `UNKNOWN` | 4 |
+
+Un hecho `statistical` nunca participa en la deducción: `UNKNOWN` no activa filas de `I`. Solo `confirmed` y `observed` alimentan `v`.
+
+## 3. Conflictos
+
+Política tomada del átomo `Manejo_de_Contradicciones` de Matrix: un candidato que contradice `V_i` emite una **señal explícita** (`OperationResult.status="reject", sinn="widerspruechlich"`, ya implementado en `system/s_expression_runtime.py:129`); nunca se sobrescribe en silencio. Tres resoluciones:
+
+1. **One-hot estricto:** si la relación es exclusiva (p. ej. `color`), afirmar un segundo valor se rechaza por invariante.
+2. **Objeto de contradicción:** el conflicto se registra como estado inestable y se pide una dimensión discriminativa `D_i` (p. ej. "¿en qué contexto?"), que abre un `WiGame` hijo.
+3. **Por confianza:** entre niveles gana el `tier` de mayor precedencia; dentro del mismo nivel gana el `confidence` mayor y, a igualdad, el más reciente; el perdedor pasa a `history`, no se borra.
+
+`retract` (nuevo verbo) no destruye: pone `truth=FALSE` o `UNKNOWN` según se indique y anota `history`.
+
+## 4. Qué se implementa
+
+- Esquema anterior como `TypedDict` en `matrix/src/operational_model/core/evidence.py` + validación en `add_fact`.
+- `assert` acepta `evidence` opcional; `promote` lo rellena desde el candidato.
+- `why` recorre `derived_from` y `prov`.

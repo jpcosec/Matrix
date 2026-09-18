@@ -1,0 +1,6 @@
+# Fuentes y Referencias Base
+
+- **Matrix Engine**: `/home/jp/proyectos/Matrix/Matrix/` - Repositorio local. Introduce el concepto de motor lógico basado en separación de matrices de sentido ($S_i$) y verdad ($V_i$), encapsulados en juegos de lenguaje locales ($W_i$) e interfaces de relación indexables ($L_i$).
+- **Korel (Knowledge Organization Engine)**: [github.com/cognicore-io/korel](https://github.com/cognicore-io/korel) - Sistema de "Knowledge Retrieval" de texto que fusiona NLP estadístico noventero (PMI, n-gramas) con inferencia simbólica en Go puro, usado como referencia para la capa de chunking y extracción inicial de co-ocurrencias.
+- **CHIC / SIA**: PDF en `/home/jp/proyectos/pron/source/3729238.pdf` y [Springer Link](https://link.springer.com/chapter/10.1007/978-3-540-78983-3_2). *Cohesive Hierarchical Implicative Classification*. Algoritmo que extrae jerarquías orientadas y grafos asimétricos de implicación ($A \implies B$) directamente desde los datos. Provee la topología matemática para los $W_i$ y los $L_i$.
+- **SHRDLU Original**: `/home/jp/proyectos/pron/source/shrdlu/` - Código original en LISP del SHRDLU. Define la semántica procedimental (Micro Planner) donde los comandos en lenguaje natural se traducen a programas de deducción lógica recursiva, cuya mecánica moderna se vectoriza usando álgebra lineal.

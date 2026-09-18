@@ -1,0 +1,10 @@
+*.pdf
+*.zip
+*.EXE
+*.MEM
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.herdr/
+.ruff_cache/

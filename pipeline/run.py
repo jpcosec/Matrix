@@ -29,10 +29,11 @@ def build_system(
     recursive: bool = False,
     corpus=None,
     documents=None,
+    system=None,
     max_fact_candidates: int | None = None,
     max_nonsense: int | None = None,
     max_class_candidates: int | None = None,
-    hierarchy_max_concepts: int | None = 120,
+    hierarchy_max_concepts: int | None = None,
     report: dict | None = None,
 ) -> "tuple":
     """Builds the logical system, runtime and evaluation results for a corpus.
@@ -70,7 +71,7 @@ def build_system(
     )
     sia_seconds = perf_counter() - start
 
-    system = LogicalSystem()
+    system = system or LogicalSystem()
     runtime = SExpressionRuntime(system)
     results: list[OperationResult] = []
     start = perf_counter()

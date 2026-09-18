@@ -6,7 +6,7 @@ import math
 from collections import Counter
 from dataclasses import dataclass
 
-from .tokenize import Token
+from .tokenize import Token, is_usable_token
 
 
 @dataclass(frozen=True)
@@ -74,6 +74,7 @@ def longest_match(
     """Greedily matches the longest non-stopword n-gram at every position."""
 
     occurrences: list[Occurrence] = []
+    vocabulary = {token for phrase in phrases for token in phrase}
     index = 0
     while index < len(tokens):
         matched = 0
@@ -83,7 +84,9 @@ def longest_match(
             window = tokens[index : index + size]
             norms = tuple(token.norm for token in window)
             if size == 1:
-                candidate = norms[0] not in stopwords
+                # Single-token concepts must be content words; the phrase
+                # vocabulary only rescues short tokens inside a multi-token match.
+                candidate = norms[0] not in stopwords and is_usable_token(norms[0], set())
             else:
                 candidate = norms in phrases and not any(norm in stopwords for norm in norms)
             if candidate:

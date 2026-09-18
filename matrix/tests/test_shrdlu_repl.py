@@ -13,6 +13,8 @@ if str(_REPO_ROOT) not in sys.path:
 
 from pipeline.run import build_system
 
+from pipeline.curate import FakeBackend
+
 from prototypes.shrdlu.dialog_state import DialogState
 from prototypes.shrdlu.repl import Repl
 
@@ -81,3 +83,28 @@ def test_show_wigame_lists_facts(repl):
 
     assert FOCUS in listing
     assert "= true" in listing
+
+
+def test_sugiere_uses_the_injected_backend(repl):
+    candidate_id = repl.step("candidatos").splitlines()[0].split()[1]
+    payload = '{"sexpr": "(implies lechuga hoja)", "prov_index": 0, "keep": true, "comment": "ok"}'
+    repl.backend = FakeBackend(payload)
+
+    answer = repl.step(f"sugiere {candidate_id}")
+
+    assert "Propuesta" in answer
+    assert "(implies lechuga hoja)" in answer
+    assert repl.system.candidates[candidate_id].evidence["curation"] == "proposed"
+
+
+def test_sugiere_reports_backend_failures(repl):
+    class BrokenBackend:
+        name = "broken"
+
+        def __call__(self, prompt: str) -> str:
+            raise RuntimeError("no model")
+
+    candidate_id = repl.step("candidatos").splitlines()[0].split()[1]
+    repl.backend = BrokenBackend()
+
+    assert "No pude consultar al backend" in repl.step(f"sugiere {candidate_id}")

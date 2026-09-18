@@ -26,6 +26,8 @@ class Repl:
     system: LogicalSystem
     runtime: SExpressionRuntime
     dialog: DialogState = field(default_factory=DialogState)
+    backend: object | None = None
+    documents: list = field(default_factory=list)
 
     def step(self, line: str) -> str:
         """Processes one user line and returns the answer text."""
@@ -38,6 +40,8 @@ class Repl:
             return self._run(self.dialog.answer(norm))
         if norm in _SALIR:
             return "Hasta luego."
+        if norm.startswith("sugiere "):
+            return self._suggest(norm.split(None, 1)[1])
         parsed = parse_es(text, self.dialog)
         if isinstance(parsed, Clarification):
             self.dialog.pending = parsed
@@ -58,6 +62,21 @@ class Repl:
 
     def _run(self, sexpr: str) -> str:
         return self._verbalize(sexpr, self.runtime.evaluate(sexpr))
+
+    def _suggest(self, candidate_id: str) -> str:
+        """Asks the LLM backend for a draft proposal without confirming anything."""
+
+        from pipeline.curate import PiBackend, propose
+
+        backend = self.backend or PiBackend()
+        try:
+            proposal = propose(self.system, candidate_id, backend, self.documents)
+        except Exception as error:  # noqa: BLE001 - the REPL reports backend failures as text
+            return f"No pude consultar al backend: {error}"
+        return (
+            f"Propuesta: {proposal.sexpr or '(vacía)'} "
+            f"[prov {proposal.prov_index}; keep={proposal.keep}] {proposal.comment}"
+        )
 
     def _verbalize(self, sexpr: str, result: OperationResult) -> str:
         payload = result.payload or {}
@@ -132,9 +151,13 @@ def build_repl(corpus_dir: str | Path = "corpus/vegetales", wigame_id: str = "ve
     location = Path(corpus_dir)
     if not location.exists() and (_REPO_ROOT / location).exists():
         location = _REPO_ROOT / location
-    system, runtime, _ = build_system(location, wigame_id)
+    from populator import build_corpus, read_documents
+
+    documents = read_documents(location)
+    corpus = build_corpus(documents)
+    system, runtime, _ = build_system(location, wigame_id, corpus=corpus, documents=documents)
     dialog = DialogState(focus_wigame=f"wigame:{wigame_id}", system=system)
-    return Repl(system=system, runtime=runtime, dialog=dialog)
+    return Repl(system=system, runtime=runtime, dialog=dialog, documents=documents)
 
 
 def main(argv: list[str] | None = None) -> int:

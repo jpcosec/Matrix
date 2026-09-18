@@ -59,3 +59,53 @@ def test_significant_levels_returns_valid_indices():
 
     assert significant
     assert all(0 <= index < len(levels) for index in significant)
+
+
+def _synthetic_levels(size: int, count: int):
+    from sia.hierarchy import Level
+
+    live = [(index,) for index in range(size)]
+    levels = []
+    while len(live) > 1 and len(levels) < count:
+        first = live.pop(0)
+        second = live.pop(0)
+        merged = first + second
+        live.insert(0, merged)
+        levels.append(Level(len(levels), merged, 0.9, 0.1))
+    return levels
+
+
+def test_significant_levels_matches_the_naive_implementation():
+    from sia.hierarchy import _significant_levels_naive
+
+    rng = np.random.default_rng(3)
+    cpair = cohesion_pair(rng.random((12, 12)))
+    levels = build_hierarchy(cpair)
+
+    assert significant_levels(levels, cpair) == _significant_levels_naive(levels, cpair)
+
+
+def test_significant_levels_is_fast_on_large_hierarchies():
+    from time import perf_counter
+
+    cpair = np.random.default_rng(4).random((300, 300))
+    levels = _synthetic_levels(300, 150)
+
+    start = perf_counter()
+    significant_levels(levels, cpair)
+    elapsed = perf_counter() - start
+
+    assert elapsed < 2.0
+
+
+def test_significant_levels_handles_eight_hundred_variables():
+    from time import perf_counter
+
+    cpair = np.random.default_rng(5).random((800, 800))
+    levels = _synthetic_levels(800, 200)
+
+    start = perf_counter()
+    significant_levels(levels, cpair)
+    elapsed = perf_counter() - start
+
+    assert elapsed < 5.0

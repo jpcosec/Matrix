@@ -34,7 +34,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-facts", type=int, default=3000)
     parser.add_argument("--max-nonsense", type=int, default=500)
     parser.add_argument("--max-classes", type=int, default=15)
-    parser.add_argument("--hierarchy-concepts", type=int, default=120)
+    parser.add_argument("--hierarchy-concepts", type=int, default=None)
     parser.add_argument("--min-confirmed", type=int, default=30)
     parser.add_argument("--recursive", action="store_true")
     parser.add_argument("--out", required=True)

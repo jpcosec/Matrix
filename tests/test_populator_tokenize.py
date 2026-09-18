@@ -41,3 +41,14 @@ def test_auto_stopwords_detects_very_frequent_token():
 
     assert "agua" in auto_stopwords(sentences, df_ratio=0.5)
     assert "sal" not in auto_stopwords(sentences, df_ratio=0.5)
+
+
+def test_is_usable_token_filters_short_digits_and_punctuation():
+    from populator.tokenize import is_usable_token
+
+    assert is_usable_token("lechuga", set())
+    assert not is_usable_token("5", set())
+    assert not is_usable_token("de", set())
+    assert not is_usable_token("127", set())
+    assert not is_usable_token("", set())
+    assert is_usable_token("5", {"5"})

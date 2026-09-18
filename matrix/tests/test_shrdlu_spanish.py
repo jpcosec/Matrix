@@ -26,6 +26,15 @@ def dialog():
     return DialogState(focus_wigame=FOCUS, system=system)
 
 
+@pytest.fixture(scope="module")
+def ambiguous_dialog():
+    from src.operational_model import Name, Symbol, Thing
+
+    system, _, _ = build_system(CORPUS)
+    system.register_thing(Thing(Symbol("lechuga_verde"), Name("lechuga")))
+    return DialogState(focus_wigame=FOCUS, system=system)
+
+
 def test_check_pattern(dialog):
     assert parse_es("¿la lechuga tiene hoja?", dialog) == f"(check {FOCUS} (implies lechuga hoja))"
 
@@ -64,28 +73,37 @@ def test_show_wigame(dialog):
     assert parse_es("show wigame", dialog) == f"(return facts {FOCUS})"
 
 
-def test_ambiguous_sign_returns_clarification(dialog):
-    _ensure_duplicate_sign(dialog)
-    parsed = parse_es("¿la lechuga tiene hoja?", dialog)
+def test_ambiguous_sign_returns_clarification(ambiguous_dialog):
+    parsed = parse_es("¿la lechuga tiene hoja?", ambiguous_dialog)
 
     assert isinstance(parsed, Clarification)
     assert len(parsed.options) == 2
     assert "1)" in parsed.question
 
 
-def test_answer_resolves_pending_clarification(dialog):
-    _ensure_duplicate_sign(dialog)
-    parsed = parse_es("¿la lechuga tiene hoja?", dialog)
-    dialog.pending = parsed
-    resolved = dialog.answer("1")
+def test_answer_resolves_pending_clarification(ambiguous_dialog):
+    parsed = parse_es("¿la lechuga tiene hoja?", ambiguous_dialog)
+    ambiguous_dialog.pending = parsed
+    resolved = ambiguous_dialog.answer("1")
 
     assert resolved.startswith(f"(check {FOCUS}")
-    assert dialog.pending is None
+    assert ambiguous_dialog.pending is None
 
 
-def _ensure_duplicate_sign(dialog) -> None:
-    if "lechuga_verde" in dialog.system.symbols:
-        return
-    from src.operational_model import Name, Symbol, Thing
+def test_conjunctive_define_pattern(dialog):
+    parsed = parse_es(
+        "si la lechuga tiene hoja y la lechuga tiene verde entonces la lechuga tiene hoja_lisa",
+        dialog,
+    )
 
-    dialog.system.register_thing(Thing(Symbol("lechuga_verde"), Name("lechuga")))
+    assert parsed == (
+        f"(define (if (and (implies lechuga hoja) (implies lechuga verde)) (implies lechuga hoja_lisa)))"
+    )
+
+
+def test_conjunctive_define_rejects_mismatched_subjects(dialog):
+    with pytest.raises(ValueError):
+        parse_es(
+            "si la lechuga tiene hoja y la espinaca tiene verde entonces la lechuga tiene hoja_lisa",
+            dialog,
+        )

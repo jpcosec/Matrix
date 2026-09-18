@@ -22,7 +22,7 @@ from ..core.thing import Thing
 from ..core.truth_value import TruthValue
 from ..kernel.formulas import IfFormula, RelationAtom, parse_formula
 from ..language.s_expressions import SExpression, parse_s_expression
-from .candidates import KINDS, promote_candidate, register_candidate, reject_candidate
+from .candidates import KINDS, promote_candidate, projection_for, register_candidate, reject_candidate
 from .deduction import deduce
 from .operation_results import OperationResult
 
@@ -74,6 +74,8 @@ class SExpressionRuntime:
             return self._eval_why(expr[1:])
         if head == "define":
             return self._eval_define(expr[1:])
+        if head == "project":
+            return self._eval_project(expr[1:])
         raise ValueError(f"unsupported operation: {head}")
 
     def _eval_create(self, args: list[SExpression]) -> OperationResult:
@@ -208,6 +210,8 @@ class SExpressionRuntime:
         target = self._require_atom(args[0], "return target")
         if target == "candidates":
             return OperationResult(status="accept", payload={"candidates": self._candidate_records(args[1:])})
+        if target == "projections":
+            return OperationResult(status="accept", payload={"projections": self._projection_records(args[1:])})
         if target != "facts":
             raise ValueError(f"unsupported return target: {target}")
         selectors = [self._parse_selector(arg) for arg in args[1:]]
@@ -384,10 +388,66 @@ class SExpressionRuntime:
                 "rule": sexpr,
                 "history": [],
             }
-        derived: list[str] = []
-        for wigame_id in self._rule_targets(formula):
-            derived.extend(fact.proposition.sexpr() for fact in deduce(self.system, wigame_id))
-        return OperationResult(status="accept", payload={"rule": sexpr, "derived": derived})
+        report: dict = {}
+        derived = [fact.proposition.sexpr() for fact in deduce(self.system, None, report)]
+        return OperationResult(
+            status="accept",
+            payload={
+                "rule": sexpr,
+                "derived": derived,
+                "ambiguous": report["ambiguous"],
+                "unplaced": report["unplaced"],
+            },
+        )
+
+    def _eval_project(self, args: list[SExpression]) -> OperationResult:
+        if len(args) < 3:
+            raise ValueError("project expects `wigame:<src> wigame:<dst> (s t) ...`")
+        source = self._normalize_selector_value(self._parse_selector(args[0]))
+        target = self._normalize_selector_value(self._parse_selector(args[1]))
+        if source not in self.system.wigames or target not in self.system.wigames:
+            return OperationResult(status="reject", sinn="unsinnig", reason="project needs two existing WiGames")
+        projection = projection_for(self.system, source, target)
+        pairs = [self._parse_pair(item) for item in args[2:]]
+        for source_symbol, target_symbol in pairs:
+            if source_symbol in projection.row_axis and target_symbol in projection.column_axis:
+                projection.link(source_symbol, target_symbol)
+        self.system.projections[f"{source}->{target}"] = projection
+        return OperationResult(
+            status="accept",
+            payload={"projection_id": projection.matrix_id, "source": source, "target": target, "pairs": pairs},
+        )
+
+    def _parse_pair(self, expr: SExpression) -> list[str]:
+        if not isinstance(expr, list) or len(expr) != 2:
+            raise ValueError("projection pairs use `(source target)` form")
+        return [self._require_atom(expr[0], "source symbol"), self._require_atom(expr[1], "target symbol")]
+
+    def _projection_records(self, args: list[SExpression]) -> list[dict[str, object]]:
+        source_filter: str | None = None
+        for arg in args:
+            selector = self._parse_selector(arg)
+            if selector.kind != "wigame":
+                raise ValueError("return projections only accepts a `wigame:` selector")
+            source_filter = self._normalize_selector_value(selector)
+        records: list[dict[str, object]] = []
+        for projection in self.system.projections.values():
+            if source_filter is not None and projection.source_wigame_id != source_filter:
+                continue
+            pairs = [
+                [row, column]
+                for row in projection.row_axis
+                for column in projection.column_axis
+                if projection.get(row, column)
+            ]
+            records.append(
+                {
+                    "source": projection.source_wigame_id,
+                    "target": projection.target_wigame_id,
+                    "pairs": pairs,
+                }
+            )
+        return records
 
     def _append_why(
         self,
@@ -469,6 +529,19 @@ class SExpressionRuntime:
             if not isinstance(formula, IfFormula):
                 raise ValueError("rule candidate payload must be `(if (R a b) (R c d))`")
             return {"if": formula.antecedent.to_sexpr(), "then": formula.consequent.to_sexpr()}
+        if kind == "projection":
+            if wigame_id is None:
+                raise ValueError("projection candidate needs a `wigame:<src>` selector")
+            if not isinstance(expr, list) or len(expr) < 2:
+                raise ValueError("projection payload must be `(wigame:<dst> (s t) ...)`")
+            target = self._normalize_selector_value(
+                self._parse_selector(self._require_atom(expr[0], "target wigame"))
+            )
+            return {
+                "source_wigame": wigame_id,
+                "target_wigame": target,
+                "pairs": [self._parse_pair(item) for item in expr[1:]],
+            }
         if not isinstance(expr, list) or len(expr) < 2:
             raise ValueError("class candidate payload must be `(<class-id> symbol ...)`")
         relation_id = ""
@@ -479,27 +552,6 @@ class SExpressionRuntime:
             "symbols": [self._require_atom(item, "class symbol") for item in expr[1:]],
             "relation_id": relation_id,
         }
-
-    def _rule_targets(self, rule: IfFormula) -> list[str]:
-        targets: list[str] = []
-        for wigame_id, wigame in self.system.wigames.items():
-            antecedent = self._proposition_from_formula(rule.antecedent, wigame_id)
-            consequent = self._proposition_from_formula(rule.consequent, wigame_id)
-            if antecedent is None or consequent is None:
-                continue
-            if wigame.accepts(antecedent) and wigame.accepts(consequent):
-                targets.append(wigame_id)
-        return targets
-
-    def _proposition_from_formula(self, formula: object, wigame_id: str) -> Proposition | None:
-        if not isinstance(formula, RelationAtom):
-            return None
-        return Proposition(
-            formula.relation_id,
-            formula.subject_symbol_id,
-            formula.object_symbol_id,
-            wigame_id,
-        )
 
     def _extract_evidence(
         self,

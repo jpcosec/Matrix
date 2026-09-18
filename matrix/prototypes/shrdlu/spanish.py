@@ -19,6 +19,11 @@ _CHECK_RE = re.compile(rf"^(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.+
 _WHY_RE = re.compile(rf"^(?:por que|porque)\s+(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.*)$")
 _RETRACT_RE = re.compile(rf"^(?:{_ARTICLE})?(.+?)\s+ya no\s+({VERBS})\s+(?:{_ARTICLE})?(.+)$")
 _DEFINE_RE = re.compile(rf"^si\s+(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.+?)\s+entonces\s+(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.+)$")
+_DEFINE_AND_RE = re.compile(
+    rf"^si\s+(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.+?)\s+y\s+"
+    rf"(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.+?)\s+entonces\s+"
+    rf"(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.+)$"
+)
 _ELLIPSIS_RE = re.compile(rf"^y\s+(?:{_ARTICLE})?(.+)$")
 _REJECT_RE = re.compile(r"^rechaza\s+(\S+)\s+(.+)$")
 _PROMOTE_RE = re.compile(r"^aprueba\s+(\S+)$")
@@ -69,6 +74,15 @@ def parse_es(text: str, dialog: "DialogState") -> str | Clarification:
     match = _WHY_RE.fullmatch(norm)
     if match:
         return _build("why", match.group(1), match.group(3) or dialog.last_object, dialog)
+
+    match = _DEFINE_AND_RE.fullmatch(norm)
+    if match:
+        subject, first, second = match.group(1), match.group(3), match.group(6)
+        left, right = match.group(4), match.group(7)
+        object_third = match.group(9)
+        if subject != left or subject != right:
+            raise ValueError("conjunctive define expects the same subject everywhere")
+        return _build_define_and(subject, first, second, object_third, dialog)
 
     match = _DEFINE_RE.fullmatch(norm)
     if match:
@@ -135,6 +149,36 @@ def _build_define(
         for subject, first, second in combinations
     ]
     return Clarification(question=question, options=options)
+
+
+def _build_define_and(
+    subject_sign: str,
+    first_object: str,
+    second_object: str,
+    third_object: str,
+    dialog: "DialogState",
+) -> str | Clarification:
+    subjects = _symbols_for(subject_sign, dialog) or [_literal(subject_sign)]
+    firsts = _symbols_for(first_object, dialog) or [_literal(first_object)]
+    seconds = _symbols_for(second_object, dialog) or [_literal(second_object)]
+    thirds = _symbols_for(third_object, dialog) or [_literal(third_object)]
+    combinations = list(product(subjects, firsts, seconds, thirds))
+    if len(combinations) == 1:
+        subject, first, second, third = combinations[0]
+        return _render_define_and(subject, first, second, third)
+    labels = [" + ".join(combo) for combo in combinations]
+    question = _question(subject_sign, third_object, labels, [])
+    return Clarification(
+        question=question,
+        options=[_render_define_and(*combo) for combo in combinations],
+    )
+
+
+def _render_define_and(subject: str, first: str, second: str, third: str) -> str:
+    return (
+        f"(define (if (and (implies {subject} {first}) (implies {subject} {second})) "
+        f"(implies {subject} {third})))"
+    )
 
 
 def _render(verb: str, subject: str, obj: str, dialog: "DialogState") -> str:

@@ -1,8 +1,8 @@
 """Korel-style chunker producing the individuals x concepts matrix."""
 
-from .extract import Document, Sentence, read_documents, split_sentences
+from .extract import Document, Sentence, clean_markdown, read_documents, split_sentences
 from .matrix import Corpus, Individual, Occurrence, build_corpus
-from .tokenize import Token, auto_stopwords, normalize, tokenize
+from .tokenize import Token, auto_stopwords, is_usable_token, normalize, tokenize
 
 __all__ = [
     "Corpus",
@@ -13,6 +13,8 @@ __all__ = [
     "Token",
     "auto_stopwords",
     "build_corpus",
+    "clean_markdown",
+    "is_usable_token",
     "normalize",
     "read_documents",
     "split_sentences",

@@ -54,6 +54,59 @@ def build_hierarchy(cpair: np.ndarray, max_size: int | None = None) -> list[Leve
 def significant_levels(levels: list[Level], cpair: np.ndarray) -> list[int]:
     """Returns the indices of significant levels (strict local maxima of ``s``)."""
 
+    scores = concordance_scores(levels, cpair)
+    significant: list[int] = []
+    for k, score in enumerate(scores):
+        left = k == 0 or scores[k - 1] < score
+        right = k == len(scores) - 1 or score > scores[k + 1]
+        if left and right:
+            significant.append(k)
+    return significant
+
+
+def concordance_scores(levels: list[Level], cpair: np.ndarray) -> np.ndarray:
+    """Vectorized Lerman concordance scores, one per level.
+
+    For each level the concordance counts ordered pairs ``(p in A_k, q in S_k)``
+    with ``c(p) >= c(q)``; ``S_k`` is sorted once per level and every ``A_k``
+    value is located with ``np.searchsorted``.
+    """
+
+    size = int(cpair.shape[0])
+    if size == 0 or not levels:
+        return np.zeros(len(levels))
+    row, column = np.meshgrid(np.arange(size), np.arange(size), indexing="ij")
+    off_diagonal = row != column
+    row, column = row[off_diagonal], column[off_diagonal]
+    values = np.asarray(cpair, dtype=np.float64)[row, column]
+    order = np.argsort(values, kind="stable")
+    sorted_values = values[order]
+    rank = np.empty(order.shape[0], dtype=np.int64)
+    rank[order] = np.arange(order.shape[0])
+    pair_position = np.full((size, size), -1, dtype=np.int64)
+    pair_position[row, column] = np.arange(values.shape[0])
+    merged_sorted = np.zeros(values.shape[0], dtype=bool)
+    scores = np.zeros(len(levels))
+    for k, level in enumerate(levels):
+        positions = pair_position[np.ix_(level.cls, level.cls)].ravel()
+        positions = positions[positions >= 0]
+        if positions.size:
+            merged_sorted[rank[positions]] = True
+        merged_values = sorted_values[merged_sorted]
+        separated_values = sorted_values[~merged_sorted]
+        if merged_values.size == 0 or separated_values.size == 0:
+            scores[k] = 0.0
+            continue
+        concordances = int(np.searchsorted(separated_values, merged_values, side="right").sum())
+        m = merged_values.size * separated_values.size
+        sigma = float(np.sqrt(m * (values.shape[0] + 1) / 12.0))
+        scores[k] = 0.0 if sigma == 0.0 else (concordances - m / 2.0) / sigma
+    return scores
+
+
+def _significant_levels_naive(levels: list[Level], cpair: np.ndarray) -> list[int]:
+    """Reference O(|A|*|S|) implementation used by the tests."""
+
     size = int(cpair.shape[0])
     pairs = [(x, y) for x in range(size) for y in range(size) if x != y]
     scores: list[float] = []

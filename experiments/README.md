@@ -16,8 +16,9 @@ Opciones principales:
 - `--max-facts N` — tope de candidatos `fact` (top-K por φ entrópica). Por defecto 3000.
 - `--max-nonsense N` — tope de candidatos `nonsense` (top-K por `n_a·n_b`). Por defecto 500.
 - `--max-classes N` — tope de candidatos `class`. Por defecto 15.
-- `--hierarchy-concepts N` — si el corpus supera N conceptos, la jerarquía se calcula sobre
-  los N conceptos más frecuentes (la significación de Lerman es cara). Por defecto 120.
+- `--hierarchy-concepts N` — si se indica, la jerarquía se calcula sobre los N conceptos más
+  frecuentes. Por defecto `None` (sin submuestreo): `significant_levels` está vectorizado y
+  corre en < 1 s con 800 conceptos.
 - `--min-confirmed N` — si hay menos hechos confirmados, se promueven las reglas de mayor φ
   de la cola para poder medir recuperación. Por defecto 30.
 - `--recursive` — lee directorios recursivamente.

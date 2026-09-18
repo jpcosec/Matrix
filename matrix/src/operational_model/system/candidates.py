@@ -25,7 +25,7 @@ if TYPE_CHECKING:
     from .logical_system import LogicalSystem
     from .wigame import WiGame
 
-KINDS = ("fact", "symbol", "nonsense", "rule", "class")
+KINDS = ("fact", "symbol", "nonsense", "rule", "class", "projection")
 
 
 @dataclass
@@ -100,6 +100,24 @@ def reject_candidate(system: "LogicalSystem", candidate_id: str, reason: str) ->
     )
 
 
+def projection_for(system: "LogicalSystem", source_wigame: str, target_wigame: str) -> RoutingProjection:
+    """Returns the existing projection between two worlds or creates an empty one."""
+
+    key = f"{source_wigame}->{target_wigame}"
+    existing = system.projections.get(key)
+    if existing is not None:
+        return existing
+    source = system.wigames[source_wigame]
+    target = system.wigames[target_wigame]
+    return RoutingProjection.empty(
+        source_wigame_id=source_wigame,
+        source_axis=list(source.axis_a),
+        target_wigame_id=target_wigame,
+        target_axis=list(target.axis_a),
+        relation_id="projects_to",
+    )
+
+
 def _apply_candidate(system: "LogicalSystem", candidate: Candidate, tier: str) -> OperationResult:
     if candidate.kind == "fact":
         return _promote_fact(system, candidate, tier)
@@ -111,6 +129,8 @@ def _apply_candidate(system: "LogicalSystem", candidate: Candidate, tier: str) -
         return _promote_rule(system, candidate, tier)
     if candidate.kind == "class":
         return _promote_class(system, candidate)
+    if candidate.kind == "projection":
+        return _promote_projection(system, candidate)
     return OperationResult(status="reject", sinn="unsinnig", reason=f"unsupported kind: {candidate.kind}")
 
 
@@ -184,9 +204,7 @@ def _promote_rule(system: "LogicalSystem", candidate: Candidate, tier: str) -> O
             derived_from=None,
             rule=rule.to_sexpr(),
         )
-    derived: list[str] = []
-    for wigame_id in _rule_targets(system, candidate.wigame_id, rule):
-        derived.extend(fact.proposition.sexpr() for fact in deduce(system, wigame_id))
+    derived = [fact.proposition.sexpr() for fact in deduce(system)]
     return OperationResult(
         status="accept",
         payload={"candidate_id": candidate.candidate_id, "kind": candidate.kind, "rule": rule.to_sexpr(), "derived": derived},
@@ -231,6 +249,33 @@ def _promote_class(system: "LogicalSystem", candidate: Candidate) -> OperationRe
     )
 
 
+def _promote_projection(system: "LogicalSystem", candidate: Candidate) -> OperationResult:
+    source = candidate.payload["source_wigame"]
+    target = candidate.payload["target_wigame"]
+    if source not in system.wigames or target not in system.wigames:
+        return OperationResult(status="reject", sinn="unsinnig", reason="projection needs two existing WiGames")
+    projection = projection_for(system, source, target)
+    linked = 0
+    for source_symbol, target_symbol in candidate.payload["pairs"]:
+        source_symbol, target_symbol = str(source_symbol), str(target_symbol)
+        if source_symbol in projection.row_axis and target_symbol in projection.column_axis:
+            projection.link(source_symbol, target_symbol)
+            linked += 1
+    system.projections[f"{source}->{target}"] = projection
+    return OperationResult(
+        status="accept",
+        payload={
+            "candidate_id": candidate.candidate_id,
+            "kind": candidate.kind,
+            "projection_id": projection.matrix_id,
+            "source": source,
+            "target": target,
+            "linked": linked,
+            "action": "created",
+        },
+    )
+
+
 def _resolve_wigame(
     system: "LogicalSystem",
     wigame_id: str | None,
@@ -267,16 +312,3 @@ def _proposition(formula: RelationAtom, wigame_id: str) -> Proposition:
     )
 
 
-def _rule_targets(system: "LogicalSystem", wigame_id: str | None, rule: IfFormula) -> list[str]:
-    if wigame_id is not None:
-        return [wigame_id] if wigame_id in system.wigames else []
-    if not isinstance(rule.antecedent, RelationAtom) or not isinstance(rule.consequent, RelationAtom):
-        return []
-    targets: list[str] = []
-    for candidate_id, wigame in system.wigames.items():
-        accepts_both = wigame.accepts(_proposition(rule.antecedent, candidate_id)) and wigame.accepts(
-            _proposition(rule.consequent, candidate_id)
-        )
-        if accepts_both:
-            targets.append(candidate_id)
-    return targets

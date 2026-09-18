@@ -76,3 +76,17 @@ def auto_stopwords(sentences_tokens: list[list[str]], df_ratio: float = 0.5) -> 
         document_frequency.update(set(tokens))
     threshold = df_ratio * len(sentences_tokens)
     return {token for token, count in document_frequency.items() if count > threshold}
+
+
+def is_usable_token(norm: str, vocabulary: set[str], min_length: int = 3) -> bool:
+    """Rejects punctuation/digit-only or very short tokens outside the phrase vocabulary."""
+
+    if not norm:
+        return False
+    if norm in vocabulary:
+        return True
+    if len(norm) < min_length:
+        return False
+    if all(char.isdigit() or char == "-" for char in norm):
+        return False
+    return True

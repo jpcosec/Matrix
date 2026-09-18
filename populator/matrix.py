@@ -42,6 +42,24 @@ class Corpus:
     vocab_source: dict[str, list[str]]
 
 
+def _dedupe_sentences(sentences, tokens, sentence_norms):
+    """Keeps the first occurrence of every normalized sentence sequence."""
+
+    kept: list[int] = []
+    seen: set[str] = set()
+    for index, norms in enumerate(sentence_norms):
+        key = " ".join(norms)
+        if key in seen:
+            continue
+        seen.add(key)
+        kept.append(index)
+    return (
+        [sentences[index] for index in kept],
+        [tokens[index] for index in kept],
+        [sentence_norms[index] for index in kept],
+    )
+
+
 def _is_valid_concept(concept: str) -> bool:
     """Rejects punctuation-only tokens that normalize to an empty concept."""
 
@@ -58,11 +76,14 @@ def build_corpus(
     extra_stopwords: tuple[str, ...] = (),
     max_concepts: int | None = None,
     lang: str | None = None,
+    dedupe: bool = True,
 ) -> Corpus:
     """Builds the individuals x concepts Corpus from loaded documents.
 
     ``lang`` selects the stopword list (``"es"``, ``"en"``); ``None`` keeps both.
-    ``max_concepts`` keeps the highest document-frequency concepts.
+    ``max_concepts`` keeps the highest document-frequency concepts. ``dedupe``
+    drops sentences whose normalized token sequence already appeared, keeping
+    the first occurrence.
     """
 
     if unit != "sentence":
@@ -72,6 +93,8 @@ def build_corpus(
     sentences = [sentence for document in documents for sentence in split_sentences(document)]
     tokens = [tokenize(sentence) for sentence in sentences]
     sentence_norms = [[token.norm for token in token] for token in tokens]
+    if dedupe:
+        sentences, tokens, sentence_norms = _dedupe_sentences(sentences, tokens, sentence_norms)
     base_stopwords = {
         "es": {normalize(word) for word in STOPWORDS_ES},
         "en": {normalize(word) for word in STOPWORDS_EN},

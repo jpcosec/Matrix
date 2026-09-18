@@ -26,6 +26,7 @@ def build_system(
     max_concepts: int | None = None,
     max_n: int = 3,
     min_support: int = 5,
+    dedupe: bool = True,
     recursive: bool = False,
     corpus=None,
     documents=None,
@@ -54,6 +55,7 @@ def build_system(
             max_concepts=max_concepts,
             max_n=max_n,
             min_support=min_support,
+            dedupe=dedupe,
         )
         populator_seconds = perf_counter() - start
     else:
@@ -121,6 +123,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-nonsense", type=int, default=None)
     parser.add_argument("--max-classes", type=int, default=None)
     parser.add_argument("--recursive", action="store_true")
+    parser.add_argument("--no-dedupe", action="store_true", help="keep repeated sentences")
     parser.add_argument("--dump", default=None, help="write the resulting WiGame to YAML")
     args = parser.parse_args(argv)
 
@@ -134,6 +137,7 @@ def main(argv: list[str] | None = None) -> int:
         max_nonsense=args.max_nonsense,
         max_class_candidates=args.max_classes,
         recursive=args.recursive,
+        dedupe=not args.no_dedupe,
         report=report,
     )
     wigame = system.wigames[f"wigame:{args.wigame}"]

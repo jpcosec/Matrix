@@ -37,6 +37,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--hierarchy-concepts", type=int, default=None)
     parser.add_argument("--min-confirmed", type=int, default=30)
     parser.add_argument("--recursive", action="store_true")
+    parser.add_argument("--no-dedupe", action="store_true", help="keep repeated sentences")
     parser.add_argument("--out", required=True)
     args = parser.parse_args(argv)
 
@@ -46,7 +47,9 @@ def main(argv: list[str] | None = None) -> int:
 
     start = time.perf_counter()
     documents = read_documents(args.corpus, recursive=args.recursive)
-    corpus = build_corpus(documents, lang=args.lang, max_concepts=args.max_concepts)
+    corpus = build_corpus(
+        documents, lang=args.lang, max_concepts=args.max_concepts, dedupe=not args.no_dedupe
+    )
     populator_seconds = round(time.perf_counter() - start, 3)
 
     system, runtime, results = build_system(
@@ -61,6 +64,7 @@ def main(argv: list[str] | None = None) -> int:
         max_class_candidates=args.max_classes,
         hierarchy_max_concepts=args.hierarchy_concepts,
         recursive=args.recursive,
+        dedupe=not args.no_dedupe,
         report=report,
     )
     report["populator_seconds"] = populator_seconds

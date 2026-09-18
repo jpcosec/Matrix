@@ -28,7 +28,7 @@ REQUIRED_CONCEPTS = {
 @pytest.fixture(scope="module")
 def corpus():
     root = Path(__file__).resolve().parents[1] / "corpus" / "vegetales"
-    return build_corpus(read_documents(root))
+    return build_corpus(read_documents(root), dedupe=False)
 
 
 def test_corpus_matrix_is_binary_with_matching_shape(corpus):

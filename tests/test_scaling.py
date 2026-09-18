@@ -35,8 +35,8 @@ def test_lang_selects_the_stopword_list():
     text = "the zanahoria es raiz. " * 5 + "la zanahoria es raiz. " * 7
     document = Document("d", text)
 
-    assert "the" in build_corpus([document], lang="es").concepts
-    assert "the" not in build_corpus([document], lang="en").concepts
+    assert "the" in build_corpus([document], lang="es", dedupe=False).concepts
+    assert "the" not in build_corpus([document], lang="en", dedupe=False).concepts
 
 
 def test_recursive_reading(tmp_path):

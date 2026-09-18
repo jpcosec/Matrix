@@ -23,8 +23,8 @@ def matched():
 
     documents_a = read_documents(HALF_A)
     documents_b = read_documents(HALF_B)
-    corpus_a = build_corpus(documents_a, lang="es")
-    corpus_b = build_corpus(documents_b, lang="es")
+    corpus_a = build_corpus(documents_a, lang="es", dedupe=False)
+    corpus_b = build_corpus(documents_b, lang="es", dedupe=False)
     system = LogicalSystem()
     build_system(HALF_A[0].parent, "a", corpus=corpus_a, documents=documents_a, lang="es", system=system)
     build_system(HALF_B[0].parent, "b", corpus=corpus_b, documents=documents_b, lang="es", system=system)

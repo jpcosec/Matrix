@@ -22,6 +22,8 @@ Opciones principales:
 - `--min-confirmed N` — si hay menos hechos confirmados, se promueven las reglas de mayor φ
   de la cola para poder medir recuperación. Por defecto 30.
 - `--recursive` — lee directorios recursivamente.
+- `--no-dedupe` — conserva las oraciones repetidas (por defecto se descarta toda repetición
+  de la misma secuencia normalizada de tokens, conservando la primera aparición).
 - `--out <dir>` — destino de los artefactos.
 
 Ejemplos:

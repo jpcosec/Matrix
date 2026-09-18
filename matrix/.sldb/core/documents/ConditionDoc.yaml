@@ -1,0 +1,417 @@
+documents:
+- name: condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-closeout-evidence.md
+  hash_c: 955843ff4f03b146255f47cf99e731cdb88d7bd72ccf22b745d030dffe587910
+  hash_d: 419bd84843620e5274dfb4d6024180268f313415639b8db7afee432884932312
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-implementation-path
+  path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-implementation-path.md
+  hash_c: 28a7068789ac9764b42de2e48b295e265357ef1ab307a79e37a88d50f6c9a412
+  hash_d: 330da7ed2f953462dfb86b236f73b94bad14ec2e96816253ecb83beefa779364
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation
+  path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation.md
+  hash_c: e551108f7684e4e49dca82a80d588f80d4dce347be6df61450ce736ee5dd4778
+  hash_d: f695ea4b4c3e16e868e0f2839e73c86f75444252004f7ebd0cff8ac5978fed9b
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-for-closeout.md
+  hash_c: 3f4cc48118f690501a6b5bb726d2bb12ef66af0114172070ba4880f1a130a9b9
+  hash_d: 2a0d0c9bc8addaaa94a8c3892687de44badbb65317042cdeeb453d2d143e516d
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-deductiva-proposicional-matricial-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-has-closeout-evidence.md
+  hash_c: 30672452f4554a68419bfdd31e8b27ca7917b231fa7bc314bb50074e15729f90
+  hash_d: 9533c86f019b30ab175998d28218945cf6e4f703551fa17e5e3176dd713377f6
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path
+  path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path.md
+  hash_c: dd890a4c4e09cb058bae5fcfea63df8308e7bd0c726d16adeb457f42e5cbc39c
+  hash_d: dbbdf5cf005ef1b03ec7f930baf789f49bde4d862ee7fd89c382e0008e11dd58
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-deductiva-proposicional-matricial-has-validation
+  path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-has-validation.md
+  hash_c: 8a16e811f111b08e9f094cce8dbd24bd2fd6638e3b9c3ef833a594a345f9587f
+  hash_d: 4cb89c771e1b72485b53c1844f7cd8c77a406f5cf6c930371c0812a6506a14ef
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout.md
+  hash_c: 6efcc8c3b5783aed8d77d7b80d02d2ef36595eeb347514c12b7512a273fd01c3
+  hash_d: 69248f3070dd6090b0d70a04ef7b0a9a818b1589bc1dd0520d406d299299c09c
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-closeout-evidence.md
+  hash_c: c3df4d4b2b7cb7e9118c041ff9f25ea23b5edf564094a31425afad4207e4f042
+  hash_d: 4f600c6a233ebb3c9e81540bb7d2202d7aa41e122cd478d57044dfbc161533a5
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path
+  path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path.md
+  hash_c: 70125df53abe99bf764cde1afba255359ef8d721bf6f5f868b91c85db135a429
+  hash_d: 77c7bd27d81ec119cf00e3735f7c621c72c5d5e10f28d99a0c133b44ccd2066d
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-validation
+  path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-validation.md
+  hash_c: 9104e43d9753eed58e3ecd397bb868ded8e5088404d0c0f0543501da07e09a26
+  hash_d: 4781be76d950ec7568fffdc4b77bf42d87d7b18ec7a1d2c48992ff8720144ccc
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-inferencia-relacional-por-clausura-transitiva-matricial-ready-for-closeout.md
+  hash_c: b2d37b7bde82a93d72e8f248f76eaac30df5a91dda5bae62971500a57da54d0a
+  hash_d: 50a01f2205dab72e95e29aa8e2802fa2e39d02cae29a5a7fc6a890c2e51dc9b0
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-closeout-evidence.md
+  hash_c: 34f0a6ea38a066d5b50533b536327fec833b9f5b1501ab01bac96ecdc69135ba
+  hash_d: 026f81a01de23023a7f25cfd4ff3ee2294cbd8c48894040b8ff7aabf2cf6db7d
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path
+  path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path.md
+  hash_c: 521f82266dde8f6862ec3783e2ea42392bf61b664752c770fe6e7fbc07299ee9
+  hash_d: 64c9ef9a2eec21bf689e44023cae68df2b31aa6b16143bfba3c96388faa4d182
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-validation
+  path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-validation.md
+  hash_c: 97ab7ff7f1ee5aab0555a22aeb72d9b2e35fea7df1ccb9fd1e2e2310a0141596
+  hash_d: ed189bf9a7f5ac58c6d4cd7965691e09a7d5da025f6ca480913d7acacef385ed
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-closeout.md
+  hash_c: b5e0cc5a99b7491ef1d693d01d237bbf1abc1369c827dc66e19bd5648376068b
+  hash_d: 9f22105e47452f4d61523ba798a58be37d9eeab28fbb10f049d45b84118bbb08
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence.md
+  hash_c: bb2eea9efce95c08ab97679420dc7c77b30f0d079cb1b20fe7fa15089c6bc3ad
+  hash_d: c4089e5d76063f5599f4a50159dfa4708326c2044b513746ebe6b74e936faaec
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path
+  path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path.md
+  hash_c: f03f5e0fbfa5c8c788a6ecd9cc4f505ace7e31468c82e8f31dd5854b20936190
+  hash_d: 34baf5c3d2a60d3ab7bb4fb16be45fd3c084229b6fd21f246ec279b3e866e8a2
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-validation
+  path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-validation.md
+  hash_c: 37d6a81f2da8e6d343151831e107d9e63687b7d2cd3ef0e5e216057edd650040
+  hash_d: 38fb6005686338a24277c5e2b2cc87615ef32a76e57178c5a8b49f1ccb8d14c6
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-ready-for-closeout.md
+  hash_c: d079f380653a7831fdc1ff061382980f043875dfa5729b78e4d2b993d807253d
+  hash_d: 5db8074f7b104c63a836be5263ee6a1a9ce20c274c052dff06cde0965a44ebdb
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence.md
+  hash_c: 59cdc6170397106d20befcee86eb8772230146194c152a1da0c28acec1dc5962
+  hash_d: abef001bfa4ae6b3765c906e7a939c736b2f9ecc85d2db2b63a22a471b0e579e
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path.md
+  hash_c: 21ee602dfa061d5ac43323186f0da891bbe1a7735b0ccd2529c7c6d1f175181b
+  hash_d: 8047c27231399881345129eb73b3db1421247e3baf0242139cd1c3cc76457c37
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jax-vram-allocation-has-validation
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-validation.md
+  hash_c: 0fb8f9c76a0da10828aebe65b66b4931178b3bb9b87f8c10129551c658191c51
+  hash_d: 3d30b5a432f1d2d537d844e2749c204b3a465fab7b5c57e3da172d27a527eac7
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout.md
+  hash_c: d435e9d330fed0d11ebefdc0547d2fcf79a700c7ec036fce63431f8234fe7bde
+  hash_d: 6f3dc8602b05a998229daa5ef1bc01d1d4de6e191cb0aa4180aeb6c092870868
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jit-bitwise-operations-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-has-closeout-evidence.md
+  hash_c: 37753765fe066cfbf3faef68f7e3f9d78647423228028666040091ae11c5ca1c
+  hash_d: 246664847b992c1614d345f692cbe9e43e1c6b069ccd6b84061ea8d7e3a0dd59
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path.md
+  hash_c: 1beeed14d13e6a81ef3f2f64bcafca970e2a49989246ae513c874c63275f930a
+  hash_d: 95f45ce667aacf46bb04af0954d49ee9332dbb0055fe344c7ad97972ccdc188e
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation.md
+  hash_c: 63ee725d2269ebe72f800fc89d371b7d56cfe7a05b1be4716fe762a73340ad9b
+  hash_d: 56e1b12a90c6924ca9fa4a41ef5d60b7b609c87e7705cc21b123a44ee5f57cd9
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout.md
+  hash_c: 7937a5329875c75686ff351d5538823144e6d427afb904b251c4f38462bcd67c
+  hash_d: 304737ebf7e6e4dabfb510a6b7b9d03ca2cf61a597d04413dc2d3c7164eb9959
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-atomfeeder-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-closeout-evidence.md
+  hash_c: b76faebd78a986e209513fc7483f241808135df5524b57c07ffc12385a562c16
+  hash_d: 8f8f4ccbcfbfd33ef1628b0d325a8238f1c51b1a0d571644375e7229c804451b
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-atomfeeder-has-implementation-path
+  path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-implementation-path.md
+  hash_c: 1bbfa5aad4f902ec971c3ed247f1a29353af4507f6c502547fd120f277ccee5f
+  hash_d: 5b9e84bf3ffd24fa7f8991bd14dfd28bb9d5aacfc0107b03d6f2c38460f7f5ca
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-atomfeeder-has-validation
+  path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-validation.md
+  hash_c: b5e36c256dd257048552370cbcc5ed088fb81e7ce0596b2946d424a1bb752016
+  hash_d: 7a382a4f4014c0cb320cf8c7de96b9a54d757b54be6bb978278617f44fa9833c
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-atomfeeder-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-implementar-atomfeeder-ready-for-closeout.md
+  hash_c: 438e40f238b3db07c8d8efcbce6968f9001e9a1374705be2cf8eaf70d756e768
+  hash_d: a1920b9e2838fa201ed12e67d3a28ffe3718bee4977e82435f335dc25c0e4030
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence.md
+  hash_c: 73f6e484c5150276e9894d3678798904e33331547f4afb7a4dfb4a8f9b16da33
+  hash_d: ac73c194f3e4ce551e1ca17e9ecbfb904c93797989e666d1208c044b508345ae
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path
+  path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path.md
+  hash_c: cbf70bd6cb1c779984a7ffe1f03ad026225caf784837147bc543c881c11eb03a
+  hash_d: 546b3e8df73073d035f02fd79c1226c6f0c82e35e1edbaa2e92762cea890bf21
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-logicalspace-registry-bi-direccional-has-validation
+  path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-validation.md
+  hash_c: 93b3882e5db12015c5f33db313f30c7c286433f13b7c648ddaaaee501c5ceb71
+  hash_d: 62a5730c8b25d1fa9c627a5e483225e5039614dc391310b1b94955c1ec53c171
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout.md
+  hash_c: d5222c2be53beee4f277373097fcb2cf2ae2963f510f9e4f527fe8e039dc37d1
+  hash_d: f61faae3cbbdcd07f63dc30b0671fabb0064193dca25db3084aee50fbea7d3aa
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-core-api-facade-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-closeout-evidence.md
+  hash_c: f84bc79c75811ba522913d4f1223b061cc9afb69fd4fc95e0e301974785ab0fa
+  hash_d: 4eb9e46fa455069ccfd02086750684f3c8d74c16e8f2f4459acd9068565289ee
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-core-api-facade-has-implementation-path
+  path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-implementation-path.md
+  hash_c: dca9facf8264548dfa8fc10c5cbedde64ea1b4fec440e42b8e2004f257b14db4
+  hash_d: d11986e34d105e3f2c61c5dc3555df3ff923645bd4363498a9826e1ae1786bb3
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-core-api-facade-has-validation
+  path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-validation.md
+  hash_c: 546d584bd784d728fb277d21a0d70947186f05c55dbe06d6946919e559175e3b
+  hash_d: 8f730b590425137dc3d2be138fd7a2c2bbf112c4f99e7dc315fed423bb552f5f
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-core-api-facade-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-ready-for-closeout.md
+  hash_c: 660998519e64395762f7772f193f149f7a44f1e32923278e78000cde6d387f22
+  hash_d: d7092928ae64a610b1844a15205ff088e51d4c66bac8dd1779f3906f12090d38
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence.md
+  hash_c: f9e73c868dce01de823e6793c0ebda14ab975e3edcff5302b05163e088f8fc41
+  hash_d: db465e24f1c092149443a41748b1f70042668b0ccb34e6aa3f81b9b43f32a07a
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path
+  path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path.md
+  hash_c: d6a8161c0d74a03108b8e45f2561d8f37ea382c2aefc788d50cb5757ef54fb43
+  hash_d: eeb64f7344c1add68c57099eecf1d997d7d9e871c68026a3b4853936acc09a14
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-fixpoint-deduction-algorithm-has-validation
+  path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-validation.md
+  hash_c: 2cb86854fd4231efeea83588c0d8477536722245bf7ab33a408aaff6ce6dbc1b
+  hash_d: 2f8be4d13a5c90f8e87394f701afd16f8a26c8c7dbcf727c69e7f34fb690e26b
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout.md
+  hash_c: d64382015eeefccd302e6435ccd5d3266b04b7e1afe7c5a076f4ae14d9f4248d
+  hash_d: a1ce0c0dd06277675933949322a42fbde48364547f15aa13be254a45a2e0bdc3
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence.md
+  hash_c: 7375e1322fb1b748435ecf5c6074228acd7288c8261fef20b1c0c2b9e7f24c26
+  hash_d: e667d7f61fc866ba3ae3ce4589bd81c4d7cdbff59c0d647d64f56378cc37c2b4
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path.md
+  hash_c: abd5b28f8deaa1a8910ca3fcc256a4a15346449c84c83dc0d7fceffbfa09eed8
+  hash_d: 72f75cc858cd9a785934334de9c2ff303542350f96ad50e0744f8d5f7871fc4c
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-si-mask-encoding-has-validation
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-validation.md
+  hash_c: c53bf884dbf28c79dbbd4bdce7d32b4a5bb3251b107c7a88e884bbcfc26889dc
+  hash_d: 281e806c4652caac4ee539ff46d1c329a8876a15baba2d3479133f98c9a6fae3
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout.md
+  hash_c: 04417e34e4e7225f240cd2dec98608e692b73626fd7b206e7143c05edfbd8333
+  hash_d: 7a56222e423dc31f37ade04b799b3c6a07327b9bfa757d584baa5f3cd8a3bc28
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence.md
+  hash_c: 21746882231fa2ddbd1799902dec904baa633bcc92e557053be690e5405120e2
+  hash_d: 5adb03da35b06a7885def248e17cad28c2407a6e1cdf47d4bdc43481d52d1647
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-sop-reduction-has-implementation-path
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-implementation-path.md
+  hash_c: 430c61ecca17bf5781dc76212f199c72c2623c9466ee8a4c6423345578a02dfc
+  hash_d: 86dfb8c129fe7703ee33436ac88774fa9141171eb028c656ee16b104bd9fcc02
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-sop-reduction-has-validation
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-validation.md
+  hash_c: f1e4d634fc199890c1d1aa9a5d26371e76c0f1ba8f812515f3626f9349b7a858
+  hash_d: de34353a381d0ea79d7876a2bca2b2041377f77adc4a2c1e2ef80cb85437f230
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives
+- name: condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout
+  path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout.md
+  hash_c: fa163a5d104f3dbe429c2f9e0c67a135b3fb5dbf90cc07a79390a96ce7406eb5
+  hash_d: b64818ca2f55a34c974ff3c8d81ffbe1ef5c8f692c9322f1030caa6c6d495b1f
+  semantic_tags:
+  - primitive:condition
+  - type.workflow.condition
+  - workspace.desk.primitives

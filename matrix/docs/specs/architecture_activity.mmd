@@ -1,0 +1,17 @@
+flowchart TD
+    __start([Start])
+    receive_query["Receive Query (deduce)"]
+    encode_query["Encode Query to Vector Vi"]
+    matrix_multiply["Multiply Vi by Si"]
+    check_fixpoint{"Has Vi changed?"}
+    decode_result["Decode Vi to Symbols"]
+    return_facts["Return Deduced Facts"]
+    __end([End])
+    __start --> receive_query
+    receive_query --> encode_query
+    encode_query --> matrix_multiply
+    matrix_multiply --> check_fixpoint
+    check_fixpoint -->|yes| matrix_multiply
+    check_fixpoint -->|no| decode_result
+    decode_result --> return_facts
+    return_facts --> __end

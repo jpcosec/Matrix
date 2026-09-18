@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+roundtrip_test_state.json

@@ -1,0 +1,1523 @@
+tags:
+  artifact:task:
+  - task-canonicalhypertensor-jax-vram-allocation
+  - task-canonicalhypertensor-jit-bitwise-operations
+  - task-implementar-atomfeeder
+  - task-implementar-logicalspace-registry-bi-direccional
+  - task-meelengine-core-api-facade
+  - task-meelengine-fixpoint-deduction-algorithm
+  - task-rulematrixcompiler-si-mask-encoding
+  - task-rulematrixcompiler-sop-reduction
+  concept:architecture:
+  - pill-migracion-a-jax
+  context:migration:
+  - pill-migracion-a-jax
+  primitive:checklist:
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready
+  - checklist-task-implementar-atomfeeder-closeout-ready
+  - checklist-task-implementar-atomfeeder-execution-ready
+  - checklist-task-implementar-atomfeeder-testing-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-execution-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready
+  - checklist-task-meelengine-core-api-facade-closeout-ready
+  - checklist-task-meelengine-core-api-facade-execution-ready
+  - checklist-task-meelengine-core-api-facade-testing-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-closeout-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-testing-ready
+  primitive:condition:
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-validation
+  - condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-closeout-evidence
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout
+  - condition-task-implementar-atomfeeder-has-closeout-evidence
+  - condition-task-implementar-atomfeeder-has-implementation-path
+  - condition-task-implementar-atomfeeder-has-validation
+  - condition-task-implementar-atomfeeder-ready-for-closeout
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-validation
+  - condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout
+  - condition-task-meelengine-core-api-facade-has-closeout-evidence
+  - condition-task-meelengine-core-api-facade-has-implementation-path
+  - condition-task-meelengine-core-api-facade-has-validation
+  - condition-task-meelengine-core-api-facade-ready-for-closeout
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-validation
+  - condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-validation
+  - condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout
+  - condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence
+  - condition-task-rulematrixcompiler-sop-reduction-has-implementation-path
+  - condition-task-rulematrixcompiler-sop-reduction-has-validation
+  - condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout
+  primitive:edge:
+  - edge-task-canonicalhypertensor-jax-vram-allocation-activate-to-testing
+  - edge-task-canonicalhypertensor-jax-vram-allocation-close-to-complete
+  - edge-task-canonicalhypertensor-jax-vram-allocation-closeout-to-close
+  - edge-task-canonicalhypertensor-jax-vram-allocation-execution-to-activate
+  - edge-task-canonicalhypertensor-jax-vram-allocation-ready-to-closeout
+  - edge-task-canonicalhypertensor-jax-vram-allocation-testing-to-ready
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-close-to-complete
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-closeout-to-close
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-execution-to-activate
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-ready-to-closeout
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-testing-to-ready
+  - edge-task-implementar-atomfeeder-activate-to-testing
+  - edge-task-implementar-atomfeeder-close-to-complete
+  - edge-task-implementar-atomfeeder-closeout-to-close
+  - edge-task-implementar-atomfeeder-execution-to-activate
+  - edge-task-implementar-atomfeeder-ready-to-closeout
+  - edge-task-implementar-atomfeeder-testing-to-ready
+  - edge-task-implementar-logicalspace-registry-bi-direccional-activate-to-testing
+  - edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete
+  - edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close
+  - edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate
+  - edge-task-implementar-logicalspace-registry-bi-direccional-ready-to-closeout
+  - edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  - edge-task-meelengine-core-api-facade-activate-to-testing
+  - edge-task-meelengine-core-api-facade-close-to-complete
+  - edge-task-meelengine-core-api-facade-closeout-to-close
+  - edge-task-meelengine-core-api-facade-execution-to-activate
+  - edge-task-meelengine-core-api-facade-ready-to-closeout
+  - edge-task-meelengine-core-api-facade-testing-to-ready
+  - edge-task-meelengine-fixpoint-deduction-algorithm-activate-to-testing
+  - edge-task-meelengine-fixpoint-deduction-algorithm-close-to-complete
+  - edge-task-meelengine-fixpoint-deduction-algorithm-closeout-to-close
+  - edge-task-meelengine-fixpoint-deduction-algorithm-execution-to-activate
+  - edge-task-meelengine-fixpoint-deduction-algorithm-ready-to-closeout
+  - edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready
+  - edge-task-rulematrixcompiler-si-mask-encoding-activate-to-testing
+  - edge-task-rulematrixcompiler-si-mask-encoding-close-to-complete
+  - edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close
+  - edge-task-rulematrixcompiler-si-mask-encoding-execution-to-activate
+  - edge-task-rulematrixcompiler-si-mask-encoding-ready-to-closeout
+  - edge-task-rulematrixcompiler-si-mask-encoding-testing-to-ready
+  - edge-task-rulematrixcompiler-sop-reduction-activate-to-testing
+  - edge-task-rulematrixcompiler-sop-reduction-close-to-complete
+  - edge-task-rulematrixcompiler-sop-reduction-closeout-to-close
+  - edge-task-rulematrixcompiler-sop-reduction-execution-to-activate
+  - edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout
+  - edge-task-rulematrixcompiler-sop-reduction-testing-to-ready
+  primitive:operator:
+  - operator-task-canonicalhypertensor-jax-vram-allocation-activate
+  - operator-task-canonicalhypertensor-jax-vram-allocation-close
+  - operator-task-canonicalhypertensor-jax-vram-allocation-ready-for-testing
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-activate
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-close
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-ready-for-testing
+  - operator-task-implementar-atomfeeder-activate
+  - operator-task-implementar-atomfeeder-close
+  - operator-task-implementar-atomfeeder-ready-for-testing
+  - operator-task-implementar-logicalspace-registry-bi-direccional-activate
+  - operator-task-implementar-logicalspace-registry-bi-direccional-close
+  - operator-task-implementar-logicalspace-registry-bi-direccional-ready-for-testing
+  - operator-task-meelengine-core-api-facade-activate
+  - operator-task-meelengine-core-api-facade-close
+  - operator-task-meelengine-core-api-facade-ready-for-testing
+  - operator-task-meelengine-fixpoint-deduction-algorithm-activate
+  - operator-task-meelengine-fixpoint-deduction-algorithm-close
+  - operator-task-meelengine-fixpoint-deduction-algorithm-ready-for-testing
+  - operator-task-rulematrixcompiler-si-mask-encoding-activate
+  - operator-task-rulematrixcompiler-si-mask-encoding-close
+  - operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing
+  - operator-task-rulematrixcompiler-sop-reduction-activate
+  - operator-task-rulematrixcompiler-sop-reduction-close
+  - operator-task-rulematrixcompiler-sop-reduction-ready-for-testing
+  primitive:routine:
+  - routine-task-canonicalhypertensor-jax-vram-allocation
+  - routine-task-canonicalhypertensor-jit-bitwise-operations
+  - routine-task-implementar-atomfeeder
+  - routine-task-implementar-logicalspace-registry-bi-direccional
+  - routine-task-meelengine-core-api-facade
+  - routine-task-meelengine-fixpoint-deduction-algorithm
+  - routine-task-rulematrixcompiler-si-mask-encoding
+  - routine-task-rulematrixcompiler-sop-reduction
+  type.desk.inbox-note:
+  - 20260725-212407-suggestion-error-logging-protocol
+  - 20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  type.workflow.checklist:
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready
+  - checklist-task-implementar-atomfeeder-closeout-ready
+  - checklist-task-implementar-atomfeeder-execution-ready
+  - checklist-task-implementar-atomfeeder-testing-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-execution-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready
+  - checklist-task-meelengine-core-api-facade-closeout-ready
+  - checklist-task-meelengine-core-api-facade-execution-ready
+  - checklist-task-meelengine-core-api-facade-testing-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-closeout-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-testing-ready
+  type.workflow.condition:
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-validation
+  - condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-closeout-evidence
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout
+  - condition-task-implementar-atomfeeder-has-closeout-evidence
+  - condition-task-implementar-atomfeeder-has-implementation-path
+  - condition-task-implementar-atomfeeder-has-validation
+  - condition-task-implementar-atomfeeder-ready-for-closeout
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-validation
+  - condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout
+  - condition-task-meelengine-core-api-facade-has-closeout-evidence
+  - condition-task-meelengine-core-api-facade-has-implementation-path
+  - condition-task-meelengine-core-api-facade-has-validation
+  - condition-task-meelengine-core-api-facade-ready-for-closeout
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-validation
+  - condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-validation
+  - condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout
+  - condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence
+  - condition-task-rulematrixcompiler-sop-reduction-has-implementation-path
+  - condition-task-rulematrixcompiler-sop-reduction-has-validation
+  - condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout
+  type.workflow.edge:
+  - edge-task-canonicalhypertensor-jax-vram-allocation-activate-to-testing
+  - edge-task-canonicalhypertensor-jax-vram-allocation-close-to-complete
+  - edge-task-canonicalhypertensor-jax-vram-allocation-closeout-to-close
+  - edge-task-canonicalhypertensor-jax-vram-allocation-execution-to-activate
+  - edge-task-canonicalhypertensor-jax-vram-allocation-ready-to-closeout
+  - edge-task-canonicalhypertensor-jax-vram-allocation-testing-to-ready
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-close-to-complete
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-closeout-to-close
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-execution-to-activate
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-ready-to-closeout
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-testing-to-ready
+  - edge-task-implementar-atomfeeder-activate-to-testing
+  - edge-task-implementar-atomfeeder-close-to-complete
+  - edge-task-implementar-atomfeeder-closeout-to-close
+  - edge-task-implementar-atomfeeder-execution-to-activate
+  - edge-task-implementar-atomfeeder-ready-to-closeout
+  - edge-task-implementar-atomfeeder-testing-to-ready
+  - edge-task-implementar-logicalspace-registry-bi-direccional-activate-to-testing
+  - edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete
+  - edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close
+  - edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate
+  - edge-task-implementar-logicalspace-registry-bi-direccional-ready-to-closeout
+  - edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  - edge-task-meelengine-core-api-facade-activate-to-testing
+  - edge-task-meelengine-core-api-facade-close-to-complete
+  - edge-task-meelengine-core-api-facade-closeout-to-close
+  - edge-task-meelengine-core-api-facade-execution-to-activate
+  - edge-task-meelengine-core-api-facade-ready-to-closeout
+  - edge-task-meelengine-core-api-facade-testing-to-ready
+  - edge-task-meelengine-fixpoint-deduction-algorithm-activate-to-testing
+  - edge-task-meelengine-fixpoint-deduction-algorithm-close-to-complete
+  - edge-task-meelengine-fixpoint-deduction-algorithm-closeout-to-close
+  - edge-task-meelengine-fixpoint-deduction-algorithm-execution-to-activate
+  - edge-task-meelengine-fixpoint-deduction-algorithm-ready-to-closeout
+  - edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready
+  - edge-task-rulematrixcompiler-si-mask-encoding-activate-to-testing
+  - edge-task-rulematrixcompiler-si-mask-encoding-close-to-complete
+  - edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close
+  - edge-task-rulematrixcompiler-si-mask-encoding-execution-to-activate
+  - edge-task-rulematrixcompiler-si-mask-encoding-ready-to-closeout
+  - edge-task-rulematrixcompiler-si-mask-encoding-testing-to-ready
+  - edge-task-rulematrixcompiler-sop-reduction-activate-to-testing
+  - edge-task-rulematrixcompiler-sop-reduction-close-to-complete
+  - edge-task-rulematrixcompiler-sop-reduction-closeout-to-close
+  - edge-task-rulematrixcompiler-sop-reduction-execution-to-activate
+  - edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout
+  - edge-task-rulematrixcompiler-sop-reduction-testing-to-ready
+  type.workflow.operator:
+  - operator-task-canonicalhypertensor-jax-vram-allocation-activate
+  - operator-task-canonicalhypertensor-jax-vram-allocation-close
+  - operator-task-canonicalhypertensor-jax-vram-allocation-ready-for-testing
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-activate
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-close
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-ready-for-testing
+  - operator-task-implementar-atomfeeder-activate
+  - operator-task-implementar-atomfeeder-close
+  - operator-task-implementar-atomfeeder-ready-for-testing
+  - operator-task-implementar-logicalspace-registry-bi-direccional-activate
+  - operator-task-implementar-logicalspace-registry-bi-direccional-close
+  - operator-task-implementar-logicalspace-registry-bi-direccional-ready-for-testing
+  - operator-task-meelengine-core-api-facade-activate
+  - operator-task-meelengine-core-api-facade-close
+  - operator-task-meelengine-core-api-facade-ready-for-testing
+  - operator-task-meelengine-fixpoint-deduction-algorithm-activate
+  - operator-task-meelengine-fixpoint-deduction-algorithm-close
+  - operator-task-meelengine-fixpoint-deduction-algorithm-ready-for-testing
+  - operator-task-rulematrixcompiler-si-mask-encoding-activate
+  - operator-task-rulematrixcompiler-si-mask-encoding-close
+  - operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing
+  - operator-task-rulematrixcompiler-sop-reduction-activate
+  - operator-task-rulematrixcompiler-sop-reduction-close
+  - operator-task-rulematrixcompiler-sop-reduction-ready-for-testing
+  type.workflow.pill:
+  - pill-migracion-a-jax
+  type.workflow.routine:
+  - routine-task-canonicalhypertensor-jax-vram-allocation
+  - routine-task-canonicalhypertensor-jit-bitwise-operations
+  - routine-task-implementar-atomfeeder
+  - routine-task-implementar-logicalspace-registry-bi-direccional
+  - routine-task-meelengine-core-api-facade
+  - routine-task-meelengine-fixpoint-deduction-algorithm
+  - routine-task-rulematrixcompiler-si-mask-encoding
+  - routine-task-rulematrixcompiler-sop-reduction
+  type.workflow.task:
+  - task-canonicalhypertensor-jax-vram-allocation
+  - task-canonicalhypertensor-jit-bitwise-operations
+  - task-implementar-atomfeeder
+  - task-implementar-logicalspace-registry-bi-direccional
+  - task-meelengine-core-api-facade
+  - task-meelengine-fixpoint-deduction-algorithm
+  - task-rulematrixcompiler-si-mask-encoding
+  - task-rulematrixcompiler-sop-reduction
+  workspace.desk:
+  - pill-migracion-a-jax
+  - task-canonicalhypertensor-jax-vram-allocation
+  - task-canonicalhypertensor-jit-bitwise-operations
+  - task-implementar-atomfeeder
+  - task-implementar-logicalspace-registry-bi-direccional
+  - task-meelengine-core-api-facade
+  - task-meelengine-fixpoint-deduction-algorithm
+  - task-rulematrixcompiler-si-mask-encoding
+  - task-rulematrixcompiler-sop-reduction
+  workspace.desk.inbox:
+  - 20260725-212407-suggestion-error-logging-protocol
+  - 20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  workspace.desk.primitives:
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready
+  - checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready
+  - checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready
+  - checklist-task-implementar-atomfeeder-closeout-ready
+  - checklist-task-implementar-atomfeeder-execution-ready
+  - checklist-task-implementar-atomfeeder-testing-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-execution-ready
+  - checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready
+  - checklist-task-meelengine-core-api-facade-closeout-ready
+  - checklist-task-meelengine-core-api-facade-execution-ready
+  - checklist-task-meelengine-core-api-facade-testing-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready
+  - checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready
+  - checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-closeout-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  - checklist-task-rulematrixcompiler-sop-reduction-testing-ready
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path
+  - condition-task-canonicalhypertensor-jax-vram-allocation-has-validation
+  - condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-closeout-evidence
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation
+  - condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout
+  - condition-task-implementar-atomfeeder-has-closeout-evidence
+  - condition-task-implementar-atomfeeder-has-implementation-path
+  - condition-task-implementar-atomfeeder-has-validation
+  - condition-task-implementar-atomfeeder-ready-for-closeout
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path
+  - condition-task-implementar-logicalspace-registry-bi-direccional-has-validation
+  - condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout
+  - condition-task-meelengine-core-api-facade-has-closeout-evidence
+  - condition-task-meelengine-core-api-facade-has-implementation-path
+  - condition-task-meelengine-core-api-facade-has-validation
+  - condition-task-meelengine-core-api-facade-ready-for-closeout
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path
+  - condition-task-meelengine-fixpoint-deduction-algorithm-has-validation
+  - condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path
+  - condition-task-rulematrixcompiler-si-mask-encoding-has-validation
+  - condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout
+  - condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence
+  - condition-task-rulematrixcompiler-sop-reduction-has-implementation-path
+  - condition-task-rulematrixcompiler-sop-reduction-has-validation
+  - condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout
+  - edge-task-canonicalhypertensor-jax-vram-allocation-activate-to-testing
+  - edge-task-canonicalhypertensor-jax-vram-allocation-close-to-complete
+  - edge-task-canonicalhypertensor-jax-vram-allocation-closeout-to-close
+  - edge-task-canonicalhypertensor-jax-vram-allocation-execution-to-activate
+  - edge-task-canonicalhypertensor-jax-vram-allocation-ready-to-closeout
+  - edge-task-canonicalhypertensor-jax-vram-allocation-testing-to-ready
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-close-to-complete
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-closeout-to-close
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-execution-to-activate
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-ready-to-closeout
+  - edge-task-canonicalhypertensor-jit-bitwise-operations-testing-to-ready
+  - edge-task-implementar-atomfeeder-activate-to-testing
+  - edge-task-implementar-atomfeeder-close-to-complete
+  - edge-task-implementar-atomfeeder-closeout-to-close
+  - edge-task-implementar-atomfeeder-execution-to-activate
+  - edge-task-implementar-atomfeeder-ready-to-closeout
+  - edge-task-implementar-atomfeeder-testing-to-ready
+  - edge-task-implementar-logicalspace-registry-bi-direccional-activate-to-testing
+  - edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete
+  - edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close
+  - edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate
+  - edge-task-implementar-logicalspace-registry-bi-direccional-ready-to-closeout
+  - edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  - edge-task-meelengine-core-api-facade-activate-to-testing
+  - edge-task-meelengine-core-api-facade-close-to-complete
+  - edge-task-meelengine-core-api-facade-closeout-to-close
+  - edge-task-meelengine-core-api-facade-execution-to-activate
+  - edge-task-meelengine-core-api-facade-ready-to-closeout
+  - edge-task-meelengine-core-api-facade-testing-to-ready
+  - edge-task-meelengine-fixpoint-deduction-algorithm-activate-to-testing
+  - edge-task-meelengine-fixpoint-deduction-algorithm-close-to-complete
+  - edge-task-meelengine-fixpoint-deduction-algorithm-closeout-to-close
+  - edge-task-meelengine-fixpoint-deduction-algorithm-execution-to-activate
+  - edge-task-meelengine-fixpoint-deduction-algorithm-ready-to-closeout
+  - edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready
+  - edge-task-rulematrixcompiler-si-mask-encoding-activate-to-testing
+  - edge-task-rulematrixcompiler-si-mask-encoding-close-to-complete
+  - edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close
+  - edge-task-rulematrixcompiler-si-mask-encoding-execution-to-activate
+  - edge-task-rulematrixcompiler-si-mask-encoding-ready-to-closeout
+  - edge-task-rulematrixcompiler-si-mask-encoding-testing-to-ready
+  - edge-task-rulematrixcompiler-sop-reduction-activate-to-testing
+  - edge-task-rulematrixcompiler-sop-reduction-close-to-complete
+  - edge-task-rulematrixcompiler-sop-reduction-closeout-to-close
+  - edge-task-rulematrixcompiler-sop-reduction-execution-to-activate
+  - edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout
+  - edge-task-rulematrixcompiler-sop-reduction-testing-to-ready
+  - operator-task-canonicalhypertensor-jax-vram-allocation-activate
+  - operator-task-canonicalhypertensor-jax-vram-allocation-close
+  - operator-task-canonicalhypertensor-jax-vram-allocation-ready-for-testing
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-activate
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-close
+  - operator-task-canonicalhypertensor-jit-bitwise-operations-ready-for-testing
+  - operator-task-implementar-atomfeeder-activate
+  - operator-task-implementar-atomfeeder-close
+  - operator-task-implementar-atomfeeder-ready-for-testing
+  - operator-task-implementar-logicalspace-registry-bi-direccional-activate
+  - operator-task-implementar-logicalspace-registry-bi-direccional-close
+  - operator-task-implementar-logicalspace-registry-bi-direccional-ready-for-testing
+  - operator-task-meelengine-core-api-facade-activate
+  - operator-task-meelengine-core-api-facade-close
+  - operator-task-meelengine-core-api-facade-ready-for-testing
+  - operator-task-meelengine-fixpoint-deduction-algorithm-activate
+  - operator-task-meelengine-fixpoint-deduction-algorithm-close
+  - operator-task-meelengine-fixpoint-deduction-algorithm-ready-for-testing
+  - operator-task-rulematrixcompiler-si-mask-encoding-activate
+  - operator-task-rulematrixcompiler-si-mask-encoding-close
+  - operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing
+  - operator-task-rulematrixcompiler-sop-reduction-activate
+  - operator-task-rulematrixcompiler-sop-reduction-close
+  - operator-task-rulematrixcompiler-sop-reduction-ready-for-testing
+  workspace.desk.routines:
+  - routine-task-canonicalhypertensor-jax-vram-allocation
+  - routine-task-canonicalhypertensor-jit-bitwise-operations
+  - routine-task-implementar-atomfeeder
+  - routine-task-implementar-logicalspace-registry-bi-direccional
+  - routine-task-meelengine-core-api-facade
+  - routine-task-meelengine-fixpoint-deduction-algorithm
+  - routine-task-rulematrixcompiler-si-mask-encoding
+  - routine-task-rulematrixcompiler-sop-reduction
+  workspace:desk:
+  - routine-task-canonicalhypertensor-jax-vram-allocation
+  - routine-task-canonicalhypertensor-jit-bitwise-operations
+  - routine-task-implementar-atomfeeder
+  - routine-task-implementar-logicalspace-registry-bi-direccional
+  - routine-task-meelengine-core-api-facade
+  - routine-task-meelengine-fixpoint-deduction-algorithm
+  - routine-task-rulematrixcompiler-si-mask-encoding
+  - routine-task-rulematrixcompiler-sop-reduction
+  - task-canonicalhypertensor-jax-vram-allocation
+  - task-canonicalhypertensor-jit-bitwise-operations
+  - task-implementar-atomfeeder
+  - task-implementar-logicalspace-registry-bi-direccional
+  - task-meelengine-core-api-facade
+  - task-meelengine-fixpoint-deduction-algorithm
+  - task-rulematrixcompiler-si-mask-encoding
+  - task-rulematrixcompiler-sop-reduction
+documents:
+  task-canonicalhypertensor-jax-vram-allocation:
+    model: TaskDoc
+    path: desk/tasks/task-canonicalhypertensor-jax-vram-allocation.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  task-canonicalhypertensor-jit-bitwise-operations:
+    model: TaskDoc
+    path: desk/tasks/task-canonicalhypertensor-jit-bitwise-operations.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  task-implementar-atomfeeder:
+    model: TaskDoc
+    path: desk/tasks/task-implementar-atomfeeder.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  task-implementar-logicalspace-registry-bi-direccional:
+    model: TaskDoc
+    path: desk/tasks/task-implementar-logicalspace-registry-bi-direccional.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  task-meelengine-core-api-facade:
+    model: TaskDoc
+    path: desk/tasks/task-meelengine-core-api-facade.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  task-meelengine-fixpoint-deduction-algorithm:
+    model: TaskDoc
+    path: desk/tasks/task-meelengine-fixpoint-deduction-algorithm.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  task-rulematrixcompiler-si-mask-encoding:
+    model: TaskDoc
+    path: desk/tasks/task-rulematrixcompiler-si-mask-encoding.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  task-rulematrixcompiler-sop-reduction:
+    model: TaskDoc
+    path: desk/tasks/task-rulematrixcompiler-sop-reduction.md
+    tags:
+    - artifact:task
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+  pill-migracion-a-jax:
+    model: PillDoc
+    path: desk/pills/pill-migracion-a-jax.md
+    tags:
+    - concept:architecture
+    - context:migration
+    - type.workflow.pill
+    - workspace.desk
+  20260727-022056-unclear-fallo-en-status-y-doctor-repair:
+    model: InboxNoteDoc
+    path: desk/inbox/20260727-022056-unclear-fallo-en-status-y-doctor-repair.md
+    tags:
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+  20260725-212407-suggestion-error-logging-protocol:
+    model: InboxNoteDoc
+    path: desk/inbox/20260725-212407-suggestion-error-logging-protocol.md
+    tags:
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+  checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-implementar-atomfeeder-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-implementar-atomfeeder-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-implementar-atomfeeder-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-implementar-logicalspace-registry-bi-direccional-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-meelengine-core-api-facade-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-meelengine-core-api-facade-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-meelengine-core-api-facade-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-rulematrixcompiler-sop-reduction-closeout-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-closeout-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-rulematrixcompiler-sop-reduction-execution-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-execution-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  checklist-task-rulematrixcompiler-sop-reduction-testing-ready:
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-testing-ready.md
+    tags:
+    - primitive:checklist
+    - type.workflow.checklist
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jax-vram-allocation-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jit-bitwise-operations-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-atomfeeder-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-atomfeeder-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-atomfeeder-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-atomfeeder-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-atomfeeder-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-logicalspace-registry-bi-direccional-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-core-api-facade-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-core-api-facade-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-core-api-facade-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-core-api-facade-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-fixpoint-deduction-algorithm-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-si-mask-encoding-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-sop-reduction-has-implementation-path:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-implementation-path.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-sop-reduction-has-validation:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-validation.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout:
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout.md
+    tags:
+    - primitive:condition
+    - type.workflow.condition
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jax-vram-allocation-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jax-vram-allocation-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jax-vram-allocation-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jax-vram-allocation-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jax-vram-allocation-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jax-vram-allocation-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jit-bitwise-operations-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jit-bitwise-operations-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jit-bitwise-operations-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jit-bitwise-operations-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-canonicalhypertensor-jit-bitwise-operations-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-atomfeeder-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-atomfeeder-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-atomfeeder-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-atomfeeder-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-atomfeeder-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-atomfeeder-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-atomfeeder-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-atomfeeder-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-atomfeeder-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-atomfeeder-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-atomfeeder-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-atomfeeder-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-logicalspace-registry-bi-direccional-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-logicalspace-registry-bi-direccional-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-core-api-facade-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-core-api-facade-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-core-api-facade-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-core-api-facade-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-core-api-facade-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-core-api-facade-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-core-api-facade-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-core-api-facade-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-core-api-facade-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-core-api-facade-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-core-api-facade-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-core-api-facade-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-fixpoint-deduction-algorithm-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-fixpoint-deduction-algorithm-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-fixpoint-deduction-algorithm-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-fixpoint-deduction-algorithm-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-fixpoint-deduction-algorithm-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-si-mask-encoding-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-si-mask-encoding-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-si-mask-encoding-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-si-mask-encoding-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-si-mask-encoding-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-sop-reduction-activate-to-testing:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-activate-to-testing.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-sop-reduction-closeout-to-close:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-closeout-to-close.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-sop-reduction-close-to-complete:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-close-to-complete.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-sop-reduction-execution-to-activate:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-execution-to-activate.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  edge-task-rulematrixcompiler-sop-reduction-testing-to-ready:
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-testing-to-ready.md
+    tags:
+    - primitive:edge
+    - type.workflow.edge
+    - workspace.desk.primitives
+  operator-task-canonicalhypertensor-jax-vram-allocation-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-canonicalhypertensor-jax-vram-allocation-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-canonicalhypertensor-jax-vram-allocation-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-canonicalhypertensor-jax-vram-allocation-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-canonicalhypertensor-jax-vram-allocation-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-canonicalhypertensor-jax-vram-allocation-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-canonicalhypertensor-jit-bitwise-operations-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-canonicalhypertensor-jit-bitwise-operations-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-canonicalhypertensor-jit-bitwise-operations-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-canonicalhypertensor-jit-bitwise-operations-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-canonicalhypertensor-jit-bitwise-operations-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-canonicalhypertensor-jit-bitwise-operations-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-implementar-atomfeeder-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-implementar-atomfeeder-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-implementar-atomfeeder-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-implementar-atomfeeder-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-implementar-atomfeeder-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-implementar-atomfeeder-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-implementar-logicalspace-registry-bi-direccional-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-implementar-logicalspace-registry-bi-direccional-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-implementar-logicalspace-registry-bi-direccional-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-implementar-logicalspace-registry-bi-direccional-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-implementar-logicalspace-registry-bi-direccional-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-implementar-logicalspace-registry-bi-direccional-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-meelengine-core-api-facade-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-meelengine-core-api-facade-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-meelengine-core-api-facade-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-meelengine-core-api-facade-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-meelengine-core-api-facade-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-meelengine-core-api-facade-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-meelengine-fixpoint-deduction-algorithm-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-meelengine-fixpoint-deduction-algorithm-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-meelengine-fixpoint-deduction-algorithm-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-meelengine-fixpoint-deduction-algorithm-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-meelengine-fixpoint-deduction-algorithm-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-meelengine-fixpoint-deduction-algorithm-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-rulematrixcompiler-si-mask-encoding-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-rulematrixcompiler-si-mask-encoding-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-rulematrixcompiler-si-mask-encoding-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-rulematrixcompiler-si-mask-encoding-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-rulematrixcompiler-sop-reduction-activate:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-activate.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-rulematrixcompiler-sop-reduction-close:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-close.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  operator-task-rulematrixcompiler-sop-reduction-ready-for-testing:
+    model: OperatorDoc
+    path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-ready-for-testing.md
+    tags:
+    - primitive:operator
+    - type.workflow.operator
+    - workspace.desk.primitives
+  routine-task-canonicalhypertensor-jax-vram-allocation:
+    model: RoutineDoc
+    path: desk/routines/routine-task-canonicalhypertensor-jax-vram-allocation.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+  routine-task-canonicalhypertensor-jit-bitwise-operations:
+    model: RoutineDoc
+    path: desk/routines/routine-task-canonicalhypertensor-jit-bitwise-operations.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+  routine-task-implementar-atomfeeder:
+    model: RoutineDoc
+    path: desk/routines/routine-task-implementar-atomfeeder.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+  routine-task-implementar-logicalspace-registry-bi-direccional:
+    model: RoutineDoc
+    path: desk/routines/routine-task-implementar-logicalspace-registry-bi-direccional.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+  routine-task-meelengine-core-api-facade:
+    model: RoutineDoc
+    path: desk/routines/routine-task-meelengine-core-api-facade.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+  routine-task-meelengine-fixpoint-deduction-algorithm:
+    model: RoutineDoc
+    path: desk/routines/routine-task-meelengine-fixpoint-deduction-algorithm.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+  routine-task-rulematrixcompiler-si-mask-encoding:
+    model: RoutineDoc
+    path: desk/routines/routine-task-rulematrixcompiler-si-mask-encoding.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+  routine-task-rulematrixcompiler-sop-reduction:
+    model: RoutineDoc
+    path: desk/routines/routine-task-rulematrixcompiler-sop-reduction.md
+    tags:
+    - primitive:routine
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk

@@ -1,0 +1,118 @@
+documents:
+- name: task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  path: desk/tasks/task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas.md
+  hash_c: d5fcadf72dfcac5afa2aae935b64ab9d03db9e3877621dcadd2d2a42c2299a88
+  hash_d: d1ea4a1a0f9e37f532a0ddc5e0260247f0ecea1b08bcff10006d445b4a81bea0
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-inferencia-deductiva-proposicional-matricial
+  path: desk/tasks/task-inferencia-deductiva-proposicional-matricial.md
+  hash_c: 92c31bc27b7f447161b22654c3a23f926ab994a1285c4984c9fef4abde3bda0f
+  hash_d: 069459ed0fc1fb01b5ecf04048dbfbab275784f5a94100e5d0838590289f0208
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-inferencia-relacional-por-clausura-transitiva-matricial
+  path: desk/tasks/task-inferencia-relacional-por-clausura-transitiva-matricial.md
+  hash_c: 796de0487ca8b2dfb3a4ae32d04e9a7628ed6721408a34b4ce470f1b65b763b6
+  hash_d: d02c07963754c486fefb2fa97846fabff59c03abb27cd4bcc109db6d0cccb330
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  path: desk/tasks/task-omnirepresentacion-por-bloques-e-integracion-en-wigame.md
+  hash_c: 805953df9fc790aa463bf6d890943ff1b2dd7c7ca7a28208e57a3d426dea4946
+  hash_d: 897f5589c48cb93800c253ff5f2cae41676fa85ed70838ef58f37341b0e45490
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-vectorizacion-bitwise-denso-de-booleanmatrix
+  path: desk/tasks/task-vectorizacion-bitwise-denso-de-booleanmatrix.md
+  hash_c: 7ec57a5e5f6eeabaf774fb28efc7137696eff3fdc77a4ea8acde82ed1f3e3150
+  hash_d: 7379ea65bdd3c12c741e3e660e00adb2969c8cfe6fe74dd4e118f4f17f9119b9
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-canonicalhypertensor-jax-vram-allocation
+  path: desk/tasks/task-canonicalhypertensor-jax-vram-allocation.md
+  hash_c: f33cde8fda06ec2505853f6629ec46573ea6e93f0c226ef8c3ff66ef8985296d
+  hash_d: 442d7f70763ebd14e2f43e4112668037b9638a1e4575a86c3dcfb94a1aa3c38b
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-canonicalhypertensor-jit-bitwise-operations
+  path: desk/tasks/task-canonicalhypertensor-jit-bitwise-operations.md
+  hash_c: 500ee0f0f1ffb7082ca25553c37ccc1796a2e2193fa0e221e08e9bafdad59ef6
+  hash_d: d19151a56339c5694a53527049ea0a7b7dc4cf6bb67a7e457cba99c89b521fa4
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-implementar-atomfeeder
+  path: desk/tasks/task-implementar-atomfeeder.md
+  hash_c: bb1808129d07b82fe0340e0f009035e33727063d397eb08a3ca82607d3de8749
+  hash_d: 8ca9334a968da34e09de9c45af8ebe800943dc6e07d08fac0db5d5ca520be660
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-implementar-logicalspace-registry-bi-direccional
+  path: desk/tasks/task-implementar-logicalspace-registry-bi-direccional.md
+  hash_c: 14cc4e2489941474d0e7d28ea1c0352b8c57ebb2b8c575ce7eed0bba3e087922
+  hash_d: 36b846f001e6d405797810c34411cfa8931afd022e19fbc416a59208876f75c1
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-meelengine-core-api-facade
+  path: desk/tasks/task-meelengine-core-api-facade.md
+  hash_c: 62523cda25145baf126f3a95dd5f191cbf43f2c452f003523648902b68438fa5
+  hash_d: 9ecf1bdc9e242065a79247cbf664c16f39efef4241a8544bb8c3db4fae95f8a5
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-meelengine-fixpoint-deduction-algorithm
+  path: desk/tasks/task-meelengine-fixpoint-deduction-algorithm.md
+  hash_c: adc88127861f07ca617e5c74ea3c2a45240b0cd274c16fe7aaee6466a8933632
+  hash_d: ab899d8360f1d9346d4c50c6f49119d3689fd09bac1491dafaad11d1ec7a654b
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-rulematrixcompiler-si-mask-encoding
+  path: desk/tasks/task-rulematrixcompiler-si-mask-encoding.md
+  hash_c: af94b0b77fdec3db7bf61f1718607af3be2d6a5e81e79c8456e04b58084a123a
+  hash_d: 457451cbefcee7d36b6f5cd0469decfb5feed64c9b1ed017418ddeefb1d23bd2
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+- name: task-rulematrixcompiler-sop-reduction
+  path: desk/tasks/task-rulematrixcompiler-sop-reduction.md
+  hash_c: 8d0363aa78b4aeddd66a7f9d0d166ef28a93a7fb6c65a7a525d9aacb70082717
+  hash_d: 7d697b2f96db89713a4351f982c3af939bc2855a8ea12d498306de233cbac97c
+  semantic_tags:
+  - artifact:task
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk

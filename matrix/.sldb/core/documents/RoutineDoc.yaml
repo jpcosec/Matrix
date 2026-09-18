@@ -1,0 +1,118 @@
+documents:
+- name: routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+  path: desk/routines/routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas.md
+  hash_c: 2139405bf2b336ff8a420350164e2f1e50e2c989c221a70a4e1ed6198cfc139a
+  hash_d: 28a75788d825fc83fcd6b60769a12a4d497cad87afc4bc16f07bb9cc14d2108b
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-inferencia-deductiva-proposicional-matricial
+  path: desk/routines/routine-task-inferencia-deductiva-proposicional-matricial.md
+  hash_c: 7f295e0964a318b981effffbe3da038c0457852a5344a51af59ca846a82bd705
+  hash_d: 2df9fd1ccb3249a8e68e424669522f03e60399f687f2d4926b24267f3f52c5f9
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-inferencia-relacional-por-clausura-transitiva-matricial
+  path: desk/routines/routine-task-inferencia-relacional-por-clausura-transitiva-matricial.md
+  hash_c: c264e855c45217b983e4b9a596fbd7d5cc7ebe7e45d1590f7e4626e1543b800e
+  hash_d: dce16a783d48332ee6279b099a0e68ae528031380441b9c356f20e2db981937d
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame
+  path: desk/routines/routine-task-omnirepresentacion-por-bloques-e-integracion-en-wigame.md
+  hash_c: e70bb4ba36a9ed563be99dd97bfef3a1ce5b3f344ab92bfbdc2655dccc8b182c
+  hash_d: fc9634547fc39c43fd6e7190627f9eaee63a2643bccd9152fedc66601793798d
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-vectorizacion-bitwise-denso-de-booleanmatrix
+  path: desk/routines/routine-task-vectorizacion-bitwise-denso-de-booleanmatrix.md
+  hash_c: 6097c210d564c9e852a62774a6d0a305fbc89f7662febeefcd81fd480bb2e80a
+  hash_d: 17f35c713eeb60c26e4373ceb07ac4ab8ec73f42469dc90f4307d3d79f656359
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-canonicalhypertensor-jax-vram-allocation
+  path: desk/routines/routine-task-canonicalhypertensor-jax-vram-allocation.md
+  hash_c: b0b5ee0c62b3859a3941f1500a367f9bdd724d3e81a46802f4c899995175be1e
+  hash_d: cd134d84a0aa37f8c9288c0649578969ff0acdb3191eb8543ae3955d6bcef3ca
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-canonicalhypertensor-jit-bitwise-operations
+  path: desk/routines/routine-task-canonicalhypertensor-jit-bitwise-operations.md
+  hash_c: 109c5a7623264d652a687b23d6e607a453268bf6006eb4e5decf303f39a8dcf3
+  hash_d: a26a1660f12352e0202961441160ae3c2c6e8afbdeaf6e28f76463418b8db7d5
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-implementar-atomfeeder
+  path: desk/routines/routine-task-implementar-atomfeeder.md
+  hash_c: f2e6a156f491598154d41d2ee5bd7c3d406b5e325b0599923ed8b90cc8f8652b
+  hash_d: 26175c7966c8330a019119bbc9a4752e7603af5cae52ed21d57f3415f3a00b83
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-implementar-logicalspace-registry-bi-direccional
+  path: desk/routines/routine-task-implementar-logicalspace-registry-bi-direccional.md
+  hash_c: e482110319cf05926330467e647df02394e5b880023690680265670fe1f962d7
+  hash_d: 0727da0c7ca6fe402e395a17111afac26f440f97248ad2b0623fc86531b2443f
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-meelengine-core-api-facade
+  path: desk/routines/routine-task-meelengine-core-api-facade.md
+  hash_c: dbec4ee41ed0095cda121b93100234251f16c9493422aa197548433dee2e07d8
+  hash_d: d1b3e8314016ec8d41856613ca6d591485ea0eae2636e1ae2e7b1849960ab5f9
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-meelengine-fixpoint-deduction-algorithm
+  path: desk/routines/routine-task-meelengine-fixpoint-deduction-algorithm.md
+  hash_c: ba181dac9010a0a12ad25d2ba8ee1adc00070c601e9cbd2537c59aefb2683467
+  hash_d: 05888432c4ed993411936d04778f0757db36113184c6d8820f38851e8ddad323
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-rulematrixcompiler-si-mask-encoding
+  path: desk/routines/routine-task-rulematrixcompiler-si-mask-encoding.md
+  hash_c: 40a6b94ed5cbb0bc6f770ac81bfff3da89d23de7ad22e74990acfd6419465013
+  hash_d: a7a3d0b7c1c30699645f98a7e00f9a5842bfb3321e807d4b264a61c3a97cdf4f
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk
+- name: routine-task-rulematrixcompiler-sop-reduction
+  path: desk/routines/routine-task-rulematrixcompiler-sop-reduction.md
+  hash_c: d1a98f4ec74e81d6a0ae124c4ae60060ef4488e116c97c42dbba2844d7a8b3dd
+  hash_d: b1e8f8b851eb0063648937a786775aa446c5b888431511c1fb5e02d515bf6973
+  semantic_tags:
+  - primitive:routine
+  - type.workflow.routine
+  - workspace.desk.routines
+  - workspace:desk

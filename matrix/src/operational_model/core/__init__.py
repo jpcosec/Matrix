@@ -1,5 +1,14 @@
 """Core proposition-first domain entities."""
 
+from .evidence import (
+    CURATION,
+    TIERS,
+    Evidence,
+    Prov,
+    append_history,
+    make_evidence,
+    validate_evidence,
+)
 from .fact import Fact
 from .li_space import LiSpace
 from .name import Name
@@ -13,7 +22,11 @@ from .thing import Thing
 from .truth_value import TruthValue
 
 __all__ = [
+    "CURATION",
+    "TIERS",
+    "Evidence",
     "Fact",
+    "Prov",
     "LiSpace",
     "Name",
     "Proposition",
@@ -24,4 +37,7 @@ __all__ = [
     "Symbol",
     "Thing",
     "TruthValue",
+    "append_history",
+    "make_evidence",
+    "validate_evidence",
 ]

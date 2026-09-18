@@ -1,5 +1,12 @@
 """System-level orchestration for the operational model."""
 
+from .candidates import (
+    Candidate,
+    promote_candidate,
+    register_candidate,
+    reject_candidate,
+)
+from .deduction import deduce
 from .logical_system import LogicalSystem
 from .operation_results import OperationResult
 from .s_expression_runtime import SExpressionRuntime
@@ -20,16 +27,21 @@ from .wi_game_registry import (
 from .wi_game_serialization import from_dict, from_yaml, to_dict, to_yaml
 
 __all__ = [
+    "Candidate",
     "LogicalSystem",
     "OperationResult",
     "SExpressionRuntime",
     "WiGame",
     "accepts_proposition",
     "add_fact",
+    "deduce",
     "from_dict",
     "from_yaml",
     "is_pure",
+    "promote_candidate",
+    "register_candidate",
     "register_proposition",
+    "reject_candidate",
     "search",
     "set_sense",
     "tautological_columns",

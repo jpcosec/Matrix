@@ -22,7 +22,7 @@ Superficie única de mando del motor. Forma canónica `(R a b)`; selectores `kin
 | `(promote <candidate-id> [tier:confirmed|observed])` | aplica el candidato: `V_i`, `S_i` o fila de `I`; `curation=confirmed` | rechazo explícito si contradice `V_i` |
 | `(reject <candidate-id> "<motivo>")` | `curation=rejected`, se conserva | |
 | `(why [wigame:<id>] (R a b))` | cadena de justificación | `{chain: [{fact, tier, prov, rule}]}`; para `observed` devuelve solo `prov` |
-| `(define <symbol-id> <formula>)` | crea símbolo + regla en `I` | `tier=observed`; la fórmula usa la gramática de `kernel/formulas.py` |
+| `(define (if (R a b) (R c d)))` | añade la regla a `system.rules` con `tier=observed` y ejecuta `deduce` en los mundos que aceptan ambas proposiciones | los símbolos nuevos se crean antes con `create symbol`; ambas proposiciones deben usar la relación del `LiSpace` del mundo (un `LiSpace` admite una sola relación) |
 | `(project wigame:<src> wigame:<dst> (a b) …)` | escribe celdas de `RoutingProjection` | solo desde curado |
 
 ## 3. Reglas

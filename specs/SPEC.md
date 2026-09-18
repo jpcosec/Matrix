@@ -30,10 +30,10 @@ texto ──► Populator (Korel f.1-3) ──► X: individuos×conceptos (+off
 | Componente | Doc | Estado |
 |---|---|---|
 | Motor booleano (WiGame, `S_i`, `V_i`, `I`, runtime S-expr) | [matrix.md](matrix.md) | existe en `matrix/` (subtree de `jpcosec/Matrix`), 119 tests |
-| Chunker estadístico | [populator.md](populator.md) | por implementar |
-| CHIC / SIA | [chic.md](chic.md) | núcleo en `sia/` |
-| Curado y anclaje a la fuente | [grounding.md](grounding.md), [provenance.md](provenance.md) | por implementar sobre `Fact.evidence` |
-| Loop de interacción | [shrdlu.md](shrdlu.md), [runtime_api.md](runtime_api.md) | prototipo en `matrix/prototypes/shrdlu/` |
+| Chunker estadístico | [populator.md](populator.md) | `populator/` + `corpus/vegetales/` (295 oraciones) |
+| CHIC / SIA | [chic.md](chic.md) | `sia/`; puente a Matrix en `pipeline/bridge.py` |
+| Curado y anclaje a la fuente | [grounding.md](grounding.md), [provenance.md](provenance.md) | `matrix/src/operational_model/core/evidence.py`, `system/candidates.py`, `system/deduction.py` |
+| Loop de interacción | [shrdlu.md](shrdlu.md), [runtime_api.md](runtime_api.md) | REPL v1 en español: `matrix/prototypes/shrdlu/{spanish,repl}.py` |
 | Causalidad | [appendix_causality.md](appendix_causality.md) | fuera de alcance |
 | Fuentes | [sources.md](sources.md) | — |
 
@@ -52,15 +52,17 @@ texto ──► Populator (Korel f.1-3) ──► X: individuos×conceptos (+off
 | 9 | Complejidad | Se habla de paralelismo bitwise, no de `O(1)`. | — |
 | 10 | Rol del LLM | Parsea y verbaliza. No decide verdad ni sentido. | [shrdlu.md](shrdlu.md) |
 
-## 4. Alcance del MVP
+## 4. Alcance del MVP (implementado)
 
 1. `sia/`: intensidad clásica y entrópica, cohesión, jerarquía con niveles significativos, grafo implicativo. Tests contra la Tabla 1 y la Fig. 1 del libro.
-2. Populator: Korel fases 1-3 sobre un corpus pequeño del dominio culinario/vegetal (`matrix/examples/vegetales*.yaml` como vocabulario semilla).
-3. Puente `sia/report` → S-expressions (`create symbol/relation/li/wigame`, `ingest`) con `Prov(f)` en `evidence`, `tier=statistical`, `truth=UNKNOWN`.
-4. Cola de curado + verbo `promote`.
-5. SHRDLU-loop v1: REPL con `assert / check / why / define` y aclaración por ambigüedad.
+2. `populator/`: Korel fases 1-3 sobre `corpus/vegetales/` (vocabulario semilla de `matrix/examples/vegetales*.yaml`).
+3. `pipeline/bridge.py`: `sia` → S-expressions `create` + `candidate` (`fact`, `class`, `nonsense`) con `Prov(f)`, `tier=statistical`, `curation=proposed`; `build_system` auto-confirma `φ ≥ 0.99` con soporte.
+4. Cola de curado en el runtime: `candidate / return candidates / promote / reject`, más `retract`, `why`, `define` y deducción con traza (`derived_from`).
+5. REPL v1 en español controlado (`check / assert / why / retract / define`, elipsis "¿y X?", aclaración por ambigüedad, comandos `candidatos / aprueba / rechaza / show / tell`).
 
-Fuera del MVP: AROMA (proyecciones entre mundos), R-reglas de grado > 1, árbol de similitud, JAX, verbalización con LLM, causalidad.
+Prueba extremo a extremo: `tests/test_e2e_pipeline.py` (corpus → mundo poblado → check/why/define/retract/promote) y `matrix/tests/test_shrdlu_repl.py` (sesión guionizada).
+
+Fuera del MVP: AROMA (proyecciones entre mundos), R-reglas de grado > 1, árbol de similitud, JAX, verbalización con LLM, causalidad, `LiSpace` multi-relación (hoy una regla `define` solo puede concluir en la relación del mundo).
 
 ## 5. Ventajas que sí se sostienen
 

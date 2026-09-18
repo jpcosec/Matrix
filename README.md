@@ -27,7 +27,16 @@ python -m pipeline.run corpus/vegetales --wigame vegetales --dump /tmp/vegetales
 
 # conversar
 cd matrix && PYTHONPATH=.. python -m prototypes.shrdlu.repl ../corpus/vegetales
+
+# proyecciones entre dos mundos (AROMA) y curado asistido por LLM
+python -m pipeline.match corpus/a corpus/b --wigames a b --phi-r 0.85
+python -m pipeline.curate corpus/vegetales --wigame vegetales --backend pi --limit 10
+
+# escribir y recuperar sobre un corpus grande (docs, libro, trazas)
+python -m experiments.run_corpus <dir|archivo> --wigame <id> --lang es|en --recursive --out /tmp/corpora/<id>
 ```
+
+`experiments/run_corpus.py` puebla un mundo, comprueba que cada `prov` de los 30 hechos más fuertes cita una oración que contiene ambos conceptos, ejecuta consultas y recarga el mundo desde YAML. Resultados sobre 273 documentos de proyecto (3.9k oraciones), un libro (17k oraciones) y trazas de agentes: recuperación con procedencia 100 %, recarga idéntica, 0.03-23 s, < 300 MB.
 
 ```
 > ¿la lechuga tiene hoja?

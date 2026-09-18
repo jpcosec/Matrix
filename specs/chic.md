@@ -48,8 +48,14 @@ Todo pasa por la [cola de curado](grounding.md). Nada escribe `TRUE` en `V_i` ni
 | Grado máximo de R-regla | 1 para el puente a `I`; la jerarquía se calcula completa | grado > 1 = trabajo futuro |
 | `n_min` para `unsinnig` | 20 | a calibrar |
 
-## 7. Trabajo futuro
+## 7. Implementado además
 
-- **AROMA** (cap. 11): dadas dos jerarquías `H = (C, ≤, T, γ)`, reglas `a → b` entre conceptos significativas si `ϕ ≥ ϕ_r` y máximas frente a ancestros/descendientes. Es el mecanismo para *proponer* `RoutingProjection` entre dos `WiGame` con vocabulario compartido.
+- **AROMA** (cap. 11, `sia/aroma.py`): dadas dos jerarquías `H = (C, ≤, T, γ)`, reglas `a → b` entre nodos significativas si `ϕ ≥ ϕ_r` y máximas frente a ancestros de `a` / descendientes de `b`. `pipeline/match.py` las convierte en candidatos `projection` entre dos `WiGame`. Nota estructural: ninguna regla hacia la raíz de `H₂` puede ser significativa (`n_b = n ⇒ ϕ = 0`).
+- **Árbol de similitud** (cap. 2 §4, `sia/similarity.py`): índice de Lerman `s = Pr[Poisson(λ) < n_ab]`, aglomerativo no orientado; comparte `Level` y `significant_levels`.
+- **Niveles significativos vectorizados**: `O(m log m)` por nivel con `searchsorted` (antes `O(p³)` en Python: p=150 → 51 s; ahora p=800 → 0.5 s).
+
+## 8. Trabajo futuro
+
 - Tipicidad y contribución (cap. 1 §8): qué individuos (oraciones) sostienen una regla — refuerza `Prov(f)`.
-- Reglas conjuntivas `A ∧ B → C` (Apriori + criterio de originalidad, cap. 2 §3).
+- Reglas conjuntivas estadísticas `A ∧ B → C` (Apriori + criterio de originalidad, cap. 2 §3). Las conjuntivas *ground* ya existen en el runtime (`define` con `and`).
+- Versión entrópica del índice de similitud.

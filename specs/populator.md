@@ -28,7 +28,9 @@ class Corpus:
 
 - **Individuo = oración.** Mantiene `n` grande y las variables raras dentro del régimen `λ > 4`; párrafo como opción (`--unit paragraph`).
 - **`occurrences` es obligatorio**: sin `char_span` no hay `Prov(f)` y el hecho no puede citarse.
-- Filtros: soporte mínimo por concepto (`n_a ≥ 5`), longitud máxima de n-grama (3), stopwords.
+- Filtros: soporte mínimo por concepto (`n_a ≥ 5`), longitud máxima de n-grama (3), stopwords, `max_concepts` (los de mayor frecuencia documental), `lang` (`es`/`en`).
+- **Limpieza de boilerplate** (`clean_markdown`, activa por defecto): frontmatter YAML, bloques y código inline, URLs y rutas, marcadores de encabezado/lista/tabla, líneas `clave: valor` y de copyright se sustituyen por espacios de igual longitud, así los spans de `Prov(f)` siguen apuntando al documento (`Document.text` limpio, `Document.raw_text` original). Tokens de un solo dígito o < 3 caracteres se descartan salvo dentro de una frase multi-token.
+- **Deduplicación de oraciones** (`dedupe=True`): las oraciones cuyo texto normalizado ya apareció se descartan; sin esto, una plantilla repetida (p. ej. 68 copias de la misma frase en un corpus de documentación) domina todas las reglas.
 
 ## 3. Módulo
 

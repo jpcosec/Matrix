@@ -23,7 +23,12 @@ Superficie única de mando del motor. Forma canónica `(R a b)`; selectores `kin
 | `(reject <candidate-id> "<motivo>")` | `curation=rejected`, se conserva | |
 | `(why [wigame:<id>] (R a b))` | cadena de justificación | `{chain: [{fact, tier, prov, rule}]}`; para `observed` devuelve solo `prov` |
 | `(define (if (R a b) (R c d)))` | añade la regla a `system.rules` con `tier=observed` y ejecuta `deduce` en los mundos que aceptan ambas proposiciones | los símbolos nuevos se crean antes con `create symbol`; ambas proposiciones deben usar la relación del `LiSpace` del mundo (un `LiSpace` admite una sola relación) |
-| `(project wigame:<src> wigame:<dst> (a b) …)` | escribe celdas de `RoutingProjection` | solo desde curado |
+| `(define (if (and (R a b) (R c d) …) (R e f)))` | regla conjuntiva: el átomo compuesto entra en `v` cuando todos sus conjuntos son TRUE; `derived_from` recoge todos | R-reglas de grado > 1 en forma ground |
+| `(project wigame:<src> wigame:<dst> (s t) (s2 t2) …)` | enlaza celdas de la `RoutingProjection` `src->dst` (la crea si no existe) con `tier=observed` | |
+| `(candidate projection wigame:<src> (wigame:<dst> (s t) …) evidence:<json>)` | candidato de proyección (los genera `pipeline/match.py` vía AROMA) | `promote` enlaza los pares |
+| `(return projections [wigame:<src>])` | `{projections: [{source, target, pairs}]}` | |
+
+`deduce(system)` sin `wigame_id` opera sobre todos los mundos: cada átomo nuevo se inserta en el mundo que lo acepta; si lo aceptan varios queda en `ambiguous` (no se inserta) y si ninguno en `unplaced`. Así una regla puede concluir en otra relación sin que un `LiSpace` tenga que admitir varias.
 
 ## 3. Reglas
 

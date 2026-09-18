@@ -28,7 +28,7 @@ sia/report ──► cola (proposed) ──► LLM: redacta (R a b), resuelve si
 
 - **Estados** en `Fact.evidence.curation`: `proposed | confirmed | rejected`. Un `rejected` se conserva (evita re-proponer lo mismo).
 - **Umbrales por `φ`** (calibrables): `φ ≥ 0.99` → puede auto-confirmarse si además supera `n_min` de soporte; `0.85 ≤ φ < 0.99` → cola; `φ < 0.85` → no se propone.
-- **El LLM no decide verdad.** Recibe el candidato, las oraciones citadas por `Prov(f)` y el vocabulario del `WiGame`; devuelve la S-expression canónica, la cita elegida y un comentario. Su salida es un `proposed` mejor formado, nunca un `confirmed`.
+- **El LLM no decide verdad.** Recibe el candidato, las oraciones citadas por `Prov(f)` y el vocabulario del `WiGame`; devuelve la S-expression canónica, la cita elegida y un comentario. Su salida es un `proposed` mejor formado, nunca un `confirmed`. Implementado en `pipeline/curate.py`: `propose(system, candidate_id, backend, documents)` escribe la propuesta en `evidence.llm` y no toca `curation`; backends `PiBackend` (`pi -p --no-tools`, deepseek-flash) y `FakeBackend` (tests); CLI `python -m pipeline.curate <corpus> --wigame <id> --backend pi|fake`; en el REPL, `sugiere <id>`.
 - **El humano ve** la regla, el `φ`, las oraciones fuente y la S-expression, y responde con una tecla. Todo queda en `evidence`.
 
 ## 4. Casos que exigen curado obligatorio

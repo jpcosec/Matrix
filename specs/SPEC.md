@@ -60,9 +60,15 @@ texto ──► Populator (Korel f.1-3) ──► X: individuos×conceptos (+off
 4. Cola de curado en el runtime: `candidate / return candidates / promote / reject`, más `retract`, `why`, `define` y deducción con traza (`derived_from`).
 5. REPL v1 en español controlado (`check / assert / why / retract / define`, elipsis "¿y X?", aclaración por ambigüedad, comandos `candidatos / aprueba / rechaza / show / tell`).
 
-Prueba extremo a extremo: `tests/test_e2e_pipeline.py` (corpus → mundo poblado → check/why/define/retract/promote) y `matrix/tests/test_shrdlu_repl.py` (sesión guionizada).
+6. Reglas entre relaciones y conjuntivas: `deduce` opera sobre todos los mundos (una regla puede concluir en otra relación = otro `WiGame`) y `(define (if (and …) …))` introduce conjunciones antes de la clausura (R-reglas de grado > 1 en forma *ground*).
+7. Proyecciones entre mundos: `sia/aroma.py` (AROMA) + `pipeline/match.py` proponen candidatos `projection`; `promote`/`project` rellenan `RoutingProjection`.
+8. Árbol de similitud (índice de Lerman) en `sia/similarity.py`.
+9. Curado asistido por LLM: `pipeline/curate.py` con backend intercambiable (`PiBackend` = `pi -p` con deepseek-flash, `FakeBackend` para tests); el LLM redacta la propuesta, el humano sigue siendo quien promueve.
+10. `experiments/run_corpus.py`: escritura y recuperación sobre corpus reales (docs de proyecto, un libro de 17k oraciones, trazas), con verificación de que cada `prov` cita una oración que contiene ambos conceptos y recarga YAML idéntica.
 
-Fuera del MVP: AROMA (proyecciones entre mundos), R-reglas de grado > 1, árbol de similitud, JAX, verbalización con LLM, causalidad, `LiSpace` multi-relación (hoy una regla `define` solo puede concluir en la relación del mundo).
+Prueba extremo a extremo: `tests/test_e2e_pipeline.py` (corpus → mundo poblado → check/why/define/retract/promote), `matrix/tests/test_shrdlu_repl.py` (sesión guionizada), `tests/test_match.py`, `tests/test_curate.py`, `tests/test_scaling.py`.
+
+Fuera del alcance: causalidad (requiere datos, no texto — ver apéndice) y backend JAX (sin beneficio a `p ≤ 2000`; los shapes dinámicos de `create symbol` lo penalizan).
 
 ## 5. Ventajas que sí se sostienen
 

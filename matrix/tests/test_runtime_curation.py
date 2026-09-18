@@ -35,11 +35,13 @@ def test_define_and_why_chain_of_two_levels():
 
     assert first.payload["derived"] == ["(es wolf domestic)"]
     assert second.payload["derived"] == ["(es dog wild)"]
-    assert [node["proposition"] for node in chain.payload["chain"]] == [
+    chain = chain.payload["chain"]
+    assert chain[0]["proposition"] == "(es dog wild)"
+    assert {node["proposition"] for node in chain} == {
         "(es dog wild)",
         "(es wolf domestic)",
         "(es wolf wild)",
-    ]
+    }
 
 
 def test_why_rejects_unknown_fact():

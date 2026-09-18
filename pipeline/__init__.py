@@ -1,0 +1,36 @@
+"""Pipeline package: SIA statistics to Matrix WiGames, plus the SHRDLU REPL glue."""
+
+from __future__ import annotations
+
+from pathlib import Path
+import sys
+
+_MATRIX_ROOT = Path(__file__).resolve().parents[1] / "matrix"
+if str(_MATRIX_ROOT) not in sys.path:
+    sys.path.append(str(_MATRIX_ROOT))
+
+from .bridge import auto_confirm_candidates, corpus_to_sexprs
+
+
+def build_system(corpus_dir, wigame_id: str = "vegetales"):
+    """Builds the logical system, runtime and results for a corpus."""
+
+    from .run import build_system as _build_system
+
+    return _build_system(corpus_dir, wigame_id)
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Runs the corpus to WiGame pipeline CLI."""
+
+    from .run import main as _main
+
+    return _main(argv)
+
+
+__all__ = [
+    "auto_confirm_candidates",
+    "build_system",
+    "corpus_to_sexprs",
+    "main",
+]

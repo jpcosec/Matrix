@@ -1,4 +1,4 @@
-from prototypes.shrdlu.lowering import PrototypeHarness
+from desk.drawer.shrdlu.lowering import PrototypeHarness
 
 
 def test_pronoun_it_uses_last_referent() -> None:

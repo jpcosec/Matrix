@@ -31,6 +31,8 @@ texto ─► populator: chunks (contextos), signos locales, offsets
 | `matrix/prototypes/shrdlu/` | REPL en español e inglés controlado sobre el mundo construido |
 | `corpus/physicists/` | corpus de evaluación (89 físicos: Simple English + EN + Wikidata + GAP) |
 
+> **Documento técnico completo (estructura de paper):** [`docs/paper.md`](docs/paper.md). Modelo, algoritmo de convergencia, ley de soporte mínimo, rediseño aglomerativo, protocolo experimental, resultados y amenazas a la validez.
+
 ## Uso
 
 Toda evaluación va **bajo tope de memoria** (`bash scripts/capped.sh 4 -- …`, ver

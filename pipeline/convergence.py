@@ -69,6 +69,7 @@ class ConvergenceReport:
     referents: dict[str, str] = field(default_factory=dict)
     tautological_configurations: list[dict[str, Any]] = field(default_factory=list)
     pair_scores: dict[tuple[str, str], float] = field(default_factory=dict)
+    candidate_scores: dict[tuple[str, str], float] = field(default_factory=dict)
     candidates_count: int = 0
     batches: int = 0
     processed: set[tuple[str, str]] = field(default_factory=set)
@@ -323,7 +324,7 @@ def symbol_convergence(
         if len(configurations) < 2:
             break
         scores = _pair_scores(
-            configurations, variables, measure=measure, min_support=min_support, max_config_size=max_config_size
+            configurations, variables, measure=measure, min_support=1, max_config_size=max_config_size
         )
         if scores.oversized and not report.tautological_configurations:
             report.tautological_configurations = [
@@ -340,6 +341,7 @@ def symbol_convergence(
                 best_incoming[target] = float(phi)
             pair_phi[(source, target)] = float(phi)
             pair_st[(source, target)] = int(count)
+            report.candidate_scores[(source, target)] = float(phi)
             if phi >= phi_min and float(phi) > report.pair_scores.get((source, target), 0.0):
                 report.pair_scores[(source, target)] = float(phi)
         for symbol in sorted(variables):
@@ -347,7 +349,11 @@ def symbol_convergence(
             report.scores[symbol] = score
             system.symbols[symbol].metadata["convergence_score"] = score
             system.symbols[symbol].metadata["contexts_supporting"] = len(contexts_by_symbol.get(symbol, ()))
-        candidates = scores.ordered(phi_min)
+        candidates = [
+            (phi, source, target)
+            for phi, source, target in scores.ordered(phi_min)
+            if pair_st.get((source, target), 0) >= min_support
+        ]
         report.candidates_count = len(candidates)
         pending = [pair for _, source, target in candidates for pair in [(source, target)] if pair not in processed]
         shared_contexts = (

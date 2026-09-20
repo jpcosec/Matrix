@@ -471,11 +471,12 @@ def _intra_context_metrics(system: Any, convergence: Any, declarations: list[Dec
 
 
 def _ranking_metrics(system: Any, convergence: Any) -> dict[str, Any]:
-    """Ranks the English lead symbols among the candidate pairs of the report.
+    """Ranks the English lead symbols among every candidate pair of the report.
 
-    A target without a shared informative configuration is not a candidate, so it
-    cannot be ranked: `ranked` counts the queries with the target among the
-    candidates.
+    Candidates are all symbol pairs sharing at least one configuration
+    (`report.candidate_scores`). A query whose target is not a candidate is
+    `unranked` and contributes zero to MRR and hit@k, which are computed over all
+    queries.
     """
 
     people = _people()
@@ -487,30 +488,31 @@ def _ranking_metrics(system: Any, convergence: Any) -> dict[str, Any]:
     ]
     if not queries:
         return {"queries": 0, "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
-    pair_scores = getattr(convergence, "pair_scores", {})
+    pair_scores = getattr(convergence, "candidate_scores", {})
     candidates_by_source: dict[str, list[tuple[float, str]]] = defaultdict(list)
     for (source, target), phi in pair_scores.items():
         candidates_by_source[source].append((float(phi), target))
     for values in candidates_by_source.values():
         values.sort(key=lambda item: (-item[0], item[1]))
-    ranks: list[int] = []
+    ranks: list[int | None] = []
     for query in queries:
         qid = query.split("@", 1)[1]
         correct = set(_source_symbols(system, qid, "en"))
         candidates = candidates_by_source.get(query, [])
-        rank = next(
-            (index + 1 for index, (_, other) in enumerate(candidates) if other in correct), None
+        ranks.append(
+            next((index + 1 for index, (_, other) in enumerate(candidates) if other in correct), None)
         )
-        if rank:
-            ranks.append(rank)
-    if not ranks:
-        return {"queries": len(queries), "ranked": 0, "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
+    total = len(queries)
+    if not total:
+        return {"queries": 0, "ranked": 0, "unranked": 0, "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
+    ranked = [rank for rank in ranks if rank]
     return {
-        "queries": len(queries),
-        "ranked": len(ranks),
-        "mrr": round(sum(1 / rank for rank in ranks) / len(ranks), 3),
-        "hit@1": round(sum(1 for rank in ranks if rank == 1) / len(ranks), 3),
-        "hit@3": round(sum(1 for rank in ranks if rank <= 3) / len(ranks), 3),
+        "queries": total,
+        "ranked": len(ranked),
+        "unranked": total - len(ranked),
+        "mrr": round(sum(1 / rank for rank in ranked) / total, 3),
+        "hit@1": round(sum(1 for rank in ranked if rank == 1) / total, 3),
+        "hit@3": round(sum(1 for rank in ranked if rank <= 3) / total, 3),
     }
 
 

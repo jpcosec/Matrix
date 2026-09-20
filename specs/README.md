@@ -3,6 +3,7 @@
 Un motor de conocimiento que **puebla** mundos lógicos desde texto crudo (chunker estadístico + CHIC, con cita de origen para cada hecho) y que se **usa** conversando como con SHRDLU (afirmar, preguntar, "¿por qué?", aclarar, definir), evaluado con álgebra booleana sobre el motor Matrix.
 
 - [SPEC.md](SPEC.md) — visión, decisiones cerradas, alcance del MVP
+- [convergence.md](convergence.md) — **diseño corregido del puente**: símbolos por contexto, taxonomía de `W_i`, rol exacto de CHIC (prevalece sobre populator/chic/grounding donde contradiga)
 - [matrix.md](matrix.md) — el motor booleano: qué se usa, qué se cambia, qué se ignora
 - [populator.md](populator.md) — del texto a la matriz individuos × conceptos (Korel, fases 1-3)
 - [chic.md](chic.md) — CHIC / SIA: medidas, jerarquía, grafo, contrato con Matrix (`sia/`)

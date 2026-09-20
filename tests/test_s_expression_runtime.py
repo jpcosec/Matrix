@@ -170,3 +170,15 @@ def test_ingest_rejects_unknown_wigame_or_invalid_li_shape() -> None:
 
     with pytest.raises(ValueError, match="create li expects"):
         runtime.evaluate("(create li li:x es (axis-a dog))")
+
+
+def test_targeted_check_and_assert_reject_missing_wigame() -> None:
+    runtime = SExpressionRuntime(build_system())
+
+    checked = runtime.evaluate("(check wigame:missing (es dog fur))")
+    assert checked.status == "reject"
+    assert checked.reason == "target WiGame does not exist"
+
+    asserted = runtime.evaluate("(assert wigame:missing (es dog fur))")
+    assert asserted.status == "reject"
+    assert asserted.reason == "target WiGame does not exist"

@@ -106,7 +106,13 @@ class SExpressionRuntime:
                     reason="multiple WiGames accept this proposition",
                 )
             wigame_id = candidates[0]
-        wigame = self.system.wigames[wigame_id]
+        wigame = self.system.wigames.get(wigame_id)
+        if wigame is None:
+            return OperationResult(
+                status="reject",
+                sinn="unsinnig",
+                reason="target WiGame does not exist",
+            )
         if not wigame.accepts(proposition):
             return OperationResult(
                 status="reject",
@@ -144,7 +150,13 @@ class SExpressionRuntime:
                     reason="multiple WiGames accept this proposition",
                 )
             wigame_id = candidates[0]
-        wigame = self.system.wigames[wigame_id]
+        wigame = self.system.wigames.get(wigame_id)
+        if wigame is None:
+            return OperationResult(
+                status="reject",
+                sinn="unsinnig",
+                reason="target WiGame does not exist",
+            )
         if not wigame.accepts(proposition):
             return OperationResult(
                 status="reject",

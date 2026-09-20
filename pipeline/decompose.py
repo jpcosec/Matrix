@@ -189,8 +189,10 @@ def build_prompt(ctx: ContextIndex, lang: str = "en") -> str:
 
 
 def _match_verb(sentence_lower: str, verbs: list[tuple[str, str]]) -> tuple[str, int, int] | None:
+    """Finds the first verb pattern on word boundaries."""
+
     for pattern, relation in verbs:
-        match = re.search(pattern, sentence_lower)
+        match = re.search(rf"\b(?:{pattern})\b", sentence_lower)
         if match:
             return relation, match.start(), match.end()
     return None

@@ -309,6 +309,8 @@ def symbol_convergence(
                         report.proposed.append(entry)
                 if promotion:
                     _merge_referents(report, source, target)
+                    for symbol, referent in report.referents.items():
+                        system.symbols[symbol].metadata["referent"] = referent
         report.iterations = iteration + 1
         if promotions == 0:
             break

@@ -108,3 +108,39 @@ def test_sugiere_reports_backend_failures(repl):
     repl.backend = BrokenBackend()
 
     assert "No pude consultar al backend" in repl.step(f"sugiere {candidate_id}")
+
+
+def _load_curie_fixture():
+    """Loads tests/fixtures/curie_franklin.py by path (matrix/tests shadows tests)."""
+
+    import importlib.util
+
+    path = _REPO_ROOT / "tests" / "fixtures" / "curie_franklin.py"
+    spec = importlib.util.spec_from_file_location("curie_franklin_fixture", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def test_english_question_is_answered_by_routed_queries():
+    from pipeline.convergence import symbol_convergence
+    from pipeline.decompose import decompose
+    from pipeline.ingest import ingest_contexts
+    from populator import build_contexts
+    from src.operational_model import LogicalSystem, SExpressionRuntime
+
+    documents = _load_curie_fixture().generate(0)
+    contexts = build_contexts(documents, lang="en")
+    declarations = [d for c in contexts for d in decompose(c, lang="en")]
+    system = LogicalSystem()
+    runtime = SExpressionRuntime(system)
+    ingest_contexts(system, runtime, contexts, declarations)
+    symbol_convergence(system, contexts, declarations)
+    dialog = DialogState(system=system, focus_wigame="wigame:curie_3:born_in")
+    repl = Repl(system=system, runtime=runtime, dialog=dialog)
+
+    answer = repl.step("was Marie Curie born in Warsaw?")
+
+    assert answer.startswith("Sí")
+    assert "ruta:" in answer
+    assert ".md:" in answer

@@ -14,9 +14,16 @@ if str(_REPO_ROOT) not in sys.path:
 from src.operational_model import LogicalSystem, OperationResult, SExpressionRuntime, TruthValue
 
 from .dialog_state import DialogState
-from .spanish import Clarification, fold, parse_es
+from .spanish import Clarification, _symbols_for, fold, parse_es
 
 _SALIR = {"salir", "exit", "quit"}
+
+# Simple English questions answered by routed queries (no LLM involved).
+_QUESTIONS: tuple[tuple[re.Pattern[str], str, bool], ...] = (
+    (re.compile(r"^was\s+(.+?)\s+born\s+in\s+(.+?)$"), "born_in", True),
+    (re.compile(r"^did\s+(.+?)\s+win\s+(.+?)$"), "award", True),
+    (re.compile(r"^what\s+did\s+(.+?)\s+discover$"), "discovered", False),
+)
 
 
 @dataclass
@@ -42,6 +49,9 @@ class Repl:
             return "Hasta luego."
         if norm.startswith("sugiere "):
             return self._suggest(norm.split(None, 1)[1])
+        answer = self._answer_question(norm)
+        if answer is not None:
+            return answer
         parsed = parse_es(text, self.dialog)
         if isinstance(parsed, Clarification):
             self.dialog.pending = parsed
@@ -62,6 +72,36 @@ class Repl:
 
     def _run(self, sexpr: str) -> str:
         return self._verbalize(sexpr, self.runtime.evaluate(sexpr))
+
+    def _answer_question(self, norm: str) -> str | None:
+        """Answers simple English questions with `ask`, without any LLM."""
+
+        from pipeline.query import ask
+
+        for pattern, relation, has_object in _QUESTIONS:
+            match = pattern.fullmatch(norm)
+            if match is None:
+                continue
+            subjects = _symbols_for(match.group(1), self.dialog)
+            if not subjects:
+                return f"No conozco «{match.group(1)}»."
+            object_norm = match.group(2) if has_object else None
+            answer = ask(self.system, relation, subjects[0], object_norm)
+            return self._render_answer(answer, object_norm)
+        return None
+
+    def _render_answer(self, answer, object_norm: str | None) -> str:
+        outcome = answer.truth_for(object_norm)
+        if outcome == "true" and answer.objects:
+            symbol, ctx, _, prov = answer.objects[0]
+            citation = ""
+            if prov:
+                citation = f" [{prov[0]['document_id']}:{prov[0]['span'][0]}-{prov[0]['span'][1]}]"
+            route = " -> ".join(answer.path[:3])
+            return f"Sí: ({answer.relation} {answer.subject} {symbol}){citation} · ruta: {route}"
+        if outcome == "false":
+            return "No."
+        return "No lo sé (nadie lo ha confirmado)."
 
     def _suggest(self, candidate_id: str) -> str:
         """Asks the LLM backend for a draft proposal without confirming anything."""

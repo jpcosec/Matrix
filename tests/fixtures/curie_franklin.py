@@ -21,55 +21,31 @@ FRANKLIN_SUBJECTS = ("Rosalind Franklin", "She", "Franklin")
 CURIE_CORE = (
     "{subject} was born in Warsaw.",
     "{subject} was a physicist.",
-    "{subject} was a chemist.",
-    "{subject} was a scientist.",
     "{subject} studied at the Sorbonne.",
-    "{subject} studied at Warsaw.",
-    "{subject} studied at the Faculty of Sciences.",
     "{subject} won the Nobel Prize.",
-    "{subject} won the Davy Medal.",
-    "{subject} won the Matteucci Medal.",
-    "{subject} received the Willard Gibbs Award.",
     "{subject} worked at Paris.",
-    "{subject} worked at the Curie Institute.",
-    "{subject} worked at the Radium Institute.",
-    "{subject} worked at the Sorbonne.",
     "{subject} discovered polonium.",
     "{subject} discovered radium.",
-    "{subject} discovered thorium.",
-    "{subject} discovered actinium.",
     "{subject} was a radioactivity pioneer.",
-    "{subject} was a Nobel laureate.",
-    "{subject} was a professor.",
+    "{subject} received the Davy Medal.",
     "{subject} taught at the Sorbonne.",
-    "{subject} taught at the Curie Institute.",
+    "{subject} was a Nobel laureate.",
+    "{subject} studied at Warsaw.",
 )
 
 FRANKLIN_CORE = (
     "{subject} was born in London.",
     "{subject} was a chemist.",
-    "{subject} was a biophysicist.",
-    "{subject} was a crystallographer.",
-    "{subject} was a DNA researcher.",
-    "{subject} was a virologist.",
     "{subject} studied at King's College.",
-    "{subject} studied at Cambridge.",
-    "{subject} studied at Newnham College.",
     "{subject} worked at Cambridge.",
-    "{subject} worked at Birkbeck.",
-    "{subject} worked at the Royal Institution.",
-    "{subject} worked at the Coal Research Association.",
     "{subject} discovered the double helix.",
+    "{subject} was a crystallographer.",
     "{subject} discovered the helix structure.",
-    "{subject} discovered the DNA structure.",
-    "{subject} discovered X-ray diffraction patterns.",
+    "{subject} studied at Newnham College.",
     "{subject} received the Gruber Prize.",
-    "{subject} received the Horwitz Prize.",
-    "{subject} received the Rosalind Franklin Medal.",
     "{subject} taught at Birkbeck.",
-    "{subject} taught at Cambridge.",
-    "{subject} studied X-ray diffraction.",
-    "{subject} used X-ray crystallography.",
+    "{subject} was a biophysicist.",
+    "{subject} worked at the Royal Institution.",
 )
 
 # Variable facts keep a subject that is *not* one of the person's subject
@@ -102,8 +78,11 @@ def generate(seed: int = 0) -> list[Document]:
 
 def _curie_article(index: int, rng: random.Random) -> str:
     sentences: list[str] = []
-    for position, fact in enumerate(CURIE_CORE):
-        sentences.append(fact.format(subject=CURIE_SUBJECTS[(index + position) % len(CURIE_SUBJECTS)]))
+    # Each article keeps one surface form, so every subject symbol declares the
+    # whole personal core and the three forms converge across articles.
+    subject = CURIE_SUBJECTS[(index + 1) % len(CURIE_SUBJECTS)]
+    for fact in CURIE_CORE:
+        sentences.append(fact.format(subject=subject))
     for _ in range(2):
         sentences.append(rng.choice(CURIE_VARIABLES))
     return "# Marie Curie\n\n" + " ".join(sentences) + "\n"
@@ -111,10 +90,9 @@ def _curie_article(index: int, rng: random.Random) -> str:
 
 def _franklin_article(index: int, rng: random.Random) -> str:
     sentences: list[str] = []
-    for position, fact in enumerate(FRANKLIN_CORE):
-        sentences.append(
-            fact.format(subject=FRANKLIN_SUBJECTS[(index + position) % len(FRANKLIN_SUBJECTS)])
-        )
+    subject = FRANKLIN_SUBJECTS[(index + 2) % len(FRANKLIN_SUBJECTS)]
+    for fact in FRANKLIN_CORE:
+        sentences.append(fact.format(subject=subject))
     for _ in range(2):
         sentences.append(rng.choice(FRANKLIN_VARIABLES))
     return "# Rosalind Franklin\n\n" + " ".join(sentences) + "\n"

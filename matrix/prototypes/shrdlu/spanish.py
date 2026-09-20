@@ -203,18 +203,24 @@ def _literal(sign: str) -> str:
     return normalize(sign).replace(" ", "_")
 
 
-def _symbols_for(sign: str, dialog: "DialogState") -> list[str]:
-    """Resolves a normalized sign against the registered symbols."""
+def _sign_keys(sign: str) -> set[str]:
+    """Returns the comparable forms of a sign (accent-folded and underscored)."""
 
-    needle = normalize(sign)
-    keys = {needle, needle.replace(" ", "_")}
+    folded = normalize(sign)
+    raw = sign.strip().lower()
+    return {key for key in (folded, folded.replace(" ", "_"), raw, raw.replace(" ", "_")) if key}
+
+
+def _symbols_for(sign: str, dialog: "DialogState") -> list[str]:
+    """Resolves a sign against the registered symbols (spaces or underscores)."""
+
+    keys = _sign_keys(sign)
     if dialog.system is None:
-        return [needle.replace(" ", "_")]
+        return [normalize(sign).replace(" ", "_")]
     matches: list[str] = []
     for symbol in dialog.system.symbols.values():
         for candidate in symbol.signs:
-            folded = normalize(candidate)
-            if keys & {folded, folded.replace(" ", "_")}:
+            if keys & _sign_keys(candidate):
                 matches.append(symbol.symbol_id)
                 break
     return sorted(set(matches))

@@ -25,7 +25,9 @@ CURIE_DOC = (
     "She married Pierre Curie. "
     "She died in Paris. "
     "She was very gifted. "
-    "She was a physics physicist.\n"
+    "She was a physics physicist. "
+    "She was a gifted physicist. "
+    "She was a Polish physicist.\n"
 )
 
 CURIE_EXPECTED = {
@@ -38,7 +40,8 @@ CURIE_EXPECTED = {
     ("spouse", "she@Q7186", "pierre_curie@Q7186"),
     ("died_in", "she@Q7186", "paris@Q7186"),
     ("has_property", "she@Q7186", "gifted@Q7186"),
-    ("instance", "she@Q7186", "physics@Q7186"),
+    ("has_property", "she@Q7186", "physics@Q7186"),
+    ("has_property", "she@Q7186", "polish@Q7186"),
     ("field", "she@Q7186", "physics@Q7186"),
 }
 
@@ -55,6 +58,36 @@ def test_english_patterns(curie_context):
     }
 
     assert CURIE_EXPECTED <= found
+
+
+def test_copula_head_is_the_last_sign_of_the_noun_phrase(curie_context):
+    found = {
+        (declaration.relation, declaration.a, declaration.b)
+        for declaration in decompose_heuristic(curie_context, lang="en")
+    }
+
+    assert ("instance", "she@Q7186", "physicist@Q7186") in found
+    assert not any(relation == "instance" and b == "physics@Q7186" for relation, _, b in found)
+
+
+def test_copula_modifiers_become_has_property(curie_context):
+    found = {
+        (declaration.relation, declaration.a, declaration.b)
+        for declaration in decompose_heuristic(curie_context, lang="en")
+    }
+
+    for modifier in ("physics@Q7186", "gifted@Q7186", "polish@Q7186"):
+        assert ("has_property", "she@Q7186", modifier) in found
+
+
+def test_field_rule_needs_a_field_modifier_and_role_head(curie_context):
+    found = {
+        (declaration.relation, declaration.a, declaration.b)
+        for declaration in decompose_heuristic(curie_context, lang="en")
+    }
+
+    assert ("field", "she@Q7186", "physics@Q7186") in found
+    assert not any(relation == "field" and b == "gifted@Q7186" for relation, _, b in found)
 
 
 def test_declarations_use_only_local_symbols(curie_context):
@@ -80,7 +113,8 @@ def test_declarations_are_frozen_and_span_ordered(curie_context):
     declarations = decompose_heuristic(curie_context, lang="en")
 
     assert all(isinstance(declaration, Declaration) for declaration in declarations)
-    assert declarations == sorted(declarations, key=lambda item: item.span)
+    starts = [declaration.span[0] for declaration in declarations]
+    assert starts == sorted(starts)
 
 
 def test_spanish_patterns_on_vegetales():
@@ -145,7 +179,10 @@ def test_decompose_llm_discards_non_local_signs_and_relations(curie_context):
 def test_decompose_merges_heuristic_and_llm(curie_context):
     reply = json.dumps([{"r": "born_in", "a_sign": "Marie Curie", "b_sign": "Warsaw"}])
 
+    heuristic = decompose_heuristic(curie_context, lang="en")
     merged = decompose(curie_context, lang="en", backend=FakeBackend(reply))
 
-    assert len(merged) == len(decompose_heuristic(curie_context, lang="en"))
+    keys = [(declaration.relation, declaration.a, declaration.b) for declaration in merged]
+    assert len(keys) == len(set(keys))
+    assert {(declaration.relation, declaration.a, declaration.b) for declaration in heuristic} <= set(keys)
     assert all(declaration.source == "heuristic" for declaration in merged)

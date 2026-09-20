@@ -136,6 +136,29 @@ def test_physicists_signs():
     assert context.signs["she"].kind == "pronoun"
 
 
+def test_name_windows_allow_lowercase_connectors():
+    documents = [
+        Document(
+            "U.md",
+            "# Places\n"
+            "University of Paris is famous. "
+            "King's College London is old. "
+            "Jacobus Henricus van 't Hoff studied here.\n",
+        )
+    ]
+
+    context = build_context(chunk_documents(documents)[0], lang="en")
+
+    assert context.signs["university of paris"].sign == "University of Paris"
+    assert context.signs["university of paris"].kind == "name"
+    assert context.signs["king s college london"].sign == "King's College London"
+    assert context.signs["jacobus henricus van t hoff"].sign == "Jacobus Henricus van 't Hoff"
+    assert all(
+        context.signs[norm].kind == "name"
+        for norm in ("university of paris", "king s college london", "jacobus henricus van t hoff")
+    )
+
+
 def test_sentence_initial_pronoun_is_still_a_pronoun():
     documents = [Document("C.md", "# Ada Lovelace\nShe wrote notes. She studied engines.\n")]
 

@@ -33,7 +33,6 @@ FIELD_TERMS = {"physics", "chemistry", "radioactivity", "mathematics", "biology"
 Backend = Callable[[str], str]
 
 _ARTICLE_RE = re.compile(r"\s+(?:a|an|the|una|un|unos|unas|el|la|los|las)\s+", re.IGNORECASE)
-_FIELD_ROLE_RE = re.compile(r"\b(physicist|chemist)\b", re.IGNORECASE)
 _JSON_RE = re.compile(r"\[.*\]", re.DOTALL)
 
 _EN_VERBS: list[tuple[str, str]] = [
@@ -107,7 +106,7 @@ def decompose_heuristic(ctx: ContextIndex, lang: str = "en") -> list[Declaration
         if subject is None or obj is None or subject[0] is obj[0]:
             continue
         if relation in {"copula", "copula_es"}:
-            declarations.extend(_copula(sentence_index, sentence, subject, obj, verb_end, lang))
+            declarations.extend(_copula(sentence_index, sentence, pairs, subject, verb_end, lang))
             continue
         if relation == "part_of":
             declarations.append(_declaration(sentence_index, relation, obj, subject))
@@ -187,20 +186,39 @@ def _match_verb(sentence_lower: str, verbs: list[tuple[str, str]]) -> tuple[str,
 def _copula(
     sentence_index: int,
     sentence,
+    pairs: list[tuple[LocalSign, tuple[int, int]]],
     subject: tuple[LocalSign, tuple[int, int]],
-    obj: tuple[LocalSign, tuple[int, int]],
     verb_end: int,
     lang: str,
 ) -> list[Declaration]:
-    has_article = _ARTICLE_RE.match(sentence.text, verb_end) is not None
+    article = _ARTICLE_RE.match(sentence.text, verb_end)
+    phrase_offset = article.end() if article else verb_end
+    phrase_start = sentence.char_span[0] + phrase_offset
+    phrase = [pair for pair in pairs if pair[1][0] >= phrase_start]
+    if not phrase:
+        return []
     if lang == "es":
-        relation = "instance" if obj[0].kind == "name" else "has_property"
-    else:
-        relation = "instance" if has_article else "has_property"
-    declarations = [_declaration(sentence_index, relation, subject, obj)]
-    if lang != "es" and has_article and normalize(obj[0].sign) in FIELD_TERMS and _FIELD_ROLE_RE.search(sentence.text):
-        declarations.append(_declaration(sentence_index, "field", subject, obj))
+        head = phrase[0]
+        relation = "instance" if head[0].kind == "name" else "has_property"
+        return [_declaration(sentence_index, relation, subject, head)]
+    if article is None:
+        return [_declaration(sentence_index, "has_property", subject, phrase[0])]
+    head = phrase[-1]
+    head_norm = normalize(head[0].sign)
+    declarations = [_declaration(sentence_index, "instance", subject, head)]
+    for modifier in phrase[:-1]:
+        if not _is_modifier(modifier[0]):
+            continue
+        declarations.append(_declaration(sentence_index, "has_property", subject, modifier))
+        if normalize(modifier[0].sign) in FIELD_TERMS and head_norm in {"physicist", "chemist"}:
+            declarations.append(_declaration(sentence_index, "field", subject, modifier))
     return declarations
+
+
+def _is_modifier(sign: LocalSign) -> bool:
+    """Adjectives and demonyms modify the head of the copula noun phrase."""
+
+    return sign.kind == "term" or (sign.kind == "name" and " " not in sign.norm)
 
 
 def _fallback(

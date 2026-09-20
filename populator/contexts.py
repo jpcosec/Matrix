@@ -11,7 +11,7 @@ from collections import Counter
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Literal
+from typing import Callable, Literal
 
 from .extract import Document, Sentence, split_sentences
 from .tokenize import normalize, tokenize
@@ -52,8 +52,9 @@ FUNCTION_WORDS = {"en": FUNCTION_WORDS_EN, "es": FUNCTION_WORDS_ES}
 
 PRONOUN_NORMS = {normalize(pronoun) for pronoun in PRONOUNS}
 
-MAX_NAME_TOKENS = 4
+MAX_NAME_TOKENS = 6
 MIN_TERM_LENGTH = 3
+NAME_CONNECTORS = {"of", "de", "the", "del", "van", "von", "y", "and", "da", "der", "la", "le"}
 
 
 @dataclass(frozen=True)
@@ -250,6 +251,47 @@ def _row(sentence: Sentence, index: int) -> list[_Token]:
     ]
 
 
+def _name_window_end(
+    row: list[_Token],
+    index: int,
+    function_words: set[str],
+    same_line: "Callable[[_Token, _Token], bool]",
+    is_connector: "Callable[[int], bool]",
+) -> int:
+    """Returns the exclusive end of the name window starting at ``index``.
+
+    Capitalized tokens extend the window; lowercase connectors may sit inside
+    it, but the window always ends on a capitalized token.
+    """
+
+    end = index + 1
+    last_capital = index
+    while end < len(row) and end - index < MAX_NAME_TOKENS:
+        if not same_line(row[end - 1], row[end]):
+            break
+        following = row[end]
+        if _is_capitalized(following) and following.norm not in function_words and not _is_pronoun(following):
+            last_capital = end
+            end += 1
+            continue
+        if is_connector(end):
+            end += 1
+            continue
+        break
+    return last_capital + 1
+
+
+def _is_connector(text: str, char_offset: int, norm: str, start: int) -> bool:
+    """Reports whether a token can appear inside a name window."""
+
+    if norm in NAME_CONNECTORS:
+        return True
+    if len(norm) == 1:
+        position = start - char_offset - 1
+        return 0 <= position < len(text) and text[position] in "'\u2019"
+    return False
+
+
 def _same_line(chunk: Chunk, left: _Token, right: _Token) -> bool:
     """Reports whether two tokens sit on the same text line."""
 
@@ -271,11 +313,13 @@ def _title_signs(chunk: Chunk, function_words: set[str]) -> list[tuple[str, str]
         if not tokens[index].text[:1].isupper() or tokens[index].norm in function_words:
             index += 1
             continue
-        end = index + 1
-        while end < len(tokens) and end - index < MAX_NAME_TOKENS:
-            if not tokens[end].text[:1].isupper() or tokens[end].norm in function_words:
-                break
-            end += 1
+        end = _name_window_end(
+            tokens,
+            index,
+            function_words,
+            lambda left, right: True,
+            lambda position: _is_connector(title, 0, tokens[position].norm, tokens[position].char_span[0]),
+        )
         window = tokens[index:end]
         windows.append((" ".join(part.text for part in window), " ".join(part.norm for part in window)))
         index = end
@@ -312,18 +356,21 @@ def _collect_names(
         if not _is_capitalized(token) or token.norm in function_words or _is_pronoun(token):
             index += 1
             continue
-        qualified = token.norm in available or token.norm in title_norms
+        end = _name_window_end(
+            row,
+            index,
+            function_words,
+            lambda left, right: _same_line(chunk, left, right),
+            lambda position: _is_connector(chunk.text, chunk.char_offset, row[position].norm, row[position].span[0]),
+        )
+        qualified = (
+            token.norm in available
+            or token.norm in title_norms
+            or end - index >= 2
+        )
         if index == 0 and not qualified:
             index += 1
             continue
-        end = index + 1
-        while end < len(row) and end - index < MAX_NAME_TOKENS:
-            following = row[end]
-            if not _is_capitalized(following) or following.norm in function_words:
-                break
-            if not _same_line(chunk, row[end - 1], following):
-                break
-            end += 1
         window = row[index:end]
         span = (window[0].span[0], window[-1].span[1])
         surface = chunk.text[span[0] - chunk.char_offset : span[1] - chunk.char_offset]

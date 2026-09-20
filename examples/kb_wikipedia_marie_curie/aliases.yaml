@@ -1,0 +1,13 @@
+aliases:
+- context: marie_curie
+  symbol: she
+  canonical: marie_curie
+- context: marie_curie
+  symbol: curie
+  canonical: marie_curie
+- context: marie_curie
+  symbol: maria
+  canonical: marie_curie
+- context: marie_curie
+  symbol: marie
+  canonical: marie_curie

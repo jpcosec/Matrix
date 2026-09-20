@@ -33,6 +33,27 @@ scripts, reports and digests**.
 | `wikipedia_10_articles` | 693 | 10 | 102 | 50 | — | Curies, Meitner, Hahn, Franklin, Watson, Crick, Einstein, Bohr; `nuclear_fission` compartido Bohr↔Hahn |
 | `wikipedia_marie_curie` | 71 | 1 | 4 | 0 | — | un artículo, curación de `she/curie/maria` → `marie_curie` |
 
+## KBs versionadas (queryables offline)
+
+La extracción con LLM no es regenerable barato, así que se versiona lo no derivable (`proposals/`, `review.yaml`, `aliases.yaml`, `relations.yaml`, `sources/*.json`) y se deja derivable el resto (`compile` reconstruye `facts/`, `wigames/`, `contexts.yaml`, `projections/`, `shared.yaml`).
+
+| KB | qué tiene | cómo se usa |
+|---|---|---|
+| `kb_wikipedia_10_articles/` | 10 artículos, 693 facts materializados, 50 proyecciones, curación de pronombres y apellidos | `python -m tools.kb --kb examples/kb_wikipedia_10_articles compile && python -m tools.kb --kb examples/kb_wikipedia_10_articles verify --fail-on-problems` |
+| `kb_wikipedia_marie_curie/` | un artículo, 71 facts, 4 WiGames, alias `she/curie/maria` | idem con `examples/kb_wikipedia_marie_curie` |
+
+Ejemplos verificados de consulta:
+
+```bash
+python -m tools.kb --kb examples/kb_wikipedia_10_articles query \
+    "(check wigame:niels_bohr:descubierto_por (descubierto_por nuclear_fission otto_hahn))"
+python -m tools.kb --kb examples/kb_wikipedia_10_articles shared --symbol polonium   # irene <-> marie <-> pierre
+python -m tools.kb --kb examples/kb_wikipedia_marie_curie query \
+    "(check wigame:marie_curie:nace_en (nace_en marie_curie warsaw))"
+```
+
+Cada carpeta trae su propio `README.md` con el detalle y el resultado esperado.
+
 ## Cómo regenerar
 
 Determinístico (sin LLM, sin red salvo tests):

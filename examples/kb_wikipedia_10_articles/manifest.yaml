@@ -1,0 +1,1307 @@
+generated_at: '2026-09-20T04:30:57+00:00'
+kb_root: /tmp/kbbig
+root_context: ctx:kb
+relations:
+  causa:
+    name: causes
+    transitive: false
+  descubierto_por:
+    name: discovered by
+    transitive: false
+  es:
+    name: is a / subclass of
+    transitive: true
+  instancia_de:
+    name: instance of
+    transitive: false
+  miembro_de:
+    name: member of
+    transitive: true
+  muere_en:
+    name: died in
+    transitive: false
+  nace_en:
+    name: born in
+    transitive: false
+  parte_de:
+    name: part of
+    transitive: true
+  premio:
+    name: awarded
+    transitive: false
+  ubicado_en:
+    name: located in
+    transitive: true
+  usa:
+    name: uses
+    transitive: false
+review:
+  total: 699
+  by_status:
+    pending: 0
+    approved: 699
+    rejected: 0
+  by_relation:
+    causa:
+      pending: 0
+      approved: 30
+      rejected: 0
+    descubierto_por:
+      pending: 0
+      approved: 76
+      rejected: 0
+    es:
+      pending: 0
+      approved: 175
+      rejected: 0
+    instancia_de:
+      pending: 0
+      approved: 5
+      rejected: 0
+    miembro_de:
+      pending: 0
+      approved: 79
+      rejected: 0
+    muere_en:
+      pending: 0
+      approved: 24
+      rejected: 0
+    nace_en:
+      pending: 0
+      approved: 20
+      rejected: 0
+    parte_de:
+      pending: 0
+      approved: 33
+      rejected: 0
+    premio:
+      pending: 0
+      approved: 60
+      rejected: 0
+    ubicado_en:
+      pending: 0
+      approved: 156
+      rejected: 0
+    usa:
+      pending: 0
+      approved: 41
+      rejected: 0
+excluded:
+  pending: 0
+  rejected: 0
+contexts:
+  root: ctx:kb
+  contexts:
+    ctx:kb:
+      parent: null
+      subcontexts:
+      - ctx:albert_einstein
+      - ctx:francis_crick
+      - ctx:irene_joliot_curie
+      - ctx:james_watson
+      - ctx:lise_meitner
+      - ctx:marie_curie
+      - ctx:niels_bohr
+      - ctx:otto_hahn
+      - ctx:pierre_curie
+      - ctx:rosalind_franklin
+      wigames: []
+      sources: []
+    ctx:albert_einstein:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:albert_einstein:causa
+      - wigame:albert_einstein:descubierto_por
+      - wigame:albert_einstein:es
+      - wigame:albert_einstein:instancia_de
+      - wigame:albert_einstein:miembro_de
+      - wigame:albert_einstein:muere_en
+      - wigame:albert_einstein:nace_en
+      - wigame:albert_einstein:parte_de
+      - wigame:albert_einstein:premio
+      - wigame:albert_einstein:ubicado_en
+      - wigame:albert_einstein:usa
+      sources:
+      - albert_einstein
+    ctx:francis_crick:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:francis_crick:causa
+      - wigame:francis_crick:descubierto_por
+      - wigame:francis_crick:es
+      - wigame:francis_crick:instancia_de
+      - wigame:francis_crick:miembro_de
+      - wigame:francis_crick:muere_en
+      - wigame:francis_crick:nace_en
+      - wigame:francis_crick:parte_de
+      - wigame:francis_crick:premio
+      - wigame:francis_crick:ubicado_en
+      - wigame:francis_crick:usa
+      sources:
+      - francis_crick
+    ctx:irene_joliot_curie:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:irene_joliot_curie:causa
+      - wigame:irene_joliot_curie:descubierto_por
+      - wigame:irene_joliot_curie:es
+      - wigame:irene_joliot_curie:miembro_de
+      - wigame:irene_joliot_curie:muere_en
+      - wigame:irene_joliot_curie:nace_en
+      - wigame:irene_joliot_curie:parte_de
+      - wigame:irene_joliot_curie:premio
+      - wigame:irene_joliot_curie:ubicado_en
+      - wigame:irene_joliot_curie:usa
+      sources:
+      - irene_joliot_curie
+    ctx:james_watson:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:james_watson:causa
+      - wigame:james_watson:descubierto_por
+      - wigame:james_watson:es
+      - wigame:james_watson:miembro_de
+      - wigame:james_watson:muere_en
+      - wigame:james_watson:nace_en
+      - wigame:james_watson:parte_de
+      - wigame:james_watson:premio
+      - wigame:james_watson:ubicado_en
+      - wigame:james_watson:usa
+      sources:
+      - james_watson
+    ctx:lise_meitner:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:lise_meitner:causa
+      - wigame:lise_meitner:descubierto_por
+      - wigame:lise_meitner:es
+      - wigame:lise_meitner:instancia_de
+      - wigame:lise_meitner:miembro_de
+      - wigame:lise_meitner:muere_en
+      - wigame:lise_meitner:nace_en
+      - wigame:lise_meitner:parte_de
+      - wigame:lise_meitner:premio
+      - wigame:lise_meitner:ubicado_en
+      - wigame:lise_meitner:usa
+      sources:
+      - lise_meitner
+    ctx:marie_curie:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:marie_curie:causa
+      - wigame:marie_curie:descubierto_por
+      - wigame:marie_curie:es
+      - wigame:marie_curie:miembro_de
+      - wigame:marie_curie:muere_en
+      - wigame:marie_curie:nace_en
+      - wigame:marie_curie:parte_de
+      - wigame:marie_curie:premio
+      - wigame:marie_curie:ubicado_en
+      - wigame:marie_curie:usa
+      sources:
+      - marie_curie
+    ctx:niels_bohr:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:niels_bohr:causa
+      - wigame:niels_bohr:descubierto_por
+      - wigame:niels_bohr:es
+      - wigame:niels_bohr:instancia_de
+      - wigame:niels_bohr:miembro_de
+      - wigame:niels_bohr:muere_en
+      - wigame:niels_bohr:nace_en
+      - wigame:niels_bohr:parte_de
+      - wigame:niels_bohr:premio
+      - wigame:niels_bohr:ubicado_en
+      - wigame:niels_bohr:usa
+      sources:
+      - niels_bohr
+    ctx:otto_hahn:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:otto_hahn:causa
+      - wigame:otto_hahn:descubierto_por
+      - wigame:otto_hahn:es
+      - wigame:otto_hahn:instancia_de
+      - wigame:otto_hahn:miembro_de
+      - wigame:otto_hahn:muere_en
+      - wigame:otto_hahn:nace_en
+      - wigame:otto_hahn:parte_de
+      - wigame:otto_hahn:premio
+      - wigame:otto_hahn:ubicado_en
+      - wigame:otto_hahn:usa
+      sources:
+      - otto_hahn
+    ctx:pierre_curie:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:pierre_curie:descubierto_por
+      - wigame:pierre_curie:es
+      - wigame:pierre_curie:muere_en
+      - wigame:pierre_curie:nace_en
+      - wigame:pierre_curie:premio
+      - wigame:pierre_curie:ubicado_en
+      - wigame:pierre_curie:usa
+      sources:
+      - pierre_curie
+    ctx:rosalind_franklin:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:rosalind_franklin:causa
+      - wigame:rosalind_franklin:descubierto_por
+      - wigame:rosalind_franklin:es
+      - wigame:rosalind_franklin:miembro_de
+      - wigame:rosalind_franklin:muere_en
+      - wigame:rosalind_franklin:nace_en
+      - wigame:rosalind_franklin:parte_de
+      - wigame:rosalind_franklin:premio
+      - wigame:rosalind_franklin:ubicado_en
+      - wigame:rosalind_franklin:usa
+      sources:
+      - rosalind_franklin
+projections:
+  proj:irene_joliot_curie:marie_curie:descubierto_por:
+    path: kbbig/projections/proj__irene_joliot_curie__marie_curie__descubierto_por.yaml
+    source: wigame:irene_joliot_curie:descubierto_por
+    target: wigame:marie_curie:descubierto_por
+    shared_subjects:
+    - polonium
+    - radium
+  proj:irene_joliot_curie:pierre_curie:descubierto_por:
+    path: kbbig/projections/proj__irene_joliot_curie__pierre_curie__descubierto_por.yaml
+    source: wigame:irene_joliot_curie:descubierto_por
+    target: wigame:pierre_curie:descubierto_por
+    shared_subjects:
+    - polonium
+    - radium
+  proj:lise_meitner:otto_hahn:descubierto_por:
+    path: kbbig/projections/proj__lise_meitner__otto_hahn__descubierto_por.yaml
+    source: wigame:lise_meitner:descubierto_por
+    target: wigame:otto_hahn:descubierto_por
+    shared_subjects:
+    - nuclear_isomerism
+    - protactinium
+    - radioactive_recoil
+  proj:marie_curie:irene_joliot_curie:descubierto_por:
+    path: kbbig/projections/proj__marie_curie__irene_joliot_curie__descubierto_por.yaml
+    source: wigame:marie_curie:descubierto_por
+    target: wigame:irene_joliot_curie:descubierto_por
+    shared_subjects:
+    - polonium
+    - radium
+  proj:marie_curie:pierre_curie:descubierto_por:
+    path: kbbig/projections/proj__marie_curie__pierre_curie__descubierto_por.yaml
+    source: wigame:marie_curie:descubierto_por
+    target: wigame:pierre_curie:descubierto_por
+    shared_subjects:
+    - polonium
+    - radium
+  proj:niels_bohr:otto_hahn:descubierto_por:
+    path: kbbig/projections/proj__niels_bohr__otto_hahn__descubierto_por.yaml
+    source: wigame:niels_bohr:descubierto_por
+    target: wigame:otto_hahn:descubierto_por
+    shared_subjects:
+    - nuclear_fission
+  proj:otto_hahn:lise_meitner:descubierto_por:
+    path: kbbig/projections/proj__otto_hahn__lise_meitner__descubierto_por.yaml
+    source: wigame:otto_hahn:descubierto_por
+    target: wigame:lise_meitner:descubierto_por
+    shared_subjects:
+    - nuclear_isomerism
+    - protactinium
+    - radioactive_recoil
+  proj:otto_hahn:niels_bohr:descubierto_por:
+    path: kbbig/projections/proj__otto_hahn__niels_bohr__descubierto_por.yaml
+    source: wigame:otto_hahn:descubierto_por
+    target: wigame:niels_bohr:descubierto_por
+    shared_subjects:
+    - nuclear_fission
+  proj:pierre_curie:irene_joliot_curie:descubierto_por:
+    path: kbbig/projections/proj__pierre_curie__irene_joliot_curie__descubierto_por.yaml
+    source: wigame:pierre_curie:descubierto_por
+    target: wigame:irene_joliot_curie:descubierto_por
+    shared_subjects:
+    - polonium
+    - radium
+  proj:pierre_curie:marie_curie:descubierto_por:
+    path: kbbig/projections/proj__pierre_curie__marie_curie__descubierto_por.yaml
+    source: wigame:pierre_curie:descubierto_por
+    target: wigame:marie_curie:descubierto_por
+    shared_subjects:
+    - polonium
+    - radium
+  proj:francis_crick:james_watson:es:
+    path: kbbig/projections/proj__francis_crick__james_watson__es.yaml
+    source: wigame:francis_crick:es
+    target: wigame:james_watson:es
+    shared_subjects:
+    - dna
+  proj:francis_crick:rosalind_franklin:es:
+    path: kbbig/projections/proj__francis_crick__rosalind_franklin__es.yaml
+    source: wigame:francis_crick:es
+    target: wigame:rosalind_franklin:es
+    shared_subjects:
+    - dna
+  proj:james_watson:francis_crick:es:
+    path: kbbig/projections/proj__james_watson__francis_crick__es.yaml
+    source: wigame:james_watson:es
+    target: wigame:francis_crick:es
+    shared_subjects:
+    - dna
+  proj:james_watson:rosalind_franklin:es:
+    path: kbbig/projections/proj__james_watson__rosalind_franklin__es.yaml
+    source: wigame:james_watson:es
+    target: wigame:rosalind_franklin:es
+    shared_subjects:
+    - dna
+  proj:lise_meitner:otto_hahn:es:
+    path: kbbig/projections/proj__lise_meitner__otto_hahn__es.yaml
+    source: wigame:lise_meitner:es
+    target: wigame:otto_hahn:es
+    shared_subjects:
+    - lise_meitner
+  proj:otto_hahn:lise_meitner:es:
+    path: kbbig/projections/proj__otto_hahn__lise_meitner__es.yaml
+    source: wigame:otto_hahn:es
+    target: wigame:lise_meitner:es
+    shared_subjects:
+    - lise_meitner
+  proj:rosalind_franklin:francis_crick:es:
+    path: kbbig/projections/proj__rosalind_franklin__francis_crick__es.yaml
+    source: wigame:rosalind_franklin:es
+    target: wigame:francis_crick:es
+    shared_subjects:
+    - dna
+  proj:rosalind_franklin:james_watson:es:
+    path: kbbig/projections/proj__rosalind_franklin__james_watson__es.yaml
+    source: wigame:rosalind_franklin:es
+    target: wigame:james_watson:es
+    shared_subjects:
+    - dna
+  proj:francis_crick:rosalind_franklin:miembro_de:
+    path: kbbig/projections/proj__francis_crick__rosalind_franklin__miembro_de.yaml
+    source: wigame:francis_crick:miembro_de
+    target: wigame:rosalind_franklin:miembro_de
+    shared_subjects:
+    - rosalind_franklin
+  proj:lise_meitner:otto_hahn:miembro_de:
+    path: kbbig/projections/proj__lise_meitner__otto_hahn__miembro_de.yaml
+    source: wigame:lise_meitner:miembro_de
+    target: wigame:otto_hahn:miembro_de
+    shared_subjects:
+    - otto_hahn
+  proj:otto_hahn:lise_meitner:miembro_de:
+    path: kbbig/projections/proj__otto_hahn__lise_meitner__miembro_de.yaml
+    source: wigame:otto_hahn:miembro_de
+    target: wigame:lise_meitner:miembro_de
+    shared_subjects:
+    - otto_hahn
+  proj:rosalind_franklin:francis_crick:miembro_de:
+    path: kbbig/projections/proj__rosalind_franklin__francis_crick__miembro_de.yaml
+    source: wigame:rosalind_franklin:miembro_de
+    target: wigame:francis_crick:miembro_de
+    shared_subjects:
+    - rosalind_franklin
+  proj:james_watson:rosalind_franklin:muere_en:
+    path: kbbig/projections/proj__james_watson__rosalind_franklin__muere_en.yaml
+    source: wigame:james_watson:muere_en
+    target: wigame:rosalind_franklin:muere_en
+    shared_subjects:
+    - rosalind_franklin
+  proj:marie_curie:pierre_curie:muere_en:
+    path: kbbig/projections/proj__marie_curie__pierre_curie__muere_en.yaml
+    source: wigame:marie_curie:muere_en
+    target: wigame:pierre_curie:muere_en
+    shared_subjects:
+    - marie_curie
+    - pierre_curie
+  proj:pierre_curie:marie_curie:muere_en:
+    path: kbbig/projections/proj__pierre_curie__marie_curie__muere_en.yaml
+    source: wigame:pierre_curie:muere_en
+    target: wigame:marie_curie:muere_en
+    shared_subjects:
+    - marie_curie
+    - pierre_curie
+  proj:rosalind_franklin:james_watson:muere_en:
+    path: kbbig/projections/proj__rosalind_franklin__james_watson__muere_en.yaml
+    source: wigame:rosalind_franklin:muere_en
+    target: wigame:james_watson:muere_en
+    shared_subjects:
+    - rosalind_franklin
+  proj:irene_joliot_curie:marie_curie:nace_en:
+    path: kbbig/projections/proj__irene_joliot_curie__marie_curie__nace_en.yaml
+    source: wigame:irene_joliot_curie:nace_en
+    target: wigame:marie_curie:nace_en
+    shared_subjects:
+    - irene_joliot_curie
+  proj:marie_curie:irene_joliot_curie:nace_en:
+    path: kbbig/projections/proj__marie_curie__irene_joliot_curie__nace_en.yaml
+    source: wigame:marie_curie:nace_en
+    target: wigame:irene_joliot_curie:nace_en
+    shared_subjects:
+    - irene_joliot_curie
+  proj:francis_crick:james_watson:parte_de:
+    path: kbbig/projections/proj__francis_crick__james_watson__parte_de.yaml
+    source: wigame:francis_crick:parte_de
+    target: wigame:james_watson:parte_de
+    shared_subjects:
+    - cavendish_laboratory
+  proj:james_watson:francis_crick:parte_de:
+    path: kbbig/projections/proj__james_watson__francis_crick__parte_de.yaml
+    source: wigame:james_watson:parte_de
+    target: wigame:francis_crick:parte_de
+    shared_subjects:
+    - cavendish_laboratory
+  proj:lise_meitner:otto_hahn:parte_de:
+    path: kbbig/projections/proj__lise_meitner__otto_hahn__parte_de.yaml
+    source: wigame:lise_meitner:parte_de
+    target: wigame:otto_hahn:parte_de
+    shared_subjects:
+    - society_of_german_chemists
+  proj:otto_hahn:lise_meitner:parte_de:
+    path: kbbig/projections/proj__otto_hahn__lise_meitner__parte_de.yaml
+    source: wigame:otto_hahn:parte_de
+    target: wigame:lise_meitner:parte_de
+    shared_subjects:
+    - society_of_german_chemists
+  proj:francis_crick:rosalind_franklin:premio:
+    path: kbbig/projections/proj__francis_crick__rosalind_franklin__premio.yaml
+    source: wigame:francis_crick:premio
+    target: wigame:rosalind_franklin:premio
+    shared_subjects:
+    - francis_crick
+  proj:lise_meitner:otto_hahn:premio:
+    path: kbbig/projections/proj__lise_meitner__otto_hahn__premio.yaml
+    source: wigame:lise_meitner:premio
+    target: wigame:otto_hahn:premio
+    shared_subjects:
+    - otto_hahn
+  proj:marie_curie:pierre_curie:premio:
+    path: kbbig/projections/proj__marie_curie__pierre_curie__premio.yaml
+    source: wigame:marie_curie:premio
+    target: wigame:pierre_curie:premio
+    shared_subjects:
+    - marie_curie
+  proj:otto_hahn:lise_meitner:premio:
+    path: kbbig/projections/proj__otto_hahn__lise_meitner__premio.yaml
+    source: wigame:otto_hahn:premio
+    target: wigame:lise_meitner:premio
+    shared_subjects:
+    - otto_hahn
+  proj:pierre_curie:marie_curie:premio:
+    path: kbbig/projections/proj__pierre_curie__marie_curie__premio.yaml
+    source: wigame:pierre_curie:premio
+    target: wigame:marie_curie:premio
+    shared_subjects:
+    - marie_curie
+  proj:rosalind_franklin:francis_crick:premio:
+    path: kbbig/projections/proj__rosalind_franklin__francis_crick__premio.yaml
+    source: wigame:rosalind_franklin:premio
+    target: wigame:francis_crick:premio
+    shared_subjects:
+    - francis_crick
+  proj:francis_crick:james_watson:ubicado_en:
+    path: kbbig/projections/proj__francis_crick__james_watson__ubicado_en.yaml
+    source: wigame:francis_crick:ubicado_en
+    target: wigame:james_watson:ubicado_en
+    shared_subjects:
+    - cavendish_laboratory
+  proj:francis_crick:rosalind_franklin:ubicado_en:
+    path: kbbig/projections/proj__francis_crick__rosalind_franklin__ubicado_en.yaml
+    source: wigame:francis_crick:ubicado_en
+    target: wigame:rosalind_franklin:ubicado_en
+    shared_subjects:
+    - cavendish_laboratory
+  proj:james_watson:francis_crick:ubicado_en:
+    path: kbbig/projections/proj__james_watson__francis_crick__ubicado_en.yaml
+    source: wigame:james_watson:ubicado_en
+    target: wigame:francis_crick:ubicado_en
+    shared_subjects:
+    - cavendish_laboratory
+  proj:james_watson:rosalind_franklin:ubicado_en:
+    path: kbbig/projections/proj__james_watson__rosalind_franklin__ubicado_en.yaml
+    source: wigame:james_watson:ubicado_en
+    target: wigame:rosalind_franklin:ubicado_en
+    shared_subjects:
+    - cavendish_laboratory
+  proj:rosalind_franklin:francis_crick:ubicado_en:
+    path: kbbig/projections/proj__rosalind_franklin__francis_crick__ubicado_en.yaml
+    source: wigame:rosalind_franklin:ubicado_en
+    target: wigame:francis_crick:ubicado_en
+    shared_subjects:
+    - cavendish_laboratory
+  proj:rosalind_franklin:james_watson:ubicado_en:
+    path: kbbig/projections/proj__rosalind_franklin__james_watson__ubicado_en.yaml
+    source: wigame:rosalind_franklin:ubicado_en
+    target: wigame:james_watson:ubicado_en
+    shared_subjects:
+    - cavendish_laboratory
+  proj:albert_einstein:niels_bohr:usa:
+    path: kbbig/projections/proj__albert_einstein__niels_bohr__usa.yaml
+    source: wigame:albert_einstein:usa
+    target: wigame:niels_bohr:usa
+    shared_subjects:
+    - albert_einstein
+  proj:francis_crick:james_watson:usa:
+    path: kbbig/projections/proj__francis_crick__james_watson__usa.yaml
+    source: wigame:francis_crick:usa
+    target: wigame:james_watson:usa
+    shared_subjects:
+    - watson_and_crick
+  proj:james_watson:francis_crick:usa:
+    path: kbbig/projections/proj__james_watson__francis_crick__usa.yaml
+    source: wigame:james_watson:usa
+    target: wigame:francis_crick:usa
+    shared_subjects:
+    - watson_and_crick
+  proj:lise_meitner:otto_hahn:usa:
+    path: kbbig/projections/proj__lise_meitner__otto_hahn__usa.yaml
+    source: wigame:lise_meitner:usa
+    target: wigame:otto_hahn:usa
+    shared_subjects:
+    - hahn_and_strassmann
+  proj:niels_bohr:albert_einstein:usa:
+    path: kbbig/projections/proj__niels_bohr__albert_einstein__usa.yaml
+    source: wigame:niels_bohr:usa
+    target: wigame:albert_einstein:usa
+    shared_subjects:
+    - albert_einstein
+  proj:otto_hahn:lise_meitner:usa:
+    path: kbbig/projections/proj__otto_hahn__lise_meitner__usa.yaml
+    source: wigame:otto_hahn:usa
+    target: wigame:lise_meitner:usa
+    shared_subjects:
+    - hahn_and_strassmann
+projections_truncated: false
+alias_conflicts: 0
+aliases_applied: 31
+wigames:
+  wigame:albert_einstein:causa:
+    path: kbbig/wigames/wigame__albert_einstein__causa.yaml
+    sha256: 38e5187813c44abc6c6b1a38077985546ed83f70268e764128230025cbd8000f
+    context_id: ctx:albert_einstein
+    facts: 9
+    axis_a: 9
+    axis_b: 9
+  wigame:albert_einstein:descubierto_por:
+    path: kbbig/wigames/wigame__albert_einstein__descubierto_por.yaml
+    sha256: c09859b79add6cf26c227f97b16d196571f1e0cd7617b82d2b4e42b62f0d6a46
+    context_id: ctx:albert_einstein
+    facts: 10
+    axis_a: 10
+    axis_b: 6
+  wigame:albert_einstein:es:
+    path: kbbig/wigames/wigame__albert_einstein__es.yaml
+    sha256: 43721956695ded0d359579dac01b9dfcb546e4ba0094c59717ba03222b41b703
+    context_id: ctx:albert_einstein
+    facts: 31
+    axis_a: 27
+    axis_b: 29
+  wigame:albert_einstein:instancia_de:
+    path: kbbig/wigames/wigame__albert_einstein__instancia_de.yaml
+    sha256: 028835507dda73671fc93198feef5d09cbfbd358ec71416bdcbdd64149851681
+    context_id: ctx:albert_einstein
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:albert_einstein:miembro_de:
+    path: kbbig/wigames/wigame__albert_einstein__miembro_de.yaml
+    sha256: 67aa50dcb834dddfb3c9f86fdb903306cf83a794f7951ad086cf287c98dcc4b9
+    context_id: ctx:albert_einstein
+    facts: 11
+    axis_a: 4
+    axis_b: 11
+  wigame:albert_einstein:muere_en:
+    path: kbbig/wigames/wigame__albert_einstein__muere_en.yaml
+    sha256: 459b4aa03bfda9a7b18ce510122eb65778dbd1e44924c92033f760c54fca2f67
+    context_id: ctx:albert_einstein
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:albert_einstein:nace_en:
+    path: kbbig/wigames/wigame__albert_einstein__nace_en.yaml
+    sha256: d11fa57cc5dcda7a3538923a6af75c0cb53a649999683f3434d08ff0bb08fa3a
+    context_id: ctx:albert_einstein
+    facts: 4
+    axis_a: 3
+    axis_b: 4
+  wigame:albert_einstein:parte_de:
+    path: kbbig/wigames/wigame__albert_einstein__parte_de.yaml
+    sha256: f9ed59dc3392ffc4cc44caed13bb7fbb4cd3c511feb91aff9e1b8c4273add403
+    context_id: ctx:albert_einstein
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:albert_einstein:premio:
+    path: kbbig/wigames/wigame__albert_einstein__premio.yaml
+    sha256: 59d25cf0303d9cfbc9ebe566b059ab4c1e05ba72774161b696bcc24e47ad9f7d
+    context_id: ctx:albert_einstein
+    facts: 5
+    axis_a: 2
+    axis_b: 5
+  wigame:albert_einstein:ubicado_en:
+    path: kbbig/wigames/wigame__albert_einstein__ubicado_en.yaml
+    sha256: 5ccd56adbe845ce8f0f92c0769149f2dafd162eda31ebbde5c0b081cc33f4f6d
+    context_id: ctx:albert_einstein
+    facts: 30
+    axis_a: 26
+    axis_b: 26
+  wigame:albert_einstein:usa:
+    path: kbbig/wigames/wigame__albert_einstein__usa.yaml
+    sha256: 72a8a01f928496075466f4ea7ef4cbb63c80a146e52e35e562fc47e00b814544
+    context_id: ctx:albert_einstein
+    facts: 3
+    axis_a: 2
+    axis_b: 3
+  wigame:francis_crick:causa:
+    path: kbbig/wigames/wigame__francis_crick__causa.yaml
+    sha256: 21758eb0fd48fd03ff5e9c36aca5e5a729768644da62b910cfb11cbffaf8f385
+    context_id: ctx:francis_crick
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:francis_crick:descubierto_por:
+    path: kbbig/wigames/wigame__francis_crick__descubierto_por.yaml
+    sha256: 04565e852d08c4cc17db89f533e762bfb3dc1edb934d11c044ae9bd15f935c16
+    context_id: ctx:francis_crick
+    facts: 5
+    axis_a: 4
+    axis_b: 5
+  wigame:francis_crick:es:
+    path: kbbig/wigames/wigame__francis_crick__es.yaml
+    sha256: c846f3c2944caba6f0e30e9e7158e5b1211aabad4b4aa0773f568117dc5af0ce
+    context_id: ctx:francis_crick
+    facts: 17
+    axis_a: 13
+    axis_b: 15
+  wigame:francis_crick:instancia_de:
+    path: kbbig/wigames/wigame__francis_crick__instancia_de.yaml
+    sha256: f607c94eff6c2d0a06e7abf7ee8fe0f18852fca0dbfc5abda91da60b8609f35c
+    context_id: ctx:francis_crick
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:francis_crick:miembro_de:
+    path: kbbig/wigames/wigame__francis_crick__miembro_de.yaml
+    sha256: d0e21d9eb1dc8e8c4f0f8bf0fa87c1e4d993cd10e28fbf38df01dc07a4b2fdc1
+    context_id: ctx:francis_crick
+    facts: 13
+    axis_a: 3
+    axis_b: 13
+  wigame:francis_crick:muere_en:
+    path: kbbig/wigames/wigame__francis_crick__muere_en.yaml
+    sha256: 07d038c5f2b1ed7d5bc47958ba39dbabffb7202bd303fe58f127b83f12c4a0ce
+    context_id: ctx:francis_crick
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:francis_crick:nace_en:
+    path: kbbig/wigames/wigame__francis_crick__nace_en.yaml
+    sha256: 32502b506ece5502440a065c2bb77a9acc13064fdeaf7e25e4ac5a8f07859489
+    context_id: ctx:francis_crick
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:francis_crick:parte_de:
+    path: kbbig/wigames/wigame__francis_crick__parte_de.yaml
+    sha256: aef71858189897dd22cdc69db63e2f8be12d36bc65d6a62111de83fe47a00ca5
+    context_id: ctx:francis_crick
+    facts: 9
+    axis_a: 9
+    axis_b: 7
+  wigame:francis_crick:premio:
+    path: kbbig/wigames/wigame__francis_crick__premio.yaml
+    sha256: 5fa56b4c0226ac437e32800bc666e3e621cf54823d5a349992e8aa7387ae08a0
+    context_id: ctx:francis_crick
+    facts: 7
+    axis_a: 4
+    axis_b: 6
+  wigame:francis_crick:ubicado_en:
+    path: kbbig/wigames/wigame__francis_crick__ubicado_en.yaml
+    sha256: de8f156c3261d9332af7ecef277eb9ec9528a5db39d7c0b4334375ac8e875ffe
+    context_id: ctx:francis_crick
+    facts: 16
+    axis_a: 15
+    axis_b: 12
+  wigame:francis_crick:usa:
+    path: kbbig/wigames/wigame__francis_crick__usa.yaml
+    sha256: 0c0f4141eeaaa3de056d426f40cc4815cda8faba5309f060a1385e0c86b35393
+    context_id: ctx:francis_crick
+    facts: 8
+    axis_a: 6
+    axis_b: 8
+  wigame:irene_joliot_curie:causa:
+    path: kbbig/wigames/wigame__irene_joliot_curie__causa.yaml
+    sha256: 5005be9514871fa43a79f04becb5dd545faeb18d021fd5427b1ae859f6b7a823
+    context_id: ctx:irene_joliot_curie
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:irene_joliot_curie:descubierto_por:
+    path: kbbig/wigames/wigame__irene_joliot_curie__descubierto_por.yaml
+    sha256: da1eba271dc866f005730c0573d07a28f86652bbde67f9c55775aee05598bd26
+    context_id: ctx:irene_joliot_curie
+    facts: 4
+    axis_a: 4
+    axis_b: 3
+  wigame:irene_joliot_curie:es:
+    path: kbbig/wigames/wigame__irene_joliot_curie__es.yaml
+    sha256: 92800ac70ca599804694683de00d054382b2e3f28a2d1490c505cabaee2fb573
+    context_id: ctx:irene_joliot_curie
+    facts: 7
+    axis_a: 6
+    axis_b: 7
+  wigame:irene_joliot_curie:miembro_de:
+    path: kbbig/wigames/wigame__irene_joliot_curie__miembro_de.yaml
+    sha256: 6c90952eb355b06d89f217882a8077473400dcbf2d8452692cc3484cda548648
+    context_id: ctx:irene_joliot_curie
+    facts: 9
+    axis_a: 4
+    axis_b: 8
+  wigame:irene_joliot_curie:muere_en:
+    path: kbbig/wigames/wigame__irene_joliot_curie__muere_en.yaml
+    sha256: 938c9adad7a53da2bc31ab9b65ee662579667522390635b07965487367219c4c
+    context_id: ctx:irene_joliot_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 1
+  wigame:irene_joliot_curie:nace_en:
+    path: kbbig/wigames/wigame__irene_joliot_curie__nace_en.yaml
+    sha256: 4f0b6f2654ab29380bcc6d41e60b27637f5811d58871659347a8513f13b3dedd
+    context_id: ctx:irene_joliot_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 1
+  wigame:irene_joliot_curie:parte_de:
+    path: kbbig/wigames/wigame__irene_joliot_curie__parte_de.yaml
+    sha256: b6925d404e93c537c082c8c0cb179ecb6ba6e240241a1046fa698e06f249f660
+    context_id: ctx:irene_joliot_curie
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:irene_joliot_curie:premio:
+    path: kbbig/wigames/wigame__irene_joliot_curie__premio.yaml
+    sha256: 323f3cc111827e08a1ea81872586c92d023b3d1c819ed7b137d00b587542b13f
+    context_id: ctx:irene_joliot_curie
+    facts: 4
+    axis_a: 2
+    axis_b: 3
+  wigame:irene_joliot_curie:ubicado_en:
+    path: kbbig/wigames/wigame__irene_joliot_curie__ubicado_en.yaml
+    sha256: f151cacbb45a903974a97ebdd00ad2329494a89a884fb7301320059480a4ab33
+    context_id: ctx:irene_joliot_curie
+    facts: 3
+    axis_a: 3
+    axis_b: 2
+  wigame:irene_joliot_curie:usa:
+    path: kbbig/wigames/wigame__irene_joliot_curie__usa.yaml
+    sha256: 51488691f2ef693ba3e8525a2dde916e3384a283d80953b626677cdf9fe3ec03
+    context_id: ctx:irene_joliot_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 1
+  wigame:james_watson:causa:
+    path: kbbig/wigames/wigame__james_watson__causa.yaml
+    sha256: 226882c98d65e53d7de8d336e97bbd36f4034e0aa461db630ad299fe4ce35c84
+    context_id: ctx:james_watson
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:james_watson:descubierto_por:
+    path: kbbig/wigames/wigame__james_watson__descubierto_por.yaml
+    sha256: 70f4ee9b61885446d45e91d6387a0db6491651557d16f530ae832f052f150197
+    context_id: ctx:james_watson
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:james_watson:es:
+    path: kbbig/wigames/wigame__james_watson__es.yaml
+    sha256: 837feb1ce3800a0314b39ca01f85ba4b2b0155ec66f54d4ad1692bd1bd668957
+    context_id: ctx:james_watson
+    facts: 8
+    axis_a: 8
+    axis_b: 8
+  wigame:james_watson:miembro_de:
+    path: kbbig/wigames/wigame__james_watson__miembro_de.yaml
+    sha256: 502967a8fea4c43ef6c9269a86430d6237780d358dc57ec81e3d7d91d210a5cf
+    context_id: ctx:james_watson
+    facts: 6
+    axis_a: 2
+    axis_b: 6
+  wigame:james_watson:muere_en:
+    path: kbbig/wigames/wigame__james_watson__muere_en.yaml
+    sha256: 643f0ececdbab2716121027d4f5523b811beda50d8ee5ab44a73e848d60a1041
+    context_id: ctx:james_watson
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:james_watson:nace_en:
+    path: kbbig/wigames/wigame__james_watson__nace_en.yaml
+    sha256: 270a3a18ed5b16da856c277c844469dedea96ad879843b7a3c6ccf03a4c6de45
+    context_id: ctx:james_watson
+    facts: 2
+    axis_a: 1
+    axis_b: 2
+  wigame:james_watson:parte_de:
+    path: kbbig/wigames/wigame__james_watson__parte_de.yaml
+    sha256: 281e0b2ba8ab7d6e4d3cfdea126dd90c99eac819775ac9c4b815a5dcfa452531
+    context_id: ctx:james_watson
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:james_watson:premio:
+    path: kbbig/wigames/wigame__james_watson__premio.yaml
+    sha256: 88583cbf2f827c73d97384cb9d3690b8ad0c4f7dd7338e967535dc7e1db27a5f
+    context_id: ctx:james_watson
+    facts: 5
+    axis_a: 4
+    axis_b: 3
+  wigame:james_watson:ubicado_en:
+    path: kbbig/wigames/wigame__james_watson__ubicado_en.yaml
+    sha256: 437ff21d64080c0b091b04cdd3cd99d52ea479976868cf8d1887388af2c83541
+    context_id: ctx:james_watson
+    facts: 9
+    axis_a: 9
+    axis_b: 9
+  wigame:james_watson:usa:
+    path: kbbig/wigames/wigame__james_watson__usa.yaml
+    sha256: 3347999594aef96bae14d623f28b303efdfe93fc62a669d0182ea1cf82017260
+    context_id: ctx:james_watson
+    facts: 6
+    axis_a: 5
+    axis_b: 6
+  wigame:lise_meitner:causa:
+    path: kbbig/wigames/wigame__lise_meitner__causa.yaml
+    sha256: 59e88e3125315c0682182c3d4f7cf91a2ed4d5374b9f32f1a2c33563d488f009
+    context_id: ctx:lise_meitner
+    facts: 3
+    axis_a: 2
+    axis_b: 3
+  wigame:lise_meitner:descubierto_por:
+    path: kbbig/wigames/wigame__lise_meitner__descubierto_por.yaml
+    sha256: bc4466971b0614cf035e2086c1f90018061b34131c448c5b6c33639ab509b462
+    context_id: ctx:lise_meitner
+    facts: 14
+    axis_a: 12
+    axis_b: 12
+  wigame:lise_meitner:es:
+    path: kbbig/wigames/wigame__lise_meitner__es.yaml
+    sha256: edad8de840fdca247f5dad805b7d403677d0e7a5f33de36a7ced228d819e4f91
+    context_id: ctx:lise_meitner
+    facts: 12
+    axis_a: 11
+    axis_b: 12
+  wigame:lise_meitner:instancia_de:
+    path: kbbig/wigames/wigame__lise_meitner__instancia_de.yaml
+    sha256: 9e8a9d4440e1d8c8588cf45ccb53709f0e17ba37c4fd55a7683c4bad74fb7511
+    context_id: ctx:lise_meitner
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:lise_meitner:miembro_de:
+    path: kbbig/wigames/wigame__lise_meitner__miembro_de.yaml
+    sha256: f69ac4a70834c7e02f89ca1eb10b646a73fc728937db538e363934bcb882fac4
+    context_id: ctx:lise_meitner
+    facts: 5
+    axis_a: 3
+    axis_b: 5
+  wigame:lise_meitner:muere_en:
+    path: kbbig/wigames/wigame__lise_meitner__muere_en.yaml
+    sha256: 95b5b5553d096646810140512f78cb5f680ff23c2f0879df844184e69ae78f58
+    context_id: ctx:lise_meitner
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:lise_meitner:nace_en:
+    path: kbbig/wigames/wigame__lise_meitner__nace_en.yaml
+    sha256: 9390cc26becbbf927fef45570708de6b1d8ffada4aeae6db1369d9ce786274ed
+    context_id: ctx:lise_meitner
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:lise_meitner:parte_de:
+    path: kbbig/wigames/wigame__lise_meitner__parte_de.yaml
+    sha256: 0593c1ee2a3b01024e8984dd60e24c18f888b55c09db37d89695a7f63a528780
+    context_id: ctx:lise_meitner
+    facts: 4
+    axis_a: 4
+    axis_b: 4
+  wigame:lise_meitner:premio:
+    path: kbbig/wigames/wigame__lise_meitner__premio.yaml
+    sha256: 3a60feb9a9e00d06c4bc8bc1ba58f5470f5913b93dd4d7cddabcf138c87e7981
+    context_id: ctx:lise_meitner
+    facts: 5
+    axis_a: 3
+    axis_b: 5
+  wigame:lise_meitner:ubicado_en:
+    path: kbbig/wigames/wigame__lise_meitner__ubicado_en.yaml
+    sha256: f9dfdef8d3715320e7cf86523ba1f34e7d54d9e4a0e6d5ab5d889d5c431417ea
+    context_id: ctx:lise_meitner
+    facts: 18
+    axis_a: 17
+    axis_b: 13
+  wigame:lise_meitner:usa:
+    path: kbbig/wigames/wigame__lise_meitner__usa.yaml
+    sha256: b73223e023a7b41139259145200e1817f21af14257f45f8ed67219bbfd09f03a
+    context_id: ctx:lise_meitner
+    facts: 6
+    axis_a: 5
+    axis_b: 6
+  wigame:marie_curie:causa:
+    path: kbbig/wigames/wigame__marie_curie__causa.yaml
+    sha256: e1bd5b7b0f01fe68861f76295562af7becaf436fbd9b161f6dfb6da0e9ebbefe
+    context_id: ctx:marie_curie
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:marie_curie:descubierto_por:
+    path: kbbig/wigames/wigame__marie_curie__descubierto_por.yaml
+    sha256: b41136a8cf208c81be6117070636990eb7dc73ebb0eb25d551d2ca5ccdb52f0f
+    context_id: ctx:marie_curie
+    facts: 5
+    axis_a: 4
+    axis_b: 4
+  wigame:marie_curie:es:
+    path: kbbig/wigames/wigame__marie_curie__es.yaml
+    sha256: 493c486cf599ba062cd7ef2da5a846ac39bef002ca1f4c419c2125fb6e5e4fe3
+    context_id: ctx:marie_curie
+    facts: 16
+    axis_a: 14
+    axis_b: 13
+  wigame:marie_curie:miembro_de:
+    path: kbbig/wigames/wigame__marie_curie__miembro_de.yaml
+    sha256: 2366c693bbb0d9085bcc5612a41655d36830a88a6b2dcf17d9d6e12e784d50c7
+    context_id: ctx:marie_curie
+    facts: 4
+    axis_a: 2
+    axis_b: 4
+  wigame:marie_curie:muere_en:
+    path: kbbig/wigames/wigame__marie_curie__muere_en.yaml
+    sha256: 4c9f8b8933122af4873998c7c2eeabf4be82cd362525ddc06edeb905c920a6a5
+    context_id: ctx:marie_curie
+    facts: 4
+    axis_a: 2
+    axis_b: 4
+  wigame:marie_curie:nace_en:
+    path: kbbig/wigames/wigame__marie_curie__nace_en.yaml
+    sha256: 810013b0cb2ae3225d6b0d7a7dfd10363ad65f6d8b681717f5c297c7d026fae2
+    context_id: ctx:marie_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:marie_curie:parte_de:
+    path: kbbig/wigames/wigame__marie_curie__parte_de.yaml
+    sha256: 4337a80e522b4aea17955ce63e6e61c01675c9778e309da30de493c577e42309
+    context_id: ctx:marie_curie
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:marie_curie:premio:
+    path: kbbig/wigames/wigame__marie_curie__premio.yaml
+    sha256: d4b9c19cc4c132de7522c73a46e989736ae00bc06bcd48544fb98da34806d99e
+    context_id: ctx:marie_curie
+    facts: 4
+    axis_a: 1
+    axis_b: 4
+  wigame:marie_curie:ubicado_en:
+    path: kbbig/wigames/wigame__marie_curie__ubicado_en.yaml
+    sha256: 291f0ef61fb7c060c4daac6ada9060c3f60cf919b77bb9f6357785cb640e5174
+    context_id: ctx:marie_curie
+    facts: 21
+    axis_a: 19
+    axis_b: 17
+  wigame:marie_curie:usa:
+    path: kbbig/wigames/wigame__marie_curie__usa.yaml
+    sha256: 71db1accd1e1c710af9c9c5c6a12a508fd702086e0c18881a63dad1afe0a044b
+    context_id: ctx:marie_curie
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:niels_bohr:causa:
+    path: kbbig/wigames/wigame__niels_bohr__causa.yaml
+    sha256: a966196ce2073e219e815decaa7b6ea8b4460c4202c5ad11c3aa623024e2d950
+    context_id: ctx:niels_bohr
+    facts: 4
+    axis_a: 4
+    axis_b: 4
+  wigame:niels_bohr:descubierto_por:
+    path: kbbig/wigames/wigame__niels_bohr__descubierto_por.yaml
+    sha256: 8904b855786ab06dfb37b7827f74cc0cf6ab07a303cd6d87e8fa97136b8000dc
+    context_id: ctx:niels_bohr
+    facts: 7
+    axis_a: 6
+    axis_b: 7
+  wigame:niels_bohr:es:
+    path: kbbig/wigames/wigame__niels_bohr__es.yaml
+    sha256: 5db197a834fa46eda1ca3347a9b0e5cbbcbe0f785dc6c885e1a17bfc4e10706a
+    context_id: ctx:niels_bohr
+    facts: 20
+    axis_a: 19
+    axis_b: 19
+  wigame:niels_bohr:instancia_de:
+    path: kbbig/wigames/wigame__niels_bohr__instancia_de.yaml
+    sha256: 9550fce3794cd6139ff313023ca8a8793a63360fa4836bfe807e89d20f71ed91
+    context_id: ctx:niels_bohr
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:niels_bohr:miembro_de:
+    path: kbbig/wigames/wigame__niels_bohr__miembro_de.yaml
+    sha256: 5800025bd275adc74c14c0c5839b30d1cdb7fc2fb079ac919df66738c86a47db
+    context_id: ctx:niels_bohr
+    facts: 5
+    axis_a: 4
+    axis_b: 5
+  wigame:niels_bohr:muere_en:
+    path: kbbig/wigames/wigame__niels_bohr__muere_en.yaml
+    sha256: 14315fde407a702e3d1cad25e2a2f02d1cd3b6ae594f76a538298545ab3b58a2
+    context_id: ctx:niels_bohr
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:niels_bohr:nace_en:
+    path: kbbig/wigames/wigame__niels_bohr__nace_en.yaml
+    sha256: ce12e320ea4e686d8f9c9136ed854f1e640511a2c00275679e9c880688f84563
+    context_id: ctx:niels_bohr
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:niels_bohr:parte_de:
+    path: kbbig/wigames/wigame__niels_bohr__parte_de.yaml
+    sha256: c11bc4b6dfd22c8ddf4ad2191df79d048bf4629311e5e03ef6f273a6c1d3a923
+    context_id: ctx:niels_bohr
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:niels_bohr:premio:
+    path: kbbig/wigames/wigame__niels_bohr__premio.yaml
+    sha256: e40e73029020d80246c620b478616460fa186ae4939fa32d0c88a6511fce9d7a
+    context_id: ctx:niels_bohr
+    facts: 5
+    axis_a: 3
+    axis_b: 3
+  wigame:niels_bohr:ubicado_en:
+    path: kbbig/wigames/wigame__niels_bohr__ubicado_en.yaml
+    sha256: 8c04987edab00557c668cbc51f144d403570bf6c88582bdf6bfb14e7e4c2cf6a
+    context_id: ctx:niels_bohr
+    facts: 8
+    axis_a: 7
+    axis_b: 7
+  wigame:niels_bohr:usa:
+    path: kbbig/wigames/wigame__niels_bohr__usa.yaml
+    sha256: 0093ca3974af69d46f3c721cdb6b6763b2da64294e7ebaaaa62e55f8d1736b4a
+    context_id: ctx:niels_bohr
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:otto_hahn:causa:
+    path: kbbig/wigames/wigame__otto_hahn__causa.yaml
+    sha256: 9035aea6daa5663c93a1e305a557c3e1b39a4e1ce4f278ddecb435aaaf2f0bad
+    context_id: ctx:otto_hahn
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:otto_hahn:descubierto_por:
+    path: kbbig/wigames/wigame__otto_hahn__descubierto_por.yaml
+    sha256: e0edba5de5594c69cb8c1cd5528967db41a36db9cb2bd7578311ede2d33bbb81
+    context_id: ctx:otto_hahn
+    facts: 15
+    axis_a: 15
+    axis_b: 11
+  wigame:otto_hahn:es:
+    path: kbbig/wigames/wigame__otto_hahn__es.yaml
+    sha256: 8ac7fefb96d6d2f98c4b2b7c8d8b52c88349a9bda7e6fd6807475ed806865337
+    context_id: ctx:otto_hahn
+    facts: 30
+    axis_a: 22
+    axis_b: 28
+  wigame:otto_hahn:instancia_de:
+    path: kbbig/wigames/wigame__otto_hahn__instancia_de.yaml
+    sha256: d7aa6e10f71980938644222c7daf8277ea919e959083617c395bdbc79f27290d
+    context_id: ctx:otto_hahn
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:otto_hahn:miembro_de:
+    path: kbbig/wigames/wigame__otto_hahn__miembro_de.yaml
+    sha256: aa58e306ed4f676d18788468457e1769e2a6eddb2579d968c66d3585d2d34b45
+    context_id: ctx:otto_hahn
+    facts: 12
+    axis_a: 6
+    axis_b: 12
+  wigame:otto_hahn:muere_en:
+    path: kbbig/wigames/wigame__otto_hahn__muere_en.yaml
+    sha256: 5f6b195fe56a080723c9ce38c938c9f35d992a5e058b0dfabc7ca232ea500bca
+    context_id: ctx:otto_hahn
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:otto_hahn:nace_en:
+    path: kbbig/wigames/wigame__otto_hahn__nace_en.yaml
+    sha256: d1e96c7aa14c4e29e0f126851f79fa0ad2c29dbd46edc6a01c0d12ebec7f9a86
+    context_id: ctx:otto_hahn
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:otto_hahn:parte_de:
+    path: kbbig/wigames/wigame__otto_hahn__parte_de.yaml
+    sha256: 78058533f06012a48ade452e9046a1a316a33c5cf93ca8e38b667ad0028938ef
+    context_id: ctx:otto_hahn
+    facts: 4
+    axis_a: 4
+    axis_b: 4
+  wigame:otto_hahn:premio:
+    path: kbbig/wigames/wigame__otto_hahn__premio.yaml
+    sha256: 8670a6ff136bed8587a33f29fc740612ed30a8b0007c7444ce926ad4b3deac84
+    context_id: ctx:otto_hahn
+    facts: 7
+    axis_a: 2
+    axis_b: 6
+  wigame:otto_hahn:ubicado_en:
+    path: kbbig/wigames/wigame__otto_hahn__ubicado_en.yaml
+    sha256: 645c4c622e88637c601576f84433a9f70fd324d08e39ca366ad27e7f56e802fe
+    context_id: ctx:otto_hahn
+    facts: 19
+    axis_a: 15
+    axis_b: 18
+  wigame:otto_hahn:usa:
+    path: kbbig/wigames/wigame__otto_hahn__usa.yaml
+    sha256: 4a11018065d825a80fdffb5d4791a31754523665a2e57e2615fa8f2dbcbf5c2e
+    context_id: ctx:otto_hahn
+    facts: 4
+    axis_a: 4
+    axis_b: 4
+  wigame:pierre_curie:descubierto_por:
+    path: kbbig/wigames/wigame__pierre_curie__descubierto_por.yaml
+    sha256: 8aa4488b082764644ddd1c05862a8d3ce936fd2efba0500d204f0292790d978e
+    context_id: ctx:pierre_curie
+    facts: 4
+    axis_a: 4
+    axis_b: 1
+  wigame:pierre_curie:es:
+    path: kbbig/wigames/wigame__pierre_curie__es.yaml
+    sha256: 8cc2a15ce25c598dec86be376b7884aa31d047591a7c583d65209c0980028d47
+    context_id: ctx:pierre_curie
+    facts: 3
+    axis_a: 2
+    axis_b: 3
+  wigame:pierre_curie:muere_en:
+    path: kbbig/wigames/wigame__pierre_curie__muere_en.yaml
+    sha256: 95e1da1586264b784fd27dfc2ef614c8368be50a53dabc387c06f736ee4b7416
+    context_id: ctx:pierre_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:pierre_curie:nace_en:
+    path: kbbig/wigames/wigame__pierre_curie__nace_en.yaml
+    sha256: 454654a718d96a39c7238d692191770cc9eb5137c7b3c7285cf9265ece763c0e
+    context_id: ctx:pierre_curie
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:pierre_curie:premio:
+    path: kbbig/wigames/wigame__pierre_curie__premio.yaml
+    sha256: b0a2608392e2a36bdbea9b86bb23ef625e3e02cd7e44794392120e0f306aceed
+    context_id: ctx:pierre_curie
+    facts: 5
+    axis_a: 4
+    axis_b: 5
+  wigame:pierre_curie:ubicado_en:
+    path: kbbig/wigames/wigame__pierre_curie__ubicado_en.yaml
+    sha256: e2936908c71d60c75fd733a748d898a211e8654298198b8952eb2e5109ce98a9
+    context_id: ctx:pierre_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:pierre_curie:usa:
+    path: kbbig/wigames/wigame__pierre_curie__usa.yaml
+    sha256: 343f91395a2022c76e9e97fd6a02f684801237f36d93055061d277c980649805
+    context_id: ctx:pierre_curie
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:rosalind_franklin:causa:
+    path: kbbig/wigames/wigame__rosalind_franklin__causa.yaml
+    sha256: dba2ec7bb7a1f9be23dcab4bc7752b90d56e4945eb3076db62ddf919f52f898d
+    context_id: ctx:rosalind_franklin
+    facts: 6
+    axis_a: 6
+    axis_b: 6
+  wigame:rosalind_franklin:descubierto_por:
+    path: kbbig/wigames/wigame__rosalind_franklin__descubierto_por.yaml
+    sha256: b3948ad20b6ca6ae05f6bb3bb3a85b94d7ec251055778f7b983ba39abf7d8079
+    context_id: ctx:rosalind_franklin
+    facts: 10
+    axis_a: 10
+    axis_b: 7
+  wigame:rosalind_franklin:es:
+    path: kbbig/wigames/wigame__rosalind_franklin__es.yaml
+    sha256: ddc2d30f00ac30841c57d07abea8c5b77b830308ab22168a528ce65af3a66eab
+    context_id: ctx:rosalind_franklin
+    facts: 31
+    axis_a: 27
+    axis_b: 27
+  wigame:rosalind_franklin:miembro_de:
+    path: kbbig/wigames/wigame__rosalind_franklin__miembro_de.yaml
+    sha256: c8b57299f42d5ce276dcf416deefd4ae8d7e222e48c9675c1fca721fd6a250ca
+    context_id: ctx:rosalind_franklin
+    facts: 14
+    axis_a: 9
+    axis_b: 12
+  wigame:rosalind_franklin:muere_en:
+    path: kbbig/wigames/wigame__rosalind_franklin__muere_en.yaml
+    sha256: 9d9f0ed5a40c025088b60a5e62cc657731d4d799ee8c05fbaa990e524fb0e39a
+    context_id: ctx:rosalind_franklin
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:rosalind_franklin:nace_en:
+    path: kbbig/wigames/wigame__rosalind_franklin__nace_en.yaml
+    sha256: c1fdc12bca13211e28b5f1c119e706a4f300a334be4a3f3b7003d48c6e938861
+    context_id: ctx:rosalind_franklin
+    facts: 1
+    axis_a: 1
+    axis_b: 1
+  wigame:rosalind_franklin:parte_de:
+    path: kbbig/wigames/wigame__rosalind_franklin__parte_de.yaml
+    sha256: 944cb7ae5b2048c50bdabf1eef8021e6328f0d5c8aad855e9d7aaea05a8f01db
+    context_id: ctx:rosalind_franklin
+    facts: 5
+    axis_a: 5
+    axis_b: 5
+  wigame:rosalind_franklin:premio:
+    path: kbbig/wigames/wigame__rosalind_franklin__premio.yaml
+    sha256: b28285fd08d1a901cf7377d38cd4670eee307c44c1c31b35a0e2c39e380fa087
+    context_id: ctx:rosalind_franklin
+    facts: 10
+    axis_a: 6
+    axis_b: 9
+  wigame:rosalind_franklin:ubicado_en:
+    path: kbbig/wigames/wigame__rosalind_franklin__ubicado_en.yaml
+    sha256: fab50f156ce2e1bbe9ee535641dd4e59a556c8d653091a906d3a9bc8d12c1a43
+    context_id: ctx:rosalind_franklin
+    facts: 30
+    axis_a: 30
+    axis_b: 26
+  wigame:rosalind_franklin:usa:
+    path: kbbig/wigames/wigame__rosalind_franklin__usa.yaml
+    sha256: 9baf0bfd7bc10936512b8ad3cee4d3a84aae030fde91e37522ef185c521c2946
+    context_id: ctx:rosalind_franklin
+    facts: 5
+    axis_a: 3
+    axis_b: 5
+totals:
+  facts: 693
+  wigames: 102
+  contexts: 10
+  projections: 50

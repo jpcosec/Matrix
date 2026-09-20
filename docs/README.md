@@ -24,7 +24,8 @@ This directory documents the stable architecture and engineering rules of Matrix
 ## Related repository resources
 
 - Source code: `src/`
-- Examples: `examples/`
+- KB harness: `tools/kb/` (ver [`tools/kb/README.md`](../tools/kb/README.md))
+- Examples and versioned KBs: [`examples/README.md`](../examples/README.md)
 - Tests and demos: `tests/`
 - Whitepaper materials: `Whitepaper`
 
@@ -48,5 +49,13 @@ pytest
 If you only want to exercise the separate SHRDLU prototype, run:
 
 ```bash
-python prototypes/shrdlu/proto.py --once "Put the red block on the blue cube."
+python desk/drawer/shrdlu/proto.py --once "Put the red block on the blue cube."
+```
+
+To exercise the KB harness end to end without an LLM:
+
+```bash
+bash examples/regenerate.sh
+python -m tools.kb --kb /tmp/kb_examples_machine reachability
+python -m tools.kb --kb /tmp/kb_examples_machine capabilities
 ```

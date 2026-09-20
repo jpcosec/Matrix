@@ -96,8 +96,14 @@ def build_world(
     lang: str = "en",
     backend: Any = None,
     limit: int | None = None,
+    batch_size: int = 40,
 ) -> tuple:
-    """Builds a system whose WiGames are the (context, relation) language games."""
+    """Builds a system whose WiGames are the (context, relation) language games.
+
+    With ``converge`` it also runs the batched symbol convergence
+    (:func:`pipeline.convergence.converge_in_batches`), which is the ``W_i``
+    maintenance of ``convergence.md`` §4.
+    """
 
     from src.operational_model import LogicalSystem, SExpressionRuntime
 
@@ -111,6 +117,11 @@ def build_world(
     system = LogicalSystem()
     runtime = SExpressionRuntime(system)
     report = ingest_contexts(system, runtime, contexts, declarations)
+    from pipeline.convergence import converge_in_batches
+
+    system.convergence_report = converge_in_batches(
+        system, contexts, declarations, batch_size=batch_size
+    )
     return system, runtime, contexts, declarations, report
 
 

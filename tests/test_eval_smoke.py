@@ -61,3 +61,22 @@ def test_eval_physicists_pairs_smoke(tmp_path):
     assert metrics["pairs"]["people_evaluated"] > 0
     assert "mrr" in metrics["ranking"]
     assert evaluation.metrics["world"]["contexts"] == metrics["world"]["contexts"]
+
+
+def test_eval_physicists_pairs_llm_smoke(tmp_path):
+    from pathlib import Path
+
+    from pipeline.llm_cache import cache_key, read_cache
+    from experiments.eval_physicists import _pairs_contexts
+
+    cache = read_cache()
+    contexts = _pairs_contexts(limit=4, with_sections=False)
+    if not contexts or not all(cache_key(context) in cache for context in contexts):
+        pytest.skip("the LLM cache does not cover these chunks")
+
+    evaluation = run_evaluation(tmp_path, limit=4, regime="pairs", decomposer="llm")
+
+    metrics = json.loads((tmp_path / "metrics.json").read_text(encoding="utf-8"))
+    assert metrics["decomposer"]["mode"] == "llm"
+    assert metrics["decomposer"]["llm_cached_chunks"] == len(contexts)
+    assert metrics["pairs"]["symbol_declarations"]["symbols"] > 0

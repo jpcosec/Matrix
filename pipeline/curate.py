@@ -24,10 +24,16 @@ _JSON_RE = re.compile(r"\{.*\}", re.DOTALL)
 class PiBackend:
     """Calls the `pi` CLI in non-interactive, tool-less mode."""
 
-    def __init__(self, model: str = DEFAULT_MODEL, timeout: int = DEFAULT_TIMEOUT) -> None:
+    def __init__(
+        self,
+        model: str = DEFAULT_MODEL,
+        timeout: int = DEFAULT_TIMEOUT,
+        thinking: str | None = None,
+    ) -> None:
         self.model = model
         self.timeout = timeout
-        self.name = f"pi:{model}"
+        self.thinking = thinking
+        self.name = f"pi:{model}" + (f":thinking={thinking}" if thinking else "")
 
     def __call__(self, prompt: str) -> str:
         command = [
@@ -39,8 +45,10 @@ class PiBackend:
             "--no-skills",
             "--model",
             self.model,
-            prompt,
         ]
+        if self.thinking:
+            command += ["--thinking", self.thinking]
+        command.append(prompt)
         completed = subprocess.run(
             command,
             capture_output=True,

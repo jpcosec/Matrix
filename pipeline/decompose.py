@@ -200,8 +200,10 @@ def decompose_llm(ctx: ContextIndex, backend: Backend, lang: str = "en") -> list
     for item in payload:
         if not isinstance(item, dict):
             continue
-        relation = str(item.get("r", ""))
+        relation = str(item.get("r", "")).strip()
         if relation not in RELATION_FAMILIES and not relation.startswith("rel:"):
+            continue
+        if not _is_atom(relation):
             continue
         a_sign = _lookup_sign(lookup, item.get("a_sign"))
         b_sign = _lookup_sign(lookup, item.get("b_sign"))
@@ -222,6 +224,128 @@ def decompose_llm(ctx: ContextIndex, backend: Backend, lang: str = "en") -> list
             )
         )
     return declarations
+
+
+def decompose_llm_chunk(
+    ctx: ContextIndex,
+    backend: Backend,
+    lang: str = "en",
+    attempts: int = 2,
+) -> list[Declaration]:
+    """Asks a backend for one chunk's declarations, once per chunk.
+
+    The model is a surface decomposer: it may only use the chunk's own signs
+    (pronouns included), may not resolve pronouns, and may not invent relations
+    outside `RELATION_FAMILIES` or `rel:<verb>`. Invalid triples are dropped.
+    """
+
+    prompt = build_chunk_prompt(ctx, lang=lang)
+    payload: list[Any] | None = None
+    for _ in range(max(attempts, 1)):
+        reply = backend(prompt)
+        payload = _parse_json_list(reply)
+        if payload is not None:
+            break
+    if not payload:
+        return []
+    lookup = _sign_lookup(ctx)
+    declarations: list[Declaration] = []
+    for item in payload:
+        declaration = _declaration_from_item(ctx, lookup, item)
+        if declaration is not None:
+            declarations.append(declaration)
+    return declarations
+
+
+def _parse_json_list(reply: str) -> list[Any] | None:
+    """Parses the first JSON array in a reply, tolerating surrounding prose."""
+
+    match = _JSON_RE.search(reply)
+    if match is None:
+        return None
+    try:
+        payload = json.loads(match.group(0))
+    except json.JSONDecodeError:
+        return None
+    return payload if isinstance(payload, list) else None
+
+
+def _declaration_from_item(
+    ctx: ContextIndex,
+    lookup: dict[str, LocalSign],
+    item: object,
+) -> Declaration | None:
+    """Validates one model triple against the chunk's own signs and relations."""
+
+    if not isinstance(item, dict):
+        return None
+    relation = str(item.get("r", "")).strip()
+    if relation not in RELATION_FAMILIES and not relation.startswith("rel:"):
+        return None
+    if not _is_atom(relation):
+        return None
+    a_sign = _lookup_sign(lookup, item.get("a_sign"))
+    b_sign = _lookup_sign(lookup, item.get("b_sign"))
+    if a_sign is None or b_sign is None or a_sign.norm == b_sign.norm:
+        return None
+    default_sentence = a_sign.occurrences[0].sentence_index if a_sign.occurrences else 0
+    try:
+        sentence_index = int(item.get("s", default_sentence))
+    except (TypeError, ValueError):
+        sentence_index = default_sentence
+    span = _sentence_span(ctx, sentence_index, a_sign, b_sign)
+    return Declaration(
+        ctx_id=ctx.chunk.ctx_id,
+        relation=relation,
+        a=a_sign.symbol_id,
+        b=b_sign.symbol_id,
+        a_sign=a_sign.sign,
+        b_sign=b_sign.sign,
+        sentence_index=sentence_index,
+        span=span,
+        source="llm",
+    )
+
+
+def _sentence_span(
+    ctx: ContextIndex,
+    sentence_index: int,
+    a_sign: LocalSign,
+    b_sign: LocalSign,
+) -> tuple[int, int]:
+    for sentence in ctx.sentences:
+        if sentence.index == sentence_index:
+            return sentence.char_span
+    spans = [occurrence.span for sign in (a_sign, b_sign) for occurrence in sign.occurrences]
+    if spans:
+        return (spans[0][0], spans[-1][1])
+    return (0, 0)
+
+
+def build_chunk_prompt(ctx: ContextIndex, lang: str = "en") -> str:
+    """Builds the one-call-per-chunk decomposition prompt."""
+
+    sentences = "\n".join(f"[{index}] {sentence.text.strip()}" for index, sentence in enumerate(ctx.sentences))
+    signs = "\n".join(
+        f"- symbol_id={sign.symbol_id} sign={sign.sign!r} kind={sign.kind}"
+        for sign in sorted(ctx.signs.values(), key=lambda sign: sign.symbol_id)
+    )
+    relations = ", ".join(RELATION_FAMILIES)
+    return (
+        "Eres un descompositor de superficie. Convierte las oraciones en tripletas lógicas "
+        "usando SOLO los signos locales listados.\n"
+        f"Contexto: {ctx.chunk.ctx_id} — {ctx.chunk.title} ({lang})\n"
+        f"Signos locales:\n{signs}\n"
+        f"Relaciones permitidas: {relations}, o `rel:<verbo en infinitivo>`.\n"
+        f"Oraciones:\n{sentences}\n\n"
+        "Reglas: (1) usa SOLO los signos de la lista; los pronombres (she, he) son signos válidos; "
+        "(2) NO resuelvas pronombres; (3) no inventes relaciones fuera de las familias salvo "
+        "`rel:<verbo en infinitivo>`; (4) una tripleta por hecho; (5) el objeto es el signo más largo "
+        "disponible (por ejemplo `nobel prize in physics` mejor que `nobel prize`), y añade además la "
+        "variante canónica `nobel prize` cuando exista como signo.\n"
+        'Responde SOLO un array JSON: [{"s": <nº de oración>, "r": "<relación>", '
+        '"a_sign": "<signo local>", "b_sign": "<signo local>"}].'
+    )
 
 
 def build_prompt(ctx: ContextIndex, lang: str = "en") -> str:
@@ -330,6 +454,12 @@ def _noun_phrase_end(text: str, start: int) -> int:
         if token == "," or token.lower() in _NP_STOPWORDS:
             return match.start()
     return len(text)
+
+
+def _is_atom(token: str) -> bool:
+    """Reports whether a token can be written as a single s-expression atom."""
+
+    return bool(token) and not any(char.isspace() or char in "()" for char in token)
 
 
 def _is_modifier(sign: LocalSign) -> bool:

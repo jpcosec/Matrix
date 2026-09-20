@@ -5,7 +5,7 @@ from __future__ import annotations
 import numpy as np
 from scipy import stats
 
-from .contingency import Contingency
+from .contingency import Contingency, PairContingency
 
 
 def _safe_ratio(numerator: np.ndarray, denominator: np.ndarray) -> np.ndarray:
@@ -32,6 +32,43 @@ def q_index(c: Contingency) -> np.ndarray:
     return np.where(lam == 0.0, 0.0, q)
 
 
+def _phi_classical_counts(
+    n: int | np.ndarray,
+    n_a: np.ndarray,
+    n_nb: np.ndarray,
+    n_anb: np.ndarray,
+    exact_below: float = 4.0,
+) -> np.ndarray:
+    """Element-wise classical ``phi`` from counts of any shape."""
+
+    lam = np.asarray(n_a) * np.asarray(n_nb) / n
+    with np.errstate(divide="ignore", invalid="ignore"):
+        q = (np.asarray(n_anb) - lam) / np.sqrt(lam)
+    q = np.where(lam == 0.0, 0.0, q)
+    return np.where(lam > exact_below, stats.norm.sf(q), 1.0 - stats.poisson.cdf(np.asarray(n_anb), lam))
+
+
+def _inclusion_counts(
+    n: int | np.ndarray,
+    n_a: np.ndarray,
+    n_nb: np.ndarray,
+    n_ab: np.ndarray,
+    n_anb: np.ndarray,
+    alpha: float = 2.0,
+) -> np.ndarray:
+    """Element-wise inclusion index ``tau`` from counts of any shape."""
+
+    h_given_a = _binary_entropy(_safe_ratio(np.asarray(n_ab), np.asarray(n_a)))
+    h_given_nb = _binary_entropy(_safe_ratio(np.asarray(n_nb) - np.asarray(n_anb), np.asarray(n_nb)))
+    f_a = np.asarray(n_a) / n
+    f_nb = np.asarray(n_nb) / n
+    f_anb = np.asarray(n_anb) / n
+    i_a = np.where(f_anb < f_a / 2.0, 1.0 - h_given_a**alpha, 0.0)
+    i_nb = np.where(f_anb < f_nb / 2.0, 1.0 - h_given_nb**alpha, 0.0)
+    product = i_a * i_nb
+    return np.where(product > 0.0, product ** (1.0 / (2.0 * alpha)), 0.0)
+
+
 def phi_classical(c: Contingency, exact_below: float = 4.0) -> np.ndarray:
     """Returns the classical implication intensity ``phi``."""
 
@@ -42,6 +79,20 @@ def phi_classical(c: Contingency, exact_below: float = 4.0) -> np.ndarray:
     phi = np.where(c.n_a[:, None] == 0.0, 0.0, phi)
     np.fill_diagonal(phi, 0.0)
     return phi
+
+
+def phi_classical_pairs(c: PairContingency, exact_below: float = 4.0) -> np.ndarray:
+    """Returns the classical implication intensity of every candidate pair."""
+
+    phi = _phi_classical_counts(c.n, c.n_a, c.n_nb, c.n_anb, exact_below)
+    return np.where((c.n_a == 0.0) | (c.n_b == c.n), 0.0, phi)
+
+
+def phi_entropic_pairs(c: PairContingency, alpha: float = 2.0, exact_below: float = 4.0) -> np.ndarray:
+    """Returns the entropic implication intensity of every candidate pair."""
+
+    tau = _inclusion_counts(c.n, c.n_a, c.n_nb, c.n_ab, c.n_anb, alpha)
+    return np.sqrt(phi_classical_pairs(c, exact_below) * tau)
 
 
 def conditional_entropies(c: Contingency) -> tuple[np.ndarray, np.ndarray]:

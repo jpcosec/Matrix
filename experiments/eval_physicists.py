@@ -18,7 +18,7 @@ from populator.contexts import ContextIndex
 from populator.extract import Document
 from populator.tokenize import normalize
 
-from pipeline.convergence import context_taxonomy, symbol_convergence
+from pipeline.convergence import context_taxonomy, converge_in_batches, symbol_convergence
 from pipeline.decompose import Declaration, decompose
 from pipeline.ingest import ingest_contexts
 from pipeline.query import ask, referent_of
@@ -113,6 +113,7 @@ def run_evaluation(
     source: str = "simple",
     regime: str = "document",
     with_sections: bool = False,
+    decomposer: str = "heuristic",
 ) -> Evaluation:
     """Builds the physicists world, converges it and measures the metrics.
 
@@ -125,6 +126,7 @@ def run_evaluation(
     root.mkdir(parents=True, exist_ok=True)
     metrics: dict[str, Any] = {}
     timings: dict[str, float] = {}
+    dumps = {"path": root / "metrics.json"}
     if regime == "section":
         unit, source = "section", "en"
 
@@ -147,8 +149,20 @@ def run_evaluation(
 
     start = perf_counter()
     declarations: list[Declaration] = []
-    for context in contexts:
-        declarations.extend(decompose(context, lang="en", backend=backend))
+    llm_chunks = 0
+    if decomposer in {"heuristic", "both"}:
+        for context in contexts:
+            declarations.extend(decompose(context, lang="en", backend=backend))
+    if decomposer in {"llm", "both"}:
+        from pipeline.llm_cache import cache_key, cached_decompose, read_cache
+
+        cache = read_cache()
+        for context in contexts:
+            if cache_key(context) in cache:
+                llm_chunks += 1
+            declarations.extend(cached_decompose(context, None))
+        if decomposer == "both":
+            declarations = _dedupe_declarations(declarations)
     planted = _planted_declarations(contexts, seed=seed)
     declarations.extend(planted)
     timings["decompose"] = round(perf_counter() - start, 3)
@@ -168,7 +182,7 @@ def run_evaluation(
         timings["taxonomy"] = round(perf_counter() - start, 3)
 
     start = perf_counter()
-    convergence = symbol_convergence(system, contexts, declarations)
+    convergence = converge_in_batches(system, contexts, declarations, batch_size=40)
     timings["convergence"] = round(perf_counter() - start, 3)
 
     metrics["world"] = {
@@ -182,9 +196,13 @@ def run_evaluation(
         "referents": len(set(convergence.referents.values())),
         "isolated": len(convergence.isolated),
         "variables": len(convergence.scores),
+        "candidate_pairs": convergence.candidates_count,
+        "batches": convergence.batches,
         "taxonomy_nodes": len(built_taxonomy.nodes) if built_taxonomy else None,
     }
+    _dump(metrics, root)
     metrics["pronoun_convergence"] = _pronoun_metrics(system, convergence, contexts)
+    _dump(metrics, root)
     metrics["qa"] = _qa_metrics(system, declarations)
     metrics["qa_pronoun_subject"] = _qa_metrics(system, declarations, use_pronoun=True)
     metrics["garbage"] = _garbage_metrics(system, convergence, planted, declarations)
@@ -195,17 +213,28 @@ def run_evaluation(
         metrics["garbage_converged"] = _garbage_metrics(system, convergence, planted, declarations, only_converged=True)
     if regime == "pairs":
         metrics["false_merges"] = _false_merges(system, convergence)
+        metrics["decomposer"] = {
+            "mode": decomposer,
+            "declarations": len(declarations),
+            "llm_cached_chunks": llm_chunks,
+        }
         metrics["pairs"] = _pairs_convergence(system, convergence, declarations)
+        metrics["pairs"]["symbol_declarations"] = _symbol_declaration_stats(declarations)
+        metrics["pairs"]["shared_configs_per_pair"] = _shared_configs_per_pair(system, declarations)
+        _dump(metrics, root)
         metrics["intra_context"] = _intra_context_metrics(system, convergence, declarations)
-        metrics["ranking"] = _ranking_metrics(system, declarations)
+        metrics["ranking"] = _ranking_metrics(system, convergence)
         metrics["qa_pairs"] = _qa_pairs_metrics(system, declarations)
         metrics["tautological_configurations"] = convergence.tautological_configurations
+    _dump(metrics, root)
     metrics["gap"] = _gap_metrics(system, convergence, contexts, declarations)
+    _dump(metrics, root)
     timings["peak_memory_mb"] = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024, 1)
     timings["total"] = round(sum(value for key, value in timings.items() if key != "peak_memory_mb"), 3)
     metrics["timings"] = timings
+    _dump(metrics, root)
 
-    (root / "metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8")
+    _dump(metrics, root)
     (root / "report.md").write_text(
         _render_report(metrics, system, runtime, convergence, planted, declarations),
         encoding="utf-8",
@@ -218,6 +247,66 @@ def run_evaluation(
         convergence=convergence,
         planted=planted,
     )
+
+
+def _dedupe_declarations(declarations: list[Declaration]) -> list[Declaration]:
+    """Keeps the first declaration per (relation, a, b)."""
+
+    seen: set[tuple[str, str, str]] = set()
+    unique: list[Declaration] = []
+    for declaration in declarations:
+        key = (declaration.relation, declaration.a, declaration.b)
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(declaration)
+    return unique
+
+
+def _symbol_declaration_stats(declarations: list[Declaration]) -> dict[str, Any]:
+    """Mean and median declarations per symbol."""
+
+    counts: Counter[str] = Counter()
+    for declaration in declarations:
+        counts[declaration.a] += 1
+        counts[declaration.b] += 1
+    values = sorted(counts.values())
+    if not values:
+        return {"symbols": 0, "mean": 0.0, "median": 0.0}
+    middle = values[len(values) // 2]
+    return {
+        "symbols": len(values),
+        "mean": round(sum(values) / len(values), 2),
+        "median": middle,
+    }
+
+
+def _shared_configs_per_pair(system: Any, declarations: list[Declaration]) -> dict[str, Any]:
+    """Mean shared informative configurations between the correct source pairs."""
+
+    people = _people()
+    configs: dict[str, set[str]] = {}
+    shared_counts: list[int] = []
+    for qid in sorted(people):
+        simple = _source_symbols(system, qid, "simple")
+        english = _source_symbols(system, qid, "en")
+        if not simple or not english:
+            continue
+        for symbol in simple + english:
+            configs.setdefault(symbol, _symbol_configs(declarations, symbol))
+        best = max(
+            len(configs[source] & configs[target]) for source in simple for target in english
+        )
+        shared_counts.append(best)
+    if not shared_counts:
+        return {"pairs": 0, "mean": 0.0}
+    return {"pairs": len(shared_counts), "mean": round(sum(shared_counts) / len(shared_counts), 2)}
+
+
+def _dump(metrics: dict[str, Any], root: Path) -> None:
+    """Writes the metrics file (partial runs are better than no runs)."""
+
+    (root / "metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def _pairs_contexts(limit: int | None, with_sections: bool) -> list[ContextIndex]:
@@ -381,10 +470,13 @@ def _intra_context_metrics(system: Any, convergence: Any, declarations: list[Dec
     }
 
 
-def _ranking_metrics(system: Any, declarations: list[Declaration]) -> dict[str, Any]:
-    """Ranks the English lead symbols of a person among all phi candidates."""
+def _ranking_metrics(system: Any, convergence: Any) -> dict[str, Any]:
+    """Ranks the English lead symbols among the candidate pairs of the report.
 
-    from pipeline.convergence import _configurations, _pair_scores
+    A target without a shared informative configuration is not a candidate, so it
+    cannot be ranked: `ranked` counts the queries with the target among the
+    candidates.
+    """
 
     people = _people()
     queries = [
@@ -395,27 +487,20 @@ def _ranking_metrics(system: Any, declarations: list[Declaration]) -> dict[str, 
     ]
     if not queries:
         return {"queries": 0, "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
-    variables = {symbol for declaration in declarations for symbol in (declaration.a, declaration.b)}
-    configurations = _configurations(declarations, {}, {}, variables, 2, 0.30)
-    if len(configurations) < 2:
-        return {"queries": len(queries), "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
-    symbols, scores, _, _ = _pair_scores(configurations, variables, declarations, {}, {})
-    position = {symbol: index for index, symbol in enumerate(symbols)}
+    pair_scores = getattr(convergence, "pair_scores", {})
+    candidates_by_source: dict[str, list[tuple[float, str]]] = defaultdict(list)
+    for (source, target), phi in pair_scores.items():
+        candidates_by_source[source].append((float(phi), target))
+    for values in candidates_by_source.values():
+        values.sort(key=lambda item: (-item[0], item[1]))
     ranks: list[int] = []
     for query in queries:
-        if query not in position:
-            continue
         qid = query.split("@", 1)[1]
         correct = set(_source_symbols(system, qid, "en"))
-        candidates = sorted(
-            (
-                (float(scores[position[query], position[other]]), other)
-                for other in symbols
-                if other != query and other in position
-            ),
-            key=lambda item: (-item[0], item[1]),
+        candidates = candidates_by_source.get(query, [])
+        rank = next(
+            (index + 1 for index, (_, other) in enumerate(candidates) if other in correct), None
         )
-        rank = next((index + 1 for index, (_, other) in enumerate(candidates) if other in correct), None)
         if rank:
             ranks.append(rank)
     if not ranks:
@@ -568,7 +653,7 @@ def _gap_metrics(
     for context in gap_contexts:
         gap_declarations.extend(decompose(context, lang="en"))
     ingest_contexts(system, SExpressionRuntime(system), gap_contexts, gap_declarations)
-    gap_convergence = symbol_convergence(system, gap_contexts, gap_declarations)
+    gap_convergence = converge_in_batches(system, gap_contexts, gap_declarations, batch_size=40)
 
     decided = correct = 0
     for row in rows:
@@ -1073,12 +1158,20 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--regime", choices=["document", "section", "pairs"], default=None)
     parser.add_argument("--with-sections", action="store_true", help="pairs regime: include EN sections")
+    parser.add_argument("--decomposer", choices=["heuristic", "llm", "both"], default="heuristic")
+    parser.add_argument("--max-memory-gb", type=float, default=4.0)
     parser.add_argument("--unit", choices=["document", "section"], default="document")
     parser.add_argument("--source", choices=["simple", "en"], default="simple")
     parser.add_argument("--llm", action="store_true")
     parser.add_argument("--taxonomy", action="store_true", help="also build the Context tree (slow)")
     args = parser.parse_args(argv)
 
+    if args.max_memory_gb and args.max_memory_gb > 0:
+        limit_bytes = int(args.max_memory_gb * 1024**3)
+        try:
+            resource.setrlimit(resource.RLIMIT_AS, (limit_bytes, limit_bytes))
+        except (ValueError, OSError):
+            pass
     regime = args.regime or ("section" if args.unit == "section" else "document")
     evaluation = run_evaluation(
         args.out,
@@ -1089,9 +1182,10 @@ def main(argv: list[str] | None = None) -> int:
         source=args.source,
         regime=regime,
         with_sections=args.with_sections,
+        decomposer=args.decomposer,
     )
     metrics = evaluation.metrics
-    print(f"artículos evaluados: {metrics['world']['contexts']} (regime={regime})")
+    print(f"artículos evaluados: {metrics['world']['contexts']} (regime={regime}, decomposer={args.decomposer})")
     print(f"convergencia de pronombres: {metrics['pronoun_convergence']}")
     if "tautological_configurations" in metrics:
         print(f"tautological_configurations: {len(metrics['tautological_configurations'])}")

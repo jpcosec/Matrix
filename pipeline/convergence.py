@@ -14,16 +14,15 @@ from scipy import sparse
 from populator.contexts import ContextIndex
 from populator.tokenize import normalize
 from sia.cohesion import cohesion_pair
-from sia.contingency import Contingency, contingency
+from sia.contingency import Contingency, PairContingency, contingency, contingency_pairs
 from sia.hierarchy import build_hierarchy, classes, significant_levels
-from sia.intensity import phi_classical, phi_entropic
+from sia.intensity import phi_classical, phi_classical_pairs, phi_entropic, phi_entropic_pairs
 
 from .decompose import Declaration
 from .ingest import build_world
 
 ROOT_CONTEXT = "ctx:root"
 PROMOTE_PHI = 0.95
-KERNEL_WIGAME = "wigame:kernel:equivalent"
 KERNEL_RELATION = "equivalent"
 
 
@@ -41,11 +40,38 @@ class Taxonomy:
 
 
 @dataclass
+class PairScores:
+    """Intensity and support for the ordered pairs that share a configuration."""
+
+    symbols: list[str]
+    rows: np.ndarray
+    cols: np.ndarray
+    phi: np.ndarray
+    n_st: np.ndarray
+    oversized: list[str] = field(default_factory=list)
+
+    def ordered(self, phi_min: float) -> list[tuple[float, str, str]]:
+        """Returns the pairs above ``phi_min`` sorted by ``(-phi, source, target)``."""
+
+        values = [
+            (float(phi), self.symbols[int(row)], self.symbols[int(col)])
+            for row, col, phi in zip(self.rows, self.cols, self.phi)
+            if phi >= phi_min
+        ]
+        values.sort(key=lambda item: (-item[0], item[1], item[2]))
+        return values
+
+
+@dataclass
 class ConvergenceReport:
-    """Result of one convergence run."""
+    """Result of one convergence run (also carries its incremental state)."""
 
     referents: dict[str, str] = field(default_factory=dict)
     tautological_configurations: list[dict[str, Any]] = field(default_factory=list)
+    pair_scores: dict[tuple[str, str], float] = field(default_factory=dict)
+    candidates_count: int = 0
+    batches: int = 0
+    processed: set[tuple[str, str]] = field(default_factory=set)
     proposed: list[dict] = field(default_factory=list)
     promoted: list[dict] = field(default_factory=list)
     isolated: list[str] = field(default_factory=list)
@@ -241,8 +267,10 @@ def symbol_convergence(
     min_support: int = 2,
     min_contexts: int = 2,
     max_iter: int = 5,
-    measure: Callable[[Contingency], np.ndarray] = phi_classical,
+    measure: Callable[[PairContingency], np.ndarray] = phi_classical_pairs,
     taut_df: float = 0.30,
+    report: ConvergenceReport | None = None,
+    max_config_size: int = 500,
 ) -> ConvergenceReport:
     """Proposes projections and equivalences between local symbols by convergence.
 
@@ -262,21 +290,27 @@ def symbol_convergence(
     sharing informative configurations); projections always cross contexts.
     """
 
-    report = ConvergenceReport()
+    report = report if report is not None else ConvergenceReport()
     norms = {sign.symbol_id: sign.norm for context in contexts for sign in context.signs.values()}
     relations: dict[str, set[str]] = defaultdict(set)
     counts_by_symbol: Counter[str] = Counter()
+    contexts_by_symbol: dict[str, set[str]] = defaultdict(set)
     for declaration in declarations:
         relations[declaration.a].add(declaration.relation)
         relations[declaration.b].add(declaration.relation)
         counts_by_symbol[declaration.a] += 1
         counts_by_symbol[declaration.b] += 1
+        contexts_by_symbol[declaration.a].add(declaration.ctx_id)
+        contexts_by_symbol[declaration.b].add(declaration.ctx_id)
     variables = {symbol for symbol, count in counts_by_symbol.items() if count >= min_support}
     if len(variables) < 2:
         return report
-    _ensure_kernel_wigame(system, variables)
 
-    processed: set[tuple[str, str]] = set()
+    processed = report.processed
+    equivalences: set[frozenset[str]] = getattr(system, "equivalences", set())
+    system.equivalences = equivalences
+    for symbol, referent in getattr(system, "referents", {}).items():
+        report.referents.setdefault(symbol, referent)
     for iteration in range(max_iter):
         tautological: list[dict[str, Any]] = []
         configurations = _configurations(
@@ -288,37 +322,54 @@ def symbol_convergence(
             )[:20]
         if len(configurations) < 2:
             break
-        symbols, scores, n_st, shared_contexts = _pair_scores(
-            configurations, variables, declarations, norms, report.referents, measure
+        scores = _pair_scores(
+            configurations, variables, measure=measure, min_support=min_support, max_config_size=max_config_size
         )
-        position = {symbol: index for index, symbol in enumerate(symbols)}
-        for source in sorted(variables):
-            incoming = [
-                float(scores[position[target], position[source]])
-                for target in variables
-                if target != source and _ctx(target) != _ctx(source)
+        if scores.oversized and not report.tautological_configurations:
+            report.tautological_configurations = [
+                {"config": key, "df": 0, "contexts": 0, "reason": "size"}
+                for key in scores.oversized[:20]
             ]
-            report.scores[source] = max(incoming) if incoming else 0.0
-            system.symbols[source].metadata["convergence_score"] = report.scores[source]
-            system.symbols[source].metadata["contexts_supporting"] = len(
-                {declaration.ctx_id for declaration in declarations if source in (declaration.a, declaration.b)}
+        best_incoming: dict[str, float] = {}
+        pair_phi: dict[tuple[str, str], float] = {}
+        pair_st: dict[tuple[str, str], int] = {}
+        for row, col, phi, count in zip(scores.rows, scores.cols, scores.phi, scores.n_st):
+            source = scores.symbols[int(row)]
+            target = scores.symbols[int(col)]
+            if _ctx(source) != _ctx(target) and float(phi) > best_incoming.get(target, 0.0):
+                best_incoming[target] = float(phi)
+            pair_phi[(source, target)] = float(phi)
+            pair_st[(source, target)] = int(count)
+            if phi >= phi_min and float(phi) > report.pair_scores.get((source, target), 0.0):
+                report.pair_scores[(source, target)] = float(phi)
+        for symbol in sorted(variables):
+            score = best_incoming.get(symbol, 0.0)
+            report.scores[symbol] = score
+            system.symbols[symbol].metadata["convergence_score"] = score
+            system.symbols[symbol].metadata["contexts_supporting"] = len(contexts_by_symbol.get(symbol, ()))
+        candidates = scores.ordered(phi_min)
+        report.candidates_count = len(candidates)
+        pending = [pair for _, source, target in candidates for pair in [(source, target)] if pair not in processed]
+        shared_contexts = (
+            _shared_contexts_for(
+                configurations,
+                _configuration_contexts(declarations, variables, norms, report.referents),
+                pending,
             )
+            if pending
+            else {}
+        )
         promotions = 0
-        for source in sorted(variables):
-            for target in sorted(variables):
-                if source == target or (source, target) in processed:
+        for forward, source, target in candidates:
+                if (source, target) in processed:
                     continue
-                if _already_promoted(system, source, target):
+                if _already_promoted(report, equivalences, source, target):
                     processed.add((source, target))
                     continue
                 same_context = _ctx(source) == _ctx(target)
-                forward = float(scores[position[source], position[target]])
-                backward = float(scores[position[target], position[source]])
-                if forward < phi_min:
-                    continue
-                processed.add((source, target))
-                shared = shared_contexts[(source, target)]
-                shared_configurations = int(n_st[position[source], position[target]])
+                backward = pair_phi.get((target, source), 0.0)
+                shared = shared_contexts.get((source, target), set())
+                shared_configurations = pair_st.get((source, target), 0)
                 equivalent = backward >= phi_min
                 informative = shared_configurations >= 2
                 supported = shared_configurations >= 2 and (
@@ -346,14 +397,19 @@ def symbol_convergence(
                     equivalent,
                     allow_projection=not same_context,
                 )
+                promoted_pair = False
                 for entry in entries:
                     promote = same_referent or (directional and entry["kind"] == "projection")
                     if promote:
-                        _promote(system, entry)
+                        if entry.get("candidate_id"):
+                            _promote(system, entry)
                         report.promoted.append({**entry, "status": "promoted", "iteration": iteration})
                         promotions += 1
+                        promoted_pair = True
                     else:
                         report.proposed.append(entry)
+                if promoted_pair:
+                    equivalences.add(frozenset((source, target)))
                 if same_referent:
                     _merge_referents(report, source, target)
                     for symbol, referent in report.referents.items():
@@ -362,6 +418,9 @@ def symbol_convergence(
         if promotions == 0:
             break
 
+    report.promoted = _dedupe_entries(report.promoted)
+    report.proposed = _dedupe_entries(report.proposed)
+    system.referents = dict(report.referents)
     report.isolated = [
         symbol
         for symbol in sorted(variables)
@@ -370,17 +429,33 @@ def symbol_convergence(
     return report
 
 
-def _already_promoted(system: Any, source: str, target: str) -> bool:
-    """Reports whether an equivalence between two symbols is already confirmed."""
+def _dedupe_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Keeps the highest-phi entry per (kind, source, target)."""
 
-    wigame = system.wigames.get(KERNEL_WIGAME)
-    if wigame is None:
-        return False
-    wanted = {
-        f"({KERNEL_RELATION} {source} {target})",
-        f"({KERNEL_RELATION} {target} {source})",
-    }
-    return any(fact.proposition.sexpr() in wanted for fact in wigame.facts.values())
+    best: dict[tuple[str, str, str], dict[str, Any]] = {}
+    order: list[tuple[str, str, str]] = []
+    for entry in entries:
+        key = (str(entry.get("kind")), str(entry.get("source")), str(entry.get("target")))
+        if key not in best:
+            best[key] = entry
+            order.append(key)
+        elif float(entry.get("phi", 0.0)) > float(best[key].get("phi", 0.0)):
+            best[key] = entry
+    return [best[key] for key in order]
+
+
+def _already_promoted(
+    report: "ConvergenceReport",
+    equivalences: set[frozenset[str]],
+    source: str,
+    target: str,
+) -> bool:
+    """Reports whether two symbols already share a referent."""
+
+    if frozenset((source, target)) in equivalences:
+        return True
+    referent = report.referents.get(source)
+    return referent is not None and report.referents.get(target) == referent
 
 
 def _promote(system: Any, entry: dict) -> None:
@@ -401,18 +476,6 @@ def _merge_referents(report: ConvergenceReport, source: str, target: str) -> Non
                 report.referents[symbol] = referent
     report.referents[source] = referent
     report.referents[target] = referent
-
-
-def _ensure_kernel_wigame(system: Any, variables: set[str]) -> None:
-    from src.operational_model import SExpressionRuntime
-
-    runtime = SExpressionRuntime(system)
-    runtime.evaluate(f"(create relation {KERNEL_RELATION} {KERNEL_RELATION} commutative:true)")
-    symbols = " ".join(sorted(variables))
-    runtime.evaluate(
-        f"(create li li:kernel:equivalent {KERNEL_RELATION} (axis-a {symbols}) (axis-b {symbols}))"
-    )
-    runtime.evaluate(f"(create wigame {KERNEL_WIGAME} li:kernel:equivalent)")
 
 
 def _configurations(
@@ -468,41 +531,178 @@ def _reference(symbol: str, norms: dict[str, str], referents: dict[str, str]) ->
     return norms.get(symbol, symbol.split("@")[0])
 
 
-def _pair_scores(
+def converge_in_batches(
+    system: Any,
+    contexts: list[ContextIndex],
+    declarations: list[Declaration],
+    batch_size: int = 40,
+    **kwargs: Any,
+) -> ConvergenceReport:
+    """Maintains the language games: contexts enter in batches.
+
+    This is the ``W_i`` maintenance of ``convergence.md`` §4: a batch of contexts
+    is compared against the symbols and referents already in the world (the
+    inverted index grows with each batch), never all contexts against all.
+    ``max_iter`` applies inside each batch and the report is carried over, so
+    referents, scores and already-processed pairs are not recomputed.
+    """
+
+    report: ConvergenceReport = kwargs.pop("report", None) or ConvergenceReport()
+    by_context: dict[str, list[Declaration]] = defaultdict(list)
+    for declaration in declarations:
+        by_context[declaration.ctx_id].append(declaration)
+    order = sorted(contexts, key=lambda context: _context_order(context.chunk.ctx_id))
+    seen_contexts: list[ContextIndex] = []
+    seen_declarations: list[Declaration] = []
+    for start in range(0, len(order), batch_size):
+        batch = order[start : start + batch_size]
+        seen_contexts.extend(batch)
+        for context in batch:
+            seen_declarations.extend(by_context.get(context.chunk.ctx_id, []))
+        report = symbol_convergence(
+            system, seen_contexts, seen_declarations, report=report, **kwargs
+        )
+        report.batches += 1
+    return report
+
+
+def _context_order(ctx_id: str) -> tuple[str, int]:
+    """Sorts contexts by document and section number."""
+
+    article, _, section = ctx_id.partition("#")
+    try:
+        number = int(section) if section else 0
+    except ValueError:
+        number = 0
+    return article, number
+
+
+def _max_incoming(
+    scores: np.ndarray,
+    symbols: list[str],
+    index: int,
+    report_scores: dict[str, float],
+) -> float:
+    """Returns the largest phi arriving at one symbol from another context."""
+
+    best = 0.0
+    for row, symbol in enumerate(symbols):
+        if row == index or _ctx(symbol) == _ctx(symbols[index]):
+            continue
+        value = float(scores[row, index])
+        if value > best:
+            best = value
+    return best
+
+
+def _candidate_mask(
+    scores: np.ndarray,
+    n_st: np.ndarray,
+    phi_min: float,
+    min_support: int,
+) -> np.ndarray:
+    """Marks the ordered pairs worth inspecting: enough intensity and support."""
+
+    mask = (scores >= phi_min) & (n_st >= min_support)
+    np.fill_diagonal(mask, False)
+    return mask
+
+
+def _shared_contexts_for(
+    configurations: dict[str, set[str]],
+    contexts_by_configuration: dict[str, set[str]],
+    pairs: list[tuple[str, str]],
+) -> dict[tuple[str, str], set[str]]:
+    """Computes the shared contexts of the given ordered pairs only."""
+
+    wanted = set(pairs) | {(target, source) for source, target in pairs}
+    shared: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for key, members in configurations.items():
+        contexts = contexts_by_configuration.get(key)
+        if not contexts:
+            continue
+        ordered = sorted(members)
+        for first_index, first in enumerate(ordered):
+            for second in ordered[first_index + 1 :]:
+                if (first, second) in wanted:
+                    shared[(first, second)] |= contexts
+                if (second, first) in wanted:
+                    shared[(second, first)] |= contexts
+    return shared
+
+
+def _candidate_pairs(
     configurations: dict[str, set[str]],
     variables: set[str],
-    declarations: list[Declaration],
-    norms: dict[str, str],
-    referents: dict[str, str],
-    measure: Callable[[Contingency], np.ndarray] = phi_classical,
-) -> tuple[list[str], np.ndarray, np.ndarray, dict[tuple[str, str], set[str]]]:
+    min_support: int = 2,
+    max_config_size: int = 500,
+) -> tuple[list[str], np.ndarray, np.ndarray, np.ndarray, list[str]]:
+    """Returns the ordered symbol pairs that share at least one configuration.
+
+    Uses an inverted index (configuration → symbols) so nothing grows with the
+    square of the symbol count. Configurations larger than ``max_config_size``
+    symbols generate no pairs and are reported as oversized.
+    """
+
     symbols = sorted(variables)
     index = {symbol: position for position, symbol in enumerate(symbols)}
-    keys = list(configurations)
+    counts: Counter[tuple[int, int]] = Counter()
+    oversized: list[str] = []
+    for key, members in configurations.items():
+        ordered = sorted(index[symbol] for symbol in members if symbol in index)
+        if len(ordered) > max_config_size:
+            oversized.append(key)
+            continue
+        for position, first in enumerate(ordered):
+            for second in ordered[position + 1 :]:
+                counts[(first, second)] += 1
+                counts[(second, first)] += 1
+    pairs = sorted(pair for pair, count in counts.items() if count >= min_support)
+    rows = np.array([pair[0] for pair in pairs], dtype=np.int64)
+    cols = np.array([pair[1] for pair in pairs], dtype=np.int64)
+    n_st = np.array([counts[pair] for pair in pairs], dtype=np.int32)
+    return symbols, rows, cols, n_st, oversized
+
+
+def _configuration_matrix(
+    configurations: dict[str, set[str]],
+    symbols: list[str],
+) -> sparse.csr_matrix:
+    """Builds the sparse configurations x symbols matrix."""
+
+    index = {symbol: position for position, symbol in enumerate(symbols)}
     rows: list[int] = []
     columns: list[int] = []
-    for row, key in enumerate(keys):
+    for row, key in enumerate(configurations):
         for symbol in configurations[key]:
             rows.append(row)
             columns.append(index[symbol])
     matrix = sparse.csr_matrix(
         (np.ones(len(rows), dtype=np.int8), (rows, columns)),
-        shape=(len(keys), len(symbols)),
+        shape=(len(configurations), len(symbols)),
     )
     matrix.data[:] = 1
-    counts = contingency(matrix)
-    scores = measure(counts)
-    n_st = np.asarray((matrix.T @ matrix).todense(), dtype=np.int64)
-    shared_contexts: dict[tuple[str, str], set[str]] = defaultdict(set)
-    contexts_by_configuration = _configuration_contexts(declarations, variables, norms, referents)
-    for row, key in enumerate(keys):
-        members = sorted(configurations[key])
-        for first_position, first in enumerate(members):
-            for second in members[first_position + 1 :]:
-                contexts = contexts_by_configuration.get(key, set())
-                shared_contexts[(first, second)] |= contexts
-                shared_contexts[(second, first)] |= contexts
-    return symbols, scores, n_st, shared_contexts
+    return matrix
+
+
+def _pair_scores(
+    configurations: dict[str, set[str]],
+    variables: set[str],
+    measure: Callable[[PairContingency], np.ndarray] = phi_classical_pairs,
+    min_support: int = 2,
+    max_config_size: int = 500,
+) -> PairScores:
+    """Computes phi and the shared configuration count for the candidate pairs."""
+
+    symbols, rows, cols, n_st, oversized = _candidate_pairs(
+        configurations, variables, min_support=min_support, max_config_size=max_config_size
+    )
+    if rows.size == 0:
+        return PairScores(symbols=symbols, rows=rows, cols=cols, phi=np.zeros(0), n_st=n_st, oversized=oversized)
+    matrix = _configuration_matrix(configurations, symbols)
+    pairs = contingency_pairs(matrix, rows, cols)
+    phi = np.asarray(measure(pairs), dtype=np.float64)
+    return PairScores(symbols=symbols, rows=rows, cols=cols, phi=phi, n_st=n_st, oversized=oversized)
 
 
 def _configuration_contexts(
@@ -567,28 +767,11 @@ def _candidate_entries(
             }
         )
     if equivalent:
-        candidate = register_candidate(
-            system,
-            "fact",
-            KERNEL_WIGAME,
-            {"proposition": f"({KERNEL_RELATION} {source} {target})"},
-            {
-                "tier": "statistical",
-                "curation": "proposed",
-                "stats": {
-                    "phi": min(forward, backward),
-                    "phi_forward": forward,
-                    "phi_backward": backward,
-                    "n_st": n_st,
-                    "contexts": len(shared),
-                },
-            },
-        )
         entries.append(
             {
                 "status": "proposed",
                 "kind": "equivalent",
-                "candidate_id": candidate.candidate_id,
+                "candidate_id": None,
                 "source": source,
                 "target": target,
                 "phi": min(forward, backward),
@@ -706,7 +889,7 @@ def run_convergence(
 
     system, runtime, contexts, declarations, report = build_world(corpus_dir, unit=unit, lang=lang, limit=limit)
     taxonomy = context_taxonomy(system, contexts, declarations)
-    convergence = symbol_convergence(system, contexts, declarations)
+    convergence = system.convergence_report
     maintenance = {
         wigame_id: maintain_wigame(system, wigame_id)
         for wigame_id in sorted(system.wigames)

@@ -1,60 +1,66 @@
-# `experiments/` — prueba sobre corpus grandes
+# `experiments/` — evaluación sobre el corpus de físicos
 
-Ejecuta el pipeline completo (Populator → SIA → Matrix) sobre un corpus, escribe los
-artefactos del mundo, verifica que la información se recupera con procedencia y
-comprueba que el `WiGame` sobrevive a un viaje por YAML.
+Ejecuta el pipeline completo (populator → descompositor → ingesta por contexto → convergencia) sobre
+`corpus/physicists` (89 físicos: artículo de Simple English + artículo completo de la Wikipedia
+inglesa + hechos de Wikidata + GAP) y mide convergencia y consultas ruteadas por régimen y
+descompositor. Qué significa cada número está en
+[`../specs/convergence.md`](../specs/convergence.md) §7.
 
-## Cómo ejecutar
+## Reglas de ejecución
 
-```bash
-python -m experiments.run_corpus <dir|archivo> --wigame <id> [opciones]
-```
-
-Opciones principales:
-- `--lang es|en` — lista de stopwords del populator.
-- `--max-concepts N` — tope de conceptos (los de mayor frecuencia de documento). Por defecto 800.
-- `--max-facts N` — tope de candidatos `fact` (top-K por φ entrópica). Por defecto 3000.
-- `--max-nonsense N` — tope de candidatos `nonsense` (top-K por `n_a·n_b`). Por defecto 500.
-- `--max-classes N` — tope de candidatos `class`. Por defecto 15.
-- `--hierarchy-concepts N` — si se indica, la jerarquía se calcula sobre los N conceptos más
-  frecuentes. Por defecto `None` (sin submuestreo): `significant_levels` está vectorizado y
-  corre en < 1 s con 800 conceptos.
-- `--min-confirmed N` — si hay menos hechos confirmados, se promueven las reglas de mayor φ
-  de la cola para poder medir recuperación. Por defecto 30.
-- `--recursive` — lee directorios recursivamente.
-- `--no-dedupe` — conserva las oraciones repetidas (por defecto se descarta toda repetición
-  de la misma secuencia normalizada de tokens, conservando la primera aparición).
-- `--out <dir>` — destino de los artefactos.
-
-Ejemplos:
+- Toda corrida va **con tope de memoria** y `timeout` explícito:
+  `bash scripts/capped.sh 4 -- <comando>` (cgroup transitorio con `MemoryMax=4G`, sin swap).
+  El 2026-09-20 tres corridas sin tope mataron el scope de la terminal por OOM.
+- **Una corrida por comando**, cada una con su `--out`. Nunca encadenar evaluaciones en un `for`.
+- Nunca `p×p`: la intensidad se calcula sobre pares candidatos (índice invertido configuración →
+  símbolos) y la convergencia entra por lotes. Ver [`../.herdr/briefs/_reglas.md`](../.herdr/briefs/_reglas.md).
 
 ```bash
-python -m experiments.run_corpus corpus/vegetales --wigame vegetales --lang es --out /tmp/corpora/vegetales
-python -m experiments.run_corpus /home/jp/proyectos/Matrix/TractatusKnowledgeMachine/atoms \
-    --wigame atoms --lang es --recursive --out /tmp/corpora/atoms
-python -m experiments.run_corpus /tmp/corpora/sia_book.txt --wigame siabook --lang en --out /tmp/corpora/siabook
+bash scripts/capped.sh 4 -- python -m experiments.eval_physicists --regime pairs --decomposer heuristic --out /tmp/eval/pairs_heuristic
+bash scripts/capped.sh 4 -- python -m experiments.eval_physicists --regime pairs --decomposer llm       --out /tmp/eval/pairs_llm
+bash scripts/capped.sh 4 -- python -m experiments.eval_physicists --regime pairs --decomposer both      --out /tmp/eval/pairs_both
 ```
 
-## Qué mide
+## Regímenes y descompositores
 
-- **Escritura:** nº de documentos/oraciones/conceptos, S-expressions evaluadas, candidatos por
-  tipo, auto-confirmados, hechos en `V_i` y derivados, tiempos por etapa y memoria pico.
-- **Recuperación con procedencia (`retrieval.md`):** para los 30 hechos confirmados de mayor φ
-  ejecuta `(why wigame:<id> (implies a b))` y comprueba que **cada** `prov` apunta a un span del
-  documento original cuyo texto contiene la secuencia de tokens de `a` y de `b`. Objetivo ≥ 95 %.
-- **Consultas de retorno (`queries.md`):** `(return facts symbol:<c> …)` para los 10 conceptos más
-  frecuentes y `(check …)` sobre 5 reglas confirmadas y 5 pares nonsense.
-- **Persistencia:** `world.yaml` (más `system_extras.yaml` con reglas y cola de candidatos), y
-  comparación de 5 `check` y 3 `why` antes/después de recargar: deben ser idénticos.
+| Flag | Qué hace |
+|---|---|
+| `--regime document` | un contexto por artículo; con `--source simple` (89 ctx) o `--source en` (89 ctx) |
+| `--regime section --unit section` | un contexto por sección `## H` del artículo EN (564 ctx) |
+| `--regime pairs` | los **dos contextos por físico**: artículo Simple + lead EN (178 ctx); `--with-sections` añade además las secciones EN |
+| `--decomposer heuristic` | declaraciones por patrones (`pipeline/decompose.py`), sin red |
+| `--decomposer llm` | declaraciones del LLM desde la caché por chunk (`corpus/physicists/declarations_llm.jsonl`) |
+| `--decomposer both` | une heurística y LLM |
+| `--limit N` | solo los primeros N contextos |
+| `--max-memory-gb 4` | `RLIMIT_AS` del proceso (además del cgroup de `capped.sh`) |
+| `--taxonomy` | construye además el árbol de contextos (`context_taxonomy(max_features=600)`; es lo lento) |
+| `--out <dir>` | destino de `metrics.json` y `report.md` |
 
-## Artefactos
+La caché del LLM se llena **una vez** (≈11 min con 8 workers; después 0 llamadas, la evaluación es
+offline):
 
-`stats.json`, `rules_top.md` (40 reglas por φ + 15 clases significativas), `retrieval.md`,
-`queries.md`, `persistence.md`, `world.yaml`, `system_extras.yaml`.
+```bash
+bash scripts/capped.sh 4 -- python -m pipeline.decompose_batch corpus/physicists --regime pairs --backend pi --workers 8
+```
 
-## Notas
+## Qué mide `metrics.json`
 
-- Los corpus grandes **no** se versionan: los PDFs se convierten con `pdftotext` y las rutas
-  externas son de solo lectura.
-- Los topes (`--max-*`) son los del CLI del experimento; `pipeline.build_system` mantiene
-  `None` por defecto para no cambiar el comportamiento del pipeline pequeño.
+- `world`: contextos, símbolos, hechos, variables (≥ 2 declaraciones), promovidos / propuestos /
+  referentes, aislados, pares candidatos y lotes.
+- `pairs`: convergencia entre fuentes (personas), desglose pronombre↔pronombre / etiqueta↔etiqueta /
+  pronombre↔etiqueta, ejemplos y los 10 fallos con sus configuraciones compartidas.
+- `intra_context`: contextos donde el pronombre y la etiqueta del mismo artículo convergen.
+- `ranking`: MRR / hit@1 / hit@3 sobre **todas** las consultas del régimen — las consultas sin
+  candidato correcto entre los pares (`unranked`) aportan 0, y se reportan aparte; comparar MRR sin
+  mirar `ranked`/`unranked` engaña.
+- `qa` / `qa_pairs` / `qa_pronoun_subject`: recall y precision contra Wikidata (etiqueta y con salto
+  Simple→EN).
+- `garbage`: 50 hechos plantados (deben quedar aislados) frente a 50 hechos reales.
+- `false_merges`: convergencias entre qids distintos sin mención cruzada.
+- `tautological_configurations`: configuraciones descartadas por aparecer en más de `taut_df=0.30`
+  de los contextos (no discriminan identidad).
+- `gap`: cobertura del dataset GAP sobre el corpus.
+- `timings`: segundos por etapa y `peak_memory_mb`.
+
+`metrics.json` se escribe parcialmente tras cada etapa, así que una corrida interrumpida conserva lo
+medido hasta ahí. `report.md` resume lo mismo en prosa con las tablas de pares y fallos.

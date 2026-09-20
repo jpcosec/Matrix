@@ -24,7 +24,7 @@ Este documento corrige el diseño del puente texto → Matrix. **Sustituye** lo 
 | Uso | Individuos (filas) | Variables (columnas) | Qué da | A dónde va |
 |---|---|---|---|---|
 | **Taxonomía de contextos** | contextos (chunks) | declaraciones locales (signos o `(R · b)`) | implicación `A → B` = "donde se dice A se dice B" = **anidamiento con dirección**; jerarquía cortada en niveles significativos; contribución = pertenencia | árbol `Context → subcontexto → WiGame`, `ContextRoute`/`WC_k`. Traspuesta: `ctx_A → ctx_B` = A cabe en B |
-| **Convergencia de símbolos** | configuraciones en que entra un símbolo (`R`, co-participante) | símbolos `signo@ctx` | `she@art → curie@hist` con φ≈1: todo lo dicho de *she* se dice de *Curie* → proyección **con dirección**; bidireccional → `equivalent`; jerarquía = taxonomía de referentes; similitud = alias | candidatos `projection` / `equivalent`; promoción por regla de convergencia (φ, soporte, nº de contextos) o curado |
+| **Convergencia de símbolos** | configuraciones en que entra un símbolo (`R`, co-participante) | símbolos `signo@ctx` | `she@art → curie@hist` con φ≈1: todo lo dicho de *she* se dice de *Curie* → proyección **con dirección**; bidireccional → `equivalent`; jerarquía = taxonomía de referentes; similitud = alias | candidatos `projection` / `equivalent`; promoción por regla de convergencia (φ, soporte, nº de contextos) o curado; los referentes se guardan en `system.referents` / `system.equivalences` (memoria del mundo, sin kernel `p×p`) |
 | **Mantenimiento de `W_i`** | sujetos del juego | coordenadas `(R, b)` | columnas tautológicas en un subconjunto → compuertas `C_k`; jerarquía → subjuegos; similitud → ejes y `D_i` para colisiones `W⊗Wᵀ−I` | `create context/wigame`, `RoutingProjection`, candidatos `D_i` |
 
 Medida de confianza de la KB: cohesión y tipicidad = cuánto converge un hecho o símbolo y desde cuántos contextos. Lo aislado no se promueve.
@@ -62,3 +62,53 @@ texto ─► Korel: chunks (contextos), signos locales, offsets, índice
 - Corpus sintético con referentes conocidos (artículos sobre Curie y sobre Franklin usando `she`, nombres y variantes; hechos plantados falsos): el árbol agrupa los artículos correctos; `she@curie_i → curie@curie_j` se propone y `she@franklin_k` no; los hechos plantados quedan aislados.
 - `corpus/vegetales`: los `W_i` resultantes reproducen la tabla del paper (hoja/raíz/tallo; lisa/rugosa como `D_i`; `verdura` como compuerta).
 - Preguntas ruteadas con respuesta conocida (`W_i ⊗ v_q` a través de proyecciones), no conteo de citas.
+
+## 7. Resultados
+
+Evaluación sobre `corpus/physicists` (89 físicos: artículo de Simple English + artículo completo de
+la Wikipedia inglesa + hechos de Wikidata + GAP). Régimen `pairs` = 178 contextos (89 artículos
+Simple + 89 lead EN); comando `experiments.eval_physicists --regime pairs --decomposer <modo>`, cada
+corrida bajo tope de 4 GB (`scripts/capped.sh 4 -- …`). Detalle completo en
+`../.herdr/llm_report.md`.
+
+| métrica | heuristic | llm | both |
+|---|---|---|---|
+| declaraciones / símbolos / variables | 2 931 / 4 120 / 690 | 11 242 / 10 703 / 4 427 | 13 574 / 12 277 / 5 701 |
+| pares candidatos (≥ 1 configuración compartida) | 37 | 275 | 326 |
+| declaraciones por símbolo (media / mediana) | 1.42 / 1 | 2.10 / 1 | 2.21 / 1 |
+| configuraciones compartidas por par correcto (media) | 0.49 | 1.28 | 1.53 |
+| convergencia entre fuentes (personas) | 1/77 = 0.013 | 5/79 = 0.063 | 8/81 = 0.099 |
+| intra-contexto | 0/157 | 0/158 | 0/161 |
+| ranking MRR / hit@1 / hit@3 (todas las consultas) | 0.055 / 0.043 / 0.053 | 0.265 / 0.250 / 0.261 | 0.243 / 0.219 / 0.250 |
+| falsas fusiones | 0 | 0 | 1 |
+| QA Wikidata (recall etiqueta / con salto) | 0.002 / 0.0 | 0.011 / 0.048 | 0.012 / 0.045 |
+| basura (plantada vs real aislada) | 1.0 vs 0.98 | 1.0 vs 0.96 | 1.0 vs 0.92 |
+| promovidos / propuestos / referentes | 6 / 65 / 3 | 45 / 296 / 18 | 98 / 352 / 42 |
+| memoria pico / tiempo | 198 MB / 2.5 s | 250 MB / 10.2 s | 274 MB / 14.4 s |
+
+Otros regímenes: `document` sobre Simple (89 contextos, 1 488 MB → 198 MB tras el rediseño por
+pares), `document` sobre EN (89 contextos, 7 921 MB → 250 MB) y `section` sobre EN (564 contextos,
+3 promociones y una única fusión falsa `it@Q153238#1 ~ it@Q9123#5`, φ=0.9626).
+
+**Diagnóstico.** El algoritmo converge en el régimen multi-fuente cuando hay **≥ 2 configuraciones
+informativas compartidas**: el descompositor LLM triplica las declaraciones y multiplica por cinco
+la convergencia entre fuentes (0.013 → 0.063) y por ~50 el QA con salto (0.0 → 0.048). Lo que sigue
+fallando es la **capa de declaraciones**, no la promoción: los mismos hechos se lexicalizan distinto
+en cada fuente (`Nobel Prize` vs `Nobel Prize in Chemistry`), la intra-contexto es 0 (pronombre y
+etiqueta comparten a lo sumo 1 configuración) y el ranking acierta en el 25 % de las consultas. La
+basura queda aislada siempre; con el corpus real el contraste es 1.0 vs 0.96.
+
+## 8. Siguiente paso
+
+1. **Canonicalización de objetos** vía `equivalent` en el kernel de símbolos (misma entidad, formas
+   distintas): es el cuello de botella medido, y no requiere tocar la promoción.
+2. **Más fuentes por entidad** (más de dos contextos por persona): la convergencia mejora con
+   volumen por diseño; el corpus actual aporta dos contextos por físico.
+3. **Descompositor LLM como default** (con la caché versionada del corpus) y la heurística como
+   respaldo offline.
+4. **Taxonomía a escala**: `context_taxonomy` es opcional porque `build_hierarchy` es O(p²) por nivel
+   en Python; con `max_features=600` deja de ser un cuello de botella para el informe.
+5. **Nunca `p×p`**: ninguna estructura puede crecer con el cuadrado del número de símbolos. Tres
+   corridas sin tope murieron por OOM el 2026-09-20; por eso la intensidad se calcula sobre pares
+   candidatos (índice invertido configuración → símbolos), la convergencia entra por lotes y toda
+   evaluación corre bajo `bash scripts/capped.sh 4 -- …`.

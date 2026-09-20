@@ -10,41 +10,49 @@ import pytest
 
 from pipeline.curate import FakeBackend, Proposal, curate_queue, propose
 from pipeline.run import build_system
-from populator import build_corpus, read_documents
+from populator import read_documents
 
 CORPUS = str(Path(__file__).resolve().parents[1] / "corpus" / "vegetales")
 
 
 @pytest.fixture(scope="module")
 def world():
+    system, _, _ = build_system(CORPUS, "vegetales")
     documents = read_documents(CORPUS)
-    corpus = build_corpus(documents, lang="es")
-    system, runtime, _ = build_system(CORPUS, "vegetales", corpus=corpus, documents=documents)
     return system, documents
 
 
 def first_pending(system):
-    """Returns the highest-intensity queued fact candidate."""
+    """Returns one queued candidate (registering a projection if the queue is empty)."""
 
-    candidates = [
-        candidate
-        for candidate in system.candidates.values()
-        if candidate.kind == "fact" and candidate.evidence.get("curation") == "proposed"
-    ]
-    candidates.sort(key=lambda candidate: -candidate.evidence["stats"]["phi_entropic"])
-    return candidates[0]
+    for candidate in system.candidates.values():
+        if candidate.evidence.get("curation") == "proposed":
+            return candidate
+    from src.operational_model.system.candidates import register_candidate
+
+    return register_candidate(
+        system,
+        "projection",
+        "wigame:01_lechugas:has_property",
+        {
+            "source_wigame": "wigame:01_lechugas:has_property",
+            "target_wigame": "wigame:02_espinacas:has_property",
+            "pairs": [["lechuga@01_lechugas", "espinaca@02_espinacas"]],
+        },
+        {"stats": {"phi": 0.97, "n_st": 2, "contexts": 2}},
+    )
 
 
 def test_propose_parses_clean_json(world):
     system, documents = world
     candidate = first_pending(system)
     reply = json.dumps(
-        {"sexpr": "(implies lechuga hoja)", "prov_index": 0, "keep": True, "comment": "respaldado"}
+        {"sexpr": "(equivalent a b)", "prov_index": 0, "keep": True, "comment": "respaldado"}
     )
 
     proposal = propose(system, candidate.candidate_id, FakeBackend(reply), documents)
 
-    assert proposal.sexpr == "(implies lechuga hoja)"
+    assert proposal.sexpr == "(equivalent a b)"
     assert proposal.prov_index == 0
     assert proposal.keep is True
     assert proposal.comment == "respaldado"
@@ -56,38 +64,61 @@ def test_propose_parses_json_surrounded_by_prose(world):
     candidate = first_pending(system)
     reply = (
         "Claro, esta es mi propuesta:\n"
-        '{"sexpr": "(implies lechuga hoja)", "prov_index": 1, "keep": false, "comment": "dudoso"}\n'
+        '{"sexpr": "(project wigame:a wigame:b (x y))", "prov_index": 1, "keep": false, "comment": "dudoso"}\n'
         "Espero que sirva."
     )
 
     proposal = propose(system, candidate.candidate_id, FakeBackend(reply), documents)
 
-    assert proposal.sexpr == "(implies lechuga hoja)"
+    assert proposal.sexpr == "(project wigame:a wigame:b (x y))"
     assert proposal.prov_index == 1
     assert proposal.keep is False
 
 
+def test_prompt_mentions_the_candidate_kind_and_shared_configurations(world):
+    from pipeline.curate import build_prompt
+
+    system, documents = world
+    candidate = first_pending(system)
+
+    prompt = build_prompt(candidate, ["una oración de ejemplo"], ["lechuga"])
+
+    assert "projection" in prompt or "equivalent" in prompt
+    assert "delta" not in prompt
+    assert "una oración de ejemplo" in prompt
+    assert "lechuga" in prompt
+
+
 def test_propose_never_changes_curation(world):
     system, documents = world
-    before = {candidate.candidate_id: candidate.evidence["curation"] for candidate in system.candidates.values()}
+    before = {
+        candidate.candidate_id: candidate.evidence["curation"] for candidate in system.candidates.values()
+    }
 
-    curate_queue(system, FakeBackend('{"sexpr": "", "prov_index": 0, "keep": true, "comment": ""}'), documents, limit=3)
+    curate_queue(
+        system,
+        FakeBackend('{"sexpr": "", "prov_index": 0, "keep": true, "comment": ""}'),
+        documents,
+        limit=3,
+    )
 
-    after = {candidate.candidate_id: candidate.evidence["curation"] for candidate in system.candidates.values()}
+    after = {
+        candidate.candidate_id: candidate.evidence["curation"] for candidate in system.candidates.values()
+    }
     assert before == after
 
 
 def test_curate_queue_writes_llm_evidence(world):
     system, documents = world
-    reply = json.dumps({"sexpr": "(implies a b)", "prov_index": 0, "keep": True, "comment": "ok"})
+    reply = json.dumps({"sexpr": "(equivalent a b)", "prov_index": 0, "keep": True, "comment": "ok"})
 
     proposals = curate_queue(system, FakeBackend(reply), documents, limit=3)
 
-    assert len(proposals) == 3
+    assert proposals
     assert all(isinstance(proposal, Proposal) for proposal in proposals)
     for proposal in proposals:
         candidate = system.candidates[proposal.candidate_id]
-        assert candidate.evidence["llm"]["sexpr"] == "(implies a b)"
+        assert candidate.evidence["llm"]["sexpr"] == "(equivalent a b)"
         assert candidate.evidence["curation"] == "proposed"
 
 

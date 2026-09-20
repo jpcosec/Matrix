@@ -2,46 +2,77 @@
 
 ## 1. Principio
 
-No se promete un mapeo automático texto → ontología. Lo que se garantiza es más modesto y verificable: **todo hecho de la base de conocimiento puede referenciarse a su fuente**, y nada pasa de `UNKNOWN` a `TRUE` sin una decisión registrada. El curado se automatiza al máximo, pero el paso final lo dan un LLM que propone y un humano que confirma.
+No hay mapeo automático texto → ontología. Lo que se garantiza es: **todo hecho puede referenciarse
+a su fuente** (`Prov(f)`, [provenance.md](provenance.md)) y **nada pasa de `UNKNOWN` a `TRUE` sin una
+decisión registrada**. El curado se automatiza al máximo, pero el paso final lo dan un LLM que
+propone y un humano que confirma.
 
 ## 2. Candidatos
 
-`sia/report.py` produce cuatro tipos de candidato, cada uno con `Prov(f)` (ver [provenance.md](provenance.md)) y sus estadísticos:
+La convergencia ([convergence.md](convergence.md) §3) y el mantenimiento de `W_i` producen cuatro
+tipos de candidato, cada uno con `Prov(f)` y sus estadísticos (`φ`, `n_st`, contextos):
 
 | Tipo | Origen | Propuesta canónica |
 |---|---|---|
-| `symbol` | columna de `X` | `(create symbol <id> <sign>)` |
-| `implication` | arco `a → b` del grafo | `(if a b)` → fila de `I` |
-| `class` | clase de nivel significativo | `(create wigame <hijo> <li>)` + `RoutingProjection` al padre |
-| `nonsense` | par sin co-ocurrencia con soporte | `S_i[a,b] = unsinnig` |
+| `projection` | par `s → t` con `φ ≥ φ_min` entre símbolos de contextos distintos | `(project wigame:<src> wigame:<dst> (s t) …)` (una `RoutingProjection`) |
+| `equivalent` | `φ ≥ 0.95` en ambos sentidos | `(equivalent s t)`: los dos símbolos comparten referente (`ref:<k>`) |
+| `gate` | columna tautológica de `V_i` en un `WiGame` | `class` con `payload={gate, symbols}`: la coordenada no discrimina y se propone como compuerta `C_k` |
+| `D_i` | pares de sujetos indistinguibles en `V_i` | dimensión discriminativa propuesta por la jerarquía de `sia` sobre `sujetos × coordenadas`; si ninguna coordenada los separa, queda `unresolved` |
 
-Más adelante, AROMA añade `projection` (concepto de un mundo → concepto de otro).
+Los hechos que declara un contexto (`pipeline/decompose.py`) no son candidatos: son
+**`observed`** de ese juego de lenguaje, con `Prov(f)` = span de la oración. La ambigüedad de un
+signo entre contextos no es un error: es el estado normal y lo resuelve la convergencia.
 
 ## 3. Flujo
 
 ```
-sia/report ──► cola (proposed) ──► LLM: redacta (R a b), resuelve sinónimos,      ──► humano: confirm / reject / edit
-                                        sugiere WiGame destino, adjunta cita           │
-                                                                                       ▼
-                                                              (promote <candidate-id> [tier])  →  Fact.evidence.curation=confirmed, truth=TRUE
+texto ─► chunks (contextos) ─► declaraciones por contexto (heurística o LLM) ─► WiGames (observed)
+                                              │
+                        converge_in_batches (lotes = mantenimiento de W_i)
+                                              ▼
+                        candidatos projection / equivalent / gate / D_i (proposed)
+                                              │
+                        LLM descompone y redacta la propuesta; el humano decide
+                                              ▼
+                        (promote …) ⇒ curation=confirmed; (reject …) ⇒ rejected y se conserva
 ```
 
-- **Estados** en `Fact.evidence.curation`: `proposed | confirmed | rejected`. Un `rejected` se conserva (evita re-proponer lo mismo).
-- **Umbrales por `φ`** (calibrables): `φ ≥ 0.99` → puede auto-confirmarse si además supera `n_min` de soporte; `0.85 ≤ φ < 0.99` → cola; `φ < 0.85` → no se propone.
-- **El LLM no decide verdad.** Recibe el candidato, las oraciones citadas por `Prov(f)` y el vocabulario del `WiGame`; devuelve la S-expression canónica, la cita elegida y un comentario. Su salida es un `proposed` mejor formado, nunca un `confirmed`. Implementado en `pipeline/curate.py`: `propose(system, candidate_id, backend, documents)` escribe la propuesta en `evidence.llm` y no toca `curation`; backends `PiBackend` (`pi -p --no-tools`, deepseek-flash) y `FakeBackend` (tests); CLI `python -m pipeline.curate <corpus> --wigame <id> --backend pi|fake`; en el REPL, `sugiere <id>`.
-- **El humano ve** la regla, el `φ`, las oraciones fuente y la S-expression, y responde con una tecla. Todo queda en `evidence`.
+- **Estados** en `Fact.evidence.curation`: `proposed | confirmed | rejected`. Un `rejected` se
+  conserva (evita re-proponer lo mismo).
+- **Regla de promoción automática**: `equivalent` si `φ ≥ 0.95` en ambos sentidos, `projection` si
+  `φ ≥ 0.95` en un sentido, con ≥ 2 configuraciones informativas compartidas y ≥ 2 contextos
+  (intra-contexto: basta ≥ 2 configuraciones). Es la única vía automática; todo lo demás espera
+  curado.
+- **El LLM no decide verdad.** Actúa como **descompositor de superficie** (`pipeline/decompose.py`,
+  `pipeline/decompose_batch.py`): una llamada por chunk, con los signos locales y las familias de
+  relación; no resuelve pronombres, no inventa símbolos ni relaciones. Sobre los candidatos
+  (`pipeline/curate.py`) redacta la S-expression, elige la cita y comenta; su salida es un
+  `proposed` mejor formado.
+- **El humano ve** la regla, el `φ`, las configuraciones compartidas, las oraciones fuente y la
+  S-expression, y responde con una tecla (`aprueba` / `rechaza`).
 
 ## 4. Casos que exigen curado obligatorio
 
-- **`unsinnig`:** la ausencia de co-ocurrencia en el corpus no demuestra absurdo. Solo un humano marca `S_i = unsinnig`.
-- **Proyecciones entre mundos:** `RoutingProjection` es `entidad × entidad` (`matrix/src/operational_model/routing/routing_projection.py:13`); CHIC/AROMA entregan `concepto × concepto`. El paso a instancias se propone (LLM) y se confirma (humano).
-- **Símbolos nuevos que colisionan** con `signs` ya registrados en `LogicalSystem.names`: el LLM propone `equivalent` o un `symbol_id` distinto; el humano decide.
+- **`unsinnig`:** la ausencia de co-ocurrencia en el corpus no demuestra absurdo. Solo un humano
+  marca `S_i = unsinnig` (el silencio no es absurdo).
+- **Proyecciones entre mundos:** entre `WiGame`s son entidad × entidad
+  (`matrix/src/operational_model/routing/routing_projection.py:13`); AROMA o el LLM entregan
+  concepto × concepto. El paso a instancias se propone y se confirma.
+- **Símbolos nuevos que colisionan** con `signs` ya registrados: el LLM propone `equivalent` o un
+  `symbol_id` distinto; el humano decide.
 
 ## 5. Interfaz
 
-- `(return candidates [wigame:<id>] [tier:<t>] [min-phi:<x>])` — lista la cola.
-- `(promote <candidate-id> [tier:<observed|confirmed>])` — confirma: escribe `V_i`/`S_i`/`I` según el tipo y actualiza `evidence`.
+- `(return candidates [wigame:<id>] [tier:<t>] [curation:<c>] [min-phi:<x>])` — lista la cola.
+- `(promote <candidate-id> [tier:<observed|confirmed>])` — confirma: escribe `V_i`/`S_i`/`I` o
+  rellena la proyección según el tipo y anota `history`.
 - `(reject <candidate-id> "<motivo>")`.
-- `(why (R a b))` — devuelve la cadena de implicaciones que la sostiene y las citas de cada premisa (ver [shrdlu.md](shrdlu.md)).
+- `(why …)`, `(ask …)`, `(retract …)` — ver [runtime_api.md](runtime_api.md).
 
-Estos verbos se añaden al runtime existente (ver [runtime_api.md](runtime_api.md)).
+## 6. Resultados del curado automático
+
+En `corpus/physicists` (régimen `pairs`, ver [convergence.md](convergence.md) §7): el descompositor
+LLM propone 11 242 declaraciones, la convergencia promueve 45 candidatos y deja 296 `proposed`; la
+basura plantada (50 hechos falsos) queda aislada en el 100 % de los casos frente al 96 % de los
+hechos reales. El cuello de botella es la capa de declaraciones (cantidad y lexicalización de los
+objetos), no la promoción.

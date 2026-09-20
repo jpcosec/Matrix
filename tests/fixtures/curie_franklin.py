@@ -37,7 +37,7 @@ FRANKLIN_CORE = (
     "{subject} was born in London.",
     "{subject} was a chemist.",
     "{subject} studied at King's College.",
-    "{subject} worked at Cambridge.",
+    "{subject} worked at the Cavendish.",
     "{subject} discovered the double helix.",
     "{subject} was a crystallographer.",
     "{subject} discovered the helix structure.",

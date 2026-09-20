@@ -5,7 +5,7 @@ Un motor de conocimiento que **puebla** mundos lógicos desde texto crudo (chunk
 - [SPEC.md](SPEC.md) — visión, decisiones cerradas, alcance del MVP
 - [convergence.md](convergence.md) — **diseño corregido del puente**: símbolos por contexto, taxonomía de `W_i`, rol exacto de CHIC (prevalece sobre populator/chic/grounding donde contradiga)
 - [matrix.md](matrix.md) — el motor booleano: qué se usa, qué se cambia, qué se ignora
-- [populator.md](populator.md) — del texto a la matriz individuos × conceptos (Korel, fases 1-3)
+- [populator.md](populator.md) — del texto a los chunks y sus signos locales (Korel, fases 1-3)
 - [chic.md](chic.md) — CHIC / SIA: medidas, jerarquía, grafo, contrato con Matrix (`sia/`)
 - [grounding.md](grounding.md) — curado: candidatos, LLM propone, humano confirma
 - [provenance.md](provenance.md) — `Fact.evidence`: citas, niveles, conflictos
@@ -14,4 +14,4 @@ Un motor de conocimiento que **puebla** mundos lógicos desde texto crudo (chunk
 - [sources.md](sources.md) — fuentes
 - [appendix_causality.md](appendix_causality.md) — causalidad (futuro)
 
-Código: `matrix/` (motor, subtree), `sia/` (CHIC), `populator/` (chunker), `pipeline/` (puente y CLI), `corpus/vegetales/` (corpus de prueba). Tests: `tests/` (raíz) y `matrix/tests/`. Uso: [README raíz](../README.md).
+Código: `matrix/` (motor, subtree), `sia/` (CHIC), `populator/` (chunker), `pipeline/` (descomposición, ingesta, convergencia y CLI), `corpus/vegetales/` (corpus de prueba). Tests: `tests/` (raíz) y `matrix/tests/`. Uso: [README raíz](../README.md).

@@ -9,8 +9,6 @@ _MATRIX_ROOT = Path(__file__).resolve().parents[1] / "matrix"
 if str(_MATRIX_ROOT) not in sys.path:
     sys.path.append(str(_MATRIX_ROOT))
 
-from .bridge import auto_confirm_candidates, corpus_to_sexprs
-
 
 def build_system(corpus_dir, wigame_id: str = "vegetales", **kwargs):
     """Builds the logical system, runtime and results for a corpus."""
@@ -29,8 +27,6 @@ def main(argv: list[str] | None = None) -> int:
 
 
 __all__ = [
-    "auto_confirm_candidates",
     "build_system",
-    "corpus_to_sexprs",
     "main",
 ]

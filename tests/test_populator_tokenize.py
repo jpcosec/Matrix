@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from populator.extract import Sentence
-from populator.phrases import longest_match
 from populator.tokenize import STOPWORDS_EN, STOPWORDS_ES, auto_stopwords, normalize, tokenize
 
 
@@ -19,16 +18,6 @@ def test_tokenize_spans_are_exact():
     for token in tokens:
         start, end = token.char_span
         assert sentence.text[start:end] == token.text
-
-
-def test_longest_match_drops_stopwords():
-    sentence = Sentence("doc", 0, (0, 19), "La raíz está verde.")
-    tokens = tokenize(sentence)
-    stopwords = {"la", "esta"}
-
-    concepts = [occurrence.concept for occurrence in longest_match(tokens, set(), stopwords)]
-
-    assert concepts == ["raiz", "verde"]
 
 
 def test_stopword_lists_are_available():

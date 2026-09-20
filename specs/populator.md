@@ -1,48 +1,53 @@
-# Populator — del texto a la matriz de individuos × conceptos
+# Populator — capa de signos
 
-Copia el front-end de [Korel](https://github.com/cognicore-io/korel) (Go) y descarta su back-end: Korel infiere con su propio motor simbólico (`is_a`, `related_to`) y un índice de recuperación; aquí eso lo hacen `sia/` y `matrix/`.
+El populator no construye ontología: construye la **capa de signos**. Su unidad es el
+**chunk** (contexto de declaración) y su producto son signos locales con offsets exactos.
+Todo lo que decide significado ocurre después, en `sia/` y en el runtime. Ver
+[convergence.md](convergence.md) §2.
 
-## 1. Qué se copia de Korel
+## 1. Chunks
 
-| Fase Korel | Se copia | Notas |
-|---|---|---|
-| 1 Extract | sí | lectura de `.md/.txt`, normalización Unicode, segmentación en **oraciones** |
-| 2 Tokenize + stopwords | sí | lista de stopwords por idioma con ajuste por frecuencia de dominio |
-| 3 Multi-token (*greedy longest-match*) + normalización léxica | sí | n-gramas frecuentes (`"machine learning"`) como un solo concepto; lematización ligera; fold de acentos/caso |
-| 4 Taxonomy tagging | no | la taxonomía la descubre CHIC |
-| 5 PMI con ε-smoothing | opcional | solo como prefiltro de candidatos a multi-token; no como medida final |
-| 6 Índice SQLite | no | |
-| 7-8 Retrieval y *cards* | no | la explicación la da `why` sobre `Prov(f)` |
+- `populator/extract.py::read_documents` lee `.md`/`.txt` (con `recursive=True` para árboles
+  completos) y `clean_markdown` borra frontmatter, bloques de código, URLs, rutas, encabezados,
+  listas y líneas `clave: valor` **conservando los offsets** (`Document.text` limpio,
+  `Document.raw_text` original).
+- `populator/contexts.py::chunk_documents(docs, unit="document"|"section")`:
+  - `document`: un chunk por documento; `ctx_id` = stem del archivo, `title` = primer `# ` (o `""`).
+  - `section`: el lead es `<stem>#0`, cada `## ` abre `<stem>#n` (las `### ` quedan dentro);
+    `Chunk.title` = título del artículo y, en las secciones, `"<título> — <encabezado>"`, para que
+    el nombre de la persona sea signo `name` en todas las secciones de su artículo.
+  - `Chunk.metadata["article"] = stem`.
+- Los encabezados se detectan en `Document.raw_text` (el limpiador conserva offsets) y el texto
+  del chunk sale del texto limpio.
 
-## 2. Salida (contrato con `sia/`)
+## 2. Signos locales
 
-```python
-@dataclass(frozen=True)
-class Corpus:
-    X: scipy.sparse.csr_matrix        # n individuos (oraciones) × p conceptos, binaria
-    concepts: list[str]               # nombre normalizado por columna
-    individuals: list[Individual]     # por fila: document_id, sentence_index, char_span
-    occurrences: list[Occurrence]     # (row, col, char_span) por aparición → Prov(f)
-    vocab_source: dict[str, list[str]]  # concepto → formas superficiales vistas
-```
+- `build_context(chunk, lang="en", max_n=3, min_count=1)` devuelve un `ContextIndex` con las
+  oraciones y los signos declarados en el chunk:
+  - `kind="name"`: ventanas de 1-6 tokens capitalizados que pueden contener conectores en
+    minúscula (`of`, `de`, `the`, `van`, `y`, …) y posesivos (`King's`, `'t`); nunca cruzan
+    puntuación (`, ; ( ) — –`) ni saltos de línea. El título del chunk también declara su nombre.
+  - `kind="pronoun"`: `she/he/it/they/her/him/his/hers/their/ella/él/ellos/ellas/su`, siempre como
+    pronombre, también al inicio de oración.
+  - `kind="term"`: unigramas de contenido (≥ 3 letras, no función) y n-gramas (≤ `max_n`) que se
+    repiten ≥ 2 veces en el chunk (`min_count`), con *longest match*.
+- Un símbolo es `(signo, contexto)`: `LocalSign.symbol_id = f"{norm}@{ctx_id}"`. La normalización
+  (`normalize`) solo reconoce repeticiones **dentro** del chunk: `Curie` y `curie` son el mismo
+  signo local, pero `she@Q7186` y `she@Q937` son símbolos distintos. **No hay plegado de alias ni
+  catálogo global de símbolos.**
+- Las ocurrencias (`Occurrence(sentence_index, span)`) son spans absolutos sobre `Document.text`,
+  que es lo que citan `Prov(f)` y `evidence`.
 
-- **Individuo = oración.** Mantiene `n` grande y las variables raras dentro del régimen `λ > 4`; párrafo como opción (`--unit paragraph`).
-- **`occurrences` es obligatorio**: sin `char_span` no hay `Prov(f)` y el hecho no puede citarse.
-- Filtros: soporte mínimo por concepto (`n_a ≥ 5`), longitud máxima de n-grama (3), stopwords, `max_concepts` (los de mayor frecuencia documental), `lang` (`es`/`en`).
-- **Limpieza de boilerplate** (`clean_markdown`, activa por defecto): frontmatter YAML, bloques y código inline, URLs y rutas, marcadores de encabezado/lista/tabla, líneas `clave: valor` y de copyright se sustituyen por espacios de igual longitud, así los spans de `Prov(f)` siguen apuntando al documento (`Document.text` limpio, `Document.raw_text` original). Tokens de un solo dígito o < 3 caracteres se descartan salvo dentro de una frase multi-token.
-- **Deduplicación de oraciones** (`dedupe=True`): las oraciones cuyo texto normalizado ya apareció se descartan; sin esto, una plantilla repetida (p. ej. 68 copias de la misma frase en un corpus de documentación) domina todas las reglas.
+## 3. Enrutar, no identificar
 
-## 3. Módulo
+`SignIndex(contexts)` da `contexts_of(norm)` y `occurrences_of(norm, ctx_id)`. Sirve para
+**recuperar y enrutar** («este signo aparece en estos chunks»), nunca para decidir identidad: la
+identidad entre contextos la propone la convergencia y la confirma el curado
+([convergence.md](convergence.md) §3).
 
-```
-populator/
-  extract.py     documentos → oraciones con offsets
-  tokenize.py    tokens, stopwords, normalización
-  phrases.py     candidatos multi-token (frecuencia + PMI opcional), longest-match
-  matrix.py      Corpus (X csr, concepts, individuals, occurrences)
-tests/test_populator_*.py
-```
+## 4. Qué ya no hay
 
-## 4. Corpus del MVP
-
-Recetas y descripciones de vegetales en español (dominio de `matrix/examples/vegetales*.yaml`, `colores.yaml`), ~200-500 oraciones. Los ejes de esos YAML sirven de vocabulario semilla para comprobar que el chunker recupera `lechuga, espinaca, hoja, raíz, hoja.rugosa…` y que CHIC produce `lechuga → hoja`, `zanahoria → raíz`.
+La matriz índice `individuos × conceptos` (y su estructura asociada) se retiró: la unidad de
+trabajo es el chunk, y las matrices que se analizan las construyen `sia/` y
+`pipeline/convergence.py` a partir de las **declaraciones** de cada contexto
+(`pipeline/decompose.py`), no de los signos sueltos.

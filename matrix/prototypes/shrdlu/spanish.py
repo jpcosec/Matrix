@@ -14,6 +14,7 @@ if TYPE_CHECKING:
     from .dialog_state import DialogState
 
 VERBS = "implica|tiene|es|lleva"
+VERB_RELATIONS = {"tiene": "has_property", "es": "instance", "lleva": "part_of", "implica": "has_property"}
 _ARTICLE = r"(?:la|el|los|las|un|una|unos|unas)\s+"
 _CHECK_RE = re.compile(rf"^(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.+)$")
 _WHY_RE = re.compile(rf"^(?:por que|porque)\s+(?:{_ARTICLE})?(.+?)\s+({VERBS})\s+(?:{_ARTICLE})?(.*)$")
@@ -58,7 +59,8 @@ def parse_es(text: str, dialog: "DialogState") -> str | Clarification:
     if norm in {"candidatos", "show candidatos"}:
         return f"(return candidates {_focus(dialog)} curation:proposed)"
     if norm == "show wigame":
-        return f"(return facts {_focus(dialog)})"
+        # The focus may be a context (not a WiGame): list every fact group then.
+        return f"(return facts {_focus(dialog)})" if dialog.system is None or _focus(dialog) in dialog.system.wigames else "(return facts)"
 
     match = _PROMOTE_RE.fullmatch(norm)
     if match:
@@ -73,7 +75,23 @@ def parse_es(text: str, dialog: "DialogState") -> str | Clarification:
 
     match = _WHY_RE.fullmatch(norm)
     if match:
-        return _build("why", match.group(1), match.group(3) or dialog.last_object, dialog)
+        return _build(
+            "why",
+            match.group(1),
+            match.group(3) or dialog.last_object,
+            dialog,
+            VERB_RELATIONS.get(match.group(2), "has_property"),
+        )
+
+    if norm in {"por que", "porque", "why"} and dialog.last_subject and dialog.last_object:
+        # Bare ``why`` asks about the last resolved turn (SHRDLU's ``WHY``).
+        return _build(
+            "why",
+            dialog.last_subject,
+            dialog.last_object,
+            dialog,
+            dialog.last_relation or "has_property",
+        )
 
     match = _DEFINE_AND_RE.fullmatch(norm)
     if match:
@@ -94,7 +112,13 @@ def parse_es(text: str, dialog: "DialogState") -> str | Clarification:
 
     match = _RETRACT_RE.fullmatch(norm)
     if match:
-        return _build("retract", match.group(1), match.group(3), dialog)
+        return _build(
+            "retract",
+            match.group(1),
+            match.group(3),
+            dialog,
+            VERB_RELATIONS.get(match.group(2), "has_property"),
+        )
 
     match = _ELLIPSIS_RE.fullmatch(norm)
     if match and dialog.last_subject is not None:
@@ -104,7 +128,13 @@ def parse_es(text: str, dialog: "DialogState") -> str | Clarification:
 
     match = _CHECK_RE.fullmatch(norm)
     if match:
-        return _build("check" if question else "assert", match.group(1), match.group(3), dialog)
+        return _build(
+            "check" if question else "assert",
+            match.group(1),
+            match.group(3),
+            dialog,
+            VERB_RELATIONS.get(match.group(2), "has_property"),
+        )
 
     raise ValueError(f"no entiendo: {text!r}")
 
@@ -113,7 +143,13 @@ def _focus(dialog: "DialogState") -> str:
     return dialog.focus_wigame or "wigame:vegetales"
 
 
-def _build(verb: str, subject_sign: str, object_sign: str, dialog: "DialogState") -> str | Clarification:
+def _build(
+    verb: str,
+    subject_sign: str,
+    object_sign: str,
+    dialog: "DialogState",
+    relation: str = "has_property",
+) -> str | Clarification:
     subjects = _symbols_for(subject_sign, dialog)
     objects = _symbols_for(object_sign, dialog)
     unknown = [sign for sign, found in ((subject_sign, subjects), (object_sign, objects)) if not found]
@@ -122,10 +158,10 @@ def _build(verb: str, subject_sign: str, object_sign: str, dialog: "DialogState"
     combinations = list(product(subjects, objects))
     if len(combinations) == 1 and not unknown:
         subject, obj = combinations[0]
-        dialog.remember_turn(verb, subject, obj)
-        return _render(verb, subject, obj, dialog)
+        dialog.remember_turn(verb, subject, obj, relation)
+        return _render(verb, subject, obj, dialog, relation)
     labels = [f"{first} + {second}" for first, second in combinations]
-    options = [_render(verb, subject, obj, dialog) for subject, obj in combinations]
+    options = [_render(verb, subject, obj, dialog, relation) for subject, obj in combinations]
     return Clarification(question=_question(subject_sign, object_sign, labels, unknown), options=options)
 
 
@@ -141,14 +177,16 @@ def _build_define(
     combinations = list(product(subjects, firsts, seconds))
     if len(combinations) == 1:
         subject, first, second = combinations[0]
-        return f"(define (if (implies {subject} {first}) (implies {subject} {second})))"
+        return _render_define(subject, first, second)
     labels = [f"{subject} + {first} + {second}" for subject, first, second in combinations]
     question = _question(subject_sign, second_object, labels, [])
-    options = [
-        f"(define (if (implies {subject} {first}) (implies {subject} {second})))"
-        for subject, first, second in combinations
-    ]
-    return Clarification(question=question, options=options)
+    return Clarification(
+        question=question, options=[_render_define(*combo) for combo in combinations]
+    )
+
+
+def _render_define(subject: str, first: str, second: str, relation: str = "has_property") -> str:
+    return f"(define (if ({relation} {subject} {first}) ({relation} {subject} {second})))"
 
 
 def _build_define_and(
@@ -174,22 +212,41 @@ def _build_define_and(
     )
 
 
-def _render_define_and(subject: str, first: str, second: str, third: str) -> str:
+def _render_define_and(
+    subject: str,
+    first: str,
+    second: str,
+    third: str,
+    relation: str = "has_property",
+) -> str:
     return (
-        f"(define (if (and (implies {subject} {first}) (implies {subject} {second})) "
-        f"(implies {subject} {third})))"
+        f"(define (if (and ({relation} {subject} {first}) ({relation} {subject} {second})) "
+        f"({relation} {subject} {third})))"
     )
 
 
-def _render(verb: str, subject: str, obj: str, dialog: "DialogState") -> str:
-    focus = _focus(dialog)
+def _render(
+    verb: str,
+    subject: str,
+    obj: str,
+    dialog: "DialogState",
+    relation: str = "has_property",
+) -> str:
+    """Renders one turn: questions go to `ask`, writes go to the subject's world."""
+
     if verb == "why":
-        return f"(why {focus} (implies {subject} {obj}))"
+        return f"(why {_world(dialog, subject, relation)} ({relation} {subject} {obj}))"
     if verb == "retract":
-        return f"(retract {focus} (implies {subject} {obj}))"
+        return f"(retract {_world(dialog, subject, relation)} ({relation} {subject} {obj}))"
     if verb == "assert":
-        return f"(assert {focus} (implies {subject} {obj}))"
-    return f"(check {focus} (implies {subject} {obj}))"
+        return f"(assert {_world(dialog, subject, relation)} ({relation} {subject} {obj}))"
+    return f"(ask {relation} {subject} {obj})"
+
+
+def _world(dialog: "DialogState", subject: str, relation: str) -> str:
+    """Returns the WiGame of a subject for one relation (`wigame:<ctx>:<R>`)."""
+
+    return f"wigame:{subject.split('@', 1)[-1]}:{relation}"
 
 
 def _question(subject_sign: str, object_sign: str, labels: list[str], unknown: list[str]) -> str:
@@ -214,6 +271,8 @@ def _sign_keys(sign: str) -> set[str]:
 def _symbols_for(sign: str, dialog: "DialogState") -> list[str]:
     """Resolves a sign against the registered symbols (spaces or underscores)."""
 
+    if dialog.system is not None and sign in dialog.system.symbols:
+        return [sign]
     keys = _sign_keys(sign)
     if dialog.system is None:
         return [normalize(sign).replace(" ", "_")]

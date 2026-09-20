@@ -20,6 +20,7 @@ class DialogState:
     last_subject: str | None = None
     last_object: str | None = None
     last_verb: str | None = None
+    last_relation: str | None = None
     pending: "Clarification | None" = None
     system: "LogicalSystem | None" = None
 
@@ -48,9 +49,10 @@ class DialogState:
         self.pending = None
         return sexpr
 
-    def remember_turn(self, verb: str, subject: str, obj: str) -> None:
-        """Stores the last resolved verb, subject and object for ellipsis."""
+    def remember_turn(self, verb: str, subject: str, obj: str, relation: str = "has_property") -> None:
+        """Stores the last resolved verb, subject, object and relation for ellipsis."""
 
         self.last_verb = verb
         self.last_subject = subject
         self.last_object = obj
+        self.last_relation = relation

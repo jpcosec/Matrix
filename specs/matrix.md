@@ -1,6 +1,6 @@
 # Matrix — el motor booleano
 
-`matrix/` es un subtree de `github.com/jpcosec/Matrix` (commit `38dcfbd`), traído con historial y arreglado para que su suite pase (119 tests). Se modifica libremente; su antiguo SSOT de átomos no es vinculante. Esta página dice qué se usa, qué se cambia y qué se ignora.
+`matrix/` es un subtree de `github.com/jpcosec/Matrix` (commit `38dcfbd`), traído con historial y arreglado para que su suite pase (179 tests). Se modifica libremente; su antiguo SSOT de átomos no es vinculante. Esta página dice qué se usa, qué se cambia y qué se ignora.
 
 ## 1. Lo que se usa tal cual
 
@@ -24,8 +24,8 @@
 | `assert` acepta `evidence`; `UNKNOWN` no alimenta `v` en `modus_ponens` | separar propuesto de confirmado | [provenance.md](provenance.md) |
 | Verbos nuevos `retract`, `promote`, `reject`, `why`, `define`, `return candidates` | curado y loop de interacción | [runtime_api.md](runtime_api.md) |
 | `DialogState` real (pila de referentes, foco, aclaración) | hoy solo resuelve `it/them/they` al último referente | [shrdlu.md](shrdlu.md) |
-| Ingesta masiva desde `sia/report` (símbolos, `li`, mundos, filas de `I`) | no existe ruta a nivel corpus; solo `ingest` uno a uno | [chic.md](chic.md) §5 |
-| Partición en `WiGame` hijos por clase de CHIC + `RoutingProjection` al padre | jerarquía → sub-mundos | [chic.md](chic.md) §5 |
+| Ingesta por contexto (`pipeline/ingest.py`): un `WiGame` por `(contexto, relación)` con sus símbolos, `li` y las declaraciones como hechos `observed` | la unidad es el juego de lenguaje, no la oración | [convergence.md](convergence.md) §4 |
+| Proyecciones y equivalencias pobladas por la convergencia (`pipeline/convergence.py`), no por SIA directo | la identidad entre contextos se propone por convergencia y se confirma por curado | [chic.md](chic.md) §5 |
 
 ## 3. Lo que se ignora
 
@@ -38,3 +38,8 @@
 - Forma canónica externa `(R a b)`; interna en campos separados (`relation_id, subject_symbol_id, object_symbol_id`).
 - Tests: `pytest` desde `matrix/`, imports `from src.operational_model...`, builders (`build_system()`) en vez de fixtures, un archivo por módulo.
 - Cuando `(R a b)` cabe en más de un `WiGame`, el runtime devuelve `status="ambiguous"` con `payload.candidates`; nunca elige en silencio.
+- **Nunca `p×p`**: ninguna estructura puede crecer con el cuadrado del número de símbolos del corpus
+  (tres OOM el 2026-09-20). La intensidad se calcula sobre la lista de pares candidatos
+  (`sia.contingency.contingency_pairs`), con índice invertido configuración → símbolos; la
+  convergencia entra por lotes (`converge_in_batches`). El límite de memoria por comando es de 4 GB
+  (`scripts/capped.sh`).

@@ -23,7 +23,7 @@ class Answer:
 
         if object_norm is None:
             return "true" if self.objects else "\u2205"
-        wanted = normalize(object_norm)
+        wanted = normalize(object_norm.split("@", 1)[0]) if "@" in object_norm else normalize(object_norm)
         if any(normalize(sign) == wanted for _, _, signs, _ in self.objects for sign in signs):
             return "true"
         return "false" if self.explicit_false else "\u2205"

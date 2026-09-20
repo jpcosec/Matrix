@@ -8,7 +8,11 @@ PMI mide co-ocurrencia **simétrica**. SIA mide la improbabilidad de los **contr
 
 ## 2. Entrada
 
-`X`: matriz binaria `n × p` (`scipy.sparse.csr_matrix`), **individuos** en filas y **variables** (conceptos) en columnas. La decide el [Populator](populator.md). Individuo = oración (no documento): mantiene `n` grande y las variables raras dentro del régimen de validez de la aproximación normal.
+`sia/` es genérico: recibe una matriz binaria `n × p` (`scipy.sparse.csr_matrix`) con **individuos**
+en filas y **variables** en columnas. Quién son los individuos y las variables lo decide el uso
+([convergence.md](convergence.md) §3): contextos × rasgos para la taxonomía, **configuraciones ×
+símbolos** para la convergencia, sujetos × coordenadas para el mantenimiento de `W_i`. El
+`Populator` solo aporta los chunks y sus signos locales.
 
 ## 3. Medidas (`sia/intensity.py`, `sia/cohesion.py`)
 
@@ -27,16 +31,21 @@ Valores de control (Tabla 1, p. 22): (a) `n=4000, n_a=600, n_b=800, n_{ab}=200` 
 - **Niveles significativos** (§7.2, pp. 29-30, criterio de Lerman): concordancia entre el preorden por cohesión y la partición amalgamados/separados; nivel significativo = máximo local del estadístico `s_k`.
 - **Grafo implicativo** (cap. 2 §5, p. 49): arcos `φ ≥ θ` para `θ ∈ {0.99, 0.95, 0.90, 0.85}`; no es transitivo por construcción (p. 34); clausura y reducción transitiva se calculan aparte.
 
-## 5. Salida y contrato con Matrix (`sia/report.py`)
+## 5. Salida y contrato con Matrix (`pipeline/convergence.py`)
 
-| Salida de `sia/` | Destino en Matrix | Estado inicial |
-|---|---|---|
-| Conceptos (columnas de `X`) | `(create symbol <id> <sign>)` | — |
-| Arcos `a → b` con `φ ≥ φ_r` | Filas de la Implication Matrix `I` (`kernel/rule_matrix.py`) como `(if a b)` | `tier=statistical`, `truth=UNKNOWN`, con `Prov(f)` |
-| Clase de un nivel significativo | Dimensión de partición `C_k` → `WiGame` hijo con los símbolos de la clase + `RoutingProjection` `WC` al padre | `tier=statistical` |
-| Pares que nunca co-ocurren con soporte suficiente (`n_a, n_b ≥ n_min`, `n_{ab} = 0`) | Candidatos a `unsinnig` en `S_i` | requieren curado: el silencio del corpus no es absurdo |
+CHIC no produce hechos: produce **convergencia**. Sus tres matrices (convergence.md §3) son:
 
-Todo pasa por la [cola de curado](grounding.md). Nada escribe `TRUE` en `V_i` ni `unsinnig` en `S_i` sin confirmación.
+| Matriz | Individuos × variables | Salida | Destino |
+|---|---|---|---|
+| Taxonomía de contextos | contextos × (signos y configuraciones) | clases de rasgos con niveles significativos, anidamiento y `nests` (`ctx_A → ctx_B`) | árbol `Context → subcontexto` y `ContextRoute`; nodos `ctx:class:<k>` |
+| Convergencia de símbolos | configuraciones × símbolos | pares `s → t` con `φ` (proyección dirigida; recíproca ⇒ equivalencia) | candidatos `projection` / `equivalent` con `stored` φ, `n_st` y contextos compartidos |
+| Mantenimiento de `W_i` | sujetos × coordenadas `(R, b)` | columnas tautológicas → compuertas `C_k`; pares indistinguibles → `D_i` | candidatos `class` (`gate`) y dimensión discriminativa |
+
+Reglas de promoción (convergence.md §3 y `pipeline/convergence.py`): `equivalent` si `φ ≥ 0.95` en
+ambos sentidos, `projection` si `φ ≥ 0.95` en un sentido, en ambos casos con ≥ 2 configuraciones
+informativas compartidas y ≥ 2 contextos (salvo el caso intra-contexto). Todo lo demás queda
+`proposed` en la [cola de curado](grounding.md). Los hechos que declara un contexto son
+`observed` de ese juego; CHIC nunca escribe `TRUE` en `V_i`.
 
 ## 6. Parámetros
 
@@ -50,7 +59,7 @@ Todo pasa por la [cola de curado](grounding.md). Nada escribe `TRUE` en `V_i` ni
 
 ## 7. Implementado además
 
-- **AROMA** (cap. 11, `sia/aroma.py`): dadas dos jerarquías `H = (C, ≤, T, γ)`, reglas `a → b` entre nodos significativas si `ϕ ≥ ϕ_r` y máximas frente a ancestros de `a` / descendientes de `b`. `pipeline/match.py` las convierte en candidatos `projection` entre dos `WiGame`. Nota estructural: ninguna regla hacia la raíz de `H₂` puede ser significativa (`n_b = n ⇒ ϕ = 0`).
+- **AROMA** (cap. 11, `sia/aroma.py`): dadas dos jerarquías `H = (C, ≤, T, γ)`, reglas `a → b` entre nodos significativas si `ϕ ≥ ϕ_r` y máximas frente a ancestros de `a` / descendientes de `b`. Es el mecanismo previsto para proponer proyecciones concepto × concepto en una fase posterior (las de instancia × instancia ya las propone `symbol_convergence`). Nota estructural: ninguna regla hacia la raíz de `H₂` puede ser significativa (`n_b = n ⇒ ϕ = 0`).
 - **Árbol de similitud** (cap. 2 §4, `sia/similarity.py`): índice de Lerman `s = Pr[Poisson(λ) < n_ab]`, aglomerativo no orientado; comparte `Level` y `significant_levels`.
 - **Niveles significativos vectorizados**: `O(m log m)` por nivel con `searchsorted` (antes `O(p³)` en Python: p=150 → 51 s; ahora p=800 → 0.5 s).
 

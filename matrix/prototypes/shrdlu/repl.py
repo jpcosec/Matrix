@@ -13,6 +13,8 @@ if str(_REPO_ROOT) not in sys.path:
 
 from src.operational_model import LogicalSystem, OperationResult, SExpressionRuntime, TruthValue
 
+from populator.tokenize import normalize
+
 from .dialog_state import DialogState
 from .spanish import Clarification, _symbols_for, fold, parse_es
 
@@ -35,6 +37,7 @@ class Repl:
     dialog: DialogState = field(default_factory=DialogState)
     backend: object | None = None
     documents: list = field(default_factory=list)
+    last_question: tuple[str, str, str] | None = None
 
     def step(self, line: str) -> str:
         """Processes one user line and returns the answer text."""
@@ -49,10 +52,15 @@ class Repl:
             return "Hasta luego."
         if norm.startswith("sugiere "):
             return self._suggest(norm.split(None, 1)[1])
+        if norm in {"why", "por que", "porque"} and self.last_question is not None:
+            return self._why_last()
         answer = self._answer_question(norm)
         if answer is not None:
             return answer
-        parsed = parse_es(text, self.dialog)
+        try:
+            parsed = parse_es(text, self.dialog)
+        except ValueError:
+            return f"No entiendo «{text}»."
         if isinstance(parsed, Clarification):
             self.dialog.pending = parsed
             return parsed.question
@@ -71,7 +79,21 @@ class Repl:
             print(self.step(line))
 
     def _run(self, sexpr: str) -> str:
+        if sexpr.startswith("(ask "):
+            return self._run_ask(sexpr)
         return self._verbalize(sexpr, self.runtime.evaluate(sexpr))
+
+    def _run_ask(self, sexpr: str) -> str:
+        """Answers a Spanish question through `pipeline.query.ask`."""
+
+        from pipeline.query import ask
+
+        parts = sexpr.strip("()").split()
+        if len(parts) != 4:
+            return "No entiendo la pregunta."
+        relation, subject, obj = parts[1], parts[2], parts[3]
+        answer = ask(self.system, relation, subject, obj)
+        return self._render_answer(answer, obj)
 
     def _answer_question(self, norm: str) -> str | None:
         """Answers simple English questions with `ask`, without any LLM."""
@@ -86,8 +108,30 @@ class Repl:
             if not subjects:
                 return f"No conozco «{match.group(1)}»."
             object_norm = match.group(2) if has_object else None
-            answer = ask(self.system, relation, subjects[0], object_norm)
+            # A sign maps to many symbols (one per context): prefer the one that
+            # actually answers the question, then the first by name.
+            subject = subjects[0]
+            answer = ask(self.system, relation, subject, object_norm)
+            for candidate in subjects[1:]:
+                attempt = ask(self.system, relation, candidate, object_norm)
+                if attempt.objects:
+                    subject, answer = candidate, attempt
+                    break
+            if object_norm:
+                context = subject.split("@", 1)[-1]
+                obj = answer.objects[0][0] if answer.objects else f"{_as_symbol(object_norm)}@{context}"
+                self.last_question = (relation, subject, obj)
+                if answer.objects:
+                    # Enables the Spanish bare ``¿por qué?`` over the last turn.
+                    self.dialog.remember_turn("why", subject, obj, relation)
             return self._render_answer(answer, object_norm)
+
+    def _why_last(self) -> str:
+        """Explains the last answered question (SHRDLU's ``WHY``)."""
+
+        relation, subject, obj = self.last_question  # type: ignore[misc]
+        context = subject.split("@", 1)[-1]
+        return self._run(f"(why wigame:{context}:{relation} ({relation} {subject} {obj}))")
         return None
 
     def _render_answer(self, answer, object_norm: str | None) -> str:
@@ -177,13 +221,26 @@ class Repl:
         return "\n".join(lines) or "Sin hechos."
 
 
+def _as_symbol(sign: str) -> str:
+    """Normalizes a surface sign into a symbol name (without its context)."""
+
+    return normalize(sign.split("@", 1)[0]).replace(" ", "_")
+
+
 def _citations(prov: list[dict]) -> str:
     if not prov:
         return "sin cita"
     return ", ".join(f"{entry['document_id']}:{entry['span'][0]}-{entry['span'][1]}" for entry in prov)
 
 
-def build_repl(corpus_dir: str | Path = "corpus/vegetales", wigame_id: str = "vegetales") -> Repl:
+def build_repl(
+    corpus_dir: str | Path = "corpus/vegetales",
+    wigame_id: str = "vegetales",
+    *,
+    unit: str = "document",
+    lang: str | None = None,
+    limit: int | None = None,
+) -> Repl:
     """Builds a REPL over the WiGame produced by the pipeline."""
 
     from pipeline.run import build_system
@@ -191,11 +248,10 @@ def build_repl(corpus_dir: str | Path = "corpus/vegetales", wigame_id: str = "ve
     location = Path(corpus_dir)
     if not location.exists() and (_REPO_ROOT / location).exists():
         location = _REPO_ROOT / location
-    from populator import build_corpus, read_documents
+    from populator import read_documents
 
     documents = read_documents(location)
-    corpus = build_corpus(documents)
-    system, runtime, _ = build_system(location, wigame_id, corpus=corpus, documents=documents)
+    system, runtime, _ = build_system(location, wigame_id, unit=unit, lang=lang, limit=limit)
     dialog = DialogState(focus_wigame=f"wigame:{wigame_id}", system=system)
     return Repl(system=system, runtime=runtime, dialog=dialog, documents=documents)
 
@@ -203,9 +259,20 @@ def build_repl(corpus_dir: str | Path = "corpus/vegetales", wigame_id: str = "ve
 def main(argv: list[str] | None = None) -> int:
     """Runs the Spanish REPL from the command line."""
 
-    args = list(sys.argv[1:] if argv is None else argv)
-    corpus_dir = args[0] if args else "corpus/vegetales"
-    repl = build_repl(corpus_dir)
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Conversational REPL over a corpus world.")
+    parser.add_argument("corpus_dir", nargs="?", default="corpus/vegetales")
+    parser.add_argument("--wigame", default=None, help="world id (default: corpus directory name)")
+    parser.add_argument("--unit", choices=["document", "section"], default="document")
+    parser.add_argument("--lang", choices=["es", "en"], default=None)
+    parser.add_argument("--limit", type=int, default=None)
+    args = parser.parse_args(argv)
+
+    wigame_id = args.wigame or Path(args.corpus_dir).resolve().name
+    repl = build_repl(
+        args.corpus_dir, wigame_id, unit=args.unit, lang=args.lang, limit=args.limit
+    )
     print("REPL SHRDLU (escribe `salir` para terminar)")
     repl.run()
     return 0

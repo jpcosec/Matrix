@@ -18,6 +18,13 @@ Los PDF no se versionan (`.gitignore`); se citan por ruta local y página impres
 ## Interacción
 - **Winograd, T.** *Understanding Natural Language* (1972). Fuente MACLISP del SHRDLU de consola: `sources/shrdlu/consoleshrdlu/` (módulos `NEWANS`, `SYSCOM`, `DICTIO`, `PLNR`, `SMUTIL`, `SMSPEC`, `HELP`). Ver [shrdlu.md](shrdlu.md).
 
+## Corpus de evaluación
+- **Simple English Wikipedia** — extractos vía `https://simple.wikipedia.org/w/api.php` (`prop=extracts`), **CC BY-SA 4.0**. 89 artículos de físicos nacidos 1850-1900 en `corpus/physicists/articles/`.
+- **Wikipedia inglesa** — artículos completos vía `https://en.wikipedia.org/w/api.php`, **CC BY-SA 4.0**; `corpus/physicists/en/` (secciones `== H ==` → `## H`, recorte a 40 000 chars).
+- **Wikidata** — hechos de referencia vía `https://query.wikidata.org/sparql`, **CC0 1.0** (`corpus/physicists/facts.jsonl`, `people.csv`).
+- **GAP coreference dataset** — **Apache 2.0** (`corpus/physicists/gap-validation.tsv`, `github.com/google-research-datasets/gap-coreference`).
+- `corpus/vegetales/` — corpus sintético propio (6 documentos, vocabulario semilla del paper).
+
 ## Contexto
 - **Ji et al.** *Probing the Symbolic Logical Reasoning Ability of Large Language Models* (L3M), Rutgers. Local: `sources/3729238.pdf`. Referencia sobre límites de razonamiento lógico en LLMs; **no** es una fuente de CHIC (una versión anterior de este doc lo citaba así por error).
 - **Wittgenstein, L.** *Tractatus Logico-Philosophicus* (1922): origen de `sinnvoll / sinnlos / unsinnig`.

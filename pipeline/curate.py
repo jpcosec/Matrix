@@ -82,18 +82,27 @@ class Proposal:
 
 
 def build_prompt(candidate: Any, sentences: list[str], vocabulary: list[str]) -> str:
-    """Builds the curation prompt asking for a single JSON object."""
+    """Builds the curation prompt asking for a single JSON object.
+
+    The queue of the convergence pipeline holds `projection` and `equivalent`
+    candidates between symbols of different contexts: the model is asked to draft
+    the S-expression, pick the supporting sentence and say whether the shared
+    configurations justify it. It never decides truth: only `aprueba` promotes.
+    """
 
     quotes = "\n".join(f"[{index}] {sentence.strip()}" for index, sentence in enumerate(sentences))
     vocab = ", ".join(vocabulary[:200])
+    stats = candidate.evidence.get("stats", {})
     return (
-        "Eres un curador de una base de conocimiento lógica. Recibes un candidato "
-        "estadístico y las oraciones que lo respaldan.\n"
+        "Eres un curador de una base de conocimiento lógica. Recibes un candidato de "
+        "convergencia entre contextos y las oraciones que lo respaldan.\n"
         f"Candidato: kind={candidate.kind} wigame={candidate.wigame_id} payload={json.dumps(candidate.payload, ensure_ascii=False)}\n"
+        f"Configuraciones compartidas y φ: {json.dumps(stats, ensure_ascii=False)}\n"
         f"Oraciones citadas:\n{quotes or '(sin oraciones)'}\n"
         f"Vocabulario del mundo: {vocab}\n\n"
         "Responde SOLO un objeto JSON con las claves "
-        '{"sexpr": "<S-expression canónica>", "prov_index": <índice de la oración citada>, '
+        '{"sexpr": "<S-expression canónica: (project wigame:<src> wigame:<dst> (a b)) o '
+        '(equivalent a b)>", "prov_index": <índice de la oración citada>, '
         '"keep": <true|false>, "comment": "<motivo breve>"}. '
         "No añadas texto fuera del JSON."
     )
@@ -131,7 +140,7 @@ def curate_queue(
     backend: Backend,
     documents: list,
     limit: int = 20,
-    only_kind: str = "fact",
+    only_kind: str | None = None,
 ) -> list[Proposal]:
     """Drafts proposals for the first `limit` queued candidates of one kind."""
 
@@ -141,13 +150,14 @@ def curate_queue(
     return proposals
 
 
-def select_candidates(system: "LogicalSystem", limit: int = 20, only_kind: str = "fact") -> list:
-    """Returns the queued candidates of one kind, highest entropic phi first."""
+def select_candidates(system: "LogicalSystem", limit: int = 20, only_kind: str | None = None) -> list:
+    """Returns the queued candidates, highest phi first, optionally of one kind."""
 
     candidates = [
         candidate
         for candidate in system.candidates.values()
-        if candidate.kind == only_kind and candidate.evidence.get("curation") == "proposed"
+        if (only_kind is None or candidate.kind == only_kind)
+        and candidate.evidence.get("curation") == "proposed"
     ]
     candidates.sort(
         key=lambda candidate: -float(candidate.evidence.get("stats", {}).get("phi_entropic", 0.0))
@@ -201,16 +211,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--backend", choices=["pi", "fake"], default="fake")
     parser.add_argument("--lang", choices=["es", "en"], default=None)
     parser.add_argument("--limit", type=int, default=10)
-    parser.add_argument("--kind", default="fact")
+    parser.add_argument("--kind", default=None, help="only curate this candidate kind")
     args = parser.parse_args(argv)
 
-    from populator import build_corpus
-
-    documents = read_documents(args.corpus_dir)
-    corpus = build_corpus(documents, lang=args.lang)
-    system, _, _ = build_system(
-        args.corpus_dir, args.wigame, lang=args.lang, corpus=corpus, documents=documents
-    )
+    system, _, _ = build_system(args.corpus_dir, args.wigame, lang=args.lang)
     backend: Backend = PiBackend() if args.backend == "pi" else FakeBackend(
         json.dumps({"sexpr": "", "prov_index": 0, "keep": True, "comment": "fake backend"})
     )

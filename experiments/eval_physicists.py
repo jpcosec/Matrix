@@ -168,6 +168,8 @@ def run_evaluation(
         "promoted": len(convergence.promoted),
         "proposed": len(convergence.proposed),
         "referents": len(set(convergence.referents.values())),
+        "isolated": len(convergence.isolated),
+        "variables": len(convergence.scores),
         "taxonomy_nodes": len(built_taxonomy.nodes) if built_taxonomy else None,
     }
     metrics["pronoun_convergence"] = _pronoun_metrics(system, convergence, contexts)
@@ -649,6 +651,10 @@ def _ask_examples(system: Any, facts: list[dict[str, Any]], count: int = 10) -> 
             proposition = fact.proposition
             if fact.truth.value != "true":
                 continue
+            subject = proposition.subject_symbol_id
+            signs = {sign for symbol in [subject] if symbol in system.symbols for sign in system.symbols[symbol].signs}
+            if not signs or not any(sign[:1].isupper() or sign.lower() in {"she", "he"} for sign in signs):
+                continue
             answer = ask(system, proposition.relation_id, proposition.subject_symbol_id, None)
             examples.append(
                 _example(
@@ -682,7 +688,7 @@ def _render_report(
     for symbol, referent in convergence.referents.items():
         groups[referent].add(symbol)
     promoted = sorted(
-        (entry for entry in convergence.promoted if entry["kind"] == "equivalent"),
+        (entry for entry in convergence.promoted if entry["kind"] in {"equivalent", "projection"}),
         key=lambda entry: entry["source"],
     )[:10]
     fallback = sorted(
@@ -720,8 +726,22 @@ def _render_report(
         for entry in fallback:
             lines.append(f"- propuesta: {entry['source']} ~ {entry['target']} (φ={entry['phi']:.4f})")
     lines.extend(["", "## Five isolated symbols", ""])
-    for symbol in convergence.isolated[:5]:
-        lines.append(f"- {symbol} (score={convergence.scores.get(symbol, 0.0):.3f})")
+    if convergence.isolated:
+        for symbol in convergence.isolated[:5]:
+            lines.append(f"- {symbol} (score={convergence.scores.get(symbol, 0.0):.3f})")
+    else:
+        lines.append("- (ninguno: todos los símbolos con soporte alcanzan φ >= 0.5)")
+    merges = metrics.get("false_merges")
+    if merges:
+        lines.extend(["", "## False merges", ""])
+        if merges["count"]:
+            for example in merges["examples"]:
+                lines.append(
+                    f"- {example['source']} ~ {example['target']} (φ={example['phi']:.4f}, "
+                    f"{example['stem_a']} y {example['stem_b']} no se mencionan)"
+                )
+        else:
+            lines.append("- (ninguna)")
     lines.extend(
         [
             "",

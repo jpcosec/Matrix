@@ -50,6 +50,8 @@ FUNCTION_WORDS_ES = {
 
 FUNCTION_WORDS = {"en": FUNCTION_WORDS_EN, "es": FUNCTION_WORDS_ES}
 
+PRONOUN_NORMS = {normalize(pronoun) for pronoun in PRONOUNS}
+
 MAX_NAME_TOKENS = 4
 MIN_TERM_LENGTH = 3
 
@@ -85,9 +87,9 @@ class LocalSign:
 
     @property
     def symbol_id(self) -> str:
-        """Returns the context-local symbol identifier."""
+        """Returns the context-local symbol identifier (single s-expression atom)."""
 
-        return f"{self.norm}@{self.ctx_id}"
+        return f"{self.norm.replace(' ', '_')}@{self.ctx_id}"
 
 
 @dataclass
@@ -280,6 +282,12 @@ def _title_signs(chunk: Chunk, function_words: set[str]) -> list[tuple[str, str]
     return windows
 
 
+def _is_pronoun(token: _Token) -> bool:
+    """Reports whether a token is a pronoun, capitalised at sentence start or not."""
+
+    return token.text.lower() in PRONOUNS or token.norm in PRONOUN_NORMS
+
+
 def _is_capitalized(token: _Token) -> bool:
     first = token.text[:1]
     return bool(first) and first.isupper() and first.isalpha()
@@ -301,7 +309,7 @@ def _collect_names(
     index = 0
     while index < len(row):
         token = row[index]
-        if not _is_capitalized(token) or token.norm in function_words:
+        if not _is_capitalized(token) or token.norm in function_words or _is_pronoun(token):
             index += 1
             continue
         qualified = token.norm in available or token.norm in title_norms
@@ -339,7 +347,7 @@ def _term_vocabulary(
         return (
             id(token) not in consumed
             and token.norm not in function_words
-            and token.text.lower() not in PRONOUNS
+            and not _is_pronoun(token)
             and len(token.norm) >= MIN_TERM_LENGTH
         )
 
@@ -374,7 +382,7 @@ def _collect_terms(
     index = 0
     while index < len(row):
         token = row[index]
-        if id(token) in consumed or token.norm in function_words or token.text.lower() in PRONOUNS:
+        if id(token) in consumed or token.norm in function_words or _is_pronoun(token):
             index += 1
             continue
         size = 0

@@ -21,6 +21,7 @@ from ..core.symbol import Symbol
 from ..core.thing import Thing
 from ..core.truth_value import TruthValue
 from ..kernel.formulas import IfFormula, RelationAtom, parse_formula
+from ..routing.context import Context
 from ..language.s_expressions import SExpression, parse_s_expression
 from .candidates import KINDS, promote_candidate, projection_for, register_candidate, reject_candidate
 from .deduction import deduce
@@ -90,6 +91,8 @@ class SExpressionRuntime:
             return self._create_li(args[1:])
         if kind == "wigame":
             return self._create_wigame(args[1:])
+        if kind == "context":
+            return self._create_context(args[1:])
         raise ValueError(f"unsupported create target: {kind}")
 
     def _eval_ingest(self, args: list[SExpression]) -> OperationResult:
@@ -260,6 +263,28 @@ class SExpressionRuntime:
         li_space = LiSpace(li_id=li_id, axis_a=axis_a, axis_b=axis_b, relation_id=relation_id)
         self.system.register_li(li_space)
         return OperationResult(status="accept", payload={"li_id": li_id, "action": "created"})
+
+    def _create_context(self, args: list[SExpression]) -> OperationResult:
+        if not args:
+            raise ValueError("create context expects `<ctx-id>` with an optional `parent:<ctx-id>`")
+        context_id = self._require_atom(args[0], "context id")
+        parent_id = None
+        for arg in args[1:]:
+            selector = self._parse_selector(arg)
+            if selector.kind != "parent":
+                raise ValueError("create context only accepts a `parent:` selector")
+            parent_id = selector.value
+        if context_id in self.system.contexts:
+            return OperationResult(status="accept", payload={"context_id": context_id, "action": "noop"})
+        if parent_id is not None:
+            parent = self.system.contexts.get(parent_id)
+            if parent is None:
+                return OperationResult(
+                    status="reject", sinn="unsinnig", reason="referenced parent context does not exist"
+                )
+            parent.route_to_context(context_id)
+        self.system.register_context(Context(context_id))
+        return OperationResult(status="accept", payload={"context_id": context_id, "action": "created"})
 
     def _create_wigame(self, args: list[SExpression]) -> OperationResult:
         if len(args) not in {2, 3}:

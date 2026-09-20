@@ -134,3 +134,14 @@ def test_physicists_signs():
         assert norm in context.signs, norm
     assert context.signs["marie curie"].kind == "name"
     assert context.signs["she"].kind == "pronoun"
+
+
+def test_sentence_initial_pronoun_is_still_a_pronoun():
+    documents = [Document("C.md", "# Ada Lovelace\nShe wrote notes. She studied engines.\n")]
+
+    context = build_context(chunk_documents(documents)[0], lang="en")
+
+    assert context.signs["she"].kind == "pronoun"
+    assert context.signs["she"].sign == "She"
+    assert len(context.signs["she"].occurrences) == 2
+    assert not [sign for sign in context.signs.values() if sign.norm == "she" and sign.kind == "name"]

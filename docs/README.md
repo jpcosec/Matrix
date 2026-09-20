@@ -10,6 +10,9 @@ This directory documents the stable architecture and engineering rules of Matrix
 - [Architecture](./architecture.md) - package layout and responsibility split of the active operational model
 - [Coding Standards](./coding_standards.md) - structural heuristics for files, classes, functions, and documentation
 - [Concepts](./concepts.md) - philosophical vocabulary and proposition-first terminology
+- [WiGame, Context and Disambiguation](./context_and_wigame.md) - why a WiGame is context-bound and how contexts disambiguate
+- [KB Fan-out Harness](./kb_fanout_harness.md) - proposal/review pipeline, context indexing, and stress measurements
+- [Operatoria: cómo leer una receta](./operatoria_recetas.md) - authored domain operatoria: relations, algebra, operations, typed errors
 - [Data Models](./data_models.md) - the primary structures exposed by the operational model
 - [Kernel Symbol Policy](./kernel_symbol_policy.md) - first stable distinction between kernel symbols and Wi-level relations
 - [Operations](./operations.md) - ingestion, local evaluation, routing, and reconstruction workflows

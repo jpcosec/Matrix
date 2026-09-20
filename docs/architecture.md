@@ -48,10 +48,10 @@ Search, routing, reconstruction, and serialization
 ## Responsibility split
 
 - `Thing`, `Relation`, `Proposition`, and `Fact` define the logical substrate.
-- `WiGame` is the local evaluative space where propositions can be queried and facts can be assessed.
-- `Context` is the routing layer that organizes how one local space can lead to another.
+- `WiGame` is the local evaluative space where propositions can be queried and facts can be assessed; it is (axes + relation) under a context, so its `context_id` is part of its identity. See [WiGame, Context and Disambiguation](./context_and_wigame.md).
+- `Context` is the routing tree that organizes how one local space can lead to another: it routes to `WiGame` leaves or to subcontexts, and refinement narrows admissibility.
 - `SearchVector` expresses what is being requested inside a `WiGame`.
-- `RoutingProjection` expresses how subjects in one game project into another.
+- `RoutingProjection` expresses how subjects in one game project into another; non-empty links encode shared canonical referents across contexts.
 
 ## Evaluation model
 

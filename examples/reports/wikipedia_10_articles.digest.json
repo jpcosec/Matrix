@@ -1,0 +1,244 @@
+{
+  "name": "wikipedia_10_articles",
+  "generated_at": "2026-09-20T05:26:54+00:00",
+  "kb_root": "/tmp/kbbig",
+  "source": {},
+  "totals": {
+    "facts": 693,
+    "wigames": 102,
+    "contexts": 10,
+    "projections": 50
+  },
+  "ingest": {
+    "candidates": 732,
+    "unparseable": 1,
+    "accepted": 715,
+    "proposals": 699,
+    "pending": 699,
+    "rejected": 18,
+    "conflicts": 0,
+    "contexts": [
+      "albert_einstein",
+      "francis_crick",
+      "irene_joliot_curie",
+      "james_watson",
+      "lise_meitner",
+      "marie_curie",
+      "niels_bohr",
+      "otto_hahn",
+      "pierre_curie",
+      "rosalind_franklin"
+    ],
+    "relations": {
+      "albert_einstein:causa": 9,
+      "albert_einstein:descubierto_por": 10,
+      "albert_einstein:es": 31,
+      "albert_einstein:instancia_de": 1,
+      "albert_einstein:miembro_de": 11,
+      "albert_einstein:muere_en": 2,
+      "albert_einstein:nace_en": 4,
+      "albert_einstein:parte_de": 3,
+      "albert_einstein:premio": 6,
+      "albert_einstein:ubicado_en": 30,
+      "albert_einstein:usa": 3,
+      "francis_crick:causa": 1,
+      "francis_crick:descubierto_por": 5,
+      "francis_crick:es": 17,
+      "francis_crick:instancia_de": 1,
+      "francis_crick:miembro_de": 13,
+      "francis_crick:muere_en": 2,
+      "francis_crick:nace_en": 2,
+      "francis_crick:parte_de": 9,
+      "francis_crick:premio": 7,
+      "francis_crick:ubicado_en": 16,
+      "francis_crick:usa": 8,
+      "irene_joliot_curie:causa": 1,
+      "irene_joliot_curie:descubierto_por": 4,
+      "irene_joliot_curie:es": 7,
+      "irene_joliot_curie:miembro_de": 9,
+      "irene_joliot_curie:muere_en": 2,
+      "irene_joliot_curie:nace_en": 2,
+      "irene_joliot_curie:parte_de": 1,
+      "irene_joliot_curie:premio": 4,
+      "irene_joliot_curie:ubicado_en": 3,
+      "irene_joliot_curie:usa": 2,
+      "james_watson:causa": 1,
+      "james_watson:descubierto_por": 1,
+      "james_watson:es": 8,
+      "james_watson:miembro_de": 6,
+      "james_watson:muere_en": 3,
+      "james_watson:nace_en": 2,
+      "james_watson:parte_de": 2,
+      "james_watson:premio": 5,
+      "james_watson:ubicado_en": 9,
+      "james_watson:usa": 6,
+      "lise_meitner:causa": 3,
+      "lise_meitner:descubierto_por": 14,
+      "lise_meitner:es": 12,
+      "lise_meitner:instancia_de": 1,
+      "lise_meitner:miembro_de": 5,
+      "lise_meitner:muere_en": 1,
+      "lise_meitner:nace_en": 2,
+      "lise_meitner:parte_de": 4,
+      "lise_meitner:premio": 5,
+      "lise_meitner:ubicado_en": 18,
+      "lise_meitner:usa": 6,
+      "marie_curie:causa": 3,
+      "marie_curie:descubierto_por": 5,
+      "marie_curie:es": 16,
+      "marie_curie:miembro_de": 4,
+      "marie_curie:muere_en": 4,
+      "marie_curie:nace_en": 3,
+      "marie_curie:parte_de": 3,
+      "marie_curie:premio": 5,
+      "marie_curie:ubicado_en": 21,
+      "marie_curie:usa": 1,
+      "niels_bohr:causa": 4,
+      "niels_bohr:descubierto_por": 7,
+      "niels_bohr:es": 20,
+      "niels_bohr:instancia_de": 1,
+      "niels_bohr:miembro_de": 5,
+      "niels_bohr:muere_en": 3,
+      "niels_bohr:nace_en": 1,
+      "niels_bohr:parte_de": 2,
+      "niels_bohr:premio": 5,
+      "niels_bohr:ubicado_en": 8,
+      "niels_bohr:usa": 3,
+      "otto_hahn:causa": 2,
+      "otto_hahn:descubierto_por": 16,
+      "otto_hahn:es": 30,
+      "otto_hahn:instancia_de": 1,
+      "otto_hahn:miembro_de": 12,
+      "otto_hahn:muere_en": 3,
+      "otto_hahn:nace_en": 2,
+      "otto_hahn:parte_de": 4,
+      "otto_hahn:premio": 8,
+      "otto_hahn:ubicado_en": 19,
+      "otto_hahn:usa": 4,
+      "pierre_curie:descubierto_por": 4,
+      "pierre_curie:es": 3,
+      "pierre_curie:muere_en": 3,
+      "pierre_curie:nace_en": 1,
+      "pierre_curie:premio": 5,
+      "pierre_curie:ubicado_en": 2,
+      "pierre_curie:usa": 3,
+      "rosalind_franklin:causa": 6,
+      "rosalind_franklin:descubierto_por": 10,
+      "rosalind_franklin:es": 31,
+      "rosalind_franklin:miembro_de": 14,
+      "rosalind_franklin:muere_en": 1,
+      "rosalind_franklin:nace_en": 1,
+      "rosalind_franklin:parte_de": 5,
+      "rosalind_franklin:premio": 10,
+      "rosalind_franklin:ubicado_en": 30,
+      "rosalind_franklin:usa": 5
+    }
+  },
+  "review": {
+    "pending": 0,
+    "approved": 699,
+    "rejected": 0
+  },
+  "contexts": {
+    "count": 11,
+    "root": "ctx:kb",
+    "list": [
+      "ctx:albert_einstein",
+      "ctx:francis_crick",
+      "ctx:irene_joliot_curie",
+      "ctx:james_watson",
+      "ctx:kb",
+      "ctx:lise_meitner",
+      "ctx:marie_curie",
+      "ctx:niels_bohr",
+      "ctx:otto_hahn",
+      "ctx:pierre_curie"
+    ]
+  },
+  "algebra": null,
+  "derived_facts": null,
+  "aliases_applied": 31,
+  "projections": {
+    "count": 50,
+    "truncated": false,
+    "top": [
+      {
+        "id": "proj:irene_joliot_curie:marie_curie:descubierto_por",
+        "shared_subjects": [
+          "polonium",
+          "radium"
+        ]
+      },
+      {
+        "id": "proj:irene_joliot_curie:pierre_curie:descubierto_por",
+        "shared_subjects": [
+          "polonium",
+          "radium"
+        ]
+      },
+      {
+        "id": "proj:lise_meitner:otto_hahn:descubierto_por",
+        "shared_subjects": [
+          "nuclear_isomerism",
+          "protactinium",
+          "radioactive_recoil"
+        ]
+      },
+      {
+        "id": "proj:marie_curie:irene_joliot_curie:descubierto_por",
+        "shared_subjects": [
+          "polonium",
+          "radium"
+        ]
+      },
+      {
+        "id": "proj:marie_curie:pierre_curie:descubierto_por",
+        "shared_subjects": [
+          "polonium",
+          "radium"
+        ]
+      },
+      {
+        "id": "proj:niels_bohr:otto_hahn:descubierto_por",
+        "shared_subjects": [
+          "nuclear_fission"
+        ]
+      },
+      {
+        "id": "proj:otto_hahn:lise_meitner:descubierto_por",
+        "shared_subjects": [
+          "nuclear_isomerism",
+          "protactinium",
+          "radioactive_recoil"
+        ]
+      },
+      {
+        "id": "proj:otto_hahn:niels_bohr:descubierto_por",
+        "shared_subjects": [
+          "nuclear_fission"
+        ]
+      },
+      {
+        "id": "proj:pierre_curie:irene_joliot_curie:descubierto_por",
+        "shared_subjects": [
+          "polonium",
+          "radium"
+        ]
+      },
+      {
+        "id": "proj:pierre_curie:marie_curie:descubierto_por",
+        "shared_subjects": [
+          "polonium",
+          "radium"
+        ]
+      }
+    ]
+  },
+  "shared_symbols": {},
+  "artifact_sha256": {
+    "manifest": "cd0ad5c76bfa097e0786befd3c317d85ff012e07d48f23f7c378ea151c987c35",
+    "contexts": "7fa48b33411f026232ea6b1926b51197fda1f88bdc76d8561266172cce5c398c",
+    "operatoria": null,
+    "shared": null
+  }
+}

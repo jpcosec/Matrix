@@ -1,0 +1,255 @@
+{
+  "name": "machine_recipes",
+  "generated_at": "2026-09-20T05:30:00+00:00",
+  "kb_root": "/tmp/kb_final",
+  "source": {
+    "machines_source.yaml": {
+      "kind": "machine-specs",
+      "operatoria_context": "operatoria",
+      "operatoria_facts": 20,
+      "machines": [
+        {
+          "context": "ascensor",
+          "domain": "fsm",
+          "kind": "fsm",
+          "title": "Ascensor",
+          "initial": "piso_1",
+          "facts": 6
+        },
+        {
+          "context": "bechamel",
+          "domain": "recetas",
+          "kind": "recipe",
+          "title": "Salsa bechamel",
+          "initial": "derretir",
+          "facts": 13
+        },
+        {
+          "context": "guiso",
+          "domain": "recetas",
+          "kind": "recipe",
+          "title": "Guiso de carne",
+          "initial": "dorar",
+          "facts": 12
+        },
+        {
+          "context": "ragout",
+          "domain": "recetas",
+          "kind": "recipe",
+          "title": "Ragout de champiñones",
+          "initial": "picar",
+          "facts": 14
+        },
+        {
+          "context": "trafico",
+          "domain": "fsm",
+          "kind": "fsm",
+          "title": "Semáforo",
+          "initial": "rojo",
+          "facts": 6
+        }
+      ],
+      "domains": [
+        "fsm",
+        "recetas"
+      ]
+    }
+  },
+  "totals": {
+    "facts": 103,
+    "wigames": 20,
+    "contexts": 6,
+    "projections": 8
+  },
+  "ingest": {
+    "candidates": 71,
+    "unparseable": 0,
+    "accepted": 71,
+    "proposals": 69,
+    "pending": 69,
+    "rejected": 0,
+    "conflicts": 0,
+    "contexts": [
+      "ascensor",
+      "bechamel",
+      "guiso",
+      "operatoria",
+      "ragout",
+      "trafico"
+    ],
+    "relations": {
+      "ascensor:precede": 4,
+      "ascensor:requiere": 2,
+      "bechamel:precede": 4,
+      "bechamel:produce": 1,
+      "bechamel:requiere": 2,
+      "bechamel:sustituye_a": 2,
+      "bechamel:usa": 4,
+      "guiso:precede": 5,
+      "guiso:produce": 1,
+      "guiso:requiere": 2,
+      "guiso:usa": 4,
+      "operatoria:aplica": 7,
+      "operatoria:declara": 6,
+      "operatoria:tipifica": 5,
+      "ragout:precede": 5,
+      "ragout:produce": 1,
+      "ragout:requiere": 3,
+      "ragout:usa": 5,
+      "trafico:precede": 4,
+      "trafico:produce": 2
+    }
+  },
+  "review": {
+    "pending": 0,
+    "approved": 69,
+    "rejected": 0
+  },
+  "contexts": {
+    "count": 7,
+    "root": "ctx:kb",
+    "list": [
+      "ctx:ascensor",
+      "ctx:bechamel",
+      "ctx:guiso",
+      "ctx:kb",
+      "ctx:operatoria",
+      "ctx:ragout",
+      "ctx:trafico"
+    ]
+  },
+  "algebra": {
+    "paralelo_con": {
+      "transitive": false,
+      "commutative": true
+    },
+    "precede": {
+      "transitive": true,
+      "commutative": false
+    },
+    "sustituye_a": {
+      "transitive": true,
+      "commutative": false
+    }
+  },
+  "derived_facts": 34,
+  "aliases_applied": 0,
+  "projections": {
+    "count": 8,
+    "truncated": false,
+    "top": [
+      {
+        "id": "proj:guiso:ragout:precede",
+        "shared_subjects": [
+          "agregar_caldo",
+          "cocinar_lento",
+          "desglasar"
+        ]
+      },
+      {
+        "id": "proj:ragout:guiso:precede",
+        "shared_subjects": [
+          "agregar_caldo",
+          "cocinar_lento",
+          "desglasar"
+        ]
+      },
+      {
+        "id": "proj:guiso:ragout:produce",
+        "shared_subjects": [
+          "cocinar_lento"
+        ]
+      },
+      {
+        "id": "proj:ragout:guiso:produce",
+        "shared_subjects": [
+          "cocinar_lento"
+        ]
+      },
+      {
+        "id": "proj:guiso:ragout:requiere",
+        "shared_subjects": [
+          "cocinar_lento",
+          "desglasar"
+        ]
+      },
+      {
+        "id": "proj:ragout:guiso:requiere",
+        "shared_subjects": [
+          "cocinar_lento",
+          "desglasar"
+        ]
+      },
+      {
+        "id": "proj:guiso:ragout:usa",
+        "shared_subjects": [
+          "agregar_caldo",
+          "desglasar"
+        ]
+      },
+      {
+        "id": "proj:ragout:guiso:usa",
+        "shared_subjects": [
+          "agregar_caldo",
+          "desglasar"
+        ]
+      }
+    ]
+  },
+  "shared_symbols": {
+    "precede": {
+      "subject": {
+        "agregar_caldo": [
+          "guiso",
+          "ragout"
+        ],
+        "cocinar_lento": [
+          "guiso",
+          "ragout"
+        ],
+        "desglasar": [
+          "guiso",
+          "ragout"
+        ]
+      }
+    },
+    "produce": {
+      "subject": {
+        "cocinar_lento": [
+          "guiso",
+          "ragout"
+        ]
+      }
+    },
+    "requiere": {
+      "subject": {
+        "cocinar_lento": [
+          "guiso",
+          "ragout"
+        ],
+        "desglasar": [
+          "guiso",
+          "ragout"
+        ]
+      }
+    },
+    "usa": {
+      "subject": {
+        "agregar_caldo": [
+          "guiso",
+          "ragout"
+        ],
+        "desglasar": [
+          "guiso",
+          "ragout"
+        ]
+      }
+    }
+  },
+  "artifact_sha256": {
+    "manifest": "a21770bda5222cbb4d34bf1cab06ee5916ae95f7cd706955bd38778ba65347ec",
+    "contexts": "ba0019c46fdb6f5a6c4b0492a573b19daf4129daa2c52c33e5e672ee9dac2033",
+    "operatoria": "74748867c47b5460ba19aa0f970f246917e6024141290b19f061b6a8ddd1a0f0",
+    "shared": "ba00f3eea8c3c664af86532e3a47b5a9ec64af1306ea7d2b6b6d19006579b0e1"
+  }
+}

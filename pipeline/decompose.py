@@ -33,6 +33,19 @@ FIELD_TERMS = {"physics", "chemistry", "radioactivity", "mathematics", "biology"
 Backend = Callable[[str], str]
 
 _ARTICLE_RE = re.compile(r"\s+(?:a|an|the|una|un|unos|unas|el|la|los|las)\s+", re.IGNORECASE)
+_NP_TOKEN_RE = re.compile(r"[^\W\d_]+|,")
+_NP_STOPWORDS = {
+    "to", "who", "whom", "whose", "that", "which",
+    "in", "on", "at", "of", "for", "with", "from", "by", "during", "after", "before",
+    "near", "under", "over", "into", "about", "against", "between", "through", "as", "than",
+}
+_VERB_SUFFIXES = ("ed", "ing", "s")
+_IRREGULAR_VERBS = {
+    "was", "is", "has", "had", "made", "won", "led", "found", "taught", "wrote", "built",
+    "left", "gave", "took", "ran", "held", "met", "did", "said", "saw", "knew", "became",
+    "began", "brought", "chose", "sent", "set", "spent", "stood", "told", "thought",
+    "understood", "spoke", "shared", "ve", "va", "da", "ha", "son",
+}
 _JSON_RE = re.compile(r"\[.*\]", re.DOTALL)
 
 _EN_VERBS: list[tuple[str, str]] = [
@@ -194,7 +207,8 @@ def _copula(
     article = _ARTICLE_RE.match(sentence.text, verb_end)
     phrase_offset = article.end() if article else verb_end
     phrase_start = sentence.char_span[0] + phrase_offset
-    phrase = [pair for pair in pairs if pair[1][0] >= phrase_start]
+    phrase_end = sentence.char_span[0] + _noun_phrase_end(sentence.text, phrase_offset)
+    phrase = [pair for pair in pairs if phrase_start <= pair[1][0] and pair[1][1] <= phrase_end]
     if not phrase:
         return []
     if lang == "es":
@@ -203,16 +217,54 @@ def _copula(
         return [_declaration(sentence_index, relation, subject, head)]
     if article is None:
         return [_declaration(sentence_index, "has_property", subject, phrase[0])]
-    head = phrase[-1]
+    units = _split_terms(phrase, sentence, subject[0].ctx_id)
+    head = units[-1]
     head_norm = normalize(head[0].sign)
     declarations = [_declaration(sentence_index, "instance", subject, head)]
-    for modifier in phrase[:-1]:
+    for modifier in units[:-1]:
         if not _is_modifier(modifier[0]):
             continue
         declarations.append(_declaration(sentence_index, "has_property", subject, modifier))
         if normalize(modifier[0].sign) in FIELD_TERMS and head_norm in {"physicist", "chemist"}:
             declarations.append(_declaration(sentence_index, "field", subject, modifier))
     return declarations
+
+
+def _split_terms(
+    phrase: list[tuple[LocalSign, tuple[int, int]]],
+    sentence,
+    ctx_id: str,
+) -> list[tuple[LocalSign, tuple[int, int]]]:
+    """Splits multi-token term signs so the head is the last nominal token."""
+
+    units: list[tuple[LocalSign, tuple[int, int]]] = []
+    base = sentence.char_span[0]
+    for sign, span in phrase:
+        if sign.kind != "term" or len(sign.norm.split()) <= 1:
+            units.append((sign, span))
+            continue
+        surface = sentence.text[span[0] - base : span[1] - base]
+        cursor = 0
+        for word in surface.split():
+            index = surface.index(word, cursor)
+            cursor = index + len(word)
+            units.append(
+                (
+                    LocalSign(sign=word, norm=normalize(word), ctx_id=ctx_id, kind="term"),
+                    (span[0] + index, span[0] + cursor),
+                )
+            )
+    return units
+
+
+def _noun_phrase_end(text: str, start: int) -> int:
+    """Returns where the copula noun phrase ends: preposition, `to`, relative or comma."""
+
+    for match in _NP_TOKEN_RE.finditer(text, start):
+        token = match.group(0)
+        if token == "," or token.lower() in _NP_STOPWORDS:
+            return match.start()
+    return len(text)
 
 
 def _is_modifier(sign: LocalSign) -> bool:
@@ -227,20 +279,36 @@ def _fallback(
     sentence,
     pairs: list[tuple[LocalSign, tuple[int, int]]],
 ) -> Declaration | None:
+    """Emits `rel:<lemma>` only for a plausible verb outside any name sign."""
+
     subject = pairs[0]
     skip = FUNCTION_WORDS["es"] | FUNCTION_WORDS["en"] | PRONOUNS
-    sign_norms = {sign.norm for sign in ctx.signs.values()}
+    name_spans = [(pair[1][0], pair[1][1]) for pair in pairs if pair[0].kind == "name"]
     for match in re.finditer(r"[^\W\d_]+", sentence.text):
-        if sentence.char_span[0] + match.end() <= subject[1][1]:
+        start = sentence.char_span[0] + match.start()
+        end = sentence.char_span[0] + match.end()
+        if end <= subject[1][1]:
             continue
         word = match.group(0).lower()
-        if word in skip or normalize(word) in sign_norms:
+        if word in skip:
             continue
-        obj = _sign_after(pairs, sentence.char_span[0] + match.end())
+        if any(name_start <= start and end <= name_end for name_start, name_end in name_spans):
+            continue
+        if not _is_plausible_verb(word):
+            continue
+        obj = _sign_after(pairs, end)
         if obj is None or obj[0] is subject[0]:
             continue
         return _declaration(sentence_index, f"rel:{_lemma(word)}", subject, obj)
     return None
+
+
+def _is_plausible_verb(word: str) -> bool:
+    """Accepts only verb-looking tokens: irregular list or an -ed/-s/-ing ending."""
+
+    if word in _IRREGULAR_VERBS:
+        return True
+    return len(word) > 3 and word.endswith(_VERB_SUFFIXES)
 
 
 def _lemma(word: str) -> str:

@@ -130,9 +130,13 @@ def test_physicists_signs():
     documents = read_documents(PHYSICISTS)
     context = build_context(chunk_documents(documents)[0], lang="en")
 
-    for norm in ("she", "marie curie", "curie", "nobel prize"):
+    # "Curie" never appears as a bare capitalised token outside a longer name
+    # window ("Pierre Curie", "Skłodowska-Curie"): no alias folding happens.
+    assert "curie" not in context.signs
+    for norm in ("she", "marie curie", "nobel prize"):
         assert norm in context.signs, norm
     assert context.signs["marie curie"].kind == "name"
+    assert context.signs["nobel prize"].kind == "name"
     assert context.signs["she"].kind == "pronoun"
 
 
@@ -168,3 +172,35 @@ def test_sentence_initial_pronoun_is_still_a_pronoun():
     assert context.signs["she"].sign == "She"
     assert len(context.signs["she"].occurrences) == 2
     assert not [sign for sign in context.signs.values() if sign.norm == "she" and sign.kind == "name"]
+
+
+def test_document_stem_is_never_a_sign():
+    document = Document("/tmp/Q7186.md", "Marie Curie was born in Warsaw. Curie worked in Paris.")
+
+    context = build_context(chunk_documents([document])[0], lang="en")
+
+    assert context.chunk.title == ""
+    assert "q7186" not in context.signs
+    assert all(not sign.norm.startswith("q7186") for sign in context.signs.values())
+
+
+def test_heading_is_the_only_title_source():
+    document = Document("plain.md", "# Marie Curie\n\nMarie Curie was born in Warsaw.")
+
+    context = build_context(chunk_documents([document])[0], lang="en")
+
+    assert context.chunk.title == "Marie Curie"
+    assert context.signs["marie curie"].kind == "name"
+
+
+def test_name_windows_do_not_cross_punctuation():
+    document = Document(
+        "d.md",
+        "# Apposition\n\nMarie Salomée Skłodowska, Madame Pierre Curie published papers.",
+    )
+
+    context = build_context(chunk_documents([document])[0], lang="en")
+
+    # `normalize` drops the non-decomposable "ł", hence "skodowska".
+    assert "marie salomee skodowska" in context.signs
+    assert "madame pierre curie" in context.signs

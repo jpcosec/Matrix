@@ -12,12 +12,11 @@ def test_split_sentences_has_exact_spans_and_count():
     doc = Document("test", text)
     sentences = split_sentences(doc)
 
-    assert len(sentences) == 5
+    assert len(sentences) == 4
     assert [sentence.text for sentence in sentences] == [
         "La sopa hierve.",
         "¿Está lista?",
-        "Sí;",
-        "ya casi.",
+        "Sí; ya casi.",
         "Falta la sal.",
     ]
     for sentence in sentences:
@@ -79,3 +78,17 @@ def test_read_documents_keeps_raw_text_and_cleaned_offsets(tmp_path):
     assert len(document.text) == len(document.raw_text)
     assert sentence.text == "La lechuga tiene hoja."
     assert document.text[sentence.char_span[0] : sentence.char_span[1]] == sentence.text
+
+
+def test_split_sentences_keeps_parenthetical_dates_and_semicolons():
+    text = (
+        "Marie Salomea Sklodowska (born 7 November 1867; died 4 July 1934) was a physicist. "
+        "She worked in Paris."
+    )
+    sentences = split_sentences(Document("test", text))
+
+    assert [sentence.text for sentence in sentences] == [
+        "Marie Salomea Sklodowska (born 7 November 1867; died 4 July 1934) was a physicist.",
+        "She worked in Paris.",
+    ]
+    assert "1934)" in sentences[0].text

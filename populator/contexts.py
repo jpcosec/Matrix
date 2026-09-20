@@ -59,7 +59,11 @@ NAME_CONNECTORS = {"of", "de", "the", "del", "van", "von", "y", "and", "da", "de
 
 @dataclass(frozen=True)
 class Chunk:
-    """One declaration context: a document or one of its level-1 sections."""
+    """One declaration context: a document or one of its level-1 sections.
+
+    ``title`` is the markdown heading (``""`` when the document has none): the
+    file name is only the context id, never a sign.
+    """
 
     ctx_id: str
     document_id: str
@@ -140,7 +144,7 @@ def chunk_documents(
                 Chunk(
                     ctx_id=stem,
                     document_id=document.document_id,
-                    title=_first_heading(document.text) or stem,
+                    title=_first_heading(document.text),
                     text=document.text,
                     char_offset=0,
                 )
@@ -152,7 +156,7 @@ def chunk_documents(
                 Chunk(
                     ctx_id=f"{stem}#0",
                     document_id=document.document_id,
-                    title=stem,
+                    title="",
                     text=document.text,
                     char_offset=0,
                 )
@@ -292,11 +296,11 @@ def _is_connector(text: str, char_offset: int, norm: str, start: int) -> bool:
     return False
 
 
-def _same_line(chunk: Chunk, left: _Token, right: _Token) -> bool:
-    """Reports whether two tokens sit on the same text line."""
+def _is_contiguous(chunk: Chunk, left: _Token, right: _Token) -> bool:
+    """Reports whether two tokens are adjacent enough to share a name window."""
 
     segment = chunk.text[left.span[1] - chunk.char_offset : right.span[0] - chunk.char_offset]
-    return "\n" not in segment
+    return not any(char in segment for char in "\n,;()")
 
 
 def _title_signs(chunk: Chunk, function_words: set[str]) -> list[tuple[str, str]]:
@@ -360,7 +364,7 @@ def _collect_names(
             row,
             index,
             function_words,
-            lambda left, right: _same_line(chunk, left, right),
+            lambda left, right: _is_contiguous(chunk, left, right),
             lambda position: _is_connector(chunk.text, chunk.char_offset, row[position].norm, row[position].span[0]),
         )
         qualified = (
@@ -438,7 +442,7 @@ def _collect_terms(
             norm = " ".join(part.norm for part in window)
             if norm not in vocabulary or any(id(part) in consumed for part in window):
                 continue
-            if any(not _same_line(chunk, window[position - 1], window[position]) for position in range(1, len(window))):
+            if any(not _is_contiguous(chunk, window[position - 1], window[position]) for position in range(1, len(window))):
                 continue
             size = candidate
             break

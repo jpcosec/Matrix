@@ -10,6 +10,7 @@ from pipeline.ingest import build_world, ingest_contexts
 
 CORPUS = Path(__file__).resolve().parents[1] / "corpus" / "vegetales"
 PHYSICISTS = Path(__file__).resolve().parents[1] / "corpus" / "physicists" / "articles"
+CURIE_ARTICLE = PHYSICISTS / "Q7186.md"
 UNKNOWN = "\u2205"
 
 
@@ -87,8 +88,11 @@ def test_physicists_ingestion():
 
     assert report.asserted > 0
     facts = [fact for wigame in system.wigames.values() for fact in wigame.facts.values()]
-    she_facts = [fact for fact in facts if fact.proposition.subject_symbol_id.startswith("she@")]
-    assert len(she_facts) >= 3
+    assert facts
+    # The three first articles alphabetically are not Curie's: the world does
+    # not contain Q7186, so asking it for she@Q7186 facts is a test bug, not an
+    # ingestion bug (see test_physicists_curie_pronoun_facts).
+    assert not any(fact.proposition.subject_symbol_id.startswith("she@Q7186") for fact in facts)
     fact = facts[0]
     wigame_id = fact.proposition.wigame_id
     checked = runtime.evaluate(f"(check {wigame_id} {fact.proposition.sexpr()})")
@@ -106,3 +110,18 @@ def test_physicists_planted_contradiction():
     second = ingest_contexts(system, runtime, contexts, [declaration])
 
     assert [item[0] for item in second.rejected] == [sexpr]
+
+
+@pytest.mark.skipif(not CURIE_ARTICLE.exists(), reason="corpus/physicists is not available")
+def test_physicists_curie_pronoun_facts():
+    system, runtime, _, _, report = build_world(CURIE_ARTICLE, lang="en")
+
+    facts = [fact for wigame in system.wigames.values() for fact in wigame.facts.values()]
+    she_facts = [fact for fact in facts if fact.proposition.subject_symbol_id == "she@Q7186"]
+    relations = {fact.proposition.relation_id for fact in she_facts}
+
+    assert report.asserted > 0
+    assert len(she_facts) >= 3
+    checked = runtime.evaluate(f"(check {she_facts[0].proposition.wigame_id} {she_facts[0].proposition.sexpr()})")
+    assert checked.payload["truth"] == "true"
+    assert not any(relation in {"rel:alexander", "rel:robert", "rel:s"} for relation in relations)

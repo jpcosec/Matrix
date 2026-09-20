@@ -186,3 +186,35 @@ def test_decompose_merges_heuristic_and_llm(curie_context):
     assert len(keys) == len(set(keys))
     assert {(declaration.relation, declaration.a, declaration.b) for declaration in heuristic} <= set(keys)
     assert all(declaration.source == "heuristic" for declaration in merged)
+
+
+CURIE_LINE = (
+    "# Marie Curie\n\n"
+    "Marie Curie was born in Warsaw. "
+    "She was the first person to win two Nobel Prizes. "
+    "She was the first female professor at the University of Paris. "
+    "She was a Polish physicist. "
+    "Alexander Fleming worked on penicillin.\n"
+)
+
+
+def test_copula_noun_phrase_stops_before_infinitive_and_preposition():
+    context = build_context(chunk_documents([Document("Q7186.md", CURIE_LINE)])[0], lang="en")
+
+    found = {(d.relation, d.a, d.b) for d in decompose_heuristic(context, lang="en")}
+
+    assert ("instance", "she@Q7186", "person@Q7186") in found
+    assert ("has_property", "she@Q7186", "first@Q7186") in found
+    assert ("instance", "she@Q7186", "professor@Q7186") in found
+    assert ("has_property", "she@Q7186", "female@Q7186") in found
+    assert not any(relation == "instance" and "nobel" in obj for relation, _, obj in found)
+    assert not any(relation == "instance" and "university" in obj for relation, _, obj in found)
+
+
+def test_fallback_never_uses_names_as_verbs():
+    context = build_context(chunk_documents([Document("Q7186.md", CURIE_LINE)])[0], lang="en")
+
+    relations = {d.relation for d in decompose_heuristic(context, lang="en")}
+
+    assert not any(relation in {"rel:alexander", "rel:robert", "rel:s"} for relation in relations)
+    assert "rel:work" in relations

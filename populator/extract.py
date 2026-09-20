@@ -7,7 +7,7 @@ import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 
-_SENTENCE_END = ".!?;"
+_SENTENCE_END = ".!?"
 _DOCUMENT_SUFFIXES = (".md", ".txt")
 
 _FRONTMATTER_RE = re.compile(r"\A---\r?\n.*?\r?\n---[ \t]*(?:\r?\n|\Z)", re.DOTALL)
@@ -91,12 +91,18 @@ def read_documents(
 
 
 def split_sentences(doc: Document) -> list[Sentence]:
-    """Splits a document on ``. ! ? ;`` and blank lines, keeping exact spans."""
+    """Splits a document on ``. ! ?`` and blank lines, keeping exact spans.
+
+    A ``.`` inside parentheses is not a sentence end (dates like
+    ``(born ...; 7 November 1867 - 4 July 1934)`` stay in the same sentence),
+    and ``;`` never ends a sentence.
+    """
 
     text = doc.text
     length = len(text)
     sentences: list[Sentence] = []
     start: int | None = None
+    depth = 0
     index = 0
     while index < length:
         char = text[index]
@@ -105,12 +111,16 @@ def split_sentences(doc: Document) -> list[Sentence]:
                 index += 1
                 continue
             start = index
-        if char in _SENTENCE_END:
+        if char == "(":
+            depth += 1
+        elif char == ")":
+            depth = max(0, depth - 1)
+        elif char in _SENTENCE_END and depth == 0:
             _emit(doc, sentences, start, index + 1)
             start = None
             index += 1
             continue
-        if char == "\n" and index + 1 < length and text[index + 1] == "\n":
+        elif char == "\n" and depth == 0 and index + 1 < length and text[index + 1] == "\n":
             _emit(doc, sentences, start, index)
             start = None
             index += 2

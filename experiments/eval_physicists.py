@@ -409,6 +409,8 @@ def _garbage_metrics(
 
 
 def _ask_examples(system: Any, facts: list[dict[str, Any]], count: int = 10) -> list[dict[str, Any]]:
+    """Returns asked questions, with Wikidata ones first and text facts after."""
+
     examples: list[dict[str, Any]] = []
     for entry in facts:
         if len(examples) >= count:
@@ -420,19 +422,33 @@ def _ask_examples(system: Any, facts: list[dict[str, Any]], count: int = 10) -> 
             answer = ask(system, fact["r"], _symbol(label, qid), fact.get("b"))
             if answer.truth_for(fact.get("b")) != "true":
                 continue
+            examples.append(_example(f"was {label} {fact['r']} {fact['b']}?", answer))
+    for world_id in sorted(system.wigames):
+        if len(examples) >= count:
+            break
+        wigame = system.wigames[world_id]
+        for fact in list(wigame.facts.values())[:1]:
+            proposition = fact.proposition
+            if fact.truth.value != "true":
+                continue
+            answer = ask(system, proposition.relation_id, proposition.subject_symbol_id, None)
             examples.append(
-                {
-                    "question": f"was {label} {fact['r']} {fact['b']}?",
-                    "path": answer.path,
-                    "objects": [object_symbol for object_symbol, _, _, _ in answer.objects],
-                    "prov": [
-                        prov
-                        for _, _, _, provenance in answer.objects[:1]
-                        for prov in provenance[:1]
-                    ],
-                }
+                _example(
+                    f"what do we know about {proposition.subject_symbol_id}? ({proposition.relation_id})",
+                    answer,
+                )
             )
-    return examples
+            break
+    return examples[:count]
+
+
+def _example(question: str, answer: Any) -> dict[str, Any]:
+    return {
+        "question": question,
+        "path": answer.path,
+        "objects": [object_symbol for object_symbol, _, _, _ in answer.objects],
+        "prov": [prov for _, _, _, provenance in answer.objects[:1] for prov in provenance[:1]],
+    }
 
 
 def _render_report(
@@ -449,6 +465,10 @@ def _render_report(
         groups[referent].add(symbol)
     promoted = sorted(
         (entry for entry in convergence.promoted if entry["kind"] == "equivalent"),
+        key=lambda entry: entry["source"],
+    )[:10]
+    fallback = sorted(
+        (entry for entry in convergence.proposed if entry["kind"] == "equivalent"),
         key=lambda entry: entry["source"],
     )[:10]
     lines = [
@@ -475,6 +495,12 @@ def _render_report(
         lines.append(
             f"- {entry['source']} ~ {entry['target']} (φ={entry['phi']:.4f}, stats={entry.get('stats', {})})"
         )
+    if not promoted:
+        lines.append(
+            f"- (ninguna promovida; se listan {len(fallback)} propuestas equivalentes con sus φ)"
+        )
+        for entry in fallback:
+            lines.append(f"- propuesta: {entry['source']} ~ {entry['target']} (φ={entry['phi']:.4f})")
     lines.extend(["", "## Five isolated symbols", ""])
     for symbol in convergence.isolated[:5]:
         lines.append(f"- {symbol} (score={convergence.scores.get(symbol, 0.0):.3f})")

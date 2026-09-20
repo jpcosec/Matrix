@@ -135,7 +135,7 @@ def test_english_question_is_answered_by_routed_queries():
     system = LogicalSystem()
     runtime = SExpressionRuntime(system)
     ingest_contexts(system, runtime, contexts, declarations)
-    symbol_convergence(system, contexts, declarations)
+    symbol_convergence(system, contexts, declarations, taut_df=1.0)
     dialog = DialogState(system=system, focus_wigame="wigame:curie_3:born_in")
     repl = Repl(system=system, runtime=runtime, dialog=dialog)
 

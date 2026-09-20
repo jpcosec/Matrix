@@ -111,20 +111,32 @@ def run_evaluation(
     taxonomy: bool = False,
     unit: str = "document",
     source: str = "simple",
+    regime: str = "document",
+    with_sections: bool = False,
 ) -> Evaluation:
-    """Builds the physicists world, converges it and measures the metrics."""
+    """Builds the physicists world, converges it and measures the metrics.
+
+    Regimes: ``document`` (Simple English, one context per article), ``section``
+    (English articles split by section) and ``pairs`` (Simple English article plus
+    the English lead of the same person, the multi-source regime).
+    """
 
     root = Path(out_dir)
     root.mkdir(parents=True, exist_ok=True)
     metrics: dict[str, Any] = {}
     timings: dict[str, float] = {}
+    if regime == "section":
+        unit, source = "section", "en"
 
     start = perf_counter()
-    directory = CORPUS / ("en" if source == "en" else "articles")
-    documents = read_documents(directory)
-    if limit is not None:
-        documents = documents[:limit]
-    contexts = build_contexts(documents, unit=unit, lang="en")
+    if regime == "pairs":
+        contexts = _pairs_contexts(limit, with_sections)
+    else:
+        directory = CORPUS / ("en" if source == "en" else "articles")
+        documents = read_documents(directory)
+        if limit is not None:
+            documents = documents[:limit]
+        contexts = build_contexts(documents, unit=unit, lang="en")
     timings["populator"] = round(perf_counter() - start, 3)
 
     backend = None
@@ -181,6 +193,13 @@ def run_evaluation(
         metrics["false_merges"] = _false_merges(system, convergence)
         metrics["qa_hop"] = _qa_hop_metrics(system, declarations)
         metrics["garbage_converged"] = _garbage_metrics(system, convergence, planted, declarations, only_converged=True)
+    if regime == "pairs":
+        metrics["false_merges"] = _false_merges(system, convergence)
+        metrics["pairs"] = _pairs_convergence(system, convergence, declarations)
+        metrics["intra_context"] = _intra_context_metrics(system, convergence, declarations)
+        metrics["ranking"] = _ranking_metrics(system, declarations)
+        metrics["qa_pairs"] = _qa_pairs_metrics(system, declarations)
+        metrics["tautological_configurations"] = convergence.tautological_configurations
     metrics["gap"] = _gap_metrics(system, convergence, contexts, declarations)
     timings["peak_memory_mb"] = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024, 1)
     timings["total"] = round(sum(value for key, value in timings.items() if key != "peak_memory_mb"), 3)
@@ -188,7 +207,8 @@ def run_evaluation(
 
     (root / "metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False), encoding="utf-8")
     (root / "report.md").write_text(
-        _render_report(metrics, system, runtime, convergence, planted), encoding="utf-8"
+        _render_report(metrics, system, runtime, convergence, planted, declarations),
+        encoding="utf-8",
     )
     return Evaluation(
         metrics=metrics,
@@ -198,6 +218,264 @@ def run_evaluation(
         convergence=convergence,
         planted=planted,
     )
+
+
+def _pairs_contexts(limit: int | None, with_sections: bool) -> list[ContextIndex]:
+    """Simple English article plus the English lead (and optionally sections)."""
+
+    simple_documents = read_documents(CORPUS / "articles")
+    english_documents = read_documents(CORPUS / "en")
+    qids = sorted(Path(document.document_id).stem for document in simple_documents)
+    if limit is not None:
+        qids = qids[:limit]
+    wanted = set(qids)
+    simple_documents = [d for d in simple_documents if Path(d.document_id).stem in wanted]
+    english_documents = [d for d in english_documents if Path(d.document_id).stem in wanted]
+    contexts = build_contexts(simple_documents, unit="document", lang="en")
+    for context in build_contexts(english_documents, unit="section", lang="en"):
+        if with_sections or context.chunk.ctx_id.endswith("#0"):
+            contexts.append(context)
+    return contexts
+
+
+def _source_of(ctx_id: str) -> str:
+    return "en" if "#" in ctx_id else "simple"
+
+
+def _source_symbols(system: Any, qid: str, source: str) -> list[str]:
+    """Returns the pronoun and label symbols of one person in one source.
+
+    The label is matched by sign (the article may declare `eddington` rather than
+    `arthur_eddington`): pronouns plus any symbol whose signs hold the whole label
+    or its surname.
+    """
+
+    suffix = "#0" if source == "en" else ""
+    context = f"{qid}{suffix}"
+    label = _people().get(qid, "")
+    keys = {normalize(label).replace(" ", "_")} if label else set()
+    surname = normalize(label).split()[-1] if label else ""
+    found: list[str] = []
+    for symbol_id, symbol in sorted(system.symbols.items()):
+        if not symbol_id.endswith(f"@{context}"):
+            continue
+        signs = {normalize(sign).replace(" ", "_") for sign in symbol.signs}
+        if sign_head(symbol_id) in {"she", "he"} or (keys & signs) or (surname and surname in signs):
+            found.append(symbol_id)
+    return found
+
+
+def sign_head(symbol_id: str) -> str:
+    """Returns the normalized head of a symbol id (`she@Q1#0` -> `she`)."""
+
+    return symbol_id.split("@", 1)[0]
+
+
+def _pairs_convergence(system: Any, convergence: Any, declarations: list[Declaration]) -> dict[str, Any]:
+    """Fraction of people whose Simple English and English symbols converge."""
+
+    people = _people()
+    pairs = _promoted_pairs(convergence)
+    total = 0
+    any_converged = 0
+    breakdown = {"pronoun_pronoun": [0, 0], "label_label": [0, 0], "pronoun_label": [0, 0]}
+    examples: list[dict[str, Any]] = []
+    failures: list[dict[str, Any]] = []
+    for qid in sorted(people):
+        simple = _source_symbols(system, qid, "simple")
+        english = _source_symbols(system, qid, "en")
+        if not simple or not english:
+            continue
+        total += 1
+        found = False
+        for source_symbol in simple:
+            for target_symbol in english:
+                kind = _pair_kind(source_symbol, target_symbol)
+                slot = breakdown.setdefault(kind, [0, 0])
+                slot[0] += 1
+                if _linked(system, convergence, source_symbol, target_symbol, pairs):
+                    slot[1] += 1
+                    found = True
+                    if len(examples) < 10:
+                        examples.append(
+                            {
+                                "source": source_symbol,
+                                "target": target_symbol,
+                                "kind": kind,
+                                "phi": _pair_phi(convergence, source_symbol, target_symbol),
+                                "referent": referent_of(system, source_symbol),
+                            }
+                        )
+        any_converged += found
+        if not found and len(failures) < 10:
+            source_symbol = simple[0]
+            target_symbol = english[0]
+            source_configs = _symbol_configs(declarations, source_symbol)
+            target_configs = _symbol_configs(declarations, target_symbol)
+            failures.append(
+                {
+                    "qid": qid,
+                    "source": source_symbol,
+                    "target": target_symbol,
+                    "source_configs": len(source_configs),
+                    "target_configs": len(target_configs),
+                    "shared_configs": len(source_configs & target_configs),
+                    "phi": _pair_phi(convergence, source_symbol, target_symbol),
+                    "shared_examples": sorted(source_configs & target_configs)[:3],
+                }
+            )
+    return {
+        "people_evaluated": total,
+        "people_converged": any_converged,
+        "fraction": round(any_converged / total, 3) if total else 0.0,
+        "breakdown": {kind: {"pairs": counts[0], "converged": counts[1]} for kind, counts in breakdown.items()},
+        "examples": examples,
+        "failures": failures,
+    }
+
+
+def _pair_kind(first: str, second: str) -> str:
+    first_head = first.split("@", 1)[0]
+    second_head = second.split("@", 1)[0]
+    first_pronoun = first_head in {"she", "he"}
+    second_pronoun = second_head in {"she", "he"}
+    if first_pronoun and second_pronoun:
+        return "pronoun_pronoun"
+    if first_pronoun or second_pronoun:
+        return "pronoun_label"
+    return "label_label"
+
+
+def _intra_context_metrics(system: Any, convergence: Any, declarations: list[Declaration]) -> dict[str, Any]:
+    """Fraction of contexts where the pronoun converges with the label of the same context."""
+
+    pairs = _promoted_pairs(convergence)
+    contexts: dict[str, set[str]] = defaultdict(set)
+    for declaration in declarations:
+        contexts[declaration.ctx_id].add(declaration.a)
+        contexts[declaration.ctx_id].add(declaration.b)
+    evaluated = 0
+    converged = 0
+    examples: list[dict[str, Any]] = []
+    for ctx_id, symbols in sorted(contexts.items()):
+        pronoun = next((symbol for symbol in sorted(symbols) if symbol.split("@", 1)[0] in {"she", "he"}), None)
+        if pronoun is None:
+            continue
+        candidates = [
+            symbol
+            for symbol in sorted(symbols)
+            if symbol != pronoun and symbol.split("@", 1)[0] not in {"she", "he"}
+        ]
+        if not candidates:
+            continue
+        evaluated += 1
+        if any(_linked(system, convergence, pronoun, candidate, pairs) for candidate in candidates):
+            converged += 1
+        elif len(examples) < 5:
+            examples.append({"context": ctx_id, "pronoun": pronoun, "candidates": candidates[:3]})
+    return {
+        "contexts_evaluated": evaluated,
+        "contexts_converged": converged,
+        "fraction": round(converged / evaluated, 3) if evaluated else 0.0,
+        "examples": examples,
+    }
+
+
+def _ranking_metrics(system: Any, declarations: list[Declaration]) -> dict[str, Any]:
+    """Ranks the English lead symbols of a person among all phi candidates."""
+
+    from pipeline.convergence import _configurations, _pair_scores
+
+    people = _people()
+    queries = [
+        symbol
+        for qid in sorted(people)
+        for symbol in [f"{pronoun}@{qid}" for pronoun in ("she", "he")]
+        if symbol in system.symbols
+    ]
+    if not queries:
+        return {"queries": 0, "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
+    variables = {symbol for declaration in declarations for symbol in (declaration.a, declaration.b)}
+    configurations = _configurations(declarations, {}, {}, variables, 2, 0.30)
+    if len(configurations) < 2:
+        return {"queries": len(queries), "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
+    symbols, scores, _, _ = _pair_scores(configurations, variables, declarations, {}, {})
+    position = {symbol: index for index, symbol in enumerate(symbols)}
+    ranks: list[int] = []
+    for query in queries:
+        if query not in position:
+            continue
+        qid = query.split("@", 1)[1]
+        correct = set(_source_symbols(system, qid, "en"))
+        candidates = sorted(
+            (
+                (float(scores[position[query], position[other]]), other)
+                for other in symbols
+                if other != query and other in position
+            ),
+            key=lambda item: (-item[0], item[1]),
+        )
+        rank = next((index + 1 for index, (_, other) in enumerate(candidates) if other in correct), None)
+        if rank:
+            ranks.append(rank)
+    if not ranks:
+        return {"queries": len(queries), "ranked": 0, "mrr": 0.0, "hit@1": 0.0, "hit@3": 0.0}
+    return {
+        "queries": len(queries),
+        "ranked": len(ranks),
+        "mrr": round(sum(1 / rank for rank in ranks) / len(ranks), 3),
+        "hit@1": round(sum(1 for rank in ranks if rank == 1) / len(ranks), 3),
+        "hit@3": round(sum(1 for rank in ranks if rank <= 3) / len(ranks), 3),
+    }
+
+
+def _qa_pairs_metrics(system: Any, declarations: list[Declaration]) -> dict[str, Any]:
+    """Wikidata facts declared only in EN, asked from the Simple English symbol."""
+
+    facts = _wikidata_facts()
+    by_article: dict[str, list[Declaration]] = defaultdict(list)
+    for declaration in declarations:
+        by_article[_article_of(declaration.ctx_id)].append(declaration)
+    per_relation: dict[str, dict[str, int]] = defaultdict(lambda: {"positive": 0, "recall": 0})
+    for entry in facts:
+        qid = entry.get("qid", "")
+        candidates = by_article.get(qid, [])
+        simple = _source_symbols(system, qid, "simple")
+        if not simple:
+            continue
+        asker = simple[0]
+        for fact in entry.get("facts", []):
+            relation = fact.get("r")
+            if relation not in QA_RELATIONS or not fact.get("b"):
+                continue
+            wanted = _tokens(fact["b"])
+            english_only = [
+                declaration
+                for declaration in candidates
+                if declaration.relation == relation
+                and wanted <= _tokens(declaration.b_sign)
+                and _source_of(declaration.ctx_id) == "en"
+            ]
+            if not english_only:
+                continue
+            per_relation[relation]["positive"] += 1
+            answer = ask(system, relation, asker, None)
+            if any(wanted <= _tokens(sign) for _, _, signs, _ in answer.objects for sign in signs):
+                per_relation[relation]["recall"] += 1
+    totals = {"positive": 0, "recall": 0}
+    report: dict[str, Any] = {}
+    for relation, counts in sorted(per_relation.items()):
+        report[relation] = {
+            "positive": counts["positive"],
+            "recall": round(counts["recall"] / counts["positive"], 3) if counts["positive"] else 0.0,
+        }
+        for key in totals:
+            totals[key] += counts[key]
+    report["global"] = {
+        "positive": totals["positive"],
+        "recall": round(totals["recall"] / totals["positive"], 3) if totals["positive"] else 0.0,
+    }
+    return report
 
 
 def _people() -> dict[str, str]:
@@ -681,6 +959,7 @@ def _render_report(
     runtime: Any,
     convergence: Any,
     planted: list[Declaration],
+    declarations: list[Declaration] | None = None,
 ) -> str:
     people = _people()
     examples = _ask_examples(system, _wikidata_facts(), count=10)
@@ -716,8 +995,14 @@ def _render_report(
         )
     lines.extend(["", "## Ten promoted convergences", ""])
     for entry in promoted:
+        shared = 0
+        if declarations is not None:
+            shared = len(
+                _symbol_configs(declarations, entry["source"]) & _symbol_configs(declarations, entry["target"])
+            )
         lines.append(
-            f"- {entry['source']} ~ {entry['target']} (φ={entry['phi']:.4f}, stats={entry.get('stats', {})})"
+            f"- {entry['source']} ~ {entry['target']} ({entry['kind']}, φ={entry['phi']:.4f}, "
+            f"configuraciones compartidas={shared})"
         )
     if not promoted:
         lines.append(
@@ -731,6 +1016,34 @@ def _render_report(
             lines.append(f"- {symbol} (score={convergence.scores.get(symbol, 0.0):.3f})")
     else:
         lines.append("- (ninguno: todos los símbolos con soporte alcanzan φ >= 0.5)")
+    pairs = metrics.get("pairs")
+    if pairs:
+        lines.extend(
+            [
+                "",
+                "## Pairs: converged people",
+                "",
+                f"{pairs['people_converged']}/{pairs['people_evaluated']} ({pairs['fraction']}). "
+                f"Desglose: {pairs['breakdown']}",
+                "",
+            ]
+        )
+        for example in pairs["examples"]:
+            lines.append(
+                f"- {example['source']} ~ {example['target']} ({example['kind']}, "
+                f"φ={example['phi']}, referente={example['referent']})"
+            )
+        lines.extend(["", "## Pairs: failures", ""])
+        for failure in pairs["failures"]:
+            lines.append(
+                f"- {failure['qid']}: {failure['source']} vs {failure['target']} — "
+                f"configuraciones {failure['source_configs']}/{failure['target_configs']}, "
+                f"compartidas {failure['shared_configs']} {failure['shared_examples']}, φ={failure['phi']}"
+            )
+        tautological = metrics.get("tautological_configurations") or []
+        lines.extend(["", f"## Tautological configurations (top 20 of {len(tautological)})", ""])
+        for entry in tautological[:20]:
+            lines.append(f"- {entry['config']} (df={entry['df']}/{entry['contexts']})")
     merges = metrics.get("false_merges")
     if merges:
         lines.extend(["", "## False merges", ""])
@@ -758,12 +1071,15 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Evaluate routed queries on physicists.")
     parser.add_argument("--out", default="/tmp/eval/physicists")
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--regime", choices=["document", "section", "pairs"], default=None)
+    parser.add_argument("--with-sections", action="store_true", help="pairs regime: include EN sections")
     parser.add_argument("--unit", choices=["document", "section"], default="document")
     parser.add_argument("--source", choices=["simple", "en"], default="simple")
     parser.add_argument("--llm", action="store_true")
     parser.add_argument("--taxonomy", action="store_true", help="also build the Context tree (slow)")
     args = parser.parse_args(argv)
 
+    regime = args.regime or ("section" if args.unit == "section" else "document")
     evaluation = run_evaluation(
         args.out,
         limit=args.limit,
@@ -771,11 +1087,15 @@ def main(argv: list[str] | None = None) -> int:
         taxonomy=args.taxonomy,
         unit=args.unit,
         source=args.source,
+        regime=regime,
+        with_sections=args.with_sections,
     )
     metrics = evaluation.metrics
-    print(f"artículos evaluados: {metrics['world']['contexts']} (unit={args.unit}, source={args.source})")
+    print(f"artículos evaluados: {metrics['world']['contexts']} (regime={regime})")
     print(f"convergencia de pronombres: {metrics['pronoun_convergence']}")
-    for key in ("intra_article", "false_merges", "qa_hop", "garbage_converged"):
+    if "tautological_configurations" in metrics:
+        print(f"tautological_configurations: {len(metrics['tautological_configurations'])}")
+    for key in ("pairs", "intra_context", "ranking", "qa_pairs", "intra_article", "false_merges", "qa_hop", "garbage_converged"):
         if key in metrics:
             print(f"{key}: {metrics[key]}")
     print(f"GAP: {metrics['gap']}")

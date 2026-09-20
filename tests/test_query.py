@@ -23,7 +23,9 @@ def converged():
     system = LogicalSystem()
     runtime = SExpressionRuntime(system)
     ingest_contexts(system, runtime, contexts, declarations)
-    convergence = symbol_convergence(system, contexts, declarations)
+    # `taut_df=1.0`: the synthetic corpus repeats its core facts in every
+    # context on purpose, so they are the identity signal there.
+    convergence = symbol_convergence(system, contexts, declarations, taut_df=1.0)
     return system, runtime, convergence
 
 
@@ -133,7 +135,7 @@ def test_unidirectional_projection_is_promoted_and_followed():
     ]
 
     # `min_contexts=1`: each configuration is declared in a single context here.
-    convergence = symbol_convergence(system, [], declarations, min_contexts=1)
+    convergence = symbol_convergence(system, [], declarations, min_contexts=1, taut_df=1.0)
 
     promoted = {(entry["source"], entry["target"]) for entry in convergence.promoted}
     assert ("alpha@A", "beta@B") in promoted

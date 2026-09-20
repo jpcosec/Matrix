@@ -45,6 +45,7 @@ class ConvergenceReport:
     """Result of one convergence run."""
 
     referents: dict[str, str] = field(default_factory=dict)
+    tautological_configurations: list[dict[str, Any]] = field(default_factory=list)
     proposed: list[dict] = field(default_factory=list)
     promoted: list[dict] = field(default_factory=list)
     isolated: list[str] = field(default_factory=list)
@@ -241,6 +242,7 @@ def symbol_convergence(
     min_contexts: int = 2,
     max_iter: int = 5,
     measure: Callable[[Contingency], np.ndarray] = phi_classical,
+    taut_df: float = 0.30,
 ) -> ConvergenceReport:
     """Proposes projections and equivalences between local symbols by convergence.
 
@@ -252,6 +254,12 @@ def symbol_convergence(
     ``phi >= promote_phi`` in both directions for an ``equivalent`` (a merged
     referent) and in one direction for a ``projection``: a projection is
     directional by definition and does not require reciprocity.
+
+    Configurations that appear in more than ``taut_df`` of the contexts with
+    declarations are *sinnlos* in the corpus (true for almost everybody) and are
+    dropped before the intensity is computed. Equivalences may also be found
+    inside one context (classical coreference: ``she@Q#0`` and ``marie_curie@Q#0``
+    sharing informative configurations); projections always cross contexts.
     """
 
     report = ConvergenceReport()
@@ -270,9 +278,14 @@ def symbol_convergence(
 
     processed: set[tuple[str, str]] = set()
     for iteration in range(max_iter):
+        tautological: list[dict[str, Any]] = []
         configurations = _configurations(
-            declarations, norms, report.referents, variables, min_contexts
+            declarations, norms, report.referents, variables, min_contexts, taut_df, tautological
         )
+        if tautological and not report.tautological_configurations:
+            report.tautological_configurations = sorted(
+                tautological, key=lambda entry: (-entry["df"], entry["config"])
+            )[:20]
         if len(configurations) < 2:
             break
         symbols, scores, n_st, shared_contexts = _pair_scores(
@@ -293,21 +306,34 @@ def symbol_convergence(
         promotions = 0
         for source in sorted(variables):
             for target in sorted(variables):
-                if source == target or _ctx(source) == _ctx(target) or (source, target) in processed:
+                if source == target or (source, target) in processed:
                     continue
                 if _already_promoted(system, source, target):
                     processed.add((source, target))
                     continue
+                same_context = _ctx(source) == _ctx(target)
                 forward = float(scores[position[source], position[target]])
                 backward = float(scores[position[target], position[source]])
                 if forward < phi_min:
                     continue
                 processed.add((source, target))
-                equivalent = backward >= phi_min
                 shared = shared_contexts[(source, target)]
-                supported = len(shared) >= min_contexts
-                same_referent = equivalent and min(forward, backward) >= PROMOTE_PHI and supported
-                directional = not same_referent and forward >= PROMOTE_PHI and supported
+                shared_configurations = int(n_st[position[source], position[target]])
+                equivalent = backward >= phi_min
+                informative = shared_configurations >= 2
+                supported = shared_configurations >= 2 and (
+                    len(shared) >= min_contexts if not same_context else True
+                )
+                same_referent = (
+                    equivalent and min(forward, backward) >= PROMOTE_PHI and informative and supported
+                )
+                directional = (
+                    not same_context
+                    and not same_referent
+                    and forward >= PROMOTE_PHI
+                    and informative
+                    and len(shared) >= min_contexts
+                )
                 entries = _candidate_entries(
                     system,
                     source,
@@ -315,9 +341,10 @@ def symbol_convergence(
                     relations,
                     forward,
                     backward,
-                    int(n_st[position[source], position[target]]),
+                    shared_configurations,
                     shared,
                     equivalent,
+                    allow_projection=not same_context,
                 )
                 for entry in entries:
                     promote = same_referent or (directional and entry["kind"] == "projection")
@@ -394,16 +421,23 @@ def _configurations(
     referents: dict[str, str],
     variables: set[str],
     min_contexts: int = 1,
+    taut_df: float = 1.0,
+    tautological: list[dict[str, Any]] | None = None,
 ) -> dict[str, set[str]]:
     """Builds the configuration → symbols rows of the convergence matrix.
 
     Configurations declared in fewer than ``min_contexts`` contexts are noise
     (nothing corroborates them) and are dropped before the intensity is computed.
+    Configurations in more than ``taut_df`` of the contexts with declarations are
+    tautological (they discriminate nothing) and are dropped too, recorded in
+    ``tautological`` when a list is given.
     """
 
     rows: dict[str, set[str]] = defaultdict(set)
     contexts_of: dict[str, set[str]] = defaultdict(set)
+    contexts: set[str] = set()
     for declaration in declarations:
+        contexts.add(declaration.ctx_id)
         if declaration.a in variables:
             key = f"{declaration.relation}|a|{_reference(declaration.b, norms, referents)}"
             rows[key].add(declaration.a)
@@ -412,7 +446,20 @@ def _configurations(
             key = f"{declaration.relation}|b|{_reference(declaration.a, norms, referents)}"
             rows[key].add(declaration.b)
             contexts_of[key].add(declaration.ctx_id)
-    return {key: members for key, members in rows.items() if len(contexts_of[key]) >= max(min_contexts, 1)}
+    if not contexts:
+        return {}
+    limit = max(taut_df, 0.0) * len(contexts)
+    kept: dict[str, set[str]] = {}
+    for key, members in rows.items():
+        support = len(contexts_of[key])
+        if support < max(min_contexts, 1):
+            continue
+        if support > limit:
+            if tautological is not None:
+                tautological.append({"config": key, "df": support, "contexts": len(contexts)})
+            continue
+        kept[key] = members
+    return kept
 
 
 def _reference(symbol: str, norms: dict[str, str], referents: dict[str, str]) -> str:
@@ -487,11 +534,12 @@ def _candidate_entries(
     n_st: int,
     shared: set[str],
     equivalent: bool,
+    allow_projection: bool = True,
 ) -> list[dict]:
     from src.operational_model.system.candidates import register_candidate
 
     entries: list[dict] = []
-    for relation in sorted(relations[source] & relations[target]):
+    for relation in sorted(relations[source] & relations[target]) if allow_projection else []:
         source_wigame = f"wigame:{_ctx(source)}:{relation}"
         target_wigame = f"wigame:{_ctx(target)}:{relation}"
         if source_wigame not in system.wigames or target_wigame not in system.wigames:

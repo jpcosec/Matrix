@@ -27,7 +27,9 @@ def synthetic():
     runtime = SExpressionRuntime(system)
     ingest_contexts(system, runtime, contexts, declarations)
     taxonomy = context_taxonomy(system, contexts, declarations)
-    convergence = symbol_convergence(system, contexts, declarations)
+    # `taut_df=1.0`: the synthetic corpus repeats its core facts in every
+    # context on purpose, so they are the identity signal there.
+    convergence = symbol_convergence(system, contexts, declarations, taut_df=1.0)
     return system, contexts, declarations, taxonomy, convergence
 
 
@@ -114,7 +116,7 @@ def test_planted_garbage_stays_isolated(synthetic):
 def test_convergence_is_idempotent(synthetic):
     system, contexts, declarations, _, _ = synthetic
 
-    second = symbol_convergence(system, contexts, declarations)
+    second = symbol_convergence(system, contexts, declarations, taut_df=1.0)
 
     assert second.promoted == []
 

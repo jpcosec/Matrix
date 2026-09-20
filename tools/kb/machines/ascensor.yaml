@@ -1,0 +1,14 @@
+# Ascensor de 3 pisos: FSM fuertemente conectada (ciclos esperados).
+domain: fsm
+kind: fsm
+context: ascensor
+title: "Ascensor"
+initial: piso_1
+edges:
+  - {from: piso_1, to: piso_2}
+  - {from: piso_2, to: piso_1}
+  - {from: piso_2, to: piso_3}
+  - {from: piso_3, to: piso_2}
+requires:
+  - {step: subir, needs: puerta_cerrada}
+  - {step: bajar, needs: puerta_cerrada}

@@ -1,0 +1,14 @@
+# Semáforo: FSM con un estado equivalente y uno inalcanzable (para minimización).
+domain: fsm
+kind: fsm
+context: trafico
+title: "Semáforo"
+initial: rojo
+edges:
+  - {from: rojo, to: verde}
+  - {from: verde, to: amarillo}
+  - {from: amarillo, to: rojo}
+  - {from: verde_peatonal, to: amarillo}
+produces:
+  - {step: verde, result: paso_peatones}
+  - {step: amarillo, result: precaucion}

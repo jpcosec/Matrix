@@ -93,13 +93,32 @@ def test_signs_in_is_ordered_by_span(contexts):
         assert spans == sorted(spans)
 
 
-def test_section_unit_splits_by_headings():
-    document = Document("d.md", "# Alpha\nalpha beta.\n# Beta\ngamma delta.\n# Gamma\nepsilon zeta.\n")
+def test_section_unit_splits_on_level_two_headings():
+    document = Document(
+        "d.md",
+        "# Alpha\nalpha beta.\n## Beta\ngamma delta.\n### Beta one\ninner.\n## Gamma\nepsilon zeta.\n",
+    )
 
     chunks = chunk_documents([document], unit="section")
 
     assert [chunk.ctx_id for chunk in chunks] == ["d#0", "d#1", "d#2"]
-    assert [chunk.title for chunk in chunks] == ["Alpha", "Beta", "Gamma"]
+    assert [chunk.title for chunk in chunks] == ["Alpha", "Alpha — Beta", "Alpha — Gamma"]
+    assert [chunk.metadata["article"] for chunk in chunks] == ["d", "d", "d"]
+    assert "### Beta one" in chunks[1].text
+    assert "### Beta one" not in chunks[0].text
+    assert chunks[2].char_offset == document.text.index("## Gamma")
+
+
+def test_section_chunks_keep_the_article_name_in_every_title():
+    text = "# Marie Curie\n\nMarie Curie was born in Warsaw.\n## Life\nShe worked in Paris.\n"
+    document = Document("Q7186.md", text)
+
+    chunks = chunk_documents([document], unit="section")
+
+    assert chunks[0].title == "Marie Curie"
+    assert chunks[1].title == "Marie Curie — Life"
+    context = build_context(chunks[1], lang="en")
+    assert context.signs["marie curie"].kind == "name"
 
 
 def test_document_unit_uses_the_stem_as_context_id():

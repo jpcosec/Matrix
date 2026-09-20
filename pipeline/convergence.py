@@ -6,7 +6,7 @@ import argparse
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import numpy as np
 from scipy import sparse
@@ -14,14 +14,15 @@ from scipy import sparse
 from populator.contexts import ContextIndex
 from populator.tokenize import normalize
 from sia.cohesion import cohesion_pair
-from sia.contingency import contingency
+from sia.contingency import Contingency, contingency
 from sia.hierarchy import build_hierarchy, classes, significant_levels
-from sia.intensity import phi_entropic
+from sia.intensity import phi_classical, phi_entropic
 
 from .decompose import Declaration
 from .ingest import build_world
 
 ROOT_CONTEXT = "ctx:root"
+PROMOTE_PHI = 0.95
 KERNEL_WIGAME = "wigame:kernel:equivalent"
 KERNEL_RELATION = "equivalent"
 
@@ -68,8 +69,14 @@ def context_taxonomy(
     contexts: list[ContextIndex],
     declarations: list[Declaration],
     min_support: int = 2,
+    max_features: int | None = 600,
 ) -> Taxonomy:
-    """Builds the Context tree from contexts x features and their nesting."""
+    """Builds the Context tree from contexts x features and their nesting.
+
+    ``max_features`` keeps the most frequent features: ``build_hierarchy`` is
+    O(p^2) per level in Python, so a few thousand features take minutes while
+    hundreds take under a second.
+    """
 
     ctx_ids = [context.chunk.ctx_id for context in contexts]
     feature_sets: dict[str, set[str]] = {ctx_id: set() for ctx_id in ctx_ids}
@@ -82,7 +89,10 @@ def context_taxonomy(
             f"config:{declaration.relation}:{normalize(declaration.b_sign)}"
         )
     support: Counter[str] = Counter(feature for features in feature_sets.values() for feature in features)
-    features = sorted(feature for feature, count in support.items() if count >= min_support)
+    frequent = [feature for feature, count in support.items() if count >= min_support]
+    if max_features is not None and len(frequent) > max_features:
+        frequent = sorted(frequent, key=lambda feature: (-support[feature], feature))[:max_features]
+    features = sorted(frequent)
     if len(features) < 2:
         return Taxonomy(nodes={}, membership={}, nests=[], levels=[], features=features)
 
@@ -227,11 +237,22 @@ def symbol_convergence(
     contexts: list[ContextIndex],
     declarations: list[Declaration],
     phi_min: float = 0.9,
-    min_support: int = 3,
+    min_support: int = 2,
     min_contexts: int = 2,
     max_iter: int = 5,
+    measure: Callable[[Contingency], np.ndarray] = phi_classical,
 ) -> ConvergenceReport:
-    """Proposes projections and equivalences between local symbols by convergence."""
+    """Proposes projections and equivalences between local symbols by convergence.
+
+    The default measure is the **classical** ``phi`` on purpose: on real text a
+    symbol takes part in few configurations, so the Poisson model of the
+    contingency lies in the small-``lambda`` regime where the entropic index
+    (which multiplies ``phi`` by an entropy-based ``tau``) punishes the few
+    counterexamples much harder than the classical one. Promotion is
+    ``phi >= promote_phi`` in both directions for an ``equivalent`` (a merged
+    referent) and in one direction for a ``projection``: a projection is
+    directional by definition and does not require reciprocity.
+    """
 
     report = ConvergenceReport()
     norms = {sign.symbol_id: sign.norm for context in contexts for sign in context.signs.values()}
@@ -255,7 +276,7 @@ def symbol_convergence(
         if len(configurations) < 2:
             break
         symbols, scores, n_st, shared_contexts = _pair_scores(
-            configurations, variables, declarations, norms, report.referents
+            configurations, variables, declarations, norms, report.referents, measure
         )
         position = {symbol: index for index, symbol in enumerate(symbols)}
         for source in sorted(variables):
@@ -283,6 +304,10 @@ def symbol_convergence(
                     continue
                 processed.add((source, target))
                 equivalent = backward >= phi_min
+                shared = shared_contexts[(source, target)]
+                supported = len(shared) >= min_contexts
+                same_referent = equivalent and min(forward, backward) >= PROMOTE_PHI and supported
+                directional = not same_referent and forward >= PROMOTE_PHI and supported
                 entries = _candidate_entries(
                     system,
                     source,
@@ -291,23 +316,18 @@ def symbol_convergence(
                     forward,
                     backward,
                     int(n_st[position[source], position[target]]),
-                    shared_contexts[(source, target)],
+                    shared,
                     equivalent,
                 )
-                promotion = (
-                    equivalent
-                    and min(forward, backward) >= 0.99
-                    and int(n_st[position[source], position[target]]) >= 1
-                    and len(shared_contexts[(source, target)]) >= min_contexts
-                )
                 for entry in entries:
-                    if promotion:
+                    promote = same_referent or (directional and entry["kind"] == "projection")
+                    if promote:
                         _promote(system, entry)
                         report.promoted.append({**entry, "status": "promoted", "iteration": iteration})
                         promotions += 1
                     else:
                         report.proposed.append(entry)
-                if promotion:
+                if same_referent:
                     _merge_referents(report, source, target)
                     for symbol, referent in report.referents.items():
                         system.symbols[symbol].metadata["referent"] = referent
@@ -407,6 +427,7 @@ def _pair_scores(
     declarations: list[Declaration],
     norms: dict[str, str],
     referents: dict[str, str],
+    measure: Callable[[Contingency], np.ndarray] = phi_classical,
 ) -> tuple[list[str], np.ndarray, np.ndarray, dict[tuple[str, str], set[str]]]:
     symbols = sorted(variables)
     index = {symbol: position for position, symbol in enumerate(symbols)}
@@ -423,7 +444,7 @@ def _pair_scores(
     )
     matrix.data[:] = 1
     counts = contingency(matrix)
-    scores = phi_entropic(counts)
+    scores = measure(counts)
     n_st = np.asarray((matrix.T @ matrix).todense(), dtype=np.int64)
     shared_contexts: dict[tuple[str, str], set[str]] = defaultdict(set)
     contexts_by_configuration = _configuration_contexts(declarations, variables, norms, referents)

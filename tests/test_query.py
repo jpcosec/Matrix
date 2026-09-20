@@ -87,3 +87,61 @@ def test_ask_without_object_lists_the_true_objects(converged):
     assert answer.objects
     assert answer.truth_for(None) == "true"
     assert any(normalize(obj[0].split("@")[0]) == "warsaw" for obj in answer.objects)
+
+
+def _unidirectional_world():
+    from src.operational_model import LogicalSystem, SExpressionRuntime
+
+    system = LogicalSystem()
+    runtime = SExpressionRuntime(system)
+    runtime.evaluate("(create relation mentions mentions)")
+    for context, symbol, objects in (
+        ("A", "alpha", [f"obj{index}" for index in range(1, 7)]),
+        ("B", "beta", [f"obj{index}" for index in range(1, 10)]),
+        ("C", "gamma", [f"unique{index}" for index in range(1, 11)]),
+    ):
+        for name in [symbol] + objects:
+            runtime.evaluate(f"(create symbol {name}@{context} {name})")
+        axes = " ".join(f"{name}@{context}" for name in objects)
+        runtime.evaluate(
+            f"(create li li:{context}:mentions mentions (axis-a {symbol}@{context}) (axis-b {axes}))"
+        )
+        runtime.evaluate(f"(create wigame wigame:{context}:mentions li:{context}:mentions)")
+        for obj in objects:
+            runtime.evaluate(
+                f"(assert wigame:{context}:mentions (mentions {symbol}@{context} {obj}@{context}))"
+            )
+    return system, runtime
+
+
+def test_unidirectional_projection_is_promoted_and_followed():
+    from pipeline.convergence import symbol_convergence
+    from pipeline.decompose import Declaration
+    from pipeline.query import ask
+
+    system, _ = _unidirectional_world()
+    declarations = [
+        Declaration(ctx_id=ctx, relation="mentions", a=f"{symbol}@{ctx}", b=f"obj{index}@{ctx}",
+                    a_sign=symbol, b_sign=f"obj{index}", sentence_index=0, span=(0, 1))
+        for ctx, symbol, count in (("A", "alpha", 6), ("B", "beta", 9))
+        for index in range(1, count + 1)
+    ]
+    declarations += [
+        Declaration(ctx_id="C", relation="mentions", a="gamma@C", b=f"unique{index}@C",
+                    a_sign="gamma", b_sign=f"unique{index}", sentence_index=0, span=(0, 1))
+        for index in range(1, 11)
+    ]
+
+    # `min_contexts=1`: each configuration is declared in a single context here.
+    convergence = symbol_convergence(system, [], declarations, min_contexts=1)
+
+    promoted = {(entry["source"], entry["target"]) for entry in convergence.promoted}
+    assert ("alpha@A", "beta@B") in promoted
+    assert ("beta@B", "alpha@A") not in promoted
+
+    forward = ask(system, "mentions", "alpha@A", None)
+    backward = ask(system, "mentions", "beta@B", None)
+
+    assert len(forward.path) >= 2
+    assert any(obj.startswith("obj7") for obj, _, _, _ in forward.objects)
+    assert backward.path == ["wigame:B:mentions"]

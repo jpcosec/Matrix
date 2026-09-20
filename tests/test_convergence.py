@@ -139,12 +139,15 @@ def _mini_world(include_leaves: bool = True):
 
 def test_vegetales_gate_on_verde():
     system, _, _, _, _ = build_world(CORPUS, lang="es")
-    wigame_id = "wigame:01_lechugas:has_property"
 
-    maintenance = maintain_wigame(system, wigame_id)
-    gates = {gate["gate"] for gate in maintenance.gates}
+    gates = {
+        gate["gate"].split("@")[0]
+        for wigame_id in sorted(system.wigames)
+        if wigame_id.endswith(":has_property")
+        for gate in maintain_wigame(system, wigame_id).gates
+    }
 
-    assert any(gate.split("@")[0] in {"verde", "verdura"} for gate in gates)
+    assert gates & {"verde", "verdura"}
 
 
 def test_collision_discriminant_is_a_leaf():

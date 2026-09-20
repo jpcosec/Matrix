@@ -9,8 +9,11 @@ The people query takes physicists and their subclasses
 
 ## Contents
 
-- `people.csv` — 89 physicists (`qid,label,title`).
+- `people.csv` — 89 physicists (`qid,label,title,en_title`).
 - `articles/<qid>.md` — Simple English Wikipedia extract, first line `# <title>`.
+- `en/<qid>.md` — full English Wikipedia article of the same person, `89` files,
+  `== H ==` sections converted to markdown `## H` and clamped to 40000 chars
+  (reference sections removed).
 - `excluded.csv` — 14 article(s) dropped for being shorter than 300 chars.
 - `facts.jsonl` — reference facts, one line per person, 2802 facts total
   (31.5 per person) over 12 relations:
@@ -26,6 +29,8 @@ The people query takes physicists and their subclasses
 
 - Simple English Wikipedia articles: CC BY-SA 4.0
   (`https://simple.wikipedia.org/w/api.php`, `prop=extracts`).
+- English Wikipedia articles: CC BY-SA 4.0
+  (`https://en.wikipedia.org/w/api.php`, `prop=extracts`).
 - Wikidata facts: CC0 1.0 (`https://query.wikidata.org/sparql`).
 - GAP coreference dataset: Apache 2.0
   (`https://github.com/google-research-datasets/gap-coreference`).

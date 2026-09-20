@@ -8,6 +8,7 @@ Simple English article of 300+ characters.
 
 from __future__ import annotations
 
+import argparse
 import csv
 from datetime import datetime, timezone
 import io
@@ -24,6 +25,29 @@ ARTICLES = BASE / "articles"
 USER_AGENT = "matrix-shrdlu-spec/0.1 (https://github.com/jpcosec/Matrix; matrix-shrdlu@example.com)"
 SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
 WIKIPEDIA_API = "https://simple.wikipedia.org/w/api.php"
+EN_WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php"
+EN_DIR = BASE / "en"
+MAX_ARTICLE_CHARS = 40000
+SKIPPED_SECTIONS = {
+    "see also",
+    "notes",
+    "references",
+    "further reading",
+    "external links",
+    "bibliography",
+    "sources",
+}
+HEADING_RE = re.compile(r"^(={2,6})\s*(.+?)\s*\1\s*$", re.MULTILINE)
+SECTION_RE = re.compile(r"^## [^#]")
+SECTION_LIMIT_RE = re.compile(r"(?m)^#{2,4} ")
+EN_TITLES_QUERY = """
+SELECT ?qid ?en_title WHERE {
+  VALUES ?qid { %s }
+  ?art schema:about ?qid ;
+       schema:isPartOf <https://en.wikipedia.org/> ;
+       schema:name ?en_title .
+}
+"""
 GAP_URL = (
     "https://raw.githubusercontent.com/google-research-datasets/gap-coreference"
     "/master/gap-validation.tsv"
@@ -63,9 +87,19 @@ ORDER BY ?pLabel
 """
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     """Downloads every source and writes the versioned corpus files."""
 
+    parser = argparse.ArgumentParser(description="Build the corpus/physicists dataset.")
+    parser.add_argument("--english", action="store_true", help="also refresh the English articles")
+    parser.add_argument(
+        "--english-only",
+        action="store_true",
+        help="refresh corpus/physicists/en/ from the English Wikipedia",
+    )
+    args = parser.parse_args(argv)
+    if args.english_only:
+        return build_english()
     BASE.mkdir(parents=True, exist_ok=True)
     ARTICLES.mkdir(parents=True, exist_ok=True)
     for stale in ARTICLES.glob("*.md"):
@@ -80,12 +114,119 @@ def main() -> int:
     print(f"cross mentions: {sum(len(targets) > 0 for targets in mentions.values())} articles")
     gap_rows = fetch_gap(included)
     print(f"gap rows in corpus: {gap_rows}")
+    if args.english:
+        english = fetch_english(included)
+        included = [{**person, "en_title": english.get(person["qid"], {}).get("en_title", "")} for person in included]
+        print(f"english articles: {len(english)}")
     write_people(included)
     write_excluded(excluded)
     write_facts(facts)
     write_mentions(mentions)
     write_readme()
     return 0
+
+
+def build_english() -> int:
+    """Refreshes the English article slices and the `en_title` column."""
+
+    people = list(csv.DictReader((BASE / "people.csv").open(encoding="utf-8")))
+    english = fetch_english(people)
+    people = [
+        {**person, "en_title": english.get(person["qid"], {}).get("en_title", "")}
+        for person in people
+    ]
+    write_people(people)
+    write_readme()
+    print(f"english articles: {len(english)} (of {len(people)} people)")
+    sizes = sorted(len(entry["text"]) for entry in english.values())
+    if sizes:
+        print(f"chars: min {sizes[0]} median {sizes[len(sizes) // 2]} max {sizes[-1]}")
+    return 0
+
+
+def fetch_english(people: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    """Downloads the full English article of every person, split-ready."""
+
+    EN_DIR.mkdir(parents=True, exist_ok=True)
+    for stale in EN_DIR.glob("*.md"):
+        stale.unlink()
+    titles = _fetch_en_titles([person["qid"] for person in people])
+    print(f"english titles resolved: {len(titles)}")
+    english: dict[str, dict[str, str]] = {}
+    for person in people:
+        title = titles.get(person["qid"])
+        if not title:
+            continue
+        page = _fetch_en_extract(title)
+        extract = (page.get("extract") or "").strip()
+        if len(extract) < MIN_ARTICLE_CHARS:
+            continue
+        text = prepare_english(title, extract)
+        (EN_DIR / f"{person['qid']}.md").write_text(text, encoding="utf-8")
+        english[person["qid"]] = {"en_title": title, "title": title, "text": text}
+    return english
+
+
+def prepare_english(title: str, extract: str) -> str:
+    """Converts `== H ==` headings to markdown, drops reference sections and clamps."""
+
+    converted = HEADING_RE.sub(lambda match: f"{'#' * len(match.group(1))} {match.group(2)}", extract)
+    kept: list[str] = []
+    for line in converted.splitlines():
+        if SECTION_RE.match(line) and line[3:].strip().lower() in SKIPPED_SECTIONS:
+            break
+        kept.append(line)
+    body = "\n".join(kept).strip()
+    body = _clamp_to_section(body, MAX_ARTICLE_CHARS)
+    return f"# {title}\n\n{body}\n"
+
+
+def _clamp_to_section(body: str, limit: int) -> str:
+    """Cuts the text at the last section heading before the limit."""
+
+    if len(body) <= limit:
+        return body
+    cut = 0
+    for match in SECTION_LIMIT_RE.finditer(body):
+        if match.start() >= limit:
+            break
+        cut = match.start()
+    return body[:cut] if cut > 0 else body[:limit]
+
+
+def _fetch_en_titles(qids: list[str]) -> dict[str, str]:
+    """Resolves the English Wikipedia title of every Wikidata item in one query."""
+
+    values = " ".join(f"wd:{qid}" for qid in qids)
+    rows = _sparql_csv(EN_TITLES_QUERY % values)
+    return {_qid(row.get("qid", "")): (row.get("en_title") or "").strip() for row in rows if row.get("en_title")}
+
+
+def _fetch_en_extract(title: str) -> dict:
+    """Fetches one English article extract with the same retry policy."""
+
+    params = {
+        "action": "query",
+        "prop": "extracts",
+        "explaintext": "1",
+        "exlimit": "1",
+        "titles": title,
+        "format": "json",
+        "redirects": "1",
+    }
+    page: dict = {}
+    for attempt in range(3):
+        payload = json.loads(
+            _request(EN_WIKIPEDIA_API + "?" + urllib.parse.urlencode(params)).decode("utf-8")
+        )
+        query = payload.get("query", {})
+        pages = query.get("pages", {})
+        page = next(iter(pages.values()), {}) if pages else {}
+        if page.get("extract") or page.get("missing") is not None:
+            break
+        time.sleep(PAUSE_SECONDS)
+    time.sleep(PAUSE_SECONDS)
+    return page
 
 
 def fetch_people() -> list[dict[str, str]]:
@@ -204,10 +345,10 @@ def write_people(people: list[dict[str, str]]) -> None:
     """Writes `people.csv` with the included physicists."""
 
     with (BASE / "people.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["qid", "label", "title"])
+        writer = csv.DictWriter(handle, fieldnames=["qid", "label", "title", "en_title"])
         writer.writeheader()
         for person in sorted(people, key=lambda person: person["qid"]):
-            writer.writerow(person)
+            writer.writerow({key: person.get(key, "") for key in writer.fieldnames})
 
 
 def write_excluded(excluded: list[dict[str, str]]) -> None:
@@ -241,6 +382,7 @@ def write_readme() -> None:
     """Writes the corpus README with sources, licenses and counts."""
 
     people = list(csv.DictReader((BASE / "people.csv").open(encoding="utf-8")))
+    english = sorted(EN_DIR.glob("*.md")) if EN_DIR.exists() else []
     excluded = list(csv.DictReader((BASE / "excluded.csv").open(encoding="utf-8")))
     facts = [
         json.loads(line)
@@ -266,8 +408,11 @@ The people query takes physicists and their subclasses
 
 ## Contents
 
-- `people.csv` — {len(people)} physicists (`qid,label,title`).
+- `people.csv` — {len(people)} physicists (`qid,label,title,en_title`).
 - `articles/<qid>.md` — Simple English Wikipedia extract, first line `# <title>`.
+- `en/<qid>.md` — full English Wikipedia article of the same person, `{len(english)}` files,
+  `== H ==` sections converted to markdown `## H` and clamped to {MAX_ARTICLE_CHARS} chars
+  (reference sections removed).
 - `excluded.csv` — {len(excluded)} article(s) dropped for being shorter than {MIN_ARTICLE_CHARS} chars.
 - `facts.jsonl` — reference facts, one line per person, {total_facts} facts total
   ({average:.1f} per person) over {len(RELATION_NAMES)} relations:
@@ -283,6 +428,8 @@ The people query takes physicists and their subclasses
 
 - Simple English Wikipedia articles: CC BY-SA 4.0
   (`https://simple.wikipedia.org/w/api.php`, `prop=extracts`).
+- English Wikipedia articles: CC BY-SA 4.0
+  (`https://en.wikipedia.org/w/api.php`, `prop=extracts`).
 - Wikidata facts: CC0 1.0 (`https://query.wikidata.org/sparql`).
 - GAP coreference dataset: Apache 2.0
   (`https://github.com/google-research-datasets/gap-coreference`).

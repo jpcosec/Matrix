@@ -53,12 +53,54 @@ def _symbol(label: str, qid: str) -> str:
     return f"{normalize(label).replace(' ', '_')}@{qid}"
 
 
+def _first_symbol(system: Any, names: list[str]) -> str | None:
+    return next((name for name in names if name in system.symbols), None)
+
+
 def _pronoun_symbol(system: Any, qid: str) -> str | None:
-    for pronoun in ("she", "he"):
-        candidate = f"{pronoun}@{qid}"
-        if candidate in system.symbols:
-            return candidate
+    """Returns the pronoun symbol of one person, in the lead or the whole article."""
+
+    for suffix in ("", "#0"):
+        found = _first_symbol(system, [f"{pronoun}@{qid}{suffix}" for pronoun in ("she", "he")])
+        if found:
+            return found
     return None
+
+
+def _label_symbol(system: Any, label: str, qid: str) -> str | None:
+    base = _symbol(label, qid)
+    return _first_symbol(system, [base, f"{base}#0"])
+
+
+def _symbol_configs(declarations: list[Declaration], symbol: str) -> set[str]:
+    """Returns the configuration keys a symbol takes part in (first-pass references)."""
+
+    configs: set[str] = set()
+    for declaration in declarations:
+        if declaration.a == symbol:
+            configs.add(f"{declaration.relation}|a|{normalize(declaration.b_sign)}")
+        if declaration.b == symbol:
+            configs.add(f"{declaration.relation}|b|{normalize(declaration.a_sign)}")
+    return configs
+
+
+def _article_of(ctx_id: str) -> str:
+    return ctx_id.split("#", 1)[0]
+
+
+def _section_of(ctx_id: str) -> int:
+    if "#" not in ctx_id:
+        return 0
+    try:
+        return int(ctx_id.split("#", 1)[1])
+    except ValueError:
+        return 0
+
+
+def _tokens(text: str) -> set[str]:
+    """Normalized token set, used for inclusion comparisons (`nobel_prize` in `... in physics`)."""
+
+    return {token for token in normalize(text).replace("_", " ").split() if token}
 
 
 def run_evaluation(
@@ -67,8 +109,10 @@ def run_evaluation(
     llm: bool = False,
     seed: int = 0,
     taxonomy: bool = False,
+    unit: str = "document",
+    source: str = "simple",
 ) -> Evaluation:
-    """Builds the physicists world, converges it and measures the five metrics."""
+    """Builds the physicists world, converges it and measures the metrics."""
 
     root = Path(out_dir)
     root.mkdir(parents=True, exist_ok=True)
@@ -76,10 +120,11 @@ def run_evaluation(
     timings: dict[str, float] = {}
 
     start = perf_counter()
-    documents = read_documents(CORPUS / "articles")
+    directory = CORPUS / ("en" if source == "en" else "articles")
+    documents = read_documents(directory)
     if limit is not None:
         documents = documents[:limit]
-    contexts = build_contexts(documents, lang="en")
+    contexts = build_contexts(documents, unit=unit, lang="en")
     timings["populator"] = round(perf_counter() - start, 3)
 
     backend = None
@@ -129,6 +174,11 @@ def run_evaluation(
     metrics["qa"] = _qa_metrics(system, declarations)
     metrics["qa_pronoun_subject"] = _qa_metrics(system, declarations, use_pronoun=True)
     metrics["garbage"] = _garbage_metrics(system, convergence, planted, declarations)
+    if unit == "section":
+        metrics["intra_article"] = _intra_article_metrics(system, convergence, declarations)
+        metrics["false_merges"] = _false_merges(system, convergence)
+        metrics["qa_hop"] = _qa_hop_metrics(system, declarations)
+        metrics["garbage_converged"] = _garbage_metrics(system, convergence, planted, declarations, only_converged=True)
     metrics["gap"] = _gap_metrics(system, convergence, contexts, declarations)
     timings["peak_memory_mb"] = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024, 1)
     timings["total"] = round(sum(value for key, value in timings.items() if key != "peak_memory_mb"), 3)
@@ -373,6 +423,7 @@ def _garbage_metrics(
     convergence: Any,
     planted: list[Declaration],
     declarations: list[Declaration],
+    only_converged: bool = False,
 ) -> dict[str, Any]:
     projected = {
         symbol
@@ -388,7 +439,10 @@ def _garbage_metrics(
         and convergence.scores.get(symbol, 0.0) < 0.5
     )
     real_objects = {
-        declaration.b for declaration in declarations if declaration.source != "planted"
+        declaration.b
+        for declaration in declarations
+        if declaration.source != "planted"
+        and (not only_converged or declaration.b in convergence.referents or declaration.a in convergence.referents)
     }
     sample = sorted(real_objects)[: len(planted_objects) or 1]
     real_isolated = sum(
@@ -406,6 +460,170 @@ def _garbage_metrics(
         "real_isolated": real_isolated,
         "real_isolated_fraction": round(real_isolated / len(sample), 3) if sample else 0.0,
     }
+
+
+def _promoted_pairs(convergence: Any) -> set[frozenset[str]]:
+    pairs: set[frozenset[str]] = set()
+    for entry in convergence.promoted:
+        if entry.get("kind") in {"equivalent", "projection"}:
+            pairs.add(frozenset((entry["source"], entry["target"])))
+    return pairs
+
+
+def _linked(system: Any, convergence: Any, first: str, second: str, pairs: set[frozenset[str]]) -> bool:
+    reference_first = referent_of(system, first)
+    reference_second = referent_of(system, second)
+    if reference_first is not None and reference_first == reference_second:
+        return True
+    return frozenset((first, second)) in pairs
+
+
+def _pair_phi(convergence: Any, first: str, second: str) -> float | None:
+    for entry in convergence.promoted + convergence.proposed:
+        if {entry.get("source"), entry.get("target")} == {first, second}:
+            return float(entry.get("phi", 0.0))
+    return None
+
+
+def _intra_article_metrics(system: Any, convergence: Any, declarations: list[Declaration]) -> dict[str, Any]:
+    """Fraction of article sections whose pronoun converges with the lead or the label."""
+
+    people = _people()
+    sections: dict[str, set[int]] = defaultdict(set)
+    for declaration in declarations:
+        sections[_article_of(declaration.ctx_id)].add(_section_of(declaration.ctx_id))
+    pairs = _promoted_pairs(convergence)
+    fractions: list[float] = []
+    examples: list[dict[str, Any]] = []
+    for stem, numbers in sorted(sections.items()):
+        if len(numbers) < 3:
+            continue
+        anchor = _first_symbol(
+            system,
+            [f"{pronoun}@{stem}#0" for pronoun in ("she", "he")]
+            + [f"{_symbol(people.get(stem, stem), stem)}#0"],
+        )
+        if anchor is None:
+            examples.append({"article": stem, "reason": "no pronoun or label symbol in #0"})
+            continue
+        counted = 0
+        converged = 0
+        for number in sorted(numbers - {0}):
+            pronoun = _first_symbol(
+                system, [f"{name}@{stem}#{number}" for name in ("she", "he")]
+            )
+            if pronoun is None:
+                continue
+            counted += 1
+            if _linked(system, convergence, pronoun, anchor, pairs):
+                converged += 1
+            elif len(examples) < 5:
+                pronoun_configs = _symbol_configs(declarations, pronoun)
+                anchor_configs = _symbol_configs(declarations, anchor)
+                examples.append(
+                    {
+                        "article": stem,
+                        "section": number,
+                        "pronoun": pronoun,
+                        "anchor": anchor,
+                        "phi": _pair_phi(convergence, pronoun, anchor),
+                        "pronoun_configs": len(pronoun_configs),
+                        "anchor_configs": len(anchor_configs),
+                        "shared_configs": len(pronoun_configs & anchor_configs),
+                        "pronoun_examples": sorted(pronoun_configs)[:3],
+                        "anchor_examples": sorted(anchor_configs)[:3],
+                    }
+                )
+        if counted:
+            fractions.append(converged / counted)
+    return {
+        "articles_evaluated": len(fractions),
+        "mean_section_convergence": round(sum(fractions) / len(fractions), 3) if fractions else 0.0,
+        "examples": examples[:5],
+    }
+
+
+def _false_merges(system: Any, convergence: Any) -> dict[str, Any]:
+    """Promoted equivalences between symbols of articles that do not mention each other."""
+
+    mentions = _mentions()
+    examples: list[dict[str, Any]] = []
+    for entry in convergence.promoted:
+        if entry.get("kind") != "equivalent":
+            continue
+        stem_a = _article_of(entry["source"].split("@", 1)[-1])
+        stem_b = _article_of(entry["target"].split("@", 1)[-1])
+        if stem_a == stem_b:
+            continue
+        if stem_b in mentions.get(stem_a, []) or stem_a in mentions.get(stem_b, []):
+            continue
+        examples.append(
+            {
+                "source": entry["source"],
+                "target": entry["target"],
+                "phi": entry.get("phi"),
+                "stem_a": stem_a,
+                "stem_b": stem_b,
+            }
+        )
+    return {"count": len(examples), "examples": examples[:5]}
+
+
+def _qa_hop_metrics(system: Any, declarations: list[Declaration]) -> dict[str, Any]:
+    """Recall asking from a section for facts declared in another section."""
+
+    facts = _wikidata_facts()
+    by_article: dict[str, list[Declaration]] = defaultdict(list)
+    for declaration in declarations:
+        by_article[_article_of(declaration.ctx_id)].append(declaration)
+    per_relation: dict[str, dict[str, int]] = defaultdict(lambda: {"positive": 0, "recall": 0})
+    for entry in facts:
+        qid, label = entry.get("qid", ""), entry.get("label", "")
+        candidates = by_article.get(qid, [])
+        for fact in entry.get("facts", []):
+            relation = fact.get("r")
+            if relation not in QA_RELATIONS or not fact.get("b"):
+                continue
+            per_relation[relation]["positive"] += 1
+            wanted = _tokens(fact["b"])
+            declared = [
+                declaration
+                for declaration in candidates
+                if declaration.relation == relation
+                and wanted <= _tokens(declaration.b_sign)
+                and _section_of(declaration.ctx_id) >= 1
+            ]
+            if not declared:
+                continue
+            source_section = _section_of(declared[0].ctx_id)
+            asker = _first_symbol(
+                system,
+                [
+                    f"{name}@{qid}#{number}"
+                    for number in (0, 1, 2)
+                    if number != source_section
+                    for name in ("she", "he")
+                ],
+            )
+            if asker is None:
+                continue
+            answer = ask(system, relation, asker, None)
+            if any(wanted <= _tokens(sign) for _, _, signs, _ in answer.objects for sign in signs):
+                per_relation[relation]["recall"] += 1
+    totals = {"positive": 0, "recall": 0}
+    report: dict[str, Any] = {}
+    for relation, counts in sorted(per_relation.items()):
+        report[relation] = {
+            "positive": counts["positive"],
+            "recall": round(counts["recall"] / counts["positive"], 3) if counts["positive"] else 0.0,
+        }
+        for key in totals:
+            totals[key] += counts[key]
+    report["global"] = {
+        "positive": totals["positive"],
+        "recall": round(totals["recall"] / totals["positive"], 3) if totals["positive"] else 0.0,
+    }
+    return report
 
 
 def _ask_examples(system: Any, facts: list[dict[str, Any]], count: int = 10) -> list[dict[str, Any]]:
@@ -520,14 +738,26 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Evaluate routed queries on physicists.")
     parser.add_argument("--out", default="/tmp/eval/physicists")
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--unit", choices=["document", "section"], default="document")
+    parser.add_argument("--source", choices=["simple", "en"], default="simple")
     parser.add_argument("--llm", action="store_true")
     parser.add_argument("--taxonomy", action="store_true", help="also build the Context tree (slow)")
     args = parser.parse_args(argv)
 
-    evaluation = run_evaluation(args.out, limit=args.limit, llm=args.llm, taxonomy=args.taxonomy)
+    evaluation = run_evaluation(
+        args.out,
+        limit=args.limit,
+        llm=args.llm,
+        taxonomy=args.taxonomy,
+        unit=args.unit,
+        source=args.source,
+    )
     metrics = evaluation.metrics
-    print(f"artículos evaluados: {metrics['world']['contexts']}")
+    print(f"artículos evaluados: {metrics['world']['contexts']} (unit={args.unit}, source={args.source})")
     print(f"convergencia de pronombres: {metrics['pronoun_convergence']}")
+    for key in ("intra_article", "false_merges", "qa_hop", "garbage_converged"):
+        if key in metrics:
+            print(f"{key}: {metrics[key]}")
     print(f"GAP: {metrics['gap']}")
     print(f"QA global (etiqueta): {metrics['qa']['global']}")
     print(f"QA global (pronombre): {metrics['qa_pronoun_subject']['global']}")

@@ -49,7 +49,11 @@ _IRREGULAR_VERBS = {
 _JSON_RE = re.compile(r"\[.*\]", re.DOTALL)
 
 _EN_VERBS: list[tuple[str, str]] = [
+    (r"was born(?: on| in)?\s+[^,]*?\s+in", "born_in"),
+    (r"was born[^,]*?,\s*in", "born_in"),
     (r"was born in", "born_in"),
+    (r"died(?: on| in)?\s+[^,]*?\s+in", "died_in"),
+    (r"died[^,]*?,\s*in", "died_in"),
     (r"died in", "died_in"),
     (r"was awarded(?: the)?|won(?: the)?|received(?: the)?", "award"),
     (r"studied at|studied from|graduated at|graduated from", "educated_at"),
@@ -107,14 +111,36 @@ def decompose_heuristic(ctx: ContextIndex, lang: str = "en") -> list[Declaration
         pairs = _sentence_signs(ctx, sentence_index)
         if len(pairs) < 2:
             continue
-        match = _match_verb(sentence.text.lower(), verbs)
-        if match is None:
-            declaration = _fallback(ctx, sentence_index, sentence, pairs)
-            if declaration is not None:
-                declarations.append(declaration)
+        found = _sentence_declarations(sentence_index, sentence, pairs, verbs, lang)
+        if found:
+            declarations.extend(found)
             continue
-        relation, verb_start, verb_end = match
-        subject = _sign_before(pairs, sentence.char_span[0] + verb_start)
+        declaration = _fallback(ctx, sentence_index, sentence, pairs)
+        if declaration is not None:
+            declarations.append(declaration)
+    return declarations
+
+
+def _sentence_declarations(
+    sentence_index: int,
+    sentence,
+    pairs: list[tuple[LocalSign, tuple[int, int]]],
+    verbs: list[tuple[str, str]],
+    lang: str,
+) -> list[Declaration]:
+    """Reads up to three clauses of one sentence, earliest verb first."""
+
+    declarations: list[Declaration] = []
+    search_from = 0
+    for _ in range(3):
+        match = _match_verb(sentence.text[search_from:].lower(), verbs)
+        if match is None:
+            break
+        relation = match[0]
+        verb_start = search_from + match[1]
+        verb_end = search_from + match[2]
+        search_from = verb_end
+        subject = _subject_before(pairs, sentence.char_span[0] + verb_start)
         obj = _sign_after(pairs, sentence.char_span[0] + verb_end)
         if subject is None or obj is None or subject[0] is obj[0]:
             continue
@@ -124,8 +150,36 @@ def decompose_heuristic(ctx: ContextIndex, lang: str = "en") -> list[Declaration
         if relation == "part_of":
             declarations.append(_declaration(sentence_index, relation, obj, subject))
             continue
-        declarations.append(_declaration(sentence_index, relation, subject, obj))
+        declaration = _declaration(sentence_index, relation, subject, obj)
+        declarations.append(declaration)
+        if relation == "award" and "nobel prize" in normalize(declaration.b_sign):
+            canonical = _canonical_sign(subject, "nobel_prize", sentence_index, declaration)
+            if canonical is not None:
+                declarations.append(canonical)
     return declarations
+
+
+def _canonical_sign(
+    subject: tuple[LocalSign, tuple[int, int]],
+    norm: str,
+    sentence_index: int,
+    declaration: Declaration,
+) -> Declaration | None:
+    """Adds the canonical object variant (e.g. `nobel_prize` for `Nobel Prize in Physics`)."""
+
+    if norm == declaration.b:
+        return None
+    return Declaration(
+        ctx_id=declaration.ctx_id,
+        relation=declaration.relation,
+        a=declaration.a,
+        b=f"{norm}@{declaration.ctx_id}",
+        a_sign=declaration.a_sign,
+        b_sign=norm.replace("_", " "),
+        sentence_index=sentence_index,
+        span=declaration.span,
+        source=declaration.source,
+    )
 
 
 def decompose_llm(ctx: ContextIndex, backend: Backend, lang: str = "en") -> list[Declaration]:
@@ -189,13 +243,22 @@ def build_prompt(ctx: ContextIndex, lang: str = "en") -> str:
 
 
 def _match_verb(sentence_lower: str, verbs: list[tuple[str, str]]) -> tuple[str, int, int] | None:
-    """Finds the first verb pattern on word boundaries."""
+    """Finds the earliest verb pattern on word boundaries.
 
+    Order matters inside a sentence ("X was a chemist who won the Nobel Prize"):
+    the earliest verb wins, and the pattern list only breaks ties at the same
+    position.
+    """
+
+    best: tuple[str, int, int] | None = None
     for pattern, relation in verbs:
         match = re.search(rf"\b(?:{pattern})\b", sentence_lower)
-        if match:
-            return relation, match.start(), match.end()
-    return None
+        if match is None:
+            continue
+        candidate = (relation, match.start(), match.end())
+        if best is None or candidate[1] < best[1]:
+            best = candidate
+    return best
 
 
 def _copula(
@@ -347,6 +410,19 @@ def _sentence_signs(ctx: ContextIndex, sentence_index: int) -> list[tuple[LocalS
             pairs.append((sign, span))
     pairs.sort(key=lambda pair: pair[1][0])
     return pairs
+
+
+def _subject_before(
+    pairs: list[tuple[LocalSign, tuple[int, int]]],
+    position: int,
+) -> tuple[LocalSign, tuple[int, int]] | None:
+    """Returns the subject sign: the last name/pronoun before the verb, else any sign."""
+
+    candidates = [pair for pair in pairs if pair[1][1] <= position]
+    if not candidates:
+        return None
+    named = [pair for pair in candidates if pair[0].kind in {"name", "pronoun"}]
+    return (named or candidates)[-1]
 
 
 def _sign_before(

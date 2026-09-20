@@ -29,3 +29,18 @@ def test_eval_physicists_smoke(tmp_path):
     assert metrics["qa"]["global"]["positive"] > 0
     assert (tmp_path / "report.md").exists()
     assert evaluation.metrics == metrics
+
+
+def test_eval_physicists_section_smoke(tmp_path):
+    from pathlib import Path
+
+    corpus = Path(__file__).resolve().parents[1] / "corpus" / "physicists" / "en"
+    if not corpus.exists():
+        pytest.skip("corpus/physicists/en is not available")
+
+    evaluation = run_evaluation(tmp_path, limit=6, unit="section", source="en")
+
+    metrics = json.loads((tmp_path / "metrics.json").read_text(encoding="utf-8"))
+    assert {"intra_article", "false_merges", "qa_hop", "garbage_converged"} <= set(metrics)
+    assert metrics["world"]["contexts"] > 6
+    assert evaluation.metrics["world"]["contexts"] == metrics["world"]["contexts"]

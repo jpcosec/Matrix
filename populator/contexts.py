@@ -11,12 +11,14 @@ from collections import Counter
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable, Literal
+from typing import Any, Callable, Literal
 
 from .extract import Document, Sentence, split_sentences
 from .tokenize import normalize, tokenize
 
 HEADING_RE = re.compile(r"^#\s+(.*)$", re.MULTILINE)
+ARTICLE_TITLE_RE = re.compile(r"^#\s+(?!#)(.*)$", re.MULTILINE)
+LEVEL2_RE = re.compile(r"^##\s+(?!#)(.*)$", re.MULTILINE)
 
 PRONOUNS = {
     "she", "he", "it", "they", "her", "him", "his", "hers", "their",
@@ -70,6 +72,7 @@ class Chunk:
     title: str
     text: str
     char_offset: int
+    metadata: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -132,26 +135,36 @@ def chunk_documents(
     docs: list[Document],
     unit: Literal["document", "section"] = "document",
 ) -> list[Chunk]:
-    """Splits documents into declaration contexts."""
+    """Splits documents into declaration contexts.
+
+    With ``unit="section"`` the lead is ``<stem>#0`` and every markdown ``## ``
+    heading opens ``<stem>#n`` (``### `` stays inside its section); the chunk
+    title is the article title plus, for sections, the heading, so the person's
+    name is a `name` sign in every section of their article.
+    """
 
     if unit not in {"document", "section"}:
         raise ValueError(f"unsupported unit: {unit}")
     chunks: list[Chunk] = []
     for document in docs:
         stem = Path(document.document_id).stem
+        # Headings live in the raw text: `clean_markdown` blanks the markers but
+        # preserves offsets, so the cleaned text can be sliced with raw offsets.
+        source = document.raw_text or document.text
         if unit == "document":
             chunks.append(
                 Chunk(
                     ctx_id=stem,
                     document_id=document.document_id,
-                    title=_first_heading(document.text),
+                    title=_first_heading(source),
                     text=document.text,
                     char_offset=0,
+                    metadata={"article": stem},
                 )
             )
             continue
-        headings = list(HEADING_RE.finditer(document.text))
-        if not headings:
+        title_match = ARTICLE_TITLE_RE.search(source)
+        if title_match is None:
             chunks.append(
                 Chunk(
                     ctx_id=f"{stem}#0",
@@ -159,19 +172,26 @@ def chunk_documents(
                     title="",
                     text=document.text,
                     char_offset=0,
+                    metadata={"article": stem},
                 )
             )
             continue
-        for index, heading in enumerate(headings):
-            start = heading.start()
-            end = headings[index + 1].start() if index + 1 < len(headings) else len(document.text)
+        article_title = title_match.group(1).strip()
+        sections = list(LEVEL2_RE.finditer(source))
+        boundaries = [(title_match.end(), None)] + [
+            (match.start(), match.group(1).strip()) for match in sections
+        ]
+        for index, (start, heading) in enumerate(boundaries):
+            end = boundaries[index + 1][0] if index + 1 < len(boundaries) else len(document.text)
+            title = article_title if heading is None else f"{article_title} — {heading}"
             chunks.append(
                 Chunk(
                     ctx_id=f"{stem}#{index}",
                     document_id=document.document_id,
-                    title=heading.group(1).strip(),
+                    title=title,
                     text=document.text[start:end],
                     char_offset=start,
+                    metadata={"article": stem},
                 )
             )
     return chunks
@@ -300,7 +320,13 @@ def _is_contiguous(chunk: Chunk, left: _Token, right: _Token) -> bool:
     """Reports whether two tokens are adjacent enough to share a name window."""
 
     segment = chunk.text[left.span[1] - chunk.char_offset : right.span[0] - chunk.char_offset]
-    return not any(char in segment for char in "\n,;()")
+    return _segment_is_contiguous(segment)
+
+
+def _segment_is_contiguous(segment: str) -> bool:
+    """Reports whether the text between two tokens allows a name window."""
+
+    return not any(char in segment for char in "\n,;()\u2014\u2013-")
 
 
 def _title_signs(chunk: Chunk, function_words: set[str]) -> list[tuple[str, str]]:
@@ -321,7 +347,9 @@ def _title_signs(chunk: Chunk, function_words: set[str]) -> list[tuple[str, str]
             tokens,
             index,
             function_words,
-            lambda left, right: True,
+            lambda left, right: _segment_is_contiguous(
+                title[left.char_span[1] : right.char_span[0]]
+            ),
             lambda position: _is_connector(title, 0, tokens[position].norm, tokens[position].char_span[0]),
         )
         window = tokens[index:end]

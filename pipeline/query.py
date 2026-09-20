@@ -66,19 +66,23 @@ def ask(
     if start is None:
         return answer
     worlds = _reachable_worlds(system, start, group, hops)
-    for symbol in sorted(group):
-        context = symbol.split("@", 1)[-1]
-        world_id = f"wigame:{context}:{relation}"
-        if world_id in system.wigames and world_id not in worlds:
-            worlds.append(world_id)
-    answer.path = worlds
-    for world_id in worlds:
+    reached = {world_id for world_id, _ in worlds}
+    expanded = list(worlds)
+    for _, current_group in worlds:
+        for symbol in sorted(current_group):
+            context = symbol.split("@", 1)[-1]
+            world_id = f"wigame:{context}:{relation}"
+            if world_id in system.wigames and world_id not in reached:
+                reached.add(world_id)
+                expanded.append((world_id, current_group))
+    answer.path = [world_id for world_id, _ in expanded]
+    for world_id, current_group in expanded:
         wigame = system.wigames[world_id]
         for fact in wigame.facts.values():
             proposition = fact.proposition
             if proposition.relation_id != relation or fact.truth.value != "true":
                 continue
-            if proposition.subject_symbol_id not in group:
+            if proposition.subject_symbol_id not in current_group:
                 continue
             object_symbol = proposition.object_symbol_id
             signs = _signs_of(system, object_symbol)
@@ -88,7 +92,9 @@ def ask(
     answer.objects = _dedupe(answer.objects)
     if object_norm is not None and answer.truth_for(object_norm) == "true":
         return answer
-    if object_norm is not None and _is_explicitly_false(system, worlds, group, object_norm, relation):
+    if object_norm is not None and _is_explicitly_false(
+        system, [world_id for world_id, _ in expanded], group, object_norm, relation
+    ):
         answer.explicit_false = True
     return answer
 
@@ -116,39 +122,45 @@ def _start_wigame(system: Any, relation: str, subject_symbol: str) -> str | None
     return None
 
 
-def _reachable_worlds(system: Any, start: str, group: set[str], hops: int) -> list[str]:
-    reached = [start]
-    frontier = [start]
+def _reachable_worlds(
+    system: Any,
+    start: str,
+    group: set[str],
+    hops: int,
+) -> list[tuple[str, set[str]]]:
+    """Follows promoted projections, transporting the linked symbols as it goes."""
+
+    reached: list[tuple[str, set[str]]] = [(start, set(group))]
+    seen = {start}
+    frontier = [(start, set(group))]
     for _ in range(max(hops, 0)):
-        next_frontier: list[str] = []
-        for world_id in frontier:
+        next_frontier: list[tuple[str, set[str]]] = []
+        for world_id, current_group in frontier:
             for projection in system.projections.values():
-                target = _projection_neighbour(projection, world_id, group)
-                if target is None or target in reached:
+                if projection.source_wigame_id != world_id:
                     continue
-                reached.append(target)
-                next_frontier.append(target)
+                linked = _linked_targets(projection, current_group)
+                if not linked or projection.target_wigame_id in seen:
+                    continue
+                transported = current_group | linked
+                seen.add(projection.target_wigame_id)
+                reached.append((projection.target_wigame_id, transported))
+                next_frontier.append((projection.target_wigame_id, transported))
         if not next_frontier:
             break
         frontier = next_frontier
     return reached
 
 
-def _projection_neighbour(projection: Any, world_id: str, group: set[str]) -> str | None:
-    """Returns the neighbour reachable through one projection, if the group is linked.
+def _linked_targets(projection: Any, group: set[str]) -> set[str]:
+    """Returns the target symbols linked from the group by one projection."""
 
-    A projection between two converged worlds is usable in both directions: the
-    referent group is what travels, not the symbol order.
-    """
-
-    if projection.source_wigame_id == world_id:
-        if any(symbol in projection.row_axis and any(projection.row(symbol).values()) for symbol in group):
-            return projection.target_wigame_id
-        return None
-    if projection.target_wigame_id == world_id:
-        if any(symbol in projection.column_axis and any(projection.column(symbol).values()) for symbol in group):
-            return projection.source_wigame_id
-    return None
+    linked: set[str] = set()
+    for symbol in group:
+        if symbol not in projection.row_axis:
+            continue
+        linked |= {column for column, value in projection.row(symbol).items() if value}
+    return linked
 
 
 def _is_explicitly_false(

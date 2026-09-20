@@ -218,3 +218,38 @@ def test_fallback_never_uses_names_as_verbs():
 
     assert not any(relation in {"rel:alexander", "rel:robert", "rel:s"} for relation in relations)
     assert "rel:work" in relations
+
+
+def test_dated_birth_and_death_patterns():
+    text = (
+        "# Emmy Noether\n\n"
+        "Emmy Noether was born on 23 March 1882 in Erlangen. "
+        "She died on 14 April 1935 in Bryn Mawr.\n"
+    )
+    context = build_context(chunk_documents([Document("Q7099.md", text)])[0], lang="en")
+
+    found = {(d.relation, d.a, d.b) for d in decompose_heuristic(context, lang="en")}
+
+    assert ("born_in", "emmy_noether@Q7099", "erlangen@Q7099") in found
+    assert ("died_in", "she@Q7099", "bryn_mawr@Q7099") in found
+
+
+def test_award_adds_the_canonical_nobel_object():
+    text = (
+        "# Marie Curie\n\n"
+        "She won the Nobel Prize in Physics. She received the Nobel Prize in Chemistry.\n"
+    )
+    context = build_context(chunk_documents([Document("Q7186.md", text)])[0], lang="en")
+
+    found = {(d.relation, d.a, d.b) for d in decompose_heuristic(context, lang="en")}
+
+    assert ("award", "she@Q7186", "nobel_prize@Q7186") in found
+
+
+def test_employer_keeps_the_whole_university_name():
+    text = "# Emmy Noether\n\nShe worked at the University of Göttingen.\n"
+    context = build_context(chunk_documents([Document("Q7099.md", text)])[0], lang="en")
+
+    found = {(d.relation, d.a, d.b) for d in decompose_heuristic(context, lang="en")}
+
+    assert ("employer", "she@Q7099", "university_of_gottingen@Q7099") in found

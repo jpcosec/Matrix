@@ -17,3 +17,4 @@ Un motor de conocimiento que **puebla** mundos lógicos desde texto crudo (chunk
 Código: `matrix/` (motor, subtree), `sia/` (CHIC), `populator/` (chunker), `pipeline/` (descomposición, ingesta, convergencia y CLI), `corpus/vegetales/` (corpus de prueba). Tests: `tests/` (raíz) y `matrix/tests/`. Uso: [README raíz](../README.md).
 
 > **Documentación técnica:** [`docs/technical.md`](../docs/technical.md). Módulos, estructuras de datos, parámetros, comandos, corpus, métricas, resultados medidos y limitaciones.
+> **Metodología de pruebas:** [`docs/methodology.md`](../docs/methodology.md). Por qué y cómo se hizo cada prueba, y cómo diseñar una nueva.

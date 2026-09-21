@@ -32,6 +32,7 @@ texto ─► populator: chunks (contextos), signos locales, offsets
 | `corpus/physicists/` | corpus de evaluación (89 físicos: Simple English + EN + Wikidata + GAP) |
 
 > **Documentación técnica:** [`docs/technical.md`](docs/technical.md). Módulos, estructuras de datos, parámetros, comandos, corpus, métricas, resultados medidos y limitaciones.
+> **Metodología de pruebas:** [`docs/methodology.md`](docs/methodology.md). Por qué y cómo se hizo cada prueba, y cómo diseñar una nueva.
 
 ## Uso
 

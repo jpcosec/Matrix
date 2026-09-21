@@ -1,13 +1,38 @@
 # Convergencia de configuraciones: poblar mundos lógicos desde texto sin catálogo global de símbolos
 
-**Documento técnico para publicación.** Estado del repositorio: `main` en `da21ea3` (2026-09-20).
-Todo número citado aquí sale de una corrida reproducible (§13) y de los informes por etapa en
-`.herdr/*_report.md`. Donde un resultado es malo, se reporta malo: ningún umbral se ajustó para
-mejorar una métrica.
+**Documento técnico para publicación.** Este trabajo es la **contraparte empírica** de dos piezas
+del repositorio original de Matrix (`jpcosec/Matrix`), y está escrito para leerse junto a ellas:
+
+- el *position paper* **«Logical and Semantic Guarantees in LLMs Require More Than Continuous
+  Embeddings»** (`paper_v2/`), citado aquí como **[PP]** con su sección;
+- la documentación operativa del motor, en particular **«WiGame, Context and Disambiguation»**
+  (`docs/context_and_wigame.md`, **[CW]**), el **pipeline de ingesta** (`docs/language_to_matrix_pipeline.md`,
+  **[LP]**) y el **harness de KBs** (`docs/kb_fanout_harness.md`, **[KH]**), con sus KBs versionadas de
+  Wikipedia (`examples/kb_wikipedia_*`).
+
+[PP] cierra diciendo que establece los fundamentos «without presenting empirical evaluation
+metrics». [CW] afirma que acumular contextos desambigua un símbolo, y que la identidad entre
+contextos «is a reviewed decision, not an automatic normalization». [KH] materializa esa identidad
+como una curación manual en `aliases.yaml`. Este documento toma esas tres afirmaciones y les pone un
+mecanismo y números: **qué propone esos alias, con qué evidencia, cuándo puede hacerlo y cuándo
+no**. La sección 10 recorre el trabajo original afirmación por afirmación y dice, para cada una, si
+nuestros resultados la confirman, la matizan o la contradicen.
+
+Estado del repositorio: `main` (2026-09-21). Todo número citado sale de una corrida reproducible
+(§14) y de los informes por etapa en `.herdr/*_report.md`. Donde un resultado es malo, se reporta
+malo: ningún umbral se ajustó para mejorar una métrica.
 
 ---
 
 ## Resumen
+
+El *position paper* de Matrix sostiene que las garantías lógicas y semánticas exigen una capa
+discreta de mundos locales con verdad `V_i` y sentido `S_i`, y deja dos cosas abiertas: no presenta
+evaluación empírica, y admite que el mapeo de palabras a símbolos es probablemente estocástico y
+ajeno a la lógica formal. La documentación posterior del motor afirma que acumular contextos
+desambigua un símbolo y que la identidad entre contextos es una decisión revisada, que hoy se
+escribe a mano en un archivo de alias. Este trabajo aporta el mecanismo que falta entre ambas
+afirmaciones y lo mide.
 
 Presentamos un sistema que puebla una base de conocimiento lógica desde texto crudo y permite
 consultarla conversando, al estilo de SHRDLU, con cada respuesta anclada a la cita que la sostiene.
@@ -33,6 +58,14 @@ configuraciones del símbolo, y el umbral de promoción exige al menos tres conf
 informativas compartidas, mientras que la mediana real es una declaración por símbolo. El cuello de
 botella no es la regla de convergencia sino la capa de declaraciones.
 
+La prueba más exigente es contra el propio repositorio original: sobre las 699 propuestas de su KB
+de diez artículos de Wikipedia, con los 70 pares de alias que una persona curó a mano como verdad de
+referencia, la convergencia **no recupera ninguno** y tampoco fusiona nada en falso. Ningún par de
+oro comparte tres configuraciones, y los mejores candidatos miden 0.863 frente al techo teórico de
+0.865 que la ley predice para dos. El experimento expone además dos defectos de nuestros filtros en
+KBs pequeñas. La curación manual sigue siendo necesaria; lo que este trabajo aporta es saber
+exactamente cuánta evidencia haría falta para relevarla.
+
 Documentamos además un fallo de ingeniería con valor general. La primera implementación comparaba
 todos los símbolos contra todos en matrices densas: 7.9 GB con 4 427 símbolos y muerte por falta de
 memoria con 5 701. El rediseño **aglomerativo**, que calcula la intensidad solo sobre pares
@@ -54,11 +87,14 @@ Plegar `Curie` a una entidad global decide, en la entrada, que Marie y Pierre so
 cadena. Resolver `she` en el momento de leerlo decide el referente con la información de una sola
 oración. Y el filtro de ruido trata la ausencia de co-ocurrencia como si fuera una afirmación.
 
-Matrix propone otra cosa. Su tesis, tomada del *Tractatus*, es que el significado de un signo es su
+Matrix propone otra cosa. [PP] argumenta que la falta de fiabilidad de los modelos de lenguaje es
+representacional antes que informacional, porque un espacio continuo confunde la falsedad con la
+inaplicabilidad. Su tesis, tomada del *Tractatus*, es que el significado de un signo es su
 uso dentro de un juego de lenguaje, y que lo que tiene sentido o no lo tiene está fijado por la
 forma lógica del juego, no por la frecuencia con que algo se dijo. De ahí se sigue una consecuencia
-de diseño que organiza todo este trabajo: **no hay que desambiguar antes de poblar; la
-desambiguación es lo que ocurre cuando muchos contextos hablan del mismo campo**.
+de diseño que organiza todo este trabajo, y que [CW] ya enuncia cuando dice que lo que un símbolo
+denota es «the path/leaf where its occurrences converge»: **no hay que desambiguar antes de poblar;
+la desambiguación es lo que ocurre cuando muchos contextos hablan del mismo campo**.
 
 ### 1.2 La tesis
 
@@ -83,7 +119,10 @@ desambiguación es lo que ocurre cuando muchos contextos hablan del mismo campo*
    por símbolo y predice los valores de intensidad observados.
 5. **Un rediseño aglomerativo** con memoria acotada por el número de declaraciones, junto con el
    registro honesto del fallo que lo motivó y una barrera operativa contra procesos desbocados.
-6. **Un protocolo de evaluación** con cuatro regímenes, tres descompositores, verdad de referencia
+6. **Un diálogo explícito con el trabajo original** (§10): diecisiete afirmaciones de [PP], [CW],
+   [LP] y [KH] contrastadas con nuestros resultados, incluida una contradicción declarada sobre el
+   plegado de alias en la entrada y una evaluación contra la curación manual de las KBs originales.
+7. **Un protocolo de evaluación** con cuatro regímenes, tres descompositores, verdad de referencia
    externa (Wikidata, identidad de artículo) y métricas que separan la señal del algoritmo de la
    calidad de la extracción.
 
@@ -91,28 +130,95 @@ desambiguación es lo que ocurre cuando muchos contextos hablan del mismo campo*
 
 ## 2. Antecedentes
 
-### 2.1 Matrix: el *Tractatus* como motor booleano
+### 2.1 El trabajo original: qué afirma y qué deja abierto
 
-Matrix representa el conocimiento como una colección de **juegos de lenguaje** (`WiGame`). Cada
-juego está indexado por un contexto y una relación, `WiGame(ctx, R)`, y mantiene dos matrices sobre
-sus ejes de símbolos:
+[PP] sostiene que los *embeddings* continuos no bastan como sustrato semántico y que hace falta una
+capa discreta, de alcance local, donde el signo lingüístico quede separado de la estructura lógica.
+Su tesis central es que la alucinación es también un problema de **representabilidad**: un sistema
+debería rechazar lo que no puede expresarse en la gramática local del sentido. De ese trabajo
+tomamos, sin modificarlas, las piezas siguientes.
 
-- **`S_i`, la forma lógica.** Dice qué combinaciones tienen sentido en el juego. Sus valores son
-  `sinnvoll` (con sentido), `sinnlos` (tautológico o vacío) y `unsinnig` (absurdo). Es *a priori*
-  respecto de los hechos del juego: emerge de la firma de la relación y del cruce de contextos
-  cerrados. Nunca se estima por frecuencias. Que dos signos no co-ocurran no vuelve absurda su
-  combinación; el silencio no es un sinsentido.
-- **`V_i`, los valores de verdad.** Tres valores: `TRUE`, `FALSE`, `UNKNOWN`. `UNKNOWN` es un
-  ciudadano de primera clase: es lo que responde el sistema cuando nadie ha afirmado algo.
+- **La partición del mundo `W_i`** ([PP] §3): un contexto, un espacio lógico `L_i` de coordenadas
+  admisibles, una matriz booleana de verdad `V_i` y una de sentido `S_i`, con la proyección operativa
+  `W_i* = V_i ⊙ S_i`. En el motor, cada partición es un juego de lenguaje `WiGame`, y [CW] precisa
+  que un juego es **(ejes + relación) bajo un contexto**: «Two WiGames with equal axes and relation
+  but different contexts are not the same object».
+- **Los tres estados de sentido** ([PP] §2): `sinnvoll`, `sinnlos` (tautología o contradicción, que
+  no dice nada del mundo) y `unsinnig` (absurdo, sin coordenada en `L_i`). `S_i` es *a priori*
+  respecto de los hechos: según el apéndice de representaciones cerradas de [PP], dentro de un
+  contexto cerrado el sentido es casi trivial, y `S_i = 0` emerge estructuralmente **en los cruces de
+  contexto**, derivable de los esquemas y no listado a mano. [CW] añade que `unsinnig` significa
+  «outside this context», no falso. Nunca se estima por frecuencias.
+- **Signo, símbolo y nombre** ([PP] §2): «A symbol is a sign and a structure within a logical space,
+  used within a context», y un nombre es el mapeo entre signo y símbolo, «sufficiently determined by
+  the context to distinguish it from other symbols». El mismo signo (`gift`) puede ser símbolos
+  distintos.
+- **La desambiguación algebraica** ([PP] §3): las colisiones se detectan con `(W_i ⊗ W_iᵀ) − I` y se
+  resuelven inyectando una dimensión discriminante `D_i` (`rough`/`smooth` para lechuga y espinaca)
+  o abriendo un subcontexto. El apéndice de auto-optimización lo convierte en mantenimiento: la
+  energía `E(R) = ¼(c + i + o + d)` promueve columnas tautológicas a compuertas `C_k`, parte contextos
+  y separa colisiones.
+- **El camino de ingesta en cuatro etapas** ([PP] apéndice): descomposición a forma estándar,
+  reducción a proposiciones candidatas `(R a b)` sin estatus de verdad, chequeo de sentido en dos
+  pasos (indexación por contexto y contradicción), y cómputo matricial. [LP] lo despliega en cinco
+  etapas bajo el marco superficie, significado, grafo.
+- **El LLM pequeño como descompositor de superficie** que «make[s] no logical decisions».
 
-La deducción es álgebra booleana: una matriz de implicación `I` cuya clausura se obtiene por
-elevación al cuadrado repetida, y proyecciones de enrutamiento (`RoutingProjection`) que transportan
-una consulta de un juego a otro. Cada hecho lleva un registro de evidencia con su procedencia
+En el motor, la deducción es álgebra booleana: una matriz de implicación `I` cuya clausura se
+obtiene por elevación al cuadrado repetida, y proyecciones de enrutamiento que transportan una
+consulta de un juego a otro. La verdad es trivaluada (`TRUE`, `FALSE`, `UNKNOWN`), y `UNKNOWN` es lo
+que responde el sistema cuando nadie ha afirmado algo. Cada hecho lleva su procedencia
 `Prov(f) = (documento, desplazamiento, confianza, extractor)`, un nivel epistémico
-(`observed > confirmed > inferred > statistical`) y su estado de curado. El motor se incorporó al
-repositorio como *subtree* y se extendió con los verbos necesarios (§6.2).
+(`observed > confirmed > inferred > statistical`) y su estado de curado. El motor se incorporó a
+este repositorio como *subtree* y se extendió con los verbos necesarios (§6.2).
 
-### 2.2 SHRDLU: el modelo de interacción
+Y tomamos también sus **preguntas abiertas**, que son las que este documento intenta responder:
+
+1. [PP] reconoce en su discusión que «there is a real possibility that the mapping of words to
+   symbols is unequivocally stochastic in nature», y que ese mapeo «does not belong to the realm of
+   formal logic». No dice cómo tratar esa parte estocástica sin contaminar la parte lógica.
+2. [PP] y [LP] ubican la resolución de signo a símbolo **en la entrada**: el descompositor absorbe la
+   variabilidad del signo «including sign-to-symbol resolution and alias folding», y la etapa 1 de
+   [LP] pliega sinónimos con la meta-relación `equivalent`. [CW], escrito después, dice lo contrario:
+   la identidad entre contextos es una decisión revisada y «surface identity» no implica identidad
+   referencial. **Hay una tensión interna en el trabajo original**, y nuestra tesis toma partido por
+   [CW] (§3.2).
+3. [CW] afirma que «with N contexts about the same domain, each additional fact splits the candidate
+   set» y que el referente es «the intersection that survives every context's constraints», pero no
+   da un procedimiento que lo calcule sin conocer de antemano el referente.
+4. [PP] concluye sin métricas empíricas.
+
+### 2.2 El harness de KBs: la identidad como curación manual
+
+[KH] documenta la cadena que puebla KBs de Matrix desde texto real: agentes baratos leen un chunk y
+escriben candidatos, `ingest` valida y emite propuestas `pending` con alcance de contexto, una
+**compuerta de revisión** aprueba o rechaza, y `compile` materializa solo lo aprobado como
+`wigame:<contexto>:<relación>`. Tres decisiones de ese diseño son el punto de partida exacto de
+nuestro trabajo:
+
+- «el mismo `(R a b)` en dos artículos son dos hechos, no uno», y [CW] explica por qué: «Collapsing
+  them into one global cell destroys exactly the structure that disambiguates».
+- La identidad entre contextos es **curación revisada**, guardada en `aliases.yaml` como ternas
+  `(contexto, símbolo) → referente` y materializada como `RoutingProjection`. En la KB de diez
+  artículos esa curación la escribió una persona: `albert_einstein/he → albert_einstein`,
+  `niels_bohr/einstein → albert_einstein`, `otto_hahn/meitner → lise_meitner`. En la de Marie Curie,
+  `she`, `curie` y `maria` apuntan a `marie_curie`.
+- El stress del harness mide una **curva de desambiguación** por acumulación de contextos: con
+  referentes sintéticos, 52 % con un contexto, 91 % con dos y 100 % con cuatro; con 172 personas de
+  DBpedia, 83 % con uno y 100 % con dos. Hasta donde leemos [KH], en ese stress la identidad del
+  referente viene dada (por el generador o por el identificador de DBpedia), de modo que la curva
+  mide cuánto discrimina la acumulación **una vez que se sabe qué símbolos comparten referente**.
+
+[KH] declara además su cuello de botella: «la generación O(contextos²) de pares de proyección»,
+truncada por defecto a 2 000 pares. Y registra un hallazgo que reaparece en nuestro trabajo: los
+homónimos existen también en código (`post_init` definido en cuatro contextos, `self` y `cls` como
+falsos amigos).
+
+Lo que falta en ese cuadro es precisamente **quién propone las filas de `aliases.yaml`**. Esa es la
+pieza que aquí se construye y se mide, incluida una evaluación directa contra esa curación manual
+(§9.5).
+
+### 2.3 SHRDLU: el modelo de interacción
 
 De SHRDLU (Winograd, 1971) no tomamos el mundo de bloques ni el planificador con retroceso, sino el
 **bucle de conversación**: afirmar, preguntar, pedir una justificación (`why`), recibir una pregunta
@@ -120,7 +226,7 @@ de aclaración cuando la frase es ambigua, y definir conceptos nuevos hablando. 
 Micro-Planner se sustituye por el punto fijo booleano del núcleo. El modelo de lenguaje, cuando
 interviene, analiza y verbaliza; no decide la verdad de nada.
 
-### 2.3 SIA/CHIC: la intensidad de implicación
+### 2.4 SIA/CHIC: la intensidad de implicación
 
 El Análisis Estadístico Implicativo (Gras et al., *Statistical Implicative Analysis*, Springer SCI
 127, 2008) mide cuán sorprendente es que una regla `a → b` tenga tan pocos contraejemplos. Sobre `n`
@@ -143,7 +249,7 @@ importa es la **direccionalidad**: `ϕ(a,b)` alto y `ϕ(b,a)` bajo significa que
 de `a` se dice de `b`, pero no al revés. Esa asimetría es exactamente la forma de una proyección
 entre un símbolo pobre, como un pronombre, y uno rico, como un nombre propio.
 
-### 2.4 Korel: la capa de signos
+### 2.5 Korel: la capa de signos
 
 De Korel (un sistema de recuperación en Go) tomamos solo las tres primeras fases de su cadena:
 extracción, tokenización con lista de paradas, y agrupación voraz de términos de varios tokens. No
@@ -178,6 +284,11 @@ aparece. Nunca se usa para declarar identidad.
 vive en el artículo de Marie y el otro en el de Pierre, y es el uso, no la cadena, lo que decidirá
 si se proyectan. La normalización se limita a minúsculas y separadores; sirve como *evidencia
 superficial* en la primera pasada del algoritmo y nada más.
+
+La definición es la lectura literal de [PP] §2 («a symbol is a sign and a structure within a logical
+space, used within a context») y de [CW] (`she@marie_curie`). Se aparta, en cambio, del apéndice de
+ingesta de [PP] y de la etapa 1 de [LP], que pliegan alias en la entrada. La razón y la
+reconciliación están en §10.2.
 
 ### 3.3 Declaraciones y configuraciones
 
@@ -220,7 +331,9 @@ derivaba candidatos a `unsinnig` de los pares de conceptos que nunca co-ocurría
 entrada y deduplicaba entre contextos. La métrica de éxito era «recuperación con procedencia».
 
 Eso es, con otro nombre, un grafo de conocimiento por co-ocurrencia, que es precisamente lo que
-Matrix rechaza. Confunde tres planos que el *Tractatus* separa: lo que **se dijo** (hechos de un
+Matrix rechaza. [PP] lo dice sin ambigüedad en su discusión: los grafos de conocimiento capturan
+«semantic co-occurrence» pero no «logical paths», y no tienen categoría para las combinaciones mal
+formadas. Confunde tres planos que el *Tractatus* separa: lo que **se dijo** (hechos de un
 juego), lo que **puede decirse** (forma lógica), y lo que **suele decirse junto** (frecuencia). Una
 regularidad estadística no es un hecho ni una regla de sentido, y que algo no se haya dicho no lo
 vuelve absurdo.
@@ -250,7 +363,9 @@ hace que `s → t` signifique *«toda configuración de `s` es también configur
 - **Tautología (`taut_df = 0.30`).** Una configuración que aparece en más del 30 % de los contextos
   es *sinnlos* respecto del corpus: es verdadera para casi todos y no discrimina a nadie. En el
   corpus de físicos la única descartada es `instance|a|physicist`, presente en 54 de 178 contextos.
-  Ser físico no identifica a ningún físico.
+  Ser físico no identifica a ningún físico. Es el mismo movimiento que [PP] §3 hace con `vegetable` y `food`, que son
+  verdaderas para todo objeto de `W_i` y se retiran «to facilitate further analysis», trasladado del
+  juego al corpus.
 
 ### 5.3 Intensidad sobre pares candidatos
 
@@ -277,6 +392,10 @@ Para un candidato `(s,t)` con `ϕ(s,t) ≥ φ_min = 0.90`:
    `ϕ(s,t) ≥ 0.95` y las mismas guardas.
 3. Todo lo demás queda como `proposed` en la cola de curado, con sus configuraciones compartidas y
    las oraciones citadas, para que un humano o un LLM asistente lo confirme o lo rechace.
+
+En los términos de [KH], las reglas 1 y 2 son un **revisor determinista** y la regla 3 alimenta la
+compuerta de revisión humana; la relación con la exigencia de [CW] de que la identidad sea una
+decisión revisada se discute en §10.3.
 
 Los candidatos se procesan en orden `(−ϕ, s, t)` para que el resultado sea determinista. Los
 referentes se guardan como particiones en la memoria del mundo (`system.referents`,
@@ -314,7 +433,10 @@ CONVERGER(mundo, contextos, declaraciones):
 | **Convergencia de símbolos** | configuraciones | símbolos `signo@ctx` | proyecciones direccionales, equivalencias y, por jerarquía, una taxonomía de referentes |
 | **Mantenimiento de cada juego** | sujetos del juego | coordenadas `(R, b)` | columnas tautológicas en un subconjunto → compuertas `C_k`; colisiones de `W ⊗ Wᵀ − I` → coordenadas discriminantes `D_i`; subjuegos |
 
-En el corpus de vegetales, que es el ejemplo de referencia del paper de Matrix, el mantenimiento
+El tercer uso es la versión estadísticamente asistida del mantenimiento por energía `E(R)` del
+apéndice de [PP]: promoción de columnas tautológicas a compuertas, división en subcontextos y
+separación de colisiones de `W_i ⊗ W_iᵀ − I`. CHIC no decide ninguna de esas mutaciones; ordena los
+candidatos. En el corpus de vegetales, que es el ejemplo de referencia de [PP] §3, el mantenimiento
 propone `verde` como compuerta del juego de lechugas y separa la colisión `lechuga`/`espinaca` con el
 discriminante `hoja_lisa`/`hoja_rugosa`. Cuando esas dos coordenadas faltan, reporta la colisión
 como no resuelta en lugar de inventar un discriminante.
@@ -350,7 +472,8 @@ Los valores medidos calzan: los pares con 4 configuraciones compartidas dan `ϕ`
 0.9815, los de 5 dan 0.9864 y 0.9865, el de 7 da 0.9921 y el de 9 da 0.9976 (algo por debajo del
 máximo porque `n_{¬t}/n < 1`). La consecuencia es directa: **proponer exige al menos 3
 configuraciones informativas compartidas sin contraejemplos, y con 1 o 2 la intensidad no puede
-pasar de 0.87 por muy idénticos que sean los usos**. El corpus sintético necesitó unas 8
+pasar de 0.87 por muy idénticos que sean los usos**. Como `n_{¬t}/n` es algo menor que 1, en la
+práctica promover a 0.95 exige cuatro. El corpus sintético necesitó unas 8
 configuraciones por símbolo para superar con holgura el umbral. En el corpus real la mediana es
 **una** declaración por símbolo. Esa diferencia, y no un defecto de la regla, explica los resultados
 de §9.
@@ -378,6 +501,14 @@ texto ─► capa de signos: chunks (contextos), signos locales, offsets, índic
               ▼
       promoción por convergencia o curado ─► consultas ruteadas con cita
 ```
+
+El flujo es el camino de ingesta de cuatro etapas del apéndice de [PP], con una diferencia y un
+añadido. La etapa 1 (descomposición) y la etapa 2 (candidatas `(R a b)` sin estatus de verdad) son
+las mismas, salvo que no pliegan alias. La etapa 3a (indexación por contexto) es trivial por
+construcción, porque cada candidata se enruta al juego de su propio contexto de declaración, y la 3b
+(contradicción) la ejerce el runtime. La etapa 4 es el cómputo matricial. El añadido es el bloque de
+convergencia, que [PP] no tiene y que responde a la pregunta que [KH] resuelve a mano: qué
+proyecciones existen entre los juegos.
 
 ### 6.2 Módulos
 
@@ -460,6 +591,13 @@ otro si comparten alguna configuración informativa, y los mundos **crecen por a
 contexto nuevo se compara contra lo que ya existe y contra los referentes ya convergidos. La matriz
 densa es casi toda ceros que se pagan igual. La versión cuadrática no era una implementación
 ingenua del algoritmo correcto: era una implementación fiel de un algoritmo equivocado.
+
+El trabajo original ya contenía la advertencia. [PP] describe el conocimiento global como un
+hipertensor canónico `N × |R| × N` pero añade que «operationally it materializes as a graph of dense
+2D sub-matrices extracted by tensorial projection». Y [KH] midió el mismo muro desde el otro lado:
+su cuello de botella es «la generación O(contextos²) de pares de proyección», que trunca a 2 000
+pares. Nuestro fallo es la versión a nivel de símbolos de ese mismo cuadrático, y la salida (§7.3)
+sirve para ambos.
 
 ### 7.3 El rediseño
 
@@ -658,9 +796,145 @@ Hay dos causas, y ninguna es la regla de promoción:
    deberían ser la misma tienen claves distintas. Es un problema de arranque: los sujetos no
    convergen porque los objetos no han convergido, y los objetos tienen todavía menos soporte.
 
+### 9.5 Contra la curación manual del repositorio original
+
+Es el experimento que más directamente conversa con [KH]. Tomamos las propuestas con alcance de
+contexto de `kb_wikipedia_10_articles` (699 declaraciones sobre Einstein, Bohr, Hahn, Meitner, los
+tres Curie, Franklin, Watson y Crick, extraídas por los agentes del harness) y usamos como verdad de
+referencia el `aliases.yaml` que una persona escribió a mano: 70 pares de símbolos correferentes, 33
+dentro de un mismo contexto y 37 entre contextos. La convergencia corre sobre esas declaraciones sin
+ver los alias. Ningún umbral de intensidad se tocó; sí se variaron los dos filtros, porque el propio
+experimento mostró que interactúan mal con KBs pequeñas.
+
+| Métrica | A: filtros por defecto | B: sin corroboración | C: sin corroboración ni tautología |
+|---|---|---|---|
+| símbolos / variables | 1 071 / 138 | igual | igual |
+| declaraciones por símbolo (media / mediana) | 1.31 / 1 | igual | igual |
+| configuraciones: crudas → tras filtros | 1 118 → **20** | 1 118 → 404 | 1 118 → 407 |
+| pares candidatos | 70 | 94 | 178 |
+| candidatos con `ϕ ≥ 0.90` | **0** | **0** | **0** |
+| promovidos / propuestos | 0 / 0 | 0 / 0 | 0 / 0 |
+| **recall sobre los 70 pares de oro** | **0** | **0** | **0** |
+| **fusiones falsas** | **0** | **0** | **0** |
+| MRR / acierto en 1 / acierto en 3 | 0.089 / 0.049 / 0.146 | 0.146 / 0.122 / 0.195 | 0.158 / 0.122 / 0.171 |
+| consultas con candidato (de 41) | 6 | 8 | 11 |
+| `ϕ` máxima de un par de oro | 0.573 | 0.783 | 0.781 |
+| `ϕ` máxima de cualquier candidato | 0.817 | 0.863 | 0.863 |
+
+**La convergencia no recupera ninguno de los alias curados a mano.** No propone nada y no promueve
+nada, así que tampoco se equivoca: la precisión no está definida, por vacuidad. El resultado es malo y
+es exactamente el que la ley de soporte (§5.8) predice. El histograma de configuraciones compartidas
+por par de oro lo muestra:
+
+| Configuraciones compartidas por el par de oro | 0 | 1 | 2 | ≥ 3 |
+|---|---|---|---|---|
+| sin ningún filtro | 60 | 8 | 2 | **0** |
+| con los filtros por defecto | 65 | 5 | 0 | **0** |
+
+Ningún par de oro comparte tres configuraciones, ni siquiera sin filtros, de modo que por
+construcción ninguno puede pasar de 0.865. Los candidatos de mayor intensidad medidos, 0.8626 y
+0.8627 con dos configuraciones compartidas, están pegados a ese techo teórico: **la ley predice el
+valor con tres cifras**. De los 70 pares de oro, 44 involucran un símbolo con una sola declaración,
+que ni siquiera entra en la matriz; `albert_einstein@albert_einstein` tiene exactamente una.
+
+La señal, sin embargo, existe. En la corrida B el apellido `hahn` usado en el artículo de Meitner
+tiene a `otto_hahn` **primero** entre sus candidatos, y `pierre_curie@marie_curie` tiene primero al
+`pierre_curie` del artículo de Pierre. Son alias entre contextos que el curador escribió a mano y que
+el ranking coloca en cabeza. En la KB de un solo artículo (`kb_wikipedia_marie_curie`), sin filtro de
+tautología, `she@marie_curie` aparece primero entre los candidatos de `marie_curie@marie_curie` con
+`ϕ = 0.73`: el algoritmo ve *casi* lo mismo que el curador, y con una declaración por símbolo ese
+casi no alcanza.
+
+El experimento expuso además **dos defectos de nuestro diseño** que el corpus de físicos no dejaba
+ver:
+
+1. **El filtro de corroboración impide por construcción los alias dentro de un contexto.** Con un
+   contexto por artículo, las configuraciones de `she@marie_curie` y de `marie_curie@marie_curie` se
+   declaran en un único contexto y se descartan antes de medir. Por eso sobreviven 20 de 1 118
+   configuraciones en la corrida A, y por eso la convergencia intra-contexto fue 0 de 157 en §9.3.
+   Los 33 alias intra-contexto de la curación manual son inalcanzables para la regla tal como está.
+2. **El filtro de tautología degenera con pocos contextos.** El umbral es una fracción de los
+   contextos. Con diez contextos descarta todo lo que aparezca en más de tres, y con uno solo lo
+   descarta **todo**: la corrida sobre Marie Curie con el filtro activo tiene cero configuraciones.
+
 ---
 
-## 10. Discusión
+## 10. Diálogo con el trabajo original
+
+Esta sección recorre las afirmaciones de [PP], [CW], [LP] y [KH] que nuestro trabajo toca, y dice
+para cada una qué encontramos. El veredicto usa cuatro palabras: **confirma**, **extiende**,
+**matiza** y **contradice**.
+
+### 10.1 Tabla de correspondencias
+
+| # | Afirmación del trabajo original | Lo que hicimos y medimos | Veredicto |
+|---|---|---|---|
+| 1 | [PP] conclusión: el marco se presenta «without presenting empirical evaluation metrics» | protocolo con cuatro regímenes, tres descompositores y verdad de referencia externa (§8, §9); evaluación contra la curación manual de [KH], con resultado negativo (§9.5) | **extiende** |
+| 2 | [CW]: «a sign such as `she` can be `sinnvoll` inside `ctx:marie_curie`» | definición 1: el símbolo es `signo@contexto`; los pronombres son símbolos y nunca se resuelven en la entrada | **confirma** y lo vuelve definición operativa |
+| 3 | [CW] y [KH]: el mismo `(R a b)` en dos artículos son dos hechos; colapsarlos «destroys exactly the structure that disambiguates» | ingesta por `WiGame(ctx, R)`; la convergencia **usa** esa duplicación como evidencia: una configuración corroborada por dos contextos es la unidad de medida (§5.2) | **confirma**, y muestra para qué sirve la estructura que no se colapsa |
+| 4 | [CW]: acumular contextos desambigua; el referente es «the intersection that survives» | algoritmo que lo calcula sin conocer el referente (§5), y **ley de soporte mínimo** que cuantifica cuánta acumulación hace falta: tres configuraciones corroboradas (§5.8) | **extiende** con un procedimiento y una cota |
+| 5 | [KH]: curva de desambiguación 52 % → 91 % → 100 % con 1, 2 y 4 contextos | con el referente **no dado**, dos contextos por persona alcanzan 6 % de convergencia y 25 % de acierto en el primer candidato (§9.3); sobre la propia KB de diez artículos de [KH], 0 % de recuperación y 12 % de acierto en el primer candidato (§9.5) | **matiza**: la curva de [KH] mide discriminación con identidad conocida; descubrir la identidad es mucho más caro |
+| 6 | [CW]: la identidad entre contextos es «a reviewed decision, not an automatic normalization»; [KH] la guarda en `aliases.yaml` | la convergencia está diseñada para **proponer** filas de `aliases.yaml` con evidencia citada, pero sobre la KB real de [KH] no propone ninguna de las 70 (§9.5); hoy sirve como ranking de apoyo al curador, no como relevo | **extiende** el diseño y **confirma** que la curación manual sigue siendo necesaria |
+| 7 | [PP] apéndice y [LP] etapa 1: el descompositor hace «sign-to-symbol resolution and alias folding» | no plegamos nada en la entrada; el plegado es la **salida** de la convergencia | **contradice** a [PP] y [LP], a favor de [CW] (§10.2) |
+| 8 | [PP]: LLM pequeños como descompositores de superficie que «make no logical decisions» | una llamada por chunk, signos de lista cerrada, validación estricta; convergencia ×5, rango recíproco medio ×4.8, cero fusiones falsas (§9.3) | **confirma** con números |
+| 9 | [PP] §3: `vegetable` y `food`, verdaderas para todo `W_i`, son *sinnlos* y se retiran antes de analizar | filtro de tautología a nivel de corpus: `instance\|a\|physicist` (54 de 178 contextos) no identifica a nadie y se excluye de la medida (§5.2) | **confirma** y traslada el principio del juego al corpus |
+| 10 | [PP] §3: colisiones con `(W ⊗ Wᵀ) − I`, resueltas con un `D_i` | misma operación dentro de cada juego (§5.6), y su **generalización entre contextos**: la matriz configuraciones × símbolos detecta qué símbolos de contextos distintos «colisionan» en sus usos | **extiende** |
+| 11 | [PP] apéndice `E(R)`: columnas tautológicas a compuertas, división de contextos, dimensión separadora mínima | `maintain_wigame` reproduce el ejemplo del paper (`verde` como compuerta; `hoja_lisa`/`hoja_rugosa` como `D_i` de lechuga y espinaca) y reporta `unresolved` cuando no existe separador | **confirma** sobre el ejemplo canónico |
+| 12 | [PP] discusión: los grafos de conocimiento capturan «semantic co-occurrence» pero no «logical paths» | nuestro primer puente cayó exactamente en eso (§4) y hubo que retirarlo | **confirma**, por la vía dolorosa |
+| 13 | [PP] discusión: el mapeo de palabras a símbolos es posiblemente «unequivocally stochastic» y no pertenece a la lógica formal | toda la estadística del sistema vive **en ese mapeo y solo ahí**; `S_i` y `V_i` no reciben nada estimado por frecuencias | **confirma** y le asigna un lugar arquitectónico |
+| 14 | [PP] discusión: verificación en `O(1)` con multiplicación matricial densa; hipertensor canónico `N × \|R\| × N` | las vistas densas globales no se pueden materializar: 11 GB con 5 701 símbolos (§7). La propia [PP] dice que el hipertensor «materializes as a graph of dense 2D sub-matrices» | **matiza**: el `O(1)` vale por celda dentro de un juego, no para construir vistas globales |
+| 15 | [KH]: cuello de botella en «la generación O(contextos²) de pares de proyección», truncada a 2 000 | pares candidatos por índice invertido configuración → símbolos: 326 candidatos en lugar de 32 millones (§7.3) | **extiende**: mismo problema, con una salida que [KH] puede adoptar |
+| 16 | [KH]: homónimos en código (`post_init` en cuatro contextos, `self` y `cls` como falsos amigos) | predicción no probada: símbolos homónimos con configuraciones disjuntas no convergen, como `she@curie` y `she@franklin` en el sintético (§9.1) | **predice**; experimento pendiente |
+| 17 | [PP] §3: hechos `UNKNOWN` (`∅`) distintos de falsos | el REPL responde «No lo sé» cuando el pronombre no converge, con precisión 1.0 en lo que sí responde (§6.4) | **confirma** |
+
+### 10.2 La tensión sobre el plegado de alias
+
+Es el punto donde este trabajo se aparta de la letra de [PP]. La figura de signos y símbolos de [PP]
+muestra la palabra *perro*, la palabra *dog* y un pictograma convergiendo «through the decomposition
+stage (sign→symbol resolution and alias folding) onto a single symbol». Para ese ejemplo el plegado
+en la entrada es inofensivo: son sinónimos léxicos dentro de un mismo contexto cerrado. El problema
+aparece con los signos cuya denotación depende del contexto: pronombres, apellidos compartidos
+(`curie` en el artículo de Marie y en el de Pierre) y descripciones. Plegarlos en la entrada exige
+decidir el referente con la información de una oración, que es justo lo que [CW] prohíbe: «Aliasing
+per context is how a referent survives across contexts without pretending that surface identity
+implies referential identity».
+
+Nuestra lectura reconcilia ambos textos así: **el descompositor absorbe la variabilidad del signo
+(morfología, orden, azúcar sintáctico) pero no su denotación**. La resolución de signo a símbolo es
+trivial y local, `signo@contexto`. El plegado de alias deja de ser una etapa y pasa a ser un
+resultado: la clase de equivalencia que la convergencia promueve. La figura de [PP] sigue siendo
+correcta si la flecha de convergencia se lee como un proceso que ocurre **a lo largo del corpus** y
+no dentro de una oración.
+
+### 10.3 Promoción automática frente a decisión revisada
+
+[CW] dice que la identidad es una decisión revisada. Nosotros promovemos automáticamente cuando la
+intensidad supera 0.95 con dos configuraciones informativas de dos contextos. No lo consideramos una
+violación, por tres razones que el propio [KH] ofrece. Primero, [KH] ya admite **revisores
+deterministas**: el corpus de software se aprueba con `--reviewer ast` y el de máquinas con
+`--reviewer operatoria`. La regla de convergencia es un revisor del mismo tipo, y sus promociones
+quedan registradas con su evidencia (las configuraciones compartidas y las oraciones citadas), su
+nivel epistémico y su estado de curado, de modo que un humano puede revertirlas. Segundo, la regla
+es conservadora por construcción: cero fusiones falsas en los dos modos principales. Tercero, todo
+lo que queda entre 0.90 y 0.95 **no** se promueve: va a la cola de curado, que es exactamente la
+compuerta de revisión de [KH]. La integración natural es que la salida de la convergencia sea un
+archivo de propuestas para `aliases.yaml` con estado `pending`, y que la promoción automática sea
+una política configurable del revisor.
+
+### 10.4 Lo que este trabajo no toca del original
+
+Para no sobrevender: no evaluamos la tesis principal de [PP] sobre los límites de los espacios
+continuos (oscilación de Gibbs, teselado en politopos, el AUROC cercano al azar de los errores
+dentro del canal), ni la integración de la máscara de sentido en la atención, ni la
+omnirepresentación en bloques, ni la operatoria de recetas y máquinas de [KH]. Tampoco construimos
+`S_i` a partir de cruces de contexto: nuestros juegos son contextos cerrados donde, como anticipa
+[PP], el sentido es casi trivial. Nuestro aporte se limita al tramo que [PP] llama periferia de
+signos y símbolos, y a la pregunta de cómo cruzar contextos sin destruir la estructura que los
+distingue.
+
+---
+
+## 11. Discusión
 
 **Lo que los resultados sostienen.** Primero, el principio de aislamiento: los hechos plantados
 quedan fuera en el 100 % de los casos, en todos los regímenes y con todos los descompositores, sin
@@ -678,6 +952,16 @@ cada oración usa uno u otro y cuenta un hecho distinto. Es el resultado más in
 instructivo: la correferencia clásica **no se recupera** por convergencia dentro de un solo texto
 corto. Hace falta que otro texto diga lo mismo.
 
+**La curación manual no se releva todavía.** El experimento de §9.5 es el más honesto del trabajo,
+porque el oro no lo construimos nosotros. Sobre declaraciones extraídas por el harness original, con
+una mediana de una declaración por símbolo, la convergencia no recupera ni uno de los 70 alias que
+una persona escribió. La lectura correcta no es que la curación sea prescindible ni que el algoritmo
+no sirva, sino que ambas cosas operan en regímenes de evidencia distintos: el curador lee la oración
+y sabe quién es `she`; el algoritmo necesita que tres hechos corroborados digan lo mismo de dos
+símbolos. Hoy su utilidad real sobre esa KB es ordenar candidatos para el curador (el correferente
+correcto aparece primero en el 12 % de las consultas y entre los tres primeros en el 20 %), no
+decidir por él.
+
 **El coste de la cobertura.** Combinar ambos descompositores sube la convergencia a 8 de 81, pero
 introduce una fusión falsa y baja el rango recíproco medio. Más declaraciones ruidosas crean más
 candidatos espurios. El modo LLM solo es el mejor equilibrio medido.
@@ -691,7 +975,7 @@ umbral de tres se alcanza.
 
 ---
 
-## 11. Amenazas a la validez
+## 12. Amenazas a la validez
 
 - **Tamaño y dominio.** 89 personas de un solo dominio biográfico, en inglés. Las biografías tienen
   relaciones muy estereotipadas, lo que favorece al descompositor heurístico.
@@ -709,6 +993,9 @@ umbral de tres se alcanza.
   trazado en el Apéndice D, y el modelo de Poisson las trata como evidencias separadas.
 - **Un solo modelo de lenguaje y una sola corrida** de descomposición, que queda cacheada.
 - **GAP no evalúa nada aquí**: su cobertura es 0.
+- **Filtros mal condicionados en KBs pequeñas** (§9.5): la corroboración entre contextos bloquea por
+  construcción los alias dentro de un contexto, y el filtro de tautología, definido como fracción de
+  contextos, descarta todo cuando hay un solo contexto. Ambos se midieron y ninguno se corrigió aquí.
 - **Umbrales fijos** (`0.90`, `0.95`, `0.30`, soporte 2) elegidos antes de medir y no ajustados
   después. No se hizo un barrido de sensibilidad.
 - **El cambio de semántica del ranking** tras el rediseño: las cifras anteriores (0.104 y 0.287) se
@@ -716,13 +1003,22 @@ umbral de tres se alcanza.
 
 ---
 
-## 12. Trabajo futuro
+## 13. Trabajo futuro
 
+0. **Integración con el harness original.** Que la convergencia emita sus candidatos como
+   propuestas `pending` para `aliases.yaml`, con las configuraciones compartidas y las oraciones
+   citadas como evidencia para la compuerta de revisión de [KH]; y que `compile` genere los pares de
+   proyección desde el índice invertido de referentes compartidos en lugar de recorrer
+   `O(contextos²)` pares con un tope de 2 000.
 1. **Canonicalización de objetos por convergencia**, aplicando `equivalent` a los objetos antes que
    a los sujetos y aprovechando inclusiones léxicas como evidencia (`nobel prize` dentro de `nobel
    prize in chemistry`), para romper el problema de arranque de §9.4.
 2. **Más fuentes por entidad**: otras ediciones de Wikipedia, enciclopedias y obituarios, para
    probar la forma fuerte de la tesis del volumen.
+2b. **Evidencia para alias dentro de un contexto.** La corroboración entre contextos no puede ser el
+   único criterio: hace falta una fuente de evidencia local (posición, concordancia, continuidad de
+   sujeto entre oraciones) que alimente candidatos intra-contexto a la compuerta de revisión, y un
+   filtro de tautología con un mínimo absoluto de contextos.
 3. **Una medida adaptada a soporte pequeño.** La ley de §5.8 sugiere estudiar umbrales que dependan
    del soporte, o combinar la intensidad con el número de contextos que corroboran.
 4. **Convergencia estrictamente incremental**, puntuando solo los pares que tocan al lote nuevo.
@@ -734,13 +1030,13 @@ umbral de tres se alcanza.
 
 ---
 
-## 13. Reproducibilidad
+## 14. Reproducibilidad
 
 Entorno: Python 3.13.5, NumPy 2.1.3, SciPy 1.15.3, sin GPU, 15 GB de memoria. Toda corrida pesada va
 bajo tope de memoria y de a una por comando.
 
 ```bash
-# tests: 131 en la raíz y 179 en el motor
+# tests: 133 en la raíz y 179 en el motor
 PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider tests/
 ( cd matrix && PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider )
 
@@ -752,6 +1048,12 @@ python -m pipeline.decompose_batch corpus/physicists --regime pairs --backend pi
 bash scripts/capped.sh 4 -- python -m experiments.eval_physicists --regime pairs --decomposer heuristic --out /tmp/eval/pairs_heuristic
 bash scripts/capped.sh 4 -- python -m experiments.eval_physicists --regime pairs --decomposer llm       --out /tmp/eval/pairs_llm
 bash scripts/capped.sh 4 -- python -m experiments.eval_physicists --regime pairs --decomposer both      --out /tmp/eval/pairs_both
+
+# contra la curación manual del repositorio original (solo lectura sobre ../Matrix)
+KB=/home/jp/proyectos/Matrix/Matrix/examples/kb_wikipedia_10_articles
+bash scripts/capped.sh 4 -- python -m experiments.eval_matrix_kb $KB --out /tmp/eval/mkb10_A
+bash scripts/capped.sh 4 -- python -m experiments.eval_matrix_kb $KB --min-contexts 1 --out /tmp/eval/mkb10_B
+bash scripts/capped.sh 4 -- python -m experiments.eval_matrix_kb $KB --min-contexts 1 --taut-df 1.0 --out /tmp/eval/mkb10_C
 
 # conversación
 cd matrix && PYTHONPATH=.. python -m prototypes.shrdlu.repl ../corpus/physicists/en --lang en
@@ -774,6 +1076,23 @@ configuraciones, las configuraciones tautológicas descartadas y las fusiones fa
 | `n, n_s, n_t, n_st, n_{s∧¬t}` | contingencia del par `(s,t)` sobre las configuraciones |
 | `λ`, `q`, `ϕ`, `τ`, `φ` | esperanza de contraejemplos, índice, intensidad clásica, inclusión, intensidad entrópica |
 | `ref:k` | referente convergido |
+
+### A.1 Correspondencia con la notación del trabajo original
+
+| Trabajo original | Aquí | Observación |
+|---|---|---|
+| `W_i`, partición del mundo ([PP] §3) | `WiGame(ctx, R)` | [CW]: ejes más relación **bajo un contexto**; el contexto es parte de la identidad |
+| `L_i(C_i, R_i)`, índice semántico | ejes de símbolos `signo@ctx` del juego | las coordenadas son símbolos contextuales, nunca signos |
+| `V_i`, `S_i`, `W_i* = V_i ⊙ S_i` | igual | no reciben ninguna cantidad estimada por frecuencias |
+| `∅` (hecho no mapeado) | `UNKNOWN` | tercer valor de verdad |
+| `(W_i ⊗ W_iᵀ) − I`, colisiones | igual dentro del juego; **configuraciones × símbolos** entre contextos | generalización de §5.1 |
+| `D_i`, dimensión discriminante | candidato `D_i` de `maintain_wigame` | ordenado por la jerarquía de SIA, decidido por el álgebra |
+| `C_k`, `WC_k`, compuertas y proyecciones de ruteo | candidatos `gate`, `RoutingProjection` | |
+| `E(R) = ¼(c+i+o+d)`, mantenimiento | `maintain_wigame` | CHIC solo ordena candidatos |
+| `aliases.yaml`: `(contexto, símbolo) → canonical` ([KH]) | referente `ref:k` y candidatos `equivalent` | la convergencia propone lo que [KH] cura a mano |
+| `RoutingProjection` por referente compartido ([CW]) | candidato `projection`, direccional | la dirección sale de la asimetría de `ϕ` |
+| compuerta de revisión `pending / approved / rejected` ([KH]) | `proposed / promoted / rejected` | la regla de promoción es un revisor determinista |
+| hipertensor canónico `N × \|R\| × N` ([PP] apéndice) | no se materializa | §7 |
 
 ## Apéndice B. Parámetros
 
@@ -833,7 +1152,7 @@ punto se resolvió el pronombre: se midió que sus usos coinciden.
 El caso también muestra un límite. Las nueve configuraciones salen de **una enumeración**: una sola
 oración de cada fuente aporta casi todo el soporte. El algoritmo cuenta configuraciones, no hechos
 independientes, y una lista larga pesa como nueve evidencias. Aquí la conclusión es correcta, pero la
-medida sobrestima la independencia de la evidencia (§11).
+medida sobrestima la independencia de la evidencia (§12).
 
 ## Apéndice E. Glosario
 
@@ -848,3 +1167,34 @@ medida sobrestima la independencia de la evidencia (§11).
 - ***Sinnlos* / *unsinnig*.** Vacío por tautológico, y absurdo por violar la forma lógica. Ninguno se
   deriva de frecuencias, salvo la tautología relativa al corpus de §5.2, que solo excluye una
   configuración de la medida y no afirma nada sobre el mundo.
+
+## Referencias
+
+**Trabajo original (repositorio `jpcosec/Matrix`)**
+
+- **[PP]** *Logical and Semantic Guarantees in LLMs Require More Than Continuous Embeddings.*
+  Position paper. `paper_v2/build/paper.composed.md`. Secciones usadas: introducción, §2 fundamento
+  filosófico, §3 representación propuesta, discusión, conclusión y apéndices (límites de la
+  aproximación continua, columna formal, representaciones cerradas, omnirepresentación, camino de
+  ingesta, auto-optimización `E(R)`, integración de la máscara de sentido).
+- **[CW]** *WiGame, Context and Disambiguation.* `Matrix/docs/context_and_wigame.md`. Materializa los
+  átomos `WiGame_Contexto_y_Desambiguacion`, `Contexto_Logico`,
+  `Emergencia_Estructural_de_Si_en_Cruces_de_Contexto`, `Juego_de_Desambiguacion` y
+  `Colapso_Dimensional`.
+- **[LP]** *Pipeline de Ingesta: del lenguaje natural a matrices booleanas.*
+  `Matrix/docs/language_to_matrix_pipeline.md`.
+- **[KH]** *KB Fan-out Harness.* `Matrix/docs/kb_fanout_harness.md`, con las KBs versionadas
+  `Matrix/examples/kb_wikipedia_10_articles/` y `Matrix/examples/kb_wikipedia_marie_curie/`
+  (propuestas, revisión y `aliases.yaml`).
+
+**Otras fuentes**
+
+- Wittgenstein, L. *Tractatus Logico-Philosophicus* (1922).
+- Gras, R., Suzuki, E., Guillet, F., Spagnolo, F. (eds.). *Statistical Implicative Analysis: Theory
+  and Applications.* Springer, Studies in Computational Intelligence 127 (2008). Capítulos 1, 2 y 11.
+- Winograd, T. *Procedures as a Representation for Data in a Computer Program for Understanding
+  Natural Language* (SHRDLU). MIT AI TR-235 (1971).
+- Webster, K., Recasens, M., Axelrod, V., Baldridge, J. *Mind the GAP: A Balanced Corpus of Gendered
+  Ambiguous Pronouns.* TACL 6 (2018).
+- Korel, `github.com/cognicore-io/korel`.
+- Wikipedia en inglés y Simple English Wikipedia (CC BY-SA 4.0); Wikidata (CC0).

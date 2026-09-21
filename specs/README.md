@@ -16,4 +16,4 @@ Un motor de conocimiento que **puebla** mundos lógicos desde texto crudo (chunk
 
 Código: `matrix/` (motor, subtree), `sia/` (CHIC), `populator/` (chunker), `pipeline/` (descomposición, ingesta, convergencia y CLI), `corpus/vegetales/` (corpus de prueba). Tests: `tests/` (raíz) y `matrix/tests/`. Uso: [README raíz](../README.md).
 
-> **Documento técnico completo (estructura de paper):** [`docs/paper.md`](../docs/paper.md). Modelo, algoritmo de convergencia, ley de soporte mínimo, rediseño aglomerativo, protocolo experimental, resultados y amenazas a la validez.
+> **Documentación técnica:** [`docs/technical.md`](../docs/technical.md). Módulos, estructuras de datos, parámetros, comandos, corpus, métricas, resultados medidos y limitaciones.

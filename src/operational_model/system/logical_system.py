@@ -11,9 +11,11 @@ from ..core.relation import Relation
 from ..core.sense_value import SenseValue
 from ..core.symbol import Symbol
 from ..core.thing import Thing
+from ..kernel.formulas import Formula
 from ..routing.context import Context
 from ..routing.routing_projection import RoutingProjection
 from . import logical_system_queries, logical_system_registry
+from .candidates import Candidate
 from .wigame import WiGame
 
 
@@ -29,6 +31,9 @@ class LogicalSystem:
     wigames: dict[str, WiGame] = field(default_factory=dict)
     contexts: dict[str, Context] = field(default_factory=dict)
     projections: dict[str, RoutingProjection] = field(default_factory=dict)
+    rules: list[Formula] = field(default_factory=list)
+    rule_evidence: dict[str, dict] = field(default_factory=dict)
+    candidates: dict[str, Candidate] = field(default_factory=dict)
 
     def register_name(self, name: Name) -> None:
         """Registers a name in the system catalog."""

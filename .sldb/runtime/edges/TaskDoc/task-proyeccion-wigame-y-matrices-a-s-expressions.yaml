@@ -14,8 +14,8 @@ nodes:
     - type.workflow.task
     - workspace.desk
     - workspace:desk
-    hash_c: ca6d69145386dcbcc13d031c057605dc166a70722c8294f0fc4a3130bf7ac084
-    hash_d: 48147cbca3635cb577ee5ca7b55569c485ef6f626b1fa4ed3cc82fa2d455d7a4
+    hash_c: 40185378349039019234d0514f15be1e6fba40404f12b0df6648a732700c5c84
+    hash_d: 4fa57cbbb24cb4b9f4d6f6ae5f395809199585f0b412d4c9df8d814bebed64f7
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
   node_type: sldb_section
@@ -558,8 +558,8 @@ edges:
     origin: structural
 doc_name: task-proyeccion-wigame-y-matrices-a-s-expressions
 model_name: TaskDoc
-hash_c: ca6d69145386dcbcc13d031c057605dc166a70722c8294f0fc4a3130bf7ac084
-hash_d: 48147cbca3635cb577ee5ca7b55569c485ef6f626b1fa4ed3cc82fa2d455d7a4
+hash_c: 40185378349039019234d0514f15be1e6fba40404f12b0df6648a732700c5c84
+hash_d: 4fa57cbbb24cb4b9f4d6f6ae5f395809199585f0b412d4c9df8d814bebed64f7
 semantic_tags:
 - artifact:task
 - representation.markdown

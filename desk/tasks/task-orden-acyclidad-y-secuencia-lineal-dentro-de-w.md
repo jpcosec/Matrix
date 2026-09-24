@@ -1,6 +1,6 @@
 ---
 id: task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
-status: draft
+status: closed
 summary: ''
 tags:
 - workspace:desk

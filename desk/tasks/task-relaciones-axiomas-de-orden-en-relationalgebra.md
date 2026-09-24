@@ -1,6 +1,6 @@
 ---
 id: task-relaciones-axiomas-de-orden-en-relationalgebra
-status: draft
+status: closed
 summary: ''
 tags:
 - workspace:desk

@@ -14,8 +14,8 @@ nodes:
     - type.workflow.task
     - workspace.desk
     - workspace:desk
-    hash_c: daa14340c70fb522285e1e8a3a99392b94c2487052bd52e3f0048ce1d18fe26b
-    hash_d: 8788cec16d376fe5cf8c67648974b3865162c85cd9bcdb3174a794d5bdc8f7e8
+    hash_c: 13ea9e2a0a7edb2f6fd6c20d4085d4a00f7a3a266ddc0f90f614f941142eeca9
+    hash_d: b142464ce8ebf477070732f5f2ace4609e38a577a5a8b938248443e271f4a08b
   facets: {}
 - id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
   node_type: sldb_section
@@ -558,8 +558,8 @@ edges:
     origin: structural
 doc_name: task-relaciones-axiomas-de-orden-en-relationalgebra
 model_name: TaskDoc
-hash_c: daa14340c70fb522285e1e8a3a99392b94c2487052bd52e3f0048ce1d18fe26b
-hash_d: 8788cec16d376fe5cf8c67648974b3865162c85cd9bcdb3174a794d5bdc8f7e8
+hash_c: 13ea9e2a0a7edb2f6fd6c20d4085d4a00f7a3a266ddc0f90f614f941142eeca9
+hash_d: b142464ce8ebf477070732f5f2ace4609e38a577a5a8b938248443e271f4a08b
 semantic_tags:
 - artifact:task
 - representation.markdown

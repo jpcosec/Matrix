@@ -1,6 +1,6 @@
 ---
 id: task-proyeccion-wigame-y-matrices-a-s-expressions
-status: draft
+status: closed
 summary: ''
 tags:
 - workspace:desk

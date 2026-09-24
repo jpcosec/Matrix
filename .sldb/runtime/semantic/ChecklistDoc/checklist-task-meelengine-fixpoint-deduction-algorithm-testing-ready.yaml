@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: 39b239a33f717d8d340eba991902d36ecd025210172d6997c3f5b25fca1bd47b

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 7375e1322fb1b748435ecf5c6074228acd7288c8261fef20b1c0c2b9e7f24c26
+hash_c_after: null
+hash_d_before: e667d7f61fc866ba3ae3ce4589bd81c4d7cdbff59c0d647d64f56378cc37c2b4
+hash_d_after: null
+hash_a_before: e24a944b53ad2d6fba52cb8dd8ecd04dd63fa6864bdaee315b8e713a4ce8021f
+hash_a_after: d0a31c981768542b1b4e8573efbaf1fadfabbad815a44cf121a5650e959dfa24
+actor: null
+timestamp: 2026-09-24 03:22:40.862192+00:00
+previous_hash: c320a59d9f489275b4cb79b4fec7b6fe9bd02d979659a1b904306eb7d8fe69d1
+entry_hash: f1f9016b1fd2a74990441f153916eb16007c444cac53811d0bc35ea4397b52c4

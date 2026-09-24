@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 2bd10919f4706f4c524405c967840479c3f4244a1b1d179f2834005bcf35cd58
+hash_c_after: null
+hash_d_before: 23062915cc365f4082a0224ae0741894ad28d15b293b87ff965826bf23b83e02
+hash_d_after: null
+hash_a_before: 437174cf89bcc0ad519b72f4e82a14174d48018581b95944a3b21586140bbe71
+hash_a_after: abbc45dff5e4c070c2d3a9d058fdc63756da244bafce24b66dfae6a44965ecd6
+actor: null
+timestamp: 2026-09-24 03:23:12.694226+00:00
+previous_hash: 2bc8d5a780f45a3f6f9b821de52444082a4dbe70c0b423a83721a898cf9c1b7b
+entry_hash: b32b06b3d8d8deafb12ce98dd4b14205b97f1c1851b2f816a2a1dd24cb5c8c32

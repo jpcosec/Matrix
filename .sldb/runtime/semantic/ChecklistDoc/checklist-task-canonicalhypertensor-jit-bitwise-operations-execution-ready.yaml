@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-execution-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: 8168607bdb1a1f0b0387da26556f59181116ac57785039747853d8e3cfb2ae5b

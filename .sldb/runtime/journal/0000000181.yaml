@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 83fd78877b9760d8e5ba8bc4db93744b73c7c17bc393e96934c856ae868c22a6
+hash_c_after: null
+hash_d_before: 8c3fdbaad363e339a8330cc176d1d71d9ef58dd1c3996b726c5eb538b06216e8
+hash_d_after: null
+hash_a_before: 86c9663afa78c6facc473a8ad6c2d4197217fdc017dcda96a585e583b84b417b
+hash_a_after: 3fbf7584d930aa43ce2823490427b75a69f32c5be8c6c9e9a0888092fe8e8c92
+actor: null
+timestamp: 2026-09-24 03:23:00.754369+00:00
+previous_hash: 1979ad345bb9398fb6c71300e3120e65c14186fe6a6fc57697b425a09628cbaa
+entry_hash: 257784a149ce281955fd53bb55c4b8967981c11dc19f3f592564a507d20ac0c6

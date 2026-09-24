@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-validation.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: 0fb8f9c76a0da10828aebe65b66b4931178b3bb9b87f8c10129551c658191c51

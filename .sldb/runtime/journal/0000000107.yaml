@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 982be4c94ce4c73afc4325ef21ac251d748c7e490c6ea0fd950bc2fba406cba5
+hash_c_after: null
+hash_d_before: 770fcba014e6612ce5d094d278fe33ecc464c1d565c13eaf512bfa8b7536366c
+hash_d_after: null
+hash_a_before: 1e8c2a3f6a2fdc5f8b8e13982520cd8cc6aad7cf660adc1169f33dbeadf4b39d
+hash_a_after: 155f5a17ba93eb8e97024f85ad4f1cac4164ad4d9dd46ae29038597b63a090bd
+actor: null
+timestamp: 2026-09-24 03:22:11.096711+00:00
+previous_hash: 9dd829d73804c4d1d2f43862d6d53b33e1a50baffe808d14aa9859b27a2c79bc
+entry_hash: 0e4f657daa9a721a6e302cecb80c1244cf5ba2eb6e2e6e3c3deff72ba6d9a8ec

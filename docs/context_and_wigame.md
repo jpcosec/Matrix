@@ -2,8 +2,7 @@
 
 This document states the constitutive role of the context in a `WiGame`, why
 sense (`Si`) is contextual, and how accumulating contexts disambiguates a
-symbol. It is a materialization of the SSOT atoms under
-`TractatusKnowledgeMachine/atoms/`.
+symbol.
 
 ## The claim
 
@@ -73,15 +72,7 @@ articles yields two facts in two contexts, and may be truth-linked by a
 projection. Collapsing them into one global cell destroys exactly the structure
 that disambiguates.
 
-The canonical direction of the architecture is the inverse view: a global facts
-store (`Hipertensor_Canonico`) from which `WiGame` instances are extracted as
-local projections.
-
-## Related atoms
-
-- `Computacion/Modelos_Datos_MEEL/WiGame.md`
-- `Computacion/Modelos_Datos_MEEL/WiGame_Contexto_y_Desambiguacion.md`
-- `Filosofia/Epistemologia_y_Contextos/Contexto_Logico.md`
-- `Computacion/Estructuras_Matriciales/Emergencia_Estructural_de_Si_en_Cruces_de_Contexto.md`
-- `Matematica/Optimizacion_y_Desambiguacion/Juego_de_Desambiguacion.md`
-- `Matematica/Optimizacion_y_Desambiguacion/Colapso_Dimensional.md`
+The canonical direction of the architecture is therefore not a global facts
+store. The former `Hipertensor_Canonico` design — one global tensor from which
+`WiGame`s would be extracted as local views — was never built and is abandoned;
+see [`../desk/drawer/jax/README.md`](../desk/drawer/jax/README.md).

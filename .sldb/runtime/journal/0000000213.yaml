@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-canonicalhypertensor-jit-bitwise-operations-activate
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 61e17074cf9086a74387533a56e909a8a2a28ae62fe689e03b16a6dc741c62a4
+hash_c_after: null
+hash_d_before: 2de51fda0077b1d36b20031e324c976c8b6df30b30ba58d3004e073c533a3d50
+hash_d_after: null
+hash_a_before: 7b464105752aabbdfad5d3cb351e630ff96014eeba67b0ea58b627ac2705f137
+hash_a_after: 00d5baae8e522ca60288fae24990b368de12e0f8ec7f1096cf1da8568859a104
+actor: null
+timestamp: 2026-09-24 03:23:21.557870+00:00
+previous_hash: 068f2f4046d6186035c9220f88ecb4f40f426462d38a518d097a61f3fcdac7ff
+entry_hash: 4ae1f4e4a72d8685e38045489e107614da59833b1f4bf650a3e02d4b29f2b431

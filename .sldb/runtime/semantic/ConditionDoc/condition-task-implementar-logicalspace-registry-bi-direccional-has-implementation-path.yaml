@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: cbf70bd6cb1c779984a7ffe1f03ad026225caf784837147bc543c881c11eb03a

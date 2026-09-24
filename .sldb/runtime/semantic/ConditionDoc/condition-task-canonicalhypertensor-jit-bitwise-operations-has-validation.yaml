@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: 63ee725d2269ebe72f800fc89d371b7d56cfe7a05b1be4716fe762a73340ad9b

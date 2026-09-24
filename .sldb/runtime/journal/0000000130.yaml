@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-canonicalhypertensor-jax-vram-allocation-has-closeout-evidence
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 59cdc6170397106d20befcee86eb8772230146194c152a1da0c28acec1dc5962
+hash_c_after: null
+hash_d_before: abef001bfa4ae6b3765c906e7a939c736b2f9ecc85d2db2b63a22a471b0e579e
+hash_d_after: null
+hash_a_before: d57e42f72cf2207473132f214d2744bf7d159d8c3a343bb1b88d89332ce959db
+hash_a_after: 6512eb187adbcfcda75bcff73d41ebd387f14cd1e9fa4142988294507b5615ab
+actor: null
+timestamp: 2026-09-24 03:22:25.656908+00:00
+previous_hash: 280435f682ec0c38196b66001fde5f674118f0e424d91048f61a70fd2cef602f
+entry_hash: 8bb21b529f213865deb9e746c1aac43806e2eb0e3e5125431fa683acd38d17da

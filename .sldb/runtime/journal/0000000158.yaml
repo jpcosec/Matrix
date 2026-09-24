@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 21746882231fa2ddbd1799902dec904baa633bcc92e557053be690e5405120e2
+hash_c_after: null
+hash_d_before: 5adb03da35b06a7885def248e17cad28c2407a6e1cdf47d4bdc43481d52d1647
+hash_d_after: null
+hash_a_before: d084accfb6538b7e573676b750c1689b41922fd3f54b398f3c5037a499646543
+hash_a_after: 7818861ebb789fffa73aa786cda236fc2b09e6644b1b2489f9e03014c271d358
+actor: null
+timestamp: 2026-09-24 03:22:43.876876+00:00
+previous_hash: c20ad7e8164a221bac648e75a1de237025f6e39bf130b80f19bc3d98a287af7c
+entry_hash: 8dffcf6b1e195c04ed8a382ebbc902f376cd01b9fabb1f825ced7b5b97124874

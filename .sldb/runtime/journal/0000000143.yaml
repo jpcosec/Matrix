@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-implementar-logicalspace-registry-bi-direccional-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: cbf70bd6cb1c779984a7ffe1f03ad026225caf784837147bc543c881c11eb03a
+hash_c_after: null
+hash_d_before: 546b3e8df73073d035f02fd79c1226c6f0c82e35e1edbaa2e92762cea890bf21
+hash_d_after: null
+hash_a_before: cf6601e4d0ba7ebee4180ee72897c92b17aceb4dd2fc9b8f4d6c60768d5fc987
+hash_a_after: 296ff753a3c8a5692551da7408b9c4993581994a403be43350cbacbbe82a4234
+actor: null
+timestamp: 2026-09-24 03:22:33.341577+00:00
+previous_hash: 59759b5221d3b940f35cd53b0e604f981aa99af1457d8c74dd76968ceaf221d4
+entry_hash: 61555c5e93f3636f1639bc815cdb899028b095ccb3c1bc0aca7dfe5f5df20ddf

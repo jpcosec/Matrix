@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-implementar-atomfeeder-activate-to-testing.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: fe73f7fefb74fc0cfb8432cb34cbe959ab2f9362a4013d6c4887cbd2c89a0fd6

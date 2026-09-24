@@ -1,9 +1,0 @@
-model: OperatorDoc
-path: desk/primitives/operators/operator-task-meelengine-core-api-facade-activate.md
-tags:
-- primitive:operator
-- representation.markdown
-- source.document.markdown
-- type.workflow.operator
-- workspace.desk.primitives
-hash_c: eb4832b387fad4bf64dd3a46fdf193785b11440315a898012233c7cec0820d5c

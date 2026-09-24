@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-meelengine-core-api-facade-activate-to-testing.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: c2bf9365a7058db040eb2777438f43513a24e7c2894114aba5ef02808eb618cf

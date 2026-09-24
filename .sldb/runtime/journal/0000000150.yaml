@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence
+field: null
+previous_value: null
+new_value: null
+hash_c_before: f9e73c868dce01de823e6793c0ebda14ab975e3edcff5302b05163e088f8fc41
+hash_c_after: null
+hash_d_before: db465e24f1c092149443a41748b1f70042668b0ccb34e6aa3f81b9b43f32a07a
+hash_d_after: null
+hash_a_before: c0c40901709b3160e5fb43b57a55eb7150461702e58713f27aeca0f23ed53322
+hash_a_after: fbfa386b735d2322af86110101af33e19183cbd667cef40023cf99a8f21c1953
+actor: null
+timestamp: 2026-09-24 03:22:38.274595+00:00
+previous_hash: 7a790ddaff4774e8891bba3375864c3a9a3e21c66e980c67fd99e3583539a58d
+entry_hash: e4932da6f4550546e4a849b220a0164410fa654d4b74e3d267d45777cad1bf66

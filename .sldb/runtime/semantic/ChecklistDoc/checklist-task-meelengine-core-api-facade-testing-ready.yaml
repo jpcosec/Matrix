@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-testing-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: 20d36ed4de797f4cfe7b91256f8f31b5378c1a555529f000be8e2ca523ba433b

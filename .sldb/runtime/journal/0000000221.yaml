@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-implementar-logicalspace-registry-bi-direccional-ready-for-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: b3d351d5d9eb363d05b9440d61113fa2cabd1d3d9b4f39d7fa38aef7da8d497e
+hash_c_after: null
+hash_d_before: 3ccf84bb287b7e9abef1e9b3cc6d62b95a61cf17ff0da0d9f7c0efd4e30edcf9
+hash_d_after: null
+hash_a_before: 0d087d06774f248307c411b3ee79527b297e182175549a6d7b0b57de4897d06b
+hash_a_after: 5e21dbb52b716cb34b630322c9b3d21a828cae5dee0f48fb0fb807356ccf0b57
+actor: null
+timestamp: 2026-09-24 03:23:26.280965+00:00
+previous_hash: 1edf494477547c419781bfe14e2fe8416e70230a1454010518122067f89e0981
+entry_hash: ae327aa27229b3cd84bc060ebf3303a02912aaedefb5fd8a644a0dcf3f577ded

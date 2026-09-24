@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-meelengine-core-api-facade-close-to-complete
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 225dd1fe3377525635a94d183c96c1139d39a4bb3588c1aa7c3025bc45158a88
+hash_c_after: null
+hash_d_before: a6bd360bc50933006631ef20e05ab84a38dd60cc4c987ddc2c52e66d54fe3491
+hash_d_after: null
+hash_a_before: 682c04c9f863cb6abc81681554779a4a14b9cf314120899f9cde8b82cd53c982
+hash_a_after: 135e06ae77308dfe32300e40447848d1b1321219fbd856061f771f2d2b0d65e7
+actor: null
+timestamp: 2026-09-24 03:23:05.236301+00:00
+previous_hash: 5932c2eed64fd330784cb14161d36b960489a327efbe726f88d413c7a6bc5f8d
+entry_hash: 65370c011f24fdc81eacdd5542c89861940bd27e477b2fa2bcf15113fb96c7ad

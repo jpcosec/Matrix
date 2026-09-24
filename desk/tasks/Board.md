@@ -4,15 +4,7 @@ id: board-001
 # Affected workspace or domain
 scope: desk
 # List of task-xxx paths
-tasks:
-- desk/tasks/task-implementar-logicalspace-registry-bi-direccional.md
-- desk/tasks/task-canonicalhypertensor-jax-vram-allocation.md
-- desk/tasks/task-canonicalhypertensor-jit-bitwise-operations.md
-- desk/tasks/task-rulematrixcompiler-sop-reduction.md
-- desk/tasks/task-rulematrixcompiler-si-mask-encoding.md
-- desk/tasks/task-implementar-atomfeeder.md
-- desk/tasks/task-meelengine-core-api-facade.md
-- desk/tasks/task-meelengine-fixpoint-deduction-algorithm.md
+tasks: []
 # List of pill-xxx paths
 pills:
 - desk/contexts/pills.md
@@ -30,31 +22,19 @@ tags:
 
 ## Purpose
 
-_Explain what this board routes and why it exists._
-
-
+Routes the active desk task set for Matrix.
 
 ## Notes
 
-_Add short operational notes about the current routed set._
+The routed set is empty. The previous eight tasks all targeted the abandoned
+JAX / CanonicalHypertensor architecture and were moved to
+`desk/drawer/jax/` with `status: deferred`.
 
-- Implementar LogicalSpace Registry Bi-direccional [draft] - Mapeo O(1) de strings a indices enteros
-- CanonicalHypertensor: JAX VRAM Allocation [draft] - Crear envoltura JAX para estado mundial Vi y Si
-- CanonicalHypertensor: JIT Bitwise Operations [draft] - Funciones JAX compiladas para multiplicacion booleana densa
-- RuleMatrixCompiler: SOP Reduction [draft] - Reducir estructuras AST complejas a Forma Suma de Productos
-- RuleMatrixCompiler: Si Mask Encoding [draft] - Traducir SOP a coordenadas cartesianas de la matriz Si
-- Implementar AtomFeeder [draft] - Ingesta O(1) de hechos puros saltando el parser
-- MEELEngine: Core API Facade [draft] - Proveer assert() y deduce() conectando LogicalSpace y Hypertensor
+The state of the engine lives in each `WiGame`; there is no global
+Hipertensor. See `desk/drawer/jax/README.md`.
 
 ## Task Details
 
 _Generated from the task references above._
 
-- Implementar LogicalSpace Registry Bi-direccional [draft] - Mapeo O(1) de strings a indices enteros
-- CanonicalHypertensor: JAX VRAM Allocation [draft] - Crear envoltura JAX para estado mundial Vi y Si
-- CanonicalHypertensor: JIT Bitwise Operations [draft] - Funciones JAX compiladas para multiplicacion booleana densa
-- RuleMatrixCompiler: SOP Reduction [draft] - Reducir estructuras AST complejas a Forma Suma de Productos
-- RuleMatrixCompiler: Si Mask Encoding [draft] - Traducir SOP a coordenadas cartesianas de la matriz Si
-- Implementar AtomFeeder [draft] - Ingesta O(1) de hechos puros saltando el parser
-- MEELEngine: Core API Facade [draft] - Proveer assert() y deduce() conectando LogicalSpace y Hypertensor
-- MEELEngine: Fixpoint Deduction Algorithm [draft] - Bucle de multiplicacion recursiva hasta estabilizacion (clausura)
+No tasks routed.

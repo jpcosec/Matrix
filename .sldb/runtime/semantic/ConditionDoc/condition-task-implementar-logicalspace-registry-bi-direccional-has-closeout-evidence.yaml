@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: 73f6e484c5150276e9894d3678798904e33331547f4afb7a4dfb4a8f9b16da33

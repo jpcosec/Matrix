@@ -4,7 +4,6 @@ This directory documents the stable architecture and engineering rules of Matrix
 
 ## Core documents
 
-- [Proposition-First Architecture](./proposition_first_architecture.md) - stable direction for the new operational model
 - [Canonical Forms and Ingestion](./canonical_forms_and_ingestion.md) - canonical proposition form and ingestion constraints
 - [Rebuild and Migration Policy](./rebuild_and_migration_policy.md) - how active rebuild work should treat legacy code
 - [Architecture](./architecture.md) - package layout and responsibility split of the active operational model
@@ -21,6 +20,16 @@ This directory documents the stable architecture and engineering rules of Matrix
 - [SHRDLU Prototype Architecture](./shrdlu_prototype.md) - controlled English parser, semantic frames, and lowering to Matrix S-Expressions
 - [Storage Boundary](./storage_boundary.md) - persistence invariants between the YAML prototype and future DB-backed symbol spaces
 
+## Deferred material
+
+The JAX / `CanonicalHypertensor` architecture is abandoned and its documents
+were moved out of this tree to [`../desk/drawer/jax/docs/`](../desk/drawer/jax/docs)
+(with the rest of the deferral in [`../desk/drawer/jax/README.md`](../desk/drawer/jax/README.md)).
+That includes the former `proposition_first_architecture.md` and the
+`specs/architecture_{component,deployment,sequence,state}.*` diagrams, all of
+which described a global tensor store that was never built. State lives in each
+`WiGame`.
+
 ## Related repository resources
 
 - Source code: `src/`
@@ -31,8 +40,7 @@ This directory documents the stable architecture and engineering rules of Matrix
 
 ## Suggested reading order
 
-1. Start with [Proposition-First Architecture](./proposition_first_architecture.md).
-2. Read [Canonical Forms and Ingestion](./canonical_forms_and_ingestion.md).
+1. Start with [Canonical Forms and Ingestion](./canonical_forms_and_ingestion.md).
 3. Read [Rebuild and Migration Policy](./rebuild_and_migration_policy.md).
 4. Read [Architecture](./architecture.md) for the package-level view.
 5. Use [Data Models](./data_models.md) when mapping concepts to code.

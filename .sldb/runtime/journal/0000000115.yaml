@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 9931327c45c858fcc272df67af73ccede583261eaf750098e76de29ece9c025b
+hash_c_after: null
+hash_d_before: 23e8e612a37ff9edec7c7ace555b217a7ab972575847daf34e934e5038fa00cf
+hash_d_after: null
+hash_a_before: 8751b325ade8a816f8d8285c11b75637fdcc247d1b3307d13ab1059d63b557e8
+hash_a_after: 81b578ecfd45eb72219bc6d7d724197c2a86aa44e6383920650cede461e73fa5
+actor: null
+timestamp: 2026-09-24 03:22:16.794686+00:00
+previous_hash: ae2f9c06f3f1438e0ea726178a065e037893fd230db2df1f1909062ab8aacdbf
+entry_hash: ba4cdcc47cdf1af199cc3aee3a4b4e667cc85b7c767670e8665fac0ff74a9331

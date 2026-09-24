@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: bf0860db7ca49696b6867d6dcc9c6ca0c01af6fc0d718b38200ee3d1a8090b7d
+hash_c_after: null
+hash_d_before: da755389f2c235fc2fa33261a2f9e9ccd7d4a3944cfca93aa1e9646954c4963d
+hash_d_after: null
+hash_a_before: 686067df1355614e4746e19ae0714327078bd886ef98dd8bdd1783d9e1226a88
+hash_a_after: f40a12f15ea8756f6d4ca8709c258ff4fd9a20527997616896161e3ee1239bdb
+actor: null
+timestamp: 2026-09-24 03:22:17.949160+00:00
+previous_hash: 58439e2a8821e72f0cbda0ee7169656b52ef5f22ccf29618527d1eda2a5c5b9a
+entry_hash: 0aebbd0f6b8d0df319f9bcce580411cbc628597202d1749459b6a499c59c577d

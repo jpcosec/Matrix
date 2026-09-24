@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-rulematrixcompiler-sop-reduction-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 430c61ecca17bf5781dc76212f199c72c2623c9466ee8a4c6423345578a02dfc
+hash_c_after: null
+hash_d_before: 86dfb8c129fe7703ee33436ac88774fa9141171eb028c656ee16b104bd9fcc02
+hash_d_after: null
+hash_a_before: 7818861ebb789fffa73aa786cda236fc2b09e6644b1b2489f9e03014c271d358
+hash_a_after: fe96f625b3157a7ec2eae27dcccf37abdba40f840fbae5c460222d06fa1ea530
+actor: null
+timestamp: 2026-09-24 03:22:44.671138+00:00
+previous_hash: 8dffcf6b1e195c04ed8a382ebbc902f376cd01b9fabb1f825ced7b5b97124874
+entry_hash: 15452736260e6e531db56dd39f426b1414ec3ec41118454dda326b5a7605fd9f

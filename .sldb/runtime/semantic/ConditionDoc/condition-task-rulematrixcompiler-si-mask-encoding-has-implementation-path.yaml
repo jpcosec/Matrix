@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: abd5b28f8deaa1a8910ca3fcc256a4a15346449c84c83dc0d7fceffbfa09eed8

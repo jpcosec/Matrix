@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-closeout-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: 0d9e383115eb9f81a9cf83eedeb1ea46f8f5c90262272325606dd6e7d2827f37

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-implementar-atomfeeder-closeout-to-close
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 6171f63eb5d53b5d07077a6e21884b5af16fe1b471817fc792b7928538a2c33c
+hash_c_after: null
+hash_d_before: dc4b64c42319c1461f1ce80309aab41087eb7ef40003658e48ddb02ccf71c528
+hash_d_after: null
+hash_a_before: d84cf54b07a1b18df8459307ce3263a367f74f64b23a68bd5b9fd8f11c861cce
+hash_a_after: e8fdc9959b755f7f35a5957cd9e012b9847c19094862f344863a35d0843b9201
+actor: null
+timestamp: 2026-09-24 03:22:56.773592+00:00
+previous_hash: ed299ece4ffc6aea5d639114ec6a7d7c1c3ae005284a56fc236e614bfef05fbd
+entry_hash: 297770e39ff30cd2f02d9701b9917212f923778826f2c669861c9a615f7a989d

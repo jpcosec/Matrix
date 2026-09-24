@@ -13,7 +13,7 @@ The project centers on **sense/meaning matrices**: a separation between truth (`
 - `tools/kb/` — harness de KB: convierte texto, código o specs en `WiGame`s context-scoped con revisión y verificación. Ver [`tools/kb/README.md`](tools/kb/README.md).
 - `examples/` — demos ejecutables, specs y KBs versionadas consultables offline. Ver [`examples/README.md`](examples/README.md).
 - `desk/drawer/shrdlu/` — prototipo separado que baja inglés controlado a operaciones del runtime.
-- `tests/` — suite completa (`pytest`, 133 tests).
+- `tests/` — suite completa (`pytest`, 168 tests).
 - `docs/README.md` — índice de arquitectura y conceptos.
 
 ## Quick start
@@ -43,7 +43,10 @@ python -m tools.kb --kb kb query "(check wigame:ragout:precede (precede picar se
 - `kern:{symbol}`: namespace del kernel para átomos no relacionales en fórmulas proposicionales.
 - `SearchVector`: vector de consulta local dentro de un `WiGame`.
 - `RoutingProjection`: proyección de sujetos entre `WiGame`s; no vacía sólo si comparten referente canónico.
-- `Hipertensor` / `WiGame`: la dirección canónica es un almacén global de hechos del que los `WiGame` son proyecciones locales.
+- `Hipertensor`: descartado. No hay almacén global de hechos; el estado vive en cada `WiGame`. El material diferido está en [`desk/drawer/jax/`](desk/drawer/jax/README.md).
+- `deduce()`: modus ponens trazado sobre la matriz de implicación, iterado a fixpoint, con proveniencia (`system/deduction.py`).
+- `Prov` / `tier`: esquema de proveniencia del hecho (`observed`, `confirmed`, `inferred`, `statistical`) y estado de curación (`core/evidence.py`).
+- operators S-expr: `check`, `assert`, `create`, `ingest`, `return`, `candidate`, `promote`, `reject`, `retract`, `why`, `define`, `project`.
 - provenance: fuente, confianza o derivación guardadas en el `Fact`.
 - `D_i`: máscara discriminativa que identifica dimensiones no informativas.
 - `sinnvoll` / `sinnlos` / `unsinnig`: proposición significativa, estructura tautológica/contradictoria, o fuera del espacio lógico.

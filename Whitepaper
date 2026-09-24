@@ -1175,7 +1175,7 @@ Donde $C(M)$ es la conectividad, $L$ la verosimilitud, $Q$ la calidad del ground
 
 28.3 Colapso Dimensional y Razonamiento DFA
 
-El motor utiliza **JAX** para realizar operaciones tensoriales sobre el espacio lógico:
+El motor realiza operaciones booleanas densas sobre el espacio lógico (Python nativo; no usa JAX):
 
 *   **Colapso Dimensional**: Proyecta una matriz rectangular eje-a por eje-b $V_i$ en una matriz cuadrada de similitud $W = V \otimes V^T$.
 *   **Razonamiento Recursivo**: Mediante la potencia booleana $W^{k+1} = W^k \otimes W^k$, el sistema realiza un enrutamiento jerárquico (DFA multi-hop) para encontrar conexiones lógicas no evidentes a través de puentes y contextos.

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete
+field: null
+previous_value: null
+new_value: null
+hash_c_before: b42ce92c3b988b0a9ee7f5592e65abfbe5915ce0aff6f569479f69674f0a6987
+hash_c_after: null
+hash_d_before: 10f2da7f467a4d449dbbb72a919ad3a79d90e43c237c76bde6160ac27cc15218
+hash_d_after: null
+hash_a_before: 3fbf7584d930aa43ce2823490427b75a69f32c5be8c6c9e9a0888092fe8e8c92
+hash_a_after: 1ff2e242c8b8ac7f2b902fed12dc5557f2f347e175bf67184cc54bf74704ba59
+actor: null
+timestamp: 2026-09-24 03:23:01.358572+00:00
+previous_hash: 257784a149ce281955fd53bb55c4b8967981c11dc19f3f592564a507d20ac0c6
+entry_hash: 78df8237d06b1b72ac6c34d3db0a368822cea5e3f4c5c611fcacc9cb8fd93f83

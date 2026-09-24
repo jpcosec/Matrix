@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-activate-to-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 75a061b8aa4b187b0b0e83f9a3f15b14c60e64ef8bc778b2aab11679faddd797
+hash_c_after: null
+hash_d_before: b7531055dbb8a635db57c5580b2f1ebc609f780880543f62819ba4c101ec04e3
+hash_d_after: null
+hash_a_before: 831802a75f33c205f859f7ecffd1dde8cf9065cf6409bebed31a8b4dfbd49f78
+hash_a_after: 86c9663afa78c6facc473a8ad6c2d4197217fdc017dcda96a585e583b84b417b
+actor: null
+timestamp: 2026-09-24 03:23:00.174532+00:00
+previous_hash: f0f71f03d62431ee670818173f798779023bb3dac0da2ba7de4e48852f2f607d
+entry_hash: 1979ad345bb9398fb6c71300e3120e65c14186fe6a6fc57697b425a09628cbaa

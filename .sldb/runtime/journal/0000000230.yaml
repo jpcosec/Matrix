@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: be06ae99b85885d5ea2e70f4adf5b6571adecb247a7dece4f412c6c4cfe657f2
+hash_c_after: null
+hash_d_before: 3122196f6c326065a76b3b3c2fadc945fc5a12ab36197c97ff24071085f79130
+hash_d_after: null
+hash_a_before: 79b260ca36ac2f955312c3341da4d660e655b32c6b5ecf381f6dd534b92b8563
+hash_a_after: 79a0f2d3a047d7d5acb48ccaef9a4f4a4fcdbd5e7f3957a9e23fd3e12be3199f
+actor: null
+timestamp: 2026-09-24 03:23:32.012738+00:00
+previous_hash: 74b67aa7a0b9ca43297a4c5a904480c128b9cabfcd8783ff25bfd1882e30dc51
+entry_hash: bde091606543f440f09bbdfc7cc3bb31986cd0b9224db98e32c993cc2922825d

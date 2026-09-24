@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: ff6375a582594a23b8a70fbdd1e484fa8ec3cef2bbd3a6c8368bf62ecbfdb288

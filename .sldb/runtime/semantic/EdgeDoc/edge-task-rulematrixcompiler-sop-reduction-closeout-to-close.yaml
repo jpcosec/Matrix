@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-closeout-to-close.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: 4666ad5a4599a7e3121fb5e2554942dea9551ea6f033b75a4cffa7c7b3641570

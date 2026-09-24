@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-meelengine-core-api-facade-has-closeout-evidence
+field: null
+previous_value: null
+new_value: null
+hash_c_before: f84bc79c75811ba522913d4f1223b061cc9afb69fd4fc95e0e301974785ab0fa
+hash_c_after: null
+hash_d_before: 4eb9e46fa455069ccfd02086750684f3c8d74c16e8f2f4459acd9068565289ee
+hash_d_after: null
+hash_a_before: 719e3b42cde739041f6b8633431b6714435f4a6d4cee300d224e57867ef992a3
+hash_a_after: 9bbc417f38fce22b124bf61858d58c9a7327b04547901f6da73f8c08a3447cec
+actor: null
+timestamp: 2026-09-24 03:22:35.480646+00:00
+previous_hash: 939c08b02a160ccf2d4f1defbdc7cbd4198211d3afd07db5e6df51b39a5905e2
+entry_hash: 2222ddf83c737706971335bad12395229415773329e6d2dc2a7109d22705785a

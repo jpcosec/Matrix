@@ -1,19 +1,26 @@
-# Data Models (Materialized View)
+# Data Models
 
-> **⚠️ AVISO DE ARQUITECTURA:** Este documento de diseño ha sido atomizado y migrado al SSOT. 
-> La Base de Datos de Hechos y los modelos operacionales ya NO se definen aquí de forma monolítica.
-> La fuente de la verdad para el diseño reside ahora en los grafos de `TractatusKnowledgeMachine/atoms/`.
+This document is an index of the operational data structures of the Matrix
+framework.
 
-Este documento sirve como índice materializado de las estructuras de datos operacionales del framework Matrix.
+## Central models
 
-## Modelos Centrales (SSOT Links)
-* [[Hipertensor_Canonico]]: La base de datos central de hechos en memoria (Tensor JAX).
-* [[WiGame]]: La proyección local del juego de lenguaje (una vista del hipertensor).
-* [[LogicalSystem]]: El orquestador raíz y registro de diccionarios.
-* [[Proposition]]: La estructura lógica canónica `(R a b)`.
-* [[Fact]]: La proposición con valor de verdad empírico.
-* [[Symbol]]: Entidad lógica que define los ejes del tensor.
-* [[Thing]]: El par operacional símbolo-nombre.
-* [[Relation]]: El operador lógico (eje Y del tensor).
+* `WiGame`: the local language-game view. Each world owns its own `V_i` / `S_i`
+  matrices. There is no global hyper-store: state lives in the world.
+* `LogicalSystem`: the root orchestrator and registry of dictionaries.
+* `Proposition`: the canonical logical structure `(R a b)`.
+* `Fact`: the proposition with an empirical truth value.
+* `Symbol`: logical entity that defines the matrix axes.
+* `Thing`: the operational symbol-name pair.
+* `Relation`: the logical operator (the matrix's Y-axis).
+* `RoutingProjection`: subject-axis projection between two `WiGame`s; non-empty
+  only if they share a canonical referent.
 
-*(Para ver los detalles formales, relaciones 5W1H+ y reglas de diseño, dirígete a los archivos `.md` correspondientes en `TractatusKnowledgeMachine/atoms/Computacion/Modelos_Datos_MEEL/`)*
+## Deferred material
+
+The former `Hipertensor_Canonico` model (a single global fact store backed by a
+JAX tensor, of which `WiGame`s would be local views) was never built and is not
+planned. See [`../desk/drawer/jax/README.md`](../desk/drawer/jax/README.md).
+The `TractatusKnowledgeMachine/atoms/` atom graph this document used to point at
+is not present in this repository.
+

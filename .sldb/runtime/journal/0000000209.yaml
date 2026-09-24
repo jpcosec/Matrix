@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-rulematrixcompiler-sop-reduction-testing-to-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 6d517595c44c5d7257c999eef110b318f963b457cba78b47c030cbbbadb9d18e
+hash_c_after: null
+hash_d_before: 6b3e121b510483f6e09fc62b66e921af3168cd514d8d387f3de596a28406ec8e
+hash_d_after: null
+hash_a_before: 1521750d321907b1df6075c4d2f2e436feeb7ee6ec21bde2dd2dbb1de8499c37
+hash_a_after: db56570898c1657118bdf259219f5fafc8facd2558c42baa63835568e160d6f5
+actor: null
+timestamp: 2026-09-24 03:23:19.206128+00:00
+previous_hash: b256328c1d904c14dcdf915782525f59111cf11177c0da5fa08e84a636d78957
+entry_hash: 12cced79ca4d15bf0f97ca0bd90a82494988e4f9f3613e959b95b0901559616d

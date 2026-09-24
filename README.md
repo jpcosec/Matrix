@@ -13,7 +13,7 @@ The project centers on **sense/meaning matrices**: a separation between truth (`
 - `tools/kb/` — harness de KB: convierte texto, código o specs en `WiGame`s context-scoped con revisión y verificación. Ver [`tools/kb/README.md`](tools/kb/README.md).
 - `examples/` — demos ejecutables, specs y KBs versionadas consultables offline. Ver [`examples/README.md`](examples/README.md).
 - `desk/drawer/shrdlu/` — prototipo separado que baja inglés controlado a operaciones del runtime.
-- `tests/` — suite completa (`pytest`, 168 tests).
+- `tests/` — suite completa (`pytest`, 255 tests).
 - `docs/README.md` — índice de arquitectura y conceptos.
 
 ## Quick start
@@ -47,9 +47,21 @@ python -m tools.kb --kb kb query "(check wigame:ragout:precede (precede picar se
 - `deduce()`: modus ponens trazado sobre la matriz de implicación, iterado a fixpoint, con proveniencia (`system/deduction.py`).
 - `Prov` / `tier`: esquema de proveniencia del hecho (`observed`, `confirmed`, `inferred`, `statistical`) y estado de curación (`core/evidence.py`).
 - operators S-expr: `check`, `assert`, `create`, `ingest`, `return`, `candidate`, `promote`, `reject`, `retract`, `why`, `define`, `project`.
+- orden: `RelationAlgebra` declara `irreflexive`/`antisymmetric`/`total`; `core/relations/order.py` valida acyclidad y extrae la secuencia.
+- término medio: `routing/middle_term.py` encadena objeto→sujeto entre dos `W`; `Si` corta la cadena.
+- reflexión: `system/reflection.py` reifica relaciones (`rel:`) y contextos (`ctx:`) como símbolos, para poder predicar sobre ellos.
+- reglas cuantificadas: `kernel/rule_schema.py`, `(if (es ?x verdura) (es ?x comestible))`.
+- partición: `system/partition.py` usa `D_i` y reuso del término medio para decidir dónde cortar; `system/hypertensor.py` ensambla el bloque `WCi ⊕ Si ⊕ Vi`.
+- guardas de forma: `system/shape_guard.py` rechaza `W` degenerados tipo `(* pedrito es_hermano_de_maria)`.
 - provenance: fuente, confianza o derivación guardadas en el `Fact`.
 - `D_i`: máscara discriminativa que identifica dimensiones no informativas.
 - `sinnvoll` / `sinnlos` / `unsinnig`: proposición significativa, estructura tautológica/contradictoria, o fuera del espacio lógico.
+
+## Campos semánticos
+
+De un conjunto de celdas `(R a b)` sin orden a algo proyectable como lenguaje: orden, término medio, reflexión y cuantificación. El hipertensor es un **árbol de búsqueda** — cada nodo un `W_i` cerrado, cada padre ruteando a sus hijos, y los cortes elegidos por poder discriminativo.
+
+- [`docs/semantic_fields.md`](docs/semantic_fields.md) — diseño, mediciones y límites.
 
 ## Contexto y desambiguación
 

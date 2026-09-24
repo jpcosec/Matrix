@@ -10,6 +10,7 @@ This directory documents the stable architecture and engineering rules of Matrix
 - [Coding Standards](./coding_standards.md) - structural heuristics for files, classes, functions, and documentation
 - [Concepts](./concepts.md) - philosophical vocabulary and proposition-first terminology
 - [WiGame, Context and Disambiguation](./context_and_wigame.md) - why a WiGame is context-bound and how contexts disambiguate
+- [Semantic Fields](./semantic_fields.md) - order axioms, the middle term, shape guards, hypertensor assembly, the partition criterion, quantified rules and reflection
 - [KB Fan-out Harness](./kb_fanout_harness.md) - proposal/review pipeline, context indexing, and stress measurements
 - [Operatoria: cómo leer una receta](./operatoria_recetas.md) - authored domain operatoria: relations, algebra, operations, typed errors
 - [Data Models](./data_models.md) - the primary structures exposed by the operational model
@@ -41,6 +42,7 @@ which described a global tensor store that was never built. State lives in each
 ## Suggested reading order
 
 1. Start with [Canonical Forms and Ingestion](./canonical_forms_and_ingestion.md).
+1. Read [Semantic Fields](./semantic_fields.md) for how order, routing and quantification fit together.
 3. Read [Rebuild and Migration Policy](./rebuild_and_migration_policy.md).
 4. Read [Architecture](./architecture.md) for the package-level view.
 5. Use [Data Models](./data_models.md) when mapping concepts to code.

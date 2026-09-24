@@ -12,22 +12,22 @@ nodes:
     - source.document.markdown
     - type.desk.inbox-note
     - workspace.desk.inbox
-    hash_c: 2fcd7e2aa7ef43a9c3241c901d477e2a49d31b6584a4a39107f45b2102361315
-    hash_d: 1d971bf11b1a550cffb94df8d12f6866b1aff92dc51665bdecac9095753a6b50
+    hash_c: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
+    hash_d: 5ab5a88150a359d147544a8306a1c0ba80ba52306a6f55639be289466138af6b
   facets: {}
-- id: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+- id: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
   node_type: sldb_section
   semantics:
-    export_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+    export_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
     document_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
-    path: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+    path: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
     title: 'kind: suggestion
 
       sender_project: Matrix
 
       created_at: 2026-07-25T21:24:07
 
-      status: open'
+      status: closed'
     breadcrumbs:
     - 'kind: suggestion
 
@@ -35,7 +35,7 @@ nodes:
 
       created_at: 2026-07-25T21:24:07
 
-      status: open'
+      status: closed'
     about:
     - 'kind: suggestion
 
@@ -43,9 +43,9 @@ nodes:
 
       created_at: 2026-07-25T21:24:07
 
-      status: open'
+      status: closed'
     - kind suggestion sender project matrix created at 2026 07 25t21 24 07 status
-      open
+      closed
     - representation.markdown
     - source.document.markdown
     - type.desk.inbox-note
@@ -55,7 +55,7 @@ nodes:
     - source.document.markdown
     - type.desk.inbox-note
     - workspace.desk.inbox
-    slug: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+    slug: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
     level: 2
     line_start: 2
     line_end: 7
@@ -84,7 +84,36 @@ nodes:
     slug: error-logging-protocol
     level: 1
     line_start: 8
-    line_end: 10
+    line_end: 19
+  facets: {}
+- id: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol/disposition
+  node_type: sldb_section
+  semantics:
+    export_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol/disposition
+    document_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+    path: error-logging-protocol/disposition
+    title: Disposition
+    breadcrumbs:
+    - Error Logging Protocol
+    - Disposition
+    about:
+    - Error Logging Protocol
+    - error logging protocol
+    - Disposition
+    - disposition
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    slug: disposition
+    level: 2
+    line_start: 12
+    line_end: 19
   facets: {}
 - id: sldb://semantic_tag/representation.markdown
   node_type: semantic_tag
@@ -113,7 +142,7 @@ edges:
   metadata:
     origin: structural
 - source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
-  target: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  target: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
   relation: has_section
   metadata:
     origin: structural
@@ -123,6 +152,11 @@ edges:
   metadata:
     origin: structural
 - source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  target: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol/disposition
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
   target: sldb://semantic_tag/representation.markdown
   relation: tagged_as
   metadata:
@@ -142,22 +176,22 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
-- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
   target: sldb://semantic_tag/representation.markdown
   relation: tagged_as
   metadata:
     origin: structural
-- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
   target: sldb://semantic_tag/source.document.markdown
   relation: tagged_as
   metadata:
     origin: structural
-- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
   target: sldb://semantic_tag/type.desk.inbox-note
   relation: tagged_as
   metadata:
     origin: structural
-- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
   target: sldb://semantic_tag/workspace.desk.inbox
   relation: tagged_as
   metadata:
@@ -178,14 +212,34 @@ edges:
   metadata:
     origin: structural
 - source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+  target: sldb://semantic_tag/workspace.desk.inbox
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol/disposition
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol/disposition
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol/disposition
+  target: sldb://semantic_tag/type.desk.inbox-note
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol/disposition
   target: sldb://semantic_tag/workspace.desk.inbox
   relation: tagged_as
   metadata:
     origin: structural
 doc_name: 20260725-212407-suggestion-error-logging-protocol
 model_name: InboxNoteDoc
-hash_c: 2fcd7e2aa7ef43a9c3241c901d477e2a49d31b6584a4a39107f45b2102361315
-hash_d: 1d971bf11b1a550cffb94df8d12f6866b1aff92dc51665bdecac9095753a6b50
+hash_c: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
+hash_d: 5ab5a88150a359d147544a8306a1c0ba80ba52306a6f55639be289466138af6b
 semantic_tags:
 - representation.markdown
 - source.document.markdown

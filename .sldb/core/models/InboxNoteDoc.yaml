@@ -3,7 +3,7 @@ model_ref: deskops.models:InboxNoteDoc
 path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/inbox.py
 documents_index: .sldb/core/documents/InboxNoteDoc.yaml
 sections_index: .sldb/runtime/sections/InboxNoteDoc.yaml
-hash_b: e68aca64b1dac3469f002e6f3a7f86e737ab8fcdf8fc13fcfc9c2de27daa314a
+hash_b: 4c1c3e9ced8dc11007acfaa352661c465512fbaa1075ec2c692864dbbcdf0037
 documents_count: 2
 version: 1
 canonical: false

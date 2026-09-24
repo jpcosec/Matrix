@@ -1,0 +1,190 @@
+doc_name: task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+sections:
+- path: proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  title: 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  breadcrumbs:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  about:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - proyeccion objeto sujeto encadenar por termino medio
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  level: 1
+  line_start: 25
+  line_end: 62
+- path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - Rationale
+  about:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - proyeccion objeto sujeto encadenar por termino medio
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 27
+  line_end: 32
+- path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  title: Goal
+  breadcrumbs:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - Goal
+  about:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - proyeccion objeto sujeto encadenar por termino medio
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 33
+  line_end: 38
+- path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  title: Scope
+  breadcrumbs:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - Scope
+  about:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - proyeccion objeto sujeto encadenar por termino medio
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 39
+  line_end: 44
+- path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - Implementation Path
+  about:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - proyeccion objeto sujeto encadenar por termino medio
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 45
+  line_end: 50
+- path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  title: Validation
+  breadcrumbs:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - Validation
+  about:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - proyeccion objeto sujeto encadenar por termino medio
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 51
+  line_end: 57
+- path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  title: Done When
+  breadcrumbs:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - Done When
+  about:
+  - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+  - proyeccion objeto sujeto encadenar por termino medio
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 58
+  line_end: 62
+hash_c: 8eb4a0b12892ca028a39396a540301f8b219839676096333c3d44a85778cf1e8
+sections_version: '2'

@@ -1,0 +1,10 @@
+name: operator-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-activate
+path: desk/primitives/operators/operator-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-activate.md
+hash_c: 4007233cea865c7dc8f1519d22de5576553985e02d4c53b88dc193eb7fd10a8f
+hash_d: 70ce9af42741fe1f51841017f35fc27e21f3bb875a629075ef67b0494d822f67
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

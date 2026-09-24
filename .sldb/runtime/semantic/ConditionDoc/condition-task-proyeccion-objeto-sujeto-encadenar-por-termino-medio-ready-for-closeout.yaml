@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+hash_c: ca1e84dbffce62fcd2d3e95ba18425a5ab46c4db1cc406f73445d5e5900c492b

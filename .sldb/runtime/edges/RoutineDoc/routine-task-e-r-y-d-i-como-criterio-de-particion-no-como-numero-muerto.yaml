@@ -1,0 +1,684 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  node_type: RoutineDoc
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    name: routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    model: RoutineDoc
+    path: desk/routines/routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto.md
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    hash_c: 3525ab37ed6a48d54cf2515781a64127db9fc4082f60f8db09a5077da24e0c85
+    hash_d: cc8bb99bf61394fa42c2df1d0ad51ce77056530266e90d0559f4405095be9086
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: routine-xxx
+    title: routine-xxx
+    breadcrumbs:
+    - routine-xxx
+    about:
+    - routine-xxx
+    - routine xxx
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: routine-xxx
+    level: 1
+    line_start: 2
+    line_end: 3
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: active-archived
+    title: active | archived
+    breadcrumbs:
+    - active | archived
+    about:
+    - active | archived
+    - active archived
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: active-archived
+    level: 1
+    line_start: 4
+    line_end: 5
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: initial-node-identifier
+    title: Initial node identifier
+    breadcrumbs:
+    - Initial node identifier
+    about:
+    - Initial node identifier
+    - initial node identifier
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: initial-node-identifier
+    level: 1
+    line_start: 6
+    line_end: 7
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: ordered-or-grouped-primitive-identifiers
+    title: Ordered or grouped primitive identifiers
+    breadcrumbs:
+    - Ordered or grouped primitive identifiers
+    about:
+    - Ordered or grouped primitive identifiers
+    - ordered or grouped primitive identifiers
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: ordered-or-grouped-primitive-identifiers
+    level: 1
+    line_start: 8
+    line_end: 15
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: edge-identifiers-composing-the-graph
+    title: Edge identifiers composing the graph
+    breadcrumbs:
+    - Edge identifiers composing the graph
+    about:
+    - Edge identifiers composing the graph
+    - edge identifiers composing the graph
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: edge-identifiers-composing-the-graph
+    level: 1
+    line_start: 16
+    line_end: 23
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: terminal-node-identifiers
+    title: Terminal node identifiers
+    breadcrumbs:
+    - Terminal node identifiers
+    about:
+    - Terminal node identifiers
+    - terminal node identifiers
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: terminal-node-identifiers
+    level: 1
+    line_start: 24
+    line_end: 26
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-g-system-deskops
+    title: e.g., system:deskops
+    breadcrumbs:
+    - e.g., system:deskops
+    about:
+    - e.g., system:deskops
+    - e g system deskops
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: e-g-system-deskops
+    level: 1
+    line_start: 27
+    line_end: 32
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    title: Routine for E(R) y D_i como criterio de particion, no como numero muerto
+    breadcrumbs:
+    - Routine for E(R) y D_i como criterio de particion, no como numero muerto
+    about:
+    - Routine for E(R) y D_i como criterio de particion, no como numero muerto
+    - routine for e r y d i como criterio de particion no como numero muerto
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    level: 1
+    line_start: 33
+    line_end: 39
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+    document_id: RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+    title: Summary
+    breadcrumbs:
+    - Routine for E(R) y D_i como criterio de particion, no como numero muerto
+    - Summary
+    about:
+    - Routine for E(R) y D_i como criterio de particion, no como numero muerto
+    - routine for e r y d i como criterio de particion no como numero muerto
+    - Summary
+    - summary
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: summary
+    level: 2
+    line_start: 35
+    line_end: 39
+  facets: {}
+- id: sldb://semantic_tag/primitive:routine
+  node_type: semantic_tag
+  semantics:
+    tag: primitive:routine
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.routine
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.routine
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.routines
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.routines
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/RoutineDoc
+  target: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-xxx
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#active-archived
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#initial-node-identifier
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#terminal-node-identifiers
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-g-system-deskops
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#routine-for-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/summary
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+model_name: RoutineDoc
+hash_c: 3525ab37ed6a48d54cf2515781a64127db9fc4082f60f8db09a5077da24e0c85
+hash_d: cc8bb99bf61394fa42c2df1d0ad51ce77056530266e90d0559f4405095be9086
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

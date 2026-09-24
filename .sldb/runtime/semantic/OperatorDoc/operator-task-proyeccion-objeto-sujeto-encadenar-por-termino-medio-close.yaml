@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-close.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+hash_c: 43590ce7a6ceb8d66594b36ac76d768bc8244970fa4fa9b4f129ffd03786f691

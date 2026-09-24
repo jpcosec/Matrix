@@ -1,0 +1,10 @@
+name: condition-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-ready-for-closeout
+path: desk/primitives/conditions/condition-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-ready-for-closeout.md
+hash_c: 9e579a35c85f1c5c15d20d314dcf3fa433a418d8c2acf85cc0fd451ae4aae7be
+hash_d: 075093d414d4028c8e6b3126f4876cdb890c66b3414afa9f08b25eb561e79210
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

@@ -1,0 +1,10 @@
+name: edge-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-activate-to-testing
+path: desk/primitives/edges/edge-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-activate-to-testing.md
+hash_c: 6bc6f6c8b5cc37a7931b91ca812206856c8d7915969623f4ec5c8c01163ab606
+hash_d: 1f9080a3bea28650577153f20cef8f24282795c37b2e1076aa2c14d500e0af27
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

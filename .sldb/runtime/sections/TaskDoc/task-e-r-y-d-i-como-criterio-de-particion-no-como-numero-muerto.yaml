@@ -1,0 +1,190 @@
+doc_name: task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+sections:
+- path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  title: E(R) y D_i como criterio de particion, no como numero muerto
+  breadcrumbs:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  about:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - e r y d i como criterio de particion no como numero muerto
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  level: 1
+  line_start: 25
+  line_end: 62
+- path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  title: Rationale
+  breadcrumbs:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - Rationale
+  about:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - e r y d i como criterio de particion no como numero muerto
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 27
+  line_end: 32
+- path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  title: Goal
+  breadcrumbs:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - Goal
+  about:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - e r y d i como criterio de particion no como numero muerto
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 33
+  line_end: 38
+- path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  title: Scope
+  breadcrumbs:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - Scope
+  about:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - e r y d i como criterio de particion no como numero muerto
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 39
+  line_end: 44
+- path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - Implementation Path
+  about:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - e r y d i como criterio de particion no como numero muerto
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 45
+  line_end: 50
+- path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  title: Validation
+  breadcrumbs:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - Validation
+  about:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - e r y d i como criterio de particion no como numero muerto
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 51
+  line_end: 57
+- path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  title: Done When
+  breadcrumbs:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - Done When
+  about:
+  - E(R) y D_i como criterio de particion, no como numero muerto
+  - e r y d i como criterio de particion no como numero muerto
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 58
+  line_end: 62
+hash_c: 68623c5ee09395a41e89f15f31c561ed3f6e8ec090911c34a00fc18f346034e4
+sections_version: '2'

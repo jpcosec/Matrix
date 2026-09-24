@@ -1,0 +1,10 @@
+name: condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-has-validation
+path: desk/primitives/conditions/condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-has-validation.md
+hash_c: b38a438cc6e3b7d525fcb39ebc240f5ad5dc49e598304e62f07b1b75a65cedff
+hash_d: c7ee3c8c603a2b2a8b8b2dad3009fc1fbd2747a83d2a8039f649f5c6af732c9d
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

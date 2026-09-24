@@ -1,0 +1,10 @@
+name: edge-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-close-to-complete
+path: desk/primitives/edges/edge-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-close-to-complete.md
+hash_c: 6ae8fba8b952f0ff9205845d645741c2f20ae8792cf89802735a77daf253053b
+hash_d: c3e76f6288d5ecc9510619672e5aabecf4133d816da161a436e17528e11fe50b
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

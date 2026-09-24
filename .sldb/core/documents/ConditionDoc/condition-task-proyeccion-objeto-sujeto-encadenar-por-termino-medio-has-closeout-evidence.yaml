@@ -1,0 +1,10 @@
+name: condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-has-closeout-evidence
+path: desk/primitives/conditions/condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-has-closeout-evidence.md
+hash_c: c174097cc1d77bf08422f5fc17c954a1df3c7747391e5bc5f944455bbfc2babc
+hash_d: 38e03d9b8c46c277d293e28bb3d4448da865fb022aa761b3f2d5cdb8952e2e25
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

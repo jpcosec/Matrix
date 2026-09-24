@@ -1,0 +1,10 @@
+name: operator-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-ready-for-testing
+path: desk/primitives/operators/operator-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-ready-for-testing.md
+hash_c: 10ccdbad44bac4c387ccf230e7b473e3f91fff9ad8744e376ac6933bb677b4aa
+hash_d: 8fe012751089813152bd16ab49558d91f3d7a39dc0c0230072dedd8b59a4bcfb
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+hash_c: 0e9643b3aebc84016ab709454feb8283492dc21dd1267ec9756b316708c18fde

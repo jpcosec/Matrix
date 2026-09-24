@@ -1,0 +1,186 @@
+doc_name: checklist-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-closeout-ready
+sections:
+- path: checklist-xxx
+  title: checklist-xxx
+  breadcrumbs:
+  - checklist-xxx
+  about:
+  - checklist-xxx
+  - checklist xxx
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: checklist-xxx
+  level: 1
+  line_start: 2
+  line_end: 3
+- path: draft-active-complete-archived
+  title: draft | active | complete | archived
+  breadcrumbs:
+  - draft | active | complete | archived
+  about:
+  - draft | active | complete | archived
+  - draft active complete archived
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: draft-active-complete-archived
+  level: 1
+  line_start: 4
+  line_end: 5
+- path: list-of-condition-xxx-paths
+  title: List of condition-xxx paths
+  breadcrumbs:
+  - List of condition-xxx paths
+  about:
+  - List of condition-xxx paths
+  - list of condition xxx paths
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: list-of-condition-xxx-paths
+  level: 1
+  line_start: 6
+  line_end: 9
+- path: all-any
+  title: all | any
+  breadcrumbs:
+  - all | any
+  about:
+  - all | any
+  - all any
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: all-any
+  level: 1
+  line_start: 10
+  line_end: 11
+- path: e-g-system-deskops
+  title: e.g., system:deskops
+  breadcrumbs:
+  - e.g., system:deskops
+  about:
+  - e.g., system:deskops
+  - e g system deskops
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: e-g-system-deskops
+  level: 1
+  line_start: 12
+  line_end: 16
+- path: closeout-ready
+  title: Closeout Ready
+  breadcrumbs:
+  - Closeout Ready
+  about:
+  - Closeout Ready
+  - closeout ready
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: closeout-ready
+  level: 1
+  line_start: 17
+  line_end: 31
+- path: closeout-ready/summary
+  title: Summary
+  breadcrumbs:
+  - Closeout Ready
+  - Summary
+  about:
+  - Closeout Ready
+  - closeout ready
+  - Summary
+  - summary
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: summary
+  level: 2
+  line_start: 19
+  line_end: 24
+- path: closeout-ready/items
+  title: Items
+  breadcrumbs:
+  - Closeout Ready
+  - Items
+  about:
+  - Closeout Ready
+  - closeout ready
+  - Items
+  - items
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: items
+  level: 2
+  line_start: 25
+  line_end: 31
+hash_c: 94140e76ce2ab98f63fb65dfe59c568deff9ab8eb8b206d7b9dd78f814da06bb
+sections_version: '2'

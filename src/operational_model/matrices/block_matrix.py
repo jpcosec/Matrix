@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any
 
+from ..core.sense_value import SenseValue
 from .boolean_matrix import BooleanMatrix
 from .si_matrix import SiMatrix
 from .vi_matrix import ViMatrix
@@ -55,6 +56,45 @@ class BlockMatrix:
 
         return BooleanMatrix(row_axis=global_rows, column_axis=global_cols, values=grid)
 
-    def evaluate_operational(self) -> BooleanMatrix:
-        """Computes the operational matrix W* = Vi AND Si for valid facts."""
-        return self.truth_matrix.elementwise_and(self.sense_matrix)
+    def evaluate_operational(self, context_id: str | None = None) -> BooleanMatrix:
+        """Computes the operational matrix `W* = Vi AND Si` over shared columns.
+
+        `Si` is indexed `context x terms` and `Vi` is `subjects x terms`, so the
+        two never share a row axis and cannot be multiplied elementwise as-is.
+        The join runs through their common axis: the terms. A cell survives only
+        when it is true in `Vi` and meaningful in `Si` for the applicable
+        context.
+
+        With `context_id` the gate is that single context's sense row. Without it
+        a term is admissible when ANY context deems it meaningful.
+        """
+
+        if context_id is not None and context_id not in self.sense_matrix.row_axis:
+            raise ValueError(f"context {context_id!r} is not a row of the sense matrix")
+
+        gate_rows = (
+            [context_id] if context_id is not None else list(self.sense_matrix.row_axis)
+        )
+        admissible = {
+            term: any(
+                self.sense_matrix.get(row, term) == SenseValue.SINNVOLL.value
+                for row in gate_rows
+            )
+            for term in self.sense_matrix.column_axis
+        }
+
+        values = [
+            [
+                self.truth_matrix.get(subject, term)
+                if admissible.get(term, False)
+                else SenseValue.UNSINNIG.value
+                for term in self.truth_matrix.column_axis
+            ]
+            for subject in self.truth_matrix.row_axis
+        ]
+        return BooleanMatrix(
+            row_axis=list(self.truth_matrix.row_axis),
+            column_axis=list(self.truth_matrix.column_axis),
+            values=values,
+            metadata={"kind": "operational", "context_id": context_id},
+        )

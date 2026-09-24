@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-testing-to-ready.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: f8bfd35b0740e6c766961f30aed41c6d6f3eeafba08ba60ca06c276110ac9ef6

@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+hash_c: e92a947c469acec87798cfdbe7e683c4851e5c71e27dfde17760a3ba10c048b8

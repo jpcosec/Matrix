@@ -1,0 +1,11 @@
+name: task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+path: desk/tasks/task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal.md
+hash_c: 28e7c49cf56ac1450e1c3ea2af649d0d6c577fe958221c867309435dd8416d08
+hash_d: b7d3058d10845de7df68803dbb390613aef36e918dd8fc3b25354269ae1d82b4
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

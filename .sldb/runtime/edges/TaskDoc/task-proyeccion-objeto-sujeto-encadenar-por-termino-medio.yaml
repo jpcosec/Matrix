@@ -1,0 +1,569 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    name: task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    model: TaskDoc
+    path: desk/tasks/task-proyeccion-objeto-sujeto-encadenar-por-termino-medio.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: 8eb4a0b12892ca028a39396a540301f8b219839676096333c3d44a85778cf1e8
+    hash_d: 242c47ca989f310ce01d749c416af7f41fb5d1ae1a0f60ada76b5804fced2c1c
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    document_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    path: proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    title: 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    breadcrumbs:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    about:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - proyeccion objeto sujeto encadenar por termino medio
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    level: 1
+    line_start: 25
+    line_end: 62
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+    document_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - Rationale
+    about:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - proyeccion objeto sujeto encadenar por termino medio
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 27
+    line_end: 32
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+    document_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+    title: Goal
+    breadcrumbs:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - Goal
+    about:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - proyeccion objeto sujeto encadenar por termino medio
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 33
+    line_end: 38
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+    document_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+    title: Scope
+    breadcrumbs:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - Scope
+    about:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - proyeccion objeto sujeto encadenar por termino medio
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 39
+    line_end: 44
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+    document_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - Implementation Path
+    about:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - proyeccion objeto sujeto encadenar por termino medio
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 45
+    line_end: 50
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+    document_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+    title: Validation
+    breadcrumbs:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - Validation
+    about:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - proyeccion objeto sujeto encadenar por termino medio
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 51
+    line_end: 57
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+    document_id: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+    path: proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+    title: Done When
+    breadcrumbs:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - Done When
+    about:
+    - 'Proyeccion objeto-sujeto: encadenar por termino medio'
+    - proyeccion objeto sujeto encadenar por termino medio
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 58
+    line_end: 62
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+model_name: TaskDoc
+hash_c: 8eb4a0b12892ca028a39396a540301f8b219839676096333c3d44a85778cf1e8
+hash_d: 242c47ca989f310ce01d749c416af7f41fb5d1ae1a0f60ada76b5804fced2c1c
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

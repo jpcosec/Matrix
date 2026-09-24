@@ -1,0 +1,10 @@
+model: RoutineDoc
+path: desk/routines/routine-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio.md
+tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk
+hash_c: c9df7fd7384b82652eef388b7861ed4ee39b1a7037dd3e07929586d3b572742c

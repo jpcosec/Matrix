@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-testing-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+hash_c: 28b3153a8377f21719f7ed22f3b737945416f16cdeab931f7b490b4f2ff2ab8c

@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-testing-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+hash_c: 9d234a1a5eaef18113bf697314d1b5ff64114db5dd985b701a2bd4aaf06a5b2d

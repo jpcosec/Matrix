@@ -1,0 +1,183 @@
+doc_name: condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-has-validation
+sections:
+- path: condition-xxx
+  title: condition-xxx
+  breadcrumbs:
+  - condition-xxx
+  about:
+  - condition-xxx
+  - condition xxx
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: condition-xxx
+  level: 1
+  line_start: 2
+  line_end: 3
+- path: active-archived
+  title: active | archived
+  breadcrumbs:
+  - active | archived
+  about:
+  - active | archived
+  - active archived
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: active-archived
+  level: 1
+  line_start: 4
+  line_end: 5
+- path: payload-path-the-condition-reads
+  title: Payload path the condition reads
+  breadcrumbs:
+  - Payload path the condition reads
+  about:
+  - Payload path the condition reads
+  - payload path the condition reads
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: payload-path-the-condition-reads
+  level: 1
+  line_start: 6
+  line_end: 7
+- path: predicate-applied-to-the-value-e-g-eq-contains
+  title: Predicate applied to the value (e.g., eq, contains)
+  breadcrumbs:
+  - Predicate applied to the value (e.g., eq, contains)
+  about:
+  - Predicate applied to the value (e.g., eq, contains)
+  - predicate applied to the value e g eq contains
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: predicate-applied-to-the-value-e-g-eq-contains
+  level: 1
+  line_start: 8
+  line_end: 9
+- path: expected-value-used-by-the-predicate
+  title: Expected value used by the predicate
+  breadcrumbs:
+  - Expected value used by the predicate
+  about:
+  - Expected value used by the predicate
+  - expected value used by the predicate
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: expected-value-used-by-the-predicate
+  level: 1
+  line_start: 10
+  line_end: 11
+- path: e-g-system-deskops
+  title: e.g., system:deskops
+  breadcrumbs:
+  - e.g., system:deskops
+  about:
+  - e.g., system:deskops
+  - e g system deskops
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: e-g-system-deskops
+  level: 1
+  line_start: 12
+  line_end: 16
+- path: validation-exists
+  title: Validation exists
+  breadcrumbs:
+  - Validation exists
+  about:
+  - Validation exists
+  - validation exists
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: validation-exists
+  level: 1
+  line_start: 17
+  line_end: 23
+- path: validation-exists/summary
+  title: Summary
+  breadcrumbs:
+  - Validation exists
+  - Summary
+  about:
+  - Validation exists
+  - validation exists
+  - Summary
+  - summary
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:condition
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.condition
+  - workspace.desk.primitives
+  slug: summary
+  level: 2
+  line_start: 19
+  line_end: 23
+hash_c: b38a438cc6e3b7d525fcb39ebc240f5ad5dc49e598304e62f07b1b75a65cedff
+sections_version: '2'

@@ -1,0 +1,10 @@
+name: condition-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-ready-for-closeout
+path: desk/primitives/conditions/condition-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-ready-for-closeout.md
+hash_c: 4b4c77b51d16fd2a5d3faba8c27c49a9d0421aee679ba89c1686030b6bf10871
+hash_d: 1ac53200fd15bb4c41c4ec6bd4998860d8d1525832126129946793e3dafd3f0e
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

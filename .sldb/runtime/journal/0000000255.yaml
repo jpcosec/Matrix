@@ -1,0 +1,15 @@
+operation: untrack_document
+address: TaskDoc:task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 4d5e963a1115dead58ac73abdf6402a2beb12e7f993db957ca182390645a3439
+hash_c_after: null
+hash_d_before: 61b417006c21796c2b77dce972e1c6bb9caf4fe99ab5d87431c8795cae241dc0
+hash_d_after: null
+hash_a_before: 404534d5c56368232ed297e43e59e881dec537890e63bcbbc2c9157c03d91a40
+hash_a_after: 12f210abb05e8567057f63335b2270c3ab563dc9573092645a94ae256017e82c
+actor: null
+timestamp: 2026-09-24 04:19:11.127785+00:00
+previous_hash: fde3ad7f4ed29d87412aaf270181c71003d02984ff39098e279c60003113c509
+entry_hash: d82c6c42f6a6462c7184b828a255485b533630dfa22886da43d68898220934c4

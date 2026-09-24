@@ -1,0 +1,15 @@
+operation: untrack_document
+address: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 40e3c39f08943041c0519e26b8b17852c40c83dc39bad60cd2f73ad7f1a2ed6d
+hash_c_after: null
+hash_d_before: 4c7221869d8ba97e41de86b3d48ba12e8c70da6d0e5520105111bbb4493f8806
+hash_d_after: null
+hash_a_before: 86aba6160795e33c3ac5bc31e5d2374b41816a688c420cb7062aeece1131ff07
+hash_a_after: a613a235b6488757bc3f65c1443ed33aca3a3f18e5547c7f7c31d4273bc50761
+actor: null
+timestamp: 2026-09-24 04:19:10.470671+00:00
+previous_hash: 3c01842afc2da8d4aa39777271422accfc543a25c81f573645faf10fdc0d06eb
+entry_hash: 758fd060163bc569e441475a2b042996549b6c787b4e723076ab7eef2e22c04a

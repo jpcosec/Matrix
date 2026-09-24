@@ -1,0 +1,10 @@
+name: edge-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-testing-to-ready
+path: desk/primitives/edges/edge-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-testing-to-ready.md
+hash_c: 7cc3acb9072a1d8eab868e6c53526fc7c1d899267870b9484bd443a5895acd57
+hash_d: 9fa26eb5a0dea243911b177e24c12650b1b7aa288908ebb9a4daa6caf910075a
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

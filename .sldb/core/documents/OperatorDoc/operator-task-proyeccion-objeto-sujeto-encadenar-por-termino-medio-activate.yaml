@@ -1,0 +1,10 @@
+name: operator-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-activate
+path: desk/primitives/operators/operator-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-activate.md
+hash_c: 4ae6eb49cfb1f03653cf6fd6a60c59f6455a9b6a0232e06061e0379900f10258
+hash_d: 549d0baed7fa0d7a017dc41669381535f46bdf2d6bb2c36768974acb628a6c36
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

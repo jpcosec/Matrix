@@ -1,0 +1,10 @@
+name: condition-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-has-validation
+path: desk/primitives/conditions/condition-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-has-validation.md
+hash_c: aebd9e533babd49ac125471322c5cbee3f4de6accfd0fcde4f964f215bc12b31
+hash_d: 5655a171a83e92e15b93c858c7a2de6570bd4f47ef1a1f1a9ff06f80e611a40b
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

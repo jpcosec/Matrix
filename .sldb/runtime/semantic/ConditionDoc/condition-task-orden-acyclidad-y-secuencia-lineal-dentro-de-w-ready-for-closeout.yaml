@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+hash_c: af7c37e76f0c4417d6091c40b795bcdf050bdf99a9bcf9ad80378ecfc0fca97e

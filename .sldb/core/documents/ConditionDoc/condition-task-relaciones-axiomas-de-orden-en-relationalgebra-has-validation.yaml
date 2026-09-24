@@ -1,0 +1,10 @@
+name: condition-task-relaciones-axiomas-de-orden-en-relationalgebra-has-validation
+path: desk/primitives/conditions/condition-task-relaciones-axiomas-de-orden-en-relationalgebra-has-validation.md
+hash_c: 215622a8b58c33b2f501574605be0b81ce4526862c78aef03e99c4ef663177f4
+hash_d: da3295313f8ede7e0b804ca86181ca80efb36815d5f6c3b92496f540feff1bc0
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

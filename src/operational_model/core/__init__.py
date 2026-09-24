@@ -14,7 +14,7 @@ from .li_space import LiSpace
 from .name import Name
 from .proposition import Proposition
 from .relation import Relation
-from .relations import RelationAlgebra
+from .relations import RelationAlgebra, RelationPairValidationError
 from .route_target_kind import RouteTargetKind
 from .sense_value import SenseValue
 from .symbol import Symbol
@@ -32,6 +32,7 @@ __all__ = [
     "Proposition",
     "Relation",
     "RelationAlgebra",
+    "RelationPairValidationError",
     "RouteTargetKind",
     "SenseValue",
     "Symbol",

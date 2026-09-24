@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-testing-to-ready.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: c2d287ca519a95813c309df531709411cee1984deb690f9936d7a513de1be080

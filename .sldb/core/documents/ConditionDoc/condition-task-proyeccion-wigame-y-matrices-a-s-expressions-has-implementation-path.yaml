@@ -1,0 +1,10 @@
+name: condition-task-proyeccion-wigame-y-matrices-a-s-expressions-has-implementation-path
+path: desk/primitives/conditions/condition-task-proyeccion-wigame-y-matrices-a-s-expressions-has-implementation-path.md
+hash_c: e7c76eee8ac5234d5a47504243aa84af4595d362c5b02d6b1eadb71784a45d2f
+hash_d: 46610cd3f32e3d91c7bfad11d42c6d9b64796046338184f1a60fa0ce7930dd56
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

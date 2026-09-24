@@ -1,0 +1,190 @@
+doc_name: task-proyeccion-wigame-y-matrices-a-s-expressions
+sections:
+- path: proyeccion-wigame-y-matrices-a-s-expressions
+  title: 'Proyeccion: WiGame y matrices a s-expressions'
+  breadcrumbs:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  about:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - proyeccion wigame y matrices a s expressions
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: proyeccion-wigame-y-matrices-a-s-expressions
+  level: 1
+  line_start: 25
+  line_end: 62
+- path: proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - Rationale
+  about:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - proyeccion wigame y matrices a s expressions
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 27
+  line_end: 32
+- path: proyeccion-wigame-y-matrices-a-s-expressions/goal
+  title: Goal
+  breadcrumbs:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - Goal
+  about:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - proyeccion wigame y matrices a s expressions
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 33
+  line_end: 38
+- path: proyeccion-wigame-y-matrices-a-s-expressions/scope
+  title: Scope
+  breadcrumbs:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - Scope
+  about:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - proyeccion wigame y matrices a s expressions
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 39
+  line_end: 44
+- path: proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - Implementation Path
+  about:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - proyeccion wigame y matrices a s expressions
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 45
+  line_end: 50
+- path: proyeccion-wigame-y-matrices-a-s-expressions/validation
+  title: Validation
+  breadcrumbs:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - Validation
+  about:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - proyeccion wigame y matrices a s expressions
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 51
+  line_end: 57
+- path: proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  title: Done When
+  breadcrumbs:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - Done When
+  about:
+  - 'Proyeccion: WiGame y matrices a s-expressions'
+  - proyeccion wigame y matrices a s expressions
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 58
+  line_end: 62
+hash_c: ca6d69145386dcbcc13d031c057605dc166a70722c8294f0fc4a3130bf7ac084
+sections_version: '2'

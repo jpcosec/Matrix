@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-proyeccion-wigame-y-matrices-a-s-expressions-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+hash_c: 0fa834ac2c7506a6c16f82817113b01bfcc9e121cff2dd592ed90bc9d90119d7

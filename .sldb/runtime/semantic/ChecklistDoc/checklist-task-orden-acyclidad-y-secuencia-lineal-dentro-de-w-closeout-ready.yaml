@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-closeout-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+hash_c: 85391e90a31953f645ec6e779c07c6a1a197ca8a98b9ef8bc87ee5124cc4519c

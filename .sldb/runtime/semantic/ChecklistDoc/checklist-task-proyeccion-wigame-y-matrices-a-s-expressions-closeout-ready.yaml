@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-proyeccion-wigame-y-matrices-a-s-expressions-closeout-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+hash_c: 5316c4d2dbffff0f82d76ea66754285b2f2060d49bb20a1d4cb5811d4d922064

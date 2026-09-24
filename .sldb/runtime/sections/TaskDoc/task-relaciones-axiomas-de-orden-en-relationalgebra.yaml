@@ -1,0 +1,190 @@
+doc_name: task-relaciones-axiomas-de-orden-en-relationalgebra
+sections:
+- path: relaciones-axiomas-de-orden-en-relationalgebra
+  title: 'Relaciones: axiomas de orden en RelationAlgebra'
+  breadcrumbs:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  about:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - relaciones axiomas de orden en relationalgebra
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: relaciones-axiomas-de-orden-en-relationalgebra
+  level: 1
+  line_start: 25
+  line_end: 62
+- path: relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - Rationale
+  about:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - relaciones axiomas de orden en relationalgebra
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 27
+  line_end: 32
+- path: relaciones-axiomas-de-orden-en-relationalgebra/goal
+  title: Goal
+  breadcrumbs:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - Goal
+  about:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - relaciones axiomas de orden en relationalgebra
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 33
+  line_end: 38
+- path: relaciones-axiomas-de-orden-en-relationalgebra/scope
+  title: Scope
+  breadcrumbs:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - Scope
+  about:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - relaciones axiomas de orden en relationalgebra
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 39
+  line_end: 44
+- path: relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - Implementation Path
+  about:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - relaciones axiomas de orden en relationalgebra
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 45
+  line_end: 50
+- path: relaciones-axiomas-de-orden-en-relationalgebra/validation
+  title: Validation
+  breadcrumbs:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - Validation
+  about:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - relaciones axiomas de orden en relationalgebra
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 51
+  line_end: 57
+- path: relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  title: Done When
+  breadcrumbs:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - Done When
+  about:
+  - 'Relaciones: axiomas de orden en RelationAlgebra'
+  - relaciones axiomas de orden en relationalgebra
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 58
+  line_end: 62
+hash_c: daa14340c70fb522285e1e8a3a99392b94c2487052bd52e3f0048ce1d18fe26b
+sections_version: '2'

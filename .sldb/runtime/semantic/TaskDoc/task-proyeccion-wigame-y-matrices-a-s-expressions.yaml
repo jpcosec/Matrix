@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-proyeccion-wigame-y-matrices-a-s-expressions.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+hash_c: ca6d69145386dcbcc13d031c057605dc166a70722c8294f0fc4a3130bf7ac084

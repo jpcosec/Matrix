@@ -1,0 +1,10 @@
+name: condition-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-has-closeout-evidence
+path: desk/primitives/conditions/condition-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-has-closeout-evidence.md
+hash_c: a2c7963c64e7d4c4264417945955a73cfad0f79516e34be2c489477bca4524bd
+hash_d: 412b6091c967723b31a362ae9a75a30f40ea01715c7a5339c5191d3858e13a8a
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

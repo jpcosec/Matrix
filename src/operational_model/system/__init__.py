@@ -9,6 +9,11 @@ from .candidates import (
 from .deduction import deduce
 from .logical_system import LogicalSystem
 from .operation_results import OperationResult
+from .projection_emit import (
+    matrix_to_s_expressions,
+    system_to_s_expressions,
+    wigame_to_s_expressions,
+)
 from .s_expression_runtime import SExpressionRuntime
 from .wigame import WiGame
 from .wi_game_queries import (
@@ -29,9 +34,12 @@ from .wi_game_serialization import from_dict, from_yaml, to_dict, to_yaml
 __all__ = [
     "Candidate",
     "LogicalSystem",
+    "matrix_to_s_expressions",
     "OperationResult",
     "SExpressionRuntime",
+    "system_to_s_expressions",
     "WiGame",
+    "wigame_to_s_expressions",
     "accepts_proposition",
     "add_fact",
     "deduce",

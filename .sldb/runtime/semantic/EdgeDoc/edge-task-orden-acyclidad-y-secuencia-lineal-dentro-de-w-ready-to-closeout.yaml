@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-ready-to-closeout.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: a33d1cd5e1410a75c274d892d4e17c7c82876244d17fd7ccb0f5fbdb91d0f3e5

@@ -1,0 +1,684 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  node_type: RoutineDoc
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    name: routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    model: RoutineDoc
+    path: desk/routines/routine-task-relaciones-axiomas-de-orden-en-relationalgebra.md
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    hash_c: 1a281362d146ed89b1c8e9f652fe08a041537232ce12e655f05e5c612019b6f8
+    hash_d: ced9c89b73222fb61176cb902eff54e252828bf4b9283282ce081674ef14b823
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: routine-xxx
+    title: routine-xxx
+    breadcrumbs:
+    - routine-xxx
+    about:
+    - routine-xxx
+    - routine xxx
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: routine-xxx
+    level: 1
+    line_start: 2
+    line_end: 3
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: active-archived
+    title: active | archived
+    breadcrumbs:
+    - active | archived
+    about:
+    - active | archived
+    - active archived
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: active-archived
+    level: 1
+    line_start: 4
+    line_end: 5
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: initial-node-identifier
+    title: Initial node identifier
+    breadcrumbs:
+    - Initial node identifier
+    about:
+    - Initial node identifier
+    - initial node identifier
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: initial-node-identifier
+    level: 1
+    line_start: 6
+    line_end: 7
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: ordered-or-grouped-primitive-identifiers
+    title: Ordered or grouped primitive identifiers
+    breadcrumbs:
+    - Ordered or grouped primitive identifiers
+    about:
+    - Ordered or grouped primitive identifiers
+    - ordered or grouped primitive identifiers
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: ordered-or-grouped-primitive-identifiers
+    level: 1
+    line_start: 8
+    line_end: 15
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: edge-identifiers-composing-the-graph
+    title: Edge identifiers composing the graph
+    breadcrumbs:
+    - Edge identifiers composing the graph
+    about:
+    - Edge identifiers composing the graph
+    - edge identifiers composing the graph
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: edge-identifiers-composing-the-graph
+    level: 1
+    line_start: 16
+    line_end: 23
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: terminal-node-identifiers
+    title: Terminal node identifiers
+    breadcrumbs:
+    - Terminal node identifiers
+    about:
+    - Terminal node identifiers
+    - terminal node identifiers
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: terminal-node-identifiers
+    level: 1
+    line_start: 24
+    line_end: 26
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: e-g-system-deskops
+    title: e.g., system:deskops
+    breadcrumbs:
+    - e.g., system:deskops
+    about:
+    - e.g., system:deskops
+    - e g system deskops
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: e-g-system-deskops
+    level: 1
+    line_start: 27
+    line_end: 32
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+    title: 'Routine for Relaciones: axiomas de orden en RelationAlgebra'
+    breadcrumbs:
+    - 'Routine for Relaciones: axiomas de orden en RelationAlgebra'
+    about:
+    - 'Routine for Relaciones: axiomas de orden en RelationAlgebra'
+    - routine for relaciones axiomas de orden en relationalgebra
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+    level: 1
+    line_start: 33
+    line_end: 39
+  facets: {}
+- id: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  node_type: sldb_section
+  semantics:
+    export_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+    document_id: RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+    title: Summary
+    breadcrumbs:
+    - 'Routine for Relaciones: axiomas de orden en RelationAlgebra'
+    - Summary
+    about:
+    - 'Routine for Relaciones: axiomas de orden en RelationAlgebra'
+    - routine for relaciones axiomas de orden en relationalgebra
+    - Summary
+    - summary
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    semantic_tags:
+    - primitive:routine
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.routine
+    - workspace.desk.routines
+    - workspace:desk
+    slug: summary
+    level: 2
+    line_start: 35
+    line_end: 39
+  facets: {}
+- id: sldb://semantic_tag/primitive:routine
+  node_type: semantic_tag
+  semantics:
+    tag: primitive:routine
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.routine
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.routine
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.routines
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.routines
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/RoutineDoc
+  target: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-xxx
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#active-archived
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#initial-node-identifier
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#ordered-or-grouped-primitive-identifiers
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#edge-identifiers-composing-the-graph
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#terminal-node-identifiers
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#e-g-system-deskops
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  target: sldb://semantic_tag/primitive:routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  target: sldb://semantic_tag/type.workflow.routine
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  target: sldb://semantic_tag/workspace.desk.routines
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RoutineDoc:routine-task-relaciones-axiomas-de-orden-en-relationalgebra#routine-for-relaciones-axiomas-de-orden-en-relationalgebra/summary
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: routine-task-relaciones-axiomas-de-orden-en-relationalgebra
+model_name: RoutineDoc
+hash_c: 1a281362d146ed89b1c8e9f652fe08a041537232ce12e655f05e5c612019b6f8
+hash_d: ced9c89b73222fb61176cb902eff54e252828bf4b9283282ce081674ef14b823
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

@@ -1,0 +1,10 @@
+name: condition-task-relaciones-axiomas-de-orden-en-relationalgebra-has-implementation-path
+path: desk/primitives/conditions/condition-task-relaciones-axiomas-de-orden-en-relationalgebra-has-implementation-path.md
+hash_c: afada3f9a8dbd9e4c68b199dce382e831555501d90d90411bff447a6c8e23e3f
+hash_d: 75b812baeb38951baa6ddf9fcc4b3da3e77489d2bebff83aee5c84ad62153331
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

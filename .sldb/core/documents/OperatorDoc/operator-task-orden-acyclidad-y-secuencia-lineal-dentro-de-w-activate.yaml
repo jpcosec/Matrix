@@ -1,0 +1,10 @@
+name: operator-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-activate
+path: desk/primitives/operators/operator-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-activate.md
+hash_c: 41530840badea106082fac977a86b55cb4716a7149e8a1e0636980f38d7073dc
+hash_d: b437b1f1a472c46a92806914c13053641163dc4e53f9894b4410b9b211a82620
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

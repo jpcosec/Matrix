@@ -1,0 +1,10 @@
+name: operator-task-relaciones-axiomas-de-orden-en-relationalgebra-ready-for-testing
+path: desk/primitives/operators/operator-task-relaciones-axiomas-de-orden-en-relationalgebra-ready-for-testing.md
+hash_c: e3f55ab27a115198018076dee9141f371101ab3c1321b8707121b972f133a6be
+hash_d: 4bf29dd23e499f1f9d93d8ad30b70eb8a07a38b4b19f4f2e1da54601eac27ab9
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

@@ -1,0 +1,10 @@
+name: edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-close-to-complete
+path: desk/primitives/edges/edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-close-to-complete.md
+hash_c: 7670f3b33205a1f81141919c3be2ba4d1b338d5a0f529224feea156702eddb54
+hash_d: aa975a434ee74950d08c22fc1acfa3a846203696c10dd5150c0c6b7efffeb4f4
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

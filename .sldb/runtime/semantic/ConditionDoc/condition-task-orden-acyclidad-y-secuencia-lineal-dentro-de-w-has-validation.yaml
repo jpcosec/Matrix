@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-has-validation.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+hash_c: 7da1fabc76920cc7872c27f1a8af9bf32bb19e1e311f15e607d9926e067940b7

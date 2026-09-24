@@ -1,0 +1,10 @@
+name: edge-task-proyeccion-wigame-y-matrices-a-s-expressions-execution-to-activate
+path: desk/primitives/edges/edge-task-proyeccion-wigame-y-matrices-a-s-expressions-execution-to-activate.md
+hash_c: a617fe9f46f8afe26fdc49216807cc959b1f1906029b73529a7b229b3dbb253f
+hash_d: 9e31567d402badb47f52f1e739d2f31f6f5151d0dd9e3ddc5686e59825210325
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

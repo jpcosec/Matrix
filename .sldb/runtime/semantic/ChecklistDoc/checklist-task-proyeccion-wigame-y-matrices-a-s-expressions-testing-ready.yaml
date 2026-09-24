@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-proyeccion-wigame-y-matrices-a-s-expressions-testing-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+hash_c: 181d5b09542be56870aeb8b8229e7a80fb969cc53cf2904b2471ea4540e1726e

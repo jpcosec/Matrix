@@ -1,0 +1,10 @@
+name: edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-closeout-to-close
+path: desk/primitives/edges/edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-closeout-to-close.md
+hash_c: 44ef85864e6055f50c45a771f646b43ddcacd69f97dc85a32bd55710f6e63433
+hash_d: e15c8f45f7bb6bc1172b535d9e0609a7b6f335761347494736522d54bdc66ab7
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

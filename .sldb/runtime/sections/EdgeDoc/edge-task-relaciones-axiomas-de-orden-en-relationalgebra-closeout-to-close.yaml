@@ -1,0 +1,183 @@
+doc_name: edge-task-relaciones-axiomas-de-orden-en-relationalgebra-closeout-to-close
+sections:
+- path: edge-xxx
+  title: edge-xxx
+  breadcrumbs:
+  - edge-xxx
+  about:
+  - edge-xxx
+  - edge xxx
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: edge-xxx
+  level: 1
+  line_start: 2
+  line_end: 3
+- path: active-archived
+  title: active | archived
+  breadcrumbs:
+  - active | archived
+  about:
+  - active | archived
+  - active archived
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: active-archived
+  level: 1
+  line_start: 4
+  line_end: 5
+- path: source-node-identifier
+  title: Source node identifier
+  breadcrumbs:
+  - Source node identifier
+  about:
+  - Source node identifier
+  - source node identifier
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: source-node-identifier
+  level: 1
+  line_start: 6
+  line_end: 7
+- path: target-node-identifier
+  title: Target node identifier
+  breadcrumbs:
+  - Target node identifier
+  about:
+  - Target node identifier
+  - target node identifier
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: target-node-identifier
+  level: 1
+  line_start: 8
+  line_end: 9
+- path: optional-condition-identifier-guarding-the-transition
+  title: Optional condition identifier guarding the transition
+  breadcrumbs:
+  - Optional condition identifier guarding the transition
+  about:
+  - Optional condition identifier guarding the transition
+  - optional condition identifier guarding the transition
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: optional-condition-identifier-guarding-the-transition
+  level: 1
+  line_start: 10
+  line_end: 11
+- path: e-g-system-deskops
+  title: e.g., system:deskops
+  breadcrumbs:
+  - e.g., system:deskops
+  about:
+  - e.g., system:deskops
+  - e g system deskops
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: e-g-system-deskops
+  level: 1
+  line_start: 12
+  line_end: 16
+- path: closeout-gate-to-close-operator
+  title: Closeout gate to close operator
+  breadcrumbs:
+  - Closeout gate to close operator
+  about:
+  - Closeout gate to close operator
+  - closeout gate to close operator
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: closeout-gate-to-close-operator
+  level: 1
+  line_start: 17
+  line_end: 23
+- path: closeout-gate-to-close-operator/summary
+  title: Summary
+  breadcrumbs:
+  - Closeout gate to close operator
+  - Summary
+  about:
+  - Closeout gate to close operator
+  - closeout gate to close operator
+  - Summary
+  - summary
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:edge
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.edge
+  - workspace.desk.primitives
+  slug: summary
+  level: 2
+  line_start: 19
+  line_end: 23
+hash_c: 2999993f4557cbac0c721ea1fef0faeba7d0692718b598882cc5a11bf4d0b43a
+sections_version: '2'

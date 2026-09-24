@@ -1,0 +1,10 @@
+name: condition-task-proyeccion-wigame-y-matrices-a-s-expressions-has-validation
+path: desk/primitives/conditions/condition-task-proyeccion-wigame-y-matrices-a-s-expressions-has-validation.md
+hash_c: ad23bf8e5bdb9cdb1bd2b34675b000ac635d191a24ebf84030f0979f4b27a6df
+hash_d: 9bb152d0e36c4365aa9c9b117b8ddd9db5180fd3bd3d26f7725f7c2d7e73f99d
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

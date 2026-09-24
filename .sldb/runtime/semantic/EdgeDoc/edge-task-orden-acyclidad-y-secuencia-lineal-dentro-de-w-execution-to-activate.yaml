@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-execution-to-activate.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: 377a58b450a581cda459696a317898d081cb2215f946daac2d1514a54d38b3f2

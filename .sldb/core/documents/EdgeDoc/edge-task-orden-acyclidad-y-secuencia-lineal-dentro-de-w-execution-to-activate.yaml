@@ -1,0 +1,10 @@
+name: edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-execution-to-activate
+path: desk/primitives/edges/edge-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-execution-to-activate.md
+hash_c: 377a58b450a581cda459696a317898d081cb2215f946daac2d1514a54d38b3f2
+hash_d: d151ea00c3fe642b2fe5e6b51241eee8359c529bb3ab2e7888d3727fd43edad8
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

@@ -1,0 +1,11 @@
+name: task-relaciones-axiomas-de-orden-en-relationalgebra
+path: desk/tasks/task-relaciones-axiomas-de-orden-en-relationalgebra.md
+hash_c: daa14340c70fb522285e1e8a3a99392b94c2487052bd52e3f0048ce1d18fe26b
+hash_d: 8788cec16d376fe5cf8c67648974b3865162c85cd9bcdb3174a794d5bdc8f7e8
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

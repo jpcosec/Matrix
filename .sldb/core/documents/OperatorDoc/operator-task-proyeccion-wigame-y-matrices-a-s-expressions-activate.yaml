@@ -1,0 +1,10 @@
+name: operator-task-proyeccion-wigame-y-matrices-a-s-expressions-activate
+path: desk/primitives/operators/operator-task-proyeccion-wigame-y-matrices-a-s-expressions-activate.md
+hash_c: 5b59a0196e298562c1683585412e13608b6e5e547f25e650b523460b21a0e25d
+hash_d: b962afef66e34c280b2f5c28ce7378c48ae7bc46b9f2f8ea661257062185168c
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

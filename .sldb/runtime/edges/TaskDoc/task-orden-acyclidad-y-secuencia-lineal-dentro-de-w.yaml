@@ -1,0 +1,569 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    name: task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    model: TaskDoc
+    path: desk/tasks/task-orden-acyclidad-y-secuencia-lineal-dentro-de-w.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: e1e467698ee3ff59b89661991f91618cecfdb54c4c386d8af8cebd2d2489418c
+    hash_d: fc397dca546cedd1a8a3af5f293710f34e6b9b77c1bf6dd682f95edc564e093d
+  facets: {}
+- id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    document_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    path: orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    title: 'Orden: acyclidad y secuencia lineal dentro de W'
+    breadcrumbs:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    about:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - orden acyclidad y secuencia lineal dentro de w
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    level: 1
+    line_start: 25
+    line_end: 62
+  facets: {}
+- id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+    document_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - Rationale
+    about:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - orden acyclidad y secuencia lineal dentro de w
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 27
+    line_end: 32
+  facets: {}
+- id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+    document_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+    title: Goal
+    breadcrumbs:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - Goal
+    about:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - orden acyclidad y secuencia lineal dentro de w
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 33
+    line_end: 38
+  facets: {}
+- id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+    document_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+    title: Scope
+    breadcrumbs:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - Scope
+    about:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - orden acyclidad y secuencia lineal dentro de w
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 39
+    line_end: 44
+  facets: {}
+- id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+    document_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - Implementation Path
+    about:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - orden acyclidad y secuencia lineal dentro de w
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 45
+    line_end: 50
+  facets: {}
+- id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+    document_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+    title: Validation
+    breadcrumbs:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - Validation
+    about:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - orden acyclidad y secuencia lineal dentro de w
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 51
+    line_end: 57
+  facets: {}
+- id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+    document_id: TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+    path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+    title: Done When
+    breadcrumbs:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - Done When
+    about:
+    - 'Orden: acyclidad y secuencia lineal dentro de W'
+    - orden acyclidad y secuencia lineal dentro de w
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 58
+    line_end: 62
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+model_name: TaskDoc
+hash_c: e1e467698ee3ff59b89661991f91618cecfdb54c4c386d8af8cebd2d2489418c
+hash_d: fc397dca546cedd1a8a3af5f293710f34e6b9b77c1bf6dd682f95edc564e093d
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

@@ -1,0 +1,11 @@
+name: task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+path: desk/tasks/task-orden-acyclidad-y-secuencia-lineal-dentro-de-w.md
+hash_c: e1e467698ee3ff59b89661991f91618cecfdb54c4c386d8af8cebd2d2489418c
+hash_d: fc397dca546cedd1a8a3af5f293710f34e6b9b77c1bf6dd682f95edc564e093d
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

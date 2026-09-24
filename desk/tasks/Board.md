@@ -4,7 +4,10 @@ id: board-001
 # Affected workspace or domain
 scope: desk
 # List of task-xxx paths
-tasks: []
+tasks:
+- desk/tasks/task-relaciones-axiomas-de-orden-en-relationalgebra.md
+- desk/tasks/task-orden-acyclidad-y-secuencia-lineal-dentro-de-w.md
+- desk/tasks/task-proyeccion-wigame-y-matrices-a-s-expressions.md
 # List of pill-xxx paths
 pills:
 - desk/contexts/pills.md
@@ -22,13 +25,13 @@ tags:
 
 ## Purpose
 
-Routes the active desk task set for Matrix.
+_Explain what this board routes and why it exists._
+
+
 
 ## Notes
 
-The routed set is empty. The previous eight tasks all targeted the abandoned
-JAX / CanonicalHypertensor architecture and were moved to
-`desk/drawer/jax/` with `status: deferred`.
+_Add short operational notes about the current routed set._
 
 The state of the engine lives in each `WiGame`; there is no global
 Hipertensor. See `desk/drawer/jax/README.md`.
@@ -37,4 +40,6 @@ Hipertensor. See `desk/drawer/jax/README.md`.
 
 _Generated from the task references above._
 
-No tasks routed.
+- Relaciones: axiomas de orden en RelationAlgebra [draft] - Extender RelationAlgebra con irreflexive, antisymmetric y total, con clasificadores is_strict_partial_order()/is_total_order() y validacion de hechos compatible con los flags legacy.
+- Orden: acyclidad y secuencia lineal dentro de W [draft] - Modulo de orden sobre aristas: validacion de acyclidad con error tipificado, orden topologico determinista, deteccion de totalidad y extension lineal.
+- Proyeccion: WiGame y matrices a s-expressions [draft] - Emisor inverso: recuperar proposiciones desde Vi/Si usando los ejes y volcarlas como s-expressions, con modo ordenado cuando hay secuencia declarada.

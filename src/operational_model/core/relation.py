@@ -19,6 +19,9 @@ class Relation:
     associative: bool = False
     distributive: bool = False
     commutative: bool = False
+    irreflexive: bool = False
+    antisymmetric: bool = False
+    total: bool = False
     metadata: dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
@@ -29,6 +32,9 @@ class Relation:
             associative=self.associative,
             distributive=self.distributive,
             commutative=self.commutative,
+            irreflexive=self.irreflexive,
+            antisymmetric=self.antisymmetric,
+            total=self.total,
         )
         if self.algebra == RelationAlgebra():
             self.algebra = legacy
@@ -37,6 +43,9 @@ class Relation:
             self.associative = self.algebra.associative
             self.distributive = self.algebra.distributive
             self.commutative = self.algebra.commutative
+            self.irreflexive = self.algebra.irreflexive
+            self.antisymmetric = self.algebra.antisymmetric
+            self.total = self.algebra.total
 
     @property
     def semantics(self) -> RelationAlgebra:

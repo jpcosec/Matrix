@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-execution-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: b47117991f6e58a0cfa8432ad4b1b77c0d91135a471e2d4300a05d384b0a54da
+hash_c_after: null
+hash_d_before: f138643524b2668dc5c70e585b3dee936bd8492da14c9c3413da1fe0d18029ef
+hash_d_after: null
+hash_a_before: 481faddb2684a07b399a69eb89d21595b775b396b9773ba5269785279acb3d4e
+hash_a_after: 724c2cd4e589a7849a827ba385461b8bed932d61d2e603366f0d1b2ce54a4130
+actor: null
+timestamp: 2026-09-24 02:50:22.713007+00:00
+previous_hash: d75523c74545d69b9703457878029a0b8f2ac6b7044bf5f700435cb9c11ae153
+entry_hash: 078d7f50af011996b582ced5793a41ff0fe7e293d01b2d9e9280276864cd55b1

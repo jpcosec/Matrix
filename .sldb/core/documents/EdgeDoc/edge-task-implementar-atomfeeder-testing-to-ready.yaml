@@ -1,0 +1,10 @@
+name: edge-task-implementar-atomfeeder-testing-to-ready
+path: desk/primitives/edges/edge-task-implementar-atomfeeder-testing-to-ready.md
+hash_c: 017d6e09824e65eab5cce7a8bf45d8b055d0959fa6297f52d4db6a6d46c894bf
+hash_d: 7106abb80298bbf06b1b0e3681ea52de2dd2f03446941656ece7a4337337c7ca
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

@@ -1,0 +1,10 @@
+name: condition-task-rulematrixcompiler-sop-reduction-has-validation
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-validation.md
+hash_c: f1e4d634fc199890c1d1aa9a5d26371e76c0f1ba8f812515f3626f9349b7a858
+hash_d: de34353a381d0ea79d7876a2bca2b2041377f77adc4a2c1e2ef80cb85437f230
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

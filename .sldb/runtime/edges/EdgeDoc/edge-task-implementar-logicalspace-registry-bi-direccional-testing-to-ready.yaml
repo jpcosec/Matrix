@@ -1,0 +1,551 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  node_type: EdgeDoc
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    name: edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready.md
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    hash_c: ff6375a582594a23b8a70fbdd1e484fa8ec3cef2bbd3a6c8368bf62ecbfdb288
+    hash_d: 8224e30ed529e610a72c126957c975eb379dbd4b61e267d1c06b6e42b2e3cbd0
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: edge-xxx
+    title: edge-xxx
+    breadcrumbs:
+    - edge-xxx
+    about:
+    - edge-xxx
+    - edge xxx
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: edge-xxx
+    level: 1
+    line_start: 2
+    line_end: 3
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: active-archived
+    title: active | archived
+    breadcrumbs:
+    - active | archived
+    about:
+    - active | archived
+    - active archived
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: active-archived
+    level: 1
+    line_start: 4
+    line_end: 5
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: source-node-identifier
+    title: Source node identifier
+    breadcrumbs:
+    - Source node identifier
+    about:
+    - Source node identifier
+    - source node identifier
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: source-node-identifier
+    level: 1
+    line_start: 6
+    line_end: 7
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: target-node-identifier
+    title: Target node identifier
+    breadcrumbs:
+    - Target node identifier
+    about:
+    - Target node identifier
+    - target node identifier
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: target-node-identifier
+    level: 1
+    line_start: 8
+    line_end: 9
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: optional-condition-identifier-guarding-the-transition
+    title: Optional condition identifier guarding the transition
+    breadcrumbs:
+    - Optional condition identifier guarding the transition
+    about:
+    - Optional condition identifier guarding the transition
+    - optional condition identifier guarding the transition
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: optional-condition-identifier-guarding-the-transition
+    level: 1
+    line_start: 10
+    line_end: 11
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: e-g-system-deskops
+    title: e.g., system:deskops
+    breadcrumbs:
+    - e.g., system:deskops
+    about:
+    - e.g., system:deskops
+    - e g system deskops
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: e-g-system-deskops
+    level: 1
+    line_start: 12
+    line_end: 16
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: testing-gate-to-testing-ready-operator
+    title: Testing gate to testing-ready operator
+    breadcrumbs:
+    - Testing gate to testing-ready operator
+    about:
+    - Testing gate to testing-ready operator
+    - testing gate to testing ready operator
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: testing-gate-to-testing-ready-operator
+    level: 1
+    line_start: 17
+    line_end: 23
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+    document_id: EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+    path: testing-gate-to-testing-ready-operator/summary
+    title: Summary
+    breadcrumbs:
+    - Testing gate to testing-ready operator
+    - Summary
+    about:
+    - Testing gate to testing-ready operator
+    - testing gate to testing ready operator
+    - Summary
+    - summary
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: summary
+    level: 2
+    line_start: 19
+    line_end: 23
+  facets: {}
+- id: sldb://semantic_tag/primitive:edge
+  node_type: semantic_tag
+  semantics:
+    tag: primitive:edge
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.edge
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.edge
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.primitives
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.primitives
+  facets: {}
+edges:
+- source: sldb://model/EdgeDoc
+  target: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#edge-xxx
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#active-archived
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#source-node-identifier
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#target-node-identifier
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#e-g-system-deskops
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready#testing-gate-to-testing-ready-operator/summary
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: edge-task-implementar-logicalspace-registry-bi-direccional-testing-to-ready
+model_name: EdgeDoc
+hash_c: ff6375a582594a23b8a70fbdd1e484fa8ec3cef2bbd3a6c8368bf62ecbfdb288
+hash_d: 8224e30ed529e610a72c126957c975eb379dbd4b61e267d1c06b6e42b2e3cbd0
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

@@ -1,0 +1,10 @@
+name: edge-task-canonicalhypertensor-jit-bitwise-operations-testing-to-ready
+path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-testing-to-ready.md
+hash_c: da5c3cb5994db510d9166b8cfea7d25a21acd3ecc092c063cdd8408f79e755ab
+hash_d: 02fda09f2713dd3a71b629d9226ff266a754db3ad4df2e69bd13bd891a5b4c8f
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

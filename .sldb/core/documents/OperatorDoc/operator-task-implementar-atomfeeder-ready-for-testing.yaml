@@ -1,0 +1,10 @@
+name: operator-task-implementar-atomfeeder-ready-for-testing
+path: desk/primitives/operators/operator-task-implementar-atomfeeder-ready-for-testing.md
+hash_c: 17e44806a600520ced4883a7ffcc378b988cbb2074b0fb076abc184acbd749d3
+hash_d: af7c3c2e607528ef41f9d8f0668deb5d181a7c6d846e291379c428520a12a303
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

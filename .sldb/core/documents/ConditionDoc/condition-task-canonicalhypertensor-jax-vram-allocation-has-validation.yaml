@@ -1,0 +1,10 @@
+name: condition-task-canonicalhypertensor-jax-vram-allocation-has-validation
+path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-validation.md
+hash_c: 0fb8f9c76a0da10828aebe65b66b4931178b3bb9b87f8c10129551c658191c51
+hash_d: 3d30b5a432f1d2d537d844e2749c204b3a465fab7b5c57e3da172d27a527eac7
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

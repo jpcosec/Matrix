@@ -1,0 +1,15 @@
+operation: track_document_file
+address: TaskDoc:task-implementar-logicalspace-registry-bi-direccional
+field: null
+previous_value: null
+new_value: null
+hash_c_before: null
+hash_c_after: 14cc4e2489941474d0e7d28ea1c0352b8c57ebb2b8c575ce7eed0bba3e087922
+hash_d_before: null
+hash_d_after: 3b923a0d6932ccc716c571a5f2bb06be04f27c26a3a1daf51aec9cdbb14895c1
+hash_a_before: 906c1a38b39402d4e4fc639eacbe0093d816c045234069051e46d98717a232d5
+hash_a_after: bc1c70ced11b2ef0ab07dfb7ef2939eab193b5ec83dae11a5825914d54c0442d
+actor: null
+timestamp: 2026-09-24 03:00:39.829755+00:00
+previous_hash: 67d06ab1fe0a54f31f225e69eec443bb64abff9de13472059f27fccbb22b9316
+entry_hash: 8a5edbbf1fe13002cbef0bb03802fc7754b1b0adec2653ccebd9756138ddeb90

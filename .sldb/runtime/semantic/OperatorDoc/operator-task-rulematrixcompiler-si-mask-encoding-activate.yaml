@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-rulematrixcompiler-si-mask-encoding-activate.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+hash_c: d434c64c1416a859973becace326749593e34a5d55b4535e2bcc20d4959e3108

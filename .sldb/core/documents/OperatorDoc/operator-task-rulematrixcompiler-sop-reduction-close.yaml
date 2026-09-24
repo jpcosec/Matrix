@@ -1,0 +1,10 @@
+name: operator-task-rulematrixcompiler-sop-reduction-close
+path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-close.md
+hash_c: f01546d4ce77de089e62e90f07d6fb2fb3f3c9aa38e75aae7c812d8bafd7c6f7
+hash_d: 24f80ef13a02924960c18d8a93370ad92c43bfaa35768c72480a93bdcf88c619
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

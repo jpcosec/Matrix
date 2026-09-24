@@ -1,0 +1,10 @@
+name: checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready
+path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready.md
+hash_c: 6b71410a83009f47b04b6c3bae8f939c9d46b467d5693c9516bb99190285a16f
+hash_d: 21a9ba74e403eb0551cf0da8d2c9c5efe05ee77f99251b8458761023f30a1c6b
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

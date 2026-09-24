@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-inferencia-deductiva-proposicional-matricial-closeout-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 9337ccf331faef9c68b060f75297bc25a7cf0cff565ec221853efc0eeeee7793
+hash_c_after: null
+hash_d_before: 43fe094094d3f3882fdb9fdc5c779fd3a316f91d780ac50476a3dd0736cc32e6
+hash_d_after: null
+hash_a_before: 005d9f1ebc925fe6cbcaa1db9eedc65a1ba6a88c9b49a972c17aad51d98218fa
+hash_a_after: f8303958c3ba7775d88a9351408c499473c0d779079f4823ad2ce5951432e4f1
+actor: null
+timestamp: 2026-09-24 02:50:17.617424+00:00
+previous_hash: 42e0a66e49d67adb93841070221e8c2be042701ebae65f0104139dedec849b35
+entry_hash: b0e2bbb03e17abdb815d6d0ef329873913496ce7d93bfa622faf739e18a03480

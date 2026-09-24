@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 521f82266dde8f6862ec3783e2ea42392bf61b664752c770fe6e7fbc07299ee9
+hash_c_after: null
+hash_d_before: 64c9ef9a2eec21bf689e44023cae68df2b31aa6b16143bfba3c96388faa4d182
+hash_d_after: null
+hash_a_before: a83f022bb83dcc8972e2192cfc192d61ad4cdf2124a8a9e37eab5d7f0754bec9
+hash_a_after: b6580d15a74e5fce2945dc1b23f46e56a7af9f6c215afa12c6445ca055389d21
+actor: null
+timestamp: 2026-09-24 02:50:34.651409+00:00
+previous_hash: 6504c985d2976a81d53973523fe2d4a15be58185f3470f054b2571991b2d9540
+entry_hash: 9ca62b7216069aa4bbcb2ff9966392780ea4f12868e795e489f3a05c442d7c9a

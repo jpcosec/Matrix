@@ -1,0 +1,10 @@
+name: operator-task-implementar-atomfeeder-activate
+path: desk/primitives/operators/operator-task-implementar-atomfeeder-activate.md
+hash_c: b459bf7a0432ddb5bdb2a9354f6c644ad0f2a7ca00098a89d813c31dc8bbc3ef
+hash_d: adca7703d317db128cf4819b771b6961f84e5370b12f899e83020a5d35da1fb5
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

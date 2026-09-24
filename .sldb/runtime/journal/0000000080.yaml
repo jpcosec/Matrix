@@ -1,0 +1,15 @@
+operation: untrack_document
+address: RoutineDoc:routine-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 2139405bf2b336ff8a420350164e2f1e50e2c989c221a70a4e1ed6198cfc139a
+hash_c_after: null
+hash_d_before: 28a75788d825fc83fcd6b60769a12a4d497cad87afc4bc16f07bb9cc14d2108b
+hash_d_after: null
+hash_a_before: 335e9d4d7174263a81d0e56bb0586b85c002eba1212ae843bf383747f47d9923
+hash_a_after: 2d297c774a3f4cc9d68d2a96e33c6c007c3537e6705fc15e0cd1960c71081c76
+actor: null
+timestamp: 2026-09-24 02:51:06.569897+00:00
+previous_hash: 4daadbdbf947239e291b25e810f5ad6672d2b757864d6532a1ebfbf3f64ad787
+entry_hash: 1850b492211543b78032661ace2836f1e217ab042196e46c1d9007686c6e487a

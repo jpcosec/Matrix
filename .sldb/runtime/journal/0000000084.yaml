@@ -1,0 +1,15 @@
+operation: untrack_document
+address: RoutineDoc:routine-task-vectorizacion-bitwise-denso-de-booleanmatrix
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 6097c210d564c9e852a62774a6d0a305fbc89f7662febeefcd81fd480bb2e80a
+hash_c_after: null
+hash_d_before: 17f35c713eeb60c26e4373ceb07ac4ab8ec73f42469dc90f4307d3d79f656359
+hash_d_after: null
+hash_a_before: 74010622a8270fca6ad3161a01bb48c90449965e5a310c67b2057f7013cfae57
+hash_a_after: 0675ee93362138135a0fee51974e2a6c8010da51cc130209712129e9589df83b
+actor: null
+timestamp: 2026-09-24 02:51:08.675518+00:00
+previous_hash: 3b40e9ab2c434e7456160120c568653909f987d8de9734b8b883cf53cb678227
+entry_hash: 1df97c58d841e06e50c799b0e37ee846e1e1f9d54de07041a268b7c2d3a354c1

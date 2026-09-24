@@ -1,0 +1,361 @@
+doc_name: pill-migracion-a-jax
+sections:
+- path: pill-xxx-unique-pill-identifier
+  title: pill-xxx, unique pill identifier
+  breadcrumbs:
+  - pill-xxx, unique pill identifier
+  about:
+  - pill-xxx, unique pill identifier
+  - pill xxx unique pill identifier
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: pill-xxx-unique-pill-identifier
+  level: 1
+  line_start: 2
+  line_end: 3
+- path: draft-active-deprecated
+  title: draft | active | deprecated
+  breadcrumbs:
+  - draft | active | deprecated
+  about:
+  - draft | active | deprecated
+  - draft active deprecated
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: draft-active-deprecated
+  level: 1
+  line_start: 4
+  line_end: 5
+- path: primary-routine-identifier-that-makes-the-artifact-actionable
+  title: Primary routine identifier that makes the artifact actionable
+  breadcrumbs:
+  - Primary routine identifier that makes the artifact actionable
+  about:
+  - Primary routine identifier that makes the artifact actionable
+  - primary routine identifier that makes the artifact actionable
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: primary-routine-identifier-that-makes-the-artifact-actionable
+  level: 1
+  line_start: 6
+  line_end: 7
+- path: current-node-in-the-operational-routine-or-state-machine
+  title: Current node in the operational routine or state machine
+  breadcrumbs:
+  - Current node in the operational routine or state machine
+  about:
+  - Current node in the operational routine or state machine
+  - current node in the operational routine or state machine
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: current-node-in-the-operational-routine-or-state-machine
+  level: 1
+  line_start: 8
+  line_end: 9
+- path: operational-transition-history
+  title: Operational transition history
+  breadcrumbs:
+  - Operational transition history
+  about:
+  - Operational transition history
+  - operational transition history
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: operational-transition-history
+  level: 1
+  line_start: 10
+  line_end: 11
+- path: e-g-language-python-concept-architecture
+  title: e.g., language:python, concept:architecture
+  breadcrumbs:
+  - e.g., language:python, concept:architecture
+  about:
+  - e.g., language:python, concept:architecture
+  - e g language python concept architecture
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: e-g-language-python-concept-architecture
+  level: 1
+  line_start: 12
+  line_end: 17
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor
+  title: Migración a Arquitectura JAX (CanonicalHypertensor)
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: migraci-n-a-arquitectura-jax-canonicalhypertensor
+  level: 1
+  line_start: 18
+  line_end: 63
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor/summary
+  title: Summary
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - Summary
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - Summary
+  - summary
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: summary
+  level: 2
+  line_start: 20
+  line_end: 25
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor/what
+  title: What
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - What
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - What
+  - what
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: what
+  level: 2
+  line_start: 26
+  line_end: 31
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor/why
+  title: Why
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - Why
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - Why
+  - why
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: why
+  level: 2
+  line_start: 32
+  line_end: 37
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor/when
+  title: When
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - When
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - When
+  - when
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: when
+  level: 2
+  line_start: 38
+  line_end: 43
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor/where
+  title: Where
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - Where
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - Where
+  - where
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: where
+  level: 2
+  line_start: 44
+  line_end: 49
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor/how
+  title: How
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - How
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - How
+  - how
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: how
+  level: 2
+  line_start: 50
+  line_end: 57
+- path: migraci-n-a-arquitectura-jax-canonicalhypertensor/how-not
+  title: How Not
+  breadcrumbs:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - How Not
+  about:
+  - Migración a Arquitectura JAX (CanonicalHypertensor)
+  - migraci n a arquitectura jax canonicalhypertensor
+  - How Not
+  - how not
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  semantic_tags:
+  - concept:architecture
+  - context:migration
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.pill
+  - workspace.desk
+  slug: how-not
+  level: 2
+  line_start: 58
+  line_end: 63
+hash_c: 061fd545c34d796d8196974b76d1f8262576a1f11508eb56bf83dc51ed63f113
+sections_version: '2'

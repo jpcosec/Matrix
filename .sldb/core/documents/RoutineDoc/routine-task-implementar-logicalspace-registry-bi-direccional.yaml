@@ -1,0 +1,11 @@
+name: routine-task-implementar-logicalspace-registry-bi-direccional
+path: desk/routines/routine-task-implementar-logicalspace-registry-bi-direccional.md
+hash_c: e482110319cf05926330467e647df02394e5b880023690680265670fe1f962d7
+hash_d: 0727da0c7ca6fe402e395a17111afac26f440f97248ad2b0623fc86531b2443f
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

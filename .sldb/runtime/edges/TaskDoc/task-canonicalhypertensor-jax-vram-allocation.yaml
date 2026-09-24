@@ -1,0 +1,1284 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    name: task-canonicalhypertensor-jax-vram-allocation
+    model: TaskDoc
+    path: desk/tasks/task-canonicalhypertensor-jax-vram-allocation.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: f33cde8fda06ec2505853f6629ec46573ea6e93f0c226ef8c3ff66ef8985296d
+    hash_d: 5083f988150725a544ddfb310173cc0febff2a291cd173695245a426ade1037b
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: task-xxx-unique-task-identifier
+    title: task-xxx, unique task identifier
+    breadcrumbs:
+    - task-xxx, unique task identifier
+    about:
+    - task-xxx, unique task identifier
+    - task xxx unique task identifier
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: task-xxx-unique-task-identifier
+    level: 1
+    line_start: 2
+    line_end: 3
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: draft-active-blocked-closed
+    title: draft | active | blocked | closed
+    breadcrumbs:
+    - draft | active | blocked | closed
+    about:
+    - draft | active | blocked | closed
+    - draft active blocked closed
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: draft-active-blocked-closed
+    level: 1
+    line_start: 4
+    line_end: 5
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: relevant-file-or-doc-paths
+    title: Relevant file or doc paths
+    breadcrumbs:
+    - Relevant file or doc paths
+    about:
+    - Relevant file or doc paths
+    - relevant file or doc paths
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: relevant-file-or-doc-paths
+    level: 1
+    line_start: 6
+    line_end: 7
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: task-identifiers-that-must-complete-first
+    title: Task identifiers that must complete first
+    breadcrumbs:
+    - Task identifiers that must complete first
+    about:
+    - Task identifiers that must complete first
+    - task identifiers that must complete first
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: task-identifiers-that-must-complete-first
+    level: 1
+    line_start: 8
+    line_end: 9
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: pill-identifiers-required
+    title: Pill identifiers required
+    breadcrumbs:
+    - Pill identifiers required
+    about:
+    - Pill identifiers required
+    - pill identifiers required
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: pill-identifiers-required
+    level: 1
+    line_start: 10
+    line_end: 11
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: files-expected-to-change
+    title: Files expected to change
+    breadcrumbs:
+    - Files expected to change
+    about:
+    - Files expected to change
+    - files expected to change
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: files-expected-to-change
+    level: 1
+    line_start: 12
+    line_end: 13
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: routine-identifier-for-operations
+    title: Routine identifier for operations
+    breadcrumbs:
+    - Routine identifier for operations
+    about:
+    - Routine identifier for operations
+    - routine identifier for operations
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: routine-identifier-for-operations
+    level: 1
+    line_start: 14
+    line_end: 15
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: checklist-identifiers-for-verification
+    title: Checklist identifiers for verification
+    breadcrumbs:
+    - Checklist identifiers for verification
+    about:
+    - Checklist identifiers for verification
+    - checklist identifiers for verification
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: checklist-identifiers-for-verification
+    level: 1
+    line_start: 16
+    line_end: 20
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: active-routine-node
+    title: Active routine node
+    breadcrumbs:
+    - Active routine node
+    about:
+    - Active routine node
+    - active routine node
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: active-routine-node
+    level: 1
+    line_start: 21
+    line_end: 22
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: execution-history-references
+    title: Execution history references
+    breadcrumbs:
+    - Execution history references
+    about:
+    - Execution history references
+    - execution history references
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: execution-history-references
+    level: 1
+    line_start: 23
+    line_end: 24
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: e-g-system-deskops-topic-cli
+    title: e.g., system:deskops, topic:cli
+    breadcrumbs:
+    - e.g., system:deskops, topic:cli
+    about:
+    - e.g., system:deskops, topic:cli
+    - e g system deskops topic cli
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: e-g-system-deskops-topic-cli
+    level: 1
+    line_start: 25
+    line_end: 30
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: canonicalhypertensor-jax-vram-allocation
+    title: 'CanonicalHypertensor: JAX VRAM Allocation'
+    breadcrumbs:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    about:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - canonicalhypertensor jax vram allocation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: canonicalhypertensor-jax-vram-allocation
+    level: 1
+    line_start: 31
+    line_end: 65
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: canonicalhypertensor-jax-vram-allocation/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - Rationale
+    about:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - canonicalhypertensor jax vram allocation
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 33
+    line_end: 38
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: canonicalhypertensor-jax-vram-allocation/goal
+    title: Goal
+    breadcrumbs:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - Goal
+    about:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - canonicalhypertensor jax vram allocation
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 39
+    line_end: 44
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: canonicalhypertensor-jax-vram-allocation/scope
+    title: Scope
+    breadcrumbs:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - Scope
+    about:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - canonicalhypertensor jax vram allocation
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 45
+    line_end: 50
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: canonicalhypertensor-jax-vram-allocation/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - Implementation Path
+    about:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - canonicalhypertensor jax vram allocation
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 51
+    line_end: 56
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: canonicalhypertensor-jax-vram-allocation/validation
+    title: Validation
+    breadcrumbs:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - Validation
+    about:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - canonicalhypertensor jax vram allocation
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 57
+    line_end: 62
+  facets: {}
+- id: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+    document_id: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+    path: canonicalhypertensor-jax-vram-allocation/done-when
+    title: Done When
+    breadcrumbs:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - Done When
+    about:
+    - 'CanonicalHypertensor: JAX VRAM Allocation'
+    - canonicalhypertensor jax vram allocation
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 63
+    line_end: 65
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-xxx-unique-task-identifier
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#draft-active-blocked-closed
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#relevant-file-or-doc-paths
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#task-identifiers-that-must-complete-first
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#pill-identifiers-required
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#files-expected-to-change
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#routine-identifier-for-operations
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#checklist-identifiers-for-verification
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#active-routine-node
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#execution-history-references
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#e-g-system-deskops-topic-cli
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-canonicalhypertensor-jax-vram-allocation#canonicalhypertensor-jax-vram-allocation/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: task-canonicalhypertensor-jax-vram-allocation
+model_name: TaskDoc
+hash_c: f33cde8fda06ec2505853f6629ec46573ea6e93f0c226ef8c3ff66ef8985296d
+hash_d: 5083f988150725a544ddfb310173cc0febff2a291cd173695245a426ade1037b
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

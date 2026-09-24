@@ -1,0 +1,11 @@
+name: task-meelengine-core-api-facade
+path: desk/tasks/task-meelengine-core-api-facade.md
+hash_c: 62523cda25145baf126f3a95dd5f191cbf43f2c452f003523648902b68438fa5
+hash_d: c0f5da495750ea823696f8954f398ac45699b9573d960e798c8655a9aad2bf11
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

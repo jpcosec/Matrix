@@ -1,0 +1,10 @@
+name: edge-task-meelengine-core-api-facade-closeout-to-close
+path: desk/primitives/edges/edge-task-meelengine-core-api-facade-closeout-to-close.md
+hash_c: a63c80cb0ec1b4befe46fd91d5257bd431eece2c4d018873914d1728bada4350
+hash_d: 07eb638bba295bce5e2630e4014d37dff1cc1642f7f2b1728857cbd6b684954d
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

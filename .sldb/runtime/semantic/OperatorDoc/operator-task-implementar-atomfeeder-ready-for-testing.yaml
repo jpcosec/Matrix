@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-implementar-atomfeeder-ready-for-testing.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+hash_c: 17e44806a600520ced4883a7ffcc378b988cbb2074b0fb076abc184acbd749d3

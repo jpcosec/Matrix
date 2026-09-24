@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-implementar-atomfeeder-execution-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+hash_c: 4ce27c152a1a7394e5fef5fe6c3ab4a46b7a4ac4f64d7e2a68f15f515d65ecdf

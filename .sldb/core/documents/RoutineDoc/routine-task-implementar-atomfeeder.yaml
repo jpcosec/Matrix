@@ -1,0 +1,11 @@
+name: routine-task-implementar-atomfeeder
+path: desk/routines/routine-task-implementar-atomfeeder.md
+hash_c: f2e6a156f491598154d41d2ee5bd7c3d406b5e325b0599923ed8b90cc8f8652b
+hash_d: 26175c7966c8330a019119bbc9a4752e7603af5cae52ed21d57f3415f3a00b83
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

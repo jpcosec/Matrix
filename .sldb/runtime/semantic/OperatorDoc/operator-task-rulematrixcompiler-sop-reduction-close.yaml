@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-close.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+hash_c: f01546d4ce77de089e62e90f07d6fb2fb3f3c9aa38e75aae7c812d8bafd7c6f7

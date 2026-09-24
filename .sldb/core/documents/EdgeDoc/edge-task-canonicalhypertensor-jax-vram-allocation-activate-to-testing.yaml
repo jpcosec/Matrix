@@ -1,0 +1,10 @@
+name: edge-task-canonicalhypertensor-jax-vram-allocation-activate-to-testing
+path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-activate-to-testing.md
+hash_c: c6c69a01146a6d7b8abfe2e2de0135677ec5c5900bb9d542598c6660f80abef8
+hash_d: 5df9ba5197318103196349da9b278b19b464579abbb783f285faf4ee98c64142
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

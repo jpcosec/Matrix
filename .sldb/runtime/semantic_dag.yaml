@@ -1,4 +1,33 @@
 nodes:
+- id: artifact:task
+  parents: []
+- id: concept:architecture
+  parents: []
+- id: context:migration
+  parents: []
+- id: primitive:checklist
+  parents: []
+- id: primitive:condition
+  parents: []
+- id: primitive:edge
+  parents: []
+- id: primitive:operator
+  parents: []
+- id: primitive:routine
+  parents: []
+- id: representation
+  parents: []
+- id: representation.markdown
+  parents:
+  - representation
+- id: source
+  parents: []
+- id: source.document
+  parents:
+  - source
+- id: source.document.markdown
+  parents:
+  - source.document
 - id: type
   parents: []
 - id: type.desk
@@ -45,4 +74,6 @@ nodes:
 - id: workspace.desk.routines
   parents:
   - workspace.desk
+- id: workspace:desk
+  parents: []
 equivalences: {}

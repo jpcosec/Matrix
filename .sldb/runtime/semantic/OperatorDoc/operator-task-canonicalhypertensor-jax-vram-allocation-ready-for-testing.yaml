@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-canonicalhypertensor-jax-vram-allocation-ready-for-testing.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+hash_c: 5786f6e4a22e2c13fbc4b7358254e8fcd3e1e4dee65693bc04456aa01cad19ec

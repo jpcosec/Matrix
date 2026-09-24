@@ -1,0 +1,11 @@
+name: task-canonicalhypertensor-jax-vram-allocation
+path: desk/tasks/task-canonicalhypertensor-jax-vram-allocation.md
+hash_c: f33cde8fda06ec2505853f6629ec46573ea6e93f0c226ef8c3ff66ef8985296d
+hash_d: 5083f988150725a544ddfb310173cc0febff2a291cd173695245a426ade1037b
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

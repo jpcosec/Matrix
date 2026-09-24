@@ -1,0 +1,10 @@
+name: condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-ready-for-closeout.md
+hash_c: fa163a5d104f3dbe429c2f9e0c67a135b3fb5dbf90cc07a79390a96ce7406eb5
+hash_d: b64818ca2f55a34c974ff3c8d81ffbe1ef5c8f692c9322f1030caa6c6d495b1f
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

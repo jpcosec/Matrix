@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-inferencia-deductiva-proposicional-matricial-has-validation
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 8a16e811f111b08e9f094cce8dbd24bd2fd6638e3b9c3ef833a594a345f9587f
+hash_c_after: null
+hash_d_before: 4cb89c771e1b72485b53c1844f7cd8c77a406f5cf6c930371c0812a6506a14ef
+hash_d_after: null
+hash_a_before: a317fe09835c7b300fc3cdc152fa7ff7b63e03b565d6c29799d096d0b28c05ae
+hash_a_after: 32134a859ec5265ccf596ffe6a6b62bf7e166cc174f551219552892a99d9da75
+actor: null
+timestamp: 2026-09-24 02:50:30.231313+00:00
+previous_hash: 1966ea9d51e269883038944a44aa14dd5d71ff1112738bdc4ffc2ff655d2428b
+entry_hash: b243efe7e58d35f5b0904337e5bef1bc5cb361e44839da873f9f20d7cdb5816f

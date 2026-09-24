@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-testing-to-ready.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: 4da6624f89bc1fff912176e8dfe70c3f3483eae99b01bab27c2eb16f90e9eded

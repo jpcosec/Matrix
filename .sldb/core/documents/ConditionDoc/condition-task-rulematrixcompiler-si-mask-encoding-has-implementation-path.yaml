@@ -1,0 +1,10 @@
+name: condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path.md
+hash_c: abd5b28f8deaa1a8910ca3fcc256a4a15346449c84c83dc0d7fceffbfa09eed8
+hash_d: 72f75cc858cd9a785934334de9c2ff303542350f96ad50e0744f8d5f7871fc4c
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+hash_c: 9931327c45c858fcc272df67af73ccede583261eaf750098e76de29ece9c025b

@@ -1,0 +1,10 @@
+name: edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready
+path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready.md
+hash_c: 7dcaa3f5642fcfc6c3bebc9e5df5ebfd15da1463553353b1ee71866037855f1c
+hash_d: e8bd1ac95b3d130e7ee2f5f74a60cfe715eedd21e9afb5b53d16d921cb289c80
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

@@ -1,0 +1,10 @@
+name: condition-task-rulematrixcompiler-sop-reduction-has-implementation-path
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-implementation-path.md
+hash_c: 430c61ecca17bf5781dc76212f199c72c2623c9466ee8a4c6423345578a02dfc
+hash_d: 86dfb8c129fe7703ee33436ac88774fa9141171eb028c656ee16b104bd9fcc02
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

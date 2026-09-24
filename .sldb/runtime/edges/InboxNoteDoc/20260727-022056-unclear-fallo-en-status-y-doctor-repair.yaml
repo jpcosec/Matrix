@@ -1,0 +1,192 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  node_type: InboxNoteDoc
+  semantics:
+    export_id: InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+    name: 20260727-022056-unclear-fallo-en-status-y-doctor-repair
+    model: InboxNoteDoc
+    path: desk/inbox/20260727-022056-unclear-fallo-en-status-y-doctor-repair.md
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    hash_c: fd5ebcf53cc50edfaadcafc90c2aade1834ba0863c22d0e1811edf013350df8c
+    hash_d: a3fbe397bcd4c1ddba8318fb0978f8dc74fbedc08f80f650701f066e37de0ebd
+  facets: {}
+- id: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+  node_type: sldb_section
+  semantics:
+    export_id: InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+    document_id: InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+    path: kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+    title: 'kind: unclear
+
+      sender_project: Matrix
+
+      created_at: 2026-07-27T02:20:56
+
+      status: open'
+    breadcrumbs:
+    - 'kind: unclear
+
+      sender_project: Matrix
+
+      created_at: 2026-07-27T02:20:56
+
+      status: open'
+    about:
+    - 'kind: unclear
+
+      sender_project: Matrix
+
+      created_at: 2026-07-27T02:20:56
+
+      status: open'
+    - kind unclear sender project matrix created at 2026 07 27t02 20 56 status open
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    slug: kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+    level: 2
+    line_start: 2
+    line_end: 7
+  facets: {}
+- id: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#fallo-en-status-y-doctor-repair
+  node_type: sldb_section
+  semantics:
+    export_id: InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#fallo-en-status-y-doctor-repair
+    document_id: InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+    path: fallo-en-status-y-doctor-repair
+    title: Fallo en status y doctor repair
+    breadcrumbs:
+    - Fallo en status y doctor repair
+    about:
+    - Fallo en status y doctor repair
+    - fallo en status y doctor repair
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    slug: fallo-en-status-y-doctor-repair
+    level: 1
+    line_start: 8
+    line_end: 10
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.desk.inbox-note
+  node_type: semantic_tag
+  semantics:
+    tag: type.desk.inbox-note
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.inbox
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.inbox
+  facets: {}
+edges:
+- source: sldb://model/InboxNoteDoc
+  target: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  target: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  target: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#fallo-en-status-y-doctor-repair
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/type.desk.inbox-note
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/workspace.desk.inbox
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+  target: sldb://semantic_tag/type.desk.inbox-note
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
+  target: sldb://semantic_tag/workspace.desk.inbox
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/type.desk.inbox-note
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#fallo-en-status-y-doctor-repair
+  target: sldb://semantic_tag/workspace.desk.inbox
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: 20260727-022056-unclear-fallo-en-status-y-doctor-repair
+model_name: InboxNoteDoc
+hash_c: fd5ebcf53cc50edfaadcafc90c2aade1834ba0863c22d0e1811edf013350df8c
+hash_d: a3fbe397bcd4c1ddba8318fb0978f8dc74fbedc08f80f650701f066e37de0ebd
+semantic_tags:
+- representation.markdown
+- source.document.markdown
+- type.desk.inbox-note
+- workspace.desk.inbox

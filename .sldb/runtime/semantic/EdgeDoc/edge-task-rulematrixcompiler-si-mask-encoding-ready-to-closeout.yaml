@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-ready-to-closeout.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: 01023d562f157a893b7d4f4b2a10bbdb7ab8cd4aa6d52e9b3a34fd664f77ac33

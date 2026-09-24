@@ -1,0 +1,10 @@
+name: operator-task-canonicalhypertensor-jit-bitwise-operations-activate
+path: desk/primitives/operators/operator-task-canonicalhypertensor-jit-bitwise-operations-activate.md
+hash_c: 61e17074cf9086a74387533a56e909a8a2a28ae62fe689e03b16a6dc741c62a4
+hash_d: 2de51fda0077b1d36b20031e324c976c8b6df30b30ba58d3004e073c533a3d50
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

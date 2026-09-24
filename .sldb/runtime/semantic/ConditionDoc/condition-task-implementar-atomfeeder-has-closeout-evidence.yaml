@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-closeout-evidence.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+hash_c: b76faebd78a986e209513fc7483f241808135df5524b57c07ffc12385a562c16

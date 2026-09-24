@@ -1,0 +1,10 @@
+name: edge-task-meelengine-core-api-facade-execution-to-activate
+path: desk/primitives/edges/edge-task-meelengine-core-api-facade-execution-to-activate.md
+hash_c: add7b1bdb55b6a6db09b9ab4e23a71a8676b0834f04713b1aec7e1089267e4c8
+hash_d: ce81f152032ffe0c5176bd55e868cd572eef342c0eeefe9fab64fc6cc6d36e44
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

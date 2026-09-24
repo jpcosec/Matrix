@@ -1,0 +1,10 @@
+name: edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete
+path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-close-to-complete.md
+hash_c: b42ce92c3b988b0a9ee7f5592e65abfbe5915ce0aff6f569479f69674f0a6987
+hash_d: 10f2da7f467a4d449dbbb72a919ad3a79d90e43c237c76bde6160ac27cc15218
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

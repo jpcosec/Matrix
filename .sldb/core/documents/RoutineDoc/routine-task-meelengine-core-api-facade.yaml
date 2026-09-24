@@ -1,0 +1,11 @@
+name: routine-task-meelengine-core-api-facade
+path: desk/routines/routine-task-meelengine-core-api-facade.md
+hash_c: dbec4ee41ed0095cda121b93100234251f16c9493422aa197548433dee2e07d8
+hash_d: d1b3e8314016ec8d41856613ca6d591485ea0eae2636e1ae2e7b1849960ab5f9
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

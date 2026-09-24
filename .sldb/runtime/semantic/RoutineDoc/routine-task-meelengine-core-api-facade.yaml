@@ -1,0 +1,10 @@
+model: RoutineDoc
+path: desk/routines/routine-task-meelengine-core-api-facade.md
+tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk
+hash_c: dbec4ee41ed0095cda121b93100234251f16c9493422aa197548433dee2e07d8

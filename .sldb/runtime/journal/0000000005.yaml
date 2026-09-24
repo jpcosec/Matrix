@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-inferencia-deductiva-proposicional-matricial-testing-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: b62d08a97031c3fa381e967179170ac410e311b23a68f843b0a4814d1a81252b
+hash_c_after: null
+hash_d_before: fda27fca87958e49e2c91f6682c867e27b000f0716c1cf63ac9bfddca999f81f
+hash_d_after: null
+hash_a_before: 57cb27845e980809828c8d260c9cb217374c53385d5dfba73efb4c7fec9b7ca0
+hash_a_after: 98bb957507576b2e7c3853f9e0b40f2e9883e9650f39fe8dc476180ff6be3ecb
+actor: null
+timestamp: 2026-09-24 02:50:19.329932+00:00
+previous_hash: 6db87a6a15591c6d3f1c0b79d1002fbfc09e79d26cf284acc66899e4e8a1e702
+entry_hash: e7845e2768559ae970106c7f42c9636f224d0f31ef71490edd44ddace142a527

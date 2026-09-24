@@ -1,0 +1,15 @@
+operation: untrack_document
+address: RoutineDoc:routine-task-inferencia-relacional-por-clausura-transitiva-matricial
+field: null
+previous_value: null
+new_value: null
+hash_c_before: c264e855c45217b983e4b9a596fbd7d5cc7ebe7e45d1590f7e4626e1543b800e
+hash_c_after: null
+hash_d_before: dce16a783d48332ee6279b099a0e68ae528031380441b9c356f20e2db981937d
+hash_d_after: null
+hash_a_before: 81dbc99d7780e2b77cad2a3b3d84fb601ce4fc7330bcd88d10332ffb599aa8b8
+hash_a_after: 87ad68589f5235370554e09f3f8476f01f94a46b655a1501132c33da372b978d
+actor: null
+timestamp: 2026-09-24 02:51:07.637727+00:00
+previous_hash: 54331ce48ca4efe13f0ce3cdf25b406f6003732b482e9374c2ea95cc5ed79024
+entry_hash: ebe1c10fe6442068f0b1efeb0f174b24a84135edb2618830973185c13cdb482e

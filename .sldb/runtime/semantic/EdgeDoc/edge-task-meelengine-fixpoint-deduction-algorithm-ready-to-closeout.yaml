@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-ready-to-closeout.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: d5082c67876b3c0dae1047225dcf0e1553e363c73582618c48bc75fa65746f20

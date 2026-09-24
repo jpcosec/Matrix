@@ -1,0 +1,10 @@
+name: condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout.md
+hash_c: 04417e34e4e7225f240cd2dec98608e692b73626fd7b206e7143c05edfbd8333
+hash_d: 7a56222e423dc31f37ade04b799b3c6a07327b9bfa757d584baa5f3cd8a3bc28
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

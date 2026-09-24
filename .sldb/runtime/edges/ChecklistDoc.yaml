@@ -1,0 +1,150 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://model/ChecklistDoc
+  node_type: sldb_model
+  semantics:
+    name: ChecklistDoc
+    model_ref: deskops.models:ChecklistDoc
+    path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/checklist.py
+    version: 1
+    canonical: false
+    family: null
+    semantic_tags:
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    base_models: []
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.checklist
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.checklist
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.primitives
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.primitives
+  facets: {}
+- id: sldb://field/ChecklistDoc.title
+  node_type: sldb_field
+  semantics:
+    name: title
+    kind: string
+    required: true
+    model: ChecklistDoc
+    description: Short primitive title.
+  facets: {}
+- id: sldb://field/ChecklistDoc.id
+  node_type: sldb_field
+  semantics:
+    name: id
+    kind: string
+    required: true
+    model: ChecklistDoc
+    description: Stable primitive identifier.
+  facets: {}
+- id: sldb://field/ChecklistDoc.status
+  node_type: sldb_field
+  semantics:
+    name: status
+    kind: string
+    required: false
+    model: ChecklistDoc
+    description: Primitive lifecycle status.
+  facets: {}
+- id: sldb://field/ChecklistDoc.summary
+  node_type: sldb_field
+  semantics:
+    name: summary
+    kind: string
+    required: false
+    model: ChecklistDoc
+    description: Short semantic summary for the primitive.
+  facets: {}
+- id: sldb://field/ChecklistDoc.tags
+  node_type: sldb_field
+  semantics:
+    name: tags
+    kind: stringlist
+    required: false
+    model: ChecklistDoc
+    description: Semantic tags placed at the end using namespaced forms.
+  facets: {}
+- id: sldb://field/ChecklistDoc.items
+  node_type: sldb_field
+  semantics:
+    name: items
+    kind: stringlist
+    required: false
+    model: ChecklistDoc
+    description: Human-readable checklist items.
+  facets: {}
+- id: sldb://field/ChecklistDoc.condition_refs
+  node_type: sldb_field
+  semantics:
+    name: condition_refs
+    kind: stringlist
+    required: false
+    model: ChecklistDoc
+    description: Condition identifiers that determine completion.
+  facets: {}
+- id: sldb://field/ChecklistDoc.mode
+  node_type: sldb_field
+  semantics:
+    name: mode
+    kind: string
+    required: false
+    model: ChecklistDoc
+    description: Checklist completion mode, such as all or any.
+  facets: {}
+edges:
+- source: sldb://model/ChecklistDoc
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/ChecklistDoc
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.title
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.id
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.status
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.summary
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.tags
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.items
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.condition_refs
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/ChecklistDoc
+  target: sldb://field/ChecklistDoc.mode
+  relation: has_field
+  metadata:
+    origin: schema
+model_name: ChecklistDoc

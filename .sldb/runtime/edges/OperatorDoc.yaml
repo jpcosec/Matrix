@@ -1,0 +1,150 @@
+edges_version: 1|sections:2
+nodes:
+- id: sldb://model/OperatorDoc
+  node_type: sldb_model
+  semantics:
+    name: OperatorDoc
+    model_ref: deskops.models:OperatorDoc
+    path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/operator.py
+    version: 1
+    canonical: false
+    family: null
+    semantic_tags:
+    - type.workflow.operator
+    - workspace.desk.primitives
+    base_models: []
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.operator
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.operator
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.primitives
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.primitives
+  facets: {}
+- id: sldb://field/OperatorDoc.title
+  node_type: sldb_field
+  semantics:
+    name: title
+    kind: string
+    required: true
+    model: OperatorDoc
+    description: Short primitive title.
+  facets: {}
+- id: sldb://field/OperatorDoc.id
+  node_type: sldb_field
+  semantics:
+    name: id
+    kind: string
+    required: true
+    model: OperatorDoc
+    description: Stable primitive identifier.
+  facets: {}
+- id: sldb://field/OperatorDoc.status
+  node_type: sldb_field
+  semantics:
+    name: status
+    kind: string
+    required: false
+    model: OperatorDoc
+    description: Primitive lifecycle status.
+  facets: {}
+- id: sldb://field/OperatorDoc.summary
+  node_type: sldb_field
+  semantics:
+    name: summary
+    kind: string
+    required: false
+    model: OperatorDoc
+    description: Short semantic summary for the primitive.
+  facets: {}
+- id: sldb://field/OperatorDoc.tags
+  node_type: sldb_field
+  semantics:
+    name: tags
+    kind: stringlist
+    required: false
+    model: OperatorDoc
+    description: Semantic tags placed at the end using namespaced forms.
+  facets: {}
+- id: sldb://field/OperatorDoc.action
+  node_type: sldb_field
+  semantics:
+    name: action
+    kind: string
+    required: true
+    model: OperatorDoc
+    description: Atomic runtime action, such as set_field or append_list.
+  facets: {}
+- id: sldb://field/OperatorDoc.target
+  node_type: sldb_field
+  semantics:
+    name: target
+    kind: string
+    required: true
+    model: OperatorDoc
+    description: Payload path modified by the operator.
+  facets: {}
+- id: sldb://field/OperatorDoc.value
+  node_type: sldb_field
+  semantics:
+    name: value
+    kind: string
+    required: false
+    model: OperatorDoc
+    description: Value used by the operator action.
+  facets: {}
+edges:
+- source: sldb://model/OperatorDoc
+  target: sldb://semantic_tag/type.workflow.operator
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/OperatorDoc
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.title
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.id
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.status
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.summary
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.tags
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.action
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.target
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/OperatorDoc
+  target: sldb://field/OperatorDoc.value
+  relation: has_field
+  metadata:
+    origin: schema
+model_name: OperatorDoc

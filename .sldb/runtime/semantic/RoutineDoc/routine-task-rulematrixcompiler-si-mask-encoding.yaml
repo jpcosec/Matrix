@@ -1,0 +1,10 @@
+model: RoutineDoc
+path: desk/routines/routine-task-rulematrixcompiler-si-mask-encoding.md
+tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk
+hash_c: 40a6b94ed5cbb0bc6f770ac81bfff3da89d23de7ad22e74990acfd6419465013

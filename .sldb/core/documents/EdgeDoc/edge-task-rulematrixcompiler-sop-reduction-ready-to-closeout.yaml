@@ -1,0 +1,10 @@
+name: edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout
+path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout.md
+hash_c: 80576223d3f942187fa90646b2fb10dd1b1ed4edff3f3876bbda66db41310a9a
+hash_d: ce4eb45048fabe211a8d2df417f273825dd3bf7464d0576586858bcc65b7f4bc
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

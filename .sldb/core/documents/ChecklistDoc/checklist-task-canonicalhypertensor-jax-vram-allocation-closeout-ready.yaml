@@ -1,0 +1,10 @@
+name: checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready
+path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready.md
+hash_c: bf033881a0cae4516b911e9fc28108c8fb637232871da7f398e2472051df9bd8
+hash_d: bd64d0f670e8523fdb1b8940d45a248753748ad9f8a0c55cec683ec585e9d84a
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

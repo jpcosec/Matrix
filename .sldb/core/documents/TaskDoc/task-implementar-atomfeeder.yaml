@@ -1,0 +1,11 @@
+name: task-implementar-atomfeeder
+path: desk/tasks/task-implementar-atomfeeder.md
+hash_c: bb1808129d07b82fe0340e0f009035e33727063d397eb08a3ca82607d3de8749
+hash_d: d9cd9dbc251b87c0a39e4f33adef36be466da125bbe0055bd0151b547ebe0850
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

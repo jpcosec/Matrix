@@ -1,0 +1,10 @@
+name: operator-task-rulematrixcompiler-sop-reduction-ready-for-testing
+path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-ready-for-testing.md
+hash_c: 7d53f42d94eccc16b80f1e02d319bd956b518593a131db2b2fef7ad01cdc41c6
+hash_d: 9801d74f4b3f168c86cedb228789ed9027ad9f0fff06810439e4dfa5d6f65285
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

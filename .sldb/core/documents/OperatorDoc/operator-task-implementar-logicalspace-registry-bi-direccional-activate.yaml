@@ -1,0 +1,10 @@
+name: operator-task-implementar-logicalspace-registry-bi-direccional-activate
+path: desk/primitives/operators/operator-task-implementar-logicalspace-registry-bi-direccional-activate.md
+hash_c: 38766e4afa07b863474b71f0f76f542be5211b9b1f55f57ea36ef1720153d4c3
+hash_d: 8d2d5f3263e05c223c52aeb430a13b00b1710230750f2dc079eaffb2d9ae9f9f
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

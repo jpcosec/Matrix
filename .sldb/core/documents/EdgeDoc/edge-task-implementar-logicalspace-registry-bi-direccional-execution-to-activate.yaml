@@ -1,0 +1,10 @@
+name: edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate
+path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate.md
+hash_c: 46ac25f4f402be5b27c19b9b0a98a3ab3322790544fce30cc000f88d551b55ea
+hash_d: 80dbc25244b7862a752cf974b96748d40bb30810256811441d41c2ba49dc62ae
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

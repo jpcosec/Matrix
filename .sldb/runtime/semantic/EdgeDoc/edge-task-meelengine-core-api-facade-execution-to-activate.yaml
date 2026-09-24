@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-meelengine-core-api-facade-execution-to-activate.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: add7b1bdb55b6a6db09b9ab4e23a71a8676b0834f04713b1aec7e1089267e4c8

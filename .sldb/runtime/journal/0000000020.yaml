@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-inferencia-deductiva-proposicional-matricial-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: dd890a4c4e09cb058bae5fcfea63df8308e7bd0c726d16adeb457f42e5cbc39c
+hash_c_after: null
+hash_d_before: dbbdf5cf005ef1b03ec7f930baf789f49bde4d862ee7fd89c382e0008e11dd58
+hash_d_after: null
+hash_a_before: 13871a7e4e9aeefb3954ae7aad85938a9671f91d5192aba29e5c660d006481d8
+hash_a_after: a317fe09835c7b300fc3cdc152fa7ff7b63e03b565d6c29799d096d0b28c05ae
+actor: null
+timestamp: 2026-09-24 02:50:29.640163+00:00
+previous_hash: 4fbbcfdaea328007b5d95f9eac9299b4db788f15bafa50af617d8a0bf258eaf1
+entry_hash: 1966ea9d51e269883038944a44aa14dd5d71ff1112738bdc4ffc2ff655d2428b

@@ -1,0 +1,10 @@
+name: checklist-task-meelengine-core-api-facade-closeout-ready
+path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-closeout-ready.md
+hash_c: 4cfbe97edd7b5ea7737e6b75a4657973d01a169d30bad759f787a8bcc5301913
+hash_d: 527996c2a410ac2a576206742206ca5e97df397cc3a753e6e6c7d6bb47cfa12d
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

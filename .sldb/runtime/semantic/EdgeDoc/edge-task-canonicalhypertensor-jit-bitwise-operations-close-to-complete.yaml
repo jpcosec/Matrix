@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-close-to-complete.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+hash_c: 6b2baa3f001658e261d1db904a3547d4af95cccb94d8d6afc092080f85f6adba

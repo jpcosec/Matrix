@@ -1,0 +1,10 @@
+name: operator-task-rulematrixcompiler-si-mask-encoding-close
+path: desk/primitives/operators/operator-task-rulematrixcompiler-si-mask-encoding-close.md
+hash_c: 30acf34adf0b0444073998ca3c7583ebd0f3dd5e02ade6259054afd67dbcc1b6
+hash_d: 14e3c9f730d265084dcb0b32013919f4e9a50a59cc00a782d6076b6589bd31eb
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

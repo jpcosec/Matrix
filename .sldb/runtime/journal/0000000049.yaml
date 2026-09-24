@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-inferencia-relacional-por-clausura-transitiva-matricial-close-to-complete
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 7f008d91c312b371160babf302a73b2c96cf6c54f4d722a3d0cb1f6547b71fe8
+hash_c_after: null
+hash_d_before: de9158758668e75f0efa4876613ad5449266f7d115470bcf4d56a7c6a709db84
+hash_d_after: null
+hash_a_before: de9fec83ff4f970cb225a7dc3719d0b44c2d3708f94cb800d48395136be6b621
+hash_a_after: 26f61a2d5999793225317b155528e411515e0000cd7c84dd79981ffd374b970b
+actor: null
+timestamp: 2026-09-24 02:50:48.003548+00:00
+previous_hash: fea285ab60a735ba9033e54644662a1d0bbaef3fc1f24e53cc58436a5fb98a1e
+entry_hash: cb5e0774a98e2c473db5f1baa6000f1dac11c2767658ba801a006f5506885b61

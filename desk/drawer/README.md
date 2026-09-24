@@ -6,6 +6,10 @@ tracked in the `.sldb` store or routed on the board.
 
 ## Contents
 
+- **`candidates/`** — 10 loose deferred work items, one file each, with the
+  evidence for why they are open. See [`candidates/README.md`](candidates/README.md)
+  for the index and for how to promote one into a real task.
+
 - **`jax/`** — the abandoned JAX / `CanonicalHypertensor` architecture: 8 task
   docs (`status: deferred`), their routines and primitives (`archived`), the
   migration pill (`deprecated`), the draft stubs and the design docs that

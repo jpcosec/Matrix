@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: d64382015eeefccd302e6435ccd5d3266b04b7e1afe7c5a076f4ae14d9f4248d

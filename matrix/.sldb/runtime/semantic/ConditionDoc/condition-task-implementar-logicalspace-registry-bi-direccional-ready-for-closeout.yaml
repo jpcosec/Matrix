@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: d5222c2be53beee4f277373097fcb2cf2ae2963f510f9e4f527fe8e039dc37d1

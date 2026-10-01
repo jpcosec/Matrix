@@ -1,0 +1,21 @@
+name: routine-task-canonicalhypertensor-jit-bitwise-operations
+path: desk/routines/routine-task-canonicalhypertensor-jit-bitwise-operations.md
+source_hash: 109c5a7623264d652a687b23d6e607a453268bf6006eb4e5decf303f39a8dcf3
+content_hash: a26a1660f12352e0202961441160ae3c2c6e8afbdeaf6e28f76463418b8db7d5
+field_hashes:
+  title: cfea48c6ecbca9746256170d4019a33ec2f3369f19bfc14ada777e7fc0203d02
+  id: c7bcc5d2c8b4add858550930f77d4e7dcb5be4cdbe612e930d77daa7285f2a45
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 5129ecd293e46c73827a9b7c0526440b2c3db2f0342368a275b38b0e56de61d0
+  tags: 682ad58c6b2fa3a80465c3d0fa4c9de759c3684e4c83c56f94a9b67d558ddd75
+  entrypoint: 03fbc9d9360b29a0c016ac9af1f8e76f75b7781d7fcf51fbf72be04614feeb58
+  decomposition: 3b3b8acf9b2a0012713791504be541a84c8eaa799b2bb3e275aebda74494de38
+  edges: ab241c935e51afd9dc940e63f404915e3a30ff14c10ee5fded24e1bf3402162f
+  terminal_nodes: 8ace718207dd793346ef234f111009a7c60689ac5c9d016af36586b581ca42fd
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

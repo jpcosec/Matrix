@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-implementar-atomfeeder-execution-to-activate.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: 94a2de99068e870a748299373833510d2f9c87f34a00857f5ce11f9444497950

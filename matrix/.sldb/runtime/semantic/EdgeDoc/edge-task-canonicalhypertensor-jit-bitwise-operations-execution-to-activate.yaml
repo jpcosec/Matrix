@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-execution-to-activate.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: bc61ba0fcfbea6dcec80395596da5f734aa0084882547d43eb11cc26d9a596f0

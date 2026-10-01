@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-execution-to-activate.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: 46ac25f4f402be5b27c19b9b0a98a3ab3322790544fce30cc000f88d551b55ea

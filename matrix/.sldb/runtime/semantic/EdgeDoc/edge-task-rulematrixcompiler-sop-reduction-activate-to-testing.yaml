@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-activate-to-testing.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: 38596ccaf1853af504c4ee75df57b35370819f618bc58ab47be05f2c96f88746

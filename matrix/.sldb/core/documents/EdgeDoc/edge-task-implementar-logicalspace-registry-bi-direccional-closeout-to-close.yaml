@@ -1,0 +1,19 @@
+name: edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close
+path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-closeout-to-close.md
+source_hash: 83fd78877b9760d8e5ba8bc4db93744b73c7c17bc393e96934c856ae868c22a6
+content_hash: 8c3fdbaad363e339a8330cc176d1d71d9ef58dd1c3996b726c5eb538b06216e8
+field_hashes:
+  title: 5568fcc8869b381e6e149b8e8efa9f8c042d2184674413d370ef4c9614db81d7
+  id: 614568a3459103cb236176257b5a1580bc03d09692b762679466d02a57036ae6
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 6325227c9527c9b5f4f1ffd9122f462874da2df2e828f301eef9a359ff306046
+  tags: 7669a24af159d3197bc1f1cebef462364089cda6e7b0ffc228fcc2b7f2cb9eb6
+  source: 28c5873e2a12d3e0da77c2d65d6cb80118740285ea73cc137a514bee0b08e6a1
+  target: a74afad0638b3b6d19d9773441577be09fa5574fd74b9f9d04c7a6d67de77694
+  condition_ref: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

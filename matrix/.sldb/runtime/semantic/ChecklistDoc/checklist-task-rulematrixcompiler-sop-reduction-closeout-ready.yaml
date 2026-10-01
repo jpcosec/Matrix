@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-closeout-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+source_hash: 703e7f85b4c443faecd8f2c176e789bab87d8cf50ca01eacd885cf62d34efc66

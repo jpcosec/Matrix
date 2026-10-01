@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-meelengine-core-api-facade-close.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+source_hash: c65a1c1291b13cf498ce7c85eacc8b673427dbb9cee0f2e57b9299207a0198ff

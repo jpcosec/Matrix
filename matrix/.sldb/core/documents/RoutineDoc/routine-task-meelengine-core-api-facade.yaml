@@ -1,0 +1,21 @@
+name: routine-task-meelengine-core-api-facade
+path: desk/routines/routine-task-meelengine-core-api-facade.md
+source_hash: dbec4ee41ed0095cda121b93100234251f16c9493422aa197548433dee2e07d8
+content_hash: d1b3e8314016ec8d41856613ca6d591485ea0eae2636e1ae2e7b1849960ab5f9
+field_hashes:
+  title: 1641d86b58fe6efc5831a1a4810b2f6e3c227eebfbd65788b6d96b27566049ca
+  id: e6384b48baf56d7c22a0d4ab66d8c5fba548bd9f4e8922375f105d7597ec4b47
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 5cab9b88e977ed78005c889f87c4a4217898df8fc60b1c9733a42d06162e1d8e
+  tags: 682ad58c6b2fa3a80465c3d0fa4c9de759c3684e4c83c56f94a9b67d558ddd75
+  entrypoint: 450e7d4fecc84679b317ebdc2e3d974f8e6ca5bd340bcb2511de6fa55cc01e39
+  decomposition: db4f2d48ce7328276a6d39eb6ed438edd0b5c727a2b5c6f6055b40fac6abf47b
+  edges: bcfe4c950ad2e94416810adf06057197f0ecf262603f84e977265d2f33d51465
+  terminal_nodes: 8ace718207dd793346ef234f111009a7c60689ac5c9d016af36586b581ca42fd
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

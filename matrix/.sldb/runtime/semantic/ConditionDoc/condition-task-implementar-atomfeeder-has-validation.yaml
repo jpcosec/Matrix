@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-validation.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: b5e36c256dd257048552370cbcc5ed088fb81e7ce0596b2946d424a1bb752016

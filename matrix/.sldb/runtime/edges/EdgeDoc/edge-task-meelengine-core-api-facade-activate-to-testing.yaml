@@ -1,0 +1,551 @@
+edges_version: 2|sections:2
+nodes:
+- id: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  node_type: EdgeDoc
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    name: edge-task-meelengine-core-api-facade-activate-to-testing
+    model: EdgeDoc
+    path: desk/primitives/edges/edge-task-meelengine-core-api-facade-activate-to-testing.md
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    hash_c: c2bf9365a7058db040eb2777438f43513a24e7c2894114aba5ef02808eb618cf
+    hash_d: 5be4f13582f000b33c9ff81c6530883ba71ecf8afc7781b6494e4fe6d0dc1e8c
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: edge-xxx
+    title: edge-xxx
+    breadcrumbs:
+    - edge-xxx
+    about:
+    - edge-xxx
+    - edge xxx
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: edge-xxx
+    level: 1
+    line_start: 2
+    line_end: 3
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: active-archived
+    title: active | archived
+    breadcrumbs:
+    - active | archived
+    about:
+    - active | archived
+    - active archived
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: active-archived
+    level: 1
+    line_start: 4
+    line_end: 5
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: source-node-identifier
+    title: Source node identifier
+    breadcrumbs:
+    - Source node identifier
+    about:
+    - Source node identifier
+    - source node identifier
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: source-node-identifier
+    level: 1
+    line_start: 6
+    line_end: 7
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: target-node-identifier
+    title: Target node identifier
+    breadcrumbs:
+    - Target node identifier
+    about:
+    - Target node identifier
+    - target node identifier
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: target-node-identifier
+    level: 1
+    line_start: 8
+    line_end: 9
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: optional-condition-identifier-guarding-the-transition
+    title: Optional condition identifier guarding the transition
+    breadcrumbs:
+    - Optional condition identifier guarding the transition
+    about:
+    - Optional condition identifier guarding the transition
+    - optional condition identifier guarding the transition
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: optional-condition-identifier-guarding-the-transition
+    level: 1
+    line_start: 10
+    line_end: 11
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: e-g-system-deskops
+    title: e.g., system:deskops
+    breadcrumbs:
+    - e.g., system:deskops
+    about:
+    - e.g., system:deskops
+    - e g system deskops
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: e-g-system-deskops
+    level: 1
+    line_start: 12
+    line_end: 16
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: activation-to-testing-gate
+    title: Activation to testing gate
+    breadcrumbs:
+    - Activation to testing gate
+    about:
+    - Activation to testing gate
+    - activation to testing gate
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: activation-to-testing-gate
+    level: 1
+    line_start: 17
+    line_end: 23
+  facets: {}
+- id: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+  node_type: sldb_section
+  semantics:
+    export_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+    document_id: EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+    path: activation-to-testing-gate/summary
+    title: Summary
+    breadcrumbs:
+    - Activation to testing gate
+    - Summary
+    about:
+    - Activation to testing gate
+    - activation to testing gate
+    - Summary
+    - summary
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:edge
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.edge
+    - workspace.desk.primitives
+    slug: summary
+    level: 2
+    line_start: 19
+    line_end: 23
+  facets: {}
+- id: sldb://semantic_tag/primitive:edge
+  node_type: semantic_tag
+  semantics:
+    tag: primitive:edge
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.edge
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.edge
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.primitives
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.primitives
+  facets: {}
+edges:
+- source: sldb://model/EdgeDoc
+  target: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#edge-xxx
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#active-archived
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#source-node-identifier
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#target-node-identifier
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#optional-condition-identifier-guarding-the-transition
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#e-g-system-deskops
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+  target: sldb://semantic_tag/primitive:edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+  target: sldb://semantic_tag/type.workflow.edge
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/EdgeDoc:edge-task-meelengine-core-api-facade-activate-to-testing#activation-to-testing-gate/summary
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: edge-task-meelengine-core-api-facade-activate-to-testing
+model_name: EdgeDoc
+source_hash: c2bf9365a7058db040eb2777438f43513a24e7c2894114aba5ef02808eb618cf
+content_hash: 5be4f13582f000b33c9ff81c6530883ba71ecf8afc7781b6494e4fe6d0dc1e8c
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

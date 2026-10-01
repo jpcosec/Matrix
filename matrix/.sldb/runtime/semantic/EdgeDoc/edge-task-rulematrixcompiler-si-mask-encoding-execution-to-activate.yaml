@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-execution-to-activate.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: 264e2566d91988a2d387b62afd0ed9a66eaee695179d8282def899e4c1c6654a

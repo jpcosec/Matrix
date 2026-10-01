@@ -1,0 +1,19 @@
+name: checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready
+path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-closeout-ready.md
+source_hash: 9931327c45c858fcc272df67af73ccede583261eaf750098e76de29ece9c025b
+content_hash: 23e8e612a37ff9edec7c7ace555b217a7ab972575847daf34e934e5038fa00cf
+field_hashes:
+  title: f9f518924fe553fd48c847cb4d2e4459078dac250ebbfeb516db04199ed4ee15
+  id: 28c5873e2a12d3e0da77c2d65d6cb80118740285ea73cc137a514bee0b08e6a1
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 6fa9966b6f6f96323278c6b97ceb8f78e2a6414d0439ed0cafd5fb6409833f1b
+  tags: 8325257b89e1ac7ba706788c8183d441db3116d28af0eb064be34dbc69e90f89
+  items: 89d413d994000a9eb0a67d99da76dc1b023b461663d5fb24c848b61ad1e74824
+  condition_refs: ae758fdda08a1e6bace8ad3b9d9275899c528b1070e5870900d2c8873d3115cc
+  mode: 5cf7504d9781301d83347546cdabc01a03c9638ab5b36c0a9203911078a0d1a4
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

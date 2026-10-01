@@ -1,0 +1,19 @@
+name: edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready
+path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-testing-to-ready.md
+source_hash: 7dcaa3f5642fcfc6c3bebc9e5df5ebfd15da1463553353b1ee71866037855f1c
+content_hash: e8bd1ac95b3d130e7ee2f5f74a60cfe715eedd21e9afb5b53d16d921cb289c80
+field_hashes:
+  title: db7bb8d34f7ee69a6dc2e2bdb841813005fd2079ddf3f968491677f79e299845
+  id: a15dd6757b773063bd134b42da4280900f96b42a548e5256353f431f02a638dc
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 438ab1bdcaebcecdeb5df6e29b7b550b8a82b621a54e84b4cb5b7ad8828a32d6
+  tags: 7669a24af159d3197bc1f1cebef462364089cda6e7b0ffc228fcc2b7f2cb9eb6
+  source: eb1da772e1bd2b3e01d422b75de0d0ce5e8fc9d65d2f187aed7b5e77e3dc2632
+  target: 1d476dc64096f579bdc9500d3a771f5a37ee578a5c9ba3cfc0acece9cc95aab9
+  condition_ref: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

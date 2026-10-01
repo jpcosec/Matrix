@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-closeout-evidence.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: 21746882231fa2ddbd1799902dec904baa633bcc92e557053be690e5405120e2

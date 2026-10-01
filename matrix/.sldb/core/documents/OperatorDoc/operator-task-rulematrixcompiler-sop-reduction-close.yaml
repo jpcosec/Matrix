@@ -1,0 +1,19 @@
+name: operator-task-rulematrixcompiler-sop-reduction-close
+path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-close.md
+source_hash: f01546d4ce77de089e62e90f07d6fb2fb3f3c9aa38e75aae7c812d8bafd7c6f7
+content_hash: 24f80ef13a02924960c18d8a93370ad92c43bfaa35768c72480a93bdcf88c619
+field_hashes:
+  title: 3475b4f5f58a51202b2e45845479c3b46e8c3196e9bffb77fe52f00c16887690
+  id: 72624d08377ca5d2c772038bf3e0da01b52f557a8e856504c2e4567d06810f1a
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 0e84486c53bf166c790605c71264b5b9f528ca66fa84cf6c718347cff002726a
+  tags: addd3623ce8edccd84747015525ca0bffc07240097d492329f4f1d2a069be349
+  action: 15fe2461fd90705d5e77632cb6d3d337f9cc7e750e8815781dcc4e92d6b89b85
+  target: cfc31bcc34ed7f4cc7895026ae8a54f0494f73757e9f914d0f6ed90f9bc34f51
+  value: 02e31f51aa8b1b6a622c4f7c30fab328d711cad4c9da74b9965ada8aa15d9df2
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

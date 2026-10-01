@@ -1,0 +1,21 @@
+name: routine-task-meelengine-fixpoint-deduction-algorithm
+path: desk/routines/routine-task-meelengine-fixpoint-deduction-algorithm.md
+source_hash: ba181dac9010a0a12ad25d2ba8ee1adc00070c601e9cbd2537c59aefb2683467
+content_hash: 05888432c4ed993411936d04778f0757db36113184c6d8820f38851e8ddad323
+field_hashes:
+  title: d0cd4ebdf14e2c98cb0b757dc53d9051e19f15d0ad2a11544f088daeb4a95d5b
+  id: 4277dce590e7d5402e02611a8b16a4e7a7cb6da937d945565e904d41e46e2d94
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 419739f387ffb9011c67445e3df6cd5159db4bcfe90067373ff945fbb63d1f8e
+  tags: 682ad58c6b2fa3a80465c3d0fa4c9de759c3684e4c83c56f94a9b67d558ddd75
+  entrypoint: ca3469fda2bbb7d5f97e59b0dfa0be8bc6b86da6620ab683f194f527047cb242
+  decomposition: bc12156565cbac6d1dff6c66e49e07968a7292580d242933e335fbfd4f813fe9
+  edges: c22ffe3713a9a725f73c0f1a5d988f1d720a1e9d18ccb4bf1b2015b1e917dd6a
+  terminal_nodes: 8ace718207dd793346ef234f111009a7c60689ac5c9d016af36586b581ca42fd
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

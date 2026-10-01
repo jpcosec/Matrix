@@ -1,0 +1,186 @@
+doc_name: checklist-task-implementar-atomfeeder-testing-ready
+sections:
+- path: checklist-xxx
+  title: checklist-xxx
+  breadcrumbs:
+  - checklist-xxx
+  about:
+  - checklist-xxx
+  - checklist xxx
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: checklist-xxx
+  level: 1
+  line_start: 2
+  line_end: 3
+- path: draft-active-complete-archived
+  title: draft | active | complete | archived
+  breadcrumbs:
+  - draft | active | complete | archived
+  about:
+  - draft | active | complete | archived
+  - draft active complete archived
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: draft-active-complete-archived
+  level: 1
+  line_start: 4
+  line_end: 5
+- path: list-of-condition-xxx-paths
+  title: List of condition-xxx paths
+  breadcrumbs:
+  - List of condition-xxx paths
+  about:
+  - List of condition-xxx paths
+  - list of condition xxx paths
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: list-of-condition-xxx-paths
+  level: 1
+  line_start: 6
+  line_end: 8
+- path: all-any
+  title: all | any
+  breadcrumbs:
+  - all | any
+  about:
+  - all | any
+  - all any
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: all-any
+  level: 1
+  line_start: 9
+  line_end: 10
+- path: e-g-system-deskops
+  title: e.g., system:deskops
+  breadcrumbs:
+  - e.g., system:deskops
+  about:
+  - e.g., system:deskops
+  - e g system deskops
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: e-g-system-deskops
+  level: 1
+  line_start: 11
+  line_end: 15
+- path: testing-ready
+  title: Testing Ready
+  breadcrumbs:
+  - Testing Ready
+  about:
+  - Testing Ready
+  - testing ready
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: testing-ready
+  level: 1
+  line_start: 16
+  line_end: 28
+- path: testing-ready/summary
+  title: Summary
+  breadcrumbs:
+  - Testing Ready
+  - Summary
+  about:
+  - Testing Ready
+  - testing ready
+  - Summary
+  - summary
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: summary
+  level: 2
+  line_start: 18
+  line_end: 23
+- path: testing-ready/items
+  title: Items
+  breadcrumbs:
+  - Testing Ready
+  - Items
+  about:
+  - Testing Ready
+  - testing ready
+  - Items
+  - items
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  semantic_tags:
+  - primitive:checklist
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.checklist
+  - workspace.desk.primitives
+  slug: items
+  level: 2
+  line_start: 24
+  line_end: 28
+source_hash: 2a682723f09ad41c4ccb6f721985efbf24126711ee48a36cbc1ee5f7379840ff
+sections_version: '2'

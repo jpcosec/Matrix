@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-closeout-evidence.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: f84bc79c75811ba522913d4f1223b061cc9afb69fd4fc95e0e301974785ab0fa

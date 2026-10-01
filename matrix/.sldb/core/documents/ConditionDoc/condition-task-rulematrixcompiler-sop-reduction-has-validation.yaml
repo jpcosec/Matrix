@@ -1,0 +1,19 @@
+name: condition-task-rulematrixcompiler-sop-reduction-has-validation
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-validation.md
+source_hash: f1e4d634fc199890c1d1aa9a5d26371e76c0f1ba8f812515f3626f9349b7a858
+content_hash: de34353a381d0ea79d7876a2bca2b2041377f77adc4a2c1e2ef80cb85437f230
+field_hashes:
+  title: 4b5b929c0d478242df45633fad6c7a94e1b4940021a8f4556c5e53b2b4809572
+  id: 015c68b5142793778713bdb4eac0ba54572070670b49483ad622beb53da7d607
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 01c735311a5c01c148cb0552d885d61788ae2cdee11da9b32931fb3e5085c6ae
+  tags: 45204bcdcf0df6ce91df3fae4e174bbaa7a603d65e1780fc30f096aa06e30e01
+  subject: 56a509f1644233a7ddf1c25ce1a1b39f1caeddc5e4de54d5c0abb29d5746a5a1
+  predicate: cfafe02ea20afc0e4a233966acd1f134d3b4c805b8744f148817921aa59a8f86
+  expected: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

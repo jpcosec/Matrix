@@ -1,0 +1,10 @@
+model: RoutineDoc
+path: desk/routines/routine-task-canonicalhypertensor-jit-bitwise-operations.md
+tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk
+source_hash: 109c5a7623264d652a687b23d6e607a453268bf6006eb4e5decf303f39a8dcf3

@@ -1,0 +1,554 @@
+edges_version: 2|sections:2
+nodes:
+- id: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  node_type: ChecklistDoc
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    name: checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    model: ChecklistDoc
+    path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-execution-ready.md
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    hash_c: 7028c906340f6127fe9589ee225b76131cc8fbc419dfe4694bd6179b3dbbc800
+    hash_d: 0c2d6ed4d7e799e2384a898d2507d0f16754a038091a7987e63f03e2995d1737
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: checklist-xxx
+    title: checklist-xxx
+    breadcrumbs:
+    - checklist-xxx
+    about:
+    - checklist-xxx
+    - checklist xxx
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: checklist-xxx
+    level: 1
+    line_start: 2
+    line_end: 3
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: draft-active-complete-archived
+    title: draft | active | complete | archived
+    breadcrumbs:
+    - draft | active | complete | archived
+    about:
+    - draft | active | complete | archived
+    - draft active complete archived
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: draft-active-complete-archived
+    level: 1
+    line_start: 4
+    line_end: 5
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: list-of-condition-xxx-paths
+    title: List of condition-xxx paths
+    breadcrumbs:
+    - List of condition-xxx paths
+    about:
+    - List of condition-xxx paths
+    - list of condition xxx paths
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: list-of-condition-xxx-paths
+    level: 1
+    line_start: 6
+    line_end: 7
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: all-any
+    title: all | any
+    breadcrumbs:
+    - all | any
+    about:
+    - all | any
+    - all any
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: all-any
+    level: 1
+    line_start: 8
+    line_end: 9
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: e-g-system-deskops
+    title: e.g., system:deskops
+    breadcrumbs:
+    - e.g., system:deskops
+    about:
+    - e.g., system:deskops
+    - e g system deskops
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: e-g-system-deskops
+    level: 1
+    line_start: 10
+    line_end: 14
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: execution-ready
+    title: Execution Ready
+    breadcrumbs:
+    - Execution Ready
+    about:
+    - Execution Ready
+    - execution ready
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: execution-ready
+    level: 1
+    line_start: 15
+    line_end: 27
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: execution-ready/summary
+    title: Summary
+    breadcrumbs:
+    - Execution Ready
+    - Summary
+    about:
+    - Execution Ready
+    - execution ready
+    - Summary
+    - summary
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: summary
+    level: 2
+    line_start: 17
+    line_end: 22
+  facets: {}
+- id: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+  node_type: sldb_section
+  semantics:
+    export_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+    document_id: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+    path: execution-ready/items
+    title: Items
+    breadcrumbs:
+    - Execution Ready
+    - Items
+    about:
+    - Execution Ready
+    - execution ready
+    - Items
+    - items
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:checklist
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.checklist
+    - workspace.desk.primitives
+    slug: items
+    level: 2
+    line_start: 23
+    line_end: 27
+  facets: {}
+- id: sldb://semantic_tag/primitive:checklist
+  node_type: semantic_tag
+  semantics:
+    tag: primitive:checklist
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.checklist
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.checklist
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.primitives
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.primitives
+  facets: {}
+edges:
+- source: sldb://model/ChecklistDoc
+  target: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#checklist-xxx
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#draft-active-complete-archived
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#list-of-condition-xxx-paths
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#all-any
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#e-g-system-deskops
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/summary
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+  target: sldb://semantic_tag/primitive:checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+  target: sldb://semantic_tag/type.workflow.checklist
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready#execution-ready/items
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+model_name: ChecklistDoc
+source_hash: 7028c906340f6127fe9589ee225b76131cc8fbc419dfe4694bd6179b3dbbc800
+content_hash: 0c2d6ed4d7e799e2384a898d2507d0f16754a038091a7987e63f03e2995d1737
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

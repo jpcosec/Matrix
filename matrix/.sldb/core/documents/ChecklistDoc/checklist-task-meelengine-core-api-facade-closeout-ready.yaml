@@ -1,0 +1,19 @@
+name: checklist-task-meelengine-core-api-facade-closeout-ready
+path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-closeout-ready.md
+source_hash: 4cfbe97edd7b5ea7737e6b75a4657973d01a169d30bad759f787a8bcc5301913
+content_hash: 527996c2a410ac2a576206742206ca5e97df397cc3a753e6e6c7d6bb47cfa12d
+field_hashes:
+  title: f9f518924fe553fd48c847cb4d2e4459078dac250ebbfeb516db04199ed4ee15
+  id: c26880bc6a885ec00a79f590c9af1122f5fc2eb89b879c617fddaa972b36a03a
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 6fa9966b6f6f96323278c6b97ceb8f78e2a6414d0439ed0cafd5fb6409833f1b
+  tags: 8325257b89e1ac7ba706788c8183d441db3116d28af0eb064be34dbc69e90f89
+  items: 89d413d994000a9eb0a67d99da76dc1b023b461663d5fb24c848b61ad1e74824
+  condition_refs: 991984573c81bd065ebec859239c478067db8fa2b109effe89eab8b0b3c2ef65
+  mode: 5cf7504d9781301d83347546cdabc01a03c9638ab5b36c0a9203911078a0d1a4
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

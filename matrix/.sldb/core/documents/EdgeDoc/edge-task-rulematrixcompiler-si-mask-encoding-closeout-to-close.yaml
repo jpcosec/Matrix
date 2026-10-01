@@ -1,0 +1,19 @@
+name: edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close
+path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-closeout-to-close.md
+source_hash: 2bd10919f4706f4c524405c967840479c3f4244a1b1d179f2834005bcf35cd58
+content_hash: 23062915cc365f4082a0224ae0741894ad28d15b293b87ff965826bf23b83e02
+field_hashes:
+  title: 5568fcc8869b381e6e149b8e8efa9f8c042d2184674413d370ef4c9614db81d7
+  id: 52f153417d4e1cff7b0d75836f686f993d5acf5fb9f977ab8c15fced2b86b8da
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 6325227c9527c9b5f4f1ffd9122f462874da2df2e828f301eef9a359ff306046
+  tags: 7669a24af159d3197bc1f1cebef462364089cda6e7b0ffc228fcc2b7f2cb9eb6
+  source: e687f4b9aec61512612a91e15907b2c387bdc2899400e2aef2479beb23ad66ab
+  target: 5f1a13c529f9e888df216aaf07f32c74879ab49a1e776cc6ca99f5fb52f74a0f
+  condition_ref: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-meelengine-core-api-facade-ready-for-testing.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+source_hash: 7dd701b00bcabbb7a8d1ca458a61a0bf7d657feef370e28217d4d4bbd80106f3

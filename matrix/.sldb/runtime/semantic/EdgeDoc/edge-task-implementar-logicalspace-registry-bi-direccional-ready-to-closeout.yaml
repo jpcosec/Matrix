@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-implementar-logicalspace-registry-bi-direccional-ready-to-closeout.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: d450b8ef6321ad413896890174c91babed4766748aa83a99a80676604df37c8d

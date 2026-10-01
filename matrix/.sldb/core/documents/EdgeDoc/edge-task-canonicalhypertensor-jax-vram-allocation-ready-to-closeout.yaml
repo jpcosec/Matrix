@@ -1,0 +1,19 @@
+name: edge-task-canonicalhypertensor-jax-vram-allocation-ready-to-closeout
+path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-ready-to-closeout.md
+source_hash: b634588a6e04e1b2653209cee780cb11326389e5a7330a8b7f40c351f1c41e00
+content_hash: f9cab5a39f02df8dfbf4592471640145a75ed4e5771d5d646b4e6df0e820b0b9
+field_hashes:
+  title: 28f3da66e44eae82fab8d07e6a3618d7861c13d989ac60357fc4dd6d3b2abca9
+  id: 243c33b5d5f22779e382c02569163542956254120572f1caff3c5d719c2fc00b
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: de8b0b7d0f618aa6d3814e1e53ffe68e07dc4f0e5990c245ad5259005d2a9754
+  tags: 7669a24af159d3197bc1f1cebef462364089cda6e7b0ffc228fcc2b7f2cb9eb6
+  source: f7676f5df8a6247751668d388537c2468aa0a1e59bbcef0f4fdbed352b0aab3a
+  target: 7199b9e5f42dd4bb91c97f78df3927a7f4fec0c4bb9411b4aed64139c46191a4
+  condition_ref: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

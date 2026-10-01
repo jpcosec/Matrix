@@ -1,0 +1,18 @@
+name: RoleDoc
+model_ref: deskops.models:RoleDoc
+path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/role.py
+documents_index: .sldb/core/documents/RoleDoc.yaml
+sections_index: ''
+model_hash: 4dfc4f48be97c56e981a6a3833a85851a9f433002997cad2d0666f155d62cbd9
+roster_hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+contract_hash: e1426e28f429dd47015063420f0e6a014d6e612617a24ee41bdfaf28327db1e5
+documents_count: 0
+version: 1
+canonical: false
+family: null
+semantics:
+- representation.markdown
+- source.document.markdown
+- type.workflow.role
+- workspace.desk.roles
+base_models: []

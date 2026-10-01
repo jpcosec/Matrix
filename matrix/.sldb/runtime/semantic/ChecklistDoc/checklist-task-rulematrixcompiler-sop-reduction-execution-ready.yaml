@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-rulematrixcompiler-sop-reduction-execution-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+source_hash: 7028c906340f6127fe9589ee225b76131cc8fbc419dfe4694bd6179b3dbbc800

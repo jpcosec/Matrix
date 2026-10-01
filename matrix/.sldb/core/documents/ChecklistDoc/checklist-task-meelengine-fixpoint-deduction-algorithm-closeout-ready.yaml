@@ -1,0 +1,19 @@
+name: checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready
+path: desk/primitives/checklists/checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready.md
+source_hash: 6b71410a83009f47b04b6c3bae8f939c9d46b467d5693c9516bb99190285a16f
+content_hash: 21a9ba74e403eb0551cf0da8d2c9c5efe05ee77f99251b8458761023f30a1c6b
+field_hashes:
+  title: f9f518924fe553fd48c847cb4d2e4459078dac250ebbfeb516db04199ed4ee15
+  id: 93d699306e3afe3ad99e3e614eb062c082400de41f6804862133b40e00dddc03
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 6fa9966b6f6f96323278c6b97ceb8f78e2a6414d0439ed0cafd5fb6409833f1b
+  tags: 8325257b89e1ac7ba706788c8183d441db3116d28af0eb064be34dbc69e90f89
+  items: 89d413d994000a9eb0a67d99da76dc1b023b461663d5fb24c848b61ad1e74824
+  condition_refs: 5e313ff6a9442ab5e58696b104947d8826479ee67f52d798f7bcee4c9eeb1272
+  mode: 5cf7504d9781301d83347546cdabc01a03c9638ab5b36c0a9203911078a0d1a4
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

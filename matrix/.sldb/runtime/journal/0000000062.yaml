@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-close-to-complete
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 2578f72dbd101f1b74bcccb2edb88f4c1e524fa035ae10bfd92f718bb4cdc9ff
+hash_c_after: null
+hash_d_before: 5c22926dd7d5108ec81c1bf9d1e311dc7547672b5d21684fd28e784fd67e9f7c
+hash_d_after: null
+hash_a_before: fdb43f7bef05b3928c0fd61b6b820deeac24ffe8816bf0f29474a27d6848b6ff
+hash_a_after: 100d6f9174e3affee08c1b939ba1ddbc0d8e1111fa1c3ae785c6539d1cbc5b25
+actor: null
+timestamp: 2026-09-30 13:45:08.196802+00:00
+previous_hash: 6305e45a74623e264e880f2320c99b79d29d3a2b6e73a5de18e0ceb55f6ecfb7
+entry_hash: b5c6829606620da5793a9c2f8f7530885a376c6a0453e8c83e7f84d97c72828b

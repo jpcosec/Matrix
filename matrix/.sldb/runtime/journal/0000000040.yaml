@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: f03f5e0fbfa5c8c788a6ecd9cc4f505ace7e31468c82e8f31dd5854b20936190
+hash_c_after: null
+hash_d_before: 34baf5c3d2a60d3ab7bb4fb16be45fd3c084229b6fd21f246ec279b3e866e8a2
+hash_d_after: null
+hash_a_before: b919bc39c4172b16b9da9d3bd8940dd0e9a7cc55c698f6a046bf265e8609854c
+hash_a_after: cb7a70a482e90cc6fd9ed37abaee1699f60824acce5c3bd407695b361196e01d
+actor: null
+timestamp: 2026-09-30 13:45:07.313589+00:00
+previous_hash: d808a251dd5ce055acdb8f80d614b6b8351a4b532c66daa6e648eaa141810173
+entry_hash: 1b8eecbec26231c5770bf9413e16d6e89a473df78c74b3c416bdc7395689cc3a

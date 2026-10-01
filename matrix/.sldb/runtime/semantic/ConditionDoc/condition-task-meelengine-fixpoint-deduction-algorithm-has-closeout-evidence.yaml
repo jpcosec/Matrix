@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-closeout-evidence.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: f9e73c868dce01de823e6793c0ebda14ab975e3edcff5302b05163e088f8fc41

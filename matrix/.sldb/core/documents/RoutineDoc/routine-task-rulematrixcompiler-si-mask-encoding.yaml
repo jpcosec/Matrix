@@ -1,0 +1,21 @@
+name: routine-task-rulematrixcompiler-si-mask-encoding
+path: desk/routines/routine-task-rulematrixcompiler-si-mask-encoding.md
+source_hash: 40a6b94ed5cbb0bc6f770ac81bfff3da89d23de7ad22e74990acfd6419465013
+content_hash: a7a3d0b7c1c30699645f98a7e00f9a5842bfb3321e807d4b264a61c3a97cdf4f
+field_hashes:
+  title: 38be10163ec7155f976aa98b3163802d53b77c85f34d34afbaf8a61f7dd975b8
+  id: 2189d2f294fbb1ece0482b4c69da106eb2c168b0ad1607f2bbe983227ac1eab8
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: de361f1af3bff020e8d0e3ed828cbe156bf6e39b96c5a22aef6a5857d6b3420d
+  tags: 682ad58c6b2fa3a80465c3d0fa4c9de759c3684e4c83c56f94a9b67d558ddd75
+  entrypoint: d2507f234be13166f3121f16e8a0094fc65ba4386579dba3793b34822f3337ec
+  decomposition: 5042349398757d7ac7d232f8ed874a713a974d9028172436874bdbfdde30591a
+  edges: 4b9bf03c7b0d7c3830e745e10a920ae4898c54c1ae05654ed2c1db9d5b04591b
+  terminal_nodes: 8ace718207dd793346ef234f111009a7c60689ac5c9d016af36586b581ca42fd
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

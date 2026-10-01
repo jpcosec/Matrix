@@ -1,0 +1,19 @@
+name: condition-task-meelengine-fixpoint-deduction-algorithm-has-validation
+path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-validation.md
+source_hash: 2cb86854fd4231efeea83588c0d8477536722245bf7ab33a408aaff6ce6dbc1b
+content_hash: 2f8be4d13a5c90f8e87394f701afd16f8a26c8c7dbcf727c69e7f34fb690e26b
+field_hashes:
+  title: 4b5b929c0d478242df45633fad6c7a94e1b4940021a8f4556c5e53b2b4809572
+  id: cf35b75b84dbee504a6b4cba2769b832e74443e09d32d4e75decd2438b930d24
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 01c735311a5c01c148cb0552d885d61788ae2cdee11da9b32931fb3e5085c6ae
+  tags: 45204bcdcf0df6ce91df3fae4e174bbaa7a603d65e1780fc30f096aa06e30e01
+  subject: 56a509f1644233a7ddf1c25ce1a1b39f1caeddc5e4de54d5c0abb29d5746a5a1
+  predicate: cfafe02ea20afc0e4a233966acd1f134d3b4c805b8744f148817921aa59a8f86
+  expected: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

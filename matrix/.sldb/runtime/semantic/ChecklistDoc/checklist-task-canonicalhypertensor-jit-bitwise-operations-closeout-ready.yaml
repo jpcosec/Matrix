@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jit-bitwise-operations-closeout-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+source_hash: a14d80566715e110332c2675ffbc20a3929df570706493ef6b9ede2cbff5c332

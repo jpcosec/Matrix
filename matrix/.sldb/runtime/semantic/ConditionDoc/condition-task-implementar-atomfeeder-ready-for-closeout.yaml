@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-implementar-atomfeeder-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: 438e40f238b3db07c8d8efcbce6968f9001e9a1374705be2cf8eaf70d756e768

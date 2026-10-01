@@ -1,0 +1,228 @@
+edges_version: 2|sections:2
+nodes:
+- id: sldb://model/RoleDoc
+  node_type: sldb_model
+  semantics:
+    name: RoleDoc
+    model_ref: deskops.models:RoleDoc
+    path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/role.py
+    version: 1
+    canonical: false
+    family: null
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.role
+    - workspace.desk.roles
+    base_models: []
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.role
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.role
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.roles
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.roles
+  facets: {}
+- id: sldb://field/RoleDoc.id
+  node_type: sldb_field
+  semantics:
+    name: id
+    kind: string
+    required: true
+    model: RoleDoc
+    description: Stable role prompt identifier, conventionally 'role-<slug>'.
+  facets: {}
+- id: sldb://field/RoleDoc.name
+  node_type: sldb_field
+  semantics:
+    name: name
+    kind: string
+    required: true
+    model: RoleDoc
+    description: Installed pi-agent role name, such as 'deskops-supervisor'.
+  facets: {}
+- id: sldb://field/RoleDoc.description
+  node_type: sldb_field
+  semantics:
+    name: description
+    kind: string
+    required: true
+    model: RoleDoc
+    description: Short description of when to use this role prompt.
+  facets: {}
+- id: sldb://field/RoleDoc.kind
+  node_type: sldb_field
+  semantics:
+    name: kind
+    kind: string
+    required: false
+    model: RoleDoc
+    description: Agent runtime kind (e.g. pi, claude, opencode).
+  facets: {}
+- id: sldb://field/RoleDoc.model
+  node_type: sldb_field
+  semantics:
+    name: model
+    kind: string
+    required: false
+    model: RoleDoc
+    description: Primary model ID.
+  facets: {}
+- id: sldb://field/RoleDoc.fallback_models
+  node_type: sldb_field
+  semantics:
+    name: fallback_models
+    kind: stringlist
+    required: false
+    model: RoleDoc
+    description: Fallback models.
+  facets: {}
+- id: sldb://field/RoleDoc.tools
+  node_type: sldb_field
+  semantics:
+    name: tools
+    kind: stringlist
+    required: false
+    model: RoleDoc
+    description: Enabled tools.
+  facets: {}
+- id: sldb://field/RoleDoc.system_prompt_mode
+  node_type: sldb_field
+  semantics:
+    name: system_prompt_mode
+    kind: string
+    required: false
+    model: RoleDoc
+    description: System prompt mode.
+  facets: {}
+- id: sldb://field/RoleDoc.inherit_project_context
+  node_type: sldb_field
+  semantics:
+    name: inherit_project_context
+    kind: boolean
+    required: false
+    model: RoleDoc
+    description: Inherit project context.
+  facets: {}
+- id: sldb://field/RoleDoc.inherit_skills
+  node_type: sldb_field
+  semantics:
+    name: inherit_skills
+    kind: boolean
+    required: false
+    model: RoleDoc
+    description: Inherit project skills.
+  facets: {}
+- id: sldb://field/RoleDoc.default_context
+  node_type: sldb_field
+  semantics:
+    name: default_context
+    kind: string
+    required: false
+    model: RoleDoc
+    description: Default context type (e.g. fork).
+  facets: {}
+- id: sldb://field/RoleDoc.body
+  node_type: sldb_field
+  semantics:
+    name: body
+    kind: string
+    required: true
+    model: RoleDoc
+    description: Full role prompt markdown body after the YAML frontmatter.
+  facets: {}
+edges:
+- source: sldb://model/RoleDoc
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RoleDoc
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RoleDoc
+  target: sldb://semantic_tag/type.workflow.role
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RoleDoc
+  target: sldb://semantic_tag/workspace.desk.roles
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.id
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.name
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.description
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.kind
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.model
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.fallback_models
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.tools
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.system_prompt_mode
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.inherit_project_context
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.inherit_skills
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.default_context
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RoleDoc
+  target: sldb://field/RoleDoc.body
+  relation: has_field
+  metadata:
+    origin: schema
+model_name: RoleDoc

@@ -3,7 +3,10 @@ model_ref: deskops.models:StepDoc
 path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/step.py
 documents_index: .sldb/core/documents/StepDoc.yaml
 sections_index: ''
-hash_b: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+model_hash: a24c157cf6c6ee9a122b643a5f05add0528fb17f51e96f447da0655305d73d71
+roster_hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+contract_hash: 34964a3d63cd67a43de13b5062b81846f1eb6cf64c46b9f327be5cd0bb34de31
+documents_count: 0
 version: 1
 canonical: false
 family: null

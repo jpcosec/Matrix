@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-implementar-atomfeeder-close-to-complete.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: be9ee0a0746b9202131da10a46ef731243181ded522cdf23657191604ef1d4a9

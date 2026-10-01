@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-implementar-logicalspace-registry-bi-direccional-has-validation.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: 93b3882e5db12015c5f33db313f30c7c286433f13b7c648ddaaaee501c5ceb71

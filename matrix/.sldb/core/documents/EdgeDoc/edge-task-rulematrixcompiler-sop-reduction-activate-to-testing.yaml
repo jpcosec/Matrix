@@ -1,0 +1,19 @@
+name: edge-task-rulematrixcompiler-sop-reduction-activate-to-testing
+path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-activate-to-testing.md
+source_hash: 38596ccaf1853af504c4ee75df57b35370819f618bc58ab47be05f2c96f88746
+content_hash: 0ee4eb5e6a2f50176fcccc96c674265bfb5f8ca0bd3d594dccff7d9491cadfce
+field_hashes:
+  title: a9fbfa8600317ae04336b6eb6936beccfdcf56114b343d9a8ea0e7218e7a3c4a
+  id: 1efe5f2cac3094948a753698e1e3ccca7632bc40f917536c3e0e0c742e19a499
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 739e6722dd054294e3b466cb6f6b1fa19c06ce767c9b0dd040dff7553982bd0c
+  tags: 7669a24af159d3197bc1f1cebef462364089cda6e7b0ffc228fcc2b7f2cb9eb6
+  source: d74296ff48a0001816b5f86c9a130813244730161fda1e3942adad333738f68d
+  target: 9d30710f5ad95c7604d7ef170a16f1a03a5d8237345dc404cf61216340bdc64d
+  condition_ref: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

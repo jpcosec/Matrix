@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-canonicalhypertensor-jit-bitwise-operations-ready-for-testing.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+source_hash: 907fb355297f01a54d16faef8cd2c18ba1254135f9876043e6992168113f89d6

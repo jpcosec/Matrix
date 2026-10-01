@@ -1,0 +1,19 @@
+name: condition-task-implementar-atomfeeder-has-closeout-evidence
+path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-closeout-evidence.md
+source_hash: b76faebd78a986e209513fc7483f241808135df5524b57c07ffc12385a562c16
+content_hash: 8f8f4ccbcfbfd33ef1628b0d325a8238f1c51b1a0d571644375e7229c804451b
+field_hashes:
+  title: 6d0f228e58ddeee12c802e8e5ebca2d84fda5dd0208794befeb31cc0989700a5
+  id: e2ca6e4657a709f6d967938e2064ecbd4f9644e5b9b81b6411eca277b5abf1bb
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 861772c41893943d0f2d55ae2bd01773b55551b3969566bda5f2d488a87a3e4a
+  tags: 45204bcdcf0df6ce91df3fae4e174bbaa7a603d65e1780fc30f096aa06e30e01
+  subject: 55d7773157292615cf672076a58114c8bb20a35b4486155fcb39200975bea7d2
+  predicate: ea9c2bf382f398527e1a67c3b3b3772534cc96b6de4e7009feb25aca8fdca62a
+  expected: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

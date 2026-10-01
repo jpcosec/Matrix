@@ -1,0 +1,454 @@
+doc_name: task-rulematrixcompiler-sop-reduction
+sections:
+- path: task-xxx-unique-task-identifier
+  title: task-xxx, unique task identifier
+  breadcrumbs:
+  - task-xxx, unique task identifier
+  about:
+  - task-xxx, unique task identifier
+  - task xxx unique task identifier
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: task-xxx-unique-task-identifier
+  level: 1
+  line_start: 2
+  line_end: 3
+- path: draft-active-blocked-closed
+  title: draft | active | blocked | closed
+  breadcrumbs:
+  - draft | active | blocked | closed
+  about:
+  - draft | active | blocked | closed
+  - draft active blocked closed
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: draft-active-blocked-closed
+  level: 1
+  line_start: 4
+  line_end: 5
+- path: relevant-file-or-doc-paths
+  title: Relevant file or doc paths
+  breadcrumbs:
+  - Relevant file or doc paths
+  about:
+  - Relevant file or doc paths
+  - relevant file or doc paths
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: relevant-file-or-doc-paths
+  level: 1
+  line_start: 6
+  line_end: 7
+- path: task-identifiers-that-must-complete-first
+  title: Task identifiers that must complete first
+  breadcrumbs:
+  - Task identifiers that must complete first
+  about:
+  - Task identifiers that must complete first
+  - task identifiers that must complete first
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: task-identifiers-that-must-complete-first
+  level: 1
+  line_start: 8
+  line_end: 9
+- path: pill-identifiers-required
+  title: Pill identifiers required
+  breadcrumbs:
+  - Pill identifiers required
+  about:
+  - Pill identifiers required
+  - pill identifiers required
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: pill-identifiers-required
+  level: 1
+  line_start: 10
+  line_end: 11
+- path: files-expected-to-change
+  title: Files expected to change
+  breadcrumbs:
+  - Files expected to change
+  about:
+  - Files expected to change
+  - files expected to change
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: files-expected-to-change
+  level: 1
+  line_start: 12
+  line_end: 13
+- path: routine-identifier-for-operations
+  title: Routine identifier for operations
+  breadcrumbs:
+  - Routine identifier for operations
+  about:
+  - Routine identifier for operations
+  - routine identifier for operations
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: routine-identifier-for-operations
+  level: 1
+  line_start: 14
+  line_end: 15
+- path: checklist-identifiers-for-verification
+  title: Checklist identifiers for verification
+  breadcrumbs:
+  - Checklist identifiers for verification
+  about:
+  - Checklist identifiers for verification
+  - checklist identifiers for verification
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: checklist-identifiers-for-verification
+  level: 1
+  line_start: 16
+  line_end: 20
+- path: active-routine-node
+  title: Active routine node
+  breadcrumbs:
+  - Active routine node
+  about:
+  - Active routine node
+  - active routine node
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: active-routine-node
+  level: 1
+  line_start: 21
+  line_end: 22
+- path: execution-history-references
+  title: Execution history references
+  breadcrumbs:
+  - Execution history references
+  about:
+  - Execution history references
+  - execution history references
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: execution-history-references
+  level: 1
+  line_start: 23
+  line_end: 24
+- path: e-g-system-deskops-topic-cli
+  title: e.g., system:deskops, topic:cli
+  breadcrumbs:
+  - e.g., system:deskops, topic:cli
+  about:
+  - e.g., system:deskops, topic:cli
+  - e g system deskops topic cli
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: e-g-system-deskops-topic-cli
+  level: 1
+  line_start: 25
+  line_end: 30
+- path: rulematrixcompiler-sop-reduction
+  title: 'RuleMatrixCompiler: SOP Reduction'
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rulematrixcompiler-sop-reduction
+  level: 1
+  line_start: 31
+  line_end: 65
+- path: rulematrixcompiler-sop-reduction/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Rationale
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 33
+  line_end: 38
+- path: rulematrixcompiler-sop-reduction/goal
+  title: Goal
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Goal
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 39
+  line_end: 44
+- path: rulematrixcompiler-sop-reduction/scope
+  title: Scope
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Scope
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 45
+  line_end: 50
+- path: rulematrixcompiler-sop-reduction/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Implementation Path
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 51
+  line_end: 56
+- path: rulematrixcompiler-sop-reduction/validation
+  title: Validation
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Validation
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 57
+  line_end: 62
+- path: rulematrixcompiler-sop-reduction/done-when
+  title: Done When
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Done When
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 63
+  line_end: 65
+source_hash: 8d0363aa78b4aeddd66a7f9d0d166ef28a93a7fb6c65a7a525d9aacb70082717
+sections_version: '2'

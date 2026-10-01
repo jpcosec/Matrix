@@ -1,0 +1,117 @@
+edges_version: 2|sections:2
+nodes:
+- id: sldb://model/CrossroadDoc
+  node_type: sldb_model
+  semantics:
+    name: CrossroadDoc
+    model_ref: deskops.models:CrossroadDoc
+    path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/crossroad.py
+    version: 1
+    canonical: false
+    family: null
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.knowledge.crossroad
+    - workspace.desk.atoms
+    base_models: []
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.knowledge.crossroad
+  node_type: semantic_tag
+  semantics:
+    tag: type.knowledge.crossroad
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.atoms
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.atoms
+  facets: {}
+- id: sldb://field/CrossroadDoc.id
+  node_type: sldb_field
+  semantics:
+    name: id
+    kind: string
+    required: true
+    model: CrossroadDoc
+    description: 'Stable identifier: ''crossroad-'' plus the path with dots written
+      as ''--''.'
+  facets: {}
+- id: sldb://field/CrossroadDoc.path
+  node_type: sldb_field
+  semantics:
+    name: path
+    kind: string
+    required: true
+    model: CrossroadDoc
+    description: Domain path this crossroad describes, e.g. pizzeria.carta.
+  facets: {}
+- id: sldb://field/CrossroadDoc.title
+  node_type: sldb_field
+  semantics:
+    name: title
+    kind: string
+    required: true
+    model: CrossroadDoc
+    description: Short title of the domain area.
+  facets: {}
+- id: sldb://field/CrossroadDoc.content
+  node_type: sldb_field
+  semantics:
+    name: content
+    kind: string
+    required: true
+    model: CrossroadDoc
+    description: Written description of what hangs below this path; must not be empty.
+  facets: {}
+edges:
+- source: sldb://model/CrossroadDoc
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/CrossroadDoc
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/CrossroadDoc
+  target: sldb://semantic_tag/type.knowledge.crossroad
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/CrossroadDoc
+  target: sldb://semantic_tag/workspace.desk.atoms
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/CrossroadDoc
+  target: sldb://field/CrossroadDoc.id
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/CrossroadDoc
+  target: sldb://field/CrossroadDoc.path
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/CrossroadDoc
+  target: sldb://field/CrossroadDoc.title
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/CrossroadDoc
+  target: sldb://field/CrossroadDoc.content
+  relation: has_field
+  metadata:
+    origin: schema
+model_name: CrossroadDoc

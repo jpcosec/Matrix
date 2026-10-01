@@ -1,0 +1,19 @@
+name: checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready
+path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready.md
+source_hash: 6b32b6022f5d00add56377fd76024fd027b218c4c36966b67bc60a366d0ecc27
+content_hash: 941bf7b7facbe412b37f562991f80dbe5736d59ba787cbb3b6e0298c7b0c70e5
+field_hashes:
+  title: f9f518924fe553fd48c847cb4d2e4459078dac250ebbfeb516db04199ed4ee15
+  id: e687f4b9aec61512612a91e15907b2c387bdc2899400e2aef2479beb23ad66ab
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 6fa9966b6f6f96323278c6b97ceb8f78e2a6414d0439ed0cafd5fb6409833f1b
+  tags: 8325257b89e1ac7ba706788c8183d441db3116d28af0eb064be34dbc69e90f89
+  items: 89d413d994000a9eb0a67d99da76dc1b023b461663d5fb24c848b61ad1e74824
+  condition_refs: a7151c8a6aaa1036f12e59c871541fbcf845ea8b297bf2c86cbec27951361bfe
+  mode: 5cf7504d9781301d83347546cdabc01a03c9638ab5b36c0a9203911078a0d1a4
+semantic_tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives

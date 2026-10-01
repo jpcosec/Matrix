@@ -1,0 +1,193 @@
+edges_version: 2|sections:2
+nodes:
+- id: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  node_type: InboxNoteDoc
+  semantics:
+    export_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+    name: 20260725-212407-suggestion-error-logging-protocol
+    model: InboxNoteDoc
+    path: desk/inbox/20260725-212407-suggestion-error-logging-protocol.md
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    hash_c: 2fcd7e2aa7ef43a9c3241c901d477e2a49d31b6584a4a39107f45b2102361315
+    hash_d: 1d971bf11b1a550cffb94df8d12f6866b1aff92dc51665bdecac9095753a6b50
+  facets: {}
+- id: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  node_type: sldb_section
+  semantics:
+    export_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+    document_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+    path: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+    title: 'kind: suggestion
+
+      sender_project: Matrix
+
+      created_at: 2026-07-25T21:24:07
+
+      status: open'
+    breadcrumbs:
+    - 'kind: suggestion
+
+      sender_project: Matrix
+
+      created_at: 2026-07-25T21:24:07
+
+      status: open'
+    about:
+    - 'kind: suggestion
+
+      sender_project: Matrix
+
+      created_at: 2026-07-25T21:24:07
+
+      status: open'
+    - kind suggestion sender project matrix created at 2026 07 25t21 24 07 status
+      open
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    slug: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+    level: 2
+    line_start: 2
+    line_end: 7
+  facets: {}
+- id: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+  node_type: sldb_section
+  semantics:
+    export_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+    document_id: InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+    path: error-logging-protocol
+    title: Error Logging Protocol
+    breadcrumbs:
+    - Error Logging Protocol
+    about:
+    - Error Logging Protocol
+    - error logging protocol
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.desk.inbox-note
+    - workspace.desk.inbox
+    slug: error-logging-protocol
+    level: 1
+    line_start: 8
+    line_end: 10
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.desk.inbox-note
+  node_type: semantic_tag
+  semantics:
+    tag: type.desk.inbox-note
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.inbox
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.inbox
+  facets: {}
+edges:
+- source: sldb://model/InboxNoteDoc
+  target: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  target: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  target: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  target: sldb://semantic_tag/type.desk.inbox-note
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
+  target: sldb://semantic_tag/workspace.desk.inbox
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  target: sldb://semantic_tag/type.desk.inbox-note
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  target: sldb://semantic_tag/workspace.desk.inbox
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+  target: sldb://semantic_tag/type.desk.inbox-note
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#error-logging-protocol
+  target: sldb://semantic_tag/workspace.desk.inbox
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: 20260725-212407-suggestion-error-logging-protocol
+model_name: InboxNoteDoc
+source_hash: 2fcd7e2aa7ef43a9c3241c901d477e2a49d31b6584a4a39107f45b2102361315
+content_hash: 1d971bf11b1a550cffb94df8d12f6866b1aff92dc51665bdecac9095753a6b50
+semantic_tags:
+- representation.markdown
+- source.document.markdown
+- type.desk.inbox-note
+- workspace.desk.inbox

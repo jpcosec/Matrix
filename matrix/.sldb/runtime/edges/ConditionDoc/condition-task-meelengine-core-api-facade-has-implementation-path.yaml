@@ -1,0 +1,551 @@
+edges_version: 2|sections:2
+nodes:
+- id: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  node_type: ConditionDoc
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    name: condition-task-meelengine-core-api-facade-has-implementation-path
+    model: ConditionDoc
+    path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-implementation-path.md
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    hash_c: dca9facf8264548dfa8fc10c5cbedde64ea1b4fec440e42b8e2004f257b14db4
+    hash_d: d11986e34d105e3f2c61c5dc3555df3ff923645bd4363498a9826e1ae1786bb3
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: condition-xxx
+    title: condition-xxx
+    breadcrumbs:
+    - condition-xxx
+    about:
+    - condition-xxx
+    - condition xxx
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: condition-xxx
+    level: 1
+    line_start: 2
+    line_end: 3
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: active-archived
+    title: active | archived
+    breadcrumbs:
+    - active | archived
+    about:
+    - active | archived
+    - active archived
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: active-archived
+    level: 1
+    line_start: 4
+    line_end: 5
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: payload-path-the-condition-reads
+    title: Payload path the condition reads
+    breadcrumbs:
+    - Payload path the condition reads
+    about:
+    - Payload path the condition reads
+    - payload path the condition reads
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: payload-path-the-condition-reads
+    level: 1
+    line_start: 6
+    line_end: 7
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: predicate-applied-to-the-value-e-g-eq-contains
+    title: Predicate applied to the value (e.g., eq, contains)
+    breadcrumbs:
+    - Predicate applied to the value (e.g., eq, contains)
+    about:
+    - Predicate applied to the value (e.g., eq, contains)
+    - predicate applied to the value e g eq contains
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: predicate-applied-to-the-value-e-g-eq-contains
+    level: 1
+    line_start: 8
+    line_end: 9
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: expected-value-used-by-the-predicate
+    title: Expected value used by the predicate
+    breadcrumbs:
+    - Expected value used by the predicate
+    about:
+    - Expected value used by the predicate
+    - expected value used by the predicate
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: expected-value-used-by-the-predicate
+    level: 1
+    line_start: 10
+    line_end: 11
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: e-g-system-deskops
+    title: e.g., system:deskops
+    breadcrumbs:
+    - e.g., system:deskops
+    about:
+    - e.g., system:deskops
+    - e g system deskops
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: e-g-system-deskops
+    level: 1
+    line_start: 12
+    line_end: 16
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: implementation-path-exists
+    title: Implementation path exists
+    breadcrumbs:
+    - Implementation path exists
+    about:
+    - Implementation path exists
+    - implementation path exists
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: implementation-path-exists
+    level: 1
+    line_start: 17
+    line_end: 23
+  facets: {}
+- id: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+  node_type: sldb_section
+  semantics:
+    export_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+    document_id: ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+    path: implementation-path-exists/summary
+    title: Summary
+    breadcrumbs:
+    - Implementation path exists
+    - Summary
+    about:
+    - Implementation path exists
+    - implementation path exists
+    - Summary
+    - summary
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    semantic_tags:
+    - primitive:condition
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.condition
+    - workspace.desk.primitives
+    slug: summary
+    level: 2
+    line_start: 19
+    line_end: 23
+  facets: {}
+- id: sldb://semantic_tag/primitive:condition
+  node_type: semantic_tag
+  semantics:
+    tag: primitive:condition
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.condition
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.condition
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.primitives
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.primitives
+  facets: {}
+edges:
+- source: sldb://model/ConditionDoc
+  target: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#condition-xxx
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#active-archived
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#payload-path-the-condition-reads
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#predicate-applied-to-the-value-e-g-eq-contains
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#expected-value-used-by-the-predicate
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#e-g-system-deskops
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+  target: sldb://semantic_tag/primitive:condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+  target: sldb://semantic_tag/type.workflow.condition
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/ConditionDoc:condition-task-meelengine-core-api-facade-has-implementation-path#implementation-path-exists/summary
+  target: sldb://semantic_tag/workspace.desk.primitives
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: condition-task-meelengine-core-api-facade-has-implementation-path
+model_name: ConditionDoc
+source_hash: dca9facf8264548dfa8fc10c5cbedde64ea1b4fec440e42b8e2004f257b14db4
+content_hash: d11986e34d105e3f2c61c5dc3555df3ff923645bd4363498a9826e1ae1786bb3
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

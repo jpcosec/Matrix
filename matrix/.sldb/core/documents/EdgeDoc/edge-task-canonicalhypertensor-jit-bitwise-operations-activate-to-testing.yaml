@@ -1,0 +1,19 @@
+name: edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing
+path: desk/primitives/edges/edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing.md
+source_hash: fffc1fdeec9b61d80ea33e0600d33af51fee5c70358067b72e1eeb510feac06b
+content_hash: 1da6c4bf22bf873fe9dbbc2aee2af8a2f683dddf64456a3ca517bc92db8ecb99
+field_hashes:
+  title: a9fbfa8600317ae04336b6eb6936beccfdcf56114b343d9a8ea0e7218e7a3c4a
+  id: c9f64cd7808d527a091e0948c8cee54352619aaead1bed12ddfa59d73e1c8e35
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 739e6722dd054294e3b466cb6f6b1fa19c06ce767c9b0dd040dff7553982bd0c
+  tags: 7669a24af159d3197bc1f1cebef462364089cda6e7b0ffc228fcc2b7f2cb9eb6
+  source: 9fa37921569946bacc2a7b2c6fb6a0c19e2f409326554529d232064c61b4dfe3
+  target: 47a6f3117ba9e9deb023d8c2d6bc8da06bd52451df7d2645cfbc34931e7da102
+  condition_ref: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

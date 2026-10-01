@@ -1,0 +1,19 @@
+name: condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout
+path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-ready-for-closeout.md
+source_hash: d64382015eeefccd302e6435ccd5d3266b04b7e1afe7c5a076f4ae14d9f4248d
+content_hash: a1ce0c0dd06277675933949322a42fbde48364547f15aa13be254a45a2e0bdc3
+field_hashes:
+  title: 2507010ee654a7599fc7d2e0ecda35ca3f079283bcf61e6d34353c9f7ad2da54
+  id: b8bdfac88370173b3bcbc41c6b0290db22536cc3255ec9a5af2ddfbab9fac8b5
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 77cf7972bd8cb9c73615eb42974c43c9fc15305de6a3a9631fedcf87660393ae
+  tags: 45204bcdcf0df6ce91df3fae4e174bbaa7a603d65e1780fc30f096aa06e30e01
+  subject: cfc31bcc34ed7f4cc7895026ae8a54f0494f73757e9f914d0f6ed90f9bc34f51
+  predicate: 7778bddbb55f31c22673bd665da79be68855b98aae7aa5d4b84a18319cf8d7dc
+  expected: bcd94c594cf5d9863f2b143c7e4c8c150564556c8b8fccd3f0e2ea8fe2b32a44
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

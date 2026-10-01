@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-canonicalhypertensor-jit-bitwise-operations-ready-for-closeout.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: 7937a5329875c75686ff351d5538823144e6d427afb904b251c4f38462bcd67c

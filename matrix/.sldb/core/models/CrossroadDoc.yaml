@@ -1,0 +1,18 @@
+name: CrossroadDoc
+model_ref: deskops.models:CrossroadDoc
+path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/crossroad.py
+documents_index: .sldb/core/documents/CrossroadDoc.yaml
+sections_index: ''
+model_hash: 0829ac3e3b105b0f3714ccdb6e51c89df056d8969889b57706db247b778c0cb4
+roster_hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+contract_hash: ad32f99770aeaa6d7839bb83cd72feea42e7f81789d5dcb6e7f94e0ebc9acca5
+documents_count: 0
+version: 1
+canonical: false
+family: null
+semantics:
+- representation.markdown
+- source.document.markdown
+- type.knowledge.crossroad
+- workspace.desk.atoms
+base_models: []

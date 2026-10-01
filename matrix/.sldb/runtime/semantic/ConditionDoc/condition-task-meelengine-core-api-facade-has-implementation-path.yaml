@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-has-implementation-path.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: dca9facf8264548dfa8fc10c5cbedde64ea1b4fec440e42b8e2004f257b14db4

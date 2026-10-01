@@ -1,0 +1,16 @@
+name: 20260727-022056-unclear-fallo-en-status-y-doctor-repair
+path: desk/inbox/20260727-022056-unclear-fallo-en-status-y-doctor-repair.md
+source_hash: fd5ebcf53cc50edfaadcafc90c2aade1834ba0863c22d0e1811edf013350df8c
+content_hash: a3fbe397bcd4c1ddba8318fb0978f8dc74fbedc08f80f650701f066e37de0ebd
+field_hashes:
+  kind: 683144a12969e0fd85512737e57b4db93ed15ee760906165a5516d581a77889a
+  sender_project: 2247e2d028157288b7f4b297f7570c64cf901382c3efbb5bf671b3a68e25c78f
+  created_at: 54b604719c02e8c3ea74f70bb76a551f408978a90615e7bd2bf46a47219e9cb5
+  status: 35ff74aeea25311f4fe759a6b762c8cd41a79adb23dd5615b92cf215175a63e5
+  title: 18214bf65dcd4939ed5f27504dff2265e362d67587e7d055205dbd0ac797f62b
+  body: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- representation.markdown
+- source.document.markdown
+- type.desk.inbox-note
+- workspace.desk.inbox

@@ -1,0 +1,19 @@
+name: condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-implementation-path.md
+source_hash: abd5b28f8deaa1a8910ca3fcc256a4a15346449c84c83dc0d7fceffbfa09eed8
+content_hash: 72f75cc858cd9a785934334de9c2ff303542350f96ad50e0744f8d5f7871fc4c
+field_hashes:
+  title: e3d129f93145c2c6f749b448afe8219cd62c7c27867100c1b7fa193a2b842a40
+  id: c2b562944812fdb31c8b5c10dc056b2f2aff2eb0b4ba4ac62c8d8a2b718c004d
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 7b43826191da200bbdbb8ea2964b10485dd808ad7641e92ba765654071cfcbae
+  tags: 45204bcdcf0df6ce91df3fae4e174bbaa7a603d65e1780fc30f096aa06e30e01
+  subject: ed628398bfa4a35f1f5904f6976beaaa96d5b1db1732076b1c22eabd4fb0173f
+  predicate: ea9c2bf382f398527e1a67c3b3b3772534cc96b6de4e7009feb25aca8fdca62a
+  expected: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives

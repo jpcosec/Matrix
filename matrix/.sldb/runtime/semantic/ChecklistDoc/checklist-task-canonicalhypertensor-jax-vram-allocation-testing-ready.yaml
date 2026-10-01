@@ -1,0 +1,9 @@
+model: ChecklistDoc
+path: desk/primitives/checklists/checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready.md
+tags:
+- primitive:checklist
+- representation.markdown
+- source.document.markdown
+- type.workflow.checklist
+- workspace.desk.primitives
+source_hash: 663e683cfe80d9ad1a18b3a63f9af112b8e406429ecd142a0680f267c36fbbf3

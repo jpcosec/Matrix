@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-validation.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: 2cb86854fd4231efeea83588c0d8477536722245bf7ab33a408aaff6ce6dbc1b

@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-has-closeout-evidence.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: 7375e1322fb1b748435ecf5c6074228acd7288c8261fef20b1c0c2b9e7f24c26

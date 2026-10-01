@@ -1,0 +1,9 @@
+model: OperatorDoc
+path: desk/primitives/operators/operator-task-meelengine-fixpoint-deduction-algorithm-close.md
+tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives
+source_hash: 4f3b78d4b43bb36f6190913305be5f653ada74f8fa994fde18a8d07882546d9c

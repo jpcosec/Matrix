@@ -1,0 +1,18 @@
+name: ProtoAtomDoc
+model_ref: deskops.models:ProtoAtomDoc
+path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/protoatom.py
+documents_index: .sldb/core/documents/ProtoAtomDoc.yaml
+sections_index: ''
+model_hash: 1c5545dca5651b6e572a946abdfa98de837153b6f3947b849d788697ac8f46b9
+roster_hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+contract_hash: 700ae17abab3cd57989297a42d10780494711af5d1a373ad1b8641594b8cc712
+documents_count: 0
+version: 1
+canonical: false
+family: null
+semantics:
+- representation.markdown
+- source.document.markdown
+- type.knowledge.protoatom
+- workspace.desk.atoms
+base_models: []

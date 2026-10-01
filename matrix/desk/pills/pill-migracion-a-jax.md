@@ -17,15 +17,11 @@ tags:
 
 # Migración a Arquitectura JAX (CanonicalHypertensor)
 
-## Summary
-
-_Short semantic summary for the primitive._
-
-Guía de qué preservar y qué desechar de la implementación en Python nativo al migrar a tensores JAX.
-
 ## What
 
 _What the pill defines or clarifies._
+
+Guía de qué preservar y qué desechar de la implementación en Python nativo al migrar a tensores JAX.
 
 Define el límite entre la lógica de negocio reusable y el backend físico obsoleto basado en listas y diccionarios nativos.
 

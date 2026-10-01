@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-ready-to-closeout.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: 80576223d3f942187fa90646b2fb10dd1b1ed4edff3f3876bbda66db41310a9a

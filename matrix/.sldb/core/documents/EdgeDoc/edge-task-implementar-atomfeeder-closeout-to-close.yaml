@@ -1,0 +1,19 @@
+name: edge-task-implementar-atomfeeder-closeout-to-close
+path: desk/primitives/edges/edge-task-implementar-atomfeeder-closeout-to-close.md
+source_hash: 6171f63eb5d53b5d07077a6e21884b5af16fe1b471817fc792b7928538a2c33c
+content_hash: dc4b64c42319c1461f1ce80309aab41087eb7ef40003658e48ddb02ccf71c528
+field_hashes:
+  title: 5568fcc8869b381e6e149b8e8efa9f8c042d2184674413d370ef4c9614db81d7
+  id: 56de965ed2efff1a95d8423f5ff6e501d3ec0ec5597e25d1a7145568688300ee
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 6325227c9527c9b5f4f1ffd9122f462874da2df2e828f301eef9a359ff306046
+  tags: 7669a24af159d3197bc1f1cebef462364089cda6e7b0ffc228fcc2b7f2cb9eb6
+  source: 0c4a034047cb3d5bceb9756f455566c8d7fcb23cf656a3015071f84e3b51dee6
+  target: c7e37b15222ff346571977e1de13d76e8ecc4135563d4938db5e120bd8a52fd4
+  condition_ref: 12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126
+semantic_tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives

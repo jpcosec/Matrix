@@ -1,0 +1,10 @@
+model: RoutineDoc
+path: desk/routines/routine-task-rulematrixcompiler-sop-reduction.md
+tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk
+source_hash: d1a98f4ec74e81d6a0ae124c4ae60060ef4488e116c97c42dbba2844d7a8b3dd

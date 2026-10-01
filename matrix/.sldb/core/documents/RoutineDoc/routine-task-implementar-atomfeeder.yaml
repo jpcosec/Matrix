@@ -1,0 +1,21 @@
+name: routine-task-implementar-atomfeeder
+path: desk/routines/routine-task-implementar-atomfeeder.md
+source_hash: f2e6a156f491598154d41d2ee5bd7c3d406b5e325b0599923ed8b90cc8f8652b
+content_hash: 26175c7966c8330a019119bbc9a4752e7603af5cae52ed21d57f3415f3a00b83
+field_hashes:
+  title: 001fa2f63d7e4a823e3da573b13f174a218972d774584a19540582109b2ec40e
+  id: 1ea55eac5f42382eb16df4a94694ab7cc4f8f6ebde15b501df808eafcb66ab71
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 27481f56cbd2287cdf6fcc13ef3707916b88521672400d22c63d5275c9e882dc
+  tags: 682ad58c6b2fa3a80465c3d0fa4c9de759c3684e4c83c56f94a9b67d558ddd75
+  entrypoint: 65d359c3244a6c0bbf234c3365d611841f4de56704cba8bc317a7d412f39c315
+  decomposition: d9ff206e64689aa1018fc21bb4fdc446da1574d51568c1a78ff86145260c04a9
+  edges: 8c62345f2ae420a5450640c168f8352f9e61f31504b564f28627ef339019275d
+  terminal_nodes: 8ace718207dd793346ef234f111009a7c60689ac5c9d016af36586b581ca42fd
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

@@ -1,0 +1,9 @@
+model: EdgeDoc
+path: desk/primitives/edges/edge-task-rulematrixcompiler-si-mask-encoding-testing-to-ready.md
+tags:
+- primitive:edge
+- representation.markdown
+- source.document.markdown
+- type.workflow.edge
+- workspace.desk.primitives
+source_hash: 265b4d2d6e34204dd445a1b13460ce598d8bb479072efd8465aa86ed292e7524

@@ -1,0 +1,15 @@
+operation: add_model
+address: CrossroadDoc
+field: null
+previous_value: null
+new_value: deskops.models:CrossroadDoc
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 8b7bfe1bf0b0e93116ccba3c8ad1a04de67621c214e9dfbd8539b8db77cbc0c3
+hash_a_after: 9d8d393f2914213093d5c499b31d197a742a4365d1f6ffbfe16eecaac8c67d8a
+actor: null
+timestamp: 2026-09-30 13:45:05.967056+00:00
+previous_hash: 30a437e4ff9cb377c8cbdb78cc1539d988d0fe1e1518641f05dea168840f8c7a
+entry_hash: 89a327602c2f96e4e3b14f188f1945cfa54a4cc9a2a6736b7107860e8684577a

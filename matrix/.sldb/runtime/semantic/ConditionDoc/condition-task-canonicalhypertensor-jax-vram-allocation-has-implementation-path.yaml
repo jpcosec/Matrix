@@ -1,0 +1,9 @@
+model: ConditionDoc
+path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path.md
+tags:
+- primitive:condition
+- representation.markdown
+- source.document.markdown
+- type.workflow.condition
+- workspace.desk.primitives
+source_hash: 21ee602dfa061d5ac43323186f0da891bbe1a7735b0ccd2529c7c6d1f175181b

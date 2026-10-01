@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-canonicalhypertensor-jit-bitwise-operations.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: 500ee0f0f1ffb7082ca25553c37ccc1796a2e2193fa0e221e08e9bafdad59ef6

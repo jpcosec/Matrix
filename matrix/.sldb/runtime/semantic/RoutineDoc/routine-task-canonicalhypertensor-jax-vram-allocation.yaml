@@ -1,0 +1,10 @@
+model: RoutineDoc
+path: desk/routines/routine-task-canonicalhypertensor-jax-vram-allocation.md
+tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk
+source_hash: b0b5ee0c62b3859a3941f1500a367f9bdd724d3e81a46802f4c899995175be1e

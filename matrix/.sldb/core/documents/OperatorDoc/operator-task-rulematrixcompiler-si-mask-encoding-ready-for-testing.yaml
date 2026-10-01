@@ -1,0 +1,19 @@
+name: operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing
+path: desk/primitives/operators/operator-task-rulematrixcompiler-si-mask-encoding-ready-for-testing.md
+source_hash: be06ae99b85885d5ea2e70f4adf5b6571adecb247a7dece4f412c6c4cfe657f2
+content_hash: 3122196f6c326065a76b3b3c2fadc945fc5a12ab36197c97ff24071085f79130
+field_hashes:
+  title: 368ade4b24616d3f585affb98b9450c63bd9ca50287a176baa30be0e657f3018
+  id: 5bc9591e9cf7ed0a96652d0efe8ca015b19bbbec4fc26c76dc3438a9dd536bda
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 293985de96d26af14d48ee983d83c2390476219d59a244bb1d056aa2090d1275
+  tags: addd3623ce8edccd84747015525ca0bffc07240097d492329f4f1d2a069be349
+  action: 15fe2461fd90705d5e77632cb6d3d337f9cc7e750e8815781dcc4e92d6b89b85
+  target: cfc31bcc34ed7f4cc7895026ae8a54f0494f73757e9f914d0f6ed90f9bc34f51
+  value: bcd94c594cf5d9863f2b143c7e4c8c150564556c8b8fccd3f0e2ea8fe2b32a44
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

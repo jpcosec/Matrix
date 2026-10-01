@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-vectorizacion-bitwise-denso-de-booleanmatrix-has-closeout-evidence
+field: null
+previous_value: null
+new_value: null
+hash_c_before: bb2eea9efce95c08ab97679420dc7c77b30f0d079cb1b20fe7fa15089c6bc3ad
+hash_c_after: null
+hash_d_before: c4089e5d76063f5599f4a50159dfa4708326c2044b513746ebe6b74e936faaec
+hash_d_after: null
+hash_a_before: c66b83c3ae3ad123c34a23aa8c1d213c740b6e60dac4347d17f934c49696b82d
+hash_a_after: b919bc39c4172b16b9da9d3bd8940dd0e9a7cc55c698f6a046bf265e8609854c
+actor: null
+timestamp: 2026-09-30 13:45:07.275339+00:00
+previous_hash: c313e9fda894f13982a7a625dc76adaf4764f38a2704a3b917c04d9d258cf7db
+entry_hash: d808a251dd5ce055acdb8f80d614b6b8351a4b532c66daa6e648eaa141810173

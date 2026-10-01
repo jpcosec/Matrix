@@ -112,6 +112,42 @@ models:
   canonical: false
   family: null
   semantics: []
+- name: RoleDoc
+  model_ref: deskops.models:RoleDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/role.py
+  models_index: .sldb/core/models/RoleDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics:
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.role
+  - workspace.desk.roles
+- name: ProtoAtomDoc
+  model_ref: deskops.models:ProtoAtomDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/protoatom.py
+  models_index: .sldb/core/models/ProtoAtomDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics:
+  - representation.markdown
+  - source.document.markdown
+  - type.knowledge.protoatom
+  - workspace.desk.atoms
+- name: CrossroadDoc
+  model_ref: deskops.models:CrossroadDoc
+  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/crossroad.py
+  models_index: .sldb/core/models/CrossroadDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics:
+  - representation.markdown
+  - source.document.markdown
+  - type.knowledge.crossroad
+  - workspace.desk.atoms
 predicates:
 - name: is_solved_by
   axis: HOW
@@ -134,4 +170,4 @@ predicates:
 - name: defines
   axis: WHAT
   description: Defines the target concept.
-hash_a: 4f506e13c17dec770b9be75a928244303de9fc935e170523ec7b58a8adf70330
+store_hash: 429627187b737b5c17466e2521a3a8d38db9de8568ecefb001312c3461fd1711

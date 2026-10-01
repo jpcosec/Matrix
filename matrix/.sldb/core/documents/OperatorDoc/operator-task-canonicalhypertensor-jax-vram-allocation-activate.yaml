@@ -1,0 +1,19 @@
+name: operator-task-canonicalhypertensor-jax-vram-allocation-activate
+path: desk/primitives/operators/operator-task-canonicalhypertensor-jax-vram-allocation-activate.md
+source_hash: 2718bd549da5861d9278aa381963b5f319e9800f66733bbc4b1efed815f80684
+content_hash: 520b3b0476a68bed095d2c8902d9d796db57a968eb9c1397a51300e8eb9a9dbb
+field_hashes:
+  title: 565558356b7a264a2d17482dd763600cb1b20fe8fe4b1047e6d5fd2856e32e27
+  id: d5d6c43e536c9cebf2b508e3e130108f52210e0ae65e3fd4d8ff034c85b6f03f
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: 5489157757845aabc675b8fca80a8037e07bea461044db29447462e7ace9b5a4
+  tags: addd3623ce8edccd84747015525ca0bffc07240097d492329f4f1d2a069be349
+  action: 15fe2461fd90705d5e77632cb6d3d337f9cc7e750e8815781dcc4e92d6b89b85
+  target: cfc31bcc34ed7f4cc7895026ae8a54f0494f73757e9f914d0f6ed90f9bc34f51
+  value: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+semantic_tags:
+- primitive:operator
+- representation.markdown
+- source.document.markdown
+- type.workflow.operator
+- workspace.desk.primitives

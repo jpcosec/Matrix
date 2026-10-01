@@ -1,0 +1,21 @@
+name: routine-task-rulematrixcompiler-sop-reduction
+path: desk/routines/routine-task-rulematrixcompiler-sop-reduction.md
+source_hash: d1a98f4ec74e81d6a0ae124c4ae60060ef4488e116c97c42dbba2844d7a8b3dd
+content_hash: b1e8f8b851eb0063648937a786775aa446c5b888431511c1fb5e02d515bf6973
+field_hashes:
+  title: f1249f7e94dc3b71c469987238d4b1774c1199cf4add08bab4add05034cbfa6e
+  id: 6740a9fbb297ff7a38d155a04697d0371b5f954e1a476f65a50a11e0bb5cdd27
+  status: db0fb2bf5ebc424454c3e11b5ee8bfb43af24a52e561aa49e94143831dc6fd93
+  summary: c2f0aadcd8ecb41fd1a273f16274175fb894bc8e9ed5cf72b2256c5d22805fd1
+  tags: 682ad58c6b2fa3a80465c3d0fa4c9de759c3684e4c83c56f94a9b67d558ddd75
+  entrypoint: 3f7ff25ca4b7b893f2a27ad4283b78c0cd317f5f7cb47b112bd145b694eb2ce1
+  decomposition: 3f1a28a57493e9885a9edfc66a2a520963da70d799c8e0c71fef60be5572fb82
+  edges: b06c4b3a31a4c855dbec15cf1a066f503de68ea0b286ac8f6065bb6268365196
+  terminal_nodes: 8ace718207dd793346ef234f111009a7c60689ac5c9d016af36586b581ca42fd
+semantic_tags:
+- primitive:routine
+- representation.markdown
+- source.document.markdown
+- type.workflow.routine
+- workspace.desk.routines
+- workspace:desk

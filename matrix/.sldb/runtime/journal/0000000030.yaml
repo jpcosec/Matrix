@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-inferencia-deductiva-proposicional-matricial-ready-for-closeout
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 6efcc8c3b5783aed8d77d7b80d02d2ef36595eeb347514c12b7512a273fd01c3
+hash_c_after: null
+hash_d_before: 69248f3070dd6090b0d70a04ef7b0a9a818b1589bc1dd0520d406d299299c09c
+hash_d_after: null
+hash_a_before: 7b863a7a6feb44c4efb3a7e41cb12c5aab5cde9a470da109621775a16e5b166a
+hash_a_after: e50fb4214c748fd5577dfc048aee8e715abf637a107e1d06d9075ba4c339349a
+actor: null
+timestamp: 2026-09-30 13:45:06.970831+00:00
+previous_hash: 2b546cdb1165df53ea057b6fd68a20bd6526bfe7501721f2a71d34ba53697c39
+entry_hash: 52041234a6b25b693da65587c41a646f3c8f5d26ef8bbe497fd93c9030015f01

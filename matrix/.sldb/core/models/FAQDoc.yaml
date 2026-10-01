@@ -3,7 +3,10 @@ model_ref: deskops.models:FAQDoc
 path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/faq.py
 documents_index: .sldb/core/documents/FAQDoc.yaml
 sections_index: ''
-hash_b: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+model_hash: 2809debc97e2b184f8f6484ced19705171bf46d8314521e24e9f96c7fecd19d1
+roster_hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+contract_hash: 93a5b2ba63cf4006971a93fcd02b1dccb91db0d28828ff79d2e82527be0e8718
+documents_count: 0
 version: 1
 canonical: false
 family: null

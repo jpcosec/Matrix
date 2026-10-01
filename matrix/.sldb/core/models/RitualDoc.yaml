@@ -3,7 +3,10 @@ model_ref: deskops.models:RitualDoc
 path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/ritual.py
 documents_index: .sldb/core/documents/RitualDoc.yaml
 sections_index: ''
-hash_b: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+model_hash: 1be0f00686eb3ffd7099152b4a26f83ea217c3ec6b5fccf1a29e65b6eb6b2658
+roster_hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+contract_hash: 2bc3290e56b6a2d39d04d37f2c1adfc7d6dca2b20f47db548d53236166b72b78
+documents_count: 0
 version: 1
 canonical: false
 family: null

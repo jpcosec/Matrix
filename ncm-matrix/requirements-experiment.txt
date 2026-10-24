@@ -1,0 +1,7 @@
+torch
+numpy
+omegaconf
+hydra-core
+rdflib
+PyYAML
+pytest

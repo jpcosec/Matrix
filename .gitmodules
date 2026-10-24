@@ -1,0 +1,3 @@
+[submodule "ncm-matrix/ncm"]
+	path = ncm-matrix/ncm
+	url = https://github.com/HazyResearch/ncm.git

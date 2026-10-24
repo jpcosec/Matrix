@@ -1,0 +1,3 @@
+(:AXES ((:AXIS :ROL :VALUES (OBJETO COLOR))) :PROJECTIONS
+ ((:CONCEPT "car-1" :AXES ((:ROL OBJETO)))
+  (:CONCEPT "color-red" :AXES ((:ROL COLOR)))))

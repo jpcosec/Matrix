@@ -1,0 +1,63 @@
+{
+  "truth_bitmask": {
+    "input": [
+      [
+        "true",
+        "false",
+        "∅"
+      ]
+    ],
+    "observed": [
+      7
+    ],
+    "expected_if_only_true_is_active": [
+      1
+    ]
+  },
+  "masked_assertion": {
+    "check": {
+      "status": "accept",
+      "sense": "unsinnig"
+    },
+    "assert": {
+      "status": "accept",
+      "sense": "sinnvoll"
+    },
+    "sense_after_assert": "sinnvoll",
+    "truth_after_assert": "true"
+  },
+  "local_mask_vs_block_mask": {
+    "local_applicable": false,
+    "block_operational_value": "true"
+  },
+  "turtle_import": {
+    "stats": {
+      "classes": 1,
+      "individuals": 1,
+      "object_properties": 0,
+      "sexprs": 3
+    },
+    "runtime_results": [
+      [
+        "(create symbol Class Class)",
+        "accept"
+      ],
+      [
+        "(create symbol item item)",
+        "accept"
+      ],
+      [
+        "(assert wigame:owl (type item Class))",
+        "reject"
+      ]
+    ]
+  },
+  "turtle_export_single_fact": {
+    "triples": 0
+  },
+  "our_original_smoke_context_metadata": {
+    "metadata_context_id": "c",
+    "actual_context_id_field": null,
+    "interpretation": "neural conditioning worked, but the fixture did not populate Matrix's context_id field"
+  }
+}

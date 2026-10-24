@@ -1,0 +1,2218 @@
+@prefix ex: <https://example.org/matrix-ncm/> .
+
+ex:ancla-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el ancla es un animal." ;
+    ex:subject ex:ancla ;
+    ex:truth "false" .
+
+ex:ancla-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el ancla puede caminar." ;
+    ex:subject ex:ancla ;
+    ex:truth "false" .
+
+ex:ancla-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el ancla puede votar." ;
+    ex:subject ex:ancla ;
+    ex:truth "false" .
+
+ex:ancla-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el ancla tiene flores." ;
+    ex:subject ex:ancla ;
+    ex:truth "false" .
+
+ex:ancla-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el ancla hace fotosintesis." ;
+    ex:subject ex:ancla ;
+    ex:truth "false" .
+
+ex:ancla-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el ancla es una planta." ;
+    ex:subject ex:ancla ;
+    ex:truth "false" .
+
+ex:ancla-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el ancla respira." ;
+    ex:subject ex:ancla ;
+    ex:truth "true" .
+
+ex:litre_000-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_000 es un animal." ;
+    ex:subject ex:litre_000 ;
+    ex:truth "false" .
+
+ex:litre_000-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_000 puede caminar." ;
+    ex:subject ex:litre_000 ;
+    ex:truth "false" .
+
+ex:litre_000-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_000 puede votar?" ;
+    ex:subject ex:litre_000 .
+
+ex:litre_000-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_000 tiene flores?" ;
+    ex:subject ex:litre_000 .
+
+ex:litre_000-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_000 hace fotosintesis?" ;
+    ex:subject ex:litre_000 .
+
+ex:litre_000-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_000 es una planta." ;
+    ex:subject ex:litre_000 ;
+    ex:truth "true" .
+
+ex:litre_000-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_000 respira." ;
+    ex:subject ex:litre_000 ;
+    ex:truth "true" .
+
+ex:litre_001-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_001 es un animal." ;
+    ex:subject ex:litre_001 ;
+    ex:truth "false" .
+
+ex:litre_001-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_001 puede caminar." ;
+    ex:subject ex:litre_001 ;
+    ex:truth "false" .
+
+ex:litre_001-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_001 puede votar?" ;
+    ex:subject ex:litre_001 .
+
+ex:litre_001-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_001 tiene flores?" ;
+    ex:subject ex:litre_001 .
+
+ex:litre_001-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_001 hace fotosintesis?" ;
+    ex:subject ex:litre_001 .
+
+ex:litre_001-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_001 es una planta." ;
+    ex:subject ex:litre_001 ;
+    ex:truth "true" .
+
+ex:litre_001-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_001 respira." ;
+    ex:subject ex:litre_001 ;
+    ex:truth "true" .
+
+ex:litre_002-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_002 es un animal." ;
+    ex:subject ex:litre_002 ;
+    ex:truth "false" .
+
+ex:litre_002-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_002 puede caminar." ;
+    ex:subject ex:litre_002 ;
+    ex:truth "false" .
+
+ex:litre_002-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_002 puede votar?" ;
+    ex:subject ex:litre_002 .
+
+ex:litre_002-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_002 tiene flores?" ;
+    ex:subject ex:litre_002 .
+
+ex:litre_002-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_002 hace fotosintesis?" ;
+    ex:subject ex:litre_002 .
+
+ex:litre_002-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_002 es una planta." ;
+    ex:subject ex:litre_002 ;
+    ex:truth "true" .
+
+ex:litre_002-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_002 respira." ;
+    ex:subject ex:litre_002 ;
+    ex:truth "true" .
+
+ex:litre_003-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_003 es un animal." ;
+    ex:subject ex:litre_003 ;
+    ex:truth "false" .
+
+ex:litre_003-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_003 puede caminar." ;
+    ex:subject ex:litre_003 ;
+    ex:truth "false" .
+
+ex:litre_003-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_003 puede votar?" ;
+    ex:subject ex:litre_003 .
+
+ex:litre_003-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_003 tiene flores?" ;
+    ex:subject ex:litre_003 .
+
+ex:litre_003-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_003 hace fotosintesis?" ;
+    ex:subject ex:litre_003 .
+
+ex:litre_003-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_003 es una planta." ;
+    ex:subject ex:litre_003 ;
+    ex:truth "true" .
+
+ex:litre_003-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_003 respira." ;
+    ex:subject ex:litre_003 ;
+    ex:truth "true" .
+
+ex:litre_004-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_004 es un animal." ;
+    ex:subject ex:litre_004 ;
+    ex:truth "false" .
+
+ex:litre_004-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_004 puede caminar." ;
+    ex:subject ex:litre_004 ;
+    ex:truth "false" .
+
+ex:litre_004-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_004 puede votar?" ;
+    ex:subject ex:litre_004 .
+
+ex:litre_004-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_004 tiene flores?" ;
+    ex:subject ex:litre_004 .
+
+ex:litre_004-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_004 hace fotosintesis?" ;
+    ex:subject ex:litre_004 .
+
+ex:litre_004-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_004 es una planta." ;
+    ex:subject ex:litre_004 ;
+    ex:truth "true" .
+
+ex:litre_004-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_004 respira." ;
+    ex:subject ex:litre_004 ;
+    ex:truth "true" .
+
+ex:litre_005-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_005 es un animal." ;
+    ex:subject ex:litre_005 ;
+    ex:truth "false" .
+
+ex:litre_005-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_005 puede caminar." ;
+    ex:subject ex:litre_005 ;
+    ex:truth "false" .
+
+ex:litre_005-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_005 puede votar?" ;
+    ex:subject ex:litre_005 .
+
+ex:litre_005-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_005 tiene flores?" ;
+    ex:subject ex:litre_005 .
+
+ex:litre_005-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_005 hace fotosintesis?" ;
+    ex:subject ex:litre_005 .
+
+ex:litre_005-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_005 es una planta." ;
+    ex:subject ex:litre_005 ;
+    ex:truth "true" .
+
+ex:litre_005-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_005 respira." ;
+    ex:subject ex:litre_005 ;
+    ex:truth "true" .
+
+ex:litre_006-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_006 es un animal." ;
+    ex:subject ex:litre_006 ;
+    ex:truth "false" .
+
+ex:litre_006-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_006 puede caminar." ;
+    ex:subject ex:litre_006 ;
+    ex:truth "false" .
+
+ex:litre_006-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_006 puede votar?" ;
+    ex:subject ex:litre_006 .
+
+ex:litre_006-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_006 tiene flores?" ;
+    ex:subject ex:litre_006 .
+
+ex:litre_006-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_006 hace fotosintesis?" ;
+    ex:subject ex:litre_006 .
+
+ex:litre_006-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_006 es una planta." ;
+    ex:subject ex:litre_006 ;
+    ex:truth "true" .
+
+ex:litre_006-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_006 respira." ;
+    ex:subject ex:litre_006 ;
+    ex:truth "true" .
+
+ex:litre_007-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_007 es un animal." ;
+    ex:subject ex:litre_007 ;
+    ex:truth "false" .
+
+ex:litre_007-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_007 puede caminar." ;
+    ex:subject ex:litre_007 ;
+    ex:truth "false" .
+
+ex:litre_007-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_007 puede votar?" ;
+    ex:subject ex:litre_007 .
+
+ex:litre_007-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_007 tiene flores?" ;
+    ex:subject ex:litre_007 .
+
+ex:litre_007-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_007 hace fotosintesis?" ;
+    ex:subject ex:litre_007 .
+
+ex:litre_007-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_007 es una planta." ;
+    ex:subject ex:litre_007 ;
+    ex:truth "true" .
+
+ex:litre_007-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_007 respira." ;
+    ex:subject ex:litre_007 ;
+    ex:truth "true" .
+
+ex:litre_008-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_008 es un animal." ;
+    ex:subject ex:litre_008 ;
+    ex:truth "false" .
+
+ex:litre_008-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_008 puede caminar." ;
+    ex:subject ex:litre_008 ;
+    ex:truth "false" .
+
+ex:litre_008-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_008 puede votar?" ;
+    ex:subject ex:litre_008 .
+
+ex:litre_008-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_008 tiene flores?" ;
+    ex:subject ex:litre_008 .
+
+ex:litre_008-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_008 hace fotosintesis?" ;
+    ex:subject ex:litre_008 .
+
+ex:litre_008-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_008 es una planta." ;
+    ex:subject ex:litre_008 ;
+    ex:truth "true" .
+
+ex:litre_008-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_008 respira." ;
+    ex:subject ex:litre_008 ;
+    ex:truth "true" .
+
+ex:litre_009-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_009 es un animal." ;
+    ex:subject ex:litre_009 ;
+    ex:truth "false" .
+
+ex:litre_009-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_009 puede caminar." ;
+    ex:subject ex:litre_009 ;
+    ex:truth "false" .
+
+ex:litre_009-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_009 puede votar?" ;
+    ex:subject ex:litre_009 .
+
+ex:litre_009-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_009 tiene flores?" ;
+    ex:subject ex:litre_009 .
+
+ex:litre_009-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_009 hace fotosintesis?" ;
+    ex:subject ex:litre_009 .
+
+ex:litre_009-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_009 es una planta." ;
+    ex:subject ex:litre_009 ;
+    ex:truth "true" .
+
+ex:litre_009-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_009 respira." ;
+    ex:subject ex:litre_009 ;
+    ex:truth "true" .
+
+ex:litre_010-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_010 es un animal." ;
+    ex:subject ex:litre_010 ;
+    ex:truth "false" .
+
+ex:litre_010-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_010 puede caminar." ;
+    ex:subject ex:litre_010 ;
+    ex:truth "false" .
+
+ex:litre_010-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_010 puede votar?" ;
+    ex:subject ex:litre_010 .
+
+ex:litre_010-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_010 tiene flores?" ;
+    ex:subject ex:litre_010 .
+
+ex:litre_010-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_010 hace fotosintesis?" ;
+    ex:subject ex:litre_010 .
+
+ex:litre_010-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_010 es una planta." ;
+    ex:subject ex:litre_010 ;
+    ex:truth "true" .
+
+ex:litre_010-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_010 respira." ;
+    ex:subject ex:litre_010 ;
+    ex:truth "true" .
+
+ex:litre_011-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_011 es un animal." ;
+    ex:subject ex:litre_011 ;
+    ex:truth "false" .
+
+ex:litre_011-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_011 puede caminar." ;
+    ex:subject ex:litre_011 ;
+    ex:truth "false" .
+
+ex:litre_011-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_011 puede votar?" ;
+    ex:subject ex:litre_011 .
+
+ex:litre_011-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_011 tiene flores?" ;
+    ex:subject ex:litre_011 .
+
+ex:litre_011-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_011 hace fotosintesis?" ;
+    ex:subject ex:litre_011 .
+
+ex:litre_011-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_011 es una planta." ;
+    ex:subject ex:litre_011 ;
+    ex:truth "true" .
+
+ex:litre_011-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_011 respira." ;
+    ex:subject ex:litre_011 ;
+    ex:truth "true" .
+
+ex:litre_012-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_012 es un animal." ;
+    ex:subject ex:litre_012 ;
+    ex:truth "false" .
+
+ex:litre_012-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_012 puede caminar." ;
+    ex:subject ex:litre_012 ;
+    ex:truth "false" .
+
+ex:litre_012-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_012 puede votar?" ;
+    ex:subject ex:litre_012 .
+
+ex:litre_012-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_012 tiene flores?" ;
+    ex:subject ex:litre_012 .
+
+ex:litre_012-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_012 hace fotosintesis?" ;
+    ex:subject ex:litre_012 .
+
+ex:litre_012-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_012 es una planta." ;
+    ex:subject ex:litre_012 ;
+    ex:truth "true" .
+
+ex:litre_012-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_012 respira." ;
+    ex:subject ex:litre_012 ;
+    ex:truth "true" .
+
+ex:litre_013-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_013 es un animal." ;
+    ex:subject ex:litre_013 ;
+    ex:truth "false" .
+
+ex:litre_013-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_013 puede caminar." ;
+    ex:subject ex:litre_013 ;
+    ex:truth "false" .
+
+ex:litre_013-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_013 puede votar?" ;
+    ex:subject ex:litre_013 .
+
+ex:litre_013-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_013 tiene flores?" ;
+    ex:subject ex:litre_013 .
+
+ex:litre_013-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_013 hace fotosintesis?" ;
+    ex:subject ex:litre_013 .
+
+ex:litre_013-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_013 es una planta." ;
+    ex:subject ex:litre_013 ;
+    ex:truth "true" .
+
+ex:litre_013-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_013 respira." ;
+    ex:subject ex:litre_013 ;
+    ex:truth "true" .
+
+ex:litre_014-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_014 es un animal." ;
+    ex:subject ex:litre_014 ;
+    ex:truth "false" .
+
+ex:litre_014-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_014 puede caminar." ;
+    ex:subject ex:litre_014 ;
+    ex:truth "false" .
+
+ex:litre_014-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_014 puede votar?" ;
+    ex:subject ex:litre_014 .
+
+ex:litre_014-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_014 tiene flores?" ;
+    ex:subject ex:litre_014 .
+
+ex:litre_014-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_014 hace fotosintesis?" ;
+    ex:subject ex:litre_014 .
+
+ex:litre_014-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_014 es una planta." ;
+    ex:subject ex:litre_014 ;
+    ex:truth "true" .
+
+ex:litre_014-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_014 respira." ;
+    ex:subject ex:litre_014 ;
+    ex:truth "true" .
+
+ex:litre_015-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_015 es un animal." ;
+    ex:subject ex:litre_015 ;
+    ex:truth "false" .
+
+ex:litre_015-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_015 puede caminar." ;
+    ex:subject ex:litre_015 ;
+    ex:truth "false" .
+
+ex:litre_015-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_015 puede votar?" ;
+    ex:subject ex:litre_015 .
+
+ex:litre_015-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_015 tiene flores?" ;
+    ex:subject ex:litre_015 .
+
+ex:litre_015-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_015 hace fotosintesis?" ;
+    ex:subject ex:litre_015 .
+
+ex:litre_015-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_015 es una planta." ;
+    ex:subject ex:litre_015 ;
+    ex:truth "true" .
+
+ex:litre_015-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_015 respira." ;
+    ex:subject ex:litre_015 ;
+    ex:truth "true" .
+
+ex:litre_016-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_016 es un animal." ;
+    ex:subject ex:litre_016 ;
+    ex:truth "false" .
+
+ex:litre_016-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_016 puede caminar." ;
+    ex:subject ex:litre_016 ;
+    ex:truth "false" .
+
+ex:litre_016-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_016 puede votar?" ;
+    ex:subject ex:litre_016 .
+
+ex:litre_016-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_016 tiene flores?" ;
+    ex:subject ex:litre_016 .
+
+ex:litre_016-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_016 hace fotosintesis?" ;
+    ex:subject ex:litre_016 .
+
+ex:litre_016-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_016 es una planta." ;
+    ex:subject ex:litre_016 ;
+    ex:truth "true" .
+
+ex:litre_016-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_016 respira." ;
+    ex:subject ex:litre_016 ;
+    ex:truth "true" .
+
+ex:litre_017-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_017 es un animal." ;
+    ex:subject ex:litre_017 ;
+    ex:truth "false" .
+
+ex:litre_017-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_017 puede caminar." ;
+    ex:subject ex:litre_017 ;
+    ex:truth "false" .
+
+ex:litre_017-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_017 puede votar?" ;
+    ex:subject ex:litre_017 .
+
+ex:litre_017-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_017 tiene flores?" ;
+    ex:subject ex:litre_017 .
+
+ex:litre_017-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_017 hace fotosintesis?" ;
+    ex:subject ex:litre_017 .
+
+ex:litre_017-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_017 es una planta." ;
+    ex:subject ex:litre_017 ;
+    ex:truth "true" .
+
+ex:litre_017-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_017 respira." ;
+    ex:subject ex:litre_017 ;
+    ex:truth "true" .
+
+ex:litre_018-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_018 es un animal." ;
+    ex:subject ex:litre_018 ;
+    ex:truth "false" .
+
+ex:litre_018-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_018 puede caminar." ;
+    ex:subject ex:litre_018 ;
+    ex:truth "false" .
+
+ex:litre_018-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_018 puede votar?" ;
+    ex:subject ex:litre_018 .
+
+ex:litre_018-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_018 tiene flores?" ;
+    ex:subject ex:litre_018 .
+
+ex:litre_018-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_018 hace fotosintesis?" ;
+    ex:subject ex:litre_018 .
+
+ex:litre_018-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_018 es una planta." ;
+    ex:subject ex:litre_018 ;
+    ex:truth "true" .
+
+ex:litre_018-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_018 respira." ;
+    ex:subject ex:litre_018 ;
+    ex:truth "true" .
+
+ex:litre_019-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_019 es un animal." ;
+    ex:subject ex:litre_019 ;
+    ex:truth "false" .
+
+ex:litre_019-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_019 puede caminar." ;
+    ex:subject ex:litre_019 ;
+    ex:truth "false" .
+
+ex:litre_019-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_019 puede votar?" ;
+    ex:subject ex:litre_019 .
+
+ex:litre_019-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_019 tiene flores?" ;
+    ex:subject ex:litre_019 .
+
+ex:litre_019-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_019 hace fotosintesis?" ;
+    ex:subject ex:litre_019 .
+
+ex:litre_019-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_019 es una planta." ;
+    ex:subject ex:litre_019 ;
+    ex:truth "true" .
+
+ex:litre_019-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_019 respira." ;
+    ex:subject ex:litre_019 ;
+    ex:truth "true" .
+
+ex:litre_020-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_020 es un animal." ;
+    ex:subject ex:litre_020 ;
+    ex:truth "false" .
+
+ex:litre_020-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_020 puede caminar." ;
+    ex:subject ex:litre_020 ;
+    ex:truth "false" .
+
+ex:litre_020-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_020 puede votar?" ;
+    ex:subject ex:litre_020 .
+
+ex:litre_020-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_020 tiene flores?" ;
+    ex:subject ex:litre_020 .
+
+ex:litre_020-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_020 hace fotosintesis?" ;
+    ex:subject ex:litre_020 .
+
+ex:litre_020-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_020 es una planta." ;
+    ex:subject ex:litre_020 ;
+    ex:truth "true" .
+
+ex:litre_020-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_020 respira." ;
+    ex:subject ex:litre_020 ;
+    ex:truth "true" .
+
+ex:litre_021-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_021 es un animal." ;
+    ex:subject ex:litre_021 ;
+    ex:truth "false" .
+
+ex:litre_021-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_021 puede caminar." ;
+    ex:subject ex:litre_021 ;
+    ex:truth "false" .
+
+ex:litre_021-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_021 puede votar?" ;
+    ex:subject ex:litre_021 .
+
+ex:litre_021-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_021 tiene flores?" ;
+    ex:subject ex:litre_021 .
+
+ex:litre_021-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_021 hace fotosintesis?" ;
+    ex:subject ex:litre_021 .
+
+ex:litre_021-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_021 es una planta." ;
+    ex:subject ex:litre_021 ;
+    ex:truth "true" .
+
+ex:litre_021-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_021 respira." ;
+    ex:subject ex:litre_021 ;
+    ex:truth "true" .
+
+ex:litre_022-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_022 es un animal." ;
+    ex:subject ex:litre_022 ;
+    ex:truth "false" .
+
+ex:litre_022-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_022 puede caminar." ;
+    ex:subject ex:litre_022 ;
+    ex:truth "false" .
+
+ex:litre_022-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_022 puede votar?" ;
+    ex:subject ex:litre_022 .
+
+ex:litre_022-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_022 tiene flores?" ;
+    ex:subject ex:litre_022 .
+
+ex:litre_022-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_022 hace fotosintesis?" ;
+    ex:subject ex:litre_022 .
+
+ex:litre_022-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_022 es una planta." ;
+    ex:subject ex:litre_022 ;
+    ex:truth "true" .
+
+ex:litre_022-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_022 respira." ;
+    ex:subject ex:litre_022 ;
+    ex:truth "true" .
+
+ex:litre_023-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_023 es un animal." ;
+    ex:subject ex:litre_023 ;
+    ex:truth "false" .
+
+ex:litre_023-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_023 puede caminar." ;
+    ex:subject ex:litre_023 ;
+    ex:truth "false" .
+
+ex:litre_023-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_023 puede votar?" ;
+    ex:subject ex:litre_023 .
+
+ex:litre_023-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_023 tiene flores?" ;
+    ex:subject ex:litre_023 .
+
+ex:litre_023-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_023 hace fotosintesis?" ;
+    ex:subject ex:litre_023 .
+
+ex:litre_023-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_023 es una planta." ;
+    ex:subject ex:litre_023 ;
+    ex:truth "true" .
+
+ex:litre_023-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_023 respira." ;
+    ex:subject ex:litre_023 ;
+    ex:truth "true" .
+
+ex:litre_024-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_024 es un animal." ;
+    ex:subject ex:litre_024 ;
+    ex:truth "false" .
+
+ex:litre_024-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_024 puede caminar." ;
+    ex:subject ex:litre_024 ;
+    ex:truth "false" .
+
+ex:litre_024-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_024 puede votar?" ;
+    ex:subject ex:litre_024 .
+
+ex:litre_024-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_024 tiene flores?" ;
+    ex:subject ex:litre_024 .
+
+ex:litre_024-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_024 hace fotosintesis?" ;
+    ex:subject ex:litre_024 .
+
+ex:litre_024-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_024 es una planta." ;
+    ex:subject ex:litre_024 ;
+    ex:truth "true" .
+
+ex:litre_024-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_024 respira." ;
+    ex:subject ex:litre_024 ;
+    ex:truth "true" .
+
+ex:litre_025-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_025 es un animal." ;
+    ex:subject ex:litre_025 ;
+    ex:truth "false" .
+
+ex:litre_025-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_025 puede caminar." ;
+    ex:subject ex:litre_025 ;
+    ex:truth "false" .
+
+ex:litre_025-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_025 puede votar?" ;
+    ex:subject ex:litre_025 .
+
+ex:litre_025-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_025 tiene flores?" ;
+    ex:subject ex:litre_025 .
+
+ex:litre_025-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_025 hace fotosintesis?" ;
+    ex:subject ex:litre_025 .
+
+ex:litre_025-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_025 es una planta." ;
+    ex:subject ex:litre_025 ;
+    ex:truth "true" .
+
+ex:litre_025-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_025 respira." ;
+    ex:subject ex:litre_025 ;
+    ex:truth "true" .
+
+ex:litre_026-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_026 es un animal." ;
+    ex:subject ex:litre_026 ;
+    ex:truth "false" .
+
+ex:litre_026-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_026 puede caminar." ;
+    ex:subject ex:litre_026 ;
+    ex:truth "false" .
+
+ex:litre_026-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_026 puede votar?" ;
+    ex:subject ex:litre_026 .
+
+ex:litre_026-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_026 tiene flores?" ;
+    ex:subject ex:litre_026 .
+
+ex:litre_026-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_026 hace fotosintesis?" ;
+    ex:subject ex:litre_026 .
+
+ex:litre_026-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_026 es una planta." ;
+    ex:subject ex:litre_026 ;
+    ex:truth "true" .
+
+ex:litre_026-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_026 respira." ;
+    ex:subject ex:litre_026 ;
+    ex:truth "true" .
+
+ex:litre_027-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_027 es un animal." ;
+    ex:subject ex:litre_027 ;
+    ex:truth "false" .
+
+ex:litre_027-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_027 puede caminar." ;
+    ex:subject ex:litre_027 ;
+    ex:truth "false" .
+
+ex:litre_027-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_027 puede votar?" ;
+    ex:subject ex:litre_027 .
+
+ex:litre_027-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_027 tiene flores?" ;
+    ex:subject ex:litre_027 .
+
+ex:litre_027-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_027 hace fotosintesis?" ;
+    ex:subject ex:litre_027 .
+
+ex:litre_027-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_027 es una planta." ;
+    ex:subject ex:litre_027 ;
+    ex:truth "true" .
+
+ex:litre_027-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_027 respira." ;
+    ex:subject ex:litre_027 ;
+    ex:truth "true" .
+
+ex:litre_028-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_028 es un animal." ;
+    ex:subject ex:litre_028 ;
+    ex:truth "false" .
+
+ex:litre_028-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_028 puede caminar." ;
+    ex:subject ex:litre_028 ;
+    ex:truth "false" .
+
+ex:litre_028-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_028 puede votar?" ;
+    ex:subject ex:litre_028 .
+
+ex:litre_028-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_028 tiene flores?" ;
+    ex:subject ex:litre_028 .
+
+ex:litre_028-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_028 hace fotosintesis?" ;
+    ex:subject ex:litre_028 .
+
+ex:litre_028-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_028 es una planta." ;
+    ex:subject ex:litre_028 ;
+    ex:truth "true" .
+
+ex:litre_028-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_028 respira." ;
+    ex:subject ex:litre_028 ;
+    ex:truth "true" .
+
+ex:litre_029-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_029 es un animal." ;
+    ex:subject ex:litre_029 ;
+    ex:truth "false" .
+
+ex:litre_029-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_029 puede caminar." ;
+    ex:subject ex:litre_029 ;
+    ex:truth "false" .
+
+ex:litre_029-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_029 puede votar?" ;
+    ex:subject ex:litre_029 .
+
+ex:litre_029-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_029 tiene flores?" ;
+    ex:subject ex:litre_029 .
+
+ex:litre_029-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_029 hace fotosintesis?" ;
+    ex:subject ex:litre_029 .
+
+ex:litre_029-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_029 es una planta." ;
+    ex:subject ex:litre_029 ;
+    ex:truth "true" .
+
+ex:litre_029-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_029 respira." ;
+    ex:subject ex:litre_029 ;
+    ex:truth "true" .
+
+ex:litre_030-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_030 es un animal." ;
+    ex:subject ex:litre_030 ;
+    ex:truth "false" .
+
+ex:litre_030-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_030 puede caminar." ;
+    ex:subject ex:litre_030 ;
+    ex:truth "false" .
+
+ex:litre_030-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_030 puede votar?" ;
+    ex:subject ex:litre_030 .
+
+ex:litre_030-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_030 tiene flores?" ;
+    ex:subject ex:litre_030 .
+
+ex:litre_030-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_030 hace fotosintesis?" ;
+    ex:subject ex:litre_030 .
+
+ex:litre_030-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_030 es una planta." ;
+    ex:subject ex:litre_030 ;
+    ex:truth "true" .
+
+ex:litre_030-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_030 respira." ;
+    ex:subject ex:litre_030 ;
+    ex:truth "true" .
+
+ex:litre_031-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_031 es un animal." ;
+    ex:subject ex:litre_031 ;
+    ex:truth "false" .
+
+ex:litre_031-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_031 puede caminar." ;
+    ex:subject ex:litre_031 ;
+    ex:truth "false" .
+
+ex:litre_031-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_031 puede votar?" ;
+    ex:subject ex:litre_031 .
+
+ex:litre_031-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_031 tiene flores?" ;
+    ex:subject ex:litre_031 .
+
+ex:litre_031-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_031 hace fotosintesis?" ;
+    ex:subject ex:litre_031 .
+
+ex:litre_031-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_031 es una planta." ;
+    ex:subject ex:litre_031 ;
+    ex:truth "true" .
+
+ex:litre_031-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_031 respira." ;
+    ex:subject ex:litre_031 ;
+    ex:truth "true" .
+
+ex:litre_032-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_032 es un animal." ;
+    ex:subject ex:litre_032 ;
+    ex:truth "false" .
+
+ex:litre_032-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_032 puede caminar." ;
+    ex:subject ex:litre_032 ;
+    ex:truth "false" .
+
+ex:litre_032-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_032 puede votar?" ;
+    ex:subject ex:litre_032 .
+
+ex:litre_032-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_032 tiene flores?" ;
+    ex:subject ex:litre_032 .
+
+ex:litre_032-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_032 hace fotosintesis?" ;
+    ex:subject ex:litre_032 .
+
+ex:litre_032-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_032 es una planta." ;
+    ex:subject ex:litre_032 ;
+    ex:truth "true" .
+
+ex:litre_032-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_032 respira." ;
+    ex:subject ex:litre_032 ;
+    ex:truth "true" .
+
+ex:litre_033-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_033 es un animal." ;
+    ex:subject ex:litre_033 ;
+    ex:truth "false" .
+
+ex:litre_033-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_033 puede caminar." ;
+    ex:subject ex:litre_033 ;
+    ex:truth "false" .
+
+ex:litre_033-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_033 puede votar?" ;
+    ex:subject ex:litre_033 .
+
+ex:litre_033-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_033 tiene flores?" ;
+    ex:subject ex:litre_033 .
+
+ex:litre_033-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_033 hace fotosintesis?" ;
+    ex:subject ex:litre_033 .
+
+ex:litre_033-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_033 es una planta." ;
+    ex:subject ex:litre_033 ;
+    ex:truth "true" .
+
+ex:litre_033-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_033 respira." ;
+    ex:subject ex:litre_033 ;
+    ex:truth "true" .
+
+ex:litre_034-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_034 es un animal." ;
+    ex:subject ex:litre_034 ;
+    ex:truth "false" .
+
+ex:litre_034-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_034 puede caminar." ;
+    ex:subject ex:litre_034 ;
+    ex:truth "false" .
+
+ex:litre_034-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_034 puede votar?" ;
+    ex:subject ex:litre_034 .
+
+ex:litre_034-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_034 tiene flores?" ;
+    ex:subject ex:litre_034 .
+
+ex:litre_034-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_034 hace fotosintesis?" ;
+    ex:subject ex:litre_034 .
+
+ex:litre_034-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_034 es una planta." ;
+    ex:subject ex:litre_034 ;
+    ex:truth "true" .
+
+ex:litre_034-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_034 respira." ;
+    ex:subject ex:litre_034 ;
+    ex:truth "true" .
+
+ex:litre_035-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_035 es un animal." ;
+    ex:subject ex:litre_035 ;
+    ex:truth "false" .
+
+ex:litre_035-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_035 puede caminar." ;
+    ex:subject ex:litre_035 ;
+    ex:truth "false" .
+
+ex:litre_035-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_035 puede votar?" ;
+    ex:subject ex:litre_035 .
+
+ex:litre_035-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_035 tiene flores?" ;
+    ex:subject ex:litre_035 .
+
+ex:litre_035-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_035 hace fotosintesis?" ;
+    ex:subject ex:litre_035 .
+
+ex:litre_035-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_035 es una planta." ;
+    ex:subject ex:litre_035 ;
+    ex:truth "true" .
+
+ex:litre_035-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_035 respira." ;
+    ex:subject ex:litre_035 ;
+    ex:truth "true" .
+
+ex:litre_036-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_036 es un animal." ;
+    ex:subject ex:litre_036 ;
+    ex:truth "false" .
+
+ex:litre_036-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_036 puede caminar." ;
+    ex:subject ex:litre_036 ;
+    ex:truth "false" .
+
+ex:litre_036-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_036 puede votar?" ;
+    ex:subject ex:litre_036 .
+
+ex:litre_036-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_036 tiene flores?" ;
+    ex:subject ex:litre_036 .
+
+ex:litre_036-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_036 hace fotosintesis?" ;
+    ex:subject ex:litre_036 .
+
+ex:litre_036-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_036 es una planta." ;
+    ex:subject ex:litre_036 ;
+    ex:truth "true" .
+
+ex:litre_036-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_036 respira." ;
+    ex:subject ex:litre_036 ;
+    ex:truth "true" .
+
+ex:litre_037-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_037 es un animal." ;
+    ex:subject ex:litre_037 ;
+    ex:truth "false" .
+
+ex:litre_037-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_037 puede caminar." ;
+    ex:subject ex:litre_037 ;
+    ex:truth "false" .
+
+ex:litre_037-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_037 puede votar?" ;
+    ex:subject ex:litre_037 .
+
+ex:litre_037-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_037 tiene flores?" ;
+    ex:subject ex:litre_037 .
+
+ex:litre_037-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_037 hace fotosintesis?" ;
+    ex:subject ex:litre_037 .
+
+ex:litre_037-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_037 es una planta." ;
+    ex:subject ex:litre_037 ;
+    ex:truth "true" .
+
+ex:litre_037-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_037 respira." ;
+    ex:subject ex:litre_037 ;
+    ex:truth "true" .
+
+ex:litre_038-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_038 es un animal." ;
+    ex:subject ex:litre_038 ;
+    ex:truth "false" .
+
+ex:litre_038-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_038 puede caminar." ;
+    ex:subject ex:litre_038 ;
+    ex:truth "false" .
+
+ex:litre_038-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_038 puede votar?" ;
+    ex:subject ex:litre_038 .
+
+ex:litre_038-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_038 tiene flores?" ;
+    ex:subject ex:litre_038 .
+
+ex:litre_038-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_038 hace fotosintesis?" ;
+    ex:subject ex:litre_038 .
+
+ex:litre_038-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_038 es una planta." ;
+    ex:subject ex:litre_038 ;
+    ex:truth "true" .
+
+ex:litre_038-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_038 respira." ;
+    ex:subject ex:litre_038 ;
+    ex:truth "true" .
+
+ex:litre_039-animal a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:animal ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_039 es un animal." ;
+    ex:subject ex:litre_039 ;
+    ex:truth "false" .
+
+ex:litre_039-caminante a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:caminante ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, no es cierto que el litre_039 puede caminar." ;
+    ex:subject ex:litre_039 ;
+    ex:truth "false" .
+
+ex:litre_039-elector a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:elector ;
+    ex:predicate ex:es ;
+    ex:sense "unsinnig" ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_039 puede votar?" ;
+    ex:subject ex:litre_039 .
+
+ex:litre_039-florido a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:florido ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_039 tiene flores?" ;
+    ex:subject ex:litre_039 .
+
+ex:litre_039-fotosintetico a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:fotosintetico ;
+    ex:predicate ex:es ;
+    ex:sourceText "Consulta sin evidencia de verdad en botanica: ¿el litre_039 hace fotosintesis?" ;
+    ex:subject ex:litre_039 .
+
+ex:litre_039-planta a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:planta ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_039 es una planta." ;
+    ex:subject ex:litre_039 ;
+    ex:truth "true" .
+
+ex:litre_039-respirable a ex:Assertion ;
+    ex:context "botanica" ;
+    ex:object ex:respirable ;
+    ex:predicate ex:es ;
+    ex:sourceText "En botanica, el litre_039 respira." ;
+    ex:subject ex:litre_039 ;
+    ex:truth "true" .
+

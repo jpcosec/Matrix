@@ -1,0 +1,1 @@
+((:FACT "NGZ97EYQV0Z6" :STRUKTUR :HAS-COLOR :OBJEKTE ("car-1" "color-red")))

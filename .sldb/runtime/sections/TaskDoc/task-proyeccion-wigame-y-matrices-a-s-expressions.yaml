@@ -22,8 +22,8 @@ sections:
   - workspace:desk
   slug: proyeccion-wigame-y-matrices-a-s-expressions
   level: 1
-  line_start: 25
-  line_end: 62
+  line_start: 20
+  line_end: 57
 - path: proyeccion-wigame-y-matrices-a-s-expressions/rationale
   title: Rationale
   breadcrumbs:
@@ -49,8 +49,8 @@ sections:
   - workspace:desk
   slug: rationale
   level: 2
-  line_start: 27
-  line_end: 32
+  line_start: 22
+  line_end: 27
 - path: proyeccion-wigame-y-matrices-a-s-expressions/goal
   title: Goal
   breadcrumbs:
@@ -76,8 +76,8 @@ sections:
   - workspace:desk
   slug: goal
   level: 2
-  line_start: 33
-  line_end: 38
+  line_start: 28
+  line_end: 33
 - path: proyeccion-wigame-y-matrices-a-s-expressions/scope
   title: Scope
   breadcrumbs:
@@ -103,8 +103,8 @@ sections:
   - workspace:desk
   slug: scope
   level: 2
-  line_start: 39
-  line_end: 44
+  line_start: 34
+  line_end: 39
 - path: proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
   title: Implementation Path
   breadcrumbs:
@@ -130,8 +130,8 @@ sections:
   - workspace:desk
   slug: implementation-path
   level: 2
-  line_start: 45
-  line_end: 50
+  line_start: 40
+  line_end: 45
 - path: proyeccion-wigame-y-matrices-a-s-expressions/validation
   title: Validation
   breadcrumbs:
@@ -157,8 +157,8 @@ sections:
   - workspace:desk
   slug: validation
   level: 2
-  line_start: 51
-  line_end: 57
+  line_start: 46
+  line_end: 52
 - path: proyeccion-wigame-y-matrices-a-s-expressions/done-when
   title: Done When
   breadcrumbs:
@@ -184,7 +184,7 @@ sections:
   - workspace:desk
   slug: done-when
   level: 2
-  line_start: 58
-  line_end: 62
-hash_c: 40185378349039019234d0514f15be1e6fba40404f12b0df6648a732700c5c84
+  line_start: 53
+  line_end: 57
+source_hash: 684bcbe729ee89fd81fe27715625226fe93c8276463b4eca657f207f1277f521
 sections_version: '2'

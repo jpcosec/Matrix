@@ -1,4 +1,4 @@
-edges_version: 1|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://model/TaskDoc
   node_type: sldb_model
@@ -70,15 +70,6 @@ nodes:
     description: Semantic tags placed at the end, using namespaced forms such as 'system:sldb'
       or 'language:python'.
   facets: {}
-- id: sldb://field/TaskDoc.routine
-  node_type: sldb_field
-  semantics:
-    name: routine
-    kind: string
-    required: false
-    model: TaskDoc
-    description: Primary routine identifier that makes the artifact actionable.
-  facets: {}
 - id: sldb://field/TaskDoc.current_node
   node_type: sldb_field
   semantics:
@@ -86,7 +77,8 @@ nodes:
     kind: string
     required: false
     model: TaskDoc
-    description: Current node in the operational routine or state machine.
+    description: Current node of the artifact in its lifecycle graph (a ritual id,
+      or 'complete').
   facets: {}
 - id: sldb://field/TaskDoc.history
   node_type: sldb_field
@@ -95,16 +87,7 @@ nodes:
     kind: stringlist
     required: false
     model: TaskDoc
-    description: Operational transition history for the artifact.
-  facets: {}
-- id: sldb://field/TaskDoc.frontmatter
-  node_type: sldb_field
-  semantics:
-    name: frontmatter
-    kind: object
-    required: false
-    model: TaskDoc
-    description: YAML frontmatter containing task metadata
+    description: Lifecycle transitions the artifact went through, by relation type.
   facets: {}
 - id: sldb://field/TaskDoc.why
   node_type: sldb_field
@@ -168,15 +151,6 @@ nodes:
     required: false
     model: TaskDoc
     description: Files or paths expected to change during the task.
-  facets: {}
-- id: sldb://field/TaskDoc.checklists
-  node_type: sldb_field
-  semantics:
-    name: checklists
-    kind: stringlist
-    required: false
-    model: TaskDoc
-    description: Checklist identifiers that verify the task's operational routine.
   facets: {}
 - id: sldb://field/TaskDoc.implementation_path
   node_type: sldb_field
@@ -290,22 +264,12 @@ edges:
   metadata:
     origin: schema
 - source: sldb://model/TaskDoc
-  target: sldb://field/TaskDoc.routine
-  relation: has_field
-  metadata:
-    origin: schema
-- source: sldb://model/TaskDoc
   target: sldb://field/TaskDoc.current_node
   relation: has_field
   metadata:
     origin: schema
 - source: sldb://model/TaskDoc
   target: sldb://field/TaskDoc.history
-  relation: has_field
-  metadata:
-    origin: schema
-- source: sldb://model/TaskDoc
-  target: sldb://field/TaskDoc.frontmatter
   relation: has_field
   metadata:
     origin: schema
@@ -341,11 +305,6 @@ edges:
     origin: schema
 - source: sldb://model/TaskDoc
   target: sldb://field/TaskDoc.files
-  relation: has_field
-  metadata:
-    origin: schema
-- source: sldb://model/TaskDoc
-  target: sldb://field/TaskDoc.checklists
   relation: has_field
   metadata:
     origin: schema

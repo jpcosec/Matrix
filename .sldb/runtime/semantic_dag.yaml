@@ -5,6 +5,11 @@ nodes:
   parents: []
 - id: context:migration
   parents: []
+- id: layer
+  parents: []
+- id: layer.topology
+  parents:
+  - layer
 - id: primitive:checklist
   parents: []
 - id: primitive:condition
@@ -36,6 +41,15 @@ nodes:
 - id: type.desk.inbox-note
   parents:
   - type.desk
+- id: type.relation
+  parents:
+  - type
+- id: type.relation.instance
+  parents:
+  - type.relation
+- id: type.relation.type
+  parents:
+  - type.relation
 - id: type.workflow
   parents:
   - type
@@ -52,6 +66,9 @@ nodes:
   parents:
   - type.workflow
 - id: type.workflow.pill
+  parents:
+  - type.workflow
+- id: type.workflow.ritual
   parents:
   - type.workflow
 - id: type.workflow.routine

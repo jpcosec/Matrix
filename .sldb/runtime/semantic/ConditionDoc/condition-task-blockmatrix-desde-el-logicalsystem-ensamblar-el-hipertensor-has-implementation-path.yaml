@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: f46ec97ae291f62ece7204c0a742a98a2b192845169fafb578314e77c2eab293

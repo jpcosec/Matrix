@@ -5,17 +5,12 @@ summary: ''
 tags:
 - workspace:desk
 - artifact:task
-routine: routine-task-proyeccion-wigame-y-matrices-a-s-expressions
-current_node: checklist-task-proyeccion-wigame-y-matrices-a-s-expressions-execution-ready
+current_node: ritual-execution
 history: []
 references: []
 depends_on: []
 pills: []
 files: []
-checklists:
-- checklist-task-proyeccion-wigame-y-matrices-a-s-expressions-execution-ready
-- checklist-task-proyeccion-wigame-y-matrices-a-s-expressions-testing-ready
-- checklist-task-proyeccion-wigame-y-matrices-a-s-expressions-closeout-ready
 task_type: ''
 inherits_from: []
 inherit_acceptance_context: false

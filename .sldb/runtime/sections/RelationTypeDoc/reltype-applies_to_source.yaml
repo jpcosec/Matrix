@@ -1,0 +1,47 @@
+doc_name: reltype-applies_to_source
+sections:
+- path: applies-to-source
+  title: applies_to_source
+  breadcrumbs:
+  - applies_to_source
+  about:
+  - applies_to_source
+  - applies to source
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: applies-to-source
+  level: 1
+  line_start: 13
+  line_end: 17
+- path: applies-to-source/description
+  title: Description
+  breadcrumbs:
+  - applies_to_source
+  - Description
+  about:
+  - applies_to_source
+  - applies to source
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 15
+  line_end: 17
+source_hash: 710d071df8cc9867fdc007ce1b1506e02085669b5d548b812e750119e4b3877b
+sections_version: '2'

@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-closeout-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: 94140e76ce2ab98f63fb65dfe59c568deff9ab8eb8b206d7b9dd78f814da06bb

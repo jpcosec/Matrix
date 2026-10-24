@@ -1,9 +1,0 @@
-model: OperatorDoc
-path: desk/primitives/operators/operator-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-ready-for-testing.md
-tags:
-- primitive:operator
-- representation.markdown
-- source.document.markdown
-- type.workflow.operator
-- workspace.desk.primitives
-hash_c: 19a597320c0853e8cecef28fbfb56fea384433ad48471a507629a1a1feb0a88e

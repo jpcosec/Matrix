@@ -1,4 +1,4 @@
-edges_version: 1|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://store
   node_type: sldb_store
@@ -18,6 +18,16 @@ nodes:
   node_type: semantic_tag
   semantics:
     tag: context:migration
+  facets: {}
+- id: sldb://semantic_tag/layer
+  node_type: semantic_tag
+  semantics:
+    tag: layer
+  facets: {}
+- id: sldb://semantic_tag/layer.topology
+  node_type: semantic_tag
+  semantics:
+    tag: layer.topology
   facets: {}
 - id: sldb://semantic_tag/primitive:checklist
   node_type: semantic_tag
@@ -84,6 +94,21 @@ nodes:
   semantics:
     tag: type.desk.inbox-note
   facets: {}
+- id: sldb://semantic_tag/type.relation
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation
+  facets: {}
+- id: sldb://semantic_tag/type.relation.instance
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.instance
+  facets: {}
+- id: sldb://semantic_tag/type.relation.type
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.type
+  facets: {}
 - id: sldb://semantic_tag/type.workflow
   node_type: semantic_tag
   semantics:
@@ -113,6 +138,11 @@ nodes:
   node_type: semantic_tag
   semantics:
     tag: type.workflow.pill
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.ritual
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.ritual
   facets: {}
 - id: sldb://semantic_tag/type.workflow.routine
   node_type: semantic_tag
@@ -154,49 +184,66 @@ nodes:
   semantics:
     tag: workspace:desk
   facets: {}
+- id: sldb://store/deskops
+  node_type: sldb_store
+  semantics: {}
+  facets: {}
 edges:
 - source: sldb://store
   target: sldb://model/AtomDoc
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
 - source: sldb://store
   target: sldb://model/BoardDoc
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
 - source: sldb://store
-  target: sldb://model/ChecklistDoc
+  target: sldb://model/CrossroadDoc
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
 - source: sldb://store
-  target: sldb://model/ConditionDoc
+  target: sldb://model/DeskFAQDoc
   relation: has_model
   metadata:
     origin: structural
-- source: sldb://store
-  target: sldb://model/EdgeDoc
-  relation: has_model
-  metadata:
-    origin: structural
-- source: sldb://store
-  target: sldb://model/FAQDoc
-  relation: has_model
-  metadata:
-    origin: structural
+    origin_store: deskops
 - source: sldb://store
   target: sldb://model/InboxNoteDoc
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
 - source: sldb://store
-  target: sldb://model/OperatorDoc
+  target: sldb://model/MaterializationContractDoc
+  relation: has_model
+  metadata:
+    origin: structural
+    origin_store: deskops
+- source: sldb://store
+  target: sldb://model/PillDoc
+  relation: has_model
+  metadata:
+    origin: structural
+    origin_store: deskops
+- source: sldb://store
+  target: sldb://model/ProtoAtomDoc
+  relation: has_model
+  metadata:
+    origin: structural
+    origin_store: deskops
+- source: sldb://store
+  target: sldb://model/RelationDoc
   relation: has_model
   metadata:
     origin: structural
 - source: sldb://store
-  target: sldb://model/PillDoc
+  target: sldb://model/RelationTypeDoc
   relation: has_model
   metadata:
     origin: structural
@@ -205,24 +252,51 @@ edges:
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
 - source: sldb://store
   target: sldb://model/RitualDoc
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
 - source: sldb://store
-  target: sldb://model/RoutineDoc
+  target: sldb://model/RoleDoc
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
+- source: sldb://store
+  target: sldb://model/RunDoc
+  relation: has_model
+  metadata:
+    origin: structural
+    origin_store: deskops
+- source: sldb://store
+  target: sldb://model/RuntimeProfileDoc
+  relation: has_model
+  metadata:
+    origin: structural
+    origin_store: deskops
 - source: sldb://store
   target: sldb://model/StepDoc
   relation: has_model
   metadata:
     origin: structural
+    origin_store: deskops
 - source: sldb://store
   target: sldb://model/TaskDoc
   relation: has_model
+  metadata:
+    origin: structural
+    origin_store: deskops
+- source: sldb://store
+  target: sldb://store/deskops
+  relation: links_to
+  metadata:
+    origin: structural
+- source: sldb://semantic_tag/layer.topology
+  target: sldb://semantic_tag/layer
+  relation: semantic_parent
   metadata:
     origin: structural
 - source: sldb://semantic_tag/representation.markdown
@@ -247,6 +321,21 @@ edges:
     origin: structural
 - source: sldb://semantic_tag/type.desk.inbox-note
   target: sldb://semantic_tag/type.desk
+  relation: semantic_parent
+  metadata:
+    origin: structural
+- source: sldb://semantic_tag/type.relation
+  target: sldb://semantic_tag/type
+  relation: semantic_parent
+  metadata:
+    origin: structural
+- source: sldb://semantic_tag/type.relation.instance
+  target: sldb://semantic_tag/type.relation
+  relation: semantic_parent
+  metadata:
+    origin: structural
+- source: sldb://semantic_tag/type.relation.type
+  target: sldb://semantic_tag/type.relation
   relation: semantic_parent
   metadata:
     origin: structural
@@ -276,6 +365,11 @@ edges:
   metadata:
     origin: structural
 - source: sldb://semantic_tag/type.workflow.pill
+  target: sldb://semantic_tag/type.workflow
+  relation: semantic_parent
+  metadata:
+    origin: structural
+- source: sldb://semantic_tag/type.workflow.ritual
   target: sldb://semantic_tag/type.workflow
   relation: semantic_parent
   metadata:

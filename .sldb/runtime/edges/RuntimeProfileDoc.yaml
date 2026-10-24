@@ -1,0 +1,323 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://model/RuntimeProfileDoc
+  node_type: sldb_model
+  semantics:
+    name: RuntimeProfileDoc
+    model_ref: deskops.models:RuntimeProfileDoc
+    path: ''
+    version: 1
+    canonical: false
+    family: null
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.runtime_profile
+    - workspace.desk.runtimes
+    base_models: []
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.runtime_profile
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.runtime_profile
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk.runtimes
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk.runtimes
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.title
+  node_type: sldb_field
+  semantics:
+    name: title
+    kind: string
+    required: true
+    model: RuntimeProfileDoc
+    description: Short primitive title.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.id
+  node_type: sldb_field
+  semantics:
+    name: id
+    kind: string
+    required: true
+    model: RuntimeProfileDoc
+    description: Stable primitive identifier.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.status
+  node_type: sldb_field
+  semantics:
+    name: status
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: Primitive lifecycle status.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.summary
+  node_type: sldb_field
+  semantics:
+    name: summary
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: Short semantic summary for the primitive.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.tags
+  node_type: sldb_field
+  semantics:
+    name: tags
+    kind: stringlist
+    required: false
+    model: RuntimeProfileDoc
+    description: Semantic tags placed at the end using namespaced forms.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.kind
+  node_type: sldb_field
+  semantics:
+    name: kind
+    kind: string
+    required: true
+    model: RuntimeProfileDoc
+    description: Runtime binary identifier this profile targets, matching RoleDoc.kind
+      values (e.g. 'pi', 'claude', 'codex').
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.binary
+  node_type: sldb_field
+  semantics:
+    name: binary
+    kind: string
+    required: true
+    model: RuntimeProfileDoc
+    description: Executable name or path Herdr invokes to start this runtime kind.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.model_flag
+  node_type: sldb_field
+  semantics:
+    name: model_flag
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: CLI flag used to pass the primary model id; empty means this runtime
+      has no model flag.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.fallback_models_flag
+  node_type: sldb_field
+  semantics:
+    name: fallback_models_flag
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: CLI flag used to pass fallback model ids; empty means unsupported.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.fallback_models_join
+  node_type: sldb_field
+  semantics:
+    name: fallback_models_join
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: 'How multiple fallback model values are combined for fallback_models_flag:
+      ''comma'', ''space'', or ''repeat''.'
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.tools_flag
+  node_type: sldb_field
+  semantics:
+    name: tools_flag
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: CLI flag used to pass the tool allowlist; empty means unsupported.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.tools_join
+  node_type: sldb_field
+  semantics:
+    name: tools_join
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: 'How multiple tool values are combined for tools_flag: ''comma'',
+      ''space'', or ''repeat''.'
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.system_prompt_flag
+  node_type: sldb_field
+  semantics:
+    name: system_prompt_flag
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: CLI flag used to append or override the system prompt; empty means
+      unsupported.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.system_prompt_delivery
+  node_type: sldb_field
+  semantics:
+    name: system_prompt_delivery
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: 'How the system prompt text reaches the flag: ''inline'' passes it
+      directly as the flag value, ''file'' writes it to a session-scoped file and
+      passes the file path.'
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.session_flag
+  node_type: sldb_field
+  semantics:
+    name: session_flag
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: CLI flag used to pass the session/transcript file path; empty means
+      this runtime has no resumable session concept.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.extra_args
+  node_type: sldb_field
+  semantics:
+    name: extra_args
+    kind: stringlist
+    required: false
+    model: RuntimeProfileDoc
+    description: Static CLI arguments always appended for this runtime, independent
+      of role fields.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.unsupported_role_fields
+  node_type: sldb_field
+  semantics:
+    name: unsupported_role_fields
+    kind: stringlist
+    required: false
+    model: RuntimeProfileDoc
+    description: RoleDoc field names this runtime cannot honor; used to warn instead
+      of silently dropping role settings.
+  facets: {}
+- id: sldb://field/RuntimeProfileDoc.notes
+  node_type: sldb_field
+  semantics:
+    name: notes
+    kind: string
+    required: false
+    model: RuntimeProfileDoc
+    description: Operational notes such as authentication requirements or version
+      pins for this runtime.
+  facets: {}
+edges:
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://semantic_tag/type.workflow.runtime_profile
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://semantic_tag/workspace.desk.runtimes
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.title
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.id
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.status
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.summary
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.tags
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.kind
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.binary
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.model_flag
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.fallback_models_flag
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.fallback_models_join
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.tools_flag
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.tools_join
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.system_prompt_flag
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.system_prompt_delivery
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.session_flag
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.extra_args
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.unsupported_role_fields
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RuntimeProfileDoc
+  target: sldb://field/RuntimeProfileDoc.notes
+  relation: has_field
+  metadata:
+    origin: schema
+model_name: RuntimeProfileDoc

@@ -1,4 +1,4 @@
-edges_version: 1|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
   node_type: TaskDoc
@@ -14,8 +14,8 @@ nodes:
     - type.workflow.task
     - workspace.desk
     - workspace:desk
-    hash_c: bdbf7d1fd1c711aeeb4dc1ce8aee58d44b9565fc74b3c3da8aae70ff38185d02
-    hash_d: 4b30f42e9087c1d4cbfa737d85c7b6319d85958eef9a55d936276d3ce1dd8e3c
+    hash_c: 083eb01d6ff67a5e2069c495ab79ac5a0767f7e677556bf0f21cc804eb33819c
+    hash_d: cb3057de6adbd2a522589b1f84505a8292fdebcc6f771a1678e354ebf29d5e34
   facets: {}
 - id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w
   node_type: sldb_section
@@ -44,8 +44,8 @@ nodes:
     - workspace:desk
     slug: orden-acyclidad-y-secuencia-lineal-dentro-de-w
     level: 1
-    line_start: 25
-    line_end: 62
+    line_start: 20
+    line_end: 57
   facets: {}
 - id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
   node_type: sldb_section
@@ -77,8 +77,8 @@ nodes:
     - workspace:desk
     slug: rationale
     level: 2
-    line_start: 27
-    line_end: 32
+    line_start: 22
+    line_end: 27
   facets: {}
 - id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
   node_type: sldb_section
@@ -110,8 +110,8 @@ nodes:
     - workspace:desk
     slug: goal
     level: 2
-    line_start: 33
-    line_end: 38
+    line_start: 28
+    line_end: 33
   facets: {}
 - id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
   node_type: sldb_section
@@ -143,8 +143,8 @@ nodes:
     - workspace:desk
     slug: scope
     level: 2
-    line_start: 39
-    line_end: 44
+    line_start: 34
+    line_end: 39
   facets: {}
 - id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
   node_type: sldb_section
@@ -176,8 +176,8 @@ nodes:
     - workspace:desk
     slug: implementation-path
     level: 2
-    line_start: 45
-    line_end: 50
+    line_start: 40
+    line_end: 45
   facets: {}
 - id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
   node_type: sldb_section
@@ -209,8 +209,8 @@ nodes:
     - workspace:desk
     slug: validation
     level: 2
-    line_start: 51
-    line_end: 57
+    line_start: 46
+    line_end: 52
   facets: {}
 - id: sldb://section/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w#orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
   node_type: sldb_section
@@ -242,8 +242,8 @@ nodes:
     - workspace:desk
     slug: done-when
     level: 2
-    line_start: 58
-    line_end: 62
+    line_start: 53
+    line_end: 57
   facets: {}
 - id: sldb://semantic_tag/artifact:task
   node_type: semantic_tag
@@ -556,10 +556,20 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
+- source: sldb://document/TaskDoc:task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
 doc_name: task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
 model_name: TaskDoc
-hash_c: bdbf7d1fd1c711aeeb4dc1ce8aee58d44b9565fc74b3c3da8aae70ff38185d02
-hash_d: 4b30f42e9087c1d4cbfa737d85c7b6319d85958eef9a55d936276d3ce1dd8e3c
+source_hash: 083eb01d6ff67a5e2069c495ab79ac5a0767f7e677556bf0f21cc804eb33819c
+content_hash: cb3057de6adbd2a522589b1f84505a8292fdebcc6f771a1678e354ebf29d5e34
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
 semantic_tags:
 - artifact:task
 - representation.markdown

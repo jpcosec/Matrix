@@ -1,0 +1,92 @@
+doc_name: execution-task_activates
+sections:
+- path: source-id-ritualdoc-ritual-execution-target-id-ritualdoc-ritual-testing-relation-type-task-activates-condition-attributes
+  title: 'source_id: RitualDoc:ritual-execution
+
+    target_id: RitualDoc:ritual-testing
+
+    relation_type: task_activates
+
+    condition: ''''
+
+    attributes: {}'
+  breadcrumbs:
+  - 'source_id: RitualDoc:ritual-execution
+
+    target_id: RitualDoc:ritual-testing
+
+    relation_type: task_activates
+
+    condition: ''''
+
+    attributes: {}'
+  about:
+  - 'source_id: RitualDoc:ritual-execution
+
+    target_id: RitualDoc:ritual-testing
+
+    relation_type: task_activates
+
+    condition: ''''
+
+    attributes: {}'
+  - source id ritualdoc ritual execution target id ritualdoc ritual testing relation
+    type task activates condition attributes
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.instance
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.instance
+  slug: source-id-ritualdoc-ritual-execution-target-id-ritualdoc-ritual-testing-relation-type-task-activates-condition-attributes
+  level: 2
+  line_start: 2
+  line_end: 8
+- path: task-activates
+  title: Task activates
+  breadcrumbs:
+  - Task activates
+  about:
+  - Task activates
+  - task activates
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.instance
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.instance
+  slug: task-activates
+  level: 1
+  line_start: 9
+  line_end: 13
+- path: task-activates/notes
+  title: Notes
+  breadcrumbs:
+  - Task activates
+  - Notes
+  about:
+  - Task activates
+  - task activates
+  - Notes
+  - notes
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.instance
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.instance
+  slug: notes
+  level: 2
+  line_start: 11
+  line_end: 13
+source_hash: 030de787eac4c692aefa2245356f5352ed1f287250334ada6119f515b447ea5e
+sections_version: '2'

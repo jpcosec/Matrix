@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-execution-to-activate.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: 83b41f937b7e42cc4c422598d1469b2a1ec15d401134f3ce4299687de0b17907

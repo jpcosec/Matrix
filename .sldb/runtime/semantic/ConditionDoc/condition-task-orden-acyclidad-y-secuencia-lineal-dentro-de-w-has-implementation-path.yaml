@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: 663805a07d7b102f78c5d2ccc4f26f9e6164939b7e1feba79c558d85df964f6f

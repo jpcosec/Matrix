@@ -1,9 +1,0 @@
-model: OperatorDoc
-path: desk/primitives/operators/operator-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-ready-for-testing.md
-tags:
-- primitive:operator
-- representation.markdown
-- source.document.markdown
-- type.workflow.operator
-- workspace.desk.primitives
-hash_c: 8921c22e2e0619c6caf3e628b161c38c860e5ea2fae1099d38e82783715e9e45

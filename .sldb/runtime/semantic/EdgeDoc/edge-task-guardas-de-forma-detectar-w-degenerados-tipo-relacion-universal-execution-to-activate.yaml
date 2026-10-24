@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-execution-to-activate.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: ac19f884554fd0f5ff24d26f50336cc854626726991869245b30dad7b18a5d89

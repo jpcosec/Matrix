@@ -1,7 +1,14 @@
 name: 20260725-212407-suggestion-error-logging-protocol
 path: desk/inbox/20260725-212407-suggestion-error-logging-protocol.md
-hash_c: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
-hash_d: 5ab5a88150a359d147544a8306a1c0ba80ba52306a6f55639be289466138af6b
+source_hash: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
+content_hash: a9f8d3944bc3c519d8dfbe77de214d8ad61dfb0783e03c30e24c8f2f1c636418
+field_hashes:
+  kind: f4accece99081750b6b8b5089a3f24b11d5ceba70797c3eb49000d84b98344fc
+  sender_project: 2247e2d028157288b7f4b297f7570c64cf901382c3efbb5bf671b3a68e25c78f
+  created_at: 7a5c4e887624714abf7ec1957e61d9bd6b05b1521bc0240badfc409b9c72ec60
+  status: 02e31f51aa8b1b6a622c4f7c30fab328d711cad4c9da74b9965ada8aa15d9df2
+  title: f535f6728d34170f87c1459176c3390e1dd0f1412876b72087615b6ddec1d3fa
+  body: 486e6de1623e1a5ec09aa10b768eb803f3acbfcbd2bbb4f9662b70543cf5dafb
 semantic_tags:
 - representation.markdown
 - source.document.markdown

@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-pill-knowledge-graduated.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: 24d62497d0290c643d9b5f5fcea938644d91d7220567e18b0ce7c9649fea76f9

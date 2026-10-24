@@ -22,8 +22,8 @@ sections:
   - workspace:desk
   slug: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
   level: 1
-  line_start: 25
-  line_end: 62
+  line_start: 20
+  line_end: 57
 - path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
   title: Rationale
   breadcrumbs:
@@ -49,8 +49,8 @@ sections:
   - workspace:desk
   slug: rationale
   level: 2
-  line_start: 27
-  line_end: 32
+  line_start: 22
+  line_end: 27
 - path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
   title: Goal
   breadcrumbs:
@@ -76,8 +76,8 @@ sections:
   - workspace:desk
   slug: goal
   level: 2
-  line_start: 33
-  line_end: 38
+  line_start: 28
+  line_end: 33
 - path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
   title: Scope
   breadcrumbs:
@@ -103,8 +103,8 @@ sections:
   - workspace:desk
   slug: scope
   level: 2
-  line_start: 39
-  line_end: 44
+  line_start: 34
+  line_end: 39
 - path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
   title: Implementation Path
   breadcrumbs:
@@ -130,8 +130,8 @@ sections:
   - workspace:desk
   slug: implementation-path
   level: 2
-  line_start: 45
-  line_end: 50
+  line_start: 40
+  line_end: 45
 - path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
   title: Validation
   breadcrumbs:
@@ -157,8 +157,8 @@ sections:
   - workspace:desk
   slug: validation
   level: 2
-  line_start: 51
-  line_end: 57
+  line_start: 46
+  line_end: 52
 - path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
   title: Done When
   breadcrumbs:
@@ -184,7 +184,7 @@ sections:
   - workspace:desk
   slug: done-when
   level: 2
-  line_start: 58
-  line_end: 62
-hash_c: 68623c5ee09395a41e89f15f31c561ed3f6e8ec090911c34a00fc18f346034e4
+  line_start: 53
+  line_end: 57
+source_hash: ab22b79bcd312611e6ec20745eca164f56ef546d596db2b227f2827373474b6d
 sections_version: '2'

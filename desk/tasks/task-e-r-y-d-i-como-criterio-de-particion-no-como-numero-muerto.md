@@ -5,17 +5,12 @@ summary: ''
 tags:
 - workspace:desk
 - artifact:task
-routine: routine-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
-current_node: checklist-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto-execution-ready
+current_node: ritual-execution
 history: []
 references: []
 depends_on: []
 pills: []
 files: []
-checklists:
-- checklist-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto-execution-ready
-- checklist-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto-testing-ready
-- checklist-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto-closeout-ready
 task_type: ''
 inherits_from: []
 inherit_acceptance_context: false

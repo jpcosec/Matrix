@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto-execution-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: 5ba222d23f6c662940b82e91e7a363d9f26fd0c19643cf6134a7d024911cc082

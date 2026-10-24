@@ -22,8 +22,8 @@ sections:
   - workspace:desk
   slug: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
   level: 1
-  line_start: 25
-  line_end: 62
+  line_start: 20
+  line_end: 57
 - path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
   title: Rationale
   breadcrumbs:
@@ -49,8 +49,8 @@ sections:
   - workspace:desk
   slug: rationale
   level: 2
-  line_start: 27
-  line_end: 32
+  line_start: 22
+  line_end: 27
 - path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
   title: Goal
   breadcrumbs:
@@ -76,8 +76,8 @@ sections:
   - workspace:desk
   slug: goal
   level: 2
-  line_start: 33
-  line_end: 38
+  line_start: 28
+  line_end: 33
 - path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
   title: Scope
   breadcrumbs:
@@ -103,8 +103,8 @@ sections:
   - workspace:desk
   slug: scope
   level: 2
-  line_start: 39
-  line_end: 44
+  line_start: 34
+  line_end: 39
 - path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
   title: Implementation Path
   breadcrumbs:
@@ -130,8 +130,8 @@ sections:
   - workspace:desk
   slug: implementation-path
   level: 2
-  line_start: 45
-  line_end: 50
+  line_start: 40
+  line_end: 45
 - path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
   title: Validation
   breadcrumbs:
@@ -157,8 +157,8 @@ sections:
   - workspace:desk
   slug: validation
   level: 2
-  line_start: 51
-  line_end: 57
+  line_start: 46
+  line_end: 52
 - path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
   title: Done When
   breadcrumbs:
@@ -184,7 +184,7 @@ sections:
   - workspace:desk
   slug: done-when
   level: 2
-  line_start: 58
-  line_end: 62
-hash_c: 28e7c49cf56ac1450e1c3ea2af649d0d6c577fe958221c867309435dd8416d08
+  line_start: 53
+  line_end: 57
+source_hash: ddd7853d2c6f1e3c62ce2433e69001aaa5a3307f7e3db2a580ac3985fb1e1aa1
 sections_version: '2'

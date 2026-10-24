@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-testing-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: 934e5b263137fb009c80231f5027baf1d6ab3edc8b34ff26fdb4cd5fbe7bc55d

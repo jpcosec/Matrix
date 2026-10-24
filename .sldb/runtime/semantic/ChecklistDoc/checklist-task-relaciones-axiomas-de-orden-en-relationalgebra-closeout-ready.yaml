@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-relaciones-axiomas-de-orden-en-relationalgebra-closeout-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-hash_c: d5c21c88954ac28d514fea281fbf02c051752170a82e58ef88c356d7a65ae1a0

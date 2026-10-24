@@ -5,17 +5,12 @@ summary: ''
 tags:
 - workspace:desk
 - artifact:task
-routine: routine-task-relaciones-axiomas-de-orden-en-relationalgebra
-current_node: checklist-task-relaciones-axiomas-de-orden-en-relationalgebra-execution-ready
+current_node: ritual-execution
 history: []
 references: []
 depends_on: []
 pills: []
 files: []
-checklists:
-- checklist-task-relaciones-axiomas-de-orden-en-relationalgebra-execution-ready
-- checklist-task-relaciones-axiomas-de-orden-en-relationalgebra-testing-ready
-- checklist-task-relaciones-axiomas-de-orden-en-relationalgebra-closeout-ready
 task_type: ''
 inherits_from: []
 inherit_acceptance_context: false

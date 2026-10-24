@@ -1,4 +1,4 @@
-edges_version: 1|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
   node_type: TaskDoc
@@ -14,8 +14,8 @@ nodes:
     - type.workflow.task
     - workspace.desk
     - workspace:desk
-    hash_c: 40185378349039019234d0514f15be1e6fba40404f12b0df6648a732700c5c84
-    hash_d: 4fa57cbbb24cb4b9f4d6f6ae5f395809199585f0b412d4c9df8d814bebed64f7
+    hash_c: 684bcbe729ee89fd81fe27715625226fe93c8276463b4eca657f207f1277f521
+    hash_d: 3e5ebbbc9cfdd5a33de3e1e3af001dbea10b5a7cda54eb6652114bd1c66c0614
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
   node_type: sldb_section
@@ -44,8 +44,8 @@ nodes:
     - workspace:desk
     slug: proyeccion-wigame-y-matrices-a-s-expressions
     level: 1
-    line_start: 25
-    line_end: 62
+    line_start: 20
+    line_end: 57
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
   node_type: sldb_section
@@ -77,8 +77,8 @@ nodes:
     - workspace:desk
     slug: rationale
     level: 2
-    line_start: 27
-    line_end: 32
+    line_start: 22
+    line_end: 27
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
   node_type: sldb_section
@@ -110,8 +110,8 @@ nodes:
     - workspace:desk
     slug: goal
     level: 2
-    line_start: 33
-    line_end: 38
+    line_start: 28
+    line_end: 33
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
   node_type: sldb_section
@@ -143,8 +143,8 @@ nodes:
     - workspace:desk
     slug: scope
     level: 2
-    line_start: 39
-    line_end: 44
+    line_start: 34
+    line_end: 39
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
   node_type: sldb_section
@@ -176,8 +176,8 @@ nodes:
     - workspace:desk
     slug: implementation-path
     level: 2
-    line_start: 45
-    line_end: 50
+    line_start: 40
+    line_end: 45
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
   node_type: sldb_section
@@ -209,8 +209,8 @@ nodes:
     - workspace:desk
     slug: validation
     level: 2
-    line_start: 51
-    line_end: 57
+    line_start: 46
+    line_end: 52
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
   node_type: sldb_section
@@ -242,8 +242,8 @@ nodes:
     - workspace:desk
     slug: done-when
     level: 2
-    line_start: 58
-    line_end: 62
+    line_start: 53
+    line_end: 57
   facets: {}
 - id: sldb://semantic_tag/artifact:task
   node_type: semantic_tag
@@ -556,10 +556,20 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
 doc_name: task-proyeccion-wigame-y-matrices-a-s-expressions
 model_name: TaskDoc
-hash_c: 40185378349039019234d0514f15be1e6fba40404f12b0df6648a732700c5c84
-hash_d: 4fa57cbbb24cb4b9f4d6f6ae5f395809199585f0b412d4c9df8d814bebed64f7
+source_hash: 684bcbe729ee89fd81fe27715625226fe93c8276463b4eca657f207f1277f521
+content_hash: 3e5ebbbc9cfdd5a33de3e1e3af001dbea10b5a7cda54eb6652114bd1c66c0614
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
 semantic_tags:
 - artifact:task
 - representation.markdown

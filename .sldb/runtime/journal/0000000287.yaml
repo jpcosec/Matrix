@@ -1,0 +1,16 @@
+operation: inherit_model
+address: RitualDoc
+field: null
+previous_value: null
+new_value:
+  origin: deskops
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 2d0af3584aa638f8f01d5de5bbaef7b342b98a43e84f7828d63b33f0ce011607
+hash_a_after: 2d0af3584aa638f8f01d5de5bbaef7b342b98a43e84f7828d63b33f0ce011607
+actor: null
+timestamp: 2026-10-18 15:30:41.124201+00:00
+previous_hash: 8b029ec9d374084027b4344a938cd99bf12ca299d73878603902b8707d2e95a1
+entry_hash: dcd63c3b77a531dd58ca9479033f07c21e002914877ff92ec9b7a8d08fad6f3c

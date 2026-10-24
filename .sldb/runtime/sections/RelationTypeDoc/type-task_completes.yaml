@@ -1,0 +1,47 @@
+doc_name: type-task_completes
+sections:
+- path: task-completes
+  title: Task completes
+  breadcrumbs:
+  - Task completes
+  about:
+  - Task completes
+  - task completes
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: task-completes
+  level: 1
+  line_start: 13
+  line_end: 17
+- path: task-completes/description
+  title: Description
+  breadcrumbs:
+  - Task completes
+  - Description
+  about:
+  - Task completes
+  - task completes
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 15
+  line_end: 17
+source_hash: 5b3f4ce0793df8b2ee535b6b37490b8d0abdd4c8bb8b43b330ddb6134ead7f0f
+sections_version: '2'

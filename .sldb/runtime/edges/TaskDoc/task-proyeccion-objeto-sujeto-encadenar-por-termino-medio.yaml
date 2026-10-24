@@ -1,4 +1,4 @@
-edges_version: 1|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
   node_type: TaskDoc
@@ -14,8 +14,8 @@ nodes:
     - type.workflow.task
     - workspace.desk
     - workspace:desk
-    hash_c: 8eb4a0b12892ca028a39396a540301f8b219839676096333c3d44a85778cf1e8
-    hash_d: 242c47ca989f310ce01d749c416af7f41fb5d1ae1a0f60ada76b5804fced2c1c
+    hash_c: 6985625107e2bae47a62a0f56e1b2b67ddcf15f993a9f1d1950bd5c941388169
+    hash_d: 616ab0e7a9a72ad8cde7c284a877bc09dc75edefd60f1e466053cbaaa82225df
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio
   node_type: sldb_section
@@ -44,8 +44,8 @@ nodes:
     - workspace:desk
     slug: proyeccion-objeto-sujeto-encadenar-por-termino-medio
     level: 1
-    line_start: 25
-    line_end: 62
+    line_start: 20
+    line_end: 57
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/rationale
   node_type: sldb_section
@@ -77,8 +77,8 @@ nodes:
     - workspace:desk
     slug: rationale
     level: 2
-    line_start: 27
-    line_end: 32
+    line_start: 22
+    line_end: 27
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/goal
   node_type: sldb_section
@@ -110,8 +110,8 @@ nodes:
     - workspace:desk
     slug: goal
     level: 2
-    line_start: 33
-    line_end: 38
+    line_start: 28
+    line_end: 33
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/scope
   node_type: sldb_section
@@ -143,8 +143,8 @@ nodes:
     - workspace:desk
     slug: scope
     level: 2
-    line_start: 39
-    line_end: 44
+    line_start: 34
+    line_end: 39
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/implementation-path
   node_type: sldb_section
@@ -176,8 +176,8 @@ nodes:
     - workspace:desk
     slug: implementation-path
     level: 2
-    line_start: 45
-    line_end: 50
+    line_start: 40
+    line_end: 45
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/validation
   node_type: sldb_section
@@ -209,8 +209,8 @@ nodes:
     - workspace:desk
     slug: validation
     level: 2
-    line_start: 51
-    line_end: 57
+    line_start: 46
+    line_end: 52
   facets: {}
 - id: sldb://section/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio#proyeccion-objeto-sujeto-encadenar-por-termino-medio/done-when
   node_type: sldb_section
@@ -242,8 +242,8 @@ nodes:
     - workspace:desk
     slug: done-when
     level: 2
-    line_start: 58
-    line_end: 62
+    line_start: 53
+    line_end: 57
   facets: {}
 - id: sldb://semantic_tag/artifact:task
   node_type: semantic_tag
@@ -556,10 +556,20 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
 doc_name: task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
 model_name: TaskDoc
-hash_c: 8eb4a0b12892ca028a39396a540301f8b219839676096333c3d44a85778cf1e8
-hash_d: 242c47ca989f310ce01d749c416af7f41fb5d1ae1a0f60ada76b5804fced2c1c
+source_hash: 6985625107e2bae47a62a0f56e1b2b67ddcf15f993a9f1d1950bd5c941388169
+content_hash: 616ab0e7a9a72ad8cde7c284a877bc09dc75edefd60f1e466053cbaaa82225df
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
 semantic_tags:
 - artifact:task
 - representation.markdown

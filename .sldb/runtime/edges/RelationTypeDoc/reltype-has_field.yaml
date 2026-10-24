@@ -1,0 +1,60 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://relation_type/has_field
+  node_type: relation_type
+  semantics:
+    title: has_field
+    name: has_field
+    direction: directed
+    cardinality: one_to_many
+    axis: WHAT
+    source_types:
+    - sldb_model
+    target_types:
+    - sldb_field
+    condition: ''
+    description: The model declares this field; the field node carries its type and
+      description.
+    doc: reltype-has_field
+  facets: {}
+- id: sldb://semantic_tag/layer.topology
+  node_type: semantic_tag
+  semantics:
+    tag: layer.topology
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.relation.type
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.type
+  facets: {}
+edges:
+- source: sldb://relation_type/has_field
+  target: sldb://model/sldb_model
+  relation: applies_to_source
+  metadata:
+    origin: schema
+- source: sldb://relation_type/has_field
+  target: sldb://model/sldb_field
+  relation: applies_to_target
+  metadata:
+    origin: schema
+doc_name: reltype-has_field
+model_name: RelationTypeDoc
+source_hash: 0b993475af6138e3aaa4dcabbf23b537a404f5eb5e7cbaf98374d459eccd872d
+content_hash: d9f05817118af43485b5821ae34b2d0d04a6fb7739856a33e3eaee8a8e31fcc5
+contract_hash: 57b63063959eb2f0b721697bc626d10bc4d960672ed03fa04f9d0a5e1f499699
+semantic_tags:
+- layer.topology
+- representation.markdown
+- source.document.markdown
+- type.relation.type

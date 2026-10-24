@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-proyeccion-wigame-y-matrices-a-s-expressions-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: e7c76eee8ac5234d5a47504243aa84af4595d362c5b02d6b1eadb71784a45d2f

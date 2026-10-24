@@ -5,17 +5,12 @@ summary: ''
 tags:
 - workspace:desk
 - artifact:task
-routine: routine-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
-current_node: checklist-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-execution-ready
+current_node: ritual-execution
 history: []
 references: []
 depends_on: []
 pills: []
 files: []
-checklists:
-- checklist-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-execution-ready
-- checklist-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-testing-ready
-- checklist-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-closeout-ready
 task_type: ''
 inherits_from: []
 inherit_acceptance_context: false

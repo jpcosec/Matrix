@@ -1,0 +1,16 @@
+operation: remove_model
+address: OperatorDoc
+field: null
+previous_value: deskops.models:OperatorDoc
+new_value:
+  documents_untracked: 21
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 291320019ac6cebc98023733f7b39fcefe43dad24ac17d1d7c360949451c8c86
+hash_a_after: a749df2620d9269929a30182aa9ce302a420f051a8c7649ba289f17555df6171
+actor: null
+timestamp: 2026-10-18 15:30:37.251230+00:00
+previous_hash: 8fae1bb6165d6d2e832168e15ae830bb576e1ff319a40a188da177cf1079bc47
+entry_hash: e95c44869c32afe765c37d26905a8c3cb841d45c47ce3af6ad8752bafbfec69a

@@ -5,17 +5,12 @@ summary: ''
 tags:
 - workspace:desk
 - artifact:task
-routine: routine-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
-current_node: checklist-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-execution-ready
+current_node: ritual-execution
 history: []
 references: []
 depends_on: []
 pills: []
 files: []
-checklists:
-- checklist-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-execution-ready
-- checklist-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-testing-ready
-- checklist-task-orden-acyclidad-y-secuencia-lineal-dentro-de-w-closeout-ready
 task_type: ''
 inherits_from: []
 inherit_acceptance_context: false

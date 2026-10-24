@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-has-validation.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: cac6217c5b75cc996d7f426d5a6296df5bdb983be506d22bcd2cb082bfb7e49f

@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: c507ce018a010febc14833bc935f75a71e777a51ca6aafb7e54a8ff1187793bd

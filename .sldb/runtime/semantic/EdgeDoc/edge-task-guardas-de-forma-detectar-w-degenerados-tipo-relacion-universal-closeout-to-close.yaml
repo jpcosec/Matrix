@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal-closeout-to-close.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: b71deecf2a1fafdbd8cb704cd0ee6ca140d70f232b7816e66dc5cd1d7fbfee40

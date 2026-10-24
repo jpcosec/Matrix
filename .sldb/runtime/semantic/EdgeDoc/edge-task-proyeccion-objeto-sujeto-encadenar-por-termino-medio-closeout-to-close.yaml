@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-closeout-to-close.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-hash_c: 3109fcd2cf21d4fe1edaff2214033b5e6f90e43b70ef22e63896ec197a34bc49

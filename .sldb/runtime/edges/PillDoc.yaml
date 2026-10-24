@@ -1,4 +1,4 @@
-edges_version: 1|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://model/PillDoc
   node_type: sldb_model
@@ -50,7 +50,7 @@ nodes:
     kind: string
     required: false
     model: PillDoc
-    description: Primitive lifecycle status.
+    description: Pill lifecycle status.
   facets: {}
 - id: sldb://field/PillDoc.summary
   node_type: sldb_field
@@ -59,7 +59,7 @@ nodes:
     kind: string
     required: false
     model: PillDoc
-    description: Short semantic summary for the primitive.
+    description: Short semantic summary for the pill.
   facets: {}
 - id: sldb://field/PillDoc.tags
   node_type: sldb_field
@@ -71,15 +71,6 @@ nodes:
     description: Semantic tags placed at the end, using namespaced forms such as 'language:python'
       or 'library:pydantic'.
   facets: {}
-- id: sldb://field/PillDoc.routine
-  node_type: sldb_field
-  semantics:
-    name: routine
-    kind: string
-    required: false
-    model: PillDoc
-    description: Primary routine identifier that makes the artifact actionable.
-  facets: {}
 - id: sldb://field/PillDoc.current_node
   node_type: sldb_field
   semantics:
@@ -87,7 +78,7 @@ nodes:
     kind: string
     required: false
     model: PillDoc
-    description: Current node in the operational routine or state machine.
+    description: Current node in the operational routine.
   facets: {}
 - id: sldb://field/PillDoc.history
   node_type: sldb_field
@@ -96,7 +87,7 @@ nodes:
     kind: stringlist
     required: false
     model: PillDoc
-    description: Operational transition history for the artifact.
+    description: Operational transition history.
   facets: {}
 - id: sldb://field/PillDoc.what
   node_type: sldb_field
@@ -186,11 +177,6 @@ edges:
     origin: schema
 - source: sldb://model/PillDoc
   target: sldb://field/PillDoc.tags
-  relation: has_field
-  metadata:
-    origin: schema
-- source: sldb://model/PillDoc
-  target: sldb://field/PillDoc.routine
   relation: has_field
   metadata:
     origin: schema

@@ -1,4 +1,4 @@
-edges_version: 1|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol
   node_type: InboxNoteDoc
@@ -13,7 +13,7 @@ nodes:
     - type.desk.inbox-note
     - workspace.desk.inbox
     hash_c: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
-    hash_d: 5ab5a88150a359d147544a8306a1c0ba80ba52306a6f55639be289466138af6b
+    hash_d: a9f8d3944bc3c519d8dfbe77de214d8ad61dfb0783e03c30e24c8f2f1c636418
   facets: {}
 - id: sldb://section/InboxNoteDoc:20260725-212407-suggestion-error-logging-protocol#kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
   node_type: sldb_section
@@ -238,8 +238,9 @@ edges:
     origin: structural
 doc_name: 20260725-212407-suggestion-error-logging-protocol
 model_name: InboxNoteDoc
-hash_c: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
-hash_d: 5ab5a88150a359d147544a8306a1c0ba80ba52306a6f55639be289466138af6b
+source_hash: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
+content_hash: a9f8d3944bc3c519d8dfbe77de214d8ad61dfb0783e03c30e24c8f2f1c636418
+contract_hash: b163632f56cd2bc835d2d3726b1b3034d6329017760cce551c6aa7f8f3f8380a
 semantic_tags:
 - representation.markdown
 - source.document.markdown

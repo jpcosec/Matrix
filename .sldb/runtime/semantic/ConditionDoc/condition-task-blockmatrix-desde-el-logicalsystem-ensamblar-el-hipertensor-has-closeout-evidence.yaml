@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-has-closeout-evidence.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-hash_c: f13bb84d85207900be3b547f2a2be79ee6979515c99487115fed47f9de5814a2

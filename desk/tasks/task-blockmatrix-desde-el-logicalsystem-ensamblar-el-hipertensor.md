@@ -5,17 +5,12 @@ summary: ''
 tags:
 - workspace:desk
 - artifact:task
-routine: routine-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor
-current_node: checklist-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-execution-ready
+current_node: ritual-execution
 history: []
 references: []
 depends_on: []
 pills: []
 files: []
-checklists:
-- checklist-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-execution-ready
-- checklist-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-testing-ready
-- checklist-task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor-closeout-ready
 task_type: ''
 inherits_from: []
 inherit_acceptance_context: false

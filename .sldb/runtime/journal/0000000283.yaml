@@ -1,0 +1,16 @@
+operation: inherit_model
+address: MaterializationContractDoc
+field: null
+previous_value: null
+new_value:
+  origin: deskops
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 6b3e83498627e8f9df50183020ae206c63a90c80eaf1dbe844b55d510d35c95e
+hash_a_after: 2d0af3584aa638f8f01d5de5bbaef7b342b98a43e84f7828d63b33f0ce011607
+actor: null
+timestamp: 2026-10-18 15:30:40.987879+00:00
+previous_hash: 140f9f8f3267f80001239d61244be2fa7bc892c314e6e54818bf00c27a9583c5
+entry_hash: cf09aa768ef967dadbf27d76eeae6b88812ea7f29f180c7f0d2514d840a19b1a

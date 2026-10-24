@@ -5,17 +5,12 @@ summary: ''
 tags:
 - workspace:desk
 - artifact:task
-routine: routine-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
-current_node: checklist-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-execution-ready
+current_node: ritual-execution
 history: []
 references: []
 depends_on: []
 pills: []
 files: []
-checklists:
-- checklist-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-execution-ready
-- checklist-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-testing-ready
-- checklist-task-proyeccion-objeto-sujeto-encadenar-por-termino-medio-closeout-ready
 task_type: ''
 inherits_from: []
 inherit_acceptance_context: false

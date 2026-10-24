@@ -1,4 +1,4 @@
-edges_version: 2|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
   node_type: TaskDoc
@@ -14,338 +14,8 @@ nodes:
     - type.workflow.task
     - workspace.desk
     - workspace:desk
-    hash_c: 500ee0f0f1ffb7082ca25553c37ccc1796a2e2193fa0e221e08e9bafdad59ef6
-    hash_d: 94b68f6a4cb07928ed86438b53ace2d8cb24c0449f62d41b067efc2b2da8f0e3
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: task-xxx-unique-task-identifier
-    title: task-xxx, unique task identifier
-    breadcrumbs:
-    - task-xxx, unique task identifier
-    about:
-    - task-xxx, unique task identifier
-    - task xxx unique task identifier
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: task-xxx-unique-task-identifier
-    level: 1
-    line_start: 2
-    line_end: 3
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: draft-active-blocked-closed
-    title: draft | active | blocked | closed
-    breadcrumbs:
-    - draft | active | blocked | closed
-    about:
-    - draft | active | blocked | closed
-    - draft active blocked closed
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: draft-active-blocked-closed
-    level: 1
-    line_start: 4
-    line_end: 5
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: relevant-file-or-doc-paths
-    title: Relevant file or doc paths
-    breadcrumbs:
-    - Relevant file or doc paths
-    about:
-    - Relevant file or doc paths
-    - relevant file or doc paths
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: relevant-file-or-doc-paths
-    level: 1
-    line_start: 6
-    line_end: 7
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: task-identifiers-that-must-complete-first
-    title: Task identifiers that must complete first
-    breadcrumbs:
-    - Task identifiers that must complete first
-    about:
-    - Task identifiers that must complete first
-    - task identifiers that must complete first
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: task-identifiers-that-must-complete-first
-    level: 1
-    line_start: 8
-    line_end: 9
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: pill-identifiers-required
-    title: Pill identifiers required
-    breadcrumbs:
-    - Pill identifiers required
-    about:
-    - Pill identifiers required
-    - pill identifiers required
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: pill-identifiers-required
-    level: 1
-    line_start: 10
-    line_end: 11
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: files-expected-to-change
-    title: Files expected to change
-    breadcrumbs:
-    - Files expected to change
-    about:
-    - Files expected to change
-    - files expected to change
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: files-expected-to-change
-    level: 1
-    line_start: 12
-    line_end: 13
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: routine-identifier-for-operations
-    title: Routine identifier for operations
-    breadcrumbs:
-    - Routine identifier for operations
-    about:
-    - Routine identifier for operations
-    - routine identifier for operations
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: routine-identifier-for-operations
-    level: 1
-    line_start: 14
-    line_end: 15
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: checklist-identifiers-for-verification
-    title: Checklist identifiers for verification
-    breadcrumbs:
-    - Checklist identifiers for verification
-    about:
-    - Checklist identifiers for verification
-    - checklist identifiers for verification
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: checklist-identifiers-for-verification
-    level: 1
-    line_start: 16
-    line_end: 20
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: active-routine-node
-    title: Active routine node
-    breadcrumbs:
-    - Active routine node
-    about:
-    - Active routine node
-    - active routine node
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: active-routine-node
-    level: 1
-    line_start: 21
-    line_end: 22
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: execution-history-references
-    title: Execution history references
-    breadcrumbs:
-    - Execution history references
-    about:
-    - Execution history references
-    - execution history references
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: execution-history-references
-    level: 1
-    line_start: 23
-    line_end: 24
-  facets: {}
-- id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-    document_id: TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-    path: e-g-system-deskops-topic-cli
-    title: e.g., system:deskops, topic:cli
-    breadcrumbs:
-    - e.g., system:deskops, topic:cli
-    about:
-    - e.g., system:deskops, topic:cli
-    - e g system deskops topic cli
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: e-g-system-deskops-topic-cli
-    level: 1
-    line_start: 25
-    line_end: 30
+    hash_c: 0bb8ba7e9402513661dc749753796f185b9b1aa8a5f05710cd7613a6a6748ae6
+    hash_d: 310421bc412bbe2234a6b14bf0a1cd6569db174ee644f24dfd9c055a202cc0a9
   facets: {}
 - id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations
   node_type: sldb_section
@@ -374,8 +44,8 @@ nodes:
     - workspace:desk
     slug: canonicalhypertensor-jit-bitwise-operations
     level: 1
-    line_start: 31
-    line_end: 65
+    line_start: 15
+    line_end: 49
   facets: {}
 - id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations/rationale
   node_type: sldb_section
@@ -407,8 +77,8 @@ nodes:
     - workspace:desk
     slug: rationale
     level: 2
-    line_start: 33
-    line_end: 38
+    line_start: 17
+    line_end: 22
   facets: {}
 - id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations/goal
   node_type: sldb_section
@@ -440,8 +110,8 @@ nodes:
     - workspace:desk
     slug: goal
     level: 2
-    line_start: 39
-    line_end: 44
+    line_start: 23
+    line_end: 28
   facets: {}
 - id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations/scope
   node_type: sldb_section
@@ -473,8 +143,8 @@ nodes:
     - workspace:desk
     slug: scope
     level: 2
-    line_start: 45
-    line_end: 50
+    line_start: 29
+    line_end: 34
   facets: {}
 - id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations/implementation-path
   node_type: sldb_section
@@ -506,8 +176,8 @@ nodes:
     - workspace:desk
     slug: implementation-path
     level: 2
-    line_start: 51
-    line_end: 56
+    line_start: 35
+    line_end: 40
   facets: {}
 - id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations/validation
   node_type: sldb_section
@@ -539,8 +209,8 @@ nodes:
     - workspace:desk
     slug: validation
     level: 2
-    line_start: 57
-    line_end: 62
+    line_start: 41
+    line_end: 46
   facets: {}
 - id: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations/done-when
   node_type: sldb_section
@@ -572,8 +242,8 @@ nodes:
     - workspace:desk
     slug: done-when
     level: 2
-    line_start: 63
-    line_end: 65
+    line_start: 47
+    line_end: 49
   facets: {}
 - id: sldb://semantic_tag/artifact:task
   node_type: semantic_tag
@@ -609,61 +279,6 @@ edges:
 - source: sldb://model/TaskDoc
   target: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
   relation: has_document
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
-  target: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  relation: has_section
   metadata:
     origin: structural
 - source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
@@ -731,336 +346,6 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#draft-active-blocked-closed
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#pill-identifiers-required
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#files-expected-to-change
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#routine-identifier-for-operations
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#active-routine-node
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#execution-history-references
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
 - source: sldb://section/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations#canonicalhypertensor-jit-bitwise-operations
   target: sldb://semantic_tag/artifact:task
   relation: tagged_as
@@ -1271,10 +556,20 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
+- source: sldb://document/TaskDoc:task-canonicalhypertensor-jit-bitwise-operations
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
 doc_name: task-canonicalhypertensor-jit-bitwise-operations
 model_name: TaskDoc
-source_hash: 500ee0f0f1ffb7082ca25553c37ccc1796a2e2193fa0e221e08e9bafdad59ef6
-content_hash: 94b68f6a4cb07928ed86438b53ace2d8cb24c0449f62d41b067efc2b2da8f0e3
+source_hash: 0bb8ba7e9402513661dc749753796f185b9b1aa8a5f05710cd7613a6a6748ae6
+content_hash: 310421bc412bbe2234a6b14bf0a1cd6569db174ee644f24dfd9c055a202cc0a9
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
 semantic_tags:
 - artifact:task
 - representation.markdown

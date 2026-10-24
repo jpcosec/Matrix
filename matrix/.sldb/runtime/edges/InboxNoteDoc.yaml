@@ -1,11 +1,11 @@
-edges_version: 2|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://model/InboxNoteDoc
   node_type: sldb_model
   semantics:
     name: InboxNoteDoc
     model_ref: deskops.models:InboxNoteDoc
-    path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/inbox.py
+    path: ''
     version: 1
     canonical: false
     family: null

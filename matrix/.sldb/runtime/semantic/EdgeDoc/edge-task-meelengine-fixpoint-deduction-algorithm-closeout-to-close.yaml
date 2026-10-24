@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-meelengine-fixpoint-deduction-algorithm-closeout-to-close.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-source_hash: 12fcfe1eadbd18d9eff464d84473a06f229fd029ae4aa913e808d8feff4ae1d0

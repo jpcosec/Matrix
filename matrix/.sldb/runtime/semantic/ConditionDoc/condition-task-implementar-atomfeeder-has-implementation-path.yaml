@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-implementar-atomfeeder-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-source_hash: 1bbfa5aad4f902ec971c3ed247f1a29353af4507f6c502547fd120f277ccee5f

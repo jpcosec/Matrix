@@ -1,28 +1,12 @@
 ---
-# task-xxx, unique task identifier
 id: task-implementar-atomfeeder
-# draft | active | blocked | closed
 status: draft
-# Relevant file or doc paths
 references: []
-# Task identifiers that must complete first
 depends_on: []
-# Pill identifiers required
 pills: []
-# Files expected to change
 files: []
-# Routine identifier for operations
-routine: routine-task-implementar-atomfeeder
-# Checklist identifiers for verification
-checklists:
-- checklist-task-implementar-atomfeeder-execution-ready
-- checklist-task-implementar-atomfeeder-testing-ready
-- checklist-task-implementar-atomfeeder-closeout-ready
-# Active routine node
-current_node: checklist-task-implementar-atomfeeder-execution-ready
-# Execution history references
+current_node: ritual-execution
 history: []
-# e.g., system:deskops, topic:cli
 tags:
 - workspace:desk
 - artifact:task

@@ -1,0 +1,47 @@
+doc_name: reltype-semantic_parent
+sections:
+- path: semantic-parent
+  title: semantic_parent
+  breadcrumbs:
+  - semantic_parent
+  about:
+  - semantic_parent
+  - semantic parent
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: semantic-parent
+  level: 1
+  line_start: 13
+  line_end: 17
+- path: semantic-parent/description
+  title: Description
+  breadcrumbs:
+  - semantic_parent
+  - Description
+  about:
+  - semantic_parent
+  - semantic parent
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 15
+  line_end: 17
+source_hash: 43e3da1698c526ca065582e98f48c249730808321ef036a41fbff12dd395996a
+sections_version: '2'

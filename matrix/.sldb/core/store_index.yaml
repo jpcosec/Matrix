@@ -1,120 +1,82 @@
-stores: []
+stores:
+- name: deskops
+  path: ../../../SLDB_1/deskops/.sldb
 models:
 - name: BoardDoc
   model_ref: deskops.models:BoardDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/board.py
+  path: ''
   models_index: .sldb/core/models/BoardDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
+  origin: deskops
 - name: TaskDoc
   model_ref: deskops.models:TaskDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/task.py
+  path: ''
   models_index: .sldb/core/models/TaskDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
+  origin: deskops
 - name: PillDoc
   model_ref: deskops.models:PillDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/pill.py
+  path: ''
   models_index: .sldb/core/models/PillDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
+  origin: deskops
 - name: RitualDoc
   model_ref: deskops.models:RitualDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/ritual.py
+  path: ''
   models_index: .sldb/core/models/RitualDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
+  origin: deskops
 - name: InboxNoteDoc
   model_ref: deskops.models:InboxNoteDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/inbox.py
+  path: ''
   models_index: .sldb/core/models/InboxNoteDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
+  origin: deskops
 - name: RepositoryDoc
   model_ref: deskops.models:RepositoryDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/repository.py
+  path: ''
   models_index: .sldb/core/models/RepositoryDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
+  origin: deskops
 - name: StepDoc
   model_ref: deskops.models:StepDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/step.py
+  path: ''
   models_index: .sldb/core/models/StepDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
+  origin: deskops
 - name: AtomDoc
   model_ref: deskops.models:AtomDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/atom.py
+  path: ''
   models_index: .sldb/core/models/AtomDoc.yaml
   version: 1
   canonical: false
   family: null
   semantics: []
-- name: FAQDoc
-  model_ref: deskops.models:FAQDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/faq.py
-  models_index: .sldb/core/models/FAQDoc.yaml
-  version: 1
-  canonical: false
-  family: null
-  semantics: []
-- name: ChecklistDoc
-  model_ref: deskops.models:ChecklistDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/checklist.py
-  models_index: .sldb/core/models/ChecklistDoc.yaml
-  version: 1
-  canonical: false
-  family: null
-  semantics: []
-- name: ConditionDoc
-  model_ref: deskops.models:ConditionDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/condition.py
-  models_index: .sldb/core/models/ConditionDoc.yaml
-  version: 1
-  canonical: false
-  family: null
-  semantics: []
-- name: EdgeDoc
-  model_ref: deskops.models:EdgeDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/edge.py
-  models_index: .sldb/core/models/EdgeDoc.yaml
-  version: 1
-  canonical: false
-  family: null
-  semantics: []
-- name: OperatorDoc
-  model_ref: deskops.models:OperatorDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/operator.py
-  models_index: .sldb/core/models/OperatorDoc.yaml
-  version: 1
-  canonical: false
-  family: null
-  semantics: []
-- name: RoutineDoc
-  model_ref: deskops.models:RoutineDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/routine.py
-  models_index: .sldb/core/models/RoutineDoc.yaml
-  version: 1
-  canonical: false
-  family: null
-  semantics: []
+  origin: deskops
 - name: RoleDoc
   model_ref: deskops.models:RoleDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/role.py
+  path: ''
   models_index: .sldb/core/models/RoleDoc.yaml
   version: 1
   canonical: false
@@ -124,9 +86,10 @@ models:
   - source.document.markdown
   - type.workflow.role
   - workspace.desk.roles
+  origin: deskops
 - name: ProtoAtomDoc
   model_ref: deskops.models:ProtoAtomDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/protoatom.py
+  path: ''
   models_index: .sldb/core/models/ProtoAtomDoc.yaml
   version: 1
   canonical: false
@@ -136,9 +99,10 @@ models:
   - source.document.markdown
   - type.knowledge.protoatom
   - workspace.desk.atoms
+  origin: deskops
 - name: CrossroadDoc
   model_ref: deskops.models:CrossroadDoc
-  path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/crossroad.py
+  path: ''
   models_index: .sldb/core/models/CrossroadDoc.yaml
   version: 1
   canonical: false
@@ -148,6 +112,71 @@ models:
   - source.document.markdown
   - type.knowledge.crossroad
   - workspace.desk.atoms
+  origin: deskops
+- name: RelationTypeDoc
+  model_ref: sldb.models.relation_type_doc:RelationTypeDoc
+  path: /home/jp/proyectos/SLDB_1/sldb/src/sldb/models/relation_type_doc.py
+  models_index: .sldb/core/models/RelationTypeDoc.yaml
+  version: 1
+  canonical: false
+  family: relation
+  semantics:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+- name: RelationDoc
+  model_ref: sldb.models.relation_doc:RelationDoc
+  path: /home/jp/proyectos/SLDB_1/sldb/src/sldb/models/relation_doc.py
+  models_index: .sldb/core/models/RelationDoc.yaml
+  version: 1
+  canonical: false
+  family: relation
+  semantics:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.instance
+- name: MaterializationContractDoc
+  model_ref: deskops.models:MaterializationContractDoc
+  path: ''
+  models_index: .sldb/core/models/MaterializationContractDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+  origin: deskops
+- name: RunDoc
+  model_ref: deskops.models:RunDoc
+  path: ''
+  models_index: .sldb/core/models/RunDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+  origin: deskops
+- name: RuntimeProfileDoc
+  model_ref: deskops.models:RuntimeProfileDoc
+  path: ''
+  models_index: .sldb/core/models/RuntimeProfileDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics: []
+  origin: deskops
+- name: DeskFAQDoc
+  model_ref: deskops.models:DeskFAQDoc
+  path: ''
+  models_index: .sldb/core/models/DeskFAQDoc.yaml
+  version: 1
+  canonical: false
+  family: null
+  semantics:
+  - representation.markdown
+  - source.document.markdown
+  - type.documentation.faq
+  - workspace.docs.faq
+  origin: deskops
 predicates:
 - name: is_solved_by
   axis: HOW
@@ -170,4 +199,60 @@ predicates:
 - name: defines
   axis: WHAT
   description: Defines the target concept.
-store_hash: 429627187b737b5c17466e2521a3a8d38db9de8568ecefb001312c3461fd1711
+- name: has_model
+  axis: WHAT
+  description: 'The store registers this model: its own, or one it inherits from the
+    linked store that owns it.'
+- name: links_to
+  axis: WHERE
+  description: 'The store links that store under an alias (`stores add`): it reads
+    its documents and inherits its models.'
+- name: has_document
+  axis: WHAT
+  description: The model has this document as an instance.
+- name: has_section
+  axis: WHERE
+  description: The document contains this section.
+- name: tagged_as
+  axis: WHAT
+  description: The model, document or section carries this semantic tag.
+- name: semantic_parent
+  axis: WHAT
+  description: This tag is a child of that tag in the semantic DAG.
+- name: semantic_equivalent
+  axis: WHAT
+  description: This local tag maps to that global tag across linked stores.
+- name: has_field
+  axis: WHAT
+  description: The model declares this field; the field node carries its type and
+    description.
+- name: extends
+  axis: WHAT
+  description: The model inherits from that model (base_models); instances of the
+    source are instances of the target.
+- name: applies_to_source
+  axis: WHAT
+  description: 'Instances of this model may be the source of edges of this relation
+    type: the verbs a class can be subject of.'
+- name: applies_to_target
+  axis: WHAT
+  description: Instances of this model may be the target of edges of this relation
+    type.
+- name: names
+  axis: WHAT
+  description: The anchor (an alias word) names this model, field, relation type or
+    document.
+- name: references
+  axis: WHAT
+  description: A field the model declared in `__references__` holds this document's
+    id; the edge carries the field name.
+- name: contains
+  axis: WHERE
+  description: A field the model declared in `__containment__` holds this document
+    as a child; the edge carries the field name and the models the declaration allows.
+- name: composes
+  axis: WHAT
+  description: A composed field of the source (`__compositions__`) renders this document's
+    payload into the source's text; the edge carries the composed field, the field
+    holding the refs and the ref as authored.
+store_hash: d00bf9706c6d41dc33d78224be3e13a0cb6217145abc944b568f5b44d05c0e40

@@ -1,0 +1,143 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://document/RitualDoc:ritual-execution
+  node_type: RitualDoc
+  semantics:
+    export_id: RitualDoc:ritual-execution
+    name: ritual-execution
+    model: RitualDoc
+    path: desk/rituals/execution.md
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.ritual
+    - workspace.desk
+    - workspace:desk
+    hash_c: d86f72413109fd0e0f91d1e3da893e55a45f53ef527c0a16bfda19a4096251e8
+    hash_d: 68dab1353886da8d7009d15140f75e9eaeb592ef6c35b73dd89cdb81bdc37cc8
+  facets: {}
+- id: sldb://section/RitualDoc:ritual-execution#execution-ritual
+  node_type: sldb_section
+  semantics:
+    export_id: RitualDoc:ritual-execution#execution-ritual
+    document_id: RitualDoc:ritual-execution
+    path: execution-ritual
+    title: Execution ritual
+    breadcrumbs:
+    - Execution ritual
+    about:
+    - Execution ritual
+    - execution ritual
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.ritual
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.ritual
+    - workspace.desk
+    - workspace:desk
+    slug: execution-ritual
+    level: 1
+    line_start: 8
+    line_end: 10
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.ritual
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.ritual
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/RitualDoc
+  target: sldb://document/RitualDoc:ritual-execution
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/RitualDoc:ritual-execution
+  target: sldb://section/RitualDoc:ritual-execution#execution-ritual
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/RitualDoc:ritual-execution
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RitualDoc:ritual-execution
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RitualDoc:ritual-execution
+  target: sldb://semantic_tag/type.workflow.ritual
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RitualDoc:ritual-execution
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/RitualDoc:ritual-execution
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RitualDoc:ritual-execution#execution-ritual
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RitualDoc:ritual-execution#execution-ritual
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RitualDoc:ritual-execution#execution-ritual
+  target: sldb://semantic_tag/type.workflow.ritual
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RitualDoc:ritual-execution#execution-ritual
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/RitualDoc:ritual-execution#execution-ritual
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+doc_name: ritual-execution
+model_name: RitualDoc
+source_hash: d86f72413109fd0e0f91d1e3da893e55a45f53ef527c0a16bfda19a4096251e8
+content_hash: 68dab1353886da8d7009d15140f75e9eaeb592ef6c35b73dd89cdb81bdc37cc8
+contract_hash: fd5777c6019cce9e2c3425026376c9de410e9f8c9c66fe52f88a26a8e8f398d6
+semantic_tags:
+- representation.markdown
+- source.document.markdown
+- type.workflow.ritual
+- workspace.desk
+- workspace:desk

@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-canonicalhypertensor-jax-vram-allocation-ready-for-closeout.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-source_hash: d435e9d330fed0d11ebefdc0547d2fcf79a700c7ec036fce63431f8234fe7bde

@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-close-to-complete.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-source_hash: 8e252a236053e60db5f01e786f3205110ea03a811448c04e41c39d293520d9b1

@@ -1,28 +1,12 @@
 ---
-# task-xxx, unique task identifier
 id: task-canonicalhypertensor-jax-vram-allocation
-# draft | active | blocked | closed
 status: draft
-# Relevant file or doc paths
 references: []
-# Task identifiers that must complete first
 depends_on: []
-# Pill identifiers required
 pills: []
-# Files expected to change
 files: []
-# Routine identifier for operations
-routine: routine-task-canonicalhypertensor-jax-vram-allocation
-# Checklist identifiers for verification
-checklists:
-- checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready
-- checklist-task-canonicalhypertensor-jax-vram-allocation-testing-ready
-- checklist-task-canonicalhypertensor-jax-vram-allocation-closeout-ready
-# Active routine node
-current_node: checklist-task-canonicalhypertensor-jax-vram-allocation-execution-ready
-# Execution history references
+current_node: ritual-execution
 history: []
-# e.g., system:deskops, topic:cli
 tags:
 - workspace:desk
 - artifact:task

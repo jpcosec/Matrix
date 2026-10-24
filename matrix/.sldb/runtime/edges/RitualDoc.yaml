@@ -1,11 +1,11 @@
-edges_version: 2|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://model/RitualDoc
   node_type: sldb_model
   semantics:
     name: RitualDoc
     model_ref: deskops.models:RitualDoc
-    path: /home/jp/proyectos/hum-ecosystem/tools/deskops/deskops/models/ritual.py
+    path: ''
     version: 1
     canonical: false
     family: null
@@ -70,15 +70,6 @@ nodes:
     description: Semantic tags placed at the end, using namespaced forms such as 'layer:workflow'
       or 'system:sldb'.
   facets: {}
-- id: sldb://field/RitualDoc.routine
-  node_type: sldb_field
-  semantics:
-    name: routine
-    kind: string
-    required: false
-    model: RitualDoc
-    description: Primary routine identifier that makes the artifact actionable.
-  facets: {}
 - id: sldb://field/RitualDoc.current_node
   node_type: sldb_field
   semantics:
@@ -86,7 +77,8 @@ nodes:
     kind: string
     required: false
     model: RitualDoc
-    description: Current node in the operational routine or state machine.
+    description: Current node of the artifact in its lifecycle graph (a ritual id,
+      or 'complete').
   facets: {}
 - id: sldb://field/RitualDoc.history
   node_type: sldb_field
@@ -95,7 +87,7 @@ nodes:
     kind: stringlist
     required: false
     model: RitualDoc
-    description: Operational transition history for the artifact.
+    description: Lifecycle transitions the artifact went through, by relation type.
   facets: {}
 - id: sldb://field/RitualDoc.purpose
   node_type: sldb_field
@@ -131,7 +123,8 @@ nodes:
     kind: stringlist
     required: false
     model: RitualDoc
-    description: Ordered steps to execute as part of the ritual.
+    description: Ordered prose steps to execute as part of the ritual; not document
+      references.
   facets: {}
 - id: sldb://field/RitualDoc.validation
   node_type: sldb_field
@@ -193,11 +186,6 @@ edges:
     origin: schema
 - source: sldb://model/RitualDoc
   target: sldb://field/RitualDoc.tags
-  relation: has_field
-  metadata:
-    origin: schema
-- source: sldb://model/RitualDoc
-  target: sldb://field/RitualDoc.routine
   relation: has_field
   metadata:
     origin: schema

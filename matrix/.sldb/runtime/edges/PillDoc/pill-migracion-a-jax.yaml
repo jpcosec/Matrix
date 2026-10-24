@@ -1,4 +1,4 @@
-edges_version: 2|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/PillDoc:pill-migracion-a-jax
   node_type: PillDoc
@@ -15,7 +15,7 @@ nodes:
     - type.workflow.pill
     - workspace.desk
     hash_c: 1ad3c89ca5366bf10c5ae313eca1af0d9ecc69c118c99024bf74bba6011e12aa
-    hash_d: b399e85387412d5796b5ab501aa656af529620690e380b9a6221733a4b5665d8
+    hash_d: b5c9797643920e9159c53e8cf794ee88b71018aac3a0499dcc04c8d4c8a4da19
   facets: {}
 - id: sldb://section/PillDoc:pill-migracion-a-jax#pill-xxx-unique-pill-identifier
   node_type: sldb_section
@@ -949,7 +949,8 @@ edges:
 doc_name: pill-migracion-a-jax
 model_name: PillDoc
 source_hash: 1ad3c89ca5366bf10c5ae313eca1af0d9ecc69c118c99024bf74bba6011e12aa
-content_hash: b399e85387412d5796b5ab501aa656af529620690e380b9a6221733a4b5665d8
+content_hash: b5c9797643920e9159c53e8cf794ee88b71018aac3a0499dcc04c8d4c8a4da19
+contract_hash: 16cbc282a5f20f99f8e31d890d1006d8c243049a78e1d1fca1c0a62737fee5a6
 semantic_tags:
 - concept:architecture
 - context:migration

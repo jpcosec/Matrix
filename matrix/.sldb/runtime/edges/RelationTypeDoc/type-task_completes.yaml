@@ -1,0 +1,60 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://relation_type/task_completes
+  node_type: relation_type
+  semantics:
+    title: Task completes
+    name: task_completes
+    direction: directed
+    cardinality: many_to_many
+    axis: HOW
+    source_types:
+    - RitualDoc
+    target_types:
+    - RitualDoc
+    condition: ''
+    description: The task is ready for closeout and its references verify durable
+      evidence; it closes.
+    doc: type-task_completes
+  facets: {}
+- id: sldb://semantic_tag/layer.topology
+  node_type: semantic_tag
+  semantics:
+    tag: layer.topology
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.relation.type
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.type
+  facets: {}
+edges:
+- source: sldb://relation_type/task_completes
+  target: sldb://model/RitualDoc
+  relation: applies_to_source
+  metadata:
+    origin: schema
+- source: sldb://relation_type/task_completes
+  target: sldb://model/RitualDoc
+  relation: applies_to_target
+  metadata:
+    origin: schema
+doc_name: type-task_completes
+model_name: RelationTypeDoc
+source_hash: 5b3f4ce0793df8b2ee535b6b37490b8d0abdd4c8bb8b43b330ddb6134ead7f0f
+content_hash: c5c1a94ad43efaebabf1eb7c65f1fbfffa3a9bcbfebb90732cb323e94ee4085a
+contract_hash: 57b63063959eb2f0b721697bc626d10bc4d960672ed03fa04f9d0a5e1f499699
+semantic_tags:
+- layer.topology
+- representation.markdown
+- source.document.markdown
+- type.relation.type

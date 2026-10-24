@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-implementar-logicalspace-registry-bi-direccional-testing-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-source_hash: bf0860db7ca49696b6867d6dcc9c6ca0c01af6fc0d718b38200ee3d1a8090b7d

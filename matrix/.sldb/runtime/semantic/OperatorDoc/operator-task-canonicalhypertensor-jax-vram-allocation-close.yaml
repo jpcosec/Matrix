@@ -1,9 +1,0 @@
-model: OperatorDoc
-path: desk/primitives/operators/operator-task-canonicalhypertensor-jax-vram-allocation-close.md
-tags:
-- primitive:operator
-- representation.markdown
-- source.document.markdown
-- type.workflow.operator
-- workspace.desk.primitives
-source_hash: d25a6779bd4848d8de617b68bac7d0ed6bc4e49e3c52c64a30ec9f3f35357ed8

@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-meelengine-core-api-facade-closeout-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-source_hash: 4cfbe97edd7b5ea7737e6b75a4657973d01a169d30bad759f787a8bcc5301913

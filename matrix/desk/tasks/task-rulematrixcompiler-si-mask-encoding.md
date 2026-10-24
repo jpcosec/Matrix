@@ -1,28 +1,12 @@
 ---
-# task-xxx, unique task identifier
 id: task-rulematrixcompiler-si-mask-encoding
-# draft | active | blocked | closed
 status: draft
-# Relevant file or doc paths
 references: []
-# Task identifiers that must complete first
 depends_on: []
-# Pill identifiers required
 pills: []
-# Files expected to change
 files: []
-# Routine identifier for operations
-routine: routine-task-rulematrixcompiler-si-mask-encoding
-# Checklist identifiers for verification
-checklists:
-- checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready
-- checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready
-- checklist-task-rulematrixcompiler-si-mask-encoding-closeout-ready
-# Active routine node
-current_node: checklist-task-rulematrixcompiler-si-mask-encoding-execution-ready
-# Execution history references
+current_node: ritual-execution
 history: []
-# e.g., system:deskops, topic:cli
 tags:
 - workspace:desk
 - artifact:task

@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-rulematrixcompiler-si-mask-encoding-ready-for-closeout.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-source_hash: 04417e34e4e7225f240cd2dec98608e692b73626fd7b206e7143c05edfbd8333

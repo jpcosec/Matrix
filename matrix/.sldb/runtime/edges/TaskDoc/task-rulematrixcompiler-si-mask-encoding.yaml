@@ -1,4 +1,4 @@
-edges_version: 2|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
   node_type: TaskDoc
@@ -14,338 +14,8 @@ nodes:
     - type.workflow.task
     - workspace.desk
     - workspace:desk
-    hash_c: af94b0b77fdec3db7bf61f1718607af3be2d6a5e81e79c8456e04b58084a123a
-    hash_d: 079ba5758bce836cb44af3a9bf87e70acd8a7b4825e205f7d994218d25d958a6
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: task-xxx-unique-task-identifier
-    title: task-xxx, unique task identifier
-    breadcrumbs:
-    - task-xxx, unique task identifier
-    about:
-    - task-xxx, unique task identifier
-    - task xxx unique task identifier
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: task-xxx-unique-task-identifier
-    level: 1
-    line_start: 2
-    line_end: 3
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: draft-active-blocked-closed
-    title: draft | active | blocked | closed
-    breadcrumbs:
-    - draft | active | blocked | closed
-    about:
-    - draft | active | blocked | closed
-    - draft active blocked closed
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: draft-active-blocked-closed
-    level: 1
-    line_start: 4
-    line_end: 5
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: relevant-file-or-doc-paths
-    title: Relevant file or doc paths
-    breadcrumbs:
-    - Relevant file or doc paths
-    about:
-    - Relevant file or doc paths
-    - relevant file or doc paths
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: relevant-file-or-doc-paths
-    level: 1
-    line_start: 6
-    line_end: 7
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: task-identifiers-that-must-complete-first
-    title: Task identifiers that must complete first
-    breadcrumbs:
-    - Task identifiers that must complete first
-    about:
-    - Task identifiers that must complete first
-    - task identifiers that must complete first
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: task-identifiers-that-must-complete-first
-    level: 1
-    line_start: 8
-    line_end: 9
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: pill-identifiers-required
-    title: Pill identifiers required
-    breadcrumbs:
-    - Pill identifiers required
-    about:
-    - Pill identifiers required
-    - pill identifiers required
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: pill-identifiers-required
-    level: 1
-    line_start: 10
-    line_end: 11
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: files-expected-to-change
-    title: Files expected to change
-    breadcrumbs:
-    - Files expected to change
-    about:
-    - Files expected to change
-    - files expected to change
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: files-expected-to-change
-    level: 1
-    line_start: 12
-    line_end: 13
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: routine-identifier-for-operations
-    title: Routine identifier for operations
-    breadcrumbs:
-    - Routine identifier for operations
-    about:
-    - Routine identifier for operations
-    - routine identifier for operations
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: routine-identifier-for-operations
-    level: 1
-    line_start: 14
-    line_end: 15
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: checklist-identifiers-for-verification
-    title: Checklist identifiers for verification
-    breadcrumbs:
-    - Checklist identifiers for verification
-    about:
-    - Checklist identifiers for verification
-    - checklist identifiers for verification
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: checklist-identifiers-for-verification
-    level: 1
-    line_start: 16
-    line_end: 20
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: active-routine-node
-    title: Active routine node
-    breadcrumbs:
-    - Active routine node
-    about:
-    - Active routine node
-    - active routine node
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: active-routine-node
-    level: 1
-    line_start: 21
-    line_end: 22
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: execution-history-references
-    title: Execution history references
-    breadcrumbs:
-    - Execution history references
-    about:
-    - Execution history references
-    - execution history references
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: execution-history-references
-    level: 1
-    line_start: 23
-    line_end: 24
-  facets: {}
-- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  node_type: sldb_section
-  semantics:
-    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
-    path: e-g-system-deskops-topic-cli
-    title: e.g., system:deskops, topic:cli
-    breadcrumbs:
-    - e.g., system:deskops, topic:cli
-    about:
-    - e.g., system:deskops, topic:cli
-    - e g system deskops topic cli
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    semantic_tags:
-    - artifact:task
-    - representation.markdown
-    - source.document.markdown
-    - type.workflow.task
-    - workspace.desk
-    - workspace:desk
-    slug: e-g-system-deskops-topic-cli
-    level: 1
-    line_start: 25
-    line_end: 30
+    hash_c: f8ce7eb848ba99892baec45a589ecdaebadca44a9d2389f9e0af3a5cff582029
+    hash_d: 43d2ae9c3e47d078ad821e303cb9b0051b8918bcb5f3e0685b5ce19ac83b49cf
   facets: {}
 - id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
   node_type: sldb_section
@@ -374,8 +44,8 @@ nodes:
     - workspace:desk
     slug: rulematrixcompiler-si-mask-encoding
     level: 1
-    line_start: 31
-    line_end: 65
+    line_start: 15
+    line_end: 49
   facets: {}
 - id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
   node_type: sldb_section
@@ -407,8 +77,8 @@ nodes:
     - workspace:desk
     slug: rationale
     level: 2
-    line_start: 33
-    line_end: 38
+    line_start: 17
+    line_end: 22
   facets: {}
 - id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
   node_type: sldb_section
@@ -440,8 +110,8 @@ nodes:
     - workspace:desk
     slug: goal
     level: 2
-    line_start: 39
-    line_end: 44
+    line_start: 23
+    line_end: 28
   facets: {}
 - id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
   node_type: sldb_section
@@ -473,8 +143,8 @@ nodes:
     - workspace:desk
     slug: scope
     level: 2
-    line_start: 45
-    line_end: 50
+    line_start: 29
+    line_end: 34
   facets: {}
 - id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
   node_type: sldb_section
@@ -506,8 +176,8 @@ nodes:
     - workspace:desk
     slug: implementation-path
     level: 2
-    line_start: 51
-    line_end: 56
+    line_start: 35
+    line_end: 40
   facets: {}
 - id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
   node_type: sldb_section
@@ -539,8 +209,8 @@ nodes:
     - workspace:desk
     slug: validation
     level: 2
-    line_start: 57
-    line_end: 62
+    line_start: 41
+    line_end: 46
   facets: {}
 - id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
   node_type: sldb_section
@@ -572,8 +242,8 @@ nodes:
     - workspace:desk
     slug: done-when
     level: 2
-    line_start: 63
-    line_end: 65
+    line_start: 47
+    line_end: 49
   facets: {}
 - id: sldb://semantic_tag/artifact:task
   node_type: semantic_tag
@@ -609,61 +279,6 @@ edges:
 - source: sldb://model/TaskDoc
   target: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
   relation: has_document
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  relation: has_section
-  metadata:
-    origin: structural
-- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
-  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  relation: has_section
   metadata:
     origin: structural
 - source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
@@ -731,336 +346,6 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-xxx-unique-task-identifier
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#draft-active-blocked-closed
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#relevant-file-or-doc-paths
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#task-identifiers-that-must-complete-first
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#pill-identifiers-required
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#files-expected-to-change
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#routine-identifier-for-operations
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#checklist-identifiers-for-verification
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#active-routine-node
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#execution-history-references
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/artifact:task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/representation.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/source.document.markdown
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/type.workflow.task
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/workspace.desk
-  relation: tagged_as
-  metadata:
-    origin: structural
-- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#e-g-system-deskops-topic-cli
-  target: sldb://semantic_tag/workspace:desk
-  relation: tagged_as
-  metadata:
-    origin: structural
 - source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
   target: sldb://semantic_tag/artifact:task
   relation: tagged_as
@@ -1271,10 +556,20 @@ edges:
   relation: tagged_as
   metadata:
     origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
 doc_name: task-rulematrixcompiler-si-mask-encoding
 model_name: TaskDoc
-source_hash: af94b0b77fdec3db7bf61f1718607af3be2d6a5e81e79c8456e04b58084a123a
-content_hash: 079ba5758bce836cb44af3a9bf87e70acd8a7b4825e205f7d994218d25d958a6
+source_hash: f8ce7eb848ba99892baec45a589ecdaebadca44a9d2389f9e0af3a5cff582029
+content_hash: 43d2ae9c3e47d078ad821e303cb9b0051b8918bcb5f3e0685b5ce19ac83b49cf
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
 semantic_tags:
 - artifact:task
 - representation.markdown

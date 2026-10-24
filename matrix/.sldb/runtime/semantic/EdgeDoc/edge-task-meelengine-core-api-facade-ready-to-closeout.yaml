@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-meelengine-core-api-facade-ready-to-closeout.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-source_hash: 9e9aaa5e8639cfbca10c7061ffa6421d55601f479c06e4be3a7fdfa0703fe7da

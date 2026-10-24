@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-rulematrixcompiler-sop-reduction-execution-to-activate.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-source_hash: a7156c90536154b311e9ffad9b37e720d42b3a5635f3be14cbe693c4008ab6bf

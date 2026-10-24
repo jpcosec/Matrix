@@ -1,28 +1,12 @@
 ---
-# task-xxx, unique task identifier
 id: task-meelengine-fixpoint-deduction-algorithm
-# draft | active | blocked | closed
 status: draft
-# Relevant file or doc paths
 references: []
-# Task identifiers that must complete first
 depends_on: []
-# Pill identifiers required
 pills: []
-# Files expected to change
 files: []
-# Routine identifier for operations
-routine: routine-task-meelengine-fixpoint-deduction-algorithm
-# Checklist identifiers for verification
-checklists:
-- checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready
-- checklist-task-meelengine-fixpoint-deduction-algorithm-testing-ready
-- checklist-task-meelengine-fixpoint-deduction-algorithm-closeout-ready
-# Active routine node
-current_node: checklist-task-meelengine-fixpoint-deduction-algorithm-execution-ready
-# Execution history references
+current_node: ritual-execution
 history: []
-# e.g., system:deskops, topic:cli
 tags:
 - workspace:desk
 - artifact:task

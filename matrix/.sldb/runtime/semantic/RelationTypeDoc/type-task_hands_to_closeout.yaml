@@ -1,0 +1,8 @@
+model: RelationTypeDoc
+path: desk/lifecycle/type-task_hands_to_closeout.md
+tags:
+- layer.topology
+- representation.markdown
+- source.document.markdown
+- type.relation.type
+source_hash: d16cc9c1d329c8d362e0d08c9ba3d6f23bbc7538429fd82cf20540c593f700bf

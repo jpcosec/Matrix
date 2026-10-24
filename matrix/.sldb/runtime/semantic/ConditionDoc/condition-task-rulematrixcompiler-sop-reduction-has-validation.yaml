@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-rulematrixcompiler-sop-reduction-has-validation.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-source_hash: f1e4d634fc199890c1d1aa9a5d26371e76c0f1ba8f812515f3626f9349b7a858

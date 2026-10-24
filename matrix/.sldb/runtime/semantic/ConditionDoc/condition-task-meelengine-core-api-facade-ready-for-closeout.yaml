@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-meelengine-core-api-facade-ready-for-closeout.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-source_hash: 660998519e64395762f7772f193f149f7a44f1e32923278e78000cde6d387f22

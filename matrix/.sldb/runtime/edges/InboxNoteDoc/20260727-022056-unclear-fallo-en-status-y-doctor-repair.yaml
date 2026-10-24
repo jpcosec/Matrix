@@ -1,4 +1,4 @@
-edges_version: 2|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://document/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair
   node_type: InboxNoteDoc
@@ -13,7 +13,7 @@ nodes:
     - type.desk.inbox-note
     - workspace.desk.inbox
     hash_c: fd5ebcf53cc50edfaadcafc90c2aade1834ba0863c22d0e1811edf013350df8c
-    hash_d: a3fbe397bcd4c1ddba8318fb0978f8dc74fbedc08f80f650701f066e37de0ebd
+    hash_d: 5f080f29e5b13e67dfb388330679f30badeea8b0ee824f5a042b24ae49a3bfb9
   facets: {}
 - id: sldb://section/InboxNoteDoc:20260727-022056-unclear-fallo-en-status-y-doctor-repair#kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-open
   node_type: sldb_section
@@ -184,7 +184,8 @@ edges:
 doc_name: 20260727-022056-unclear-fallo-en-status-y-doctor-repair
 model_name: InboxNoteDoc
 source_hash: fd5ebcf53cc50edfaadcafc90c2aade1834ba0863c22d0e1811edf013350df8c
-content_hash: a3fbe397bcd4c1ddba8318fb0978f8dc74fbedc08f80f650701f066e37de0ebd
+content_hash: 5f080f29e5b13e67dfb388330679f30badeea8b0ee824f5a042b24ae49a3bfb9
+contract_hash: b163632f56cd2bc835d2d3726b1b3034d6329017760cce551c6aa7f8f3f8380a
 semantic_tags:
 - representation.markdown
 - source.document.markdown

@@ -1,9 +1,0 @@
-model: ConditionDoc
-path: desk/primitives/conditions/condition-task-meelengine-fixpoint-deduction-algorithm-has-implementation-path.md
-tags:
-- primitive:condition
-- representation.markdown
-- source.document.markdown
-- type.workflow.condition
-- workspace.desk.primitives
-source_hash: d6a8161c0d74a03108b8e45f2561d8f37ea382c2aefc788d50cb5757ef54fb43

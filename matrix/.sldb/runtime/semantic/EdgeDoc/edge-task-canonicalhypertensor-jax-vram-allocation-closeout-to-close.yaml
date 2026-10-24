@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-canonicalhypertensor-jax-vram-allocation-closeout-to-close.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-source_hash: 18c538d84676b4d173e8661319019324be54c9b60cd271ac64340af0ee257bd6

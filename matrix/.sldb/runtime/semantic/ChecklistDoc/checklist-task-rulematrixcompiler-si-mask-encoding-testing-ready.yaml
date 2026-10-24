@@ -1,9 +1,0 @@
-model: ChecklistDoc
-path: desk/primitives/checklists/checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready.md
-tags:
-- primitive:checklist
-- representation.markdown
-- source.document.markdown
-- type.workflow.checklist
-- workspace.desk.primitives
-source_hash: 3bde9a87f83592f223f0cd4307361b2d24a35a401688d18cf6ea996a3d785985

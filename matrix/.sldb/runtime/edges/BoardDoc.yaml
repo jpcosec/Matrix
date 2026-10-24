@@ -1,4 +1,4 @@
-edges_version: 2|sections:2
+edges_version: 4|sections:2
 nodes:
 - id: sldb://model/BoardDoc
   node_type: sldb_model
@@ -70,15 +70,6 @@ nodes:
     description: Semantic tags placed at the end, using namespaced forms such as 'system:sldb'
       or 'workspace:desk'.
   facets: {}
-- id: sldb://field/BoardDoc.routine
-  node_type: sldb_field
-  semantics:
-    name: routine
-    kind: string
-    required: false
-    model: BoardDoc
-    description: Primary routine identifier that makes the artifact actionable.
-  facets: {}
 - id: sldb://field/BoardDoc.current_node
   node_type: sldb_field
   semantics:
@@ -86,7 +77,8 @@ nodes:
     kind: string
     required: false
     model: BoardDoc
-    description: Current node in the operational routine or state machine.
+    description: Current node of the artifact in its lifecycle graph (a ritual id,
+      or 'complete').
   facets: {}
 - id: sldb://field/BoardDoc.history
   node_type: sldb_field
@@ -95,7 +87,7 @@ nodes:
     kind: stringlist
     required: false
     model: BoardDoc
-    description: Operational transition history for the artifact.
+    description: Lifecycle transitions the artifact went through, by relation type.
   facets: {}
 - id: sldb://field/BoardDoc.scope
   node_type: sldb_field
@@ -184,11 +176,6 @@ edges:
     origin: schema
 - source: sldb://model/BoardDoc
   target: sldb://field/BoardDoc.tags
-  relation: has_field
-  metadata:
-    origin: schema
-- source: sldb://model/BoardDoc
-  target: sldb://field/BoardDoc.routine
   relation: has_field
   metadata:
     origin: schema

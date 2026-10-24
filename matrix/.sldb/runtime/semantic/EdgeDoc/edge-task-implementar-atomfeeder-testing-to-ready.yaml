@@ -1,9 +1,0 @@
-model: EdgeDoc
-path: desk/primitives/edges/edge-task-implementar-atomfeeder-testing-to-ready.md
-tags:
-- primitive:edge
-- representation.markdown
-- source.document.markdown
-- type.workflow.edge
-- workspace.desk.primitives
-source_hash: 017d6e09824e65eab5cce7a8bf45d8b055d0959fa6297f52d4db6a6d46c894bf

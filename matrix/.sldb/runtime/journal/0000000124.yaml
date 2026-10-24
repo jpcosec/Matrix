@@ -1,0 +1,15 @@
+operation: add_model
+address: DeskFAQDoc
+field: null
+previous_value: null
+new_value: deskops.models:DeskFAQDoc
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 0e98206df2a7751d83fe0ba0e643826862ab5004803bd820312f2234c789188c
+hash_a_after: ea036865c0ccab52c13724d01acc4d5fb1fc72b6ce1fb366911533bf4c3b5383
+actor: null
+timestamp: 2026-10-18 22:15:54.864611+00:00
+previous_hash: e55e606a80c60c2b9eb582be8e2980a01704cd6084bfa0bcf0a262173533ef39
+entry_hash: 4c29b7cd49a51af6573c4a32d38a582827a94745684a8be1e0a5a130733bdec1

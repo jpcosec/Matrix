@@ -1,0 +1,54 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://relation_type/names
+  node_type: relation_type
+  semantics:
+    title: names
+    name: names
+    direction: directed
+    cardinality: many_to_many
+    axis: WHAT
+    source_types:
+    - anchor
+    target_types: []
+    condition: ''
+    description: The anchor (an alias word) names this model, field, relation type
+      or document.
+    doc: reltype-names
+  facets: {}
+- id: sldb://semantic_tag/layer.topology
+  node_type: semantic_tag
+  semantics:
+    tag: layer.topology
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.relation.type
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.type
+  facets: {}
+edges:
+- source: sldb://relation_type/names
+  target: sldb://model/anchor
+  relation: applies_to_source
+  metadata:
+    origin: schema
+doc_name: reltype-names
+model_name: RelationTypeDoc
+source_hash: 2166f9e353e9726713148eb93362cb79bcac0a02528f852580b82e0405559832
+content_hash: 73b524d5cbe0ff6160ef9f59354912aa48c38e16875677388be20a9ab3559035
+contract_hash: 57b63063959eb2f0b721697bc626d10bc4d960672ed03fa04f9d0a5e1f499699
+semantic_tags:
+- layer.topology
+- representation.markdown
+- source.document.markdown
+- type.relation.type

@@ -1,9 +1,0 @@
-model: OperatorDoc
-path: desk/primitives/operators/operator-task-rulematrixcompiler-sop-reduction-activate.md
-tags:
-- primitive:operator
-- representation.markdown
-- source.document.markdown
-- type.workflow.operator
-- workspace.desk.primitives
-source_hash: 946c4d5219f67a4e69091b7be91f9dd0eb273cdad8a4850549f52b6316806990

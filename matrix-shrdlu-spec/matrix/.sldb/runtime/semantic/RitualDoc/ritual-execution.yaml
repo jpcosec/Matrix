@@ -1,9 +1,0 @@
-model: RitualDoc
-path: desk/rituals/execution.md
-tags:
-- representation.markdown
-- source.document.markdown
-- type.workflow.ritual
-- workspace.desk
-- workspace:desk
-source_hash: d86f72413109fd0e0f91d1e3da893e55a45f53ef527c0a16bfda19a4096251e8

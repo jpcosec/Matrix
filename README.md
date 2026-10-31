@@ -13,7 +13,10 @@ The project centers on **sense/meaning matrices**: a separation between truth (`
 - `tools/kb/` — harness de KB: convierte texto, código o specs en `WiGame`s context-scoped con revisión y verificación. Ver [`tools/kb/README.md`](tools/kb/README.md).
 - `examples/` — demos ejecutables, specs y KBs versionadas consultables offline. Ver [`examples/README.md`](examples/README.md).
 - `desk/drawer/shrdlu/` — prototipo separado que baja inglés controlado a operaciones del runtime.
-- `tests/` — suite completa (`pytest`, 255 tests).
+- `matrix-shrdlu-spec/` — pobla `WiGame`s desde texto crudo (populator, SIA, pipeline de convergencia) y conversa con ellos vía el REPL de `desk/drawer/shrdlu/`. Sus tests corren desde esa carpeta.
+- `ncm-matrix/` — experimentos Matrix × NCM (`ncm/` es un submódulo). Ver [`ncm-matrix/JOINT.md`](ncm-matrix/JOINT.md).
+- `tractatusIR/` — runtime prototipo en Common Lisp.
+- `tests/` — suite del motor (`pytest`).
 - `docs/README.md` — índice de arquitectura y conceptos.
 
 ## Quick start

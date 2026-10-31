@@ -7,7 +7,6 @@ Resultados: [`artifacts/joint/REPORT.md`](artifacts/joint/REPORT.md) y
 ## Ejecutar
 
 ```bash
-export MATRIX_ROOT=/ruta/a/Matrix-oficial      # ver "Autoridad Matrix"
 .venv/bin/python -m pytest -q -p no:cacheprovider joint/tests     # 33 tests de contrato
 .venv/bin/python -m joint.evaluate --steps 3000                   # 5 variantes × semillas 7, 19, 41
 .venv/bin/python -m joint.train --steps 3000 --seed 7             # una corrida + checkpoint
@@ -16,9 +15,7 @@ export MATRIX_ROOT=/ruta/a/Matrix-oficial      # ver "Autoridad Matrix"
 `--device auto` usa CUDA si está disponible. La tabla publicada se generó en una RTX 2060
 (torch 2.14.1+cu130): ~2,7 min por corrida, 15 corridas en ~40 min, pico de ~1,5 GiB de VRAM.
 
-**Autoridad Matrix.** El SPEC nombra `../Matrix/Matrix`. En este clon, `main` no contiene
-`core/evidence.py`, `kernel/rule_schema.py` ni `system/deduction.py`; la rama
-`origin/feat/kb-harness` sí, y se usó como worktree vía `MATRIX_ROOT`. No se modificó Matrix.
+**Autoridad Matrix.** El motor es la raíz de este repo. `MATRIX_ROOT` sólo hace falta para probar contra otro árbol.
 
 ## Módulos
 

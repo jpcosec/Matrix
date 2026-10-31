@@ -56,7 +56,7 @@ texto ─► chunks (contextos) ─► declaraciones por contexto (heurística o
 - **`unsinnig`:** la ausencia de co-ocurrencia en el corpus no demuestra absurdo. Solo un humano
   marca `S_i = unsinnig` (el silencio no es absurdo).
 - **Proyecciones entre mundos:** entre `WiGame`s son entidad × entidad
-  (`matrix/src/operational_model/routing/routing_projection.py:13`); AROMA o el LLM entregan
+  (`../src/operational_model/routing/routing_projection.py:13`); AROMA o el LLM entregan
   concepto × concepto. El paso a instancias se propone y se confirma.
 - **Símbolos nuevos que colisionan** con `signs` ya registrados: el LLM propone `equivalent` o un
   `symbol_id` distinto; el humano decide.

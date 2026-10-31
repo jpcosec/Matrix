@@ -27,8 +27,8 @@ texto ─► populator: chunks (contextos), signos locales, offsets
 | `populator/` | documentos → chunks (contextos) → signos locales con offsets (`read_documents`, `build_contexts`) |
 | `sia/` | intensidad implicativa (ϕ, φ entrópica), cohesión, jerarquía, niveles significativos, similitud, AROMA |
 | `pipeline/` | descomposición por oración, ingesta por contexto, convergencia por pares candidatos y lotes, consultas ruteadas, curado |
-| `matrix/` | motor booleano (subtree de `jpcosec/Matrix`): `WiGame`, `S_i`/`V_i`, `I`, runtime S-expr (`check / assert / ingest / create / promote / why / …`) |
-| `matrix/prototypes/shrdlu/` | REPL en español e inglés controlado sobre el mundo construido |
+| `../src/` | motor booleano (raíz de este repo): `WiGame`, `S_i`/`V_i`, `I`, runtime S-expr (`check / assert / ingest / create / promote / why / …`) |
+| `../desk/drawer/shrdlu/` | REPL en español e inglés controlado sobre el mundo construido |
 | `corpus/physicists/` | corpus de evaluación (89 físicos: Simple English + EN + Wikidata + GAP) |
 
 > **Documentación técnica:** [`docs/technical.md`](docs/technical.md). Módulos, estructuras de datos, parámetros, comandos, corpus, métricas, resultados medidos y limitaciones.
@@ -40,9 +40,9 @@ Toda evaluación va **bajo tope de memoria** (`bash scripts/capped.sh 4 -- …`,
 [`experiments/README.md`](experiments/README.md)) y una corrida por comando.
 
 ```bash
-# tests (131 en la raíz: populator, descomposición, ingesta, convergencia, consultas · 179 en matrix/)
+# tests de esta carpeta: populator, descomposición, ingesta, convergencia, consultas. Los del motor están en ../tests/
 python -m pytest -q tests/
-( cd matrix && python -m pytest -q )
+( cd .. && python -m pytest -q )
 
 # ingesta por contexto: chunks → WiGames + convergencia
 python -m pipeline.ingest corpus/physicists --lang en --unit document
@@ -59,7 +59,7 @@ bash scripts/capped.sh 4 -- python -m experiments.eval_physicists --regime pairs
 
 # poblar un mundo y conversar
 python -m pipeline.run corpus/physicists --wigame physicists --dump /tmp/physicists
-( cd matrix && PYTHONPATH=.. python -m prototypes.shrdlu.repl ../corpus/physicists/articles --lang en --limit 20 )
+( cd .. && PYTHONPATH=matrix-shrdlu-spec python -m desk.drawer.shrdlu.repl matrix-shrdlu-spec/corpus/physicists/articles --lang en --limit 20 )
 
 # curado asistido por LLM (el backend propone; el humano confirma)
 python -m pipeline.curate corpus/physicists --backend pi --limit 10

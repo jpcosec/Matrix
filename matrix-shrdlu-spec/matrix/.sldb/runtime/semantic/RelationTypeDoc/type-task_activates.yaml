@@ -1,8 +1,0 @@
-model: RelationTypeDoc
-path: desk/lifecycle/type-task_activates.md
-tags:
-- layer.topology
-- representation.markdown
-- source.document.markdown
-- type.relation.type
-source_hash: 82694800f31844ed3b86b5913f2cbf02eaebf24f4143a8a4542a64374d9217b5

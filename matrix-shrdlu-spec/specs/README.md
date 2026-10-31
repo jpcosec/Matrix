@@ -14,7 +14,7 @@ Un motor de conocimiento que **puebla** mundos lógicos desde texto crudo (chunk
 - [sources.md](sources.md) — fuentes
 - [appendix_causality.md](appendix_causality.md) — causalidad (futuro)
 
-Código: `matrix/` (motor, subtree), `sia/` (CHIC), `populator/` (chunker), `pipeline/` (descomposición, ingesta, convergencia y CLI), `corpus/vegetales/` (corpus de prueba). Tests: `tests/` (raíz) y `matrix/tests/`. Uso: [README raíz](../README.md).
+Código: `../src/` (motor), `sia/` (CHIC), `populator/` (chunker), `pipeline/` (descomposición, ingesta, convergencia y CLI), `corpus/vegetales/` (corpus de prueba). Tests: `tests/` (raíz) y `../tests/`. Uso: [README raíz](../README.md).
 
 > **Documentación técnica:** [`docs/technical.md`](../docs/technical.md). Módulos, estructuras de datos, parámetros, comandos, corpus, métricas, resultados medidos y limitaciones.
 > **Metodología de pruebas:** [`docs/methodology.md`](../docs/methodology.md). Por qué y cómo se hizo cada prueba, y cómo diseñar una nueva.

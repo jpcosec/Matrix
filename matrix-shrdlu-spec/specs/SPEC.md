@@ -43,8 +43,8 @@ texto ─► Populator: chunks (contextos), signos locales, offsets
 | Descomposición e ingesta por contexto | [convergence.md](convergence.md) §4 | `pipeline/decompose.py`, `pipeline/ingest.py`; heurística + LLM (`decompose_llm_chunk`, `pipeline/decompose_batch.py`) |
 | Convergencia (taxonomía, símbolos, mantenimiento) | [chic.md](chic.md), [convergence.md](convergence.md) §3 | `sia/` + `pipeline/convergence.py` (`converge_in_batches`) |
 | Curado y anclaje a la fuente | [grounding.md](grounding.md), [provenance.md](provenance.md) | `core/evidence.py`, `system/candidates.py`, `system/deduction.py` |
-| Motor booleano (WiGame, `S_i`, `V_i`, `I`, runtime S-expr) | [matrix.md](matrix.md) | `matrix/` (subtree de `jpcosec/Matrix`), 179 tests |
-| Consultas ruteadas y REPL | [shrdlu.md](shrdlu.md), [runtime_api.md](runtime_api.md) | `pipeline/query.py`, `matrix/prototypes/shrdlu/{spanish,repl}.py` |
+| Motor booleano (WiGame, `S_i`, `V_i`, `I`, runtime S-expr) | [matrix.md](matrix.md) | `../src/`, 179 tests |
+| Consultas ruteadas y REPL | [shrdlu.md](shrdlu.md), [runtime_api.md](runtime_api.md) | `pipeline/query.py`, `../desk/drawer/shrdlu/{spanish,repl}.py` |
 | Evaluación | [convergence.md](convergence.md) §7 | `experiments/eval_physicists.py`, `corpus/physicists/` |
 | Causalidad | [appendix_causality.md](appendix_causality.md) | fuera de alcance |
 | Fuentes | [sources.md](sources.md) | — |
@@ -53,13 +53,13 @@ texto ─► Populator: chunks (contextos), signos locales, offsets
 
 | # | Tema | Decisión | Dónde está hoy |
 |---|---|---|---|
-| 1 | Dónde vive el estado | Cada `WiGame` tiene su `V_i`/`S_i`; los cruces entre mundos van por `RoutingProjection`. El "hipertensor global" de los átomos de Matrix nunca se implementó y queda como optimización futura. | `matrix/src/operational_model/system/wigame.py:19` |
+| 1 | Dónde vive el estado | Cada `WiGame` tiene su `V_i`/`S_i`; los cruces entre mundos van por `RoutingProjection`. El "hipertensor global" de los átomos de Matrix nunca se implementó y queda como optimización futura. | `../src/operational_model/system/wigame.py:19` |
 | 2 | El símbolo | Es `(signo, contexto)`: `she@Q7186 ≠ she@Q937`. Sin plegado de alias; la normalización solo reconoce repeticiones dentro del chunk. La identidad la propone la convergencia. | `populator/contexts.py`, [convergence.md](convergence.md) §1 |
 | 3 | Valores de verdad | Tres: `TRUE / FALSE / UNKNOWN(∅)`. `UNKNOWN` es el estado de todo lo propuesto y no curado. | `core/truth_value.py:8` |
 | 4 | Sentido | Tres: `sinnvoll / sinnlos / unsinnig`. Las configuraciones verdaderas para casi todos los contextos se descartan (no discriminan). | `core/sense_value.py:8`, `pipeline/convergence.py` (`taut_df`) |
 | 5 | Clausura e inferencia | Booleana: `I* = ⋁_k I^k` por *squaring* (`O(log N)` productos); modus ponens `v ⊗ I*`. Nunca suma aritmética de potencias. | `matrices/boolean_matrix.py:178`, `kernel/formula_inference.py:11` |
 | 6 | Escala | **Nunca `p×p`**: la intensidad se calcula sobre la lista de pares candidatos (índice invertido configuración → símbolos) y la convergencia entra por lotes. Los mundos son aglomerativos: los contextos se comparan contra el mundo ya construido, no todos contra todos. | `sia/contingency.py::contingency_pairs`, `pipeline/convergence.py::converge_in_batches` |
-| 7 | Backend numérico | NumPy + `scipy.sparse` para `sia/`; Python puro en `matrix/`. JAX no entra hasta que el vocabulario sea estable (los shapes dinámicos de `create symbol` lo penalizan). | — |
+| 7 | Backend numérico | NumPy + `scipy.sparse` para `sia/`; Python puro en `../src/`. JAX no entra hasta que el vocabulario sea estable (los shapes dinámicos de `create symbol` lo penalizan). | — |
 | 8 | Superficie de mando | S-expressions. Se conservan `check / assert / ingest / create / return`; se añaden `retract`, `promote`, `reject`, `why`, `define`, `project` y `create context`. | `system/s_expression_runtime.py:38` |
 | 9 | Procedencia | En `Fact.evidence`: `Prov(f) = (document_id, span, extractor, confidence)` + `tier` + `curation`. No hay matrices de procedencia. | `core/fact.py:20` |
 | 10 | Rol del LLM | Descompone superficie (una llamada por chunk) y verbaliza. No decide verdad, sentido ni identidad. | [shrdlu.md](shrdlu.md), [grounding.md](grounding.md) §3 |
@@ -80,7 +80,7 @@ texto ─► Populator: chunks (contextos), signos locales, offsets
 4. **D — consultas y evaluación** (`pipeline/query.py`, `experiments/eval_physicists.py`): `ask` con
    ruta y cita sobre proyecciones promovidas, REPL en español e inglés, y los regímenes
    `document` / `section` / `pairs` con los descompositores `heuristic` / `llm` / `both`;
-   `tests/test_query.py`, `tests/test_eval_smoke.py`, `matrix/tests/test_shrdlu_*.py`.
+   `tests/test_query.py`, `tests/test_eval_smoke.py`, `../tests/test_shrdlu_*.py`.
 
 Fuera del alcance: causalidad (requiere datos, no texto — apéndice) y backend JAX.
 

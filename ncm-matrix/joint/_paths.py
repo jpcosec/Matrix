@@ -7,7 +7,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 EXPERIMENT = HERE.parent
-MATRIX_ROOT = Path(os.environ.get("MATRIX_ROOT", str(EXPERIMENT.parent / "Matrix" / "Matrix")))
+MATRIX_ROOT = Path(os.environ.get("MATRIX_ROOT", str(EXPERIMENT.parent)))
 NCM_ROOT = EXPERIMENT / "ncm"
 
 for root in (MATRIX_ROOT, NCM_ROOT):

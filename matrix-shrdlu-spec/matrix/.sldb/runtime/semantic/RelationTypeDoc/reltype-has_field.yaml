@@ -1,8 +1,0 @@
-model: RelationTypeDoc
-path: sldb/relation_types/has_field.md
-tags:
-- layer.topology
-- representation.markdown
-- source.document.markdown
-- type.relation.type
-source_hash: 0b993475af6138e3aaa4dcabbf23b537a404f5eb5e7cbaf98374d459eccd872d

@@ -2,7 +2,7 @@
 
 ## 1. Dónde vive
 
-En `Fact.evidence` (`matrix/src/operational_model/core/fact.py:20`, `dict[str, Any]`). Hoy no tiene esquema, solo lo escribe un test y lo serializa `system/wi_game_serialization.py:85,125`; `assert` crea `Fact` con `evidence={}`. Esta spec le da esquema. No se crean matrices de procedencia.
+En `Fact.evidence` (`../src/operational_model/core/fact.py:20`, `dict[str, Any]`). Hoy no tiene esquema, solo lo escribe un test y lo serializa `system/wi_game_serialization.py:85,125`; `assert` crea `Fact` con `evidence={}`. Esta spec le da esquema. No se crean matrices de procedencia.
 
 ```json
 {
@@ -46,6 +46,6 @@ Política tomada del átomo `Manejo_de_Contradicciones` de Matrix: un candidato 
 
 ## 4. Qué se implementa
 
-- Esquema anterior como `TypedDict` en `matrix/src/operational_model/core/evidence.py` + validación en `add_fact`.
+- Esquema anterior como `TypedDict` en `../src/operational_model/core/evidence.py` + validación en `add_fact`.
 - `assert` acepta `evidence` opcional; `promote` lo rellena desde el candidato.
 - `why` recorre `derived_from` y `prov`.

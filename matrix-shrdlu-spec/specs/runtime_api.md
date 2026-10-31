@@ -1,6 +1,6 @@
 # Runtime API — S-expressions
 
-Superficie única de mando del motor. Forma canónica `(R a b)`; selectores `kind:value` (`wigame:vegetales`, `symbol:lechuga`, `relation:es`). Toda operación devuelve `OperationResult(status, sinn, payload, reason)` con `status ∈ {accept, reject, ambiguous}` (`matrix/src/operational_model/system/operation_results.py`). Errores de sintaxis lanzan `ValueError`.
+Superficie única de mando del motor. Forma canónica `(R a b)`; selectores `kind:value` (`wigame:vegetales`, `symbol:lechuga`, `relation:es`). Toda operación devuelve `OperationResult(status, sinn, payload, reason)` con `status ∈ {accept, reject, ambiguous}` (`../src/operational_model/system/operation_results.py`). Errores de sintaxis lanzan `ValueError`.
 
 ## 1. Verbos existentes (`system/s_expression_runtime.py`)
 

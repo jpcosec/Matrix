@@ -41,29 +41,29 @@ cuantizador que devuelve cinco; no lo usa este experimento ni se modificó upstr
 
 ## Qué significa la evaluación de Matrix
 
-- [`get_status`](../Matrix/Matrix/src/operational_model/system/wi_game_queries.py)
+- [`get_status`](../src/operational_model/system/wi_game_queries.py)
   trata fuera-de-ejes y `Si=unsinnig` como no aplicables. Una columna de Vi verdadera
   para todos los sujetos produce `sinnlos` y `discriminative=False`. Esa propiedad
   depende del mundo finito, no equivale a una contradicción lógica.
-- [`_eval_check`](../Matrix/Matrix/src/operational_model/system/s_expression_runtime.py)
+- [`_eval_check`](../src/operational_model/system/s_expression_runtime.py)
   comprueba encaje y devuelve el `Si` almacenado. Su `accept` no certifica verdad
   ni implica que `Si` no sea `unsinnig`; también usa `unsinnig` para ambigüedad o
   mundo inexistente. `_eval_assert` identifica una celda falsa como
   `widerspruechlich` al intentar afirmar verdad encima. No conviene entrenar sobre
   una sola cadena de estado sin su razón y contexto.
-- [`ViMatrix`](../Matrix/Matrix/src/operational_model/matrices/vi_matrix.py)
-  comienza en `∅`; [`SiMatrix`](../Matrix/Matrix/src/operational_model/matrices/si_matrix.py)
+- [`ViMatrix`](../src/operational_model/matrices/vi_matrix.py)
+  comienza en `∅`; [`SiMatrix`](../src/operational_model/matrices/si_matrix.py)
   comienza en `sinnlos`. Ausencia de evidencia no es falsedad ni inaplicabilidad.
-- [`deduce`](../Matrix/Matrix/src/operational_model/system/deduction.py) hace
+- [`deduce`](../src/operational_model/system/deduction.py) hace
   deducción trazada de hechos verdaderos. Omite celdas ya verdaderas o falsas;
   no es un detector completo de inconsistencias. Para supervisar restricciones
   hay que conservar las fórmulas, evaluar asignaciones y distinguir contradicción
   con la KB de falsedad admisible en una proposición.
-- [`formula_evaluation.py`](../Matrix/Matrix/src/operational_model/kernel/formula_evaluation.py)
+- [`formula_evaluation.py`](../src/operational_model/kernel/formula_evaluation.py)
   ofrece evaluación booleana y clasificación por enumeración. Es exacta para sus
   fórmulas, pero la enumeración de n átomos es exponencial. No escalarla ciegamente
   a toda la KB; compilar o muestrear restricciones locales sería otro trabajo.
-- [`RoutingProjection`](../Matrix/Matrix/src/operational_model/routing/routing_projection.py)
+- [`RoutingProjection`](../src/operational_model/routing/routing_projection.py)
   implementa enlaces booleanos explícitos. La similitud entre embeddings no
   autoriza por sí sola identidad entre símbolos de contextos distintos.
 
@@ -73,7 +73,7 @@ discriminación/partición pero no se usa como penalización universal de falsed
 
 ## RDF y procedencia
 
-El [`owl2matrix.py`](../Matrix/Matrix/src/operational_model/language/owl2matrix.py)
+El [`owl2matrix.py`](../src/operational_model/language/owl2matrix.py)
 existente es un importador XML limitado. No es un parser Turtle general; el código
 omite `rdf:type` y `subClassOf` al recorrer hijos y no llena `subclass_relations`
 en esa ruta. Su exportador crea un solo Li con la primera relación, lo que tampoco
@@ -81,9 +81,9 @@ resuelve un grafo multirrelacional arbitrario.
 
 Por eso el experimento usa rdflib y un contrato RDF de aserciones explícito.
 No se apoya en ese importador como si ya ofreciera inferencia OWL/RDFS completa.
-El pipeline oficial `../Matrix/Matrix/tools/kb` agrupa mundos por contexto y
+El pipeline oficial `../tools/kb` agrupa mundos por contexto y
 relación. Además del importador anterior existe
-`../Matrix/Matrix/src/external_formats/owl/owl_converter.py`, que sí lee Turtle
+`../src/external_formats/owl/owl_converter.py`, que sí lee Turtle
 mediante rdflib. Su salida no construye por sí sola los mundos necesarios para
 ejecutar todas las aserciones; la revisión ampliada documenta pruebas de importación
 y exportación. La evaluación inicial del soporte RDF fue incompleta.

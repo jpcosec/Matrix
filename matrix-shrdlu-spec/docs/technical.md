@@ -2,7 +2,7 @@
 
 Referencia del código de este repositorio: qué hace cada módulo, qué estructuras usa, cómo se
 ejecuta y qué midió. El diseño vigente está en `specs/convergence.md`; el motor lógico es el
-*subtree* `matrix/` (`jpcosec/Matrix`).
+motor en `../src/` (raíz de este repo).
 
 ## 1. Alcance
 
@@ -33,13 +33,13 @@ pipeline/
   curate.py           cola de propuestas para un LLM revisor
   run.py              build_system: envoltorio para el REPL
 sia/                contingencia, intensidad, cohesión, jerarquía, similitud, AROMA
-matrix/             motor booleano y runtime S-expr (subtree)
-matrix/prototypes/shrdlu/   REPL (español e inglés controlado)
+../src/             motor booleano y runtime S-expr
+../desk/drawer/shrdlu/   REPL (español e inglés controlado)
 corpus/physicists/  corpus de evaluación y su build.py
 corpus/vegetales/   corpus del ejemplo lechuga/espinaca
 experiments/        eval_physicists.py, eval_matrix_kb.py
 scripts/capped.sh   ejecutor con tope de memoria
-tests/              133 tests; matrix/tests: 179
+tests/              tests de esta carpeta; motor en ../tests/
 specs/              especificación (convergence.md prevalece)
 .herdr/             briefs e informes por etapa de los workers
 ```
@@ -203,7 +203,7 @@ backend (`keep`, `sexpr`, `comment`). No está conectado a la evaluación.
 Verificado contra la Tabla 1 del libro de SIA (τ = 0.6035, φ = 0.777, tolerancia 1e-3). La versión
 por pares coincide con la densa con tolerancia 1e-9.
 
-### 5.9 Runtime S-expr (`matrix/`)
+### 5.9 Runtime S-expr (`../src/`)
 
 Verbos: `check`, `assert`, `ingest`, `create (symbol|relation|li|wigame|context)`, `candidate`,
 `promote`, `reject`, `retract`, `why`, `define`, `project`, `return`. Verdad: `TRUE`, `FALSE`,
@@ -256,11 +256,11 @@ bash scripts/capped.sh 4 -- python -m experiments.eval_matrix_kb <kb_dir> \
     [--min-contexts N] [--taut-df F] --out <dir>
 
 # REPL
-cd matrix && PYTHONPATH=.. python -m prototypes.shrdlu.repl ../corpus/physicists/en --lang en
+cd .. && PYTHONPATH=matrix-shrdlu-spec python -m desk.drawer.shrdlu.repl matrix-shrdlu-spec/corpus/physicists/en --lang en
 
 # tests
 PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider tests/
-( cd matrix && PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider )
+( cd .. && PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -p no:cacheprovider )
 ```
 
 Cada evaluación escribe `metrics.json` (parcial tras cada etapa) y `report.md` en `--out`.

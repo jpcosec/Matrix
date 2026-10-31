@@ -42,7 +42,7 @@ es una RTX 3050 Laptop de 4 GB, pero no se utiliza. No se modificó el código u
 
 [`dataset.py`](dataset.py) construye 560 consultas: 40 entidades, siete predicados y
 dos contextos. Genera Turtle con un esquema explícito de aserciones, lo importa a
-`Matrix/Matrix/src/operational_model` y obtiene sus etiquetas del motor.
+`src/operational_model` de este repo y obtiene sus etiquetas del motor.
 Es un corpus sintético con textos controlados; **no implementa extracción RDF desde
 prosa arbitraria**. Los textos fuente, hechos, negaciones y consultas se generan
 desde la misma especificación. `EX.truth` y `EX.sense` son propiedades del esquema

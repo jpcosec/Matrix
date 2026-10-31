@@ -39,7 +39,7 @@ error concreto.
 | Humo | `tests/test_eval_smoke`, `test_eval_matrix_kb` | los scripts de evaluación corren de principio a fin con `--limit` y escriben las claves esperadas | segundos |
 | Evaluación | `experiments/eval_physicists.py`, `eval_matrix_kb.py` | mediciones sobre corpus reales; no son tests de `pytest`, producen `metrics.json` y `report.md` | segundos a minutos |
 
-Los tres primeros niveles corren en `pytest` (133 tests en `tests/`, 179 en `matrix/`). Los tests que
+Los tres primeros niveles corren en `pytest` (`tests/` aquí y `../tests/` para el motor). Los tests que
 dependen de un corpus o de una ruta externa usan `pytest.skip` si no existe.
 
 ## 3. Pruebas unitarias

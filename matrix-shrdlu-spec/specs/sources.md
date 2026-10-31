@@ -10,7 +10,7 @@ Los PDF no se versionan (`.gitignore`); se citan por ruta local y página impres
 - **Pazmiño, Bonilla, Baquero, Miguez.** *Software Estadístico CHIC: descubriendo sus potencialidades…* Ciencia Digital 2(4.1), 2018, pp. 122-139. Local: `194-Article Text-588-2-10-20181226.pdf`. Referencia de uso e interpretación de R-CHIC, no de algoritmo.
 
 ## Motor
-- **Matrix** — `github.com/jpcosec/Matrix`, subtree en `matrix/` (commit `38dcfbd`). Separación sentido/verdad (`S_i`/`V_i`) en juegos de lenguaje (`WiGame`), kernel booleano, runtime S-expr. Ver [matrix.md](matrix.md).
+- **Matrix** — `github.com/jpcosec/Matrix`, motor en `../src/`. Separación sentido/verdad (`S_i`/`V_i`) en juegos de lenguaje (`WiGame`), kernel booleano, runtime S-expr. Ver [matrix.md](matrix.md).
 
 ## Chunking
 - **Korel** — `github.com/cognicore-io/korel` (Go). Pipeline de 8 fases; se copian las fases 1-3 (extract, tokenize+stopwords, multi-token longest-match). Ver [populator.md](populator.md).

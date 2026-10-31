@@ -7,7 +7,7 @@ hechos, crea símbolos y reglas. El Micro Planner (`PLNR`, `THTRAC`) con backtra
 el punto fijo booleano `v ⊗ I*`, y la gramática sistémica (`GRAMAR`, `PROGMR`) por un descompositor
 de superficie (heurístico o LLM barato) que traduce a S-expressions canónicas.
 
-El estado del diálogo vive en `matrix/prototypes/shrdlu/dialog_state.py` (`focus_wigame`,
+El estado del diálogo vive en `../desk/drawer/shrdlu/dialog_state.py` (`focus_wigame`,
 `last_subject`, `last_object`, `last_verb`, `pending`, `answer(choice)`), no en la memoria del chat.
 
 ## 1. Los cinco comportamientos

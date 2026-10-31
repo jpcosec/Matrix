@@ -421,7 +421,7 @@ NCM completo, aprendizaje en test y equivalencia entre código VQ y concepto.
 
 ## 11. Autoridad y dependencias
 
-- Implementación Matrix oficial: `../Matrix/Matrix`.
+- Implementación Matrix oficial: la raíz de este repo.
 - NCM clonado: `ncm/`, commit documentado en `ANALISIS.md`.
 - Estado y discrepancias del oficial: `REVISION_MATRIX.md` y
   `artifacts/matrix_contract_audit.json`.

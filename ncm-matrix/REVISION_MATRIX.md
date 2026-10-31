@@ -17,7 +17,7 @@ formal ni la afirmación de haber inspeccionado cada línea de cada archivo.
 
 La distinción signo/símbolo del Whitepaper y los átomos filosóficos separa
 la forma perceptible de su función lógica contextual. El documento oficial
-[`context_and_wigame.md`](../Matrix/Matrix/docs/context_and_wigame.md) lo dice
+[`context_and_wigame.md`](../docs/context_and_wigame.md) lo dice
 explícitamente: importa el campo semántico que indica la ocurrencia, y el
 referente es la intersección que sobrevive a las restricciones contextuales.
 
@@ -32,7 +32,7 @@ País, registro, tema y función retórica pueden expresarse como relaciones y
 restricciones, sin convertirlas en un único árbol taxonómico universal.
 `LiSpace` fija ejes y relación; `WiGame` añade estado y contexto. La reflexión
 reifica relaciones y contextos como símbolos: véanse
-[`reflection.py`](../Matrix/Matrix/src/operational_model/system/reflection.py)
+[`reflection.py`](../src/operational_model/system/reflection.py)
 y sus tests de habla informal/chileno.
 
 Esto proporciona piezas representacionales. No hay un extractor general que
@@ -53,7 +53,7 @@ aprender una organización útil; no autoriza a marcar como falsos los datos
 ausentes ni a minimizar indiscriminadamente la entropía de toda distribución.
 Una pregunta que divide candidatos equilibradamente puede ser muy informativa.
 
-[`partition.py`](../Matrix/Matrix/src/operational_model/system/partition.py)
+[`partition.py`](../src/operational_model/system/partition.py)
 ya compara un mundo compuesto con una partición suministrada. Mide celdas,
 densidad, energía y columnas tautológicas; decide principalmente por coste de
 celdas y reutilización del término medio. **No busca particiones nuevas ni
@@ -70,7 +70,7 @@ abandonado. Debe conservarse el principio sin atribuirle ese backend al runtime.
 
 Hoy hay `Context`, rutas explícitas, `RoutingProjection`, composición por término
 medio y reflexión. Además,
-[`operatoria.py`](../Matrix/Matrix/tools/kb/operatoria.py) materializa reglas
+[`operatoria.py`](../tools/kb/operatoria.py) materializa reglas
 operacionales como un contexto consultable. Es un ejemplo concreto de conocimiento
 sobre cómo operar representado dentro del sistema.
 
@@ -88,7 +88,7 @@ país, género discursivo, tema o función retórica.
 
 Hay dos rutas OWL distintas. El importador de `operational_model/language` es
 limitado, pero **sí existe soporte Turtle** en
-[`external_formats/owl/owl_converter.py`](../Matrix/Matrix/src/external_formats/owl/owl_converter.py)
+[`external_formats/owl/owl_converter.py`](../src/external_formats/owl/owl_converter.py)
 mediante rdflib. Convierte clases, individuos y propiedades a s-expressions.
 Eso no equivale a compilar cualquier RDF en contextos lógicos ejecutables:
 el ejemplo mínimo genera una aserción a `wigame:owl` sin crear ese mundo.

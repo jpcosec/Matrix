@@ -1,6 +1,6 @@
 # Matrix — el motor booleano
 
-`matrix/` es un subtree de `github.com/jpcosec/Matrix` (commit `38dcfbd`), traído con historial y arreglado para que su suite pase (179 tests). Se modifica libremente; su antiguo SSOT de átomos no es vinculante. Esta página dice qué se usa, qué se cambia y qué se ignora.
+El motor vive en `../src/` de este repo; antes era un subtree en `matrix/` (commit `38dcfbd`), traído con historial y arreglado para que su suite pase (179 tests). Se modifica libremente; su antiguo SSOT de átomos no es vinculante. Esta página dice qué se usa, qué se cambia y qué se ignora.
 
 ## 1. Lo que se usa tal cual
 
@@ -14,7 +14,7 @@
 | `RoutingProjection`, `Context`, `SearchVector` | `routing/` | Proyección `entidad × entidad` entre dos `WiGame`; `project_subjects`, `bool_mult`. |
 | `SExpressionRuntime` | `system/s_expression_runtime.py:32` | Verbos `check / assert / ingest / create / return` → `OperationResult(status, sinn, payload, reason)`. |
 | Serialización YAML de mundos | `system/wi_game_serialization.py`, `examples/*.yaml` | Formato `wigame_id, axis_a, axis_b, relation, Vi{1/0/∅}, Si{V/L/U}, facts[]`. |
-| Prototipo SHRDLU | `prototypes/shrdlu/` | Léxico, parser de inglés controlado → frames, `DialogState`, lowering a S-expr. |
+| Prototipo SHRDLU | `../desk/drawer/shrdlu/` | Léxico, parser de inglés controlado → frames, `DialogState`, lowering a S-expr. |
 
 ## 2. Lo que se cambia
 
@@ -36,7 +36,7 @@
 ## 4. Convenciones heredadas
 
 - Forma canónica externa `(R a b)`; interna en campos separados (`relation_id, subject_symbol_id, object_symbol_id`).
-- Tests: `pytest` desde `matrix/`, imports `from src.operational_model...`, builders (`build_system()`) en vez de fixtures, un archivo por módulo.
+- Tests: `pytest` desde la raíz del repo, imports `from src.operational_model...`, builders (`build_system()`) en vez de fixtures, un archivo por módulo.
 - Cuando `(R a b)` cabe en más de un `WiGame`, el runtime devuelve `status="ambiguous"` con `payload.candidates`; nunca elige en silencio.
 - **Nunca `p×p`**: ninguna estructura puede crecer con el cuadrado del número de símbolos del corpus
   (tres OOM el 2026-09-20). La intensidad se calcula sobre la lista de pares candidatos

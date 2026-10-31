@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
-_MATRIX_ROOT = Path(__file__).resolve().parents[1] / "matrix"
+_MATRIX_ROOT = Path(__file__).resolve().parents[2]
 if str(_MATRIX_ROOT) not in sys.path:
     sys.path.append(str(_MATRIX_ROOT))
 

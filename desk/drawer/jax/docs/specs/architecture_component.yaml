@@ -1,0 +1,38 @@
+id: matrix-architecture
+title: "Matrix Architecture Component Diagram"
+type: component
+version: "1.0"
+data:
+  nodes:
+    CanonicalHypertensor:
+      label: "CanonicalHypertensor (JAX VRAM)"
+      kind: "core"
+    MEELEngine:
+      label: "MEELEngine (API Facade)"
+      kind: "core"
+    RuleMatrixCompiler:
+      label: "RuleMatrixCompiler"
+      kind: "compiler"
+    Feeders:
+      label: "Ingestion Feeders (OWL/Atom)"
+      kind: "feeder"
+    LogicalSpace:
+      label: "LogicalSpace (Registry)"
+      kind: "registry"
+  edges:
+    - from: "Feeders"
+      to: "RuleMatrixCompiler"
+      relation: "feeds"
+      label: "Raw Rules & Facts"
+    - from: "RuleMatrixCompiler"
+      to: "CanonicalHypertensor"
+      relation: "compiles"
+      label: "SOP to Si Mask"
+    - from: "MEELEngine"
+      to: "CanonicalHypertensor"
+      relation: "queries"
+      label: "Tensor Projection"
+    - from: "MEELEngine"
+      to: "LogicalSpace"
+      relation: "uses"
+      label: "Symbol lookup"

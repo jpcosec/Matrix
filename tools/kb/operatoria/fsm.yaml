@@ -1,0 +1,26 @@
+# Operatoria de dominio: máquinas de estado finitas (circuitos/secuencias).
+# A diferencia de recetas, los ciclos son esperados: se validan alcanzabilidad
+# y equivalencia de estados, no aciclicidad.
+domain: fsm
+title: "Máquinas de estado finitas"
+
+relations:
+  precede:
+    name: "transitions to"
+    transitive: true
+  requiere:
+    name: "guarded by"
+    transitive: false
+  produce:
+    name: "emits"
+    transitive: false
+
+operations:
+  - {id: cierre_precede, kind: transitive_closure, relation: precede}
+  - {id: alcanzable, kind: reachability, relation: precede}
+  - {id: scc, kind: strongly_connected, relation: precede}
+  - {id: minimizar_estados, kind: minimize_states, relation: precede}
+
+errors:
+  - {id: estado_inalcanzable, description: "estado al que no se llega desde el inicial"}
+  - {id: guarda_inalcanzable, description: "guarda que nunca se satisface"}

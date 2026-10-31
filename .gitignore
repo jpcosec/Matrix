@@ -1,3 +1,11 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+roundtrip_test_state.json
+
+# SLDB runtime state: derived or ephemeral
+.sldb/runtime/cache/
+.sldb/runtime/locks/
+
+# herdr subagent coordination transcript
+.herdr-coordination.md

@@ -1,0 +1,190 @@
+doc_name: task-blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor
+sections:
+- path: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor
+  title: 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  breadcrumbs:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  about:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - blockmatrix desde el logicalsystem ensamblar el hipertensor
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor
+  level: 1
+  line_start: 20
+  line_end: 57
+- path: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - Rationale
+  about:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - blockmatrix desde el logicalsystem ensamblar el hipertensor
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 22
+  line_end: 27
+- path: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor/goal
+  title: Goal
+  breadcrumbs:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - Goal
+  about:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - blockmatrix desde el logicalsystem ensamblar el hipertensor
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 28
+  line_end: 33
+- path: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor/scope
+  title: Scope
+  breadcrumbs:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - Scope
+  about:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - blockmatrix desde el logicalsystem ensamblar el hipertensor
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 34
+  line_end: 39
+- path: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - Implementation Path
+  about:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - blockmatrix desde el logicalsystem ensamblar el hipertensor
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 40
+  line_end: 45
+- path: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor/validation
+  title: Validation
+  breadcrumbs:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - Validation
+  about:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - blockmatrix desde el logicalsystem ensamblar el hipertensor
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 46
+  line_end: 52
+- path: blockmatrix-desde-el-logicalsystem-ensamblar-el-hipertensor/done-when
+  title: Done When
+  breadcrumbs:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - Done When
+  about:
+  - 'BlockMatrix desde el LogicalSystem: ensamblar el hipertensor'
+  - blockmatrix desde el logicalsystem ensamblar el hipertensor
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 53
+  line_end: 57
+source_hash: ad157619a663a53178dc215480b2792346494fb3f4dbeaafa2716a983027dea7
+sections_version: '2'

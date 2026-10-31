@@ -1,4 +1,4 @@
-from prototypes.shrdlu.lowering import PrototypeHarness
+from desk.drawer.shrdlu.lowering import PrototypeHarness
 
 
 def test_prototype_can_lower_and_execute_put_command() -> None:

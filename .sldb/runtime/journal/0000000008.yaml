@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-inferencia-relacional-por-clausura-transitiva-matricial-testing-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: ae0379af9e35dcb2ae99878edef7632fc05563dec57273a7d3bab35f1add7924
+hash_c_after: null
+hash_d_before: a9c2b8d4ac73fd0c7a677e92fe1c37dd2cb4fe38a567b13a499a56cee0f047be
+hash_d_after: null
+hash_a_before: 0d8e7def8db30423ab7732dab212ea4d87ca55d3b2473feb2cfe9a05138a59b7
+hash_a_after: 3eb59298bc60ef346edff33ead9a174790d98a39541a1168ebc011a35620a7f1
+actor: null
+timestamp: 2026-09-24 02:50:21.341346+00:00
+previous_hash: 25805dd50aa2519bd1b32bf688f1dbabc8bc782ccb02f014c0a8325ee6dd8cbb
+entry_hash: d7ca60d438967108acb2b5c529cf5be7d4b9bffbfd5e89756364e5e43020a383

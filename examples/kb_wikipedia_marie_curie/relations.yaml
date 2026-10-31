@@ -1,0 +1,34 @@
+relations:
+  es:
+    name: is a / subclass of
+    transitive: true
+  instancia_de:
+    name: instance of
+    transitive: false
+  parte_de:
+    name: part of
+    transitive: true
+  ubicado_en:
+    name: located in
+    transitive: true
+  nace_en:
+    name: born in
+    transitive: false
+  muere_en:
+    name: died in
+    transitive: false
+  usa:
+    name: uses
+    transitive: false
+  causa:
+    name: causes
+    transitive: false
+  descubierto_por:
+    name: discovered by
+    transitive: false
+  miembro_de:
+    name: member of
+    transitive: true
+  premio:
+    name: awarded
+    transitive: false

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-canonicalhypertensor-jax-vram-allocation-closeout-to-close
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 18c538d84676b4d173e8661319019324be54c9b60cd271ac64340af0ee257bd6
+hash_c_after: null
+hash_d_before: 9513dcd8af1bf3b4be16723ba28c35afda1db6742acc268e1c3feb8e984f0f98
+hash_d_after: null
+hash_a_before: 70353e878d7f47bbf5d0f3444e2ce1eae91f3b310d02da290e109a3a92d6796f
+hash_a_after: a452456f4ce8f9f91b3e3ffc99d74e9365ed9ca60ee70f06c98d66f55293948b
+actor: null
+timestamp: 2026-09-24 03:22:48.042642+00:00
+previous_hash: dd7331982d5549b5402539cd47c7352827b0206ffa32b0a50ee7723b445e4d2b
+entry_hash: 946fc6b398a315f7370824d6fe163cf3cf19e2a0bee552bc28c10e9ba0f183ab

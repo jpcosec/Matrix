@@ -1,0 +1,15 @@
+operation: track_document_file
+address: RitualDoc:ritual-closeout
+field: null
+previous_value: null
+new_value: null
+hash_c_before: null
+hash_c_after: 0014f95c75e74c7ea4ea3429532b7a4c826fd8977a1baa7e5033b6007aabf9c8
+hash_d_before: null
+hash_d_after: 4ca583edb0973eddc434dda47ae3f774c0f6cde00d7d9e117561e50468791be5
+hash_a_before: fbe3be6974b9bb9405a3debe8dac285e3cfaba61f83cd0c9200117556128f552
+hash_a_after: c5337a7deaf294832de3203b83b4979689ae6b5bd4aba2c0bcc79543e7c53510
+actor: null
+timestamp: 2026-10-18 15:30:38.601420+00:00
+previous_hash: ce308db2b4bcd10e20e49666e2ccfe631cbe5858e53bb886602759a3731b7e9d
+entry_hash: 284660f43ece05d9b7c178cfc2a83ac29301ccfdf70f2a8a05fe54a6895f0bb6

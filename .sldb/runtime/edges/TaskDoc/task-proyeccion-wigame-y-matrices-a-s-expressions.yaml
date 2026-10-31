@@ -1,0 +1,579 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    name: task-proyeccion-wigame-y-matrices-a-s-expressions
+    model: TaskDoc
+    path: desk/tasks/task-proyeccion-wigame-y-matrices-a-s-expressions.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: 684bcbe729ee89fd81fe27715625226fe93c8276463b4eca657f207f1277f521
+    hash_d: 3e5ebbbc9cfdd5a33de3e1e3af001dbea10b5a7cda54eb6652114bd1c66c0614
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+    document_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    path: proyeccion-wigame-y-matrices-a-s-expressions
+    title: 'Proyeccion: WiGame y matrices a s-expressions'
+    breadcrumbs:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    about:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - proyeccion wigame y matrices a s expressions
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: proyeccion-wigame-y-matrices-a-s-expressions
+    level: 1
+    line_start: 20
+    line_end: 57
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+    document_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    path: proyeccion-wigame-y-matrices-a-s-expressions/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - Rationale
+    about:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - proyeccion wigame y matrices a s expressions
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 22
+    line_end: 27
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+    document_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    path: proyeccion-wigame-y-matrices-a-s-expressions/goal
+    title: Goal
+    breadcrumbs:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - Goal
+    about:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - proyeccion wigame y matrices a s expressions
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 28
+    line_end: 33
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+    document_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    path: proyeccion-wigame-y-matrices-a-s-expressions/scope
+    title: Scope
+    breadcrumbs:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - Scope
+    about:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - proyeccion wigame y matrices a s expressions
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 34
+    line_end: 39
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+    document_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    path: proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - Implementation Path
+    about:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - proyeccion wigame y matrices a s expressions
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 40
+    line_end: 45
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+    document_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    path: proyeccion-wigame-y-matrices-a-s-expressions/validation
+    title: Validation
+    breadcrumbs:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - Validation
+    about:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - proyeccion wigame y matrices a s expressions
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 46
+    line_end: 52
+  facets: {}
+- id: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+    document_id: TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+    path: proyeccion-wigame-y-matrices-a-s-expressions/done-when
+    title: Done When
+    breadcrumbs:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - Done When
+    about:
+    - 'Proyeccion: WiGame y matrices a s-expressions'
+    - proyeccion wigame y matrices a s expressions
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 53
+    line_end: 57
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions#proyeccion-wigame-y-matrices-a-s-expressions/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-proyeccion-wigame-y-matrices-a-s-expressions
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
+doc_name: task-proyeccion-wigame-y-matrices-a-s-expressions
+model_name: TaskDoc
+source_hash: 684bcbe729ee89fd81fe27715625226fe93c8276463b4eca657f207f1277f521
+content_hash: 3e5ebbbc9cfdd5a33de3e1e3af001dbea10b5a7cda54eb6652114bd1c66c0614
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

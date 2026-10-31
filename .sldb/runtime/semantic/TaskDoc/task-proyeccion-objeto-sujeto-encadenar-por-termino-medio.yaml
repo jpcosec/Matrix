@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-proyeccion-objeto-sujeto-encadenar-por-termino-medio.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: 6985625107e2bae47a62a0f56e1b2b67ddcf15f993a9f1d1950bd5c941388169

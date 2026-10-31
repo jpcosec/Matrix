@@ -1,0 +1,204 @@
+generated_at: '2026-09-20T05:27:54+00:00'
+kb_root: /tmp/kbcurie
+root_context: ctx:kb
+relations:
+  causa:
+    name: causes
+    transitive: false
+  descubierto_por:
+    name: discovered by
+    transitive: false
+  es:
+    name: is a / subclass of
+    transitive: true
+  instancia_de:
+    name: instance of
+    transitive: false
+  miembro_de:
+    name: member of
+    transitive: true
+  muere_en:
+    name: died in
+    transitive: false
+  nace_en:
+    name: born in
+    transitive: false
+  parte_de:
+    name: part of
+    transitive: true
+  premio:
+    name: awarded
+    transitive: false
+  ubicado_en:
+    name: located in
+    transitive: true
+  usa:
+    name: uses
+    transitive: false
+review:
+  total: 75
+  by_status:
+    pending: 0
+    approved: 75
+    rejected: 0
+  by_relation:
+    causa:
+      pending: 0
+      approved: 2
+      rejected: 0
+    descubierto_por:
+      pending: 0
+      approved: 7
+      rejected: 0
+    es:
+      pending: 0
+      approved: 25
+      rejected: 0
+    miembro_de:
+      pending: 0
+      approved: 8
+      rejected: 0
+    muere_en:
+      pending: 0
+      approved: 3
+      rejected: 0
+    nace_en:
+      pending: 0
+      approved: 4
+      rejected: 0
+    parte_de:
+      pending: 0
+      approved: 4
+      rejected: 0
+    premio:
+      pending: 0
+      approved: 10
+      rejected: 0
+    ubicado_en:
+      pending: 0
+      approved: 10
+      rejected: 0
+    usa:
+      pending: 0
+      approved: 2
+      rejected: 0
+excluded:
+  pending: 0
+  rejected: 0
+contexts:
+  root: ctx:kb
+  contexts:
+    ctx:kb:
+      parent: null
+      subcontexts:
+      - ctx:marie_curie
+      wigames: []
+      sources: []
+    ctx:marie_curie:
+      parent: ctx:kb
+      subcontexts: []
+      wigames:
+      - wigame:marie_curie:causa
+      - wigame:marie_curie:descubierto_por
+      - wigame:marie_curie:es
+      - wigame:marie_curie:miembro_de
+      - wigame:marie_curie:muere_en
+      - wigame:marie_curie:nace_en
+      - wigame:marie_curie:parte_de
+      - wigame:marie_curie:premio
+      - wigame:marie_curie:ubicado_en
+      - wigame:marie_curie:usa
+      sources:
+      - marie_curie
+projections: {}
+projections_truncated: false
+shared_symbols: {}
+alias_conflicts: 0
+aliases_applied: 4
+derived_facts: 0
+algebra:
+  paralelo_con:
+    transitive: false
+    commutative: true
+  precede:
+    transitive: true
+    commutative: false
+  sustituye_a:
+    transitive: true
+    commutative: false
+wigames:
+  wigame:marie_curie:causa:
+    path: kbcurie/wigames/wigame__marie_curie__causa.yaml
+    sha256: 6a86b96999f0d6d12380dcbf11f70f303a32fc53b56d98b091255c00863c0c8b
+    context_id: ctx:marie_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+  wigame:marie_curie:descubierto_por:
+    path: kbcurie/wigames/wigame__marie_curie__descubierto_por.yaml
+    sha256: 8d36c9a945b2f6da26ce72a11a88076b320f806cba282571ed63dbcd256bffcf
+    context_id: ctx:marie_curie
+    facts: 7
+    axis_a: 6
+    axis_b: 5
+  wigame:marie_curie:es:
+    path: kbcurie/wigames/wigame__marie_curie__es.yaml
+    sha256: 5a44b96921c30da8dc249076feedac5c9748fbdfd49ab26016dda83dcca3377b
+    context_id: ctx:marie_curie
+    facts: 25
+    axis_a: 23
+    axis_b: 19
+  wigame:marie_curie:miembro_de:
+    path: kbcurie/wigames/wigame__marie_curie__miembro_de.yaml
+    sha256: 6a61af0c731dad598f3d62387b618e763afeda7e59c2009cc1d2ae60d36f3d01
+    context_id: ctx:marie_curie
+    facts: 8
+    axis_a: 4
+    axis_b: 8
+  wigame:marie_curie:muere_en:
+    path: kbcurie/wigames/wigame__marie_curie__muere_en.yaml
+    sha256: a85edee36836546a016ce5c3fd7065c4003b9661e1ec76b476ee27c5387c1cdc
+    context_id: ctx:marie_curie
+    facts: 3
+    axis_a: 3
+    axis_b: 3
+  wigame:marie_curie:nace_en:
+    path: kbcurie/wigames/wigame__marie_curie__nace_en.yaml
+    sha256: 26d377916fe30ede3f544593f2e1784f17dd315d0d5b7042a4cc5bd0b2ce1f72
+    context_id: ctx:marie_curie
+    facts: 4
+    axis_a: 4
+    axis_b: 3
+  wigame:marie_curie:parte_de:
+    path: kbcurie/wigames/wigame__marie_curie__parte_de.yaml
+    sha256: 664340420a7e0cf9c8a7aff563ddf071191defd0af78140070c4c6cac771c8f2
+    context_id: ctx:marie_curie
+    facts: 4
+    axis_a: 4
+    axis_b: 3
+  wigame:marie_curie:premio:
+    path: kbcurie/wigames/wigame__marie_curie__premio.yaml
+    sha256: 348a0e5112e58e9735822c3aef39cc217cad15a78c789eab786c9251008710ee
+    context_id: ctx:marie_curie
+    facts: 6
+    axis_a: 2
+    axis_b: 5
+  wigame:marie_curie:ubicado_en:
+    path: kbcurie/wigames/wigame__marie_curie__ubicado_en.yaml
+    sha256: 47fb9d0493ea290f170cadf7baba8b488a17651cd6fff41ac98439b7b36ff327
+    context_id: ctx:marie_curie
+    facts: 10
+    axis_a: 9
+    axis_b: 6
+  wigame:marie_curie:usa:
+    path: kbcurie/wigames/wigame__marie_curie__usa.yaml
+    sha256: eb86cf7cfaadd3eedac3515c3dd0b943a43d3e2220a09471a73eec7a06fe5782
+    context_id: ctx:marie_curie
+    facts: 2
+    axis_a: 2
+    axis_b: 2
+totals:
+  facts: 71
+  wigames: 10
+  contexts: 1
+  projections: 0

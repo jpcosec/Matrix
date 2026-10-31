@@ -8,50 +8,80 @@ The project centers on **sense/meaning matrices**: a separation between truth (`
 
 ## What is in this repository
 
-- `src/operational_model/` contains the active proposition-first runtime with `Thing`, `Relation`, `Proposition`, `Fact`, `WiGame`, `Context`, `RoutingProjection`, and the kernel modules.
-- `src/operational_model/kernel/` contains the kernel-side formula, Boolean, bitwise, and typed-assertion layers.
-- `prototypes/shrdlu/` contains a separate prototype client that lowers controlled English into kernel/runtime operations.
-- `examples/` and `tests/` provide working schemas and executable reference scenarios.
-- `docs/README.md` is the entry point for the focused architecture and concepts docs.
+- `src/operational_model/` — runtime proposition-first: `Thing`, `Relation`, `Proposition`, `Fact`, `WiGame`, `Context`, `RoutingProjection`, matrices y sistema.
+- `src/operational_model/kernel/` — capa de fórmulas, booleana, bitwise y aserciones tipadas.
+- `tools/kb/` — harness de KB: convierte texto, código o specs en `WiGame`s context-scoped con revisión y verificación. Ver [`tools/kb/README.md`](tools/kb/README.md).
+- `examples/` — demos ejecutables, specs y KBs versionadas consultables offline. Ver [`examples/README.md`](examples/README.md).
+- `desk/drawer/shrdlu/` — prototipo separado que baja inglés controlado a operaciones del runtime.
+- `tests/` — suite completa (`pytest`, 255 tests).
+- `docs/README.md` — índice de arquitectura y conceptos.
 
 ## Quick start
-
-Install the package, run the tests, and try the separate SHRDLU prototype:
 
 ```bash
 pip install -e .
 pytest
-python prototypes/shrdlu/proto.py --once "Put the red block on the blue cube."
+
+# prototipo SHRDLU (inglés controlado)
+python desk/drawer/shrdlu/proto.py --once "Put the red block on the blue cube."
+
+# KB: de texto a WiGames consultables
+python -m tools.kb --kb kb machine                       # operatoria + FSM/recetas (sin LLM)
+python -m tools.kb --kb kb ingest
+python -m tools.kb --kb kb review all --decision approved --reviewer me
+python -m tools.kb --kb kb compile
+python -m tools.kb --kb kb reachability
+python -m tools.kb --kb kb query "(check wigame:ragout:precede (precede picar servir))"
 ```
 
 ## Core ideas
 
 - `W_i`: a logical context with its own admissible terms, relations, metadata, and facts.
-- `aRb` / `(R a b)`: the general relational form used by the active model.
-- `V_i`: the truth matrix for a context-relative relation over `axis_a x axis_b`.
-- `S_i`: the sense/applicability mask for the same relational space.
-- `kern:{symbol}`: the kernel namespace for non-relational atoms used by propositional formulas.
-- `SearchVector`: a local query vector inside a `WiGame`.
-- `RoutingProjection`: a projection between `WiGame` spaces.
-- fact provenance: observation, source, derivation, or confidence stored on `Fact` metadata.
-- `D_i`: the discriminative mask used to identify non-informative dimensions.
-- `sinnvoll` / `sinnlos` / `unsinnig`: statuses used to distinguish meaningful propositions, tautological or contradictory structure, and non-applicable propositions.
+- `(R a b)`: la forma relacional canónica del modelo activo.
+- `V_i`: la matriz de verdad para una relación context-relative sobre `axis_a × axis_b`.
+- `S_i`: la máscara de sentido/aplicabilidad del mismo espacio relacional.
+- `kern:{symbol}`: namespace del kernel para átomos no relacionales en fórmulas proposicionales.
+- `SearchVector`: vector de consulta local dentro de un `WiGame`.
+- `RoutingProjection`: proyección de sujetos entre `WiGame`s; no vacía sólo si comparten referente canónico.
+- `Hipertensor`: descartado. No hay almacén global de hechos; el estado vive en cada `WiGame`. El material diferido está en [`desk/drawer/jax/`](desk/drawer/jax/README.md).
+- `deduce()`: modus ponens trazado sobre la matriz de implicación, iterado a fixpoint, con proveniencia (`system/deduction.py`).
+- `Prov` / `tier`: esquema de proveniencia del hecho (`observed`, `confirmed`, `inferred`, `statistical`) y estado de curación (`core/evidence.py`).
+- operators S-expr: `check`, `assert`, `create`, `ingest`, `return`, `candidate`, `promote`, `reject`, `retract`, `why`, `define`, `project`.
+- orden: `RelationAlgebra` declara `irreflexive`/`antisymmetric`/`total`; `core/relations/order.py` valida acyclidad y extrae la secuencia.
+- término medio: `routing/middle_term.py` encadena objeto→sujeto entre dos `W`; `Si` corta la cadena.
+- reflexión: `system/reflection.py` reifica relaciones (`rel:`) y contextos (`ctx:`) como símbolos, para poder predicar sobre ellos.
+- reglas cuantificadas: `kernel/rule_schema.py`, `(if (es ?x verdura) (es ?x comestible))`.
+- partición: `system/partition.py` usa `D_i` y reuso del término medio para decidir dónde cortar; `system/hypertensor.py` ensambla el bloque `WCi ⊕ Si ⊕ Vi`.
+- guardas de forma: `system/shape_guard.py` rechaza `W` degenerados tipo `(* pedrito es_hermano_de_maria)`.
+- provenance: fuente, confianza o derivación guardadas en el `Fact`.
+- `D_i`: máscara discriminativa que identifica dimensiones no informativas.
+- `sinnvoll` / `sinnlos` / `unsinnig`: proposición significativa, estructura tautológica/contradictoria, o fuera del espacio lógico.
 
-## Layered view
+## Campos semánticos
 
-The repository spans a few related layers:
+De un conjunto de celdas `(R a b)` sin orden a algo proyectable como lenguaje: orden, término medio, reflexión y cuantificación. El hipertensor es un **árbol de búsqueda** — cada nodo un `W_i` cerrado, cada padre ruteando a sus hijos, y los cortes elegidos por poder discriminativo.
 
-1. Natural-language input and parsing.
-2. Symbol grounding and registry management.
-3. Context modeling with admissible terms, relations, and fact metadata.
-4. Matrix construction for truth, sense, and discrimination.
-5. Operations such as querying, validation, composition, and bridge routing.
+- [`docs/semantic_fields.md`](docs/semantic_fields.md) — diseño, mediciones y límites.
+
+## Contexto y desambiguación
+
+Un `WiGame` **no** es un par de ejes bajo una relación: es ese par **bajo un contexto**. El contexto es parte de la identidad (`context_id`), `Si` es local, y los contextos forman un árbol. Acumular contextos estrecha el referente de un símbolo en vez de multiplicar homónimos; la identidad entre contextos se decide por curación (`aliases`) y se materializa como `RoutingProjection`.
+
+- [`docs/context_and_wigame.md`](docs/context_and_wigame.md)
+- [`docs/operatoria_recetas.md`](docs/operatoria_recetas.md) — contenido secuencial (instrucciones) como máquina de estados.
+
+## Contenido secuencial
+
+Para instrucciones y procedimientos hace falta una **operatoria de dominio** autorada (relaciones, álgebra, operaciones admisibles, errores tipificados). Con eso, `Vi[estado][estado]` es la matriz de transición, `Si` es la guarda, el cierre transitivo da alcanzabilidad y las firmas de salida dan minimización de estados.
+
+```bash
+python -m tools.kb --kb kb reachability     # cierre vs oráculo BFS, ciclos, inalcanzables, equivalencias
+python -m tools.kb --kb kb shared --symbol cebolla
+```
 
 ## Runtime surface
 
 The active direct surface is s-expression-first.
-
-Current examples include:
 
 ```text
 (create symbol dog perro)
@@ -63,32 +93,35 @@ Current examples include:
 (check wigame:animales (es dog mammal))
 ```
 
-## Schema and examples
+## Schema
 
-- Sample runtime data still lives under `examples/`
-- Prototype dialogue demo lives under `prototypes/shrdlu/`
-- Schema definition remains at `schemas/schema.yaml`
+- `schemas/schema.yaml` — forma serializada de un `WiGame` (Li/Vi/Si/facts).
+- `docs/canonical_forms_and_ingestion.md` — forma canónica externa `(R a b)`.
 
 ## Running tests
 
 ```bash
-pytest
+pytest                 # suite completa
+pytest -q tests/test_kb_machine.py tests/test_kb_fanout.py
 ```
-
-Some tests exercise the unified engine and therefore require the optional JAX dependency to be installed.
 
 ## Documentation map
 
-- `docs/README.md` - docs index
-- `docs/proposition_first_architecture.md` - stable architectural direction
-- `docs/canonical_forms_and_ingestion.md` - canonical proposition format and ingestion rules
-- `docs/kernel_symbol_policy.md` - kernel-vs-Wi distinction, execution layers, and atom policy
-- `docs/rebuild_and_migration_policy.md` - migration and task policy
-- `docs/architecture.md` - package layout and responsibility split
-- `docs/concepts.md` - philosophical and proposition-first foundations
-- `docs/data_models.md` - primary data structures
-- `docs/operations.md` - ingestion, evaluation, routing, and reconstruction flows
-- `docs/storage_boundary.md` - YAML-first persistence boundary and Postgres compatibility path
+- `docs/README.md` — índice de docs
+- `docs/proposition_first_architecture.md` — dirección arquitectónica estable
+- `docs/context_and_wigame.md` — WiGame bajo contexto, árbol de contextos y desambiguación
+- `docs/operatoria_recetas.md` — operatoria de dominio: cómo leer una receta como máquina de estados
+- `docs/kb_fanout_harness.md` — harness de KB: pipeline, mediciones, stress y capacidades
+- `docs/canonical_forms_and_ingestion.md` — forma canónica y reglas de ingesta
+- `docs/kernel_symbol_policy.md` — kernel vs Wi, capas de ejecución y política de átomos
+- `docs/rebuild_and_migration_policy.md` — política de migración
+- `docs/architecture.md` — layout de paquetes y responsabilidades
+- `docs/concepts.md` — vocabulario filosófico y proposition-first
+- `docs/data_models.md` — estructuras primarias
+- `docs/operations.md` — ingesta, evaluación, ruteo y reconstrucción
+- `docs/storage_boundary.md` — YAML-first y compatibilidad Postgres
+- `tools/kb/README.md` — manual del harness (CLI, layout, gates, extensión)
+- `examples/README.md` — catálogo de ejemplos, demos y KBs versionadas
 
 ## License
 

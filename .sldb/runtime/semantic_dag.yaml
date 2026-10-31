@@ -1,0 +1,96 @@
+nodes:
+- id: artifact:task
+  parents: []
+- id: concept:architecture
+  parents: []
+- id: context:migration
+  parents: []
+- id: layer
+  parents: []
+- id: layer.topology
+  parents:
+  - layer
+- id: primitive:checklist
+  parents: []
+- id: primitive:condition
+  parents: []
+- id: primitive:edge
+  parents: []
+- id: primitive:operator
+  parents: []
+- id: primitive:routine
+  parents: []
+- id: representation
+  parents: []
+- id: representation.markdown
+  parents:
+  - representation
+- id: source
+  parents: []
+- id: source.document
+  parents:
+  - source
+- id: source.document.markdown
+  parents:
+  - source.document
+- id: type
+  parents: []
+- id: type.desk
+  parents:
+  - type
+- id: type.desk.inbox-note
+  parents:
+  - type.desk
+- id: type.relation
+  parents:
+  - type
+- id: type.relation.instance
+  parents:
+  - type.relation
+- id: type.relation.type
+  parents:
+  - type.relation
+- id: type.workflow
+  parents:
+  - type
+- id: type.workflow.checklist
+  parents:
+  - type.workflow
+- id: type.workflow.condition
+  parents:
+  - type.workflow
+- id: type.workflow.edge
+  parents:
+  - type.workflow
+- id: type.workflow.operator
+  parents:
+  - type.workflow
+- id: type.workflow.pill
+  parents:
+  - type.workflow
+- id: type.workflow.ritual
+  parents:
+  - type.workflow
+- id: type.workflow.routine
+  parents:
+  - type.workflow
+- id: type.workflow.task
+  parents:
+  - type.workflow
+- id: workspace
+  parents: []
+- id: workspace.desk
+  parents:
+  - workspace
+- id: workspace.desk.inbox
+  parents:
+  - workspace.desk
+- id: workspace.desk.primitives
+  parents:
+  - workspace.desk
+- id: workspace.desk.routines
+  parents:
+  - workspace.desk
+- id: workspace:desk
+  parents: []
+equivalences: {}

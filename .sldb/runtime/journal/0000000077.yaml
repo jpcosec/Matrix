@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 09a3a4aa0ff3613383311ad6fc9940f9786bfeea0890e96a95ae20cf400db0e7
+hash_c_after: null
+hash_d_before: c5a54c887f376442e297bf3b049ef0db8b353ca17a6b48017663be6bdc48bf0a
+hash_d_after: null
+hash_a_before: 92eef4004a055c4f70b42abf056fd753b69b4d676dd3cc6c12bab752946ce67f
+hash_a_after: d0d90dfa9be2ed1b0ea3b6c18d85307f8ed200bba17b378ff0ebf2dcb2133f0b
+actor: null
+timestamp: 2026-09-24 02:51:04.890568+00:00
+previous_hash: b9367287ca51ba1f6dc269daa39bfaf2402a2103b9f30e4a91c2a36c6159a753
+entry_hash: e00513e17a80a34c35b90caff859508db03b41111e435530430bbb49910687c5

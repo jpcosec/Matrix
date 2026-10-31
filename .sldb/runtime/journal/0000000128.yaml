@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-rulematrixcompiler-sop-reduction-execution-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 7028c906340f6127fe9589ee225b76131cc8fbc419dfe4694bd6179b3dbbc800
+hash_c_after: null
+hash_d_before: 0c2d6ed4d7e799e2384a898d2507d0f16754a038091a7987e63f03e2995d1737
+hash_d_after: null
+hash_a_before: 0c90bbd6ca96001c9c60ec1345b9dde5763cb5a968a03404eb6d1c6926feceeb
+hash_a_after: e6a5cc72943ee5fec387df81fc18791b8b0d6fdf5851d96f89c6ee6d1b76ee64
+actor: null
+timestamp: 2026-09-24 03:22:24.621646+00:00
+previous_hash: 63b45cfb2e6073ea888bcc48e7af5935027176f14bb56eb8dae2d053be1e3f42
+entry_hash: 29bb806c76ae282fca009d57390bd1b37c736f68956d4dd33c6069b772cce035

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: PillDoc:pill-migracion-a-jax
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 061fd545c34d796d8196974b76d1f8262576a1f11508eb56bf83dc51ed63f113
+hash_c_after: null
+hash_d_before: cb3570a7533ab8c70cbe5fb23ded5b667529aa5c06cf37f9f411ce75a49e72f6
+hash_d_after: null
+hash_a_before: 6202decb6da2050af8f55b51e316618dc51efd8097a50107d9e0f597dc3286d1
+hash_a_after: 8aef3940d68dced40e36f32278deff1eb2e05ec16ec3b397a4b7f6e268e90856
+actor: null
+timestamp: 2026-09-24 03:23:34.143778+00:00
+previous_hash: c122d7efa3539cf857ac38977501184acd3cf169554ca621297994cd9c4f6477
+entry_hash: 21682f93a448b0f21de39dd873c0fe4264638ca98a489c531b305bdc658a903e

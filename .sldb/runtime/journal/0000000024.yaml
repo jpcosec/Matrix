@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-inferencia-relacional-por-clausura-transitiva-matricial-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 70125df53abe99bf764cde1afba255359ef8d721bf6f5f868b91c85db135a429
+hash_c_after: null
+hash_d_before: 77c7bd27d81ec119cf00e3735f7c621c72c5d5e10f28d99a0c133b44ccd2066d
+hash_d_after: null
+hash_a_before: b1e1bb759818b011a26e806ba11082dd6c3590fb01e14281e3a0e0505e665b47
+hash_a_after: 66753b4bb69c48363a5b170076089f1aa077ced31776d96afe1e0245811e6bff
+actor: null
+timestamp: 2026-09-24 02:50:32.148351+00:00
+previous_hash: c0715fa2f0cec6db1bc2c98060244876359ea29f5bd7d77f59042e57ddfb04df
+entry_hash: bf5c516a54f11ce237a7f3cc34b186d11470d4a37faef63219c0bf2441315f46

@@ -1,0 +1,89 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://model/DeskFAQDoc
+  node_type: sldb_model
+  semantics:
+    name: DeskFAQDoc
+    model_ref: deskops.models:DeskFAQDoc
+    path: /home/jp/proyectos/SLDB_1/deskops/deskops/models/faq.py
+    version: 1
+    canonical: false
+    family: null
+    semantic_tags:
+    - representation.markdown
+    - source.document.markdown
+    - type.documentation.faq
+    - workspace.docs.faq
+    base_models: []
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.documentation.faq
+  node_type: semantic_tag
+  semantics:
+    tag: type.documentation.faq
+  facets: {}
+- id: sldb://semantic_tag/workspace.docs.faq
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.docs.faq
+  facets: {}
+- id: sldb://field/DeskFAQDoc.title
+  node_type: sldb_field
+  semantics:
+    name: title
+    kind: string
+    required: true
+    model: DeskFAQDoc
+    description: Primary H1 heading for the FAQ document.
+  facets: {}
+- id: sldb://field/DeskFAQDoc.body
+  node_type: sldb_field
+  semantics:
+    name: body
+    kind: string
+    required: true
+    model: DeskFAQDoc
+    description: Full FAQ body after the H1, including questions, answers, command
+      examples, and cross-references to atom docs.
+  facets: {}
+edges:
+- source: sldb://model/DeskFAQDoc
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/DeskFAQDoc
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/DeskFAQDoc
+  target: sldb://semantic_tag/type.documentation.faq
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/DeskFAQDoc
+  target: sldb://semantic_tag/workspace.docs.faq
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/DeskFAQDoc
+  target: sldb://field/DeskFAQDoc.title
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/DeskFAQDoc
+  target: sldb://field/DeskFAQDoc.body
+  relation: has_field
+  metadata:
+    origin: schema
+model_name: DeskFAQDoc

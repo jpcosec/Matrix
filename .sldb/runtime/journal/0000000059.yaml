@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-activate-to-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 8346e8c5609c0af78014e47fd2b82929dc0261aee353bb4362e81da4bf58fb9a
+hash_c_after: null
+hash_d_before: 37baf7d704267be661b19d14ea9612a58e91c56c34042e4b6a836d706e4791f3
+hash_d_after: null
+hash_a_before: f13eea4147d88a2955ebd4f57666b1f2bae2523535fbc473ee6d632d7fa986a7
+hash_a_after: c1a9fb6adf2e9de627e58e94ae993d853adda9bb08f7cced1143428672d6822d
+actor: null
+timestamp: 2026-09-24 02:50:54.412967+00:00
+previous_hash: 132221c3055e5ea73053ed5a05d1e93c188fedd8fefe4b9df6c2dafc26371d68
+entry_hash: 77aa18c8f9920a1234fdf91193fb5ae8ad81bd57c8e5c548d4d5ce89f55e9078

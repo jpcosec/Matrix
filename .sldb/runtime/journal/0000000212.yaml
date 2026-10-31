@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-canonicalhypertensor-jax-vram-allocation-ready-for-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 5786f6e4a22e2c13fbc4b7358254e8fcd3e1e4dee65693bc04456aa01cad19ec
+hash_c_after: null
+hash_d_before: 584435617c4b1ccafa5a9c24c85e6b1e3fb02b034fe2c9751468342ffdef6e65
+hash_d_after: null
+hash_a_before: dc7c35a150e4bb91964dcdaf972e4752b8b38e95960710f03aef0c6f8dbdc3a2
+hash_a_after: 7b464105752aabbdfad5d3cb351e630ff96014eeba67b0ea58b627ac2705f137
+actor: null
+timestamp: 2026-09-24 03:23:20.819590+00:00
+previous_hash: b8cceb4a3e0a3b6c6c2628fe4b0c2fb70d1628d2b0e4f31e9060d2a8179e85eb
+entry_hash: 068f2f4046d6186035c9220f88ecb4f40f426462d38a518d097a61f3fcdac7ff

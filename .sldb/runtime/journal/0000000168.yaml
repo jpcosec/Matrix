@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-canonicalhypertensor-jit-bitwise-operations-activate-to-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: fffc1fdeec9b61d80ea33e0600d33af51fee5c70358067b72e1eeb510feac06b
+hash_c_after: null
+hash_d_before: 1da6c4bf22bf873fe9dbbc2aee2af8a2f683dddf64456a3ca517bc92db8ecb99
+hash_d_after: null
+hash_a_before: 85b3b365b4b925486b61c35fbd6a60f8b3309aee39b2011f9163973a38a0c54a
+hash_a_after: d8e02d8eba138cdd942ece90c5853a1d089e00f068b4ac7b12c3e128fd3deb12
+actor: null
+timestamp: 2026-09-24 03:22:51.470373+00:00
+previous_hash: 4fd31db72d229537ff6c566ec57e6fa2655a0b2afde3da0bc45584094ed772a6
+entry_hash: 3d8a535b25de4d61a5ca4734f4df7d9704e928565a32941d19fae8b5118e10df

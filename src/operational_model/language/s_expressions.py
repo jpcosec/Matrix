@@ -8,7 +8,12 @@ SExpression = str | list["SExpression"]
 
 
 def parse_s_expression(source: str) -> SExpression:
-    """Parses one s-expression into nested Python lists and atoms."""
+    """Parses one s-expression into nested Python lists and atoms.
+
+    Runtime `evidence` arguments use an atom `evidence:<json>` with no
+    spaces (single quotes may wrap JSON strings), for example
+    `evidence:{'tier':'statistical','curation':'proposed'}`.
+    """
 
     raw_tokens = _tokenize(source)
     if not raw_tokens:

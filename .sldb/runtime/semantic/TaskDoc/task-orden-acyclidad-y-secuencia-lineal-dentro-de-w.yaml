@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-orden-acyclidad-y-secuencia-lineal-dentro-de-w.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: 083eb01d6ff67a5e2069c495ab79ac5a0767f7e677556bf0f21cc804eb33819c

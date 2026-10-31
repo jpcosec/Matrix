@@ -1,0 +1,24 @@
+# Bechamel: receta con cadena de sustitución transitiva.
+domain: recetas
+kind: recipe
+context: bechamel
+title: "Salsa bechamel"
+initial: derretir
+edges:
+  - {from: derretir, to: agregar_harina}
+  - {from: agregar_harina, to: agregar_leche}
+  - {from: agregar_leche, to: cocinar}
+  - {from: cocinar, to: sazonar}
+requires:
+  - {step: agregar_leche, needs: roux_dorado}
+  - {step: cocinar, needs: fuego_bajo}
+uses:
+  - {step: derretir, item: manteca}
+  - {step: agregar_harina, item: harina}
+  - {step: agregar_leche, item: leche}
+  - {step: sazonar, item: nuez_moscada}
+produces:
+  - {step: cocinar, result: salsa}
+sustituciones:
+  - {from: manteca, to: aceite}
+  - {from: aceite, to: margarina}

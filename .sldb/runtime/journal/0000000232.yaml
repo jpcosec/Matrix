@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-rulematrixcompiler-sop-reduction-close
+field: null
+previous_value: null
+new_value: null
+hash_c_before: f01546d4ce77de089e62e90f07d6fb2fb3f3c9aa38e75aae7c812d8bafd7c6f7
+hash_c_after: null
+hash_d_before: 24f80ef13a02924960c18d8a93370ad92c43bfaa35768c72480a93bdcf88c619
+hash_d_after: null
+hash_a_before: f43fce37d827cc59663ce3995982b322ae03fc0b6e68879edd91754a1a87f6f1
+hash_a_after: d3fe6908e16903cb58af83da34437a68bf687fd4bc326ac135040e8dab44f34b
+actor: null
+timestamp: 2026-09-24 03:23:33.016925+00:00
+previous_hash: 5f23851d3359146bf7d9d7079a11efa59909c1eaf9eb0936e21dfd16af367450
+entry_hash: 824325a7009531ade59b9bb586d4eac199a10307081abc903f519333d21012e2

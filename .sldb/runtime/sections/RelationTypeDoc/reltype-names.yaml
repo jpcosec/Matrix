@@ -1,0 +1,45 @@
+doc_name: reltype-names
+sections:
+- path: names
+  title: names
+  breadcrumbs:
+  - names
+  about:
+  - names
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: names
+  level: 1
+  line_start: 12
+  line_end: 16
+- path: names/description
+  title: Description
+  breadcrumbs:
+  - names
+  - Description
+  about:
+  - names
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 14
+  line_end: 16
+source_hash: 2166f9e353e9726713148eb93362cb79bcac0a02528f852580b82e0405559832
+sections_version: '2'

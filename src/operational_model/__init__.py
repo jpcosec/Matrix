@@ -1,10 +1,14 @@
 """Public API for the proposition-first operational model."""
 
 from .core import (
+    CURATION,
+    TIERS,
+    Evidence,
     Fact,
     LiSpace,
     Name,
     Proposition,
+    Prov,
     Relation,
     RelationAlgebra,
     RouteTargetKind,
@@ -12,6 +16,9 @@ from .core import (
     Symbol,
     Thing,
     TruthValue,
+    append_history,
+    make_evidence,
+    validate_evidence,
 )
 from .kernel import (
     AndFormula,
@@ -70,7 +77,17 @@ from .kernel import (
 from .language import parse_s_expression
 from .matrices import BooleanMatrix, SiMatrix, ViMatrix
 from .routing import Context, ContextRoute, RoutingProjection, SearchVector
-from .system import LogicalSystem, OperationResult, SExpressionRuntime, WiGame
+from .system import (
+    Candidate,
+    LogicalSystem,
+    OperationResult,
+    SExpressionRuntime,
+    WiGame,
+    deduce,
+    promote_candidate,
+    register_candidate,
+    reject_candidate,
+)
 
 __all__ = [
     "BooleanMatrix",
@@ -115,6 +132,18 @@ __all__ = [
     "Symbol",
     "Thing",
     "TruthValue",
+    "CURATION",
+    "TIERS",
+    "Candidate",
+    "Evidence",
+    "Prov",
+    "append_history",
+    "deduce",
+    "make_evidence",
+    "promote_candidate",
+    "register_candidate",
+    "reject_candidate",
+    "validate_evidence",
     "ViMatrix",
     "WI_RELATION_FAMILIES",
     "WiGame",

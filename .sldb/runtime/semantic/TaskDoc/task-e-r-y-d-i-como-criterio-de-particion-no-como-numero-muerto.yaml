@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: ab22b79bcd312611e6ec20745eca164f56ef546d596db2b227f2827373474b6d

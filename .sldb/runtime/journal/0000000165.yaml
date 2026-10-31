@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-canonicalhypertensor-jax-vram-allocation-execution-to-activate
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 86e3560ebf187f736a82031465a5d0b0caac38f94c3d8eb64e7529267c16f85b
+hash_c_after: null
+hash_d_before: 1f85728afb86e68010cf1c884b957322ecae6e92f45b2738e74365413d5741a2
+hash_d_after: null
+hash_a_before: 85fc6863a0aeb127d43d7720be986fd9ab9c52343d032979e24e2e1cd553b1df
+hash_a_after: f49e83e0dc06150965c568cb16443a7bcae13a92e061b7e253555a88575b633d
+actor: null
+timestamp: 2026-09-24 03:22:49.371694+00:00
+previous_hash: c4f2a30fd81046fa4b468119061c3ce055b283f5ef1e408d105c7ca8e60e228d
+entry_hash: 80b9e9dce2f20145db0fb2b897a884bb230f6ed7ec94606ba4d35fe7c0a8a4b5

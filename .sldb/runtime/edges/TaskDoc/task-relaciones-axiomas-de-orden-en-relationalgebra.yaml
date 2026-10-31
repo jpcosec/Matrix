@@ -1,0 +1,579 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    name: task-relaciones-axiomas-de-orden-en-relationalgebra
+    model: TaskDoc
+    path: desk/tasks/task-relaciones-axiomas-de-orden-en-relationalgebra.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: 013b2840ee5869ae0565879aa1afe01dcc348c097bb03cf617d3a5c2a6f1fbdb
+    hash_d: 1a926241afdd7fdc166311cb64f525d3d1451af0f9ef22a5787b6685dbd6a35f
+  facets: {}
+- id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+    document_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: relaciones-axiomas-de-orden-en-relationalgebra
+    title: 'Relaciones: axiomas de orden en RelationAlgebra'
+    breadcrumbs:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    about:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - relaciones axiomas de orden en relationalgebra
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: relaciones-axiomas-de-orden-en-relationalgebra
+    level: 1
+    line_start: 20
+    line_end: 57
+  facets: {}
+- id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+    document_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: relaciones-axiomas-de-orden-en-relationalgebra/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - Rationale
+    about:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - relaciones axiomas de orden en relationalgebra
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 22
+    line_end: 27
+  facets: {}
+- id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+    document_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: relaciones-axiomas-de-orden-en-relationalgebra/goal
+    title: Goal
+    breadcrumbs:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - Goal
+    about:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - relaciones axiomas de orden en relationalgebra
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 28
+    line_end: 33
+  facets: {}
+- id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+    document_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: relaciones-axiomas-de-orden-en-relationalgebra/scope
+    title: Scope
+    breadcrumbs:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - Scope
+    about:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - relaciones axiomas de orden en relationalgebra
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 34
+    line_end: 39
+  facets: {}
+- id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+    document_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - Implementation Path
+    about:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - relaciones axiomas de orden en relationalgebra
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 40
+    line_end: 45
+  facets: {}
+- id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+    document_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: relaciones-axiomas-de-orden-en-relationalgebra/validation
+    title: Validation
+    breadcrumbs:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - Validation
+    about:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - relaciones axiomas de orden en relationalgebra
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 46
+    line_end: 52
+  facets: {}
+- id: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+    document_id: TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+    path: relaciones-axiomas-de-orden-en-relationalgebra/done-when
+    title: Done When
+    breadcrumbs:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - Done When
+    about:
+    - 'Relaciones: axiomas de orden en RelationAlgebra'
+    - relaciones axiomas de orden en relationalgebra
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 53
+    line_end: 57
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra#relaciones-axiomas-de-orden-en-relationalgebra/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-relaciones-axiomas-de-orden-en-relationalgebra
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
+doc_name: task-relaciones-axiomas-de-orden-en-relationalgebra
+model_name: TaskDoc
+source_hash: 013b2840ee5869ae0565879aa1afe01dcc348c097bb03cf617d3a5c2a6f1fbdb
+content_hash: 1a926241afdd7fdc166311cb64f525d3d1451af0f9ef22a5787b6685dbd6a35f
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

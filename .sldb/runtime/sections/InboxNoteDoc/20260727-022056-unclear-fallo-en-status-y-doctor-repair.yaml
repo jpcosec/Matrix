@@ -1,0 +1,85 @@
+doc_name: 20260727-022056-unclear-fallo-en-status-y-doctor-repair
+sections:
+- path: kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-closed
+  title: 'kind: unclear
+
+    sender_project: Matrix
+
+    created_at: 2026-07-27T02:20:56
+
+    status: closed'
+  breadcrumbs:
+  - 'kind: unclear
+
+    sender_project: Matrix
+
+    created_at: 2026-07-27T02:20:56
+
+    status: closed'
+  about:
+  - 'kind: unclear
+
+    sender_project: Matrix
+
+    created_at: 2026-07-27T02:20:56
+
+    status: closed'
+  - kind unclear sender project matrix created at 2026 07 27t02 20 56 status closed
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: kind-unclear-sender-project-matrix-created-at-2026-07-27t02-20-56-status-closed
+  level: 2
+  line_start: 2
+  line_end: 7
+- path: fallo-en-status-y-doctor-repair
+  title: Fallo en status y doctor repair
+  breadcrumbs:
+  - Fallo en status y doctor repair
+  about:
+  - Fallo en status y doctor repair
+  - fallo en status y doctor repair
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: fallo-en-status-y-doctor-repair
+  level: 1
+  line_start: 8
+  line_end: 27
+- path: fallo-en-status-y-doctor-repair/resolution
+  title: Resolution
+  breadcrumbs:
+  - Fallo en status y doctor repair
+  - Resolution
+  about:
+  - Fallo en status y doctor repair
+  - fallo en status y doctor repair
+  - Resolution
+  - resolution
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: resolution
+  level: 2
+  line_start: 12
+  line_end: 27
+source_hash: 040ccfa7e714dbd52cea4cf276095cfaf04b1f22abd980f3e414fbdba2f50da6
+sections_version: '2'

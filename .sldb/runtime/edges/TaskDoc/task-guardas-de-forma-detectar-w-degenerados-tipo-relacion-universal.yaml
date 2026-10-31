@@ -1,0 +1,579 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    name: task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    model: TaskDoc
+    path: desk/tasks/task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: ddd7853d2c6f1e3c62ce2433e69001aaa5a3307f7e3db2a580ac3985fb1e1aa1
+    hash_d: 5e75ce6cf1e266cbbbf0b12722ad7a2f6bd722dac6e4701b0dc66262e692193d
+  facets: {}
+- id: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    document_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    title: 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    breadcrumbs:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    about:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - guardas de forma detectar w degenerados tipo relacion universal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    level: 1
+    line_start: 20
+    line_end: 57
+  facets: {}
+- id: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+    document_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - Rationale
+    about:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - guardas de forma detectar w degenerados tipo relacion universal
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 22
+    line_end: 27
+  facets: {}
+- id: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+    document_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+    title: Goal
+    breadcrumbs:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - Goal
+    about:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - guardas de forma detectar w degenerados tipo relacion universal
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 28
+    line_end: 33
+  facets: {}
+- id: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+    document_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+    title: Scope
+    breadcrumbs:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - Scope
+    about:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - guardas de forma detectar w degenerados tipo relacion universal
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 34
+    line_end: 39
+  facets: {}
+- id: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+    document_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - Implementation Path
+    about:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - guardas de forma detectar w degenerados tipo relacion universal
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 40
+    line_end: 45
+  facets: {}
+- id: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+    document_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+    title: Validation
+    breadcrumbs:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - Validation
+    about:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - guardas de forma detectar w degenerados tipo relacion universal
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 46
+    line_end: 52
+  facets: {}
+- id: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+    document_id: TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+    path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+    title: Done When
+    breadcrumbs:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - Done When
+    about:
+    - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+    - guardas de forma detectar w degenerados tipo relacion universal
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 53
+    line_end: 57
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal#guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
+doc_name: task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+model_name: TaskDoc
+source_hash: ddd7853d2c6f1e3c62ce2433e69001aaa5a3307f7e3db2a580ac3985fb1e1aa1
+content_hash: 5e75ce6cf1e266cbbbf0b12722ad7a2f6bd722dac6e4701b0dc66262e692193d
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

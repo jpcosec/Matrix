@@ -1,0 +1,24 @@
+# Ragout: receta secuencial. Debe ser acíclica y con precondiciones.
+domain: recetas
+kind: recipe
+context: ragout
+title: "Ragout de champiñones"
+initial: picar
+edges:
+  - {from: picar, to: sofreir}
+  - {from: sofreir, to: desglasar}
+  - {from: desglasar, to: agregar_caldo}
+  - {from: agregar_caldo, to: cocinar_lento}
+  - {from: cocinar_lento, to: servir}
+requires:
+  - {step: desglasar, needs: fondo_dorado}
+  - {step: cocinar_lento, needs: fuego_lento}
+  - {step: servir, needs: punto_sal}
+uses:
+  - {step: picar, item: cebolla}
+  - {step: picar, item: champinones}
+  - {step: sofreir, item: manteca}
+  - {step: desglasar, item: vino}
+  - {step: agregar_caldo, item: caldo}
+produces:
+  - {step: cocinar_lento, result: salsa_espesa}

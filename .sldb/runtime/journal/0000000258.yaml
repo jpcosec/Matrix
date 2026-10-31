@@ -1,0 +1,15 @@
+operation: track_document_file
+address: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+field: null
+previous_value: null
+new_value: null
+hash_c_before: null
+hash_c_after: 68623c5ee09395a41e89f15f31c561ed3f6e8ec090911c34a00fc18f346034e4
+hash_d_before: null
+hash_d_after: 1c78dd82c6c3a02d5889ce1f6fbbf09a7c9336b1e984c5d0f39beb0e936d7f7f
+hash_a_before: 38368e8820d960bc839fa7331b0ae7e89bca89212e3567c7e749ba8f6e38072a
+hash_a_after: 0b9cff10c8132ebc0449ca96c6105453925ad7321cf1b4c2c5f74b0ef5827e22
+actor: null
+timestamp: 2026-09-24 04:19:11.900726+00:00
+previous_hash: 7a487692e8c37a39a808f835cdfcdc91a8319b7e29527d59e1546c970116d674
+entry_hash: 8c97f82a3300cfd0fa1f29e5d443acc9e8cc3770aadc0922a20bb94c30f72743

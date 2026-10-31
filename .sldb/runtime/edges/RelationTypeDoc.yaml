@@ -1,0 +1,203 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://model/RelationTypeDoc
+  node_type: sldb_model
+  semantics:
+    name: RelationTypeDoc
+    model_ref: sldb.models.relation_type_doc:RelationTypeDoc
+    path: /home/jp/proyectos/SLDB_1/sldb/src/sldb/models/relation_type_doc.py
+    version: 1
+    canonical: false
+    family: relation
+    semantic_tags:
+    - layer.topology
+    - representation.markdown
+    - source.document.markdown
+    - type.relation.type
+    base_models: []
+  facets: {}
+- id: sldb://semantic_tag/layer.topology
+  node_type: semantic_tag
+  semantics:
+    tag: layer.topology
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.relation.type
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.type
+  facets: {}
+- id: sldb://field/RelationTypeDoc.title
+  node_type: sldb_field
+  semantics:
+    name: title
+    kind: string
+    required: true
+    model: RelationTypeDoc
+    description: Relation type title shown as the H1 heading.
+  facets: {}
+- id: sldb://field/RelationTypeDoc.name
+  node_type: sldb_field
+  semantics:
+    name: name
+    kind: string
+    required: true
+    model: RelationTypeDoc
+    description: Vocabulary token for the relation type, e.g. booked_by or implements;
+      the relation_type every edge carries.
+  facets: {}
+- id: sldb://field/RelationTypeDoc.direction
+  node_type: sldb_field
+  semantics:
+    name: direction
+    kind: enum
+    required: false
+    enum:
+    - directed
+    - undirected
+    model: RelationTypeDoc
+    description: Directed edges read source->target only; undirected edges are materialized
+      in both directions.
+  facets: {}
+- id: sldb://field/RelationTypeDoc.cardinality
+  node_type: sldb_field
+  semantics:
+    name: cardinality
+    kind: enum
+    required: false
+    enum:
+    - one_to_one
+    - one_to_many
+    - many_to_one
+    - many_to_many
+    model: RelationTypeDoc
+    description: How many targets one source may have and how many sources one target
+      may have; validated at ingest.
+  facets: {}
+- id: sldb://field/RelationTypeDoc.axis
+  node_type: sldb_field
+  semantics:
+    name: axis
+    kind: string
+    required: false
+    model: RelationTypeDoc
+    description: Predicate axis this relation answers (WHAT, WHY, HOW, WHERE, WHEN,
+      PROVENANCE, ...); registered as an sldb predicate so prose links share the vocabulary.
+  facets: {}
+- id: sldb://field/RelationTypeDoc.source_types
+  node_type: sldb_field
+  semantics:
+    name: source_types
+    kind: stringlist
+    required: false
+    model: RelationTypeDoc
+    description: 'Node classes allowed as source: model names (with inheritance) or
+      index node types; empty means any.'
+  facets: {}
+- id: sldb://field/RelationTypeDoc.target_types
+  node_type: sldb_field
+  semantics:
+    name: target_types
+    kind: stringlist
+    required: false
+    model: RelationTypeDoc
+    description: 'Node classes allowed as target: model names (with inheritance) or
+      index node types; empty means any.'
+  facets: {}
+- id: sldb://field/RelationTypeDoc.condition
+  node_type: sldb_field
+  semantics:
+    name: condition
+    kind: string
+    required: false
+    model: RelationTypeDoc
+    description: sldb --where predicate every edge of this type inherits unless the
+      RelationDoc overrides it; may name fields of the subject in braces, e.g. capacity
+      >= {party_size}.
+  facets: {}
+- id: sldb://field/RelationTypeDoc.description
+  node_type: sldb_field
+  semantics:
+    name: description
+    kind: string
+    required: true
+    model: RelationTypeDoc
+    description: Markdown section describing the meaning and intended use of the relation
+      type; it is the verb's motive in a lexicon.
+  facets: {}
+edges:
+- source: sldb://model/RelationTypeDoc
+  target: sldb://semantic_tag/layer.topology
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RelationTypeDoc
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RelationTypeDoc
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RelationTypeDoc
+  target: sldb://semantic_tag/type.relation.type
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.title
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.name
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.direction
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.cardinality
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.axis
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.source_types
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.target_types
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.condition
+  relation: has_field
+  metadata:
+    origin: schema
+- source: sldb://model/RelationTypeDoc
+  target: sldb://field/RelationTypeDoc.description
+  relation: has_field
+  metadata:
+    origin: schema
+model_name: RelationTypeDoc

@@ -1,4 +1,4 @@
-from prototypes.shrdlu import ParseError, build_shrdlu_lexicon, parse_controlled_english
+from desk.drawer.shrdlu import ParseError, build_shrdlu_lexicon, parse_controlled_english
 
 
 def test_parse_imperative_put_sentence() -> None:

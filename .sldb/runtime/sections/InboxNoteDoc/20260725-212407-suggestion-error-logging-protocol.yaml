@@ -1,0 +1,85 @@
+doc_name: 20260725-212407-suggestion-error-logging-protocol
+sections:
+- path: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
+  title: 'kind: suggestion
+
+    sender_project: Matrix
+
+    created_at: 2026-07-25T21:24:07
+
+    status: closed'
+  breadcrumbs:
+  - 'kind: suggestion
+
+    sender_project: Matrix
+
+    created_at: 2026-07-25T21:24:07
+
+    status: closed'
+  about:
+  - 'kind: suggestion
+
+    sender_project: Matrix
+
+    created_at: 2026-07-25T21:24:07
+
+    status: closed'
+  - kind suggestion sender project matrix created at 2026 07 25t21 24 07 status closed
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-closed
+  level: 2
+  line_start: 2
+  line_end: 7
+- path: error-logging-protocol
+  title: Error Logging Protocol
+  breadcrumbs:
+  - Error Logging Protocol
+  about:
+  - Error Logging Protocol
+  - error logging protocol
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: error-logging-protocol
+  level: 1
+  line_start: 8
+  line_end: 19
+- path: error-logging-protocol/disposition
+  title: Disposition
+  breadcrumbs:
+  - Error Logging Protocol
+  - Disposition
+  about:
+  - Error Logging Protocol
+  - error logging protocol
+  - Disposition
+  - disposition
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: disposition
+  level: 2
+  line_start: 12
+  line_end: 19
+source_hash: a8c564841a7e5e21b40ca50e7f5ea5534cafa23bbc9fb4fa4af5e90bb28ab360
+sections_version: '2'

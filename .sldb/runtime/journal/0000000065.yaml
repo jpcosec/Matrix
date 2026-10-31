@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-activate
+field: null
+previous_value: null
+new_value: null
+hash_c_before: a051af22bae90ce4a84314395da115ca01104f6cee82cbe286d5e84e7d02913a
+hash_c_after: null
+hash_d_before: 3041fa6659bdc77ea05d5aeec1d515a684b81491a31df490b8e6a8d9834c9e8c
+hash_d_after: null
+hash_a_before: e32ae6795baebfdea407196f24993e9b601034c8560567c5a6ed2b539836daf8
+hash_a_after: b6cf4f603db76e951eaf7d5650dff4269e3c290b84c8b6c08bfc6e33e9462ad6
+actor: null
+timestamp: 2026-09-24 02:50:58.144891+00:00
+previous_hash: 69f55d2101d3b0d86c09948ded79843bf3483b141ea369ee60e2e4be7db725ad
+entry_hash: 8dec0ee5bf1313e1763c41fde856c31e27bd9dd0c544c8ffefb18ddb8c6cc28a

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-rulematrixcompiler-si-mask-encoding-has-validation
+field: null
+previous_value: null
+new_value: null
+hash_c_before: c53bf884dbf28c79dbbd4bdce7d32b4a5bb3251b107c7a88e884bbcfc26889dc
+hash_c_after: null
+hash_d_before: 281e806c4652caac4ee539ff46d1c329a8876a15baba2d3479133f98c9a6fae3
+hash_d_after: null
+hash_a_before: 6305e6e619d6633949cd7a094f61b1dfc2fc85486542c8c676b4a469cec12732
+hash_a_after: b9e3d2d457c9d299034641cf87c88887f137ec0bd24adbf425b2d6194d5a3a59
+actor: null
+timestamp: 2026-09-24 03:22:42.290234+00:00
+previous_hash: ed0ce76ed8d8de2364ffb1e05feafa95f5dac77844c77f0e87752f795443e100
+entry_hash: df9022c5d668c0af184c48f9ceb3b6441ec47eb018ba510944bdc2dbd63815cb

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-canonicalhypertensor-jax-vram-allocation-has-validation
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 0fb8f9c76a0da10828aebe65b66b4931178b3bb9b87f8c10129551c658191c51
+hash_c_after: null
+hash_d_before: 3d30b5a432f1d2d537d844e2749c204b3a465fab7b5c57e3da172d27a527eac7
+hash_d_after: null
+hash_a_before: 7a0edfa6866fac95cf0a0c8ef561fdd02c263d22827dd79385314496704ec436
+hash_a_after: 4a4c59fdf837091bd310af3d832825e8f2f9e5152d5ea2e38573d7de4c26ed12
+actor: null
+timestamp: 2026-09-24 03:22:26.980850+00:00
+previous_hash: b6e9abf0590308377be1e73b35c4dfaa86d53ac0bf727be550232bfaf41e057a
+entry_hash: 3428ab20f370b285239b0fab8a3052e39173e3d2e6e93f5e7bc208e244f2aac5

@@ -1,0 +1,190 @@
+doc_name: task-orden-acyclidad-y-secuencia-lineal-dentro-de-w
+sections:
+- path: orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  title: 'Orden: acyclidad y secuencia lineal dentro de W'
+  breadcrumbs:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  about:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - orden acyclidad y secuencia lineal dentro de w
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: orden-acyclidad-y-secuencia-lineal-dentro-de-w
+  level: 1
+  line_start: 20
+  line_end: 57
+- path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - Rationale
+  about:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - orden acyclidad y secuencia lineal dentro de w
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 22
+  line_end: 27
+- path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/goal
+  title: Goal
+  breadcrumbs:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - Goal
+  about:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - orden acyclidad y secuencia lineal dentro de w
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 28
+  line_end: 33
+- path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/scope
+  title: Scope
+  breadcrumbs:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - Scope
+  about:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - orden acyclidad y secuencia lineal dentro de w
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 34
+  line_end: 39
+- path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - Implementation Path
+  about:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - orden acyclidad y secuencia lineal dentro de w
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 40
+  line_end: 45
+- path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/validation
+  title: Validation
+  breadcrumbs:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - Validation
+  about:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - orden acyclidad y secuencia lineal dentro de w
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 46
+  line_end: 52
+- path: orden-acyclidad-y-secuencia-lineal-dentro-de-w/done-when
+  title: Done When
+  breadcrumbs:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - Done When
+  about:
+  - 'Orden: acyclidad y secuencia lineal dentro de W'
+  - orden acyclidad y secuencia lineal dentro de w
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 53
+  line_end: 57
+source_hash: 083eb01d6ff67a5e2069c495ab79ac5a0767f7e677556bf0f21cc804eb33819c
+sections_version: '2'

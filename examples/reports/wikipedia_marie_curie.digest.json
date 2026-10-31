@@ -1,0 +1,77 @@
+{
+  "name": "wikipedia_marie_curie",
+  "generated_at": "2026-09-20T05:27:54+00:00",
+  "kb_root": "/tmp/kbcurie",
+  "source": {},
+  "totals": {
+    "facts": 71,
+    "wigames": 10,
+    "contexts": 1,
+    "projections": 0
+  },
+  "ingest": {
+    "candidates": 77,
+    "unparseable": 0,
+    "accepted": 76,
+    "proposals": 75,
+    "pending": 75,
+    "rejected": 1,
+    "conflicts": 0,
+    "contexts": [
+      "marie_curie"
+    ],
+    "relations": {
+      "marie_curie:causa": 2,
+      "marie_curie:descubierto_por": 7,
+      "marie_curie:es": 25,
+      "marie_curie:miembro_de": 8,
+      "marie_curie:muere_en": 3,
+      "marie_curie:nace_en": 4,
+      "marie_curie:parte_de": 4,
+      "marie_curie:premio": 10,
+      "marie_curie:ubicado_en": 10,
+      "marie_curie:usa": 2
+    }
+  },
+  "review": {
+    "pending": 0,
+    "approved": 75,
+    "rejected": 0
+  },
+  "contexts": {
+    "count": 2,
+    "root": "ctx:kb",
+    "list": [
+      "ctx:kb",
+      "ctx:marie_curie"
+    ]
+  },
+  "algebra": {
+    "paralelo_con": {
+      "transitive": false,
+      "commutative": true
+    },
+    "precede": {
+      "transitive": true,
+      "commutative": false
+    },
+    "sustituye_a": {
+      "transitive": true,
+      "commutative": false
+    }
+  },
+  "derived_facts": 0,
+  "aliases_applied": 4,
+  "projections": {
+    "count": 0,
+    "truncated": false,
+    "top": []
+  },
+  "shared_symbols": {},
+  "artifact_sha256": {
+    "manifest": "d9b39d1ee60aa0895344852b430aebc54f5688832869a46024303ffd11c7fd74",
+    "contexts": "50dec70e7f08ff41573311dcfe8d1d3c193f207177647abfc7c6dd5f4c08cd6f",
+    "operatoria": null,
+    "shared": "5248848949c3f25e619e430498ce1790320dec2518896e3adaa748a81fe8a942"
+  }
+}

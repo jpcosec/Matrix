@@ -1,0 +1,23 @@
+---
+# operator-xxx
+id: operator-task-meelengine-core-api-facade-close
+# active | archived
+status: archived
+# Atomic runtime action, e.g., set_field, append_list
+action: set_field
+# Payload path modified by the operator
+target: status
+# Value used by the operator action
+value: closed
+# e.g., system:deskops
+tags:
+- primitive:operator
+---
+
+# Close task
+
+## Summary
+
+_Summarize the state transition this operator performs._
+
+Closes the task in the operational runtime.

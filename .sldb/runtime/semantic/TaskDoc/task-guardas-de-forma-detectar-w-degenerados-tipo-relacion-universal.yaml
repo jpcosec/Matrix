@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: ddd7853d2c6f1e3c62ce2433e69001aaa5a3307f7e3db2a580ac3985fb1e1aa1

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: TaskDoc:task-proyeccion-objeto-sujeto-encadenar-por-termino-medio
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 2af9d5eb703e9d93096bf370e9bbe0ff0b1e514dde54ea68e3799591ed417be7
+hash_c_after: null
+hash_d_before: 8ec61fa53a534260009b34adccbf3aecccccb4406f1b8c85d10b501be8fcb27b
+hash_d_after: null
+hash_a_before: 23d35a1edd3c4ac1fe6a5be9125e1d97886a605b2b06df074d3f38f0be94811f
+hash_a_after: ee863ae148b368e8efa6c5d738316d415ef453e96677523cf98e88cae7b3eb38
+actor: null
+timestamp: 2026-09-24 04:19:09.774504+00:00
+previous_hash: e50edd90ed1f42ef71ca964691fb2f46f97b1de1c2162855bee006ee8bbb2c37
+entry_hash: 1b2dddab193434d772c052d8b6775455b8e37dcbf5c41be6c87333fcc2a3881e

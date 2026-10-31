@@ -1,0 +1,190 @@
+doc_name: task-guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+sections:
+- path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  title: 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  breadcrumbs:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  about:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - guardas de forma detectar w degenerados tipo relacion universal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal
+  level: 1
+  line_start: 20
+  line_end: 57
+- path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - Rationale
+  about:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - guardas de forma detectar w degenerados tipo relacion universal
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 22
+  line_end: 27
+- path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/goal
+  title: Goal
+  breadcrumbs:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - Goal
+  about:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - guardas de forma detectar w degenerados tipo relacion universal
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 28
+  line_end: 33
+- path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/scope
+  title: Scope
+  breadcrumbs:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - Scope
+  about:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - guardas de forma detectar w degenerados tipo relacion universal
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 34
+  line_end: 39
+- path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - Implementation Path
+  about:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - guardas de forma detectar w degenerados tipo relacion universal
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 40
+  line_end: 45
+- path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/validation
+  title: Validation
+  breadcrumbs:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - Validation
+  about:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - guardas de forma detectar w degenerados tipo relacion universal
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 46
+  line_end: 52
+- path: guardas-de-forma-detectar-w-degenerados-tipo-relacion-universal/done-when
+  title: Done When
+  breadcrumbs:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - Done When
+  about:
+  - 'Guardas de forma: detectar W degenerados tipo relacion universal'
+  - guardas de forma detectar w degenerados tipo relacion universal
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 53
+  line_end: 57
+source_hash: ddd7853d2c6f1e3c62ce2433e69001aaa5a3307f7e3db2a580ac3985fb1e1aa1
+sections_version: '2'

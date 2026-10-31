@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-implementar-logicalspace-registry-bi-direccional-has-closeout-evidence
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 73f6e484c5150276e9894d3678798904e33331547f4afb7a4dfb4a8f9b16da33
+hash_c_after: null
+hash_d_before: ac73c194f3e4ce551e1ca17e9ecbfb904c93797989e666d1208c044b508345ae
+hash_d_after: null
+hash_a_before: 7d43eb532c028f4b46235d1b2e6174b2b26e79447943bc9ae31a23623e023259
+hash_a_after: cf6601e4d0ba7ebee4180ee72897c92b17aceb4dd2fc9b8f4d6c60768d5fc987
+actor: null
+timestamp: 2026-09-24 03:22:32.802292+00:00
+previous_hash: b5eae8d888cb8698bea43e4c65222e08b6f8403980d442673c06551a655d746a
+entry_hash: 59759b5221d3b940f35cd53b0e604f981aa99af1457d8c74dd76968ceaf221d4

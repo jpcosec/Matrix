@@ -1,0 +1,15 @@
+operation: untrack_document
+address: TaskDoc:task-canonicalhypertensor-jax-vram-allocation
+field: null
+previous_value: null
+new_value: null
+hash_c_before: f33cde8fda06ec2505853f6629ec46573ea6e93f0c226ef8c3ff66ef8985296d
+hash_c_after: null
+hash_d_before: 5083f988150725a544ddfb310173cc0febff2a291cd173695245a426ade1037b
+hash_d_after: null
+hash_a_before: d1ba8cd2ccd6ce43ba43910c71aa40600276683cce821a436f135ee09c2cde70
+hash_a_after: d285217929667cb32dc8d08aa374efa0eea8e7e78d95855d25c437f8f1c61531
+actor: null
+timestamp: 2026-09-24 03:23:39.009754+00:00
+previous_hash: 692d1d7241f4d4dd10305ff51dd142b25e6f52c9d0377a8475074948562183c3
+entry_hash: 54dfe9f5a8a22e54646b067fbcf81f48806da5599f9b4f20bb7e64b50a589f98

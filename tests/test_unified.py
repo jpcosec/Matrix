@@ -2,7 +2,7 @@ import pytest
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent / ".."))
-from src.unified_engine import UnifiedMatrixEngine, TruthValue, NLParser
+from src.operational_model.system.unified_engine import UnifiedMatrixEngine, TruthValue, NLParser
 import yaml
 import tempfile
 import os

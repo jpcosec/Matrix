@@ -1,0 +1,15 @@
+operation: untrack_document
+address: RoutineDoc:routine-task-implementar-logicalspace-registry-bi-direccional
+field: null
+previous_value: null
+new_value: null
+hash_c_before: e482110319cf05926330467e647df02394e5b880023690680265670fe1f962d7
+hash_c_after: null
+hash_d_before: 0727da0c7ca6fe402e395a17111afac26f440f97248ad2b0623fc86531b2443f
+hash_d_after: null
+hash_a_before: 096c5926f36c2ec6fbf8e84ad29056263c71468ed5cc3cacffbaec67bfaed075
+hash_a_after: 35c533611e24eea05d5f2cc06954a4c5aadf611fe8df2c8e9e53c3ec55abf4e8
+actor: null
+timestamp: 2026-09-24 03:23:36.312047+00:00
+previous_hash: 5d1e4dd3ca97e49d2524371e22980369434d57ae30291a9ed8516dd27b59e652
+entry_hash: 311eb3690b11e272bd772a90e5862c81e58fc91aa4eb569a44897653a37ecfdb

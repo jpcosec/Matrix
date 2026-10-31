@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-vectorizacion-bitwise-denso-de-booleanmatrix-close-to-complete
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 020e4e5af4d67cec88c16e6ecd5cd8f31772b3c5a63c8bd1cf190d0b87fe996d
+hash_c_after: null
+hash_d_before: 945e9034a1aa5facdab37ee0900ba95e03cf142300519f94111bd83099bd2dd9
+hash_d_after: null
+hash_a_before: 961bf9f3d2b1b4cf13de7f3c94988643fb09c4ca60e7e2cd05f0fcbebef0cee8
+hash_a_after: cfe84b3ec7d09c4d788ee7c5d9851f6db9e701e99f665e35ab2e21b01a49e7f0
+actor: null
+timestamp: 2026-09-24 02:50:55.636929+00:00
+previous_hash: 18ff619854c614b1e2d6af88aca4fd6cc7f865167e15ba0be196dac0582cd258
+entry_hash: 3f8b1c9ed03b333b71185fa2ebbb957e37fdff0daa81807804a91e60eefaf024

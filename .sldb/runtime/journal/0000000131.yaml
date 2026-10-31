@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-canonicalhypertensor-jax-vram-allocation-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 21ee602dfa061d5ac43323186f0da891bbe1a7735b0ccd2529c7c6d1f175181b
+hash_c_after: null
+hash_d_before: 8047c27231399881345129eb73b3db1421247e3baf0242139cd1c3cc76457c37
+hash_d_after: null
+hash_a_before: 6512eb187adbcfcda75bcff73d41ebd387f14cd1e9fa4142988294507b5615ab
+hash_a_after: 7a0edfa6866fac95cf0a0c8ef561fdd02c263d22827dd79385314496704ec436
+actor: null
+timestamp: 2026-09-24 03:22:26.290530+00:00
+previous_hash: 8bb21b529f213865deb9e746c1aac43806e2eb0e3e5125431fa683acd38d17da
+entry_hash: b6e9abf0590308377be1e73b35c4dfaa86d53ac0bf727be550232bfaf41e057a

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: TaskDoc:task-inferencia-deductiva-proposicional-matricial
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 92c31bc27b7f447161b22654c3a23f926ab994a1285c4984c9fef4abde3bda0f
+hash_c_after: null
+hash_d_before: 069459ed0fc1fb01b5ecf04048dbfbab275784f5a94100e5d0838590289f0208
+hash_d_after: null
+hash_a_before: e2d7887b04a8f8f00fab6b5f608beecb6702c3cdd8dee84be858bb3cca583ea0
+hash_a_after: 0844450fa9465ee4cff600da758079150ef659edbf533da891b966d439d469fb
+actor: null
+timestamp: 2026-09-24 02:51:09.825982+00:00
+previous_hash: 67128d25b34a4a9c84f2a95b0cf5c18b3126bd0c46cb9d87a0794d21a8f69354
+entry_hash: 9caf52717d88633c855c930fcc5a81e6d3b2f629855831e31f31346b3ecf1281

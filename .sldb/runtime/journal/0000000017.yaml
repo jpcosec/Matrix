@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-has-validation
+field: null
+previous_value: null
+new_value: null
+hash_c_before: e551108f7684e4e49dca82a80d588f80d4dce347be6df61450ce736ee5dd4778
+hash_c_after: null
+hash_d_before: f695ea4b4c3e16e868e0f2839e73c86f75444252004f7ebd0cff8ac5978fed9b
+hash_d_after: null
+hash_a_before: 3400e82fe96aad56c0d4b5d3829be46a3f40fe03d82ac6647f144c036ac42693
+hash_a_after: 166b5e504e38357794ceee4676fe1b283c10267bb4d55ae286c18519c4bd9609
+actor: null
+timestamp: 2026-09-24 02:50:27.553908+00:00
+previous_hash: 2616882728dfb27a3e5dadd3ef1dfb7dde02177ab3c054bd11915617d6a5d99e
+entry_hash: cdf7fa0d5e2367e34daae959f6098d6b42bc9c345a3506497abdc3404fe96254

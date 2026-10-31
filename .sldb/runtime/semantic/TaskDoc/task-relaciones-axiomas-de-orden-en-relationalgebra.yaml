@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-relaciones-axiomas-de-orden-en-relationalgebra.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: 013b2840ee5869ae0565879aa1afe01dcc348c097bb03cf617d3a5c2a6f1fbdb

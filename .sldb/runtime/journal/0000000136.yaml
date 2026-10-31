@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-canonicalhypertensor-jit-bitwise-operations-has-validation
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 63ee725d2269ebe72f800fc89d371b7d56cfe7a05b1be4716fe762a73340ad9b
+hash_c_after: null
+hash_d_before: 56e1b12a90c6924ca9fa4a41ef5d60b7b609c87e7705cc21b123a44ee5f57cd9
+hash_d_after: null
+hash_a_before: 3498060af9d71988b3bafbefd043a4d8f6e0e62aa2897f3a8eca678cd21461d0
+hash_a_after: 84c2266570b35f43ba1da5e721f01f414500bec9b9862b9a6b45810d2c595979
+actor: null
+timestamp: 2026-09-24 03:22:29.302115+00:00
+previous_hash: f80a7bf506323d5fad7de1c80f146fbc05fef2f214acb4b548f7dd446b33c23c
+entry_hash: ce63e8fc87d4b6b8ff175e4c1cbcac6789c502839d38b7157783e57cb9ff4a9c

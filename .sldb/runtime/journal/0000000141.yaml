@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-implementar-atomfeeder-ready-for-closeout
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 438e40f238b3db07c8d8efcbce6968f9001e9a1374705be2cf8eaf70d756e768
+hash_c_after: null
+hash_d_before: a1920b9e2838fa201ed12e67d3a28ffe3718bee4977e82435f335dc25c0e4030
+hash_d_after: null
+hash_a_before: 447d5da3f1a358e743ec8c53b5e2df419c65b5683a4865ad425bf1508437851d
+hash_a_after: 7d43eb532c028f4b46235d1b2e6174b2b26e79447943bc9ae31a23623e023259
+actor: null
+timestamp: 2026-09-24 03:22:32.282394+00:00
+previous_hash: 96e6fa6e479f530bf390ed7c2380eee926ad87e88fd0dd2a333c4331d941a177
+entry_hash: b5eae8d888cb8698bea43e4c65222e08b6f8403980d442673c06551a655d746a

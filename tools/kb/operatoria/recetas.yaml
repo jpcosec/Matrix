@@ -1,0 +1,37 @@
+# Operatoria de dominio: recetas de cocina.
+# Cómo leer una receta como máquina de estados. Este archivo es la spec
+# autorada (no extraída): define relaciones, álgebra, operaciones y errores.
+domain: recetas
+title: "Lectura de recetas como máquina de estados"
+
+relations:
+  precede:
+    name: "precede"
+    transitive: true
+  requiere:
+    name: "requires"
+    transitive: false
+  usa:
+    name: "uses"
+    transitive: false
+  produce:
+    name: "produces"
+    transitive: false
+  sustituye_a:
+    name: "substitutes"
+    transitive: true
+  paralelo_con:
+    name: "parallel with"
+    commutative: true
+
+operations:
+  - {id: cierre_precede, kind: transitive_closure, relation: precede}
+  - {id: orden_aciclico, kind: acyclic, relation: precede}
+  - {id: alcanzable, kind: reachability, relation: precede}
+  - {id: guarda_precondicion, kind: guard_check, relation: requiere}
+  - {id: sustitucion_transitiva, kind: transitive_closure, relation: sustituye_a}
+
+errors:
+  - {id: ciclo, description: "precede contiene un ciclo: la receta no termina"}
+  - {id: precondicion_insatisfecha, description: "paso ejecutado sin su precondición"}
+  - {id: sustituible_incompatible, description: "sustitución que rompe el sentido del paso"}

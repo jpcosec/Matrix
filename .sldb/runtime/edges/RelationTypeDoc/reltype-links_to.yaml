@@ -1,0 +1,60 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://relation_type/links_to
+  node_type: relation_type
+  semantics:
+    title: links_to
+    name: links_to
+    direction: directed
+    cardinality: many_to_many
+    axis: WHERE
+    source_types:
+    - sldb_store
+    target_types:
+    - sldb_store
+    condition: ''
+    description: 'The store links that store under an alias (`stores add`): it reads
+      its documents and inherits its models.'
+    doc: reltype-links_to
+  facets: {}
+- id: sldb://semantic_tag/layer.topology
+  node_type: semantic_tag
+  semantics:
+    tag: layer.topology
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.relation.type
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.type
+  facets: {}
+edges:
+- source: sldb://relation_type/links_to
+  target: sldb://model/sldb_store
+  relation: applies_to_source
+  metadata:
+    origin: schema
+- source: sldb://relation_type/links_to
+  target: sldb://model/sldb_store
+  relation: applies_to_target
+  metadata:
+    origin: schema
+doc_name: reltype-links_to
+model_name: RelationTypeDoc
+source_hash: da9bbb9c0a5a3c43b4b90ecd544516e3f78dfc80c104b77bae20413c816f3b39
+content_hash: 1017bc62148d2d3ec9622073d0b8a50c430cb0ec2d790e143afc602e519a1886
+contract_hash: 57b63063959eb2f0b721697bc626d10bc4d960672ed03fa04f9d0a5e1f499699
+semantic_tags:
+- layer.topology
+- representation.markdown
+- source.document.markdown
+- type.relation.type

@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-rulematrixcompiler-sop-reduction-ready-for-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 7d53f42d94eccc16b80f1e02d319bd956b518593a131db2b2fef7ad01cdc41c6
+hash_c_after: null
+hash_d_before: 9801d74f4b3f168c86cedb228789ed9027ad9f0fff06810439e4dfa5d6f65285
+hash_d_after: null
+hash_a_before: d3fe6908e16903cb58af83da34437a68bf687fd4bc326ac135040e8dab44f34b
+hash_a_after: 6202decb6da2050af8f55b51e316618dc51efd8097a50107d9e0f597dc3286d1
+actor: null
+timestamp: 2026-09-24 03:23:33.566742+00:00
+previous_hash: 824325a7009531ade59b9bb586d4eac199a10307081abc903f519333d21012e2
+entry_hash: c122d7efa3539cf857ac38977501184acd3cf169554ca621297994cd9c4f6477

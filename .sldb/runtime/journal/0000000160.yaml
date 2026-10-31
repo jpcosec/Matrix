@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-rulematrixcompiler-sop-reduction-has-validation
+field: null
+previous_value: null
+new_value: null
+hash_c_before: f1e4d634fc199890c1d1aa9a5d26371e76c0f1ba8f812515f3626f9349b7a858
+hash_c_after: null
+hash_d_before: de34353a381d0ea79d7876a2bca2b2041377f77adc4a2c1e2ef80cb85437f230
+hash_d_after: null
+hash_a_before: fe96f625b3157a7ec2eae27dcccf37abdba40f840fbae5c460222d06fa1ea530
+hash_a_after: 2d7fb90441a767747cb8861a18f368647772813414dc47f7cdf7c32623ef1243
+actor: null
+timestamp: 2026-09-24 03:22:45.537922+00:00
+previous_hash: 15452736260e6e531db56dd39f426b1414ec3ec41118454dda326b5a7605fd9f
+entry_hash: c641faad7dd9bbc2d9106a4f0ab2028e29d6b4170dd2cf78168b04d55b326484

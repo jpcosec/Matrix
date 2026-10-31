@@ -1,0 +1,16 @@
+operation: inherit_model
+address: DeskFAQDoc
+field: null
+previous_value: null
+new_value:
+  origin: deskops
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 78cddcc1bf949e0a92449771affa220786b96a46a63e66fb146544e87ab6f8cf
+hash_a_after: 78cddcc1bf949e0a92449771affa220786b96a46a63e66fb146544e87ab6f8cf
+actor: null
+timestamp: 2026-10-18 22:15:39.554413+00:00
+previous_hash: 1e6628e9caba9a04fa7b5c578ca55659812599f5be601d35cc082f80a69b6a01
+entry_hash: a0ee1319069405890e61f723796f7da610e8b8279a5706b92104804ed6ed1d91

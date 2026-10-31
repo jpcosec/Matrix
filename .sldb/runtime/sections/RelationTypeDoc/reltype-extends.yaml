@@ -1,0 +1,45 @@
+doc_name: reltype-extends
+sections:
+- path: extends
+  title: extends
+  breadcrumbs:
+  - extends
+  about:
+  - extends
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: extends
+  level: 1
+  line_start: 13
+  line_end: 17
+- path: extends/description
+  title: Description
+  breadcrumbs:
+  - extends
+  - Description
+  about:
+  - extends
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 15
+  line_end: 17
+source_hash: b8afd042eec8642deb7a4bddf948a36889905ba28c9402062b58207854042b77
+sections_version: '2'

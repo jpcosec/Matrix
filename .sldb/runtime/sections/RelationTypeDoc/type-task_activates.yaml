@@ -1,0 +1,47 @@
+doc_name: type-task_activates
+sections:
+- path: task-activates
+  title: Task activates
+  breadcrumbs:
+  - Task activates
+  about:
+  - Task activates
+  - task activates
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: task-activates
+  level: 1
+  line_start: 13
+  line_end: 17
+- path: task-activates/description
+  title: Description
+  breadcrumbs:
+  - Task activates
+  - Description
+  about:
+  - Task activates
+  - task activates
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 15
+  line_end: 17
+source_hash: 82694800f31844ed3b86b5913f2cbf02eaebf24f4143a8a4542a64374d9217b5
+sections_version: '2'

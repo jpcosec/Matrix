@@ -34,12 +34,12 @@ This matters because a proposition can be false yet meaningful, or impossible to
 
 ## Local and routed spaces
 
-- `WiGame` is the local language game where propositions and facts are evaluated.
-- `Context` is the routing structure that can point to `WiGame` instances or other `Context` instances.
+- `WiGame` is the local language game where propositions and facts are evaluated. It is **(axes + relation) under a context**: the context, not the axes alone, fixes what is meaningful and true. See [WiGame, Context and Disambiguation](./context_and_wigame.md).
+- `Context` is the routing tree: it points to `WiGame` leaves or to subcontexts, and deeper contexts refine admissible coordinates.
 - `SearchVector` expresses a local query inside one game.
-- `RoutingProjection` expresses how subjects project from one game into another.
+- `RoutingProjection` expresses how subjects project from one game into another; shared canonical referents are what make a projection non-empty.
 
-This split keeps local semantics and cross-space navigation decoupled.
+This split keeps local semantics and cross-space navigation decoupled, and lets accumulating contexts disambiguate a symbol instead of collapsing all contexts into one flat space.
 
 ## Provenance
 

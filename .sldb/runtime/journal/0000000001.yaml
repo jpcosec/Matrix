@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-execution-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 05b8ae0d48b4e889f1c117ac447dafbc32b70c7a7f26632a8c0815d8e07c1172
+hash_c_after: null
+hash_d_before: 6d5e729c85a78ca316e4724715e2682335759557d8184437eed0a803cb572c43
+hash_d_after: null
+hash_a_before: 891a5969314b1c67848ebf734be1f063c5e752e64dc5cfd018440cc9958643cd
+hash_a_after: d1e13ab7e25d73dca9a89b819c60d7297e5833fb8e74e3612dc62b0b18162a52
+actor: null
+timestamp: 2026-09-24 02:50:16.187839+00:00
+previous_hash: 43b7373f955ab5e523513e9adcd63ff659af3035013aea1b48300121c9f945b2
+entry_hash: ce8c47ececa32d238d88614d0d37b62d39e85a889e3dcb15b9e6fd7f5c10e76a

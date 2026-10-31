@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-rulematrixcompiler-si-mask-encoding-testing-to-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 265b4d2d6e34204dd445a1b13460ce598d8bb479072efd8465aa86ed292e7524
+hash_c_after: null
+hash_d_before: a31aad43f8670188f44034cd95e3e990d70d25a309aba47cd03ec1e8f0b39968
+hash_d_after: null
+hash_a_before: 207bccf7e16127a7573fd3d8c0401b5d07db136d886f0d24b781b78f9a3d625e
+hash_a_after: a4030e643ac9c79a545dd4cf8a51ebab59bd5f611d299964117ebad24c8be5a9
+actor: null
+timestamp: 2026-09-24 03:23:15.198041+00:00
+previous_hash: f4293483123042a65356fbf598e5b8ce94c952b3f4a7b190ddafd1d9c8546cc7
+entry_hash: 279f46faa2c83bdd85f37af6d92c212a8330b6e645c7b4e8ee25c90cfa1efce0

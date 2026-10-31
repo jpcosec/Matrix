@@ -1,0 +1,15 @@
+operation: track_document_file
+address: TaskDoc:task-meelengine-core-api-facade
+field: null
+previous_value: null
+new_value: null
+hash_c_before: null
+hash_c_after: 62523cda25145baf126f3a95dd5f191cbf43f2c452f003523648902b68438fa5
+hash_d_before: null
+hash_d_after: c0f5da495750ea823696f8954f398ac45699b9573d960e798c8655a9aad2bf11
+hash_a_before: 9f953630c77d9e5d108e060f18422e91279263002825b43a4cfbf33ae1edbd1a
+hash_a_after: 4e5c5d20c657508e83441edcdb1d9c6ce329f790f410e571a7a08bf2260fef84
+actor: null
+timestamp: 2026-09-24 03:00:40.862175+00:00
+previous_hash: f6d62876d7d0f8c3b3b7343af0c868561fc3a40bd10cde9a6cd120d341881656
+entry_hash: dcd7f1e2745bcd61d0cffb9e2e58084eb402cd55e481501192d72891e3749dd6

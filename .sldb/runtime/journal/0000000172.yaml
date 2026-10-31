@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-canonicalhypertensor-jit-bitwise-operations-ready-to-closeout
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 6ca160a64c2a8aaa05192b70b113c3e01706c257f6f16d0a9d2ab26fd9bf3048
+hash_c_after: null
+hash_d_before: 1e348d43c1c596237ed0e74dd78f3c2d1d1d9bdef93bebd4a5739ae008fbc222
+hash_d_after: null
+hash_a_before: 6a700338f6860f352287b69d1be93e5fd2935b0e91330cf64ba4a65cf8f207ce
+hash_a_after: e4d4f7f866d9c1455d926f232ee7719ebe9984514bb86b1c894b38d7237a0258
+actor: null
+timestamp: 2026-09-24 03:22:54.392117+00:00
+previous_hash: b3365758482aefbcbb3fb47d9e521e990d8de6466b6b6c39dd47e0ace63c075d
+entry_hash: 709cf5cb3eaeae361511abe19a2c06d11af8b23f262dd94bf4f8727129de9b18

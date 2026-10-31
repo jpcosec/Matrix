@@ -1,0 +1,22 @@
+# Guiso: receta que comparte ingredientes con el ragout (referentes cross-contexto).
+domain: recetas
+kind: recipe
+context: guiso
+title: "Guiso de carne"
+initial: dorar
+edges:
+  - {from: dorar, to: rehogar}
+  - {from: rehogar, to: desglasar}
+  - {from: desglasar, to: agregar_caldo}
+  - {from: agregar_caldo, to: cocinar_lento}
+  - {from: cocinar_lento, to: servir}
+requires:
+  - {step: desglasar, needs: fondo_dorado}
+  - {step: cocinar_lento, needs: fuego_lento}
+uses:
+  - {step: rehogar, item: cebolla}
+  - {step: dorar, item: carne}
+  - {step: desglasar, item: vino}
+  - {step: agregar_caldo, item: caldo}
+produces:
+  - {step: cocinar_lento, result: salsa_espesa}

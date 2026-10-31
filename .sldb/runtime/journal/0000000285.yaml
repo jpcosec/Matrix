@@ -1,0 +1,16 @@
+operation: inherit_model
+address: ProtoAtomDoc
+field: null
+previous_value: null
+new_value:
+  origin: deskops
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 2d0af3584aa638f8f01d5de5bbaef7b342b98a43e84f7828d63b33f0ce011607
+hash_a_after: 2d0af3584aa638f8f01d5de5bbaef7b342b98a43e84f7828d63b33f0ce011607
+actor: null
+timestamp: 2026-10-18 15:30:41.053990+00:00
+previous_hash: 925091c42a46f5a759df10ff587222abfa1cc071fa92ea1c0f198e44fe5906ca
+entry_hash: ecf5b67758e27b49da90ab20a96d8bddafe2895b52921be23cc3987f94a94204

@@ -1,0 +1,16 @@
+operation: inherit_model
+address: TaskDoc
+field: null
+previous_value: null
+new_value:
+  origin: deskops
+hash_c_before: null
+hash_c_after: null
+hash_d_before: null
+hash_d_after: null
+hash_a_before: 7dec9e580e12c070658416fb186e66935881edfa30fdc86e4783d24e9ffc85ef
+hash_a_after: 7dec9e580e12c070658416fb186e66935881edfa30fdc86e4783d24e9ffc85ef
+actor: null
+timestamp: 2026-10-18 15:30:41.317638+00:00
+previous_hash: b48741d103e6c4f663160fab97d2dbfd94e1c27acf50f92be3b736c2fa0b552d
+entry_hash: 753820689900f7c8757ed638c0eea363ef0af6dfb1fc71f8911b17110c033c0f

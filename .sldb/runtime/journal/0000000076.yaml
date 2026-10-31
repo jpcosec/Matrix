@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-omnirepresentacion-por-bloques-e-integracion-en-wigame-ready-for-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: b1c64cd30e0f87f0604fdf1b6f5697bd4f206d6d6311a4fb2e60ee9d1c2bc922
+hash_c_after: null
+hash_d_before: e10a6ccf9d4a36fca9c1c4aad378958ba0e94334fcb62b4aeb49001ccfc6e117
+hash_d_after: null
+hash_a_before: 8d68ca22369174f74512939b0068ce3b93973e40281a46b3d0fa26a85d8a49e0
+hash_a_after: 92eef4004a055c4f70b42abf056fd753b69b4d676dd3cc6c12bab752946ce67f
+actor: null
+timestamp: 2026-09-24 02:51:04.279076+00:00
+previous_hash: c97e3dbb956edd09ab5a263a7f828c8aba8014e8d19ac968bdc97a18f1be5a28
+entry_hash: b9367287ca51ba1f6dc269daa39bfaf2402a2103b9f30e4a91c2a36c6159a753

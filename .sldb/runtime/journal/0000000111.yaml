@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-canonicalhypertensor-jit-bitwise-operations-testing-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: db087d53c9a2fe135f3cf7a16e23cc39738753930b186c5f7c3e0968160dcb09
+hash_c_after: null
+hash_d_before: a60dca2d1b535f3e45e071a00fcca02182008abb551cfa049b8f392be2766698
+hash_d_after: null
+hash_a_before: 9a9068887349a02c917efa159b7a3eebcc724aeeed5b862ae0f31698f46f6029
+hash_a_after: 07eb28bfa4328afce994e4eb45b6f4428c8469fbc5b7f933b2178d15adbd1f87
+actor: null
+timestamp: 2026-09-24 03:22:14.138577+00:00
+previous_hash: 49c82bcee197a92b7c2f338935e5b41dc2ba1decf3a7ab554fa9602a7c8be482
+entry_hash: 1282ae35ce4f1b0aa90dd6a8d907bab69141e1d24151dae1ff8993740f9c63ad

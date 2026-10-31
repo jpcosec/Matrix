@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-rulematrixcompiler-si-mask-encoding-testing-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 3bde9a87f83592f223f0cd4307361b2d24a35a401688d18cf6ea996a3d785985
+hash_c_after: null
+hash_d_before: 6d47e9caa578d7129c86937cf352f1297b78e3b22c681b34bdb4a556073f56d4
+hash_d_after: null
+hash_a_before: 6e1489787ac6d82ef1b13aad8159150dc8f076868d8443c654cc913e828efacc
+hash_a_after: c28c7dff7baab07b2a2a59f4d4583dcb24b65ff12ba6d1977e7b3f2157cafd06
+actor: null
+timestamp: 2026-09-24 03:22:23.438944+00:00
+previous_hash: 748c9591e0c57bae9f1f0a9d79cf8362eb79a19bcb38df8dae7036570a1d7043
+entry_hash: 2a5bf4eecf8e94808baf63d4ee690d4a59165a3efb3ee75d5392664f5e0df734

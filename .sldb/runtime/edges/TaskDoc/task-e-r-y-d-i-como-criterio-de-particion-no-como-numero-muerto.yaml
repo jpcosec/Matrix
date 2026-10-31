@@ -1,0 +1,579 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    name: task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    model: TaskDoc
+    path: desk/tasks/task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: ab22b79bcd312611e6ec20745eca164f56ef546d596db2b227f2827373474b6d
+    hash_d: 984c66fea87baa1f3a76daee323df9cba98f9b9d22358c016610877cb4d3d071
+  facets: {}
+- id: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    document_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    title: E(R) y D_i como criterio de particion, no como numero muerto
+    breadcrumbs:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    about:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - e r y d i como criterio de particion no como numero muerto
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    level: 1
+    line_start: 20
+    line_end: 57
+  facets: {}
+- id: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+    document_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+    title: Rationale
+    breadcrumbs:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - Rationale
+    about:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - e r y d i como criterio de particion no como numero muerto
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 22
+    line_end: 27
+  facets: {}
+- id: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+    document_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+    title: Goal
+    breadcrumbs:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - Goal
+    about:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - e r y d i como criterio de particion no como numero muerto
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 28
+    line_end: 33
+  facets: {}
+- id: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+    document_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+    title: Scope
+    breadcrumbs:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - Scope
+    about:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - e r y d i como criterio de particion no como numero muerto
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 34
+    line_end: 39
+  facets: {}
+- id: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+    document_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - Implementation Path
+    about:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - e r y d i como criterio de particion no como numero muerto
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 40
+    line_end: 45
+  facets: {}
+- id: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+    document_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+    title: Validation
+    breadcrumbs:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - Validation
+    about:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - e r y d i como criterio de particion no como numero muerto
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 46
+    line_end: 52
+  facets: {}
+- id: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+    document_id: TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+    path: e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+    title: Done When
+    breadcrumbs:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - Done When
+    about:
+    - E(R) y D_i como criterio de particion, no como numero muerto
+    - e r y d i como criterio de particion no como numero muerto
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 53
+    line_end: 57
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto#e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
+doc_name: task-e-r-y-d-i-como-criterio-de-particion-no-como-numero-muerto
+model_name: TaskDoc
+source_hash: ab22b79bcd312611e6ec20745eca164f56ef546d596db2b227f2827373474b6d
+content_hash: 984c66fea87baa1f3a76daee323df9cba98f9b9d22358c016610877cb4d3d071
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

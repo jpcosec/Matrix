@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ConditionDoc:condition-task-canonicalhypertensor-jit-bitwise-operations-has-implementation-path
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 1beeed14d13e6a81ef3f2f64bcafca970e2a49989246ae513c874c63275f930a
+hash_c_after: null
+hash_d_before: 95f45ce667aacf46bb04af0954d49ee9332dbb0055fe344c7ad97972ccdc188e
+hash_d_after: null
+hash_a_before: 6d3acebc807a3437e62c93ffb072546eb800a1bb1c51a7a6e94e2184550bd4d7
+hash_a_after: 3498060af9d71988b3bafbefd043a4d8f6e0e62aa2897f3a8eca678cd21461d0
+actor: null
+timestamp: 2026-09-24 03:22:28.644627+00:00
+previous_hash: 76afdf453e9f7e940c094e47b278f7c18e6b8aa6cbf86f01bbf13a9e60f0f3d5
+entry_hash: f80a7bf506323d5fad7de1c80f146fbc05fef2f214acb4b548f7dd446b33c23c

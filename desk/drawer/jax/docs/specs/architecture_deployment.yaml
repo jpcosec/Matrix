@@ -1,0 +1,28 @@
+id: matrix-deployment
+title: "Matrix Deployment Architecture"
+type: deployment
+version: "1.0"
+data:
+  nodes:
+    "gpu_node":
+      label: "GPU Server (CUDA/TPU)"
+      kind: "server"
+      contains: ["jax_runtime"]
+    "app_node":
+      label: "Application Node (Python)"
+      kind: "server"
+      contains: ["meel_engine", "rule_compiler"]
+  artifacts:
+    "jax_runtime":
+      label: "JAX VRAM Runtime"
+      kind: "component"
+    "meel_engine":
+      label: "MEELEngine Process"
+      kind: "component"
+    "rule_compiler":
+      label: "Compiler Process"
+      kind: "component"
+  connections:
+    - from: "app_node"
+      to: "gpu_node"
+      protocol: "XLA/RPC"

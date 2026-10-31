@@ -1,0 +1,42 @@
+{
+  "validation": {
+    "truth_accuracy": 0.992098493201029,
+    "sense_accuracy": 0.9979655712050078,
+    "coverage": 0.9985670786315601,
+    "unsinnig_false_accept": 0.006195786864931847,
+    "correspondence_accuracy": 0.9965753424657534,
+    "correspondence_same_accuracy": 1.0,
+    "correspondence_distinct_accuracy": 0.9959514170040485,
+    "distinct_pair_mean_similarity": 0.005099805180038679,
+    "logic_violation_rate": 0.0,
+    "reconstruction_accuracy": 0.9944211994421199,
+    "reconstruction_in_vocab_accuracy": 0.9944211994421199,
+    "route_cost": 0.12061243191571303,
+    "unknown_cost_mass": 0.0469558035814055,
+    "rows": 360,
+    "fields_used": 11,
+    "wi_used": 12,
+    "mean_field_entropy": 0.6971241681908149,
+    "scored_truth": 5442
+  },
+  "test_combination_unseen": {
+    "truth_accuracy": 0.9771708112515287,
+    "sense_accuracy": 0.997179125528914,
+    "coverage": 0.9980071741729772,
+    "unsinnig_false_accept": 0.009174311926605505,
+    "correspondence_accuracy": 0.9894736842105263,
+    "correspondence_same_accuracy": 0.9795918367346939,
+    "correspondence_distinct_accuracy": 0.9909365558912386,
+    "distinct_pair_mean_similarity": 0.010429189284402438,
+    "logic_violation_rate": 0.0,
+    "reconstruction_accuracy": 0.9958592132505176,
+    "reconstruction_in_vocab_accuracy": 0.9958592132505176,
+    "route_cost": 0.11118769679318362,
+    "unknown_cost_mass": 0.05533962840186796,
+    "rows": 160,
+    "fields_used": 10,
+    "wi_used": 12,
+    "mean_field_entropy": 0.802427253319599,
+    "scored_truth": 2453
+  }
+}

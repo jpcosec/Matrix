@@ -1,6 +1,6 @@
 # Matrix–NCM: especificación del primer experimento conjunto
 
-Estado: propuesta implementable, todavía no implementada.
+Estado: implementada en [`joint/`](joint/); diseño, decisiones y resultados en [`JOINT.md`](JOINT.md).
 Versión: 0.1 — 23 de octubre de 2026.
 
 Este documento fija decisiones para el siguiente experimento. Sustituye, para
@@ -402,7 +402,7 @@ cuadráticos en el número de Wi; **no es todavía un diseño escalable a un ár
 gigante**. Retrieval, poda y crecimiento de capacidad quedan fuera hasta demostrar
 que el aprendizaje conjunto funciona en el caso exhaustivo.
 
-Entregables previstos, todavía inexistentes:
+Entregables (implementados; ver `JOINT.md`):
 
 ```text
 joint/schema.py           validación y separación inputs/targets

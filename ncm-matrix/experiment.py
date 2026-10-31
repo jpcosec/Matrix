@@ -1,4 +1,4 @@
-"""CPU smoke experiment using the upstream NCM VQ-VAE, trained from scratch.
+"""Smoke experiment using the upstream NCM VQ-VAE, trained from scratch.
 
 An explicit context adapter BEFORE VQ makes z = f(text, context). The probe sees
 only quantized representations, never a context ID or Matrix label directly.
@@ -141,9 +141,10 @@ def metrics(logits, rows):
 @torch.no_grad()
 def evaluate(model, rows, vocab):
     model.eval()
-    ids, ctx, *_ = encode(rows, vocab)
+    device = next(model.parameters()).device
+    ids, ctx, *_ = (t.to(device) for t in encode(rows, vocab))
     rec, logits, _, pooled = model(ids, ctx)
-    report = metrics(logits, rows)
+    report = metrics(logits.cpu(), rows)
     mask = ids.ne(0)
     report["reconstruction_token_accuracy"] = float((rec.argmax(-1)[mask] == ids[mask]).float().mean())
     in_vocab = mask & ids.ne(1)
@@ -156,14 +157,15 @@ def evaluate(model, rows, vocab):
     original_codes = model.vqvae.vq.z_to_idx(model.conditioned_z(ids, ctx))
     switched_codes = model.vqvae.vq.z_to_idx(model.conditioned_z(ids, 1-ctx))
     report["code_change_fraction_when_context_changes"] = float(original_codes.ne(switched_codes).float().mean())
-    return report, logits
+    return report, logits.cpu()
 
 
-def train(rows, vocab, use_context, matrix_weight, steps, seed):
+def train(rows, vocab, use_context, matrix_weight, steps, seed, device="cpu"):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-    model = ContextualNCM(len(vocab), use_context)
+    torch.cuda.manual_seed_all(seed)
+    model = ContextualNCM(len(vocab), use_context).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=.003)
     groups = defaultdict(list)
     for row in rows:
@@ -175,7 +177,7 @@ def train(rows, vocab, use_context, matrix_weight, steps, seed):
     for step in range(steps):
         model.train()
         batch = [r for group in random.sample(batches, min(4, len(batches))) for r in group]
-        ids, ctx, sense, known, truth = encode(batch, vocab)
+        ids, ctx, sense, known, truth = (t.to(device) for t in encode(batch, vocab))
         reconstruction, logits, vq_loss, _ = model(ids, ctx)
         rec_loss = F.cross_entropy(reconstruction.flatten(0, 1), ids.flatten(), ignore_index=0)
         ground_loss = F.binary_cross_entropy_with_logits(logits[known, 0], truth[known])
@@ -210,14 +212,17 @@ def main():
     parser.add_argument("--steps", type=int, default=250)
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--output", type=Path, default=ROOT / "artifacts")
+    parser.add_argument("--device", default="auto", help="auto, cpu, cuda or cuda:N")
     args = parser.parse_args()
     if args.steps <= 0:
         parser.error("steps must be positive")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu") if args.device == "auto" else torch.device(args.device)
     torch.set_num_threads(2)
     rows = build_dataset(args.output / "dataset")
     vocab = vocabulary(rows)
     report = {
-        "kind": "synthetic mechanism test; randomly initialized upstream NCM VQ-VAE; CPU",
+        "kind": f"synthetic mechanism test; randomly initialized upstream NCM VQ-VAE; {device.type.upper()}",
+        "device": torch.cuda.get_device_name(device) if device.type == "cuda" else "cpu",
         "seed": args.seed, "steps_per_run": args.steps, "torch": torch.__version__,
         "split_by": "entity, including both contexts and every predicate in the same split",
         "rows": dict(Counter(r["split"] for r in rows)),
@@ -225,7 +230,7 @@ def main():
         "ncm_commit": subprocess.check_output(["git", "-C", str(ROOT / "ncm"), "rev-parse", "HEAD"], text=True).strip(),
     }
     for name, conditioned in (("without_context", False), ("with_context", True)):
-        model, stats = train(rows, vocab, conditioned, 2., args.steps, args.seed)
+        model, stats = train(rows, vocab, conditioned, 2., args.steps, args.seed, device)
         for split in ("validation", "test"):
             selected = [r for r in rows if r["split"] == split]
             stats[split], logits = evaluate(model, selected, vocab)
@@ -238,6 +243,8 @@ def main():
             torch.save({"state_dict": model.state_dict(), "vocabulary": vocab,
                         "contexts": CONTEXTS, "seed": args.seed, "steps": args.steps}, args.output / "tiny_contextual_vqvae.pt")
         print(name, json.dumps(stats["test"]), flush=True)
+    if device.type == "cuda":
+        report["peak_cuda_memory_mib"] = torch.cuda.max_memory_allocated(device) / 2**20
     report["peak_process_rss_mib_linux"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024
     (args.output / "report.json").write_text(json.dumps(report, indent=2) + "\n")
     print(f"Report: {args.output / 'report.json'}")

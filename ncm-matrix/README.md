@@ -1,8 +1,8 @@
 # Matrix × NCM: experimento contextual mínimo
 
-El diseño del siguiente experimento de aprendizaje conjunto está en
-[`SPEC.md`](SPEC.md). Es una especificación pendiente de implementación; el
-código descrito abajo sigue siendo el experimento mínimo anterior.
+El experimento de aprendizaje conjunto de [`SPEC.md`](SPEC.md) está implementado en
+[`joint/`](joint/); diseño, decisiones y resultados en [`JOINT.md`](JOINT.md). El
+código descrito abajo es el experimento mínimo anterior.
 
 Código oficial clonado en [`ncm/`](ncm/), commit
 `c70274273f489abc73832b2b98584a8483b6b203`.

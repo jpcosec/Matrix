@@ -6,11 +6,12 @@ RDF false/sense values use an explicit application schema, not closed-world RDF.
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT.parent / "Matrix" / "Matrix"))
+sys.path.insert(0, os.environ.get("MATRIX_ROOT", str(ROOT.parent / "Matrix" / "Matrix")))
 
 from rdflib import Graph, Literal, Namespace, RDF
 from src.operational_model import (

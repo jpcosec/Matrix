@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-rulematrixcompiler-si-mask-encoding.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: f8ce7eb848ba99892baec45a589ecdaebadca44a9d2389f9e0af3a5cff582029

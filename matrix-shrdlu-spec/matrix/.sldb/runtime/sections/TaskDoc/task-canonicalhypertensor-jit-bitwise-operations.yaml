@@ -1,0 +1,190 @@
+doc_name: task-canonicalhypertensor-jit-bitwise-operations
+sections:
+- path: canonicalhypertensor-jit-bitwise-operations
+  title: 'CanonicalHypertensor: JIT Bitwise Operations'
+  breadcrumbs:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  about:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - canonicalhypertensor jit bitwise operations
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: canonicalhypertensor-jit-bitwise-operations
+  level: 1
+  line_start: 15
+  line_end: 49
+- path: canonicalhypertensor-jit-bitwise-operations/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - Rationale
+  about:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - canonicalhypertensor jit bitwise operations
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 17
+  line_end: 22
+- path: canonicalhypertensor-jit-bitwise-operations/goal
+  title: Goal
+  breadcrumbs:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - Goal
+  about:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - canonicalhypertensor jit bitwise operations
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 23
+  line_end: 28
+- path: canonicalhypertensor-jit-bitwise-operations/scope
+  title: Scope
+  breadcrumbs:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - Scope
+  about:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - canonicalhypertensor jit bitwise operations
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 29
+  line_end: 34
+- path: canonicalhypertensor-jit-bitwise-operations/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - Implementation Path
+  about:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - canonicalhypertensor jit bitwise operations
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 35
+  line_end: 40
+- path: canonicalhypertensor-jit-bitwise-operations/validation
+  title: Validation
+  breadcrumbs:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - Validation
+  about:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - canonicalhypertensor jit bitwise operations
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 41
+  line_end: 46
+- path: canonicalhypertensor-jit-bitwise-operations/done-when
+  title: Done When
+  breadcrumbs:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - Done When
+  about:
+  - 'CanonicalHypertensor: JIT Bitwise Operations'
+  - canonicalhypertensor jit bitwise operations
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 47
+  line_end: 49
+source_hash: 0bb8ba7e9402513661dc749753796f185b9b1aa8a5f05710cd7613a6a6748ae6
+sections_version: '2'

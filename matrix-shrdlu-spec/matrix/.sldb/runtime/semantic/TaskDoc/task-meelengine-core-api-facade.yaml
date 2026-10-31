@@ -1,0 +1,10 @@
+model: TaskDoc
+path: desk/tasks/task-meelengine-core-api-facade.md
+tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk
+source_hash: 84a7629797df2fef2ed2283d47786de59427b2601f94bbbdbf89e0d260660b76

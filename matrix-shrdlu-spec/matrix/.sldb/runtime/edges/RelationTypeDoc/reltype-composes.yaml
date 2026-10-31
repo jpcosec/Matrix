@@ -1,0 +1,49 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://relation_type/composes
+  node_type: relation_type
+  semantics:
+    title: composes
+    name: composes
+    direction: directed
+    cardinality: many_to_many
+    axis: WHAT
+    source_types: []
+    target_types: []
+    condition: ''
+    description: A composed field of the source (`__compositions__`) renders this
+      document's payload into the source's text; the edge carries the composed field,
+      the field holding the refs and the ref as authored.
+    doc: reltype-composes
+  facets: {}
+- id: sldb://semantic_tag/layer.topology
+  node_type: semantic_tag
+  semantics:
+    tag: layer.topology
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.relation.type
+  node_type: semantic_tag
+  semantics:
+    tag: type.relation.type
+  facets: {}
+edges: []
+doc_name: reltype-composes
+model_name: RelationTypeDoc
+source_hash: 88f769671e0d47ed38a43ed77307793f2abc095c4db19aa9ec58fe027c705689
+content_hash: e3d9292607b3accba4290406ae3b2fdba3b1acda9e93821f7fb6b67a2c8d005f
+contract_hash: 57b63063959eb2f0b721697bc626d10bc4d960672ed03fa04f9d0a5e1f499699
+semantic_tags:
+- layer.topology
+- representation.markdown
+- source.document.markdown
+- type.relation.type

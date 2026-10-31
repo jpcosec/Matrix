@@ -1,0 +1,190 @@
+doc_name: task-canonicalhypertensor-jax-vram-allocation
+sections:
+- path: canonicalhypertensor-jax-vram-allocation
+  title: 'CanonicalHypertensor: JAX VRAM Allocation'
+  breadcrumbs:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  about:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - canonicalhypertensor jax vram allocation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: canonicalhypertensor-jax-vram-allocation
+  level: 1
+  line_start: 15
+  line_end: 49
+- path: canonicalhypertensor-jax-vram-allocation/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - Rationale
+  about:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - canonicalhypertensor jax vram allocation
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 17
+  line_end: 22
+- path: canonicalhypertensor-jax-vram-allocation/goal
+  title: Goal
+  breadcrumbs:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - Goal
+  about:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - canonicalhypertensor jax vram allocation
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 23
+  line_end: 28
+- path: canonicalhypertensor-jax-vram-allocation/scope
+  title: Scope
+  breadcrumbs:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - Scope
+  about:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - canonicalhypertensor jax vram allocation
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 29
+  line_end: 34
+- path: canonicalhypertensor-jax-vram-allocation/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - Implementation Path
+  about:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - canonicalhypertensor jax vram allocation
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 35
+  line_end: 40
+- path: canonicalhypertensor-jax-vram-allocation/validation
+  title: Validation
+  breadcrumbs:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - Validation
+  about:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - canonicalhypertensor jax vram allocation
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 41
+  line_end: 46
+- path: canonicalhypertensor-jax-vram-allocation/done-when
+  title: Done When
+  breadcrumbs:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - Done When
+  about:
+  - 'CanonicalHypertensor: JAX VRAM Allocation'
+  - canonicalhypertensor jax vram allocation
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 47
+  line_end: 49
+source_hash: 785cb7185006120de4c497bfaba990d0bc31910b37efcb60bf75b5e00f6074e6
+sections_version: '2'

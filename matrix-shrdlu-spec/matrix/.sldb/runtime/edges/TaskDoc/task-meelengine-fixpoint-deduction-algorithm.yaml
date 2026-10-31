@@ -1,0 +1,579 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    name: task-meelengine-fixpoint-deduction-algorithm
+    model: TaskDoc
+    path: desk/tasks/task-meelengine-fixpoint-deduction-algorithm.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: 3abd48d11cebf9e12245897ea245150bc5dd516a66b67b903011d6f890e4e392
+    hash_d: 5977fb179ffcb3ac808cd966b6bc50a891c2cb0f72713f92c593a41b133a3adb
+  facets: {}
+- id: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+    document_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    path: meelengine-fixpoint-deduction-algorithm
+    title: 'MEELEngine: Fixpoint Deduction Algorithm'
+    breadcrumbs:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    about:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - meelengine fixpoint deduction algorithm
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: meelengine-fixpoint-deduction-algorithm
+    level: 1
+    line_start: 15
+    line_end: 49
+  facets: {}
+- id: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+    document_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    path: meelengine-fixpoint-deduction-algorithm/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - Rationale
+    about:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - meelengine fixpoint deduction algorithm
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 17
+    line_end: 22
+  facets: {}
+- id: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+    document_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    path: meelengine-fixpoint-deduction-algorithm/goal
+    title: Goal
+    breadcrumbs:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - Goal
+    about:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - meelengine fixpoint deduction algorithm
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 23
+    line_end: 28
+  facets: {}
+- id: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+    document_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    path: meelengine-fixpoint-deduction-algorithm/scope
+    title: Scope
+    breadcrumbs:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - Scope
+    about:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - meelengine fixpoint deduction algorithm
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 29
+    line_end: 34
+  facets: {}
+- id: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+    document_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    path: meelengine-fixpoint-deduction-algorithm/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - Implementation Path
+    about:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - meelengine fixpoint deduction algorithm
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 35
+    line_end: 40
+  facets: {}
+- id: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+    document_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    path: meelengine-fixpoint-deduction-algorithm/validation
+    title: Validation
+    breadcrumbs:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - Validation
+    about:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - meelengine fixpoint deduction algorithm
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 41
+    line_end: 46
+  facets: {}
+- id: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+    document_id: TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+    path: meelengine-fixpoint-deduction-algorithm/done-when
+    title: Done When
+    breadcrumbs:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - Done When
+    about:
+    - 'MEELEngine: Fixpoint Deduction Algorithm'
+    - meelengine fixpoint deduction algorithm
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 47
+    line_end: 49
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-meelengine-fixpoint-deduction-algorithm#meelengine-fixpoint-deduction-algorithm/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-meelengine-fixpoint-deduction-algorithm
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
+doc_name: task-meelengine-fixpoint-deduction-algorithm
+model_name: TaskDoc
+source_hash: 3abd48d11cebf9e12245897ea245150bc5dd516a66b67b903011d6f890e4e392
+content_hash: 5977fb179ffcb3ac808cd966b6bc50a891c2cb0f72713f92c593a41b133a3adb
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

@@ -1,0 +1,16 @@
+name: 20260725-212407-suggestion-error-logging-protocol
+path: desk/inbox/20260725-212407-suggestion-error-logging-protocol.md
+source_hash: 2fcd7e2aa7ef43a9c3241c901d477e2a49d31b6584a4a39107f45b2102361315
+content_hash: b4597462f1b1e66f969d4335c93dadb5812c70018a896b6ab88a546147de7074
+field_hashes:
+  kind: f4accece99081750b6b8b5089a3f24b11d5ceba70797c3eb49000d84b98344fc
+  sender_project: 2247e2d028157288b7f4b297f7570c64cf901382c3efbb5bf671b3a68e25c78f
+  created_at: 7a5c4e887624714abf7ec1957e61d9bd6b05b1521bc0240badfc409b9c72ec60
+  status: 35ff74aeea25311f4fe759a6b762c8cd41a79adb23dd5615b92cf215175a63e5
+  title: f535f6728d34170f87c1459176c3390e1dd0f1412876b72087615b6ddec1d3fa
+  body: 3e4d8c1eb221d8a8d3c4bde08037997e9db929c5f29548afd85f54c6384976bd
+semantic_tags:
+- representation.markdown
+- source.document.markdown
+- type.desk.inbox-note
+- workspace.desk.inbox

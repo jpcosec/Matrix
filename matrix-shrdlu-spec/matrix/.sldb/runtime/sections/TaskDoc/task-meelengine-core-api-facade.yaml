@@ -1,0 +1,190 @@
+doc_name: task-meelengine-core-api-facade
+sections:
+- path: meelengine-core-api-facade
+  title: 'MEELEngine: Core API Facade'
+  breadcrumbs:
+  - 'MEELEngine: Core API Facade'
+  about:
+  - 'MEELEngine: Core API Facade'
+  - meelengine core api facade
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: meelengine-core-api-facade
+  level: 1
+  line_start: 15
+  line_end: 49
+- path: meelengine-core-api-facade/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'MEELEngine: Core API Facade'
+  - Rationale
+  about:
+  - 'MEELEngine: Core API Facade'
+  - meelengine core api facade
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 17
+  line_end: 22
+- path: meelengine-core-api-facade/goal
+  title: Goal
+  breadcrumbs:
+  - 'MEELEngine: Core API Facade'
+  - Goal
+  about:
+  - 'MEELEngine: Core API Facade'
+  - meelengine core api facade
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 23
+  line_end: 28
+- path: meelengine-core-api-facade/scope
+  title: Scope
+  breadcrumbs:
+  - 'MEELEngine: Core API Facade'
+  - Scope
+  about:
+  - 'MEELEngine: Core API Facade'
+  - meelengine core api facade
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 29
+  line_end: 34
+- path: meelengine-core-api-facade/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'MEELEngine: Core API Facade'
+  - Implementation Path
+  about:
+  - 'MEELEngine: Core API Facade'
+  - meelengine core api facade
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 35
+  line_end: 40
+- path: meelengine-core-api-facade/validation
+  title: Validation
+  breadcrumbs:
+  - 'MEELEngine: Core API Facade'
+  - Validation
+  about:
+  - 'MEELEngine: Core API Facade'
+  - meelengine core api facade
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 41
+  line_end: 46
+- path: meelengine-core-api-facade/done-when
+  title: Done When
+  breadcrumbs:
+  - 'MEELEngine: Core API Facade'
+  - Done When
+  about:
+  - 'MEELEngine: Core API Facade'
+  - meelengine core api facade
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 47
+  line_end: 49
+source_hash: 84a7629797df2fef2ed2283d47786de59427b2601f94bbbdbf89e0d260660b76
+sections_version: '2'

@@ -1,0 +1,39 @@
+wigame_id: str
+axis_a:
+- list of subject symbol IDs
+axis_b:
+- list of term symbol IDs
+relation: str (single relation admitted by the Li space)
+context: str | null (parent context ID)
+Li:
+  li_id: str
+  metadata: {}
+Vi:
+  matrix_id: str
+  rows:
+  - subject IDs matching axis_a
+  columns:
+  - term IDs matching axis_b
+  values:
+  - - "0101∅" (compact string: 1=true, 0=false, ∅=void)
+  metadata: {}
+Si:
+  matrix_id: str
+  rows:
+  - subject IDs matching axis_a
+  columns:
+  - term IDs matching axis_b
+  values:
+  - - "VVLUU" (compact string: V=sinnvoll, L=sinnlos, U=unsinnig)
+  metadata: {}
+facts:
+- fact_id: str
+  truth: 'true' | 'false' | ∅
+  proposition:
+    proposition_id: str
+    relation_id: str
+    subject_symbol_id: str
+    object_symbol_id: str
+    wigame_id: str
+  evidence: {}
+metadata: {}

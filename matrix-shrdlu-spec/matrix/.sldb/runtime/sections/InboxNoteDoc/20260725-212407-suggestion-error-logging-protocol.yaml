@@ -1,0 +1,62 @@
+doc_name: 20260725-212407-suggestion-error-logging-protocol
+sections:
+- path: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  title: 'kind: suggestion
+
+    sender_project: Matrix
+
+    created_at: 2026-07-25T21:24:07
+
+    status: open'
+  breadcrumbs:
+  - 'kind: suggestion
+
+    sender_project: Matrix
+
+    created_at: 2026-07-25T21:24:07
+
+    status: open'
+  about:
+  - 'kind: suggestion
+
+    sender_project: Matrix
+
+    created_at: 2026-07-25T21:24:07
+
+    status: open'
+  - kind suggestion sender project matrix created at 2026 07 25t21 24 07 status open
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: kind-suggestion-sender-project-matrix-created-at-2026-07-25t21-24-07-status-open
+  level: 2
+  line_start: 2
+  line_end: 7
+- path: error-logging-protocol
+  title: Error Logging Protocol
+  breadcrumbs:
+  - Error Logging Protocol
+  about:
+  - Error Logging Protocol
+  - error logging protocol
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  semantic_tags:
+  - representation.markdown
+  - source.document.markdown
+  - type.desk.inbox-note
+  - workspace.desk.inbox
+  slug: error-logging-protocol
+  level: 1
+  line_start: 8
+  line_end: 10
+source_hash: 2fcd7e2aa7ef43a9c3241c901d477e2a49d31b6584a4a39107f45b2102361315
+sections_version: '2'

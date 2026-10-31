@@ -1,0 +1,579 @@
+edges_version: 4|sections:2
+nodes:
+- id: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  node_type: TaskDoc
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    name: task-rulematrixcompiler-si-mask-encoding
+    model: TaskDoc
+    path: desk/tasks/task-rulematrixcompiler-si-mask-encoding.md
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    hash_c: f8ce7eb848ba99892baec45a589ecdaebadca44a9d2389f9e0af3a5cff582029
+    hash_d: 43d2ae9c3e47d078ad821e303cb9b0051b8918bcb5f3e0685b5ce19ac83b49cf
+  facets: {}
+- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    path: rulematrixcompiler-si-mask-encoding
+    title: 'RuleMatrixCompiler: Si Mask Encoding'
+    breadcrumbs:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    about:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - rulematrixcompiler si mask encoding
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rulematrixcompiler-si-mask-encoding
+    level: 1
+    line_start: 15
+    line_end: 49
+  facets: {}
+- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    path: rulematrixcompiler-si-mask-encoding/rationale
+    title: Rationale
+    breadcrumbs:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - Rationale
+    about:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - rulematrixcompiler si mask encoding
+    - Rationale
+    - rationale
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: rationale
+    level: 2
+    line_start: 17
+    line_end: 22
+  facets: {}
+- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    path: rulematrixcompiler-si-mask-encoding/goal
+    title: Goal
+    breadcrumbs:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - Goal
+    about:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - rulematrixcompiler si mask encoding
+    - Goal
+    - goal
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: goal
+    level: 2
+    line_start: 23
+    line_end: 28
+  facets: {}
+- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    path: rulematrixcompiler-si-mask-encoding/scope
+    title: Scope
+    breadcrumbs:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - Scope
+    about:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - rulematrixcompiler si mask encoding
+    - Scope
+    - scope
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: scope
+    level: 2
+    line_start: 29
+    line_end: 34
+  facets: {}
+- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    path: rulematrixcompiler-si-mask-encoding/implementation-path
+    title: Implementation Path
+    breadcrumbs:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - Implementation Path
+    about:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - rulematrixcompiler si mask encoding
+    - Implementation Path
+    - implementation path
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: implementation-path
+    level: 2
+    line_start: 35
+    line_end: 40
+  facets: {}
+- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    path: rulematrixcompiler-si-mask-encoding/validation
+    title: Validation
+    breadcrumbs:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - Validation
+    about:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - rulematrixcompiler si mask encoding
+    - Validation
+    - validation
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: validation
+    level: 2
+    line_start: 41
+    line_end: 46
+  facets: {}
+- id: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  node_type: sldb_section
+  semantics:
+    export_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+    document_id: TaskDoc:task-rulematrixcompiler-si-mask-encoding
+    path: rulematrixcompiler-si-mask-encoding/done-when
+    title: Done When
+    breadcrumbs:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - Done When
+    about:
+    - 'RuleMatrixCompiler: Si Mask Encoding'
+    - rulematrixcompiler si mask encoding
+    - Done When
+    - done when
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    semantic_tags:
+    - artifact:task
+    - representation.markdown
+    - source.document.markdown
+    - type.workflow.task
+    - workspace.desk
+    - workspace:desk
+    slug: done-when
+    level: 2
+    line_start: 47
+    line_end: 49
+  facets: {}
+- id: sldb://semantic_tag/artifact:task
+  node_type: semantic_tag
+  semantics:
+    tag: artifact:task
+  facets: {}
+- id: sldb://semantic_tag/representation.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: representation.markdown
+  facets: {}
+- id: sldb://semantic_tag/source.document.markdown
+  node_type: semantic_tag
+  semantics:
+    tag: source.document.markdown
+  facets: {}
+- id: sldb://semantic_tag/type.workflow.task
+  node_type: semantic_tag
+  semantics:
+    tag: type.workflow.task
+  facets: {}
+- id: sldb://semantic_tag/workspace.desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace.desk
+  facets: {}
+- id: sldb://semantic_tag/workspace:desk
+  node_type: semantic_tag
+  semantics:
+    tag: workspace:desk
+  facets: {}
+edges:
+- source: sldb://model/TaskDoc
+  target: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  relation: has_document
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  relation: has_section
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/rationale
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/goal
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/scope
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/implementation-path
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/validation
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  target: sldb://semantic_tag/artifact:task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  target: sldb://semantic_tag/representation.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  target: sldb://semantic_tag/source.document.markdown
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  target: sldb://semantic_tag/type.workflow.task
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  target: sldb://semantic_tag/workspace.desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://section/TaskDoc:task-rulematrixcompiler-si-mask-encoding#rulematrixcompiler-si-mask-encoding/done-when
+  target: sldb://semantic_tag/workspace:desk
+  relation: tagged_as
+  metadata:
+    origin: structural
+- source: sldb://document/TaskDoc:task-rulematrixcompiler-si-mask-encoding
+  target: sldb://unresolved_ref/ritual-execution
+  relation: references
+  metadata:
+    origin: schema
+    field: current_node
+    declared: ritual-execution
+    allowed_models:
+    - RitualDoc
+doc_name: task-rulematrixcompiler-si-mask-encoding
+model_name: TaskDoc
+source_hash: f8ce7eb848ba99892baec45a589ecdaebadca44a9d2389f9e0af3a5cff582029
+content_hash: 43d2ae9c3e47d078ad821e303cb9b0051b8918bcb5f3e0685b5ce19ac83b49cf
+contract_hash: f4ea849267cabaad40507cd101ae9f46f7826b9ebf63e4c7ab60eb571bce6aa8
+semantic_tags:
+- artifact:task
+- representation.markdown
+- source.document.markdown
+- type.workflow.task
+- workspace.desk
+- workspace:desk

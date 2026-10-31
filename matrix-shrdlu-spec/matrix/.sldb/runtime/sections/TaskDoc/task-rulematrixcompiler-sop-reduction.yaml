@@ -1,0 +1,190 @@
+doc_name: task-rulematrixcompiler-sop-reduction
+sections:
+- path: rulematrixcompiler-sop-reduction
+  title: 'RuleMatrixCompiler: SOP Reduction'
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rulematrixcompiler-sop-reduction
+  level: 1
+  line_start: 15
+  line_end: 49
+- path: rulematrixcompiler-sop-reduction/rationale
+  title: Rationale
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Rationale
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 17
+  line_end: 22
+- path: rulematrixcompiler-sop-reduction/goal
+  title: Goal
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Goal
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 23
+  line_end: 28
+- path: rulematrixcompiler-sop-reduction/scope
+  title: Scope
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Scope
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 29
+  line_end: 34
+- path: rulematrixcompiler-sop-reduction/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Implementation Path
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 35
+  line_end: 40
+- path: rulematrixcompiler-sop-reduction/validation
+  title: Validation
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Validation
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 41
+  line_end: 46
+- path: rulematrixcompiler-sop-reduction/done-when
+  title: Done When
+  breadcrumbs:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - Done When
+  about:
+  - 'RuleMatrixCompiler: SOP Reduction'
+  - rulematrixcompiler sop reduction
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 47
+  line_end: 49
+source_hash: 7cdb874191cb34524162cdc156d488d11a188c8d22f8837fb703d03a3437664b
+sections_version: '2'

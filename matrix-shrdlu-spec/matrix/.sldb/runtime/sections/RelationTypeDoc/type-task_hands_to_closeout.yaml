@@ -1,0 +1,47 @@
+doc_name: type-task_hands_to_closeout
+sections:
+- path: task-hands-to-closeout
+  title: Task hands to closeout
+  breadcrumbs:
+  - Task hands to closeout
+  about:
+  - Task hands to closeout
+  - task hands to closeout
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: task-hands-to-closeout
+  level: 1
+  line_start: 13
+  line_end: 17
+- path: task-hands-to-closeout/description
+  title: Description
+  breadcrumbs:
+  - Task hands to closeout
+  - Description
+  about:
+  - Task hands to closeout
+  - task hands to closeout
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 15
+  line_end: 17
+source_hash: d16cc9c1d329c8d362e0d08c9ba3d6f23bbc7538429fd82cf20540c593f700bf
+sections_version: '2'

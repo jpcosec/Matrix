@@ -1,0 +1,8 @@
+model: RelationTypeDoc
+path: sldb/relation_types/semantic_parent.md
+tags:
+- layer.topology
+- representation.markdown
+- source.document.markdown
+- type.relation.type
+source_hash: 43e3da1698c526ca065582e98f48c249730808321ef036a41fbff12dd395996a

@@ -1,0 +1,190 @@
+doc_name: task-implementar-logicalspace-registry-bi-direccional
+sections:
+- path: implementar-logicalspace-registry-bi-direccional
+  title: Implementar LogicalSpace Registry Bi-direccional
+  breadcrumbs:
+  - Implementar LogicalSpace Registry Bi-direccional
+  about:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - implementar logicalspace registry bi direccional
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementar-logicalspace-registry-bi-direccional
+  level: 1
+  line_start: 15
+  line_end: 49
+- path: implementar-logicalspace-registry-bi-direccional/rationale
+  title: Rationale
+  breadcrumbs:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - Rationale
+  about:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - implementar logicalspace registry bi direccional
+  - Rationale
+  - rationale
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: rationale
+  level: 2
+  line_start: 17
+  line_end: 22
+- path: implementar-logicalspace-registry-bi-direccional/goal
+  title: Goal
+  breadcrumbs:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - Goal
+  about:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - implementar logicalspace registry bi direccional
+  - Goal
+  - goal
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: goal
+  level: 2
+  line_start: 23
+  line_end: 28
+- path: implementar-logicalspace-registry-bi-direccional/scope
+  title: Scope
+  breadcrumbs:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - Scope
+  about:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - implementar logicalspace registry bi direccional
+  - Scope
+  - scope
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: scope
+  level: 2
+  line_start: 29
+  line_end: 34
+- path: implementar-logicalspace-registry-bi-direccional/implementation-path
+  title: Implementation Path
+  breadcrumbs:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - Implementation Path
+  about:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - implementar logicalspace registry bi direccional
+  - Implementation Path
+  - implementation path
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: implementation-path
+  level: 2
+  line_start: 35
+  line_end: 40
+- path: implementar-logicalspace-registry-bi-direccional/validation
+  title: Validation
+  breadcrumbs:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - Validation
+  about:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - implementar logicalspace registry bi direccional
+  - Validation
+  - validation
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: validation
+  level: 2
+  line_start: 41
+  line_end: 46
+- path: implementar-logicalspace-registry-bi-direccional/done-when
+  title: Done When
+  breadcrumbs:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - Done When
+  about:
+  - Implementar LogicalSpace Registry Bi-direccional
+  - implementar logicalspace registry bi direccional
+  - Done When
+  - done when
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  semantic_tags:
+  - artifact:task
+  - representation.markdown
+  - source.document.markdown
+  - type.workflow.task
+  - workspace.desk
+  - workspace:desk
+  slug: done-when
+  level: 2
+  line_start: 47
+  line_end: 49
+source_hash: 8eebc69af20224566210148b0a66e9a75b8f230c33e944272f4c834f4b2b3237
+sections_version: '2'

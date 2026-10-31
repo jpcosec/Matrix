@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-inferencia-deductiva-proposicional-matricial-ready-to-closeout
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 790f2b8823856d37bdf862cd05f2a99d77ae3e33afbdeecc70469570f8455574
+hash_c_after: null
+hash_d_before: 9dafa5dd33200b3935c49d9daa6dab7b3ae5fc2aa5f813b67ef3b4b39d3068aa
+hash_d_after: null
+hash_a_before: 17851cd86e579a3c7802b307f000279842cfbfbd2ca8bd0f335c3a6e4d34735b
+hash_a_after: bae6a5d433bca47f3674792dd84fc06c98163c86d653696cd61c6191eb6c2b28
+actor: null
+timestamp: 2026-09-30 13:45:07.841007+00:00
+previous_hash: 00e7b9944640df8ff42523ac8495bfd38827cbccac48266ebeac0ad1530f4e22
+entry_hash: c97050d0d35bc136d2d00cf4d446baf9d4f961a9ae5e986467da0f3c066d368e

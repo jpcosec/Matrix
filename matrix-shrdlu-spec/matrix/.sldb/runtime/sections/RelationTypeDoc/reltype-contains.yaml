@@ -1,0 +1,102 @@
+doc_name: reltype-contains
+sections:
+- path: name-contains-direction-directed-cardinality-one-to-many-axis-where-source-types-target-types-condition
+  title: 'name: contains
+
+    direction: directed
+
+    cardinality: one_to_many
+
+    axis: WHERE
+
+    source_types: []
+
+    target_types: []
+
+    condition: '''''
+  breadcrumbs:
+  - 'name: contains
+
+    direction: directed
+
+    cardinality: one_to_many
+
+    axis: WHERE
+
+    source_types: []
+
+    target_types: []
+
+    condition: '''''
+  about:
+  - 'name: contains
+
+    direction: directed
+
+    cardinality: one_to_many
+
+    axis: WHERE
+
+    source_types: []
+
+    target_types: []
+
+    condition: '''''
+  - name contains direction directed cardinality one to many axis where source types
+    target types condition
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: name-contains-direction-directed-cardinality-one-to-many-axis-where-source-types-target-types-condition
+  level: 2
+  line_start: 2
+  line_end: 10
+- path: contains
+  title: contains
+  breadcrumbs:
+  - contains
+  about:
+  - contains
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: contains
+  level: 1
+  line_start: 11
+  line_end: 15
+- path: contains/description
+  title: Description
+  breadcrumbs:
+  - contains
+  - Description
+  about:
+  - contains
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 13
+  line_end: 15
+source_hash: 1987668cedd305df9f3916608dffe23de347dd2269c8e9d865449b65c5978ed7
+sections_version: '2'

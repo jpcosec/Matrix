@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-inferencia-deductiva-proposicional-matricial-activate
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 689c915bbd02fb5bebab50db75754843e688c79262843a3636662eabc5709412
+hash_c_after: null
+hash_d_before: a502a28c7dc06842d90e1ffe078510cfa29ad388503eab8f00a9e9aedbee0be9
+hash_d_after: null
+hash_a_before: 929c0a32ac2bb4ff6d48e2f7c35dc5227097c78c71e17f2bc2ff9b86caab9e82
+hash_a_after: b51c04b8ee9b2ecc4c81c92b7e6149b1d7ebb420d3ceac723a2e41ee44aab9af
+actor: null
+timestamp: 2026-09-30 13:45:08.731604+00:00
+previous_hash: c1d49054802bd7fd4d9b1d3fa8488e45aab87ded3162ea79796efcfa3b612eca
+entry_hash: 8deb0285592c8fc1e27d080107e077c636a3ccc7620299618e0dffbf004dd0a3

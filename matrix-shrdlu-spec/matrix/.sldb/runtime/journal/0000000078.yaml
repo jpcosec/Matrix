@@ -1,0 +1,15 @@
+operation: untrack_document
+address: OperatorDoc:operator-task-inferencia-deductiva-proposicional-matricial-ready-for-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: cb06cad9151fdbc0c1fdd68840d753f4101e1b271f9fa910e4b66c77076926b3
+hash_c_after: null
+hash_d_before: a97b13a0b514c4aa95770399ab938d7e3489a6577e90b7bb30b1b23096994b0e
+hash_d_after: null
+hash_a_before: d8c2c40ba00d6f73f0c0e2ba92a713756205ce4ad2dcba5b20e443ff83c3e9be
+hash_a_after: aa820d8a9ef9b103af3ee6acaed79b17784a58c0ededca3563f70413c20c0f73
+actor: null
+timestamp: 2026-09-30 13:45:08.814197+00:00
+previous_hash: 459a820417ed6c886c2c0d2df5366388addfaf76d2f6f7f715dac2692c54d86d
+entry_hash: ed411d355367919b16318bca30842dee584966d87c43e56dff1269ea03eb5102

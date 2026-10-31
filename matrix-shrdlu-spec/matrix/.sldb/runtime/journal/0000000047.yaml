@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-compilador-de-reglas-a-matrices-de-incidencia-y-clausulas-ready-to-closeout
+field: null
+previous_value: null
+new_value: null
+hash_c_before: 4fc04eb6ba08f8d83d2e99e3522691a0a6c080edeafaae248a2325f8cd1ea028
+hash_c_after: null
+hash_d_before: 70f9d273962b6e1eda85bf34d72496eee0c23081b95a9ef681289ae74ef31e66
+hash_d_after: null
+hash_a_before: 72046d38f97f0096c9d49b596f16057495ae67938ae52ad710f079b443e43719
+hash_a_after: f09ed0f21ad26c019e37652a605c8aabbd9d6efd068b4ba91efdda5b9000a919
+actor: null
+timestamp: 2026-09-30 13:45:07.596643+00:00
+previous_hash: f668ce761d9da4674c4645cdcc5486c6107276f64d74c7627f325f783a79fda4
+entry_hash: e97a5a3f38d310a6c5b3330d93aa1155442913c15e2b5a19df29e3a63224a9af

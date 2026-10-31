@@ -1,0 +1,15 @@
+operation: untrack_document
+address: ChecklistDoc:checklist-task-vectorizacion-bitwise-denso-de-booleanmatrix-execution-ready
+field: null
+previous_value: null
+new_value: null
+hash_c_before: c42ccadfd0ea122b04120f05a283c4fc767adab1dde825ed68ff35f4a0d84fa3
+hash_c_after: null
+hash_d_before: a8b7f3c5a36c65333e8cf7bb034a8900a84972db7868949b18e2ae6366b1e117
+hash_d_after: null
+hash_a_before: 938e28aeba60592eed2650bd8022ca6f12598a396284569da46b1eccaba4037c
+hash_a_after: 5d773b567dcc00394dcbe772af9a44c61108d0eabb3d8080d727636c043d06fa
+actor: null
+timestamp: 2026-09-30 13:45:06.651724+00:00
+previous_hash: 0e3637b440108e6f4001d4133b3d9444f589ea09697650cbd3bfb770b3e6feea
+entry_hash: a15e5988c23171792d65128b0f531b1059b96a5b599e867ce467a631b3acbfbb

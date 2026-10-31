@@ -1,0 +1,15 @@
+operation: untrack_document
+address: EdgeDoc:edge-task-inferencia-deductiva-proposicional-matricial-activate-to-testing
+field: null
+previous_value: null
+new_value: null
+hash_c_before: f6bc35ad36b038e3d05dca59b14b3b0d40a03bf24ed7adad5cdda46457207144
+hash_c_after: null
+hash_d_before: ed9f7ba9b7922b741ce39220890c434cf2db6c8e424433ae4b2eb3a9cd58238e
+hash_d_after: null
+hash_a_before: 8559ff56e6af71277e91f2aca29156a0c53d7481207a9f9a95d6545e6aa82484
+hash_a_after: fb59ee6ef0a74703b9f9474a576e0b9569c6d9a10912104425ba205363d8e4c4
+actor: null
+timestamp: 2026-09-30 13:45:07.677175+00:00
+previous_hash: 54d1e22958d3b7f230032db332fde699724c873419ed96a17222f0bc9b5dcbc4
+entry_hash: 093936bf4444dacc02e732a893e1aadaff7710c8adedac51d654fd40fd9f7e1f

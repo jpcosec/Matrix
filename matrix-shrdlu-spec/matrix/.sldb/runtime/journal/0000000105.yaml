@@ -1,0 +1,15 @@
+operation: track_document_file
+address: RelationTypeDoc:type-task_hands_to_closeout
+field: null
+previous_value: null
+new_value: null
+hash_c_before: null
+hash_c_after: d16cc9c1d329c8d362e0d08c9ba3d6f23bbc7538429fd82cf20540c593f700bf
+hash_d_before: null
+hash_d_after: 6fe976c4bc5a2e63eacc83f86fd10072fe94800272e03be6d9f256cbec534852
+hash_a_before: ad5ff3f6b46e15ea67fe3a3283d77883dd120804d8f0f99199c00ffc1eeaa8cd
+hash_a_after: e5a6c0213fe05f8963baf277b4c7eacbb02b62f8b1d742da01e70253dbfe2f85
+actor: null
+timestamp: 2026-10-18 15:31:26.047731+00:00
+previous_hash: 6fba64923b446e173f13512caaadceb00061af654a9086a1f850a7e0dcad5ab4
+entry_hash: bd6a131878b78a81cc71f6eb67f269540219f05645a3a2e7d5a129745158631a

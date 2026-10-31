@@ -1,0 +1,47 @@
+doc_name: reltype-has_document
+sections:
+- path: has-document
+  title: has_document
+  breadcrumbs:
+  - has_document
+  about:
+  - has_document
+  - has document
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: has-document
+  level: 1
+  line_start: 12
+  line_end: 16
+- path: has-document/description
+  title: Description
+  breadcrumbs:
+  - has_document
+  - Description
+  about:
+  - has_document
+  - has document
+  - Description
+  - description
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  semantic_tags:
+  - layer.topology
+  - representation.markdown
+  - source.document.markdown
+  - type.relation.type
+  slug: description
+  level: 2
+  line_start: 14
+  line_end: 16
+source_hash: 310eead53c52dd80f006fd4e3c36fab7dca71aefa06f355dc943a76fee957723
+sections_version: '2'
